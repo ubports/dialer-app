@@ -1,0 +1,30 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node xmlns:dox="http://www.ayatana.org/dbus/dox.dtd">
+    <dox:d><![CDATA[
+      @mainpage
+
+      An interface to the dialer application.
+    ]]></dox:d>
+    <interface name="com.canonical.DialerApp" xmlns:dox="http://www.ayatana.org/dbus/dox.dtd">
+        <dox:d>
+          An interface to the dialer application.
+        </dox:d>
+        <method name="ShowVoicemail">
+            <dox:d><![CDATA[
+               Request to open the voicemail tab.
+            ]]></dox:d>
+        </method>
+        <method name="CallNumber">
+            <dox:d><![CDATA[
+               Request to call the phone number.
+            ]]></dox:d>
+            <arg name="number" type="s" direction="in"/>
+        </method>
+        <method name="SendAppMessage">
+            <dox:d><![CDATA[
+                Send a message to the running application.
+            ]]></dox:d>
+            <arg name="message" type="s" direction="in"/>
+        </method>
+    </interface>
+</node>

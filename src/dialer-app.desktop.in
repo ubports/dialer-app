@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=tr("Dialer")
+GenericName=tr("Dialer App")
+Comment=tr("Dialer application")
+Exec=dialer-app %u
+Terminal=false
+Icon=dialer-app
+MimeType=x-scheme-handler/contact;x-scheme-handler/call
+X-Ubuntu-Touch=true
+X-Ubuntu-StageHint=SideStage
+X-Ubuntu-Gettext-Domain=dialer-app
