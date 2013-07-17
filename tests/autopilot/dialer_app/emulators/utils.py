@@ -21,15 +21,3 @@ class Utils(object):
         """Returns the toolbar button named `name`"""
         return self.app.select_single("ActionItem", objectName=name)
 
-    def get_conversations_tab_button(self):
-        return self.app.select_single("AbstractButton", buttonIndex=4)
-
-    def get_contacts_tab_button(self):
-        return self.app.select_single("AbstractButton", buttonIndex=5)
-
-    def get_conversations_pane(self):
-        return self.app.select_single(
-            "Tab", objectName="communicationsTab")
-
-    def get_contacts_pane(self):
-        return self.app.select_single("Tab", objectName="contactsTab")
