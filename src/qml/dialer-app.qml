@@ -18,6 +18,8 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import "DialerPage"
+import "HistoryPage"
 
 MainView {
     id: mainView
@@ -28,4 +30,41 @@ MainView {
 
     signal applicationReady
 
+    /*Component.onCompleted: {
+        Theme.name = "Ubuntu.Components.Themes.SuruGradient";
+    }*/
+
+    PageStack {
+        id: pageStack
+        anchors.fill: parent
+
+        Page {
+            id: mainPage
+            title: i18n.tr("Phone")
+
+            Tabs {
+                id: tabs
+
+                Tab {
+                    title: i18n.tr("Dialer")
+                    page: DialerPage {
+                        id: dialerPage
+                    }
+                }
+
+                Tab {
+                    title: i18n.tr("Contacts")
+                }
+
+                Tab {
+                    title: i18n.tr("History")
+                    page: HistoryPage {
+                        id: historyPage
+                    }
+                }
+            }
+        }
+
+        Component.onCompleted: pageStack.push(mainPage)
+    }
 }
