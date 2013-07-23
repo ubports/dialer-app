@@ -22,12 +22,13 @@ import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.Telephony 0.1
 import "dateUtils.js" as DateUtils
 
-Item {
+ListItem.Empty {
     id: communicationDelegate
 
     property bool incoming: model.senderId != "self"
+    property bool unknownContact: contactWatcher.contactId == ""
 
-    height: units.gu(6)
+    height: units.gu(8)
 
     function selectIcon()  {
         if (model.callMissed) {
@@ -39,10 +40,13 @@ Item {
         }
     }
 
-    ContactWatcher {
-        id: contactWatcher
-        phoneNumber: model.senderId
-        onPhoneNumberChanged: console.log("PhoneNumber is " + phoneNumber)
+    Item {
+        ContactWatcher {
+            id: contactWatcher
+            phoneNumber: model.senderId
+            onPhoneNumberChanged: console.log("PhoneNumber is " + phoneNumber)
+            onAvatarChanged: console.log("Avatar is " + avatar)
+        }
     }
 
     Row {
@@ -52,23 +56,45 @@ Item {
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.margins: units.gu(1)
+        spacing: units.gu(1)
 
         UbuntuShape {
             anchors.verticalCenter: parent.verticalCenter
             height: units.gu(3)
 
-            Text {
+            Label {
                 anchors.centerIn: parent
                 text: Qt.formatTime(model.timestamp)
             }
         }
 
         UbuntuShape {
+            id: avatar
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             width: height
             image: Image {
-                source: contactWatcher.alias
+                source: {
+                    if(!unknownContact) {
+                        if (contactWatcher.avatar != "") {
+                            return contactWatcher.avatar
+                        }
+                    }
+                    return Qt.resolvedUrl("../assets/avatar-default.png")
+                }
+            }
+        }
+        Column {
+            width: childrenRect.width
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+
+            Label {
+                text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+            }
+
+            Label {
+                text: model.senderId
             }
         }
     }

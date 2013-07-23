@@ -43,7 +43,6 @@ Page {
 
         anchors.fill: parent
         model: historyEventModel
-        cacheBuffer: height * 3
         currentIndex: -1
         delegate: Loader {
             id: historyLoader

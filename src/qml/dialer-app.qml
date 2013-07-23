@@ -30,9 +30,9 @@ MainView {
 
     signal applicationReady
 
-    /*Component.onCompleted: {
+    Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
-    }*/
+    }
 
     PageStack {
         id: pageStack
