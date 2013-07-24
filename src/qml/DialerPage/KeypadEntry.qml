@@ -1,13 +1,13 @@
 /*
  * Copyright 2012-2013 Canonical Ltd.
  *
- * This file is part of phone-app.
+ * This file is part of dialer-app.
  *
- * phone-app is free software; you can redistribute it and/or modify
+ * dialer-app is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * phone-app is distributed in the hope that it will be useful,
+ * dialer-app is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -38,7 +38,7 @@ FocusScope {
         font.pixelSize: units.dp(43)
         font.weight: Font.Light
         font.family: "Ubuntu"
-        color: "#464646"
+        color: "#AAAAAA"
     }
 
     TextInput {
@@ -53,14 +53,14 @@ FocusScope {
         font.pixelSize: units.dp(43)
         font.weight: Font.Light
         font.family: "Ubuntu"
-        color: "#464646"
+        color: "#AAAAAA"
         focus: true
         cursorVisible: true
         clip: true
         opacity: 0.9
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
-        // https://bugs.launchpad.net/phone-app/+bug/1188669
+        // https://bugs.launchpad.net/dialer-app/+bug/1188669
         cursorDelegate: Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom

@@ -18,6 +18,7 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Telephony 0.1
 import "DialerPage"
 import "HistoryPage"
 
@@ -32,6 +33,28 @@ MainView {
 
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
+    }
+
+    Connections {
+        target: callManager
+        onForegroundCallChanged: {
+            // if there is no call, or if the views are already loaded, do not continue processing
+            if (!callManager.foregroundCall) {
+                while (pageStack.depth > 1) {
+                    pageStack.pop();
+                }
+                tabs.selectedTabIndex = 2;
+                return;
+            }
+
+            if (callManager.foregroundCall.voicemail) {
+                // FIXME: implement
+            } else {
+                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            }
+
+            application.activateWindow();
+        }
     }
 
     PageStack {

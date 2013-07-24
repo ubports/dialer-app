@@ -21,24 +21,28 @@ import Ubuntu.Components 0.1
 
 AbstractButton {
     id: button
-    width: units.gu(20)
-    height: units.gu(8)
-    // FIXME: waiting on #1072733
-    //iconSource: "../assets/dialer_call.png"
 
-    UbuntuShape {
+    property alias iconSource: icon.source
+    property bool selected: false
+
+    width: units.gu(9)
+    height: units.gu(9)
+
+    property int iconWidth: 0
+    property int iconHeight: 0
+
+    BorderImage {
         anchors.fill: parent
-        color: button.pressed ? "#cd3804" : "#dd4814"
-        radius: "medium"
+        source: (selected || pressed) ? "../assets/dialer_pad_bg_pressed.png" : "../assets/dialer_pad_bg.png"
     }
 
     Image {
+        id: icon
         anchors.centerIn: parent
-        width: units.gu(4)
-        height: units.gu(4)
-        source: "../assets/dialer_call.png"
+        anchors.horizontalCenterOffset: units.dp(1)
+        width: (iconWidth > 0) ? iconWidth : undefined
+        height: (iconHeight > 0) ? iconHeight : undefined
+        source: icon
         fillMode: Image.PreserveAspectFit
-        z: 1
-
     }
 }

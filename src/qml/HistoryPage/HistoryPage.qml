@@ -38,11 +38,18 @@ Page {
         // FIXME: do the sort and filtering
     }
 
+    SortProxyModel {
+        id: sortProxy
+        sortRole: HistoryEventModel.TimestampRole
+        sourceModel: historyEventModel
+        ascending: false
+    }
+
     ListView {
         id: historyList
 
         anchors.fill: parent
-        model: historyEventModel
+        model: sortProxy
         currentIndex: -1
         delegate: Loader {
             id: historyLoader

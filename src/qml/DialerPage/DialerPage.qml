@@ -1,13 +1,13 @@
 /*
  * Copyright 2012-2013 Canonical Ltd.
  *
- * This file is part of phone-app.
+ * This file is part of dialer-app.
  *
- * phone-app is free software; you can redistribute it and/or modify
+ * dialer-app is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * phone-app is distributed in the hope that it will be useful,
+ * dialer-app is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -18,7 +18,7 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
-//import Ubuntu.PhoneApp 0.1
+import Ubuntu.Telephony 0.1
 
 Page {
     title: i18n.tr("Call")
@@ -95,8 +95,11 @@ Page {
                 anchors.top: divider3.bottom
                 anchors.topMargin: units.gu(2)
                 anchors.horizontalCenter: parent.horizontalCenter
-                //onClicked: callManager.startCall(keypadEntry.value)
-                enabled: dialNumber != "" //&& telepathyHelper.connected
+                onClicked: {
+                    console.log("Starting a call to " + keypadEntry.value);
+                    callManager.startCall(keypadEntry.value);
+                }
+                enabled: dialNumber != "" && telepathyHelper.connected
             }
 
             CustomButton {

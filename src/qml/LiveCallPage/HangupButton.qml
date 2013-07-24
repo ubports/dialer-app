@@ -28,17 +28,16 @@ AbstractButton {
 
     UbuntuShape {
         anchors.fill: parent
-        color: button.pressed ? "#cd3804" : "#dd4814"
+        color: button.pressed ? "#aaaaaa" : "#bababa"
         radius: "medium"
     }
 
     Image {
         anchors.centerIn: parent
-        width: units.gu(4)
-        height: units.gu(4)
-        source: "../assets/dialer_call.png"
+        width: units.gu(6)
+        height: units.gu(6)
+        source: "../assets/incall_hangup.png"
         fillMode: Image.PreserveAspectFit
         z: 1
-
     }
 }
