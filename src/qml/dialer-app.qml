@@ -18,6 +18,9 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Telephony 0.1
+import "DialerPage"
+import "HistoryPage"
 
 MainView {
     id: mainView
@@ -28,4 +31,76 @@ MainView {
 
     signal applicationReady
 
+
+    function callVoicemail() {
+        callManager.startCall(callManager.voicemailNumber);
+    }
+
+    function isVoicemailActive() {
+        if (callManager.foregroundCall) {
+            return callManager.foregroundCall.voicemail;
+        } else {
+            return false
+        }
+    }
+
+    Component.onCompleted: {
+        Theme.name = "Ubuntu.Components.Themes.SuruGradient";
+    }
+
+    Connections {
+        target: callManager
+        onForegroundCallChanged: {
+            // if there is no call, or if the views are already loaded, do not continue processing
+            if (!callManager.foregroundCall) {
+                while (pageStack.depth > 1) {
+                    pageStack.pop();
+                }
+                tabs.selectedTabIndex = 2;
+                return;
+            }
+
+            if (callManager.foregroundCall.voicemail) {
+                pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
+            } else {
+                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            }
+
+            application.activateWindow();
+        }
+    }
+
+    PageStack {
+        id: pageStack
+        anchors.fill: parent
+
+        Page {
+            id: mainPage
+            title: i18n.tr("Phone")
+
+            Tabs {
+                id: tabs
+
+                Tab {
+                    title: i18n.tr("Dialer")
+                    page: DialerPage {
+                        id: dialerPage
+                    }
+                }
+
+                Tab {
+                    title: i18n.tr("Contacts")
+                }
+
+                Tab {
+                    title: i18n.tr("History")
+                    page: HistoryPage {
+                        id: historyPage
+                    }
+                }
+            }
+        }
+
+        Component.onCompleted: pageStack.push(mainPage)
+    }
 }
