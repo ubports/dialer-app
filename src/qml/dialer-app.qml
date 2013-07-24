@@ -31,6 +31,19 @@ MainView {
 
     signal applicationReady
 
+
+    function callVoicemail() {
+        callManager.startCall(callManager.voicemailNumber);
+    }
+
+    function isVoicemailActive() {
+        if (callManager.foregroundCall) {
+            return callManager.foregroundCall.voicemail;
+        } else {
+            return false
+        }
+    }
+
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
     }
@@ -48,7 +61,7 @@ MainView {
             }
 
             if (callManager.foregroundCall.voicemail) {
-                // FIXME: implement
+                pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
             } else {
                 pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
             }
