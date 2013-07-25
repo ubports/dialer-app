@@ -12,7 +12,9 @@ Build-Depends: cmake,
                python,
                qt5-default,
                qtbase5-dev (>= 5.0),
-               qtdeclarative5-dev (>= 5.0)
+               qtdeclarative5-dev (>= 5.0),
+               qtdeclarative5-ubuntu-history-plugin,
+               qtdeclarative5-ubuntu-telephony-plugin,
 Standards-Version: 3.9.4
 Vcs-Bzr: lp:dialer-app
 Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/dialer-app/trunk/files
