@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.History 0.1
+import Ubuntu.Telephony 0.1
 
 Page {
     id: historyPage
@@ -34,8 +35,15 @@ Page {
     HistoryEventModel {
         id: historyEventModel
         type: HistoryThreadModel.EventTypeVoice
+        filter: HistoryFilter {
+            filterProperty: "accountId"
+            filterValue: telepathyHelper.accountId
+        }
 
-        // FIXME: do the sort and filtering
+        sort: HistorySort {
+            sortField: "timestamp"
+            sortOrder: HistorySort.DescendingOrder
+        }
     }
 
     SortProxyModel {
