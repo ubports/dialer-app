@@ -43,9 +43,8 @@ ListItem.Empty {
     Item {
         ContactWatcher {
             id: contactWatcher
-            phoneNumber: model.senderId
-            onPhoneNumberChanged: console.log("PhoneNumber is " + phoneNumber)
-            onAvatarChanged: console.log("Avatar is " + avatar)
+            // FIXME: handle conf calls
+            phoneNumber: model.participants[0]
         }
     }
 
@@ -94,7 +93,8 @@ ListItem.Empty {
             }
 
             Label {
-                text: model.senderId
+                // FIXME: handle conference call
+                text: model.participants[0]
             }
         }
     }
