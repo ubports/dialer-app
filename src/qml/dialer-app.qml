@@ -19,8 +19,6 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
-import "DialerPage"
-import "HistoryPage"
 
 MainView {
     id: mainView
@@ -46,6 +44,7 @@ MainView {
 
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
+        pageStack.push(Qt.createComponent("MainPage.qml"))
     }
 
     Connections {
@@ -56,7 +55,7 @@ MainView {
                 while (pageStack.depth > 1) {
                     pageStack.pop();
                 }
-                tabs.selectedTabIndex = 2;
+                pageStack.currentPage.currentTab = 2;
                 return;
             }
 
@@ -73,34 +72,5 @@ MainView {
     PageStack {
         id: pageStack
         anchors.fill: parent
-
-        Page {
-            id: mainPage
-            title: i18n.tr("Phone")
-
-            Tabs {
-                id: tabs
-
-                Tab {
-                    title: i18n.tr("Dialer")
-                    page: DialerPage {
-                        id: dialerPage
-                    }
-                }
-
-                Tab {
-                    title: i18n.tr("Contacts")
-                }
-
-                Tab {
-                    title: i18n.tr("History")
-                    page: HistoryPage {
-                        id: historyPage
-                    }
-                }
-            }
-        }
-
-        Component.onCompleted: pageStack.push(mainPage)
     }
 }
