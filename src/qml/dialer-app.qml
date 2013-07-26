@@ -21,6 +21,7 @@ import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
 import "DialerPage"
 import "HistoryPage"
+import "ContactsPage"
 
 MainView {
     id: mainView
@@ -35,6 +36,11 @@ MainView {
     function callVoicemail() {
         callManager.startCall(callManager.voicemailNumber);
     }
+
+    function call(number) {
+        callManager.startCall(number);
+    }
+
 
     function isVoicemailActive() {
         if (callManager.foregroundCall) {
@@ -90,6 +96,9 @@ MainView {
 
                 Tab {
                     title: i18n.tr("Contacts")
+                    page: ContactsPage {
+                        id: contactsPage
+                    }
                 }
 
                 Tab {

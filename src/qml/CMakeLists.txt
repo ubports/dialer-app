@@ -5,6 +5,7 @@ set(QML_DIRS
     HistoryPage
     LiveCallPage
     VoicemailPage
+    ContactsPage
     )
 
 set(ASSETS_DIR assets)
