@@ -66,6 +66,7 @@ Page {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.top: parent.top
+                onClicked: mainView.call(model.participants[0])
             }
 
             asynchronous: true
