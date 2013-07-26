@@ -40,7 +40,7 @@ Page {
             title: i18n.tr("Contacts")
             page: Loader{
                 id: contactsPage
-                source: Qt.resolvedUrl("DialerPage/ContactsPage.qml")
+                source: Qt.resolvedUrl("ContactsPage/ContactsPage.qml")
                 anchors.fill: parent
             }
         }
