@@ -44,7 +44,6 @@ Page {
                 Repeater {
                     model: contact.phoneNumbers
                     ListItem.Standard {
-                        Component.onCompleted: console.log(number)
                         text: number
                         onClicked: {
                             mainView.call(number)
@@ -57,16 +56,12 @@ Page {
     }
 
     ContactListView {
+        id: contactList
         onContactClicked: {
-            if (contact == undefined || contact.phoneNumbers.length === 0) {
-                return
-            }
             contactsPage.contact = contact
-            PopupUtils.open(callContactPopover, currentItem)
-        }
-        fetchHint: FetchHint {
-            detailTypesHint: [contactListView.titleDetail, contactListView.subTitleDetail, ContactDetail.Avatar, ContactDetail.PhoneNumber]
-
+            if (contact.phoneNumbers.length !== 0) {
+                PopupUtils.open(callContactPopover, currentItem)
+            }
         }
     }
 
