@@ -38,6 +38,7 @@ MainView {
         callManager.startCall(number);
     }
 
+
     function isVoicemailActive() {
         if (callManager.foregroundCall) {
             return callManager.foregroundCall.voicemail;

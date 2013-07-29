@@ -36,6 +36,12 @@ Tabs {
 
     Tab {
         title: i18n.tr("Contacts")
+        page: Loader{
+            id: contactsPage
+            source: Qt.resolvedUrl("ContactsPage/ContactsPage.qml")
+            asynchronous: true
+            anchors.fill: parent
+        }
     }
 
     Tab {
