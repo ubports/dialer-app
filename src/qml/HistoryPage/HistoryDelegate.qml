@@ -30,8 +30,6 @@ ListItem.Empty {
 
     height: units.gu(8)
 
-    onClicked: mainView.call(model.participants[0])
-
     function selectIcon()  {
         if (model.callMissed) {
             return "../assets/missed-call.png";
