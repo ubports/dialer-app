@@ -29,40 +29,14 @@ Page {
     title: i18n.tr("Contacts")
     property QtObject contact
 
-    Component {
-        id: callContactPopover
-
-        Popover {
-            id: popover
-            Column {
-                id: containerLayout
-                anchors {
-                    left: parent.left
-                    top: parent.top
-                    right: parent.right
-                }
-                Repeater {
-                    model: contact.phoneNumbers
-                    ListItem.Standard {
-                        text: number
-                        onClicked: {
-                            mainView.call(number)
-                            popover.hide()
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     ContactListView {
         id: contactList
         onContactClicked: {
-            contactsPage.contact = contact
-            if (contact.phoneNumbers.length !== 0) {
-                PopupUtils.open(callContactPopover, currentItem)
-            }
+            // FIXME: search for favorite number
+            mainView.call(contact.phoneNumber.number)
         }
+        detailToPick: ContactDetail.PhoneNumber
+        onDetailClicked: mainView.call(detail.number)
     }
 
 }
