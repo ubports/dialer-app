@@ -41,7 +41,6 @@ static void printUsage(const QStringList& arguments)
              << "[call://PHONE_NUMBER]"
              << "[voicemail://]"
              << "[--fullscreen]"
-             << "[--test-contacts]"
              << "[--help]"
              << "[-testability]";
 }
@@ -57,14 +56,12 @@ bool DialerApplication::setup()
 {
     static QList<QString> validSchemes;
     bool fullScreen = false;
-    QString contactEngine = "folks";
 
     if (validSchemes.isEmpty()) {
         validSchemes << "call";
         validSchemes << "voicemail";
     }
 
-    QString contactKey;
     QStringList arguments = this->arguments();
 
     if (arguments.contains("--help")) {
@@ -75,11 +72,6 @@ bool DialerApplication::setup()
     if (arguments.contains("--fullscreen")) {
         arguments.removeAll("--fullscreen");
         fullScreen = true;
-    }
-
-    if (arguments.contains("--test-contacts")) {
-        arguments.removeAll("--test-contacts");
-        contactEngine = "memory";
     }
 
     // The testability driver is only loaded by QApplication but not by QGuiApplication.
@@ -142,9 +134,7 @@ bool DialerApplication::setup()
     m_view->setResizeMode(QQuickView::SizeRootObjectToView);
     m_view->setTitle("Dialer");
     m_view->rootContext()->setContextProperty("application", this);
-    m_view->rootContext()->setContextProperty("contactKey", contactKey);
     m_view->rootContext()->setContextProperty("dbus", m_dbus);
-    m_view->rootContext()->setContextProperty("contactEngine", contactEngine);
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
     QString pluginPath = ubuntuPhonePluginPath();
@@ -211,21 +201,11 @@ void DialerApplication::parseArgument(const QString &arg)
     if (!mainView) {
         return;
     }
-    const QMetaObject *mo = mainView->metaObject();
-
 
     if (scheme == "call") {
-        int index = mo->indexOfMethod("callNumber(QVariant)");
-        if (index != -1) {
-            QMetaMethod method = mo->method(index);
-            method.invoke(mainView, Q_ARG(QVariant, QVariant(value)));
-        }
+        QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value));
     } else if (scheme == "voicemail") {
-        int index = mo->indexOfMethod("showVoicemail()");
-        if (index != -1) {
-            QMetaMethod method = mo->method(index);
-            method.invoke(mainView);
-        }
+        QMetaObject::invokeMethod(mainView, "callVoicemail");
     }
 }
 

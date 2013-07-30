@@ -53,6 +53,13 @@ MainView {
     }
 
     Connections {
+        target: telepathyHelper
+        onAccountReady: {
+            mainView.applicationReady()
+        }
+    }
+
+    Connections {
         target: callManager
         onForegroundCallChanged: {
             // if there is no call, or if the views are already loaded, do not continue processing
