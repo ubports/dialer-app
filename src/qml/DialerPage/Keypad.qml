@@ -19,15 +19,16 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-Item {
+UbuntuShape {
     id: keypad
 
-    property int fontPixelSize: units.dp(43)
     property int keysWidth: units.gu(11)
-    property int keysHeight: units.gu(8)
+    property int keysHeight: units.gu(7)
 
-    width: keys.width
-    height: keys.height
+    width: keys.width + units.gu(2)
+    height: keys.height + units.gu(2)
+    radius: "medium"
+    color: Qt.rgba(0,0,0,0.6)
 
     signal keyPressed(int keycode, string label)
 
@@ -37,12 +38,12 @@ Item {
         rows: 4
         columns: 3
         spacing: units.gu(1)
+        anchors.centerIn: parent
 
         KeypadButton {
             objectName: "buttonOne"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("1")
             keycode: Qt.Key_1
             onClicked: keypad.keyPressed(keycode, label)
@@ -54,7 +55,6 @@ Item {
             objectName: "buttonTwo"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("2")
             sublabel: i18n.tr("ABC")
             keycode: Qt.Key_2
@@ -65,7 +65,6 @@ Item {
             objectName: "buttonThree"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("3")
             sublabel: i18n.tr("DEF")
             keycode: Qt.Key_3
@@ -76,7 +75,6 @@ Item {
             objectName: "buttonFour"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("4")
             sublabel: i18n.tr("GHI")
             keycode: Qt.Key_4
@@ -87,7 +85,6 @@ Item {
             objectName: "buttonFive"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("5")
             sublabel: i18n.tr("JKL")
             keycode: Qt.Key_5
@@ -98,7 +95,6 @@ Item {
             objectName: "buttonSix"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("6")
             sublabel: i18n.tr("MNO")
             keycode: Qt.Key_6
@@ -109,7 +105,6 @@ Item {
             objectName: "buttonSeven"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("7")
             sublabel: i18n.tr("PQRS")
             keycode: Qt.Key_7
@@ -120,7 +115,6 @@ Item {
             objectName: "buttonEight"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("8")
             sublabel: i18n.tr("TUV")
             keycode: Qt.Key_8
@@ -131,7 +125,6 @@ Item {
             objectName: "buttonNine"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("9")
             sublabel: i18n.tr("WXYZ")
             keycode: Qt.Key_9
@@ -142,7 +135,6 @@ Item {
             objectName: "buttonAsterisk"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             isCorner: true
             corner: Qt.BottomLeftCorner
             label: i18n.tr("*")
@@ -154,7 +146,6 @@ Item {
             objectName: "buttonZero"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             label: i18n.tr("0")
             sublabel: i18n.tr("+")
             sublabelSize: "medium"
@@ -167,7 +158,6 @@ Item {
             objectName: "buttonHash"
             width: keysWidth
             height: keysHeight
-            labelFontPixelSize: fontPixelSize
             isCorner: true
             corner: Qt.BottomRightCorner
             label: i18n.tr("#")

@@ -31,10 +31,10 @@ AbstractButton {
     property int iconWidth: 0
     property int iconHeight: 0
 
-    BorderImage {
+    /*BorderImage {
         anchors.fill: parent
         source: (selected || pressed) ? "../assets/dialer_pad_bg_pressed.png" : "../assets/dialer_pad_bg.png"
-    }
+    }*/
 
     Image {
         id: icon

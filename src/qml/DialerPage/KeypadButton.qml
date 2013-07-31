@@ -22,24 +22,16 @@ import Ubuntu.Components 0.1
 AbstractButton {
     id: button
 
-    width: units.gu(11)
-    height: units.gu(8)
+    width: units.gu(9)
+    height: units.gu(7)
 
     property alias label: labelItem.text
-    property alias labelFontPixelSize: labelItem.font.pixelSize
     property alias sublabel: sublabelItem.text
     property alias sublabelSize: sublabelItem.fontSize
     property alias iconSource: subImage.source
     property int keycode
     property bool isCorner: false
     property int corner
-
-    BorderImage {
-        id: shape
-
-        anchors.fill: parent
-        source: pressed ? "../assets/dialer_pad_bg_pressed.sci" : "../assets/dialer_pad_bg.sci"
-    }
 
     Label {
         id: labelItem
@@ -48,8 +40,7 @@ AbstractButton {
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.verticalCenterOffset: -units.gu(0.5)
         horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: units.dp(43)
-        font.weight: Font.Light
+        fontSize: "x-large"
         height: paintedHeight
         verticalAlignment: Text.AlignTop
         opacity: 0.9
@@ -58,7 +49,7 @@ AbstractButton {
     Label {
         id: sublabelItem
 
-        anchors.bottom: shape.bottom
+        anchors.bottom: parent.bottom
         anchors.bottomMargin: units.dp(7)
         anchors.horizontalCenter: parent.horizontalCenter
         horizontalAlignment: Text.AlignHCenter
