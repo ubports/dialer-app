@@ -24,7 +24,6 @@ Item {
     property alias elapsed: count.text
     property alias fontSize: count.fontSize
     property alias color: count.color
-    property alias text: count.text
 
     height: count.paintedHeight + units.gu(1 * 2)
     width: count.paintedWidth + units.gu(3 * 2)
