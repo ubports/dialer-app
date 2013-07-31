@@ -79,6 +79,7 @@ Page {
             right: parent.right
             bottom: footer.top
         }
+        smooth: true
     }
 
     FastBlur {
