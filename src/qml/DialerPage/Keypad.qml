@@ -28,7 +28,7 @@ UbuntuShape {
     width: keys.width + units.gu(2)
     height: keys.height + units.gu(2)
     radius: "medium"
-    color: Qt.rgba(0,0,0,0.6)
+    color: Qt.rgba(0,0,0,0.75)
 
     signal keyPressed(int keycode, string label)
 

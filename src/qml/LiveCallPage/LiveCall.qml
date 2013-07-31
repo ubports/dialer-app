@@ -133,7 +133,7 @@ Page {
     UbuntuShape {
         id: buttonsArea
 
-        color: Qt.rgba(0,0,0, 0.6)
+        color: Qt.rgba(0,0,0, 0.75)
 
         height: childrenRect.height
         width: keypad.width
