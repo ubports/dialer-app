@@ -19,35 +19,69 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-
-Tabs {
+Item {
     id: tabs
+    anchors.topMargin: header.height
+    anchors.fill: parent
+    property int currentTab: 0
+    Item {
+        id: tabMenu
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: units.gu(8)
 
-    property alias currentTab: tabs.selectedTabIndex
+        property variant items: ["keypad.png", "live_call_contacts.png", "calllog.png"]
+        Grid {
+            rows: 1
+            columns: 3
+            spacing: units.gu(8)
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenter: parent.verticalCenter
+            Repeater {
+                model: 3
+                Image {
+                    clip: true
+                    id: text
+                    height: units.gu(4)
+                    width: units.gu(4)
+                    source: "../qml/assets/" + tabMenu.items[index]
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            tabs.currentTab = index
+                        }
+                    }
+                }
+            }
+        }
+        z: 1
+    }
 
-    Tab {
-        title: i18n.tr("Dialer")
-        page: Loader{
+    Item {
+
+        anchors.top: tabMenu.bottom
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        Loader {
             id: dialerPage
+            visible: tabs.currentTab == 0
             source: Qt.resolvedUrl("DialerPage/DialerPage.qml")
             anchors.fill: parent
         }
-    }
 
-    Tab {
-        title: i18n.tr("Contacts")
-        page: Loader{
+        Loader {
             id: contactsPage
+            visible: tabs.currentTab == 1
             source: Qt.resolvedUrl("ContactsPage/ContactsPage.qml")
             asynchronous: true
             anchors.fill: parent
         }
-    }
 
-    Tab {
-        title: i18n.tr("History")
-        page: Loader{
+        Loader {
             id: historyPage
+            visible: tabs.currentTab == 2
             source: Qt.resolvedUrl("HistoryPage/HistoryPage.qml")
             asynchronous: true
             anchors.fill: parent

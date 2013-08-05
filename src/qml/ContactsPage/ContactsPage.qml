@@ -26,7 +26,9 @@ import QtContacts 5.0
 Page {
     id: contactsPage
     objectName: "contactsPage"
-    title: i18n.tr("Contacts")
+    title: i18n.tr("Phone")
+    // workaround to avoid blank space at the top
+    flickable: null
     property QtObject contact
 
     ContactListView {
