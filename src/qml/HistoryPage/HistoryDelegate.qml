@@ -29,6 +29,25 @@ ListItem.Empty {
     property bool unknownContact: contactWatcher.contactId == ""
 
     height: units.gu(8)
+    removable: true
+    backgroundIndicator: Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.selected.base
+        Label {
+            text: i18n.tr("Delete")
+            anchors {
+                fill: parent
+                margins: units.gu(2)
+            }
+            verticalAlignment: Text.AlignVCenter
+            horizontalAlignment:  communicationDelegate.swipingState === "SwipingLeft" ? Text.AlignLeft : Text.AlignRight
+        }
+    }
+
+    onItemRemoved: {
+        historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+    }
+
 
     function selectIcon()  {
         if (model.callMissed) {
