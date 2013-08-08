@@ -24,37 +24,12 @@ Item {
     anchors.topMargin: header.height
     anchors.fill: parent
     property int currentTab: 0
-    Item {
+
+    TabMenu {
         id: tabMenu
         anchors.left: parent.left
         anchors.right: parent.right
-        height: units.gu(8)
-
-        property variant items: ["keypad.png", "live_call_contacts.png", "calllog.png"]
-        Grid {
-            rows: 1
-            columns: 3
-            spacing: units.gu(8)
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
-            Repeater {
-                model: 3
-                Image {
-                    clip: true
-                    id: text
-                    height: units.gu(4)
-                    width: units.gu(4)
-                    source: "../qml/assets/" + tabMenu.items[index]
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: {
-                            tabs.currentTab = index
-                        }
-                    }
-                }
-            }
-        }
-        z: 1
+        onTabChanged: tabs.currentTab = index
     }
 
     Item {
