@@ -19,11 +19,13 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 
-Item {
+Rectangle {
     id: menu
     height: units.gu(8)
 
     signal tabChanged(int index)
+
+    color: Theme.palette.normal.base
 
     // TODO: use proper icons
     property variant items: ["keypad.png", "live_call_contacts.png", "calllog.png"]
