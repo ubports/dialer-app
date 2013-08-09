@@ -42,7 +42,7 @@ Rectangle {
                 id: text
                 height: units.gu(4)
                 width: units.gu(4)
-                source: "../qml/assets/" + menu.items[index]
+                source: "assets/" + menu.items[index]
                 MouseArea {
                     anchors.fill: parent
                     onClicked: {
