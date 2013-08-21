@@ -14,8 +14,8 @@ from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
 from testtools.matchers import Equals, GreaterThan
-
-from dialer_app.emulators.utils import Utils
+from ubuntuuitoolkit import emulators as toolkit_emulators
+from dialer_app import emulators
 
 import os
 from time import sleep
@@ -32,11 +32,11 @@ class DialerAppTestCase(AutopilotTestCase):
 
     if model() == 'Desktop':
         scenarios = [
-        ('with mouse', dict(input_device_class=Mouse)),
+            ('with mouse', dict(input_device_class=Mouse)),
         ]
     else:
         scenarios = [
-        ('with touch', dict(input_device_class=Touch)),
+            ('with touch', dict(input_device_class=Touch)),
         ]
 
     local_location = "../../src/dialer-app"
@@ -50,25 +50,26 @@ class DialerAppTestCase(AutopilotTestCase):
         else:
             self.launch_test_installed()
 
-        main_view = self.get_main_view()
-        self.assertThat(main_view.visible, Eventually(Equals(True)))
+        self.assertThat(self.main_view.visible, Eventually(Equals(True)))
 
     def launch_test_local(self):
         self.app = self.launch_test_application(
-            self.local_location, "--test-contacts", app_type='qt')
+            self.local_location,
+            app_type='qt',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def launch_test_installed(self):
         if model() == 'Desktop':
             self.app = self.launch_test_application(
                 "dialer-app",
-                "--test-contacts")
+                emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
         else:
             self.app = self.launch_test_application(
-               "dialer-app", 
-               "--test-contacts",
-               "--desktop_file_hint=/usr/share/applications/dialer-app.desktop",
-               app_type='qt')
+                "dialer-app",
+                "--desktop_file_hint=/usr/share/applications/dialer-app.desktop",
+                app_type='qt',
+                emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
-    def get_main_view(self):
-        return self.app.select_single("QQuickView")
-
+    @property
+    def main_view(self):
+        return self.app.select_single(emulators.MainView)
