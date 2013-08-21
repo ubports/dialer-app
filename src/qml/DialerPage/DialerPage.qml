@@ -21,7 +21,7 @@ import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
 
 Page {
-    title: i18n.tr("Phone")
+    title: i18n.tr("Call")
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input

@@ -24,13 +24,12 @@ import Ubuntu.Telephony 0.1
 Page {
     id: historyPage
     objectName: "historyPage"
-    title: i18n.tr("Phone")
+    title: i18n.tr("History")
     tools: ToolbarItems {
         opened: false
         locked: true
     }
-    // workaround to avoid blank space at the top
-    flickable: null
+
     property string searchTerm
 
     HistoryEventModel {
