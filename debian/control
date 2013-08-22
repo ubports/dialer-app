@@ -14,51 +14,42 @@ Build-Depends: cmake,
                qtbase5-dev (>= 5.0),
                qtdeclarative5-dev (>= 5.0),
 Standards-Version: 3.9.4
-Vcs-Bzr: lp:dialer-app
+Homepage: https://launchpad.net/dialer-app
+# If you aren't a member of ~phablet-team but need to upload packaging changes,
+# just go ahead.  ~phablet-team will notice and sync up the code again.
+Vcs-Bzr: https://code.launchpad.net/~phablet-team/dialer-app/trunk
 Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/dialer-app/trunk/files
 
 Package: dialer-app
-Architecture: i386 amd64 armhf
+Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          dbus-x11,
-         libicu48,
          qtdeclarative5-ubuntu-history-plugin,
          qtdeclarative5-ubuntu-telephony-plugin,
-         qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu
+         qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
 Recommends: unity8 (>= 7.81.0~),
 Description: Dialer application for Ubuntu
  An application to make phone calls
 
-Package: dialer-app-dbg
-Architecture: i386 amd64 armhf
-Section: debug
-Priority: extra
-Depends: ${misc:Depends},
-         dialer-app (= ${binary:Version}),
-Description: debugging symbols for dialer-app
- This package contains the debugging symbols for dialer-app
-
 Package: dialer-app-autopilot
 Architecture: all
 Section: debug
-Priority: extra
 Depends: ${misc:Depends},
          autopilot-qt5,
          libqt5test5,
          libqt5widgets5,
          dialer-app (>= ${binary:Version}),
-         python-autopilot
+         python-autopilot,
 Description: autopilot tests for dialer-app
  This package contains the autopilot tests for dialer-app
 
 Package: dialer-app-connected-autopilot
 Architecture: all
 Section: debug
-Priority: extra
 Depends: ${misc:Depends},
-         dialer-app (= ${binary:Version}),
+         dialer-app (>= ${binary:Version}),
          libautopilot-qt,
-         python-autopilot
+         python-autopilot,
 Description: connected autopilot tests for dialer-app
  This package contains the connected autopilot tests for dialer-app
