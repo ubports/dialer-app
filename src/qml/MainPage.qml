@@ -20,37 +20,43 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 
 
-Tabs {
-    id: tabs
-
+Item {
+    id: mainPage
     property alias currentTab: tabs.selectedTabIndex
 
-    Tab {
-        title: i18n.tr("Dialer")
-        page: Loader{
-            id: dialerPage
-            source: Qt.resolvedUrl("DialerPage/DialerPage.qml")
-            anchors.fill: parent
-        }
-    }
+    anchors.fill: parent
 
-    Tab {
-        title: i18n.tr("Contacts")
-        page: Loader{
-            id: contactsPage
-            source: Qt.resolvedUrl("ContactsPage/ContactsPage.qml")
-            asynchronous: true
-            anchors.fill: parent
-        }
-    }
+    Tabs {
+        id: tabs
+        anchors.fill: parent
 
-    Tab {
-        title: i18n.tr("History")
-        page: Loader{
-            id: historyPage
-            source: Qt.resolvedUrl("HistoryPage/HistoryPage.qml")
-            asynchronous: true
-            anchors.fill: parent
+        Tab {
+            title: i18n.tr("Dialer")
+            page: Loader{
+                id: dialerPage
+                source: Qt.resolvedUrl("DialerPage/DialerPage.qml")
+                anchors.fill: parent
+            }
+        }
+
+        Tab {
+            title: i18n.tr("Contacts")
+            page: Loader{
+                id: contactsPage
+                source: Qt.resolvedUrl("ContactsPage/ContactsPage.qml")
+                asynchronous: true
+                anchors.fill: parent
+            }
+        }
+
+        Tab {
+            title: i18n.tr("History")
+            page: Loader{
+                id: historyPage
+                source: Qt.resolvedUrl("HistoryPage/HistoryPage.qml")
+                asynchronous: true
+                anchors.fill: parent
+            }
         }
     }
 }
