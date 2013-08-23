@@ -20,9 +20,11 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 
 
-Page {
+Item {
     id: mainPage
     property alias currentTab: tabs.selectedTabIndex
+
+    anchors.fill: parent
 
     Tabs {
         id: tabs
