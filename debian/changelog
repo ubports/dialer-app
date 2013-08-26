@@ -1,3 +1,17 @@
+dialer-app (0.1+13.10.20130826-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Use the correct application icon.
+  * Add some autopilot tests for the dialer-app.
+
+  [ Tiago Salem Herrmann ]
+  * disable observer when app becomes inactive.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 25
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 02:36:24 +0000
+
 dialer-app (0.1+13.10.20130823.1-0ubuntu1) saucy; urgency=low
 
   [ Tiago Salem Herrmann ]
