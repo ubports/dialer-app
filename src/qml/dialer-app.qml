@@ -24,7 +24,7 @@ MainView {
     id: mainView
 
     property bool applicationActive: Qt.application.active
-    automaticOrientation: true
+    automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
 
