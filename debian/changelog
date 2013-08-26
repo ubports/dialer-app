@@ -1,3 +1,13 @@
+dialer-app (0.1+13.10.20130826.2-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Disable automatic rotation in the dialer-app.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 27
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 19:14:40 +0000
+
 dialer-app (0.1+13.10.20130826-0ubuntu1) saucy; urgency=low
 
   [ Gustavo Pichorim Boiko ]
