@@ -1,3 +1,15 @@
+dialer-app (0.1+13.10.20130827-0ubuntu1) saucy; urgency=low
+
+  [ Sebastien Bacher ]
+  * update the depends, some of the binaries got renamed when entering
+    the ubuntu archive. Let the old names, as an alternative, for the
+    transition, those can be dropped later.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 29
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 27 Aug 2013 11:18:02 +0000
+
 dialer-app (0.1+13.10.20130826.2-0ubuntu1) saucy; urgency=low
 
   [ Gustavo Pichorim Boiko ]
