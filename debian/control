@@ -22,8 +22,8 @@ Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
          dbus-x11,
-         qtdeclarative5-ubuntu-history-plugin,
-         qtdeclarative5-ubuntu-telephony-plugin,
+         qtdeclarative5-ubuntu-history0.1 | qtdeclarative5-ubuntu-history-plugin,
+         qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
 Recommends: unity8 (>= 7.81.0~),
 Description: Dialer application for Ubuntu
