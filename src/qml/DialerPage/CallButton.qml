@@ -21,21 +21,22 @@ import Ubuntu.Components 0.1
 
 AbstractButton {
     id: button
-    width: units.gu(20)
-    height: units.gu(8)
-    // FIXME: waiting on #1072733
-    //iconSource: "../assets/dialer_call.png"
+    width: units.gu(18)
+    height: units.gu(6)
+    opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
     UbuntuShape {
         anchors.fill: parent
-        color: button.pressed ? "#cd3804" : "#dd4814"
+        color: "#0F8B21"
+        gradientColor: "#37B349"
         radius: "medium"
+
     }
 
     Image {
         anchors.centerIn: parent
-        width: units.gu(4)
-        height: units.gu(4)
+        width: units.gu(3)
+        height: units.gu(3)
         source: "../assets/dialer_call.png"
         fillMode: Image.PreserveAspectFit
         z: 1
