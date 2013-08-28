@@ -32,7 +32,7 @@ ListItem.Empty {
     property bool unknownContact: contactWatcher.contactId == ""
     property string phoneNumberSubTypeLabel: ""
 
-    height: units.gu(8)
+    height: units.gu(9)
     removable: true
     showDivider: false
     backgroundIndicator: Rectangle {
@@ -146,10 +146,9 @@ ListItem.Empty {
 
         UbuntuShape {
             id: avatar
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
             anchors.left: time.right
-            anchors.leftMargin: units.gu(3)
+            anchors.leftMargin: units.gu(3.5)
+            height: units.gu(7)
             width: height
             image: Image {
                 source: {
@@ -180,7 +179,7 @@ ListItem.Empty {
             anchors.bottom: parent.bottom
             anchors.left: avatar.right
             anchors.leftMargin: units.gu(2)
-            spacing: units.gu(1)
+            spacing: units.gu(0.5)
 
             Label {
                 fontSize: "medium"
