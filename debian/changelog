@@ -1,3 +1,13 @@
+dialer-app (0.1+13.10.20130828.1-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * update visual design.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 31
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 11:48:46 +0000
+
 dialer-app (0.1+13.10.20130827-0ubuntu1) saucy; urgency=low
 
   [ Sebastien Bacher ]
