@@ -18,6 +18,7 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
 
 FocusScope {
     id: keypadEntry
@@ -27,7 +28,14 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
-    height: units.gu(8)
+    // FIXME: enable this once the new tabs are implemented
+    //height: units.gu(11)
+
+    Rectangle {
+        anchors.fill: parent
+        color: "#FFFFFF"
+        opacity: 0.05
+    }
 
     Label {
         id: dots
@@ -105,20 +113,21 @@ FocusScope {
         visible: input.text == ""
         anchors.centerIn: input
         text: ""
-        font.pixelSize: units.dp(20)
+        fontSize: "x-large"
         font.weight: Font.Light
         font.family: "Ubuntu"
         color: "#464646"
         opacity: 0.9
     }
 
-    Image {
+
+
+    ListItems.ThinDivider {
         id: divider
 
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-        source: "../assets/dialer_top_number_bg.png"
     }
 
 }

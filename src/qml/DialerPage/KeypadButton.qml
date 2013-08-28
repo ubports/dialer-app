@@ -22,7 +22,7 @@ import Ubuntu.Components 0.1
 AbstractButton {
     id: button
 
-    width: units.gu(9)
+    width: units.gu(11.33)
     height: units.gu(7)
 
     property alias label: labelItem.text
@@ -33,34 +33,52 @@ AbstractButton {
     property bool isCorner: false
     property int corner
 
-    Label {
-        id: labelItem
-
-        anchors.top: parent.top
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenterOffset: -units.gu(0.5)
-        horizontalAlignment: Text.AlignHCenter
-        fontSize: "x-large"
-        height: paintedHeight
-        verticalAlignment: Text.AlignTop
-        opacity: 0.9
+    // TODO: use proper button click feedback
+    Rectangle {
+        anchors.fill: parent
+        visible: button.pressed
+        color: "black"
+        opacity: 0.2
     }
 
-    Label {
-        id: sublabelItem
-
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: units.dp(7)
+    Item {
+        height: childrenRect.height
+        width: parent.width
+        clip: true
+        anchors.verticalCenter: parent.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
-        horizontalAlignment: Text.AlignHCenter
-        fontSize: "x-small"
-        color: "#a3a3a3"
-    }
+        Label {
+            id: labelItem
 
-    Image {
-        id: subImage
-        visible: source != ""
-        anchors.centerIn: sublabelItem
-        opacity: 0.8
+            anchors.top: parent.top
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.verticalCenterOffset: -units.gu(0.5)
+            horizontalAlignment: Text.AlignHCenter
+            fontSize: "large"
+            height: paintedHeight
+            font.weight: Font.DemiBold
+            verticalAlignment: Text.AlignTop
+            color: "#F3F3E7"
+        }
+
+        Label {
+            id: sublabelItem
+
+            anchors.top: labelItem.bottom
+            anchors.topMargin: units.dp(1.5)
+            anchors.horizontalCenter: parent.horizontalCenter
+            horizontalAlignment: Text.AlignHCenter
+            fontSize: "x-small"
+            color: "#888888"
+        }
+
+        Image {
+            id: subImage
+            visible: source != ""
+            anchors.top: labelItem.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.topMargin: units.dp(1.5)
+            opacity: 0.8
+        }
     }
 }

@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
 
 Page {
     title: i18n.tr("Call")
@@ -44,6 +45,8 @@ Page {
         KeypadEntry {
             id: keypadEntry
 
+            // TODO: remove anchors.top once the new tabs are implemented
+            anchors.top: keypadContainer.top
             anchors.bottom: keypad.top
             anchors.left: parent.left
             anchors.right: parent.right
@@ -78,21 +81,20 @@ Page {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            height: units.gu(12)
+            height: units.gu(10)
 
-            BorderImage {
+            ListItems.ThinDivider {
                 id: divider3
 
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.top: parent.top
-                source: "../assets/horizontal_divider.sci"
             }
 
             CallButton {
                 id: callButton
                 objectName: "callButton"
-                anchors.top: divider3.bottom
+                anchors.top: footer.top
                 anchors.topMargin: units.gu(2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
@@ -107,7 +109,7 @@ Page {
                 objectName: "eraseButton"
                 anchors.left: callButton.right
                 anchors.verticalCenter: callButton.verticalCenter
-                anchors.leftMargin: units.gu(1)
+                anchors.leftMargin: units.gu(2)
                 width: units.gu(7)
                 height: units.gu(7)
                 icon: "../assets/erase.png"

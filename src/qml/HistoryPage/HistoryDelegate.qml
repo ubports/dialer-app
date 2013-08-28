@@ -19,7 +19,10 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
+import QtContacts 5.0
 import "dateUtils.js" as DateUtils
 
 ListItem.Empty {
@@ -27,9 +30,11 @@ ListItem.Empty {
 
     property bool incoming: model.senderId != "self"
     property bool unknownContact: contactWatcher.contactId == ""
+    property string phoneNumberSubTypeLabel: ""
 
     height: units.gu(8)
     removable: true
+    showDivider: false
     backgroundIndicator: Rectangle {
         anchors.fill: parent
         color: Theme.palette.selected.base
@@ -60,29 +65,82 @@ ListItem.Empty {
     }
 
     Item {
+        id: helper
+        function updateSubTypeLabel() {
+            phoneNumberSubTypeLabel = contactWatcher.isUnknown ? model.participants[0] : phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
+        }
+        Component.onCompleted: updateSubTypeLabel()
+
         ContactWatcher {
             id: contactWatcher
             // FIXME: handle conf calls
             phoneNumber: model.participants[0]
+            onPhoneNumberContextsChanged: helper.updateSubTypeLabel()
+            onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
+            onIsUnknownChanged: helper.updateSubTypeLabel()
+        }
+
+
+        PhoneNumber {
+            id: phoneDetail
+            contexts: contactWatcher.phoneNumberContexts
+            subTypes: contactWatcher.phoneNumberSubTypes
+        }
+
+        ContactDetailPhoneNumberTypeModel {
+            id: phoneTypeModel
+            Component.onCompleted: helper.updateSubTypeLabel()
+        }
+
+        Component {
+            id: newcontactPopover
+
+            Popover {
+                id: popover
+                Column {
+                    id: containerLayout
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                    }
+                    ListItem.Standard { text: i18n.tr("Add to existing contact") }
+                    ListItem.Standard {
+                        text: i18n.tr("Create new contact")
+                        onClicked: {
+                            applicationUtils.switchToAddressbookApp("create://" + contactWatcher.phoneNumber)
+                            popover.hide()
+                        }
+                    }
+                }
+            }
         }
     }
 
-    Row {
+    Item {
         id: mainSection
         anchors.left: parent.left
         anchors.right: phoneIcon.left
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.margins: units.gu(1)
-        spacing: units.gu(1)
+        anchors.topMargin: units.gu(1)
+        anchors.bottomMargin: units.gu(1)
 
         UbuntuShape {
+            id: time
             anchors.verticalCenter: parent.verticalCenter
-            height: units.gu(3)
+            height: units.gu(4)
+            anchors.left: parent.left
+            anchors.leftMargin: units.gu(2)
+            width: units.gu(4.5)
+            color: "white"
 
             Label {
                 anchors.centerIn: parent
-                text: Qt.formatTime(model.timestamp)
+                color: "#221E1C"
+                fontSize: "x-small"
+                font.weight: Font.Bold
+                text: Qt.formatTime(model.timestamp, "hh:mm")
             }
         }
 
@@ -90,6 +148,8 @@ ListItem.Empty {
             id: avatar
             anchors.top: parent.top
             anchors.bottom: parent.bottom
+            anchors.left: time.right
+            anchors.leftMargin: units.gu(3)
             width: height
             image: Image {
                 source: {
@@ -97,23 +157,41 @@ ListItem.Empty {
                         if (contactWatcher.avatar != "") {
                             return contactWatcher.avatar
                         }
+                        return Qt.resolvedUrl("../assets/avatar-default.png")
                     }
-                    return Qt.resolvedUrl("../assets/avatar-default.png")
+                    return Qt.resolvedUrl("../assets/new-contact.svg")
+                }
+            }
+            MouseArea {
+                anchors.fill: avatar
+                onClicked: {
+                    if(contactWatcher.isUnknown) {
+                        PopupUtils.open(newcontactPopover, avatar)
+                    } else {
+                        applicationUtils.switchToAddressbookApp("contact://" + contactWatcher.contactId)
+                    }
                 }
             }
         }
+
         Column {
             width: childrenRect.width
             anchors.top: parent.top
             anchors.bottom: parent.bottom
+            anchors.left: avatar.right
+            anchors.leftMargin: units.gu(2)
+            spacing: units.gu(1)
 
             Label {
+                fontSize: "medium"
                 text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
             }
 
             Label {
+                fontSize: "small"
+                opacity: 0.2
                 // FIXME: handle conference call
-                text: model.participants[0]
+                text: phoneNumberSubTypeLabel
             }
         }
     }
@@ -121,7 +199,7 @@ ListItem.Empty {
     Image {
         id: phoneIcon
         anchors.right: parent.right
-        anchors.rightMargin: units.gu(2)
+        anchors.rightMargin: units.gu(3)
         anchors.verticalCenter: parent.verticalCenter
         source: selectIcon()
     }

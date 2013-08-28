@@ -19,7 +19,10 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
+import QtContacts 5.0
 import "../DialerPage"
 import "../"
 
@@ -32,6 +35,7 @@ Page {
     property bool isSpeaker: call ? call.speaker : false
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: false
+    property string phoneNumberSubTypeLabel: ""
 
     // TRANSLATORS: %1 is the duration of the call
     title: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
@@ -46,15 +50,39 @@ Page {
         }
     }
 
+    Item {
+        id: helper
+        function updateSubTypeLabel() {
+            phoneNumberSubTypeLabel = contactWatcher.isUnknown ? "": phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
+        }
+        Component.onCompleted: updateSubTypeLabel()
+
+        ContactWatcher {
+            id: contactWatcher
+            // FIXME: handle conf calls
+            phoneNumber: call ? call.phoneNumber : ""
+            onPhoneNumberContextsChanged: helper.updateSubTypeLabel()
+            onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
+            onIsUnknownChanged: helper.updateSubTypeLabel()
+        }
+
+
+        PhoneNumber {
+            id: phoneDetail
+            contexts: contactWatcher.phoneNumberContexts
+            subTypes: contactWatcher.phoneNumberSubTypes
+        }
+
+        ContactDetailPhoneNumberTypeModel {
+            id: phoneTypeModel
+            Component.onCompleted: helper.updateSubTypeLabel()
+        }
+    }
+
     StopWatch {
         id: stopWatch
         time: call ? call.elapsedTime : 0
         visible: false
-    }
-
-    ContactWatcher {
-        id: contactWatcher
-        phoneNumber: call ? call.phoneNumber : ""
     }
 
     /*BackgroundCall {
@@ -74,7 +102,7 @@ Page {
         // FIXME: use something different than a hardcoded path of a unity8 asset
         source: contactWatcher.avatar != "" ? contactWatcher.avatar : "../assets/live_call_background.png"
         anchors {
-            top: parent.top
+            top: topPanel.bottom
             left: parent.left
             right: parent.right
             bottom: footer.top
@@ -91,9 +119,39 @@ Page {
     }
 
     Item {
-        id: centralArea
+        id: topPanel
+        clip: true
+        height: contactWatcher.isUnknown ? 0 : units.gu(5)
         anchors {
             top: parent.top
+            left: parent.left
+            right: parent.right
+        }
+        Label {
+            anchors {
+                left: parent.left
+                leftMargin: units.gu(2)
+                verticalCenter: parent.verticalCenter
+            }
+            fontSize: "medium"
+            text: phoneNumberSubTypeLabel
+        }
+        Label {
+            anchors {
+                right: parent.right
+                rightMargin: units.gu(2)
+                verticalCenter: parent.verticalCenter
+            }
+            text: contactWatcher.phoneNumber
+            fontSize: "medium"
+            opacity: 0.2
+        }
+    }
+
+    Item {
+        id: centralArea
+        anchors {
+            top: topPanel.bottom
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top
@@ -113,7 +171,10 @@ Page {
         Keypad {
             id: keypad
 
-            anchors.centerIn: parent
+            color: Qt.rgba(0,0,0, 0.4)
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: units.gu(2)
+            anchors.horizontalCenter: parent.horizontalCenter
             onKeyPressed: {
                 //keypadEntry.value += label
                 if (call) {
@@ -130,13 +191,45 @@ Page {
         }
     }
 
+    Item {
+        id: gridLinesVertical
+        height: buttonsArea.width
+        width: buttonsArea.height
+        rotation: -90
+        anchors.centerIn: buttonsArea
+        Column {
+            anchors.fill: parent
+            Item {
+                height: units.gu(11)
+                width: buttonsArea.height
+                ListItems.ThinDivider {
+                    anchors.bottom: parent.bottom
+                }
+            }
+            Item {
+                height: units.gu(7)
+                width: buttonsArea.height
+                ListItems.ThinDivider {
+                    anchors.bottom: parent.bottom
+                }
+            }
+            Item {
+                height: units.gu(7)
+                width: buttonsArea.height
+                ListItems.ThinDivider {
+                    anchors.bottom: parent.bottom
+                }
+            }
+        }
+    }
+
     UbuntuShape {
         id: buttonsArea
 
-        color: Qt.rgba(0,0,0, 0.75)
+        color: Qt.rgba(0,0,0, 0.5)
 
         height: childrenRect.height
-        width: keypad.width
+        width: childrenRect.width
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: footer.top
@@ -145,9 +238,9 @@ Page {
         radius: "medium"
 
         Row {
+            id: controlButtons
             height: childrenRect.height
             width: childrenRect.width
-            spacing: units.gu(1)
 
             Label {
                 id: durationLabel
@@ -158,7 +251,7 @@ Page {
                 }
                 verticalAlignment: Qt.AlignVCenter
                 horizontalAlignment: Qt.AlignHCenter
-                width: paintedWidth + units.gu(2)
+                width: units.gu(11)
                 text: stopWatch.elapsed
             }
 
@@ -166,6 +259,8 @@ Page {
                 objectName: "muteButton"
                 iconSource: selected ? "../assets/microphone-mute.png" : "../assets/microphone.png"
                 selected: liveCall.isMuted
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
                 onClicked: {
                     if (call) {
                         call.muted = !call.muted
@@ -177,6 +272,8 @@ Page {
                 objectName: "pauseStartButton"
                 iconSource: selected ? "../assets/play.png" : "../assets/pause.png"
                 selected: liveCall.onHold
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
                 onClicked: {
                     if (call) {
                         call.held = !call.held
@@ -188,6 +285,8 @@ Page {
                 objectName: "speakerButton"
                 iconSource: selected ? "../assets/speaker.png" : "../assets/speaker-mute.png"
                 selected: liveCall.isSpeaker
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
                 onClicked: {
                     if (call) {
                         call.speaker = !selected
@@ -199,7 +298,7 @@ Page {
 
     Item {
         id: footer
-        height: units.gu(12)
+        height: units.gu(10)
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
