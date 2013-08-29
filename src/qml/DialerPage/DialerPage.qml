@@ -108,6 +108,7 @@ Page {
                 }
             }
 
+            // FIXME: uncomment this code if we end up having both the header and the toolbar.
             /*onCountChanged: {
                 if (count > 0) {
                     page.header.hide();
