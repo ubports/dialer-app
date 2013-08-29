@@ -31,7 +31,7 @@ Item {
         anchors.fill: parent
 
         Tab {
-            title: i18n.tr("Dialer")
+            title: i18n.tr("Keypad")
             page: Loader{
                 id: dialerPage
                 source: Qt.resolvedUrl("DialerPage/DialerPage.qml")
@@ -50,7 +50,7 @@ Item {
         }
 
         Tab {
-            title: i18n.tr("History")
+            title: i18n.tr("Call log")
             page: Loader{
                 id: historyPage
                 source: Qt.resolvedUrl("HistoryPage/HistoryPage.qml")

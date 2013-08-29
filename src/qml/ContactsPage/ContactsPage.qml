@@ -26,7 +26,6 @@ import QtContacts 5.0
 Page {
     id: contactsPage
     objectName: "contactsPage"
-    title: i18n.tr("Contacts")
     property QtObject contact
 
     ContactListView {
