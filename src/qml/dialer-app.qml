@@ -23,12 +23,20 @@ import Ubuntu.Telephony 0.1
 MainView {
     id: mainView
 
-    automaticOrientation: true
+    property bool applicationActive: Qt.application.active
+    automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
 
     signal applicationReady
 
+    onApplicationActiveChanged: {
+        if (applicationActive) {
+            telepathyHelper.registerChannelObserver()
+        } else {
+            telepathyHelper.unregisterChannelObserver()
+        }
+    }
 
     function callVoicemail() {
         callManager.startCall(callManager.voicemailNumber);

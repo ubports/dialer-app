@@ -21,6 +21,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
 
 Page {
     id: page
@@ -47,12 +48,13 @@ Page {
         KeypadEntry {
             id: keypadEntry
 
-            anchors {
-                bottom: contactSearch.top
-                left: parent.left
-                right: parent.right
-                bottomMargin: units.gu(2)
-            }
+            // TODO: remove anchors.top once the new tabs are implemented
+            anchors.top: keypadContainer.top
+            anchors.bottom: contactSearch.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottomMargin: units.gu(2)
+
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
@@ -106,13 +108,13 @@ Page {
                 }
             }
 
-            onCountChanged: {
+            /*onCountChanged: {
                 if (count > 0) {
                     page.header.hide();
                 } else {
                     page.header.show();
                 }
-            }
+            }*/
 
             onDetailClicked: {
                 mainView.call(detail.number);
@@ -143,21 +145,20 @@ Page {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            height: units.gu(12)
+            height: units.gu(10)
 
-            BorderImage {
+            ListItems.ThinDivider {
                 id: divider3
 
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.top: parent.top
-                source: "../assets/horizontal_divider.sci"
             }
 
             CallButton {
                 id: callButton
                 objectName: "callButton"
-                anchors.top: divider3.bottom
+                anchors.top: footer.top
                 anchors.topMargin: units.gu(2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
@@ -172,7 +173,7 @@ Page {
                 objectName: "eraseButton"
                 anchors.left: callButton.right
                 anchors.verticalCenter: callButton.verticalCenter
-                anchors.leftMargin: units.gu(1)
+                anchors.leftMargin: units.gu(2)
                 width: units.gu(7)
                 height: units.gu(7)
                 icon: "../assets/erase.png"
@@ -191,57 +192,4 @@ Page {
             }
         }
     }
-    state: width >= units.gu(60) ? "landscape" : ""
-    states: [
-        State {
-            name: "landscape"
-            AnchorChanges {
-                target: keypadEntry
-                anchors {
-                    left: undefined
-                    bottom: undefined
-                    top: keypad.top
-                }
-            }
-
-            PropertyChanges {
-                target: keypadEntry
-                width: parent.width / 2
-                anchors.rightMargin: units.gu(2)
-            }
-
-            AnchorChanges {
-                target: keypad
-                anchors {
-                    left: parent.left
-                    right: undefined
-                    top: undefined
-                    bottom: parent.bottom
-                }
-            }
-
-            PropertyChanges {
-                target: keypad
-                keysWidth: units.gu(8)
-                keysHeight: units.gu(6)
-                fontPixelSize: units.dp(30)
-                width: parent.width / 2
-                anchors.leftMargin: units.gu(2)
-                anchors.bottomMargin: units.gu(2)
-            }
-
-            AnchorChanges {
-                target: footer
-                anchors {
-                    left: keypadEntry.left
-                    right: keypadEntry.right
-                }
-            }
-
-            PropertyChanges {
-                target: divider3
-                visible: false
-            }
-        }
-    ]
 }

@@ -37,7 +37,7 @@ class DialerAppTestCase(AutopilotTestCase):
     CALL_DURATION = config.getint('connected_variables', 'outgoing_call_duration')
     SEND_SMS_TEXT = config.get('connected_variables', 'sms_send_text')
     RECEIVED_SMS_TEXT = config.get('connected_variables', 'sms_expect_text')
-    TYPING_DELAY=0.01
+    TYPING_DELAY = 0.01
     HOME = os.path.expanduser("~")
     BACKUP = HOME + "/.local/share/TpLogger/logs/ofono_ofono_account0.backup/"
     ORIGINAL = HOME + "/.local/share/TpLogger/logs/ofono_ofono_account0"

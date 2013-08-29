@@ -1,5 +1,69 @@
-dialer-app (0.1) UNRELEASED; urgency=low
+dialer-app (0.1+13.10.20130829-0ubuntu1) saucy; urgency=low
 
+  [ Tiago Salem Herrmann ]
+  * fix delegate size in history page fix avatar size in history page.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 33
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 03:20:41 +0000
+
+dialer-app (0.1+13.10.20130828.1-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * update visual design.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 31
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 28 Aug 2013 11:48:46 +0000
+
+dialer-app (0.1+13.10.20130827-0ubuntu1) saucy; urgency=low
+
+  [ Sebastien Bacher ]
+  * update the depends, some of the binaries got renamed when entering
+    the ubuntu archive. Let the old names, as an alternative, for the
+    transition, those can be dropped later.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 29
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 27 Aug 2013 11:18:02 +0000
+
+dialer-app (0.1+13.10.20130826.2-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Disable automatic rotation in the dialer-app.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 27
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 19:14:40 +0000
+
+dialer-app (0.1+13.10.20130826-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Use the correct application icon.
+  * Add some autopilot tests for the dialer-app.
+
+  [ Tiago Salem Herrmann ]
+  * disable observer when app becomes inactive.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 25
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 26 Aug 2013 02:36:24 +0000
+
+dialer-app (0.1+13.10.20130823.1-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Salem Herrmann ]
   * Initial release
 
- -- Tiago Salem Herrmann <tiago.herrmann@canonical.com>  Mon, 15 Jul 2013 11:36:03 -0300
+  [ Łukasz 'sil2100' Zemczak ]
+  * Modifications related to compliance with our packaging standards
+  * Automatic snapshot from revision 20 (bootstrap)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 21
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 23 Aug 2013 07:16:48 +0000

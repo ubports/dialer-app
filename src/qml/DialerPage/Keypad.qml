@@ -18,26 +18,64 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
 
 UbuntuShape {
     id: keypad
 
-    property int keysWidth: units.gu(11)
+    property int keysWidth: units.gu(11.33)
     property int keysHeight: units.gu(7)
 
-    width: keys.width + units.gu(2)
-    height: keys.height + units.gu(2)
+    width: keys.width
+    height: keys.height
     radius: "medium"
-    color: Qt.rgba(0,0,0,0.75)
 
     signal keyPressed(int keycode, string label)
+
+    Item {
+        id: gridLinesVertical
+        height: gridLinesHorizontal.width
+        width: gridLinesHorizontal.height
+        rotation: -90
+        anchors.centerIn: gridLinesHorizontal
+        Column {
+            anchors.fill: parent
+            Repeater {
+                model: 2
+                Item {
+                    height: keysWidth
+                    width: keysHeight*4
+                    ListItems.ThinDivider {
+                        anchors.bottom: parent.bottom
+                    }
+                }
+            }
+        }
+    }
+
+    Item {
+        id: gridLinesHorizontal
+        anchors.fill: keys
+        Column {
+            anchors.fill: parent
+            Repeater {
+                model: 3
+                Item {
+                    height: keysHeight
+                    width: keysWidth*3
+                    ListItems.ThinDivider {
+                        anchors.bottom: parent.bottom
+                    }
+                }
+            }
+        }
+    }
 
     Grid {
         id: keys
 
         rows: 4
         columns: 3
-        spacing: units.gu(1)
         anchors.centerIn: parent
 
         KeypadButton {
