@@ -252,7 +252,7 @@ Page {
                 verticalAlignment: Qt.AlignVCenter
                 horizontalAlignment: Qt.AlignHCenter
                 width: units.gu(11)
-                text: stopWatch.elapsed
+                text: (call && call.active) ? stopWatch.elapsed : i18n.tr("calling")
             }
 
             LiveCallKeypadButton {
