@@ -1,3 +1,13 @@
+dialer-app (0.1+13.10.20130829-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * fix delegate size in history page fix avatar size in history page.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 33
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Aug 2013 03:20:41 +0000
+
 dialer-app (0.1+13.10.20130828.1-0ubuntu1) saucy; urgency=low
 
   [ Tiago Salem Herrmann ]
