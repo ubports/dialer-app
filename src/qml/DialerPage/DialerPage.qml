@@ -16,11 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import QtContacts 5.0
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
 
 Page {
+    id: page
     title: i18n.tr("Call")
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
@@ -44,14 +47,76 @@ Page {
         KeypadEntry {
             id: keypadEntry
 
-            anchors.bottom: keypad.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottomMargin: units.gu(2)
-
+            anchors {
+                bottom: contactSearch.top
+                left: parent.left
+                right: parent.right
+                bottomMargin: units.gu(2)
+            }
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+        }
+
+        ContactSearchListView {
+            id: contactSearch
+            property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: keypad.top
+                margins: units.gu(2)
+            }
+
+            states: [
+                State {
+                    name: "empty"
+                    when: contactSearch.count == 0
+                    PropertyChanges {
+                        target: contactSearch
+                        height: 0
+                    }
+                }
+            ]
+
+            Behavior on height {
+                UbuntuNumberAnimation { }
+            }
+
+            filter: UnionFilter {
+                DetailFilter {
+                    detail: ContactDetail.Name
+                    field: Name.FirstName
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchKeypadCollation | DetailFilter.MatchContains
+                }
+
+                DetailFilter {
+                    detail: ContactDetail.Name
+                    field: Name.LastName
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchContains | DetailFilter.MatchKeypadCollation
+                }
+
+                DetailFilter {
+                    detail: ContactDetail.PhoneNumber
+                    field: PhoneNumber.Number
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchPhoneNumber
+                }
+            }
+
+            onCountChanged: {
+                if (count > 0) {
+                    page.header.hide();
+                } else {
+                    page.header.show();
+                }
+            }
+
+            onDetailClicked: {
+                mainView.call(detail.number);
+            }
         }
 
         Keypad {
