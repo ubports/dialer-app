@@ -26,7 +26,6 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyPage
     objectName: "historyPage"
-    title: i18n.tr("History")
     tools: ToolbarItems {
         opened: false
         locked: true

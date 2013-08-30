@@ -25,7 +25,6 @@ import Ubuntu.Components.ListItems 0.1 as ListItems
 
 Page {
     id: page
-    title: i18n.tr("Call")
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
