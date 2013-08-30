@@ -106,6 +106,14 @@ Page {
                     value: contactSearch.searchTerm
                     matchFlags: DetailFilter.MatchPhoneNumber
                 }
+
+                DetailFilter {
+                    detail: ContactDetail.PhoneNumber
+                    field: PhoneNumber.Number
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchContains
+                }
+
             }
 
             // FIXME: uncomment this code if we end up having both the header and the toolbar.
