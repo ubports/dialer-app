@@ -170,6 +170,11 @@ ListItem.Empty {
                         applicationUtils.switchToAddressbookApp("contact://" + contactWatcher.contactId)
                     }
                 }
+                onPressAndHold: {
+                    if(contactWatcher.isUnknown) {
+                        PopupUtils.open(newcontactPopover, avatar)
+                    }
+                }
             }
         }
 
