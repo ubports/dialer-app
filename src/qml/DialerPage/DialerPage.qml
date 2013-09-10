@@ -52,7 +52,7 @@ Page {
             anchors.bottom: contactSearch.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.bottomMargin: units.gu(2)
+            anchors.bottomMargin: units.gu(0.5)
 
             focus: true
             placeHolder: i18n.tr("Enter a number")
@@ -66,7 +66,7 @@ Page {
                 left: parent.left
                 right: parent.right
                 bottom: keypad.top
-                margins: units.gu(2)
+                margins: units.gu(0.5)
             }
 
             states: [
