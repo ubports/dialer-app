@@ -43,7 +43,7 @@ FocusScope {
         anchors.left: parent.left
         text: "..."
         visible: (input.contentWidth > (keypadEntry.width - dots.width))
-        font.pixelSize: units.dp(43)
+        font.pixelSize: input.font.pixelSize
         font.weight: Font.Light
         font.family: "Ubuntu"
         color: "#AAAAAA"
@@ -58,7 +58,7 @@ FocusScope {
         anchors.verticalCenter: parent.verticalCenter
         horizontalAlignment: TextInput.AlignRight
         text: ""
-        font.pixelSize: units.dp(43)
+        font.pixelSize: units.dp(39)
         font.weight: Font.Light
         font.family: "Ubuntu"
         color: "#AAAAAA"

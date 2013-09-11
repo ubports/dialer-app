@@ -16,12 +16,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+import QtContacts 5.0
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 
 Page {
+    id: page
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
@@ -46,14 +49,84 @@ Page {
 
             // TODO: remove anchors.top once the new tabs are implemented
             anchors.top: keypadContainer.top
-            anchors.bottom: keypad.top
+            anchors.bottom: contactSearch.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.bottomMargin: units.gu(2)
+            anchors.bottomMargin: units.gu(0.5)
 
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+        }
+
+        ContactSearchListView {
+            id: contactSearch
+            property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: keypad.top
+                margins: units.gu(0.5)
+            }
+
+            states: [
+                State {
+                    name: "empty"
+                    when: contactSearch.count == 0
+                    PropertyChanges {
+                        target: contactSearch
+                        height: 0
+                    }
+                }
+            ]
+
+            Behavior on height {
+                UbuntuNumberAnimation { }
+            }
+
+            filter: UnionFilter {
+                DetailFilter {
+                    detail: ContactDetail.Name
+                    field: Name.FirstName
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchKeypadCollation | DetailFilter.MatchContains
+                }
+
+                DetailFilter {
+                    detail: ContactDetail.Name
+                    field: Name.LastName
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchContains | DetailFilter.MatchKeypadCollation
+                }
+
+                DetailFilter {
+                    detail: ContactDetail.PhoneNumber
+                    field: PhoneNumber.Number
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchPhoneNumber
+                }
+
+                DetailFilter {
+                    detail: ContactDetail.PhoneNumber
+                    field: PhoneNumber.Number
+                    value: contactSearch.searchTerm
+                    matchFlags: DetailFilter.MatchContains
+                }
+
+            }
+
+            // FIXME: uncomment this code if we end up having both the header and the toolbar.
+            /*onCountChanged: {
+                if (count > 0) {
+                    page.header.hide();
+                } else {
+                    page.header.show();
+                }
+            }*/
+
+            onDetailClicked: {
+                mainView.call(detail.number);
+            }
         }
 
         Keypad {
