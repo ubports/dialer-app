@@ -1,3 +1,16 @@
+dialer-app (0.1+13.10.20130917-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Add a basic implementation of the smart lookup dialer.
+
+  [ Tiago Salem Herrmann ]
+  * invoke popups also on pressAndHold.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 39
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 17 Sep 2013 12:57:23 +0000
+
 dialer-app (0.1+13.10.20130830.2-0ubuntu1) saucy; urgency=low
 
   [ Łukasz 'sil2100' Zemczak ]
