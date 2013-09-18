@@ -36,6 +36,7 @@ Page {
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: false
     property string phoneNumberSubTypeLabel: ""
+    Component.onDestruction: mainView.switchToCallLogView()
 
     // TRANSLATORS: %1 is the duration of the call
     title: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
