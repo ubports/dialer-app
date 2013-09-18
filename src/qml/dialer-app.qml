@@ -46,6 +46,9 @@ MainView {
         callManager.startCall(number);
     }
 
+    function switchToCallLogView() {
+        pageStack.currentPage.currentTab = 2;
+    }
 
     function isVoicemailActive() {
         if (callManager.foregroundCall) {
@@ -69,23 +72,25 @@ MainView {
 
     Connections {
         target: callManager
-        onForegroundCallChanged: {
-            // if there is no call, or if the views are already loaded, do not continue processing
-            if (!callManager.foregroundCall) {
+        onHasCallsChanged: {
+            console.log("onHasCallsChanged")
+            if(!callManager.hasCalls) {
                 while (pageStack.depth > 1) {
                     pageStack.pop();
                 }
-                pageStack.currentPage.currentTab = 2;
-                return;
+                return
+            }
+            // if there are no calls, or if the views are already loaded, do not continue processing
+            if ((callManager.foregroundCall || callManager.backgroundCall) && pageStack.depth === 1) {
+                if ((callManager.foregroundCall && callManager.foregroundCall.voicemail)
+                        || (callManager.backgroundCall && callManager.backgroundCall.voicemail)) {
+                    pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
+                } else  {
+                    pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+                }
+                application.activateWindow();
             }
 
-            if (callManager.foregroundCall.voicemail) {
-                pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
-            } else {
-                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
-            }
-
-            application.activateWindow();
         }
     }
 

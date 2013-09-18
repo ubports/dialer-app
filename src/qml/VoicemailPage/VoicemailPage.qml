@@ -27,17 +27,12 @@ Page {
     property variant contact
     property QtObject call: callManager.foregroundCall
     property string number: callManager.voicemailNumber
+    Connections {
+        target: call
+        onCallEnded: mainView.switchToCallLogView()
+    }
 
     title: i18n.tr("Voicemail")
-
-    Component.onDestruction: {
-        // if this view was destroyed but we still have
-        // active calls, then it means it was manually removed
-        // from the stack
-        if (previousTab != -1 && callManager.hasCalls) {
-            mainView.selectedTabIndex = previousTab
-        }
-    }
 
     function isVoicemailActive() {
         return mainView.isVoicemailActive();
@@ -46,18 +41,6 @@ Page {
     function endCall() {
         if (call) {
             call.endCall();
-        }
-    }
-
-    Connections {
-        target: callManager
-        onCallEnded: {
-            if (!callManager.hasCalls) {
-                if (voicemail.visible && voicemail.previousTab != -1) {
-                    mainView.selectedTabIndex = voicemail.previousTab
-                }
-                mainView.endCall();
-            }
         }
     }
 
