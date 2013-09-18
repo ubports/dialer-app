@@ -72,9 +72,7 @@ MainView {
 
     Connections {
         target: callManager
-        onHasCallsChanged: updateCalls()
-        onForegroundCallChanged: updateCalls()
-        function updateCalls() {
+        onForegroundCallChanged: {
             if(!callManager.hasCalls) {
                 while (pageStack.depth > 1) {
                     pageStack.pop();
