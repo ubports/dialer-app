@@ -72,8 +72,9 @@ MainView {
 
     Connections {
         target: callManager
-        onHasCallsChanged: {
-            console.log("onHasCallsChanged")
+        onHasCallsChanged: updateCalls()
+        onForegroundCallChanged: updateCalls()
+        function updateCalls() {
             if(!callManager.hasCalls) {
                 while (pageStack.depth > 1) {
                     pageStack.pop();
@@ -90,7 +91,6 @@ MainView {
                 }
                 application.activateWindow();
             }
-
         }
     }
 

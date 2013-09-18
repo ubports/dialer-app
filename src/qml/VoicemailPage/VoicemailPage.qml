@@ -27,10 +27,7 @@ Page {
     property variant contact
     property QtObject call: callManager.foregroundCall
     property string number: callManager.voicemailNumber
-    Connections {
-        target: call
-        onCallEnded: mainView.switchToCallLogView()
-    }
+    Component.onDestruction: mainView.switchToCallLogView()
 
     title: i18n.tr("Voicemail")
 
