@@ -172,6 +172,7 @@ Page {
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
                     callManager.startCall(keypadEntry.value);
+					keypadEntry.value = "";
                 }
                 enabled: dialNumber != "" && telepathyHelper.connected
             }
