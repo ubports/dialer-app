@@ -1,3 +1,13 @@
+dialer-app (0.1+13.10.20130925-0ubuntu1) saucy; urgency=low
+
+  [ Ted Gould ]
+  * Adding single instance marker to the desktop file.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 43
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 25 Sep 2013 06:35:25 +0000
+
 dialer-app (0.1+13.10.20130919.3-0ubuntu1) saucy; urgency=low
 
   * Automatic snapshot from revision 41
