@@ -31,6 +31,7 @@ ListItem.Empty {
     property bool incoming: model.senderId != "self"
     property bool unknownContact: contactWatcher.contactId == ""
     property string phoneNumberSubTypeLabel: ""
+    property alias isFirst: timeline.isFirst
 
     height: units.gu(9)
     removable: true
@@ -123,8 +124,6 @@ ListItem.Empty {
         anchors.right: phoneIcon.left
         anchors.top: parent.top
         anchors.bottom: parent.bottom
-        anchors.topMargin: units.gu(1)
-        anchors.bottomMargin: units.gu(1)
 
         UbuntuShape {
             id: time
@@ -144,10 +143,19 @@ ListItem.Empty {
             }
         }
 
+        Timeline {
+            id: timeline
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.left: time.right
+            anchors.leftMargin: units.gu(0.5)
+        }
+
         UbuntuShape {
             id: avatar
-            anchors.left: time.right
-            anchors.leftMargin: units.gu(3.5)
+            anchors.left: timeline.right
+            anchors.leftMargin: units.gu(1)
+            anchors.verticalCenter: parent.verticalCenter
             height: units.gu(7)
             width: height
             image: Image {
@@ -180,7 +188,7 @@ ListItem.Empty {
 
         Column {
             width: childrenRect.width
-            anchors.top: parent.top
+            anchors.top: avatar.top
             anchors.bottom: parent.bottom
             anchors.left: avatar.right
             anchors.leftMargin: units.gu(2)

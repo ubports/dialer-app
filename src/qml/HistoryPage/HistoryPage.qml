@@ -62,6 +62,9 @@ Page {
         currentIndex: -1
         section.property: "date"
         section.delegate: Item {
+            ListItem.ThinDivider {
+                anchors.top: parent.top
+            }
             anchors.left: parent.left
             anchors.right: parent.right
             height: units.gu(5)
@@ -90,6 +93,7 @@ Page {
                 anchors.right: parent.right
                 anchors.top: parent.top
                 onClicked: mainView.call(model.participants[0])
+                isFirst: model.index == 0
             }
 
             asynchronous: true
