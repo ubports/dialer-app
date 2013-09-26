@@ -28,6 +28,18 @@ Page {
     property QtObject call: callManager.foregroundCall
     property string number: callManager.voicemailNumber
     Component.onDestruction: mainView.switchToCallLogView()
+    Timer {
+        id: callWatcher
+        interval: 10000
+        repeat: false
+        running: true
+        onTriggered: {
+            if (!call) {
+                // TODO: notify about failed call
+                pageStack.pop()
+            }
+        }
+    }
 
     title: i18n.tr("Voicemail")
 

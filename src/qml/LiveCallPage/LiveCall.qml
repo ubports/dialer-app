@@ -37,6 +37,18 @@ Page {
     property bool dtmfVisible: false
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
+    Timer {
+        id: callWatcher
+        interval: 10000
+        repeat: false
+        running: true
+        onTriggered: {
+            if (!call) {
+                // TODO: notify about failed call
+                pageStack.pop()
+            }
+        }
+    }
 
     // TRANSLATORS: %1 is the duration of the call
     title: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber

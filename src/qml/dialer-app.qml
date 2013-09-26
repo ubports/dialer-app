@@ -39,10 +39,25 @@ MainView {
     }
 
     function callVoicemail() {
+        if (!telepathyHelper.connected || callManager.voicemailNumber === "") {
+            return
+        }
+        if (pageStack.depth === 1 && !callManager.hasCalls) {
+            pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
+        }
         callManager.startCall(callManager.voicemailNumber);
     }
 
     function call(number) {
+        if (!telepathyHelper.connected) {
+            return
+        }
+        if (number === callManager.voicemailNumber) {
+            callVoicemail()
+        }
+        if (pageStack.depth === 1 && !callManager.hasCalls)  {
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), {"number": number})
+        }
         callManager.startCall(number);
     }
 
