@@ -30,7 +30,7 @@ Page {
     Component.onDestruction: mainView.switchToCallLogView()
     Timer {
         id: callWatcher
-        interval: 3000
+        interval: 10000
         repeat: false
         running: true
         onTriggered: {
