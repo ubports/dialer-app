@@ -171,7 +171,7 @@ Page {
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
-                    callManager.startCall(keypadEntry.value);
+                    mainView.call(keypadEntry.value);
                     keypadEntry.value = "";
                 }
                 enabled: dialNumber != "" && telepathyHelper.connected
