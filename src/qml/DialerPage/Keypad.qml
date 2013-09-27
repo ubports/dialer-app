@@ -86,7 +86,7 @@ UbuntuShape {
             keycode: Qt.Key_1
             onClicked: keypad.keyPressed(keycode, label)
             onPressAndHold: mainView.callVoicemail()
-            iconSource: "../assets/voicemail.png"
+            iconSource: "voicemail"
         }
 
         KeypadButton {

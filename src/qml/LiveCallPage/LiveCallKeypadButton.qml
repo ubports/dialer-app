@@ -22,7 +22,7 @@ import Ubuntu.Components 0.1
 AbstractButton {
     id: button
 
-    property alias iconSource: icon.source
+    property alias iconSource: icon.name
     property bool selected: false
 
     width: units.gu(7)
@@ -36,12 +36,11 @@ AbstractButton {
         source: (selected || pressed) ? "../assets/dialer_pad_bg_pressed.png" : "../assets/dialer_pad_bg.png"
     }*/
 
-    Image {
+    Icon {
         id: icon
         anchors.centerIn: parent
         width: (iconWidth > 0) ? iconWidth : undefined
         height: (iconHeight > 0) ? iconHeight : undefined
-        source: icon
-        fillMode: Image.PreserveAspectFit
+        color: "white"
     }
 }

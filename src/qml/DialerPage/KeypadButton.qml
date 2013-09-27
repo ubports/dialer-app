@@ -28,7 +28,7 @@ AbstractButton {
     property alias label: labelItem.text
     property alias sublabel: sublabelItem.text
     property alias sublabelSize: sublabelItem.fontSize
-    property alias iconSource: subImage.source
+    property alias iconSource: subImage.name
     property int keycode
     property bool isCorner: false
     property int corner
@@ -72,13 +72,15 @@ AbstractButton {
             color: "#888888"
         }
 
-        Image {
+        Icon {
             id: subImage
-            visible: source != ""
+            visible: name != ""
             anchors.top: labelItem.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.topMargin: units.dp(1.5)
             opacity: 0.8
+            width: units.gu(2)
+            height: units.gu(2)
         }
     }
 }

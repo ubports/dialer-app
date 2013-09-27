@@ -33,13 +33,12 @@ AbstractButton {
 
     }
 
-    Image {
+    Icon {
         anchors.centerIn: parent
-        width: units.gu(3)
-        height: units.gu(3)
-        source: "../assets/dialer_call.png"
-        fillMode: Image.PreserveAspectFit
+        width: units.gu(4)
+        height: units.gu(4)
+        name: "call-start"
+        color: "white"
         z: 1
-
     }
 }
