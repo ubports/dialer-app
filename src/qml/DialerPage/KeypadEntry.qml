@@ -47,7 +47,7 @@ FocusScope {
         anchors.right: parent.right
         anchors.rightMargin: units.gu(2)
         anchors.verticalCenter: parent.verticalCenter
-        horizontalAlignment: TextInput.AlignRight
+        horizontalAlignment: TextInput.AlignHCenter
         text: ""
         font.pixelSize: units.dp(39)
         font.weight: Font.Light
@@ -64,10 +64,10 @@ FocusScope {
         cursorDelegate: Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
-            width: 1
-            color: Qt.rgba(0,0,0,0.5)
+            width: units.dp(3)
+            color: "#DD4814"
+            visible: input.text != ""
         }
-
 
         // force cursor to be always visible
         onCursorVisibleChanged: {
