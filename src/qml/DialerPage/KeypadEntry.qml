@@ -56,7 +56,7 @@ FocusScope {
         anchors.right: parent.right
         anchors.rightMargin: units.gu(2)
         anchors.verticalCenter: parent.verticalCenter
-        horizontalAlignment: TextInput.AlignRight
+        horizontalAlignment: TextInput.AlignHCenter
         text: ""
         font.pixelSize: units.dp(39)
         font.weight: Font.Light
