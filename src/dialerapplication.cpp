@@ -52,7 +52,6 @@ static void installIconPath()
     qDebug() << __PRETTY_FUNCTION__;
     QByteArray iconTheme = qgetenv("DIALER_APP_ICON_THEME");
     if (!iconTheme.isEmpty()) {
-        qDebug() << "BLABLA icon theme:" << iconTheme;
         QIcon::setThemeName(iconTheme);
     }
 }
