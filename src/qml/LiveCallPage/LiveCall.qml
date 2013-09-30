@@ -30,6 +30,7 @@ Page {
     id: liveCall
 
     property QtObject call: callManager.foregroundCall
+    property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
     property bool isSpeaker: call ? call.speaker : false
@@ -51,7 +52,7 @@ Page {
     }
 
     // TRANSLATORS: %1 is the duration of the call
-    title: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
+    title: dtmfEntry !== "" ? dtmfEntry : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
     tools: ToolbarItems {
         opened: false
         locked: true
@@ -191,6 +192,7 @@ Page {
             onKeyPressed: {
                 //keypadEntry.value += label
                 if (call) {
+                    dtmfEntry += label
                     call.sendDTMF(label)
                 }
             }
