@@ -72,10 +72,10 @@ FocusScope {
         cursorDelegate: Rectangle {
             anchors.top: parent.top
             anchors.bottom: parent.bottom
-            width: 1
-            color: Qt.rgba(0,0,0,0.5)
+            width: units.dp(3)
+            color: "#DD4814"
+            visible: input.text != ""
         }
-
 
         // force cursor to be always visible
         onCursorVisibleChanged: {
