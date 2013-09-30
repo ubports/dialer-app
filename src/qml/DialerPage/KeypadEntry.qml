@@ -41,6 +41,7 @@ FocusScope {
         id: dots
         clip: true
         anchors.left: parent.left
+        anchors.verticalCenter: parent.verticalCenter
         text: "..."
         visible: (input.contentWidth > (keypadEntry.width - dots.width))
         font.pixelSize: input.font.pixelSize
