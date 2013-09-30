@@ -270,7 +270,7 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "muteButton"
-                iconSource: selected ? "../assets/microphone-mute.png" : "../assets/microphone.png"
+                iconSource: selected ? "microphone-mute" : "microphone"
                 selected: liveCall.isMuted
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -283,7 +283,7 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "pauseStartButton"
-                iconSource: selected ? "../assets/play.png" : "../assets/pause.png"
+                iconSource: selected ? "media-playback-start" : "media-playback-pause"
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -296,7 +296,7 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "speakerButton"
-                iconSource: selected ? "../assets/speaker.png" : "../assets/speaker-mute.png"
+                iconSource: selected ? "speaker" : "speaker-mute"
                 selected: liveCall.isSpeaker
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -319,7 +319,9 @@ Page {
         LiveCallKeypadButton {
             id: contactButton
             objectName: "contactButton"
-            iconSource: "../assets/avatar-default.png"
+            iconSource: "contact"
+            iconWidth: units.gu(4)
+            iconHeight: units.gu(4)
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter
@@ -339,7 +341,9 @@ Page {
         LiveCallKeypadButton {
             id: dtmfButton
             objectName: "dtmfButton"
-            iconSource: "../assets/keypad.png"
+            iconSource: "keypad"
+            iconWidth: units.gu(4)
+            iconHeight: units.gu(4)
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter

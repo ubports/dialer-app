@@ -45,6 +45,18 @@ static void printUsage(const QStringList& arguments)
              << "[-testability]";
 }
 
+//this is necessary to work on desktop
+//On desktop use: export DIALER_APP_ICON_THEME=ubuntu-mobile
+static void installIconPath()
+{
+    qDebug() << __PRETTY_FUNCTION__;
+    QByteArray iconTheme = qgetenv("DIALER_APP_ICON_THEME");
+    if (!iconTheme.isEmpty()) {
+        QIcon::setThemeName(iconTheme);
+    }
+}
+
+
 DialerApplication::DialerApplication(int &argc, char **argv)
     : QGuiApplication(argc, argv), m_view(0), m_applicationIsReady(false)
 {
@@ -54,6 +66,7 @@ DialerApplication::DialerApplication(int &argc, char **argv)
 
 bool DialerApplication::setup()
 {
+    installIconPath();
     static QList<QString> validSchemes;
     bool fullScreen = false;
 

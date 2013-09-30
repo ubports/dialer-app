@@ -185,7 +185,8 @@ Page {
                 anchors.leftMargin: units.gu(2)
                 width: units.gu(7)
                 height: units.gu(7)
-                icon: "../assets/erase.png"
+                icon: "erase"
+                lighten: input.text != ""
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
 

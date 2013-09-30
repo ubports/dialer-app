@@ -57,11 +57,11 @@ ListItem.Empty {
 
     function selectIcon()  {
         if (model.callMissed) {
-            return "../assets/missed-call.png";
+            return "missed-call";
         } else if (incoming) {
-            return "../assets/incoming-call.png";
+            return "incoming-call";
         } else {
-            return "../assets/outgoing-call.png";
+            return "outgoing-call";
         }
     }
 
@@ -208,11 +208,13 @@ ListItem.Empty {
         }
     }
 
-    Image {
+    Icon {
         id: phoneIcon
         anchors.right: parent.right
         anchors.rightMargin: units.gu(3)
         anchors.verticalCenter: parent.verticalCenter
-        source: selectIcon()
+        width:  units.gu(2)
+        height: units.gu(2)
+        name: selectIcon()
     }
 }

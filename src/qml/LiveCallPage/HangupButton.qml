@@ -34,12 +34,12 @@ AbstractButton {
         radius: "medium"
     }
 
-    Image {
+    Icon {
         anchors.centerIn: parent
-        width: units.gu(6)
-        height: units.gu(6)
-        source: "../assets/incall_hangup.png"
-        fillMode: Image.PreserveAspectFit
+        width: units.gu(4)
+        height: units.gu(4)
+        name: "call-end"
+        color: "white"
         z: 1
     }
 }

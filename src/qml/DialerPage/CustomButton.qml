@@ -22,16 +22,15 @@ import Ubuntu.Components 0.1
 Button {
     // FIXME: waiting on #1072733
     //iconSource: "../assets/dialer_call.png"
-    property string icon
-    property int iconWidth
-    property int iconHeight
+    property alias icon: buttonIcon.name
+    property alias iconWidth: buttonIcon.width
+    property alias iconHeight: buttonIcon.height
+    property bool lighten: false
 
-    Image {
+    Icon {
+        id: buttonIcon
         anchors.centerIn: parent
-        width: iconWidth
-        height: iconHeight
-        source: icon
-        fillMode: Image.PreserveAspectFit
+        color: lighten ? "white" : UbuntuColors.warmGrey
     }
     color: "transparent"
 }
