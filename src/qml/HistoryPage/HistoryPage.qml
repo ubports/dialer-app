@@ -56,6 +56,7 @@ Page {
 
     ListView {
         id: historyList
+        objectName: "historyList"
 
         anchors.fill: parent
         model: sortProxy
