@@ -1,3 +1,27 @@
+dialer-app (0.1+13.10.20131001.4-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Hillebrandt ]
+  * Empty KeyPad entry after start call.
+
+  [ Gustavo Pichorim Boiko ]
+  * Update some icons to use the theme instead of the local assets. Also
+    set the backspace icon to be white when there is text to erase. (LP:
+    #1226157)
+  * Make the text center aligned in the dialer input field. - Change the
+    cursor delegate to use the correct color. (LP: #1229202, #1222902)
+  * Limit the number of digits to 20 and scale the font down when the
+    numbers don't fit on the screen. (LP: #1082054)
+
+  [ Tiago Salem Herrmann ]
+  * Push views to the pagestack even before the telepathy channel is
+    created. (LP: #1218311)
+  * Add support for expansive delegates on call log view.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 52
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Oct 2013 21:20:44 +0000
+
 dialer-app (0.1+13.10.20130926.1-0ubuntu1) saucy; urgency=low
 
   [ Gustavo Pichorim Boiko ]
