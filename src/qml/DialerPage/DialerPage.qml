@@ -44,15 +44,26 @@ Page {
         anchors.fill: parent
         focus: true
 
+        Rectangle {
+            id: keypadEntryBackground
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: keypad.top
+            anchors.bottomMargin: units.gu(1.5)
+            color: "#FFFFFF"
+            opacity: 0.05
+        }
+
         KeypadEntry {
             id: keypadEntry
 
             // TODO: remove anchors.top once the new tabs are implemented
-            anchors.top: keypadContainer.top
+            anchors.top: parent.top
             anchors.bottom: contactSearch.top
             anchors.left: parent.left
             anchors.right: parent.right
-            anchors.bottomMargin: units.gu(0.5)
+            anchors.bottomMargin: units.gu(1)
 
             focus: true
             placeHolder: i18n.tr("Enter a number")
@@ -65,7 +76,7 @@ Page {
             anchors {
                 left: parent.left
                 right: parent.right
-                bottom: keypad.top
+                bottom: keypadEntryBackground.bottom
                 margins: units.gu(0.5)
             }
 
@@ -129,12 +140,19 @@ Page {
             }
         }
 
+        ListItems.ThinDivider {
+            id: divider
+
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: keypadEntryBackground.bottom
+        }
+
         Keypad {
             id: keypad
 
             anchors.bottom: footer.top
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottomMargin: units.gu(2)
 
             onKeyPressed: {
                 if (input.cursorPosition != 0)  {
@@ -155,19 +173,11 @@ Page {
             anchors.bottom: parent.bottom
             height: units.gu(10)
 
-            ListItems.ThinDivider {
-                id: divider3
-
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.top: parent.top
-            }
-
             CallButton {
                 id: callButton
                 objectName: "callButton"
-                anchors.top: footer.top
-                anchors.topMargin: units.gu(2)
+                anchors.bottom: footer.bottom
+                anchors.bottomMargin: units.gu(2)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);

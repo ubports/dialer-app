@@ -31,12 +31,6 @@ FocusScope {
     // FIXME: enable this once the new tabs are implemented
     //height: units.gu(11)
 
-    Rectangle {
-        anchors.fill: parent
-        color: "#FFFFFF"
-        opacity: 0.05
-    }
-
     Label {
         id: dots
         clip: true
@@ -119,16 +113,6 @@ FocusScope {
         font.family: "Ubuntu"
         color: "#464646"
         opacity: 0.9
-    }
-
-
-
-    ListItems.ThinDivider {
-        id: divider
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
     }
 
 }
