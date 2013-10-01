@@ -1,0 +1,80 @@
+#!/bin/sh
+set -e
+
+PHONESIM_CONF=/etc/ofono/phonesim.conf
+SCRIPTS_DIR=/usr/share/ofono/scripts
+
+# enable to get ofono debugging log on failure
+#DEBUG_OFONO=-d
+
+if [ "$1" = "--help" ]; then
+    echo "Usage: $0 [<program to run> [args..] ]" >&2
+    exit 0
+fi
+
+# check our dependencies
+[ -e $PHONESIM_CONF ] || { 
+    echo "You need to install ofono-phonesim for this test" >&2
+    exit 1
+}
+if ! type xvfb-run >/dev/null 2>&1; then
+    echo "You need to install xvfb for this test" >&2
+    exit 1
+fi
+if ! type $SCRIPTS_DIR/online-modem >/dev/null 2>&1; then
+    echo "You need to install ofono-scripts for this test" >&2
+    exit 1
+fi
+
+# read ofono config and uncomment phonesim stanza
+MYCONF=$(sed '/\[phonesim/,$ s/^#//' $PHONESIM_CONF)
+
+# run program under an unshared /etc/ofono/, to be able to run ofono
+# with a custom configuration without having to touch the fs
+cat <<EOF | unshare -m sh
+set -e
+mount --make-rprivate /
+mount -n -t tmpfs tmpfs /etc/ofono
+echo "$MYCONF" > $PHONESIM_CONF
+
+echo "$0: starting ofono and phonesim.."
+stop ofono || true
+ofonod -P ril $DEBUG_OFONO -n >/etc/ofono/ofono.log 2>&1 &
+OFONO_PID=\$!
+
+# clean up and restart original ofono at the end
+trap "set +e; echo '$0: cleaning up...'; pkill ofono-phonesim; kill \\\$OFONO_PID 2>/dev/null; wait; start ofono; pkill telepathy-ofono" 0 INT QUIT HUP PIPE
+
+xvfb-run -a ofono-phonesim -p 12345 /usr/share/phonesim/default.xml > /etc/ofono/phonesim.log 2>&1 &
+
+echo "$0: waiting for simulated modem to appear ..."
+timeout=10
+while [ \$timeout -gt 0 ]; do
+    sleep 1 
+    timeout=\$((timeout-1))
+    $SCRIPTS_DIR/enable-modem && break
+done
+[ \$timeout -ge 0 ] || {
+    echo "timed out waiting for phonesim modem to appear" >&2
+    exit 1
+}
+
+# force restart of telepathy-ofono against new ofonod
+pkill telepathy-ofono || true
+
+if [ -z "$1" ]; then
+    echo "$0: run your application now, and Control-C or kill this process to stop this simulator"
+    tail -f /etc/ofono/ofono.log
+    exit 0
+fi
+
+echo "$0: running command line specified program/test..."
+$@ || {
+RC=\$?
+echo "program/test failed with exit status \$RC" >&2
+echo "------ ofono log -------------" >&2
+cat /etc/ofono/ofono.log >&2
+echo "------ end ofofono log -------------" >&2
+exit \$RC
+}
+EOF
