@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-16 10:49-0300\n"
+"POT-Creation-Date: 2013-10-01 11:46+0200\n"
 "PO-Revision-Date: 2013-06-14 21:06+0000\n"
 "Last-Translator: <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -19,6 +19,107 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-06-15 06:21+0000\n"
 "X-Generator: Launchpad (build 16667)\n"
 
+#: src/qml/DialerPage/Keypad.qml:201
+msgid "#"
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:62
+#, qt-format
+msgid "%1 hour call"
+msgid_plural "%1 hours call"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/qml/HistoryPage/dateUtils.js:64
+#, qt-format
+msgid "%1 minute call"
+msgid_plural "%1 minutes call"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/qml/HistoryPage/dateUtils.js:66
+#, qt-format
+msgid "%1 second call"
+msgid_plural "%1 seconds call"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/qml/DialerPage/Keypad.qml:178
+msgid "*"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:188
+msgid "+"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:187
+msgid "0"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:85
+msgid "1"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:96
+msgid "2"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:106
+msgid "3"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:116
+msgid "4"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:126
+msgid "5"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:136
+msgid "6"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:146
+msgid "7"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:156
+msgid "8"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:166
+msgid "9"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:97
+msgid "ABC"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:108
+msgid "Add to existing contact"
+msgstr ""
+
+#: src/qml/MainPage.qml:53
+msgid "Call log"
+msgstr ""
+
+#: src/qml/MainPage.qml:43
+msgid "Contacts"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:110
+msgid "Create new contact"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:107
+msgid "DEF"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:43
+msgid "Delete"
+msgstr ""
+
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
 msgstr ""
@@ -29,4 +130,64 @@ msgstr ""
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
+msgstr ""
+
+#: src/qml/VoicemailPage/VoicemailPage.qml:86
+msgid "Dialing"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:58
+msgid "Enter a number"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:117
+msgid "GHI"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:127
+msgid "JKL"
+msgstr ""
+
+#: src/qml/MainPage.qml:34
+msgid "Keypad"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:137
+msgid "MNO"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:147
+msgid "PQRS"
+msgstr ""
+
+#: src/qml/LiveCallPage/BackgroundCall.qml:54
+msgid "Swap Calls"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:157
+msgid "TUV"
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:41
+msgid "Today"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:199
+msgid "Unknown"
+msgstr ""
+
+#: src/qml/VoicemailPage/VoicemailPage.qml:44
+msgid "Voicemail"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:167
+msgid "WXYZ"
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:43
+msgid "Yesterday"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:268
+msgid "calling"
 msgstr ""
