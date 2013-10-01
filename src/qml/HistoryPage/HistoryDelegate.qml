@@ -32,6 +32,7 @@ ListItem.Empty {
     property bool unknownContact: contactWatcher.contactId == ""
     property string phoneNumberSubTypeLabel: ""
     property alias isFirst: timeline.isFirst
+    property alias contactId: contactWatcher.contactId
 
     height: units.gu(9)
     removable: true
@@ -92,30 +93,6 @@ ListItem.Empty {
             id: phoneTypeModel
             Component.onCompleted: helper.updateSubTypeLabel()
         }
-
-        Component {
-            id: newcontactPopover
-
-            Popover {
-                id: popover
-                Column {
-                    id: containerLayout
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        right: parent.right
-                    }
-                    ListItem.Standard { text: i18n.tr("Add to existing contact") }
-                    ListItem.Standard {
-                        text: i18n.tr("Create new contact")
-                        onClicked: {
-                            applicationUtils.switchToAddressbookApp("create://" + contactWatcher.phoneNumber)
-                            popover.hide()
-                        }
-                    }
-                }
-            }
-        }
     }
 
     Item {
@@ -160,28 +137,10 @@ ListItem.Empty {
             width: height
             image: Image {
                 source: {
-                    if(!unknownContact) {
-                        if (contactWatcher.avatar != "") {
+                    if(!unknownContact && contactWatcher.avatar != "") {
                             return contactWatcher.avatar
-                        }
-                        return Qt.resolvedUrl("../assets/avatar-default.png")
                     }
-                    return Qt.resolvedUrl("../assets/new-contact.svg")
-                }
-            }
-            MouseArea {
-                anchors.fill: avatar
-                onClicked: {
-                    if(contactWatcher.isUnknown) {
-                        PopupUtils.open(newcontactPopover, avatar)
-                    } else {
-                        applicationUtils.switchToAddressbookApp("contact://" + contactWatcher.contactId)
-                    }
-                }
-                onPressAndHold: {
-                    if(contactWatcher.isUnknown) {
-                        PopupUtils.open(newcontactPopover, avatar)
-                    }
+                    return Qt.resolvedUrl("../assets/avatar-default.png")
                 }
             }
         }
