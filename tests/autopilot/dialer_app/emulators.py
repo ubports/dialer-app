@@ -50,3 +50,6 @@ class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
 
     def get_erase_button(self):
         return self.select_single("CustomButton", objectName="eraseButton")
+
+    def get_call_button(self):
+        return self.select_single(objectName="callButton")
