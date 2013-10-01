@@ -21,6 +21,7 @@ import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.History 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
 import "dateUtils.js" as DateUtils
 
 Page {
@@ -54,12 +55,12 @@ Page {
         ascending: false
     }
 
-    ListView {
+    MultipleSelectionListView {
         id: historyList
-
+        property int currentContactExpanded: -1
         anchors.fill: parent
-        model: sortProxy
-        currentIndex: -1
+        listModel: sortProxy
+        acceptAction.text: i18n.tr("Delete")
         section.property: "date"
         section.delegate: Item {
             ListItem.ThinDivider {
@@ -68,7 +69,6 @@ Page {
             anchors.left: parent.left
             anchors.right: parent.right
             height: units.gu(5)
-            Component.onCompleted: console.log(section)
             Label {
                 anchors.left: parent.left
                 anchors.leftMargin: units.gu(2)
@@ -84,28 +84,116 @@ Page {
                 anchors.bottom: parent.bottom
             }
         }
-
-        delegate: Loader {
-            id: historyLoader
-            sourceComponent: HistoryDelegate {
-                id: historyDelegate
-                anchors.left: parent.left
-                anchors.right: parent.right
-                anchors.top: parent.top
-                onClicked: mainView.call(model.participants[0])
-                isFirst: model.index == 0
+        onSelectionDone: {
+            for (var i=0; i < items.count; i++) {
+                var event = items.get(i).model
+                historyEventModel.removeEvent(event.accountId, event.threadId, event.eventId, event.type)
             }
+        }
+        listDelegate: delegateItem
 
-            asynchronous: true
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: item ? item.height : units.gu(8.5)
+        Component {
+            id: delegateItem
+            Item {
+                id: item
+                height: delegate.detailsShown ? (delegate.height + pickerLoader.height) : delegate.height
+                width: parent ? parent.width : 0
+                clip: true
+                Behavior on height {
+                    UbuntuNumberAnimation { }
+                }
+                Connections {
+                    target: historyList
+                    onCurrentContactExpandedChanged: {
+                        if (index != historyList.currentContactExpanded) {
+                            delegate.detailsShown = false
+                        }
+                    }
+                }
 
-            Binding {
-                target: historyLoader.item
-                property: "model"
-                value: model
-                when: historyLoader.status == Loader.Ready
+                HistoryDelegate {
+                    id: delegate
+                    property bool detailsShown: false
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    anchors.top: parent.top
+                    selected: historyList.isSelected(item)
+                    isFirst: model.index == 0
+                    width: parent ? parent.width : 0
+                    clip: true
+                    removable: !historyList.isInSelectionMode
+                    showDivider: false
+
+                    onPressAndHold: {
+                        if (!historyList.isInSelectionMode) {
+                            historyList.startSelection()
+                        }
+                        historyList.selectItem(item)
+                    }
+                    onClicked: {
+                        if (historyList.isInSelectionMode) {
+                            if (!historyList.selectItem(item)) {
+                                historyList.deselectItem(item)
+                            }
+                            return
+                        }
+                        if (historyList.currentContactExpanded == index) {
+                            historyList.currentContactExpanded = -1
+                            detailsShown = false
+                            return
+                        // expand and display the extended options
+                        } else {
+                            historyList.currentContactExpanded = index
+                            detailsShown = !detailsShown
+                        }
+                    }
+                    Rectangle {
+                        id: selectionMark
+
+                        anchors {
+                            top: parent.top
+                            bottom: parent.bottom
+                            right: parent.right
+                        }
+
+                        color: "black"
+                        visible: delegate.selected
+                        Icon {
+                            name: "select"
+                            height: units.gu(3)
+                            width: height
+                            anchors.centerIn: parent
+                        }
+                    }
+                }
+                Loader {
+                    id: pickerLoader
+
+                    source: delegate.detailsShown ? Qt.resolvedUrl("CallLogContactDelegate.qml") : ""
+                    anchors {
+                        top: delegate.bottom
+                        topMargin: units.gu(1)
+                        left: parent.left
+                        right: parent.right
+                    }
+                    onStatusChanged: {
+                        if (status == Loader.Ready) {
+                            pickerLoader.item.phoneNumber = participants[0]
+                            pickerLoader.item.contactId = delegate.contactId
+                        }
+                    }
+                    Connections {
+                        target: pickerLoader.item
+                        onItemClicked: historyList.currentContactExpanded = -1
+                    }
+                }
+                ListItem.ThinDivider {
+                    anchors {
+                        bottom: pickerLoader.bottom
+                        right: parent.right
+                        left: parent.left
+                    }
+                }
             }
         }
     }
