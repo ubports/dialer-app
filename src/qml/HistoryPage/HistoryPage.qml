@@ -60,7 +60,6 @@ Page {
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy
-        currentIndex: -1
         acceptAction.text: i18n.tr("Delete")
         section.property: "date"
         section.delegate: Item {
@@ -94,17 +93,15 @@ Page {
         listDelegate: delegateItem
 
         Component {
-           id: delegateItem
-           Item {
-               id: item
-               height: delegate.detailsShown ? (delegate.height + pickerLoader.height) : delegate.height
-               width: parent ? parent.width : 0
-               clip: true
-
+            id: delegateItem
+            Item {
+                id: item
+                height: delegate.detailsShown ? (delegate.height + pickerLoader.height) : delegate.height
+                width: parent ? parent.width : 0
+                clip: true
                 Behavior on height {
                     UbuntuNumberAnimation { }
                 }
-
                 Connections {
                     target: historyList
                     onCurrentContactExpandedChanged: {
@@ -126,9 +123,6 @@ Page {
                     clip: true
                     removable: !historyList.isInSelectionMode
                     showDivider: false
-                    Behavior on height {
-                        UbuntuNumberAnimation { }
-                    }
 
                     onPressAndHold: {
                         if (!historyList.isInSelectionMode) {
@@ -151,7 +145,6 @@ Page {
                         } else {
                             historyList.currentContactExpanded = index
                             detailsShown = !detailsShown
-                            historyList.currentIndex = index
                         }
                     }
                     Rectangle {
@@ -201,7 +194,7 @@ Page {
                         left: parent.left
                     }
                 }
-           }
+            }
         }
     }
 

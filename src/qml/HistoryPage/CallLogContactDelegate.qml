@@ -41,7 +41,6 @@ Item {
                  onClicked: {
                      PopupUtils.open(addPhoneNumberToContactSheet)
                      PopupUtils.close(dialogue)
-                     itemClicked()
                  }
              }
              Button {
@@ -50,7 +49,6 @@ Item {
                  onClicked: {
                      mainView.addNewContact(phoneNumber)
                      PopupUtils.close(dialogue)
-                     itemClicked()
                  }
              }
              Button {
@@ -58,9 +56,9 @@ Item {
                  color: UbuntuColors.warmGrey
                  onClicked: {
                      PopupUtils.close(dialogue)
-                     itemClicked()
                  }
              }
+             Component.onDestruction: itemClicked()
          }
     }
 
