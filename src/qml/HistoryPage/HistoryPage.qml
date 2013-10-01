@@ -189,6 +189,10 @@ Page {
                             pickerLoader.item.contactId = delegate.contactId
                         }
                     }
+                    Connections {
+                        target: pickerLoader.item
+                        onItemClicked: historyList.currentContactExpanded = -1
+                    }
                 }
                 ListItem.ThinDivider {
                     anchors {

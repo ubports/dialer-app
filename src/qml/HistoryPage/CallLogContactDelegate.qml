@@ -25,11 +25,9 @@ Item {
     property string contactId: ""
     property bool unknownContact: contactId === ""
 
+    signal itemClicked()
+
     height: details.height + units.gu(2)
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
 
     Component {
          id: newContactDialog
@@ -43,6 +41,7 @@ Item {
                  onClicked: {
                      PopupUtils.open(addPhoneNumberToContactSheet)
                      PopupUtils.close(dialogue)
+                     itemClicked()
                  }
              }
              Button {
@@ -51,6 +50,7 @@ Item {
                  onClicked: {
                      mainView.addNewContact(phoneNumber)
                      PopupUtils.close(dialogue)
+                     itemClicked()
                  }
              }
              Button {
@@ -58,6 +58,7 @@ Item {
                  color: UbuntuColors.warmGrey
                  onClicked: {
                      PopupUtils.close(dialogue)
+                     itemClicked()
                  }
              }
          }
@@ -120,7 +121,10 @@ Item {
                         fontSize: "medium"
                     }
                 }
-                onClicked: mainView.call(phoneNumber)
+                onClicked: {
+                    itemClicked()
+                    mainView.call(phoneNumber)
+                }
             }
             ListItem.Empty {
                 showDivider: false
@@ -142,7 +146,10 @@ Item {
                         left: parent.left
                     }
                 }
-                onClicked: mainView.sendMessage(phoneNumber)
+                onClicked: {
+                    itemClicked()
+                    mainView.sendMessage(phoneNumber)
+                }
             }
             ListItem.Empty {
                 showDivider: false
@@ -169,6 +176,7 @@ Item {
                         PopupUtils.open(newContactDialog)
                     } else {
                         mainView.viewContact(contactId)
+                        itemClicked()
                     }
                 }
             }
