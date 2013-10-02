@@ -86,6 +86,7 @@ class TestCalls(DialerAppTestCase):
         self.pointing_device.click_object(hangup_button)
         self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
 
-        # should switch to call log page
+        # should switch to call log page and show call to "Unknown"
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
         self.assertThat(self.history_list.count, Equals(1))
+        self.assertThat(self.history_list.select_single('Label', text="Unknown"), NotEquals(None))
