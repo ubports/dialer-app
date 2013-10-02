@@ -133,6 +133,7 @@ Page {
     Image {
         id: background
 
+        fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
         source: contactWatcher.avatar != "" ? contactWatcher.avatar : "../assets/live_call_background.png"
         anchors {
