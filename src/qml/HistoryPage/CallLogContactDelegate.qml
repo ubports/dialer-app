@@ -33,14 +33,16 @@ Item {
          id: newContactDialog
          Dialog {
              id: dialogue
+             property bool saveToExistingContact: false
              title: i18n.tr("Save contact")
              text: i18n.tr("How do you want to save the contact?")
              Button {
                  text: i18n.tr("Add to existing contact")
                  color: UbuntuColors.orange
                  onClicked: {
-                     PopupUtils.open(addPhoneNumberToContactSheet)
                      PopupUtils.close(dialogue)
+                     saveToExistingContact = true
+                     PopupUtils.open(addPhoneNumberToContactSheet)
                  }
              }
              Button {
@@ -58,7 +60,8 @@ Item {
                      PopupUtils.close(dialogue)
                  }
              }
-             Component.onDestruction: itemClicked()
+             // if we emit itemClicked(), addPhoneNumberToContactSheet will become unresponsive
+             Component.onDestruction: !saveToExistingContact && itemClicked()
          }
     }
 
@@ -85,7 +88,7 @@ Item {
                     PopupUtils.close(sheet)
                 }
             }
-            onDoneClicked: PopupUtils.close(sheet)
+            Component.onDestruction: itemClicked()
         }
     }
 
