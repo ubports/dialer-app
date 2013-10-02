@@ -131,14 +131,4 @@ FocusScope {
         opacity: 0.9
     }
 
-
-
-    ListItems.ThinDivider {
-        id: divider
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
-    }
-
 }

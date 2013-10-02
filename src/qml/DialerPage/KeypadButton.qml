@@ -33,20 +33,19 @@ AbstractButton {
     property bool isCorner: false
     property int corner
 
-    // TODO: use proper button click feedback
-    Rectangle {
-        anchors.fill: parent
-        visible: button.pressed
-        color: "black"
-        opacity: 0.2
-    }
-
     Item {
         height: childrenRect.height
         width: parent.width
         clip: true
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.centerIn: parent
+        scale: button.pressed ? 0.9 : 1
+
+        Behavior on scale {
+            UbuntuNumberAnimation {
+                duration: 250
+            }
+        }
+
         Label {
             id: labelItem
 
