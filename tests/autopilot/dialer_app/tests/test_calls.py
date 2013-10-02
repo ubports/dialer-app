@@ -83,6 +83,10 @@ class TestCalls(DialerAppTestCase):
         self.assertThat(hangup_button.visible, Eventually(Equals(True)))
         self.assertThat(self.call_button.visible, Equals(False))
 
+        # should show called number in title page
+        lcp = self.app.select_single(objectName="pageLiveCall")
+        self.assertThat(lcp.title, Equals('144'))
+
         # hang up again
         self.pointing_device.click_object(hangup_button)
         self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
@@ -114,6 +118,10 @@ class TestCalls(DialerAppTestCase):
         # stop watch should start counting
         stop_watch = self.app.select_single(objectName="stopWatch")
         self.assertIn("00:0", stop_watch.elapsed)
+
+        # should show caller number in title page
+        lcp = self.app.select_single(objectName="pageLiveCall")
+        self.assertThat(lcp.title, Equals('1234567'))
 
         # hang up again
         self.pointing_device.click_object(hangup_button)

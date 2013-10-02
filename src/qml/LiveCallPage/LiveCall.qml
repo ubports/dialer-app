@@ -28,6 +28,7 @@ import "../"
 
 Page {
     id: liveCall
+    objectName: "pageLiveCall"
 
     property QtObject call: callManager.foregroundCall
     property alias number: contactWatcher.phoneNumber
