@@ -136,6 +136,7 @@ ListItem.Empty {
             height: units.gu(7)
             width: height
             image: Image {
+                fillMode: Image.PreserveAspectCrop
                 source: {
                     if(!unknownContact && contactWatcher.avatar != "") {
                             return contactWatcher.avatar
