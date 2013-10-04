@@ -127,6 +127,15 @@ MainView {
         }
     }
 
+    Connections {
+        target: UriHandler
+        onOpened: {
+           for (var i = 0; i < uris.length; ++i) {
+               application.parseArgument(uris[i])
+           }
+       }
+    }
+
     PageStack {
         id: pageStack
         anchors.fill: parent
