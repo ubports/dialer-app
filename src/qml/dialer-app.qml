@@ -39,23 +39,19 @@ MainView {
     }
 
     function viewContact(contactId) {
-        applicationUtils.switchToAddressbookApp("addressbook://contact?id=" + encodeURIComponent(contactId))
+        Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
     }
 
     function addNewContact(phoneNumber) {
-        applicationUtils.switchToAddressbookApp("addressbook://create" +
-                                                "?phone=" + encodeURIComponent(phoneNumber))
+        Qt.openUrlExternally("addressbook:///create?phone=" + encodeURIComponent(phoneNumber))
     }
 
     function addPhoneNumberToExistingContact(contactId, phoneNumber) {
-        applicationUtils.switchToAddressbookApp("addressbook://addphone" +
-                                                "?id=" + encodeURIComponent(contactId) +
-                                                "&phone=" + encodeURIComponent(phoneNumber))
-
+        Qt.openUrlExternally("addressbook:///addphone?id=" + encodeURIComponent(contactId) + "&phone=" + encodeURIComponent(phoneNumber))
     }
 
     function sendMessage(phoneNumber) {
-        applicationUtils.switchToMessagingApp("messages://" + encodeURIComponent(phoneNumber))
+        Qt.openUrlExternally("messages:///" + encodeURIComponent(phoneNumber))
     }
 
     function callVoicemail() {
