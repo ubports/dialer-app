@@ -181,7 +181,6 @@ void DialerApplication::parseArgument(const QString &arg)
     }
 
     QUrl url(arg);
-
     QString scheme = url.scheme();
     // Remove the first "/"
     QString value = url.path().right(url.path().length() -1);
