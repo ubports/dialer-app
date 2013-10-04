@@ -37,8 +37,8 @@ static void printUsage(const QStringList& arguments)
 {
     qDebug() << "usage:"
              << arguments.at(0).toUtf8().constData()
-             << "[call://PHONE_NUMBER]"
-             << "[voicemail://]"
+             << "[tel:///PHONE_NUMBER]"
+             << "[tel:///voicemail]"
              << "[--fullscreen]"
              << "[--help]"
              << "[-testability]";
