@@ -51,7 +51,7 @@ MainView {
     }
 
     function sendMessage(phoneNumber) {
-        Qt.openUrlExternally("messages:///" + encodeURIComponent(phoneNumber))
+        Qt.openUrlExternally("message:///" + encodeURIComponent(phoneNumber))
     }
 
     function callVoicemail() {
