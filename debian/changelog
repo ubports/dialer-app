@@ -1,3 +1,57 @@
+dialer-app (0.1+13.10.20131004.1-0ubuntu1) saucy; urgency=low
+
+  [ Dennis O'Flaherty ]
+  * Format date properly so friendlyDay() can return the right string.
+    (LP: #1229139)
+
+  [ Ugo Riboni ]
+  * Update the pot file and a translation. (LP: #1232374)
+
+  [ Gustavo Pichorim Boiko ]
+  * Update the designs of the dialer-app fixing the following issues: -
+    Remove the bottom divider (between the keypad and the call button)
+    to have more space for the smart dialing results. - Make the keypad
+    a little darker - Put the results of the smart dialing inside the
+    lighter area (where the numbers are) - Make the keypad buttons
+    shrink when pressed instead of going darker.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Fixed avatar scale on live call page.
+
+  [ Tiago Salem Herrmann ]
+  * Replace the current contact/phone number by the dtmf string on the
+    live call view. (LP: #1225060)
+  * Prevent the new contact dialog from becoming unresponsive.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 59
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 04 Oct 2013 07:23:26 +0000
+
+dialer-app (0.1+13.10.20131001.4-0ubuntu1) saucy; urgency=low
+
+  [ Tiago Hillebrandt ]
+  * Empty KeyPad entry after start call.
+
+  [ Gustavo Pichorim Boiko ]
+  * Update some icons to use the theme instead of the local assets. Also
+    set the backspace icon to be white when there is text to erase. (LP:
+    #1226157)
+  * Make the text center aligned in the dialer input field. - Change the
+    cursor delegate to use the correct color. (LP: #1229202, #1222902)
+  * Limit the number of digits to 20 and scale the font down when the
+    numbers don't fit on the screen. (LP: #1082054)
+
+  [ Tiago Salem Herrmann ]
+  * Push views to the pagestack even before the telepathy channel is
+    created. (LP: #1218311)
+  * Add support for expansive delegates on call log view.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 52
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Oct 2013 21:20:44 +0000
+
 dialer-app (0.1+13.10.20130926.1-0ubuntu1) saucy; urgency=low
 
   [ Gustavo Pichorim Boiko ]

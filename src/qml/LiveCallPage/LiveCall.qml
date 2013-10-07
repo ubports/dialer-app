@@ -31,6 +31,7 @@ Page {
     objectName: "pageLiveCall"
 
     property QtObject call: callManager.foregroundCall
+    property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
     property bool isSpeaker: call ? call.speaker : false
@@ -52,7 +53,7 @@ Page {
     }
 
     // TRANSLATORS: %1 is the duration of the call
-    title: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
+    title: dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
     tools: ToolbarItems {
         opened: false
         locked: true
@@ -61,6 +62,26 @@ Page {
     function endCall() {
         if (call) {
             call.endCall();
+        }
+    }
+
+    // FIXME: this invisible label is only used for
+    // calculating the size of the screen and resizing
+    // the dtmf string accordingly so it can fit the page header
+    Label {
+        id: dtmfLabelHelper
+        visible: false
+        text: dtmfEntry
+        anchors.left: parent.left
+        anchors.leftMargin: units.gu(2)
+        anchors.right: parent.right
+        anchors.rightMargin: units.gu(4)
+        fontSize: "x-large"
+        onTextChanged: {
+            if(paintedWidth > width) {
+                // drop the first number
+                dtmfEntry = dtmfEntry.substr(1)
+            }
         }
     }
 
@@ -114,6 +135,7 @@ Page {
     Image {
         id: background
 
+        fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
         source: contactWatcher.avatar != "" ? contactWatcher.avatar : "../assets/live_call_background.png"
         anchors {
@@ -193,6 +215,7 @@ Page {
             onKeyPressed: {
                 //keypadEntry.value += label
                 if (call) {
+                    dtmfEntry += label
                     call.sendDTMF(label)
                 }
             }

@@ -37,23 +37,13 @@ FocusScope {
         opacity: 0.05
     }
 
-    Label {
-        id: dots
-        clip: true
-        anchors.left: parent.left
-        anchors.verticalCenter: parent.verticalCenter
-        text: "..."
-        visible: (input.contentWidth > (keypadEntry.width - dots.width))
-        font.pixelSize: input.font.pixelSize
-        font.weight: Font.Light
-        font.family: "Ubuntu"
-        color: "#AAAAAA"
-    }
-
     TextInput {
         id: input
 
-        anchors.left: dots.visible ? dots.right : parent.left
+        property bool __adjusting: false
+
+        anchors.left: parent.left
+        anchors.leftMargin: units.gu(2)
         anchors.right: parent.right
         anchors.rightMargin: units.gu(2)
         anchors.verticalCenter: parent.verticalCenter
@@ -63,6 +53,7 @@ FocusScope {
         font.weight: Font.Light
         font.family: "Ubuntu"
         color: "#AAAAAA"
+        maximumLength: 20
         focus: true
         cursorVisible: true
         clip: true
@@ -82,6 +73,25 @@ FocusScope {
         onCursorVisibleChanged: {
             if (!cursorVisible)
                 cursorVisible = true
+        }
+
+        onContentWidthChanged: {
+            // avoid infinite recursion here
+            if (__adjusting) {
+                return;
+            }
+
+            __adjusting = true;
+
+            // start by resetting the font size to discover the scale that should be used
+            font.pixelSize = units.dp(39);
+
+            // check if it really needs to be scaled
+            if (contentWidth > width) {
+                var factor = width / contentWidth;
+                font.pixelSize = font.pixelSize * factor;
+            }
+            __adjusting = false;
         }
     }
 
@@ -119,16 +129,6 @@ FocusScope {
         font.family: "Ubuntu"
         color: "#464646"
         opacity: 0.9
-    }
-
-
-
-    ListItems.ThinDivider {
-        id: divider
-
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.bottom: parent.bottom
     }
 
 }
