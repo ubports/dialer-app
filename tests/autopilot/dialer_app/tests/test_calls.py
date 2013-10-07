@@ -82,6 +82,47 @@ class TestCalls(DialerAppTestCase):
         self.assertThat(self.history_list.count, Equals(1))
         self.assertThat(self.history_list.select_single("Label", text="Unknown"), NotEquals(None))
 
+    def test_outgoing_answer_local_hangup(self):
+        """Outgoing call, remote answers, local hangs up"""
+
+        # 06123xx causes accept after xx seconds
+        self.keypad_dial("0612302")
+        self.wait_live_call_page("0612302")
+
+        # stop watch should start counting
+        stop_watch = self.app.select_single(objectName="stopWatch")
+        self.assertIn("00:0", stop_watch.elapsed)
+
+        # should still be connected after some time
+        time.sleep(3)
+        self.assertIn("00:0", stop_watch.elapsed)
+
+        # hang up
+        self.pointing_device.click_object(self.hangup_button)
+        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"),
+                        Eventually(Equals(None)))
+        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
+
+    def test_outgoing_answer_remote_hangup(self):
+        """Outgoing call, remote answers and hangs up"""
+
+        # 05123xx causes immediate accept and hangup after xx seconds
+        self.keypad_dial("0512303")
+        self.wait_live_call_page("0512303")
+
+        # stop watch should start counting
+        stop_watch = self.app.select_single(objectName="stopWatch")
+        self.assertIn("00:0", stop_watch.elapsed)
+
+        # after remote hangs up, should switch to call log page and show call
+        # to "Unknown"
+        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"),
+                        Eventually(Equals(None)))
+        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
+        self.assertThat(self.history_list.count, Equals(1))
+        self.assertThat(self.history_list.select_single("Label", text="Unknown"),
+                        NotEquals(None))
+
     def test_incoming(self):
         """Incoming call"""
 
