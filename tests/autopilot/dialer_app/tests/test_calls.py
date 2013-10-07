@@ -45,6 +45,7 @@ class TestCalls(DialerAppTestCase):
         super(TestCalls, self).setUp()
         self.entry = self.main_view.dialer_page.get_keypad_entry()
         self.call_button = self.main_view.dialer_page.get_call_button()
+        self.hangup_button = None
 
         # should have an empty history at the beginning of each test
         self.history_list = self.app.select_single(objectName="historyList")
@@ -69,26 +70,11 @@ class TestCalls(DialerAppTestCase):
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
 
-        # dial 144
-        self.pointing_device.click_object(self.keys[1])
-        self.pointing_device.click_object(self.keys[4])
-        self.pointing_device.click_object(self.keys[4])
-        self.assertThat(self.entry.value, Eventually(Equals("144")))
-
-        self.pointing_device.click_object(self.call_button)
-
-        # should switch to LiveCallPage, and show hangup button
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(NotEquals(None)))
-        hangup_button = self.app.select_single(objectName="hangupButton")
-        self.assertThat(hangup_button.visible, Eventually(Equals(True)))
-        self.assertThat(self.call_button.visible, Equals(False))
-
-        # should show called number in title page
-        lcp = self.app.select_single(objectName="pageLiveCall")
-        self.assertThat(lcp.title, Equals('144'))
+        self.keypad_dial("144")
+        self.wait_live_call_page("144")
 
         # hang up again
-        self.pointing_device.click_object(hangup_button)
+        self.pointing_device.click_object(self.hangup_button)
         self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
 
         # should switch to call log page and show call to "Unknown"
@@ -111,22 +97,38 @@ class TestCalls(DialerAppTestCase):
         subprocess.call(["/usr/share/ofono/scripts/answer-calls"],
                         stdout=subprocess.PIPE)
 
-        # should switch to LiveCallPage, and show hangup button
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(NotEquals(None)))
-        hangup_button = self.app.select_single(objectName="hangupButton")
-        self.assertThat(hangup_button.visible, Eventually(Equals(True)))
+        # call back is from that number
+        self.wait_live_call_page("1234567")
 
         # stop watch should start counting
         stop_watch = self.app.select_single(objectName="stopWatch")
         self.assertIn("00:0", stop_watch.elapsed)
 
-        # should show caller number in title page
-        lcp = self.app.select_single(objectName="pageLiveCall")
-        self.assertThat(lcp.title, Equals('1234567'))
-
         # hang up again
-        self.pointing_device.click_object(hangup_button)
+        self.pointing_device.click_object(self.hangup_button)
         self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
+
+    def keypad_dial(self, number):
+        """Dial given number (string) on the keypad and call"""
+        for digit in number:
+            self.pointing_device.click_object(self.keys[int(digit)])
+        self.assertThat(self.entry.value, Eventually(Equals(number)))
+
+        self.pointing_device.click_object(self.call_button)
+
+    def wait_live_call_page(self, number):
+        """Wait until live call page gets visible
+
+        Sets self.hangup_button.
+        """
+        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(NotEquals(None)))
+        self.hangup_button = self.app.select_single(objectName="hangupButton")
+        self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
+        self.assertThat(self.call_button.visible, Equals(False))
+
+        # should show called number in title page
+        lcp = self.app.select_single(objectName="pageLiveCall")
+        self.assertThat(lcp.title, Equals(number))
 
     def wait_for_incoming_call(self):
         """Wait up to 5 s for an incoming phone call"""
