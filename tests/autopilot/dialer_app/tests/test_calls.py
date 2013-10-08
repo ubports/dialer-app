@@ -27,8 +27,9 @@ try:
     out = subprocess.check_output(["/usr/share/ofono/scripts/list-modems"],
                                   stderr=subprocess.PIPE)
     have_phonesim = out.startswith("[ /phonesim ]")
-except CalledProcessError:
+except subprocess.CalledProcessError:
     have_phonesim = False
+
 
 @skipUnless(have_phonesim,
             "this test needs to run under with-ofono-phonesim")
