@@ -38,7 +38,8 @@ class TestCalls(DialerAppTestCase):
 
     def setUp(self):
         # provide clean history
-        self.history = os.path.expanduser("~/.local/share/history-service/history.sqlite")
+        self.history = os.path.expanduser(
+            "~/.local/share/history-service/history.sqlite")
         if os.path.exists(self.history):
             subprocess.call(["pkill", "history-daemon"])
             os.rename(self.history, self.history + ".orig")
@@ -73,15 +74,12 @@ class TestCalls(DialerAppTestCase):
 
         self.keypad_dial("144")
         self.wait_live_call_page("144")
+        self.hangup()
 
-        # hang up again
-        self.pointing_device.click_object(self.hangup_button)
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
-
-        # should switch to call log page and show call to "Unknown"
-        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
+        # log should show call to "Unknown"
         self.assertThat(self.history_list.count, Equals(1))
-        self.assertThat(self.history_list.select_single("Label", text="Unknown"), NotEquals(None))
+        self.assertThat(self.history_list.select_single(
+            "Label", text="Unknown"), NotEquals(None))
 
     def test_outgoing_answer_local_hangup(self):
         """Outgoing call, remote answers, local hangs up"""
@@ -98,11 +96,7 @@ class TestCalls(DialerAppTestCase):
         time.sleep(3)
         self.assertIn("00:0", stop_watch.elapsed)
 
-        # hang up
-        self.pointing_device.click_object(self.hangup_button)
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"),
-                        Eventually(Equals(None)))
-        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
+        self.hangup()
 
     def test_outgoing_answer_remote_hangup(self):
         """Outgoing call, remote answers and hangs up"""
@@ -117,12 +111,12 @@ class TestCalls(DialerAppTestCase):
 
         # after remote hangs up, should switch to call log page and show call
         # to "Unknown"
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"),
-                        Eventually(Equals(None)))
+        fn = lambda: self.app.select_single(objectName="hangupButton")
+        self.assertThat(fn, Eventually(Equals(None)))
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
         self.assertThat(self.history_list.count, Equals(1))
-        self.assertThat(self.history_list.select_single("Label", text="Unknown"),
-                        NotEquals(None))
+        self.assertThat(self.history_list.select_single(
+            "Label", text="Unknown"), NotEquals(None))
 
     def test_incoming(self):
         """Incoming call"""
@@ -146,9 +140,11 @@ class TestCalls(DialerAppTestCase):
         stop_watch = self.app.select_single(objectName="stopWatch")
         self.assertIn("00:0", stop_watch.elapsed)
 
-        # hang up again
-        self.pointing_device.click_object(self.hangup_button)
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(Equals(None)))
+        self.hangup()
+
+    #
+    # Helper methods
+    #
 
     def keypad_dial(self, number):
         """Dial given number (string) on the keypad and call"""
@@ -163,7 +159,8 @@ class TestCalls(DialerAppTestCase):
 
         Sets self.hangup_button.
         """
-        self.assertThat(lambda: self.app.select_single(objectName="hangupButton"), Eventually(NotEquals(None)))
+        fn = lambda: self.app.select_single(objectName="hangupButton")
+        self.assertThat(fn, Eventually(NotEquals(None)))
         self.hangup_button = self.app.select_single(objectName="hangupButton")
         self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
         self.assertThat(self.call_button.visible, Equals(False))
@@ -177,11 +174,20 @@ class TestCalls(DialerAppTestCase):
 
         timeout = 10
         while timeout >= 0:
-            out = subprocess.check_output(["/usr/share/ofono/scripts/list-calls"],
-                                          stderr=subprocess.PIPE)
+            out = subprocess.check_output(
+                ["/usr/share/ofono/scripts/list-calls"],
+                stderr=subprocess.PIPE)
             if "State = incoming" in out:
                 break
             timeout -= 1
             time.sleep(0.5)
         else:
             self.fail("timed out waiting for incoming phonesim call")
+
+    def hangup(self):
+        self.pointing_device.click_object(self.hangup_button)
+        fn = lambda: self.app.select_single(objectName="hangupButton")
+        self.assertThat(fn, Eventually(Equals(None)))
+
+        # should switch to call log page
+        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
