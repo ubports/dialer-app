@@ -90,108 +90,48 @@ Page {
                 historyEventModel.removeEvent(event.accountId, event.threadId, event.eventId, event.type)
             }
         }
-        listDelegate: delegateItem
+        listDelegate: delegateComponent
 
         Component {
-            id: delegateItem
-            Item {
-                id: item
-                height: delegate.detailsShown ? (delegate.height + pickerLoader.height) : delegate.height
-                width: parent ? parent.width : 0
-                clip: true
-                Behavior on height {
-                    UbuntuNumberAnimation { }
-                }
-                Connections {
+            id: delegateComponent
+            HistoryDelegate {
+                id: historyDelegate
+                anchors.left: parent.left
+                anchors.right: parent.right
+                selected: historyList.isSelected(item)
+                isFirst: model.index == 0
+                removable: !historyList.isInSelectionMode
+
+                /*Connections {
                     target: historyList
                     onCurrentContactExpandedChanged: {
                         if (index != historyList.currentContactExpanded) {
-                            delegate.detailsShown = false
+                            historyDelegate.detailsShown = false
                         }
                     }
+                }*/
+
+                onPressAndHold: {
+                    if (!historyList.isInSelectionMode) {
+                        historyList.startSelection()
+                    }
+                    historyList.selectItem(item)
                 }
-
-                HistoryDelegate {
-                    id: delegate
-                    property bool detailsShown: false
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.top: parent.top
-                    selected: historyList.isSelected(item)
-                    isFirst: model.index == 0
-                    width: parent ? parent.width : 0
-                    clip: true
-                    removable: !historyList.isInSelectionMode
-                    showDivider: false
-
-                    onPressAndHold: {
-                        if (!historyList.isInSelectionMode) {
-                            historyList.startSelection()
+                onClicked: {
+                    if (historyList.isInSelectionMode) {
+                        if (!historyList.selectItem(item)) {
+                            historyList.deselectItem(item)
                         }
-                        historyList.selectItem(item)
+                        return
                     }
-                    onClicked: {
-                        if (historyList.isInSelectionMode) {
-                            if (!historyList.selectItem(item)) {
-                                historyList.deselectItem(item)
-                            }
-                            return
-                        }
-                        if (historyList.currentContactExpanded == index) {
-                            historyList.currentContactExpanded = -1
-                            detailsShown = false
-                            return
-                        // expand and display the extended options
-                        } else {
-                            historyList.currentContactExpanded = index
-                            detailsShown = !detailsShown
-                        }
-                    }
-                    Rectangle {
-                        id: selectionMark
-
-                        anchors {
-                            top: parent.top
-                            bottom: parent.bottom
-                            right: parent.right
-                        }
-
-                        color: "black"
-                        visible: delegate.selected
-                        Icon {
-                            name: "select"
-                            height: units.gu(3)
-                            width: height
-                            anchors.centerIn: parent
-                        }
-                    }
-                }
-                Loader {
-                    id: pickerLoader
-
-                    source: delegate.detailsShown ? Qt.resolvedUrl("CallLogContactDelegate.qml") : ""
-                    anchors {
-                        top: delegate.bottom
-                        topMargin: units.gu(1)
-                        left: parent.left
-                        right: parent.right
-                    }
-                    onStatusChanged: {
-                        if (status == Loader.Ready) {
-                            pickerLoader.item.phoneNumber = participants[0]
-                            pickerLoader.item.contactId = delegate.contactId
-                        }
-                    }
-                    Connections {
-                        target: pickerLoader.item
-                        onItemClicked: historyList.currentContactExpanded = -1
-                    }
-                }
-                ListItem.ThinDivider {
-                    anchors {
-                        bottom: pickerLoader.bottom
-                        right: parent.right
-                        left: parent.left
+                    if (historyList.currentContactExpanded == index) {
+                        historyList.currentContactExpanded = -1
+                        detailsShown = false
+                        return
+                    // expand and display the extended options
+                    } else {
+                        historyList.currentContactExpanded = index
+                        detailsShown = !detailsShown
                     }
                 }
             }

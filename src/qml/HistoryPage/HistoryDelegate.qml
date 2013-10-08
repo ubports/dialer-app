@@ -33,10 +33,12 @@ ListItem.Empty {
     property string phoneNumberSubTypeLabel: ""
     property alias isFirst: timeline.isFirst
     property alias contactId: contactWatcher.contactId
+    property bool detailsShown: false
 
-    height: units.gu(9)
+    height: units.gu(9) + (detailsShown ? pickerLoader.height : 0)
     removable: true
-    showDivider: false
+    showDivider: true
+    clip: true
     backgroundIndicator: Rectangle {
         anchors.fill: parent
         color: Theme.palette.selected.base
@@ -51,10 +53,13 @@ ListItem.Empty {
         }
     }
 
+    Behavior on height {
+        UbuntuNumberAnimation { }
+    }
+
     onItemRemoved: {
         historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
     }
-
 
     function selectIcon()  {
         if (model.callMissed) {
@@ -100,7 +105,7 @@ ListItem.Empty {
         anchors.left: parent.left
         anchors.right: phoneIcon.left
         anchors.top: parent.top
-        anchors.bottom: parent.bottom
+        height: units.gu(9)
 
         UbuntuShape {
             id: time
@@ -166,15 +171,56 @@ ListItem.Empty {
                 text: phoneNumberSubTypeLabel
             }
         }
+
+        Icon {
+            id: phoneIcon
+            anchors.right: parent.right
+            anchors.rightMargin: units.gu(3)
+            anchors.verticalCenter: parent.verticalCenter
+            width:  units.gu(2)
+            height: units.gu(2)
+            name: selectIcon()
+        }
     }
 
-    Icon {
-        id: phoneIcon
-        anchors.right: parent.right
-        anchors.rightMargin: units.gu(3)
-        anchors.verticalCenter: parent.verticalCenter
-        width:  units.gu(2)
-        height: units.gu(2)
-        name: selectIcon()
+    Rectangle {
+        id: selectionMark
+
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            right: parent.right
+        }
+
+        color: "black"
+        visible: historyDelegate.selected
+        Icon {
+            name: "select"
+            height: units.gu(3)
+            width: height
+            anchors.centerIn: parent
+        }
+    }
+
+    Loader {
+        id: pickerLoader
+
+        source: historyDelegate.detailsShown ? Qt.resolvedUrl("CallLogContactDelegate.qml") : ""
+        anchors {
+            top: mainSection.bottom
+            topMargin: units.gu(1)
+            left: parent.left
+            right: parent.right
+        }
+        onStatusChanged: {
+            if (status == Loader.Ready) {
+                pickerLoader.item.phoneNumber = participants[0]
+                pickerLoader.item.contactId = delegate.contactId
+            }
+        }
+        Connections {
+            target: pickerLoader.item
+            onItemClicked: historyList.currentContactExpanded = -1
+        }
     }
 }
