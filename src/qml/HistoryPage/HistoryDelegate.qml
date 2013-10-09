@@ -26,7 +26,7 @@ import QtContacts 5.0
 import "dateUtils.js" as DateUtils
 
 ListItem.Empty {
-    id: communicationDelegate
+    id: historyDelegate
 
     property bool incoming: model.senderId != "self"
     property bool unknownContact: contactWatcher.contactId == ""
@@ -35,7 +35,7 @@ ListItem.Empty {
     property alias contactId: contactWatcher.contactId
     property bool detailsShown: false
 
-    height: units.gu(9) + (detailsShown ? pickerLoader.height : 0)
+    height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
     showDivider: true
     clip: true
@@ -49,7 +49,7 @@ ListItem.Empty {
                 margins: units.gu(2)
             }
             verticalAlignment: Text.AlignVCenter
-            horizontalAlignment:  communicationDelegate.swipingState === "SwipingLeft" ? Text.AlignLeft : Text.AlignRight
+            horizontalAlignment:  historyDelegate.swipingState === "SwipingLeft" ? Text.AlignLeft : Text.AlignRight
         }
     }
 
@@ -100,45 +100,28 @@ ListItem.Empty {
         }
     }
 
+    Timeline {
+        id: timeline
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
+        anchors.left: parent.left
+        anchors.leftMargin: units.gu(1)
+        mainAreaHeight: mainSection.height
+    }
+
     Item {
         id: mainSection
-        anchors.left: parent.left
-        anchors.right: phoneIcon.left
+        anchors.left: timeline.right
+        anchors.right: selectionMark.left
         anchors.top: parent.top
-        height: units.gu(9)
-
-        UbuntuShape {
-            id: time
-            anchors.verticalCenter: parent.verticalCenter
-            height: units.gu(4)
-            anchors.left: parent.left
-            anchors.leftMargin: units.gu(2)
-            width: units.gu(4.5)
-            color: "white"
-
-            Label {
-                anchors.centerIn: parent
-                color: "#221E1C"
-                fontSize: "x-small"
-                font.weight: Font.Bold
-                text: Qt.formatTime(model.timestamp, "hh:mm")
-            }
-        }
-
-        Timeline {
-            id: timeline
-            anchors.top: parent.top
-            anchors.bottom: parent.bottom
-            anchors.left: time.right
-            anchors.leftMargin: units.gu(0.5)
-        }
+        height: units.gu(8)
 
         UbuntuShape {
             id: avatar
-            anchors.left: timeline.right
+            anchors.left: parent.left
             anchors.leftMargin: units.gu(1)
             anchors.verticalCenter: parent.verticalCenter
-            height: units.gu(7)
+            height: units.gu(6)
             width: height
             image: Image {
                 fillMode: Image.PreserveAspectCrop
@@ -151,35 +134,75 @@ ListItem.Empty {
             }
         }
 
-        Column {
-            width: childrenRect.width
-            anchors.top: avatar.top
-            anchors.bottom: parent.bottom
-            anchors.left: avatar.right
-            anchors.leftMargin: units.gu(2)
-            spacing: units.gu(0.5)
-
-            Label {
-                fontSize: "medium"
-                text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+        Label {
+            id: titleLabel
+            anchors {
+                top: parent.top
+                topMargin: units.gu(2)
+                left: avatar.right
+                leftMargin: units.gu(2)
             }
+            height: units.gu(2)
+            verticalAlignment: Text.AlignVCenter
+            fontSize: "medium"
+            text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+        }
 
-            Label {
-                fontSize: "small"
-                opacity: 0.2
-                // FIXME: handle conference call
-                text: phoneNumberSubTypeLabel
+        Label {
+            id: phoneLabel
+            anchors {
+                bottom: parent.bottom
+                bottomMargin: units.gu(2)
+                left: avatar.right
+                leftMargin: units.gu(2)
             }
+            height: units.gu(2)
+            verticalAlignment: Text.AlignVCenter
+            fontSize: "small"
+            opacity: 0.2
+            // FIXME: handle conference call
+            text: phoneNumberSubTypeLabel
         }
 
         Icon {
             id: phoneIcon
-            anchors.right: parent.right
-            anchors.rightMargin: units.gu(3)
-            anchors.verticalCenter: parent.verticalCenter
-            width:  units.gu(2)
-            height: units.gu(2)
+            anchors {
+                left: phoneLabel.right
+                leftMargin: units.gu(1)
+                verticalCenter: phoneLabel.verticalCenter
+            }
+            width:  units.gu(1.5)
+            height: width
             name: selectIcon()
+        }
+
+        // time and duration on the right side of the delegate
+        Label {
+            id: time
+            anchors {
+                right: parent.right
+                rightMargin: units.gu(2)
+                verticalCenter: titleLabel.verticalCenter
+            }
+            height: units.gu(2)
+            verticalAlignment: Text.AlignVCenter
+            fontSize: "small"
+            text: Qt.formatTime(model.timestamp, "hh:mm")
+        }
+
+        Label {
+            id: duration
+            anchors {
+                right: parent.right
+                rightMargin: units.gu(2)
+                verticalCenter: phoneLabel.verticalCenter
+            }
+            height: units.gu(2)
+            verticalAlignment: Text.AlignVCenter
+            fontSize: "small"
+            opacity: 0.2
+            text: DateUtils.formatFriendlyCallDuration(model.callDuration)
+            visible: !model.callMissed
         }
     }
 
@@ -193,7 +216,18 @@ ListItem.Empty {
         }
 
         color: "black"
-        visible: historyDelegate.selected
+        opacity: historyDelegate.selected ? 1.0 : 0.0
+        visible: opacity > 0.0
+        width: historyDelegate.selected ?  units.gu(5) : 0
+
+        Behavior on opacity {
+            UbuntuNumberAnimation { }
+        }
+
+        Behavior on width {
+            UbuntuNumberAnimation { }
+        }
+
         Icon {
             name: "select"
             height: units.gu(3)
@@ -208,14 +242,14 @@ ListItem.Empty {
         source: historyDelegate.detailsShown ? Qt.resolvedUrl("CallLogContactDelegate.qml") : ""
         anchors {
             top: mainSection.bottom
-            topMargin: units.gu(1)
             left: parent.left
+            leftMargin: units.gu(2)
             right: parent.right
         }
         onStatusChanged: {
             if (status == Loader.Ready) {
                 pickerLoader.item.phoneNumber = participants[0]
-                pickerLoader.item.contactId = delegate.contactId
+                pickerLoader.item.contactId = historyDelegate.contactId
             }
         }
         Connections {

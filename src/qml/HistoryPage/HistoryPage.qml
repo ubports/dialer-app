@@ -63,9 +63,6 @@ Page {
         acceptAction.text: i18n.tr("Delete")
         section.property: "date"
         section.delegate: Item {
-            ListItem.ThinDivider {
-                anchors.top: parent.top
-            }
             anchors.left: parent.left
             anchors.right: parent.right
             height: units.gu(5)
@@ -98,29 +95,31 @@ Page {
                 id: historyDelegate
                 anchors.left: parent.left
                 anchors.right: parent.right
-                selected: historyList.isSelected(item)
+                selected: historyList.isSelected(historyDelegate)
                 isFirst: model.index == 0
                 removable: !historyList.isInSelectionMode
 
-                /*Connections {
-                    target: historyList
-                    onCurrentContactExpandedChanged: {
-                        if (index != historyList.currentContactExpanded) {
-                            historyDelegate.detailsShown = false
+                Item {
+                    Connections {
+                        target: historyList
+                        onCurrentContactExpandedChanged: {
+                            if (index != historyList.currentContactExpanded) {
+                                historyDelegate.detailsShown = false
+                            }
                         }
                     }
-                }*/
+                }
 
                 onPressAndHold: {
                     if (!historyList.isInSelectionMode) {
                         historyList.startSelection()
                     }
-                    historyList.selectItem(item)
+                    historyList.selectItem(historyDelegate)
                 }
                 onClicked: {
                     if (historyList.isInSelectionMode) {
-                        if (!historyList.selectItem(item)) {
-                            historyList.deselectItem(item)
+                        if (!historyList.selectItem(historyDelegate)) {
+                            historyList.deselectItem(historyDelegate)
                         }
                         return
                     }
