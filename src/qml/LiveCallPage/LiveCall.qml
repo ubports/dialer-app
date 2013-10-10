@@ -145,6 +145,8 @@ Page {
             bottom: footer.top
         }
         smooth: true
+        sourceSize.width: width * 1.5
+        sourceSize.height: height * 1.5
     }
 
     FastBlur {
