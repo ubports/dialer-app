@@ -57,6 +57,8 @@ Page {
 
     MultipleSelectionListView {
         id: historyList
+        objectName: "historyList"
+
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy

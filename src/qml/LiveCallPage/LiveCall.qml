@@ -28,6 +28,7 @@ import "../"
 
 Page {
     id: liveCall
+    objectName: "pageLiveCall"
 
     property QtObject call: callManager.foregroundCall
     property string dtmfEntry: ""
@@ -115,6 +116,7 @@ Page {
 
     StopWatch {
         id: stopWatch
+        objectName: "stopWatch"
         time: call ? call.elapsedTime : 0
         visible: false
     }
@@ -355,6 +357,7 @@ Page {
 
         HangupButton {
             id: hangupButton
+            objectName: "hangupButton"
 
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
