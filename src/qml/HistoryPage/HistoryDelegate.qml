@@ -125,11 +125,12 @@ ListItem.Empty {
             width: height
             image: Image {
                 fillMode: Image.PreserveAspectCrop
+                asynchronous: true
                 source: {
                     if(!unknownContact && contactWatcher.avatar != "") {
                             return contactWatcher.avatar
                     }
-                    return Qt.resolvedUrl("../assets/avatar-default.png")
+                    return Qt.resolvedUrl("../assets/contact_defaulticon.png")
                 }
             }
         }

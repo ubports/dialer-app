@@ -109,69 +109,31 @@ Item {
             anchors.top: parent.top
             height: childrenRect.height
             width: parent.width
-            ListItem.Empty {
-                showDivider: false
-                Column {
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.leftMargin: units.gu(2)
-                    anchors.rightMargin: units.gu(2)
-                    Label {
-                        text: i18n.tr("Call")
-                        fontSize: "medium"
-                    }
-                }
+            ExpandableButton {
+                text: i18n.tr("Call now")
+                fontSize: "medium"
+                iconName: "call-start"
                 onClicked: {
                     itemClicked()
                     mainView.call(phoneNumber)
                 }
             }
-            ListItem.Empty {
-                showDivider: false
-                Column {
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.leftMargin: units.gu(2)
-                    anchors.rightMargin: units.gu(2)
-                    Label {
-                        text: i18n.tr("Send text message")
-                        fontSize: "medium"
-                    }
-                }
-                ListItem.ThinDivider {
-                    anchors {
-                        bottom: parent.top
-                        right: parent.right
-                        left: parent.left
-                    }
-                }
+            ExpandableButton {
+                text: i18n.tr("Send text message")
+                fontSize: "small"
+                iconName: "messages"
+                opacity: 0.2
                 onClicked: {
                     itemClicked()
                     mainView.sendMessage(phoneNumber)
                 }
             }
-            ListItem.Empty {
+            ExpandableButton {
                 showDivider: false
-                Column {
-                    anchors.verticalCenter: parent.verticalCenter
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    anchors.leftMargin: units.gu(2)
-                    anchors.rightMargin: units.gu(2)
-                    Label {
-                        text: unknownContact ? i18n.tr("Save contact") : i18n.tr("View contact")
-                        fontSize: "medium"
-                    }
-                }
-                ListItem.ThinDivider {
-                    anchors {
-                        bottom: parent.top
-                        right: parent.right
-                        left: parent.left
-                    }
-                }
+                text: unknownContact ? i18n.tr("Save contact") : i18n.tr("View contact")
+                fontSize: "small"
+                iconName: unknownContact ? "new-contact" : "contact"
+                opacity: 0.2
                 onClicked: {
                     if (unknownContact) {
                         PopupUtils.open(newContactDialog)
