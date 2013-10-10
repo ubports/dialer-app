@@ -60,6 +60,7 @@ Page {
 
             // TODO: remove anchors.top once the new tabs are implemented
             anchors.top: parent.top
+            anchors.topMargin: units.gu(2)
             anchors.bottom: contactSearch.top
             anchors.left: parent.left
             anchors.right: parent.right

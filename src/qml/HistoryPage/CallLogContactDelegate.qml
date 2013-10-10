@@ -27,7 +27,7 @@ Item {
 
     signal itemClicked()
 
-    height: details.height + units.gu(2)
+    height: details.height + units.gu(1)
 
     Component {
          id: newContactDialog

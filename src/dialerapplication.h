@@ -23,8 +23,6 @@
 #include <QQuickView>
 #include <QGuiApplication>
 
-class DialerAppDBus;
-
 class DialerApplication : public QGuiApplication
 {
     Q_OBJECT
@@ -37,18 +35,14 @@ public:
 
 public Q_SLOTS:
     void activateWindow();
-
-private:
     void parseArgument(const QString &arg);
 
 private Q_SLOTS:
-    void onMessageReceived(const QString &message);
     void onViewStatusChanged(QQuickView::Status status);
     void onApplicationReady();
 
 private:
     QQuickView *m_view;
-    DialerAppDBus *m_dbus;
     QString m_arg;
     bool m_applicationIsReady;
 };

@@ -21,23 +21,34 @@ import Ubuntu.Components 0.1
 
 Item {
     property bool isFirst: false
+    property alias mainAreaHeight: mainArea.height
 
     width: units.gu(2)
-    height: units.gu(10)
+    height: units.gu(9)
+
+    Item {
+        id: mainArea
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
+        height: units.gu(9)
+    }
 
     BorderImage {
         id: topLine
         visible: !isFirst
         anchors.top: parent.top
         anchors.bottom: circle.top
-        anchors.verticalCenter: circle.verticalCenter
+        anchors.horizontalCenter: parent.horizontalCenter
         source: "../assets/timeline_vertical_line.sci"
         smooth: true
     }
 
     Image {
         id: circle
-        anchors.verticalCenter: parent.verticalCenter
+        anchors.verticalCenter: mainArea.verticalCenter
         anchors.horizontalCenter: parent.horizontalCenter
         source: "../assets/timeline_circle.png"
         smooth: true
@@ -47,7 +58,7 @@ Item {
         id: bottomLine
         anchors.top: circle.bottom
         anchors.bottom: parent.bottom
-        anchors.verticalCenter: circle.verticalCenter
+        anchors.horizontalCenter: mainArea.horizontalCenter
         source: "../assets/timeline_vertical_line.sci"
         smooth: true
     }

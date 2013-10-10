@@ -31,12 +31,6 @@ FocusScope {
     // FIXME: enable this once the new tabs are implemented
     //height: units.gu(11)
 
-    Rectangle {
-        anchors.fill: parent
-        color: "#FFFFFF"
-        opacity: 0.05
-    }
-
     TextInput {
         id: input
 
