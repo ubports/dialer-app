@@ -31,15 +31,14 @@
 #include <QDBusConnectionInterface>
 #include <QLibrary>
 #include "config.h"
-#include "dialerappdbus.h"
 #include <QQmlEngine>
 
 static void printUsage(const QStringList& arguments)
 {
     qDebug() << "usage:"
              << arguments.at(0).toUtf8().constData()
-             << "[call://PHONE_NUMBER]"
-             << "[voicemail://]"
+             << "[tel:///PHONE_NUMBER]"
+             << "[tel:///voicemail]"
              << "[--fullscreen]"
              << "[--help]"
              << "[-testability]";
@@ -61,7 +60,6 @@ DialerApplication::DialerApplication(int &argc, char **argv)
     : QGuiApplication(argc, argv), m_view(0), m_applicationIsReady(false)
 {
     setApplicationName("DialerApp");
-    m_dbus = new DialerAppDBus(this);
 }
 
 bool DialerApplication::setup()
@@ -71,8 +69,7 @@ bool DialerApplication::setup()
     bool fullScreen = false;
 
     if (validSchemes.isEmpty()) {
-        validSchemes << "call";
-        validSchemes << "voicemail";
+        validSchemes << "tel";
     }
 
     QStringList arguments = this->arguments();
@@ -127,27 +124,12 @@ bool DialerApplication::setup()
         }
     }
 
-    // check if the app is already running, if it is, send the message to the running instance
-    QDBusReply<bool> reply = QDBusConnection::sessionBus().interface()->isServiceRegistered("com.canonical.DialerApp");
-    if (reply.isValid() && reply.value()) {
-        QDBusInterface appInterface("com.canonical.DialerApp",
-                                    "/com/canonical/DialerApp",
-                                    "com.canonical.DialerApp");
-        appInterface.call("SendAppMessage", m_arg);
-        return false;
-    }
-
-    if (!m_dbus->connectToBus()) {
-        qWarning() << "Failed to expose com.canonical.DialerApp on DBUS.";
-    }
-
     m_view = new QQuickView();
     QObject::connect(m_view, SIGNAL(statusChanged(QQuickView::Status)), this, SLOT(onViewStatusChanged(QQuickView::Status)));
     QObject::connect(m_view->engine(), SIGNAL(quit()), SLOT(quit()));
     m_view->setResizeMode(QQuickView::SizeRootObjectToView);
     m_view->setTitle("Dialer");
     m_view->rootContext()->setContextProperty("application", this);
-    m_view->rootContext()->setContextProperty("dbus", m_dbus);
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
     QString pluginPath = ubuntuPhonePluginPath();
@@ -161,10 +143,6 @@ bool DialerApplication::setup()
     } else {
         m_view->show();
     }
-
-    connect(m_dbus,
-            SIGNAL(request(QString)),
-            SLOT(onMessageReceived(QString)));
 
     return true;
 }
@@ -202,34 +180,22 @@ void DialerApplication::parseArgument(const QString &arg)
         return;
     }
 
-    QStringList args = arg.split("://");
-    if (args.size() != 2) {
-        return;
-    }
-
-    QString scheme = args[0];
-    QString value = args[1];
+    QUrl url(arg);
+    QString scheme = url.scheme();
+    // Remove the first "/"
+    QString value = url.path().right(url.path().length() -1);
 
     QQuickItem *mainView = m_view->rootObject();
     if (!mainView) {
         return;
     }
 
-    if (scheme == "call") {
-        QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value));
-    } else if (scheme == "voicemail") {
-        QMetaObject::invokeMethod(mainView, "callVoicemail");
-    }
-}
-
-void DialerApplication::onMessageReceived(const QString &message)
-{
-    if (m_applicationIsReady) {
-        parseArgument(message);
-        m_arg.clear();
-        activateWindow();
-    } else {
-        m_arg = message;
+    if (scheme == "tel") {
+        if (value == "voicemail") {
+            QMetaObject::invokeMethod(mainView, "callVoicemail");
+        } else {
+            QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value));
+        }
     }
 }
 

@@ -1,3 +1,0 @@
-[D-BUS Service]
-Name=com.canonical.DialerApp
-Exec=@CMAKE_INSTALL_PREFIX@/@CMAKE_INSTALL_BINDIR@/dialer-app
