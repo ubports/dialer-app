@@ -124,16 +124,12 @@ ListItem.Empty {
             height: units.gu(6)
             width: height
             image: Image {
+                property bool defaultAvatar: unknownContact || contactWatcher.avatar == ""
                 fillMode: Image.PreserveAspectCrop
                 asynchronous: true
-                source: {
-                    if(!unknownContact && contactWatcher.avatar != "") {
-                            return contactWatcher.avatar
-                    }
-                    return Qt.resolvedUrl("../assets/contact_defaulticon.png")
-                }
-                sourceSize.width: width * 1.5
-                sourceSize.height: height * 1.5
+                source: defaultAvatar ? Qt.resolvedUrl("../assets/contact_defaulticon.png") : contactWatcher.avatar
+                sourceSize.width: defaultAvaltar ? undefined : width * 1.5
+                sourceSize.height: defaultAvatar ? undefined : height * 1.5
             }
         }
 
