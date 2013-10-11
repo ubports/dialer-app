@@ -1,3 +1,24 @@
+dialer-app (0.1+13.10.20131011-0ubuntu1) saucy; urgency=low
+
+  [ Martin Pitt ]
+  * Add some incoming/outgoing call tests, using ofono-phonesim.
+
+  [ Gustavo Pichorim Boiko ]
+  * Add a screenshot of the dialer-app.
+  * Update the dialer-app to the latest designs, containing the
+    following changes: Remove extra background from the smart dialing
+    results. Move the numbers a little bit down in the dialpad view.
+    Update the call log to the latest designs. Fix the multiselection
+    mark positioning.
+  * Change the dialer-app to use the new URL dispatcher mechanism. (LP:
+    #1230404)
+  * Refine the design of the call log view.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 65
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 11 Oct 2013 08:47:20 +0000
+
 dialer-app (0.1+13.10.20131004.1-0ubuntu1) saucy; urgency=low
 
   [ Dennis O'Flaherty ]
