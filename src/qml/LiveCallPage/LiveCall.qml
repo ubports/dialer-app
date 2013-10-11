@@ -325,6 +325,8 @@ Page {
                 selected: liveCall.isSpeaker
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
+                enabled: false
+                opacity: 0.5
                 onClicked: {
                     if (call) {
                         call.speaker = !selected
