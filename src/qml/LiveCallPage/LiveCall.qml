@@ -312,6 +312,8 @@ Page {
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
+                enabled: false
+                opacity: 0.2
                 onClicked: {
                     if (call) {
                         call.held = !call.held
@@ -347,6 +349,7 @@ Page {
             iconSource: "contact"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
+            opacity: 0.2
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter
