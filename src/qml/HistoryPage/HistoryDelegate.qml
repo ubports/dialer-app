@@ -37,21 +37,9 @@ ListItem.Empty {
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
+    confirmRemoval: true
     showDivider: true
     clip: true
-    backgroundIndicator: Rectangle {
-        anchors.fill: parent
-        color: Theme.palette.selected.base
-        Label {
-            text: i18n.tr("Delete")
-            anchors {
-                fill: parent
-                margins: units.gu(2)
-            }
-            verticalAlignment: Text.AlignVCenter
-            horizontalAlignment:  historyDelegate.swipingState === "SwipingLeft" ? Text.AlignLeft : Text.AlignRight
-        }
-    }
 
     Behavior on height {
         UbuntuNumberAnimation { }
