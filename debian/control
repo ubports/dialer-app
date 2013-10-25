@@ -37,6 +37,7 @@ Depends: ${misc:Depends},
          libqt5test5,
          libqt5widgets5,
          dialer-app (>= ${binary:Version}),
+         ofono-scripts,
          python-autopilot,
          ubuntu-ui-toolkit-autopilot,
 Description: autopilot tests for dialer-app
