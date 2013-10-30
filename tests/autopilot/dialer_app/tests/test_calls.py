@@ -63,6 +63,10 @@ class TestCalls(DialerAppTestCase):
     def tearDown(self):
         super(TestCalls, self).tearDown()
 
+	# on desktop, notify-osd generates persistent popups for "incoming
+	# call", clean up
+        subprocess.call(['pkill', '-f', 'notify-osd'])
+
         # ensure that there are no leftover calls in case of failed tests
         subprocess.call(["/usr/share/ofono/scripts/hangup-all"])
 
