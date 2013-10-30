@@ -63,10 +63,6 @@ class TestCalls(DialerAppTestCase):
     def tearDown(self):
         super(TestCalls, self).tearDown()
 
-	# on desktop, notify-osd generates persistent popups for "incoming
-	# call", clean up
-        subprocess.call(['pkill', '-f', 'notify-osd'])
-
         # ensure that there are no leftover calls in case of failed tests
         subprocess.call(["/usr/share/ofono/scripts/hangup-all"])
 
@@ -196,6 +192,10 @@ class TestCalls(DialerAppTestCase):
             time.sleep(0.5)
         else:
             self.fail("timed out waiting for incoming phonesim call")
+
+        # on desktop, notify-osd generates a persistent popup, clean this up
+        subprocess.call(['pkill', '-f', 'notify-osd'])
+
 
     def hangup(self):
         self.pointing_device.click_object(self.hangup_button)
