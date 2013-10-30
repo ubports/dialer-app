@@ -120,7 +120,7 @@ class TestCalls(DialerAppTestCase):
         fn = lambda: self.app.select_single(objectName="hangupButton")
         self.assertThat(fn, Eventually(Equals(None)))
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
-        self.assertThat(self.history_list.count, Equals(1))
+        self.assertThat(self.history_list.count, Eventually(Equals(1)))
         self.assertThat(self.history_list.select_single(
             "Label", text="Unknown"), NotEquals(None))
 
