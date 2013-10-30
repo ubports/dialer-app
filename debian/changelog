@@ -1,3 +1,35 @@
+dialer-app (0.1+14.04.20131029.1-0ubuntu1) trusty; urgency=low
+
+  [ Bill Filler ]
+  * make all expandable items full opaque. close expandable items when
+    the app becomes inactive
+
+  [ Łukasz 'sil2100' Zemczak ]
+  * add missing autopilot dependency
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 72
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 29 Oct 2013 12:41:11 +0000
+
+dialer-app (0.1+13.10.20131015.2-0ubuntu1) saucy; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Limit the size of images in memory.
+
+  [ Omer Akram ]
+  * disable the hold button and dim it a bit as the functionality is not
+    in place yet. Also dim the contact button in the live call panel
+    since that does nothing as well.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Make sure that the item ask for confirmation before get deleted.
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 69
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 15 Oct 2013 20:24:10 +0000
+
 dialer-app (0.1+13.10.20131011-0ubuntu1) saucy; urgency=low
 
   [ Martin Pitt ]

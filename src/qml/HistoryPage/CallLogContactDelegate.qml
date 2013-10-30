@@ -33,7 +33,6 @@ Item {
          id: newContactDialog
          Dialog {
              id: dialogue
-             property bool saveToExistingContact: false
              title: i18n.tr("Save contact")
              text: i18n.tr("How do you want to save the contact?")
              Button {
@@ -41,7 +40,6 @@ Item {
                  color: UbuntuColors.orange
                  onClicked: {
                      PopupUtils.close(dialogue)
-                     saveToExistingContact = true
                      PopupUtils.open(addPhoneNumberToContactSheet)
                  }
              }
@@ -60,8 +58,6 @@ Item {
                      PopupUtils.close(dialogue)
                  }
              }
-             // if we emit itemClicked(), addPhoneNumberToContactSheet will become unresponsive
-             Component.onDestruction: !saveToExistingContact && itemClicked()
          }
     }
 
@@ -88,7 +84,6 @@ Item {
                     PopupUtils.close(sheet)
                 }
             }
-            Component.onDestruction: itemClicked()
         }
     }
 
@@ -114,17 +109,15 @@ Item {
                 fontSize: "medium"
                 iconName: "call-start"
                 onClicked: {
-                    itemClicked()
                     mainView.call(phoneNumber)
+                    itemClicked()
                 }
             }
             ExpandableButton {
                 text: i18n.tr("Send text message")
                 fontSize: "small"
                 iconName: "messages"
-                opacity: 0.2
                 onClicked: {
-                    itemClicked()
                     mainView.sendMessage(phoneNumber)
                 }
             }
@@ -133,13 +126,11 @@ Item {
                 text: unknownContact ? i18n.tr("Save contact") : i18n.tr("View contact")
                 fontSize: "small"
                 iconName: unknownContact ? "new-contact" : "contact"
-                opacity: 0.2
                 onClicked: {
                     if (unknownContact) {
                         PopupUtils.open(newContactDialog)
                     } else {
                         mainView.viewContact(contactId)
-                        itemClicked()
                     }
                 }
             }

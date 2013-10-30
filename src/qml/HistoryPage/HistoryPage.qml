@@ -59,6 +59,15 @@ Page {
         id: historyList
         objectName: "historyList"
 
+        Connections {
+            target: Qt.application
+            onActiveChanged: {
+                if (!Qt.application.active) {
+                    historyList.currentContactExpanded = -1
+                }
+            }
+        }
+
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy
