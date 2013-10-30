@@ -18,7 +18,7 @@ import time
 
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals, NotEquals, MismatchError
-from testtools import skipUnless
+from testtools import skipIf, skipUnless
 
 from dialer_app.tests import DialerAppTestCase
 
@@ -33,6 +33,8 @@ except subprocess.CalledProcessError:
 
 @skipUnless(have_phonesim,
             "this test needs to run under with-ofono-phonesim")
+@skipIf(os.uname()[2].endswith("maguro"),
+                "tests cause Unity crashes on maguro")
 class TestCalls(DialerAppTestCase):
     """Tests for simulated phone calls."""
 
