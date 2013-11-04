@@ -25,6 +25,7 @@ Depends: ${misc:Depends},
          qtdeclarative5-ubuntu-history0.1 | qtdeclarative5-ubuntu-history-plugin,
          qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
+         qtdeclarative5-ubuntu-contacts0.1, qtdeclarative5-qtcontacts-plugin,
 Recommends: unity8 (>= 7.81.0~),
 Description: Dialer application for Ubuntu
  An application to make phone calls
@@ -40,8 +41,12 @@ Depends: ${misc:Depends},
          ofono-scripts,
          python-autopilot,
          ubuntu-ui-toolkit-autopilot,
+         ofono-phonesim-autostart,
 Description: autopilot tests for dialer-app
- This package contains the autopilot tests for dialer-app
+ This package contains the autopilot tests for dialer-app.
+ .
+ These tests run against the ofono phone simulator (pulled in through
+ ofono-phonesim-autostart).
 
 Package: dialer-app-connected-autopilot
 Architecture: all
@@ -52,4 +57,8 @@ Depends: ${misc:Depends},
          python-autopilot,
          ubuntu-ui-toolkit-autopilot,
 Description: connected autopilot tests for dialer-app
- This package contains the connected autopilot tests for dialer-app
+ This package contains the connected autopilot tests for dialer-app.
+ .
+ These tests run against real SIM cards/hardware and need to be configured
+ manually before they work. Do not install ubuntu-ui-toolkit-autopilot with
+ these!
