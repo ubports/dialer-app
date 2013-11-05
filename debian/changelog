@@ -1,3 +1,15 @@
+dialer-app (0.1+14.04.20131104.1-0ubuntu1) trusty; urgency=low
+
+  [ Martin Pitt ]
+  * Add ofono-phonesim-autostart dependency to -autopilot to enable CI
+    phonesim tests, and fix some missing dependencies and test setup.
+    (LP: #1240519)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 74
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 04 Nov 2013 19:23:32 +0000
+
 dialer-app (0.1+14.04.20131029.1-0ubuntu1) trusty; urgency=low
 
   [ Bill Filler ]
