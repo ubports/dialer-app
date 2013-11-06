@@ -27,10 +27,12 @@ class TestDialer(DialerAppTestCase):
         keypad_entry = self.main_view.dialer_page.get_keypad_entry()
         keypad_keys = self.main_view.dialer_page.get_keypad_keys()
 
+        text = ""
         for key in keypad_keys:
             self.pointing_device.click_object(key)
+            text += key.label
 
-        self.assertThat(keypad_entry.value, Eventually(Equals("123456789*0#")))
+        self.assertThat(keypad_entry.value, Eventually(Equals(text)))
 
     def test_erase_button(self):
         keypad_entry = self.main_view.dialer_page.get_keypad_entry()

@@ -79,7 +79,7 @@ class TestCalls(DialerAppTestCase):
         self.hangup()
 
         # log should show call to "Unknown"
-        self.assertThat(self.history_list.count, Equals(1))
+        self.assertThat(self.history_list.count, Eventually(Equals(1)))
         self.assertThat(self.history_list.select_single(
             "Label", text="Unknown"), NotEquals(None))
 
@@ -113,8 +113,6 @@ class TestCalls(DialerAppTestCase):
 
         # after remote hangs up, should switch to call log page and show call
         # to "Unknown"
-        fn = lambda: self.app.select_single(objectName="hangupButton")
-        self.assertThat(fn, Eventually(Equals(None)))
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
         self.assertThat(self.history_list.count, Eventually(Equals(1)))
         self.assertThat(self.history_list.select_single(
@@ -168,9 +166,7 @@ class TestCalls(DialerAppTestCase):
 
         Sets self.hangup_button.
         """
-        fn = lambda: self.app.select_single(objectName="hangupButton")
-        self.assertThat(fn, Eventually(NotEquals(None)))
-        self.hangup_button = self.app.select_single(objectName="hangupButton")
+        self.hangup_button = self.app.wait_select_single(objectName="hangupButton")
         self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
         self.assertThat(self.call_button.visible, Equals(False))
 
@@ -199,8 +195,6 @@ class TestCalls(DialerAppTestCase):
 
     def hangup(self):
         self.pointing_device.click_object(self.hangup_button)
-        fn = lambda: self.app.select_single(objectName="hangupButton")
-        self.assertThat(fn, Eventually(Equals(None)))
 
         # should switch to call log page
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
