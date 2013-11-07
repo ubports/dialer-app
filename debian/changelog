@@ -1,3 +1,13 @@
+dialer-app (0.1+14.04.20131107-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Fix autopilot tests to work with autopilot 1.4. (LP: #1248553)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 76
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 07 Nov 2013 05:24:17 +0000
+
 dialer-app (0.1+14.04.20131104.1-0ubuntu1) trusty; urgency=low
 
   [ Martin Pitt ]
