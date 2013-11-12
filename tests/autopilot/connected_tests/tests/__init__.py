@@ -13,10 +13,9 @@ from autopilot.input import Mouse, Touch, Pointer
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
-from testtools.matchers import Equals, GreaterThan
+from testtools.matchers import Equals
 
 import os
-import shutil
 import ConfigParser
 
 config_file = os.path.expanduser('~/.testnumbers.cfg')

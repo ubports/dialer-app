@@ -10,7 +10,7 @@
 
 """Tests for the Dialer App using ofono-phonesim"""
 
-From __future__ import absolute_import
+from __future__ import absolute_import
 
 import subprocess
 import os
