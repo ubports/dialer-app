@@ -27,4 +27,4 @@ development:
   cd tests/autopilot
   autopilot run dialer_app
 
-(but you still need all the dialer-app-autopilot installed).
+(but you still need all the dialer-app-autopilot dependencies installed).
