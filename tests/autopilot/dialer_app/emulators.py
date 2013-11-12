@@ -46,8 +46,8 @@ class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
             "*": "buttonAsterisk",
             "#": "buttonHash",
         }
-        return self.select_single(
-            "KeypadButton", objectName=buttonsDict[number])
+        return self.select_single("KeypadButton",
+                                  objectName=buttonsDict[number])
 
     def get_erase_button(self):
         return self.select_single("CustomButton", objectName="eraseButton")

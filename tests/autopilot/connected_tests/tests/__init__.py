@@ -34,8 +34,8 @@ class DialerAppTestCase(AutopilotTestCase):
     SEND_SMS_NUMBER = config.get('connected_variables', 'sms_send_number')
     RECEIVED_SMS_NUMBER = config.get('connected_variables', 'sms_receive_num')
     CALL_WAIT = config.getint('connected_variables', 'call_wait_time')
-    CALL_DURATION = config.getint(
-        'connected_variables', 'outgoing_call_duration')
+    CALL_DURATION = config.getint('connected_variables',
+                                  'outgoing_call_duration')
     SEND_SMS_TEXT = config.get('connected_variables', 'sms_send_text')
     RECEIVED_SMS_TEXT = config.get('connected_variables', 'sms_expect_text')
     TYPING_DELAY = 0.01

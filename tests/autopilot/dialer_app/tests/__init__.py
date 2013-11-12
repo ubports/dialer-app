@@ -83,8 +83,8 @@ class DialerAppTestCase(AutopilotTestCase):
         else:
             self.app = self.launch_test_application(
                 "dialer-app",
-                "--desktop_file_hint=/usr/share/applications/"
-                "dialer-app.desktop",
+                "--desktop_file_hint="
+                "/usr/share/applications/dialer-app.desktop",
                 app_type='qt',
                 emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
