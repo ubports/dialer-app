@@ -33,8 +33,8 @@ class DialerAppTestCase(AutopilotTestCase):
     SEND_SMS_NUMBER = config.get('connected_variables', 'sms_send_number')
     RECEIVED_SMS_NUMBER = config.get('connected_variables', 'sms_receive_num')
     CALL_WAIT = config.getint('connected_variables', 'call_wait_time')
-    CALL_DURATION = config.getint(
-        'connected_variables', 'outgoing_call_duration')
+    CALL_DURATION = config.getint('connected_variables',
+                                  'outgoing_call_duration')
     SEND_SMS_TEXT = config.get('connected_variables', 'sms_send_text')
     RECEIVED_SMS_TEXT = config.get('connected_variables', 'sms_expect_text')
     TYPING_DELAY = 0.01
@@ -78,8 +78,8 @@ class DialerAppTestCase(AutopilotTestCase):
         else:
             self.app = self.launch_test_application(
                 "dialer-app",
-                "--desktop_file_hint=/usr/share/applications/"
-                "dialer-app.desktop",
+                "--desktop_file_hint="
+                "/usr/share/applications/dialer-app.desktop",
                 app_type='qt')
 
     def get_main_view(self):

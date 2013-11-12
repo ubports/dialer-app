@@ -148,9 +148,8 @@ class TestCalls(DialerAppTestCase):
         try:
             self.hangup()
         except MismatchError as e:
-            print(
-                'Expected failure due to known Mir crash '
-                '(https://launchpad.net/bugs/1240400): %s' % e)
+            print('Expected failure due to known Mir crash '
+                  '(https://launchpad.net/bugs/1240400): %s' % e)
 
     #
     # Helper methods
