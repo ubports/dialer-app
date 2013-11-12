@@ -1,0 +1,30 @@
+Test coverage
+-------------
+dialer-app has autopilot tests which cover basic use cases like making an
+outgoing call and receiving an incoming call. They are integration tests which
+cover dialer-app itself, all the user session APIs below it (libofono-qt,
+telephony-service, telepathy-ofono), and the ofono service on the system D-BUS.
+They assume that ofono has been set up with the "phonesim" driver to avoid
+depending on any particular hardware; if phonesim is not set up, the tests will
+be skipped.
+
+The tests should run on both a desktop (like an Ubuntu desktop live session or
+Otto [http://launchpad.net/otot]) and a phone environment.
+
+How to run the tests
+--------------------
+The easiest and standard way across Ubuntu phablet packages is to install the
+dialer-app-autopilot package and run the tests from the system Python path:
+
+  sudo apt-get install dialer-app-autopilot
+  autopilot run dialer_app
+
+dialer-app-autopilot depends on ofono-phonesim-autostart to set up the
+simulated Modem automatically, and all the other additional test dependencies
+for autopilot. You can also run the tests right out of the source tree for
+development:
+
+  cd tests/autopilot
+  autopilot run dialer_app
+
+(but you still need all the dialer-app-autopilot installed).
