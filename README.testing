@@ -9,7 +9,7 @@ depending on any particular hardware; if phonesim is not set up, the tests will
 be skipped.
 
 The tests should run on both a desktop (like an Ubuntu desktop live session or
-Otto [http://launchpad.net/otot]) and a phone environment.
+Otto [http://launchpad.net/otto]) and a phone environment.
 
 How to run the tests
 --------------------
