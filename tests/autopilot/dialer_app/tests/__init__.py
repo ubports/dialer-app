@@ -13,13 +13,12 @@ from autopilot.input import Mouse, Touch, Pointer
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
-from testtools.matchers import Equals, GreaterThan
+from testtools.matchers import Equals
 from ubuntuuitoolkit import emulators as toolkit_emulators
 from dialer_app import emulators
 
 import os
 import sys
-from time import sleep
 import logging
 import subprocess
 
