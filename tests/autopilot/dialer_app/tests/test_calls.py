@@ -34,7 +34,7 @@ except subprocess.CalledProcessError:
 @skipUnless(have_phonesim,
             "this test needs to run under with-ofono-phonesim")
 @skipIf(os.uname()[2].endswith("maguro"),
-                "tests cause Unity crashes on maguro")
+        "tests cause Unity crashes on maguro")
 class TestCalls(DialerAppTestCase):
     """Tests for simulated phone calls."""
 
@@ -132,10 +132,11 @@ class TestCalls(DialerAppTestCase):
         self.wait_for_incoming_call()
         time.sleep(1)  # let's hear the ringing sound for a second :-)
         subprocess.check_call(
-                ["dbus-send", "--session", "--print-reply",
-                 "--dest=com.canonical.Approver", "/com/canonical/Approver",
-                 "com.canonical.TelephonyServiceApprover.AcceptCall"],
-                stdout=subprocess.PIPE)
+            [
+                "dbus-send", "--session", "--print-reply",
+                "--dest=com.canonical.Approver", "/com/canonical/Approver",
+                "com.canonical.TelephonyServiceApprover.AcceptCall"
+            ], stdout=subprocess.PIPE)
 
         # call back is from that number
         self.wait_live_call_page("1234567")
@@ -147,7 +148,8 @@ class TestCalls(DialerAppTestCase):
         try:
             self.hangup()
         except MismatchError as e:
-            print('Expected failure due to known Mir crash (https://launchpad.net/bugs/1240400): %s' % e)
+            print('Expected failure due to known Mir crash '
+                  '(https://launchpad.net/bugs/1240400): %s' % e)
 
     #
     # Helper methods
@@ -166,7 +168,8 @@ class TestCalls(DialerAppTestCase):
 
         Sets self.hangup_button.
         """
-        self.hangup_button = self.app.wait_select_single(objectName="hangupButton")
+        self.hangup_button = self.app.wait_select_single(
+            objectName="hangupButton")
         self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
         self.assertThat(self.call_button.visible, Equals(False))
 
@@ -191,7 +194,6 @@ class TestCalls(DialerAppTestCase):
 
         # on desktop, notify-osd generates a persistent popup, clean this up
         subprocess.call(['pkill', '-f', 'notify-osd'])
-
 
     def hangup(self):
         self.pointing_device.click_object(self.hangup_button)

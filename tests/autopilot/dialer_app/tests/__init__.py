@@ -1,5 +1,5 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2012 Canonical
+# Copyright 2012, 2013 Canonical
 #
 # This file is part of dialer-app.
 #
@@ -24,6 +24,7 @@ import logging
 import subprocess
 
 logger = logging.getLogger(__name__)
+
 
 # ensure we have an ofono account; we assume that we have these tools,
 # otherwise we consider this a test failure (missing dependencies)
@@ -82,7 +83,8 @@ class DialerAppTestCase(AutopilotTestCase):
         else:
             self.app = self.launch_test_application(
                 "dialer-app",
-                "--desktop_file_hint=/usr/share/applications/dialer-app.desktop",
+                "--desktop_file_hint="
+                "/usr/share/applications/dialer-app.desktop",
                 app_type='qt',
                 emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
