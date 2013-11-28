@@ -136,7 +136,7 @@ class TestCalls(DialerAppTestCase):
                 "dbus-send", "--session", "--print-reply",
                 "--dest=com.canonical.Approver", "/com/canonical/Approver",
                 "com.canonical.TelephonyServiceApprover.AcceptCall"
-            ], Stdout=subprocess.PIPE)
+            ], stdout=subprocess.PIPE)
 
         # call back is from that number
         self.wait_live_call_page("1234567")
