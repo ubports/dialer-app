@@ -134,6 +134,11 @@ Page {
                         }
                         return
                     }
+
+                    if (!interactive) {
+                        return;
+                    }
+
                     if (historyList.currentContactExpanded == index) {
                         historyList.currentContactExpanded = -1
                         detailsShown = false
