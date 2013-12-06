@@ -34,6 +34,7 @@ ListItem.Empty {
     property alias isFirst: timeline.isFirst
     property alias contactId: contactWatcher.contactId
     property bool detailsShown: false
+    property alias interactive: contactWatcher.interactive
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
@@ -149,6 +150,7 @@ ListItem.Empty {
             opacity: 0.2
             // FIXME: handle conference call
             text: phoneNumberSubTypeLabel
+            visible: interactive // non-interactive entries are calls from unknown or private numbers
         }
 
         Icon {
