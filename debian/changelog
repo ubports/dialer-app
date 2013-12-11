@@ -1,3 +1,23 @@
+dialer-app (0.1+14.04.20131209-0ubuntu1) trusty; urgency=low
+
+  [ Martin Pitt ]
+  * Add a README.testing to explain what the tests do and how to run
+    them.
+  * Drop connected_tests, they are essentially empty and superseded by
+    the dialer_app phonesim tests.
+
+  [ Gustavo Pichorim Boiko ]
+  * Handle unknown and private numbers.
+
+  [ Leo Arias ]
+  * Fix pep8 errors. (LP: #1250270)
+  * Fixed static errors detected by pyflakes. (LP: #1250275)
+
+  [ Ubuntu daily release ]
+  * Automatic snapshot from revision 82
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 09 Dec 2013 04:18:47 +0000
+
 dialer-app (0.1+14.04.20131107-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
