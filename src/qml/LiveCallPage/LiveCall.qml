@@ -77,13 +77,12 @@ Page {
             iconSource: "switch"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
-            width: visible ? units.gu(3) : 0
-            height: units.gu(3)
+            width: visible ? units.gu(6) : 0
+            height: units.gu(6)
             visible: callManager.hasBackgroundCall
             anchors {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
-                rightMargin: units.gu(1)
             }
 
             onClicked: callManager.backgroundCall.held = false
