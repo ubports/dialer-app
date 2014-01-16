@@ -52,6 +52,51 @@ Page {
         }
     }
 
+    // FIXME: replace this label when the Header component make it possible to put extra content in it
+    Item {
+        id: headerContent
+        anchors.fill: parent
+
+        Label {
+            text: liveCall.title
+            fontSize: "x-large"
+            font.weight: Font.Light
+            verticalAlignment: Text.AlignVCenter
+            elide: Text.ElideRight
+            anchors {
+                left: parent.left
+                leftMargin: units.gu(1)
+                top: parent.top
+                bottom: parent.bottom
+                right: switchCallsButton.left
+            }
+        }
+
+        LiveCallKeypadButton {
+            id: switchCallsButton
+            iconSource: "switch"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            width: visible ? units.gu(3) : 0
+            height: units.gu(3)
+            visible: callManager.hasBackgroundCall
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+                rightMargin: units.gu(1)
+            }
+
+            onClicked: callManager.backgroundCall.held = false
+        }
+    }
+
+    Binding {
+        target: liveCall.header
+        property: "contents"
+        value: liveCall.active ? headerContent : null
+        when: liveCall.header && liveCall.active
+    }
+
     // TRANSLATORS: %1 is the duration of the call
     title: dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
     tools: ToolbarItems {
@@ -120,17 +165,6 @@ Page {
         time: call ? call.elapsedTime : 0
         visible: false
     }
-
-    /*BackgroundCall {
-        id: backgroundCall
-
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-
-        call: callManager.backgroundCall
-        visible: callManager.hasBackgroundCall
-    }*/
 
     Image {
         id: background
@@ -314,8 +348,6 @@ Page {
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
-                enabled: false
-                opacity: 0.2
                 onClicked: {
                     if (call) {
                         call.held = !call.held
