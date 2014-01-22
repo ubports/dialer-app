@@ -56,8 +56,11 @@ class TestDialer(DialerAppTestCase):
 
     def test_dialer_view_is_default(self):
         """Ensure the dialer view is the default view when the app is
-        started.
+        started and the tabs are in selection mode.
 
         """
         dialer_page = self.main_view.dialer_page
+        tabbar = self.main_view.get_tabs_bar()
+        
         self.assertThat(dialer_page.visible, Eventually(Equals(True)))
+        self.assertThat(tabbar.selectionMode, Eventually(Equals(True)))

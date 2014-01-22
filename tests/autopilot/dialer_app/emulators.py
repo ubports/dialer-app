@@ -20,6 +20,9 @@ class MainView(toolkit_emulators.MainView):
     def dialer_page(self):
         return self.select_single(DialerPage)
 
+    def get_tabs_bar(self):
+        return self.select_single("TabBar")
+
 
 class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
     def __init__(self, *args):
