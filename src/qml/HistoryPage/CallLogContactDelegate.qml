@@ -105,6 +105,7 @@ Item {
             height: childrenRect.height
             width: parent.width
             ExpandableButton {
+                objectName: "logCallButton"
                 text: i18n.tr("Call now")
                 fontSize: "medium"
                 iconName: "call-start"
@@ -114,6 +115,7 @@ Item {
                 }
             }
             ExpandableButton {
+                objectName: "logMessageButton"
                 text: i18n.tr("Send text message")
                 fontSize: "small"
                 iconName: "messages"
@@ -122,6 +124,7 @@ Item {
                 }
             }
             ExpandableButton {
+                objectName: "logAddContactButton"
                 showDivider: false
                 text: unknownContact ? i18n.tr("Save contact") : i18n.tr("View contact")
                 fontSize: "small"
