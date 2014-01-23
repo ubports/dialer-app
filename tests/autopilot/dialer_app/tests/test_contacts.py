@@ -32,8 +32,9 @@ class TestContacts(DialerAppTestCase):
             subprocess.call(["pkill", "history-daemon"])
             os.rename(self.history, self.history + ".orig")
 
-        os.environ["HISTORY_SQLITE_DBPATH"] = "../data/history.sqlite"
-        subprocess.Popen(["history-daemon"])
+        os.environ["HISTORY_SQLITE_DBPATH"] = "dialer_app/data/history.sqlite"
+        subprocess.Popen(["history-daemon"], stdout=subprocess.PIPE,
+            universal_newlines=True)
 
         super(TestContacts, self).setUp()
 
