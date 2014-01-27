@@ -43,6 +43,9 @@ class TestContacts(DialerAppTestCase):
 
         super(TestContacts, self).setUp()
 
+        self._set_testability_environment_variable()
+        self.main_view.switch_to_tab("callLogTab")
+
     def _set_testability_environment_variable(self):
         """Makes sure every app opened in the current environment loads
         the testability driver.
@@ -64,8 +67,6 @@ class TestContacts(DialerAppTestCase):
         the messaging app.
 
         """
-        self._set_testability_environment_variable()
-        self.main_view.switch_to_tab("callLogTab")
         history_item = self.app.select_single(objectName="historyDelegate0")
         self.pointing_device.click_object(history_item)
         
@@ -80,4 +81,5 @@ class TestContacts(DialerAppTestCase):
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
             )
 
-        self.assertThat(msg_app.main_view.visible, Eventually(Equals(True)))
+        msg_app_view = msg_app.select_single("QQuickView")
+        self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
