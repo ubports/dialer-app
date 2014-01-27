@@ -21,7 +21,6 @@ from dialer_app.tests import DialerAppTestCase
 
 import os
 import subprocess
-import time
 
 
 class TestContacts(DialerAppTestCase):
@@ -69,9 +68,9 @@ class TestContacts(DialerAppTestCase):
         self.main_view.switch_to_tab("callLogTab")
         history_item = self.app.select_single(objectName="historyDelegate0")
         self.pointing_device.click_object(history_item)
-        time.sleep(1) # hack right now, needs a "moving" property
         
         self.assertThat(history_item.detailsShown, Eventually(Equals(True)))
+        self.assertThat(history_item.animating, Eventually(Equals(False)))
 
         send_msg_button = self.app.select_single(objectName="logMessageButton")
         self.pointing_device.click_object(send_msg_button)
