@@ -20,9 +20,6 @@ class MainView(toolkit_emulators.MainView):
     def dialer_page(self):
         return self.select_single(DialerPage)
 
-    def get_tabs_bar(self):
-        return self.select_single("TabBar")
-
     def get_first_log(self):
         return self.select_single(objectName="historyDelegate0")
 

@@ -55,12 +55,7 @@ class TestDialer(DialerAppTestCase):
         self.assertThat(keypad_entry.value, Eventually(Equals("")))
 
     def test_dialer_view_is_default(self):
-        """Ensure the dialer view is the default view when the app is
-        started and the tabs are in selection mode.
-
-        """
+        """Ensure the dialer view is the default view on app startup."""
         dialer_page = self.main_view.dialer_page
-        tabbar = self.main_view.get_tabs_bar()
         
         self.assertThat(dialer_page.visible, Eventually(Equals(True)))
-        self.assertThat(tabbar.selectionMode, Eventually(Equals(True)))
