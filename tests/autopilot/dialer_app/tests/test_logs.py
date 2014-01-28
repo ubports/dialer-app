@@ -51,6 +51,7 @@ class TestCallLogs(DialerAppTestCase):
     def tearDown(self):
         super(TestCallLogs, self).tearDown()
         subprocess.call(["pkill", self.app_to_kill])
+        self._reset_environment_variable()
 
     def _set_testability_environment_variable(self):
         """Makes sure every app opened in the current environment loads
@@ -62,6 +63,16 @@ class TestCallLogs(DialerAppTestCase):
                 "/sbin/initctl",
                 "set-env",
                 "QT_LOAD_TESTABILITY=1"
+            ]
+        )
+
+    def _reset_environment_variable(self):
+        """Resets the previously added env variable."""
+        subprocess.call(
+            [
+                "/sbin/initctl",
+                "unset-env",
+                "QT_LOAD_TESTABILITY"
             ]
         )
 
