@@ -23,6 +23,9 @@ class MainView(toolkit_emulators.MainView):
     def get_tabs_bar(self):
         return self.select_single("TabBar")
 
+    def get_first_log(self):
+        return self.select_single(objectName="historyDelegate0")
+
 
 class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
     def __init__(self, *args):
