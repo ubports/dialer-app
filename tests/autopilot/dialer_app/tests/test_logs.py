@@ -33,14 +33,14 @@ class TestCallLogs(DialerAppTestCase):
     devnull = open(os.devnull, 'w')
     app_to_kill = ''
 
-    if os.path.exists('../../src/dialer-app'):
-        database = local_db_dir + db_file
-    else:
-        database = system_db_dir + db_file
-
     def setUp(self):
+        if os.path.exists('../../src/dialer-app'):
+            database = local_db_dir + db_file
+        else:
+            database = system_db_dir + db_file
+        
         subprocess.call(['pkill', 'history-daemon'])
-        os.environ['HISTORY_SQLITE_DBPATH'] = self.database
+        os.environ['HISTORY_SQLITE_DBPATH'] = database
         subprocess.Popen(['history-daemon'], stderr=self.devnull)
 
         super(TestCallLogs, self).setUp()
@@ -54,10 +54,7 @@ class TestCallLogs(DialerAppTestCase):
         self._reset_environment_variable()
 
     def _set_testability_environment_variable(self):
-        """Makes sure every app opened in the current environment loads
-        the testability driver.
-
-        """
+        """Make sure every app loads the testability driver."""
         subprocess.call(
             [
                 '/sbin/initctl',
