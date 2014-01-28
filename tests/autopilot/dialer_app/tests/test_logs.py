@@ -27,30 +27,30 @@ import time
 class TestCallLogs(DialerAppTestCase):
     """Tests for the call log panel."""
 
-    db_file = "history.sqlite"
-    local_db_dir = "dialer_app/data/"
-    system_db_dir = "/usr/lib/python2.7/dist-packages/dialer_app/data/"
+    db_file = 'history.sqlite'
+    local_db_dir = 'dialer_app/data/'
+    system_db_dir = '/usr/lib/python2.7/dist-packages/dialer_app/data/'
     devnull = open(os.devnull, 'w')
-    app_to_kill = ""
+    app_to_kill = ''
 
-    if os.path.exists("../../src/dialer-app"):
+    if os.path.exists('../../src/dialer-app'):
         database = local_db_dir + db_file
     else:
         database = system_db_dir + db_file
 
     def setUp(self):
-        subprocess.call(["pkill", "history-daemon"])
-        os.environ["HISTORY_SQLITE_DBPATH"] = self.database
-        subprocess.Popen(["history-daemon"], stderr=self.devnull)
+        subprocess.call(['pkill', 'history-daemon'])
+        os.environ['HISTORY_SQLITE_DBPATH'] = self.database
+        subprocess.Popen(['history-daemon'], stderr=self.devnull)
 
         super(TestCallLogs, self).setUp()
 
         self._set_testability_environment_variable()
-        self.main_view.switch_to_tab("callLogTab")
+        self.main_view.switch_to_tab('callLogTab')
 
     def tearDown(self):
         super(TestCallLogs, self).tearDown()
-        subprocess.call(["pkill", self.app_to_kill])
+        subprocess.call(['pkill', self.app_to_kill])
         self._reset_environment_variable()
 
     def _set_testability_environment_variable(self):
@@ -60,9 +60,9 @@ class TestCallLogs(DialerAppTestCase):
         """
         subprocess.call(
             [
-                "/sbin/initctl",
-                "set-env",
-                "QT_LOAD_TESTABILITY=1"
+                '/sbin/initctl',
+                'set-env',
+                'QT_LOAD_TESTABILITY=1'
             ]
         )
 
@@ -70,16 +70,16 @@ class TestCallLogs(DialerAppTestCase):
         """Resets the previously added env variable."""
         subprocess.call(
             [
-                "/sbin/initctl",
-                "unset-env",
-                "QT_LOAD_TESTABILITY"
+                '/sbin/initctl',
+                'unset-env',
+                'QT_LOAD_TESTABILITY'
             ]
         )
 
     def _get_app_pid(self, app):
         for i in range(10):
             try:
-                return int(subprocess.check_output(["pidof", app]).strip())
+                return int(subprocess.check_output(['pidof', app]).strip())
             except subprocess.CalledProcessError:
                 # application not started yet, check in a second
                 time.sleep(1)
@@ -101,16 +101,16 @@ class TestCallLogs(DialerAppTestCase):
         self.assertThat(history_item.detailsShown, Eventually(Equals(True)))
         self.assertThat(history_item.animating, Eventually(Equals(False)))
 
-        send_msg_button = self.app.select_single(objectName="logMessageButton")
+        send_msg_button = self.app.select_single(objectName='logMessageButton')
         self.pointing_device.click_object(send_msg_button)
 
-        msg_app = self._get_app_proxy_object("messaging-app")
-        msg_app_view = msg_app.select_single("QQuickView")
-        msgs_pane = msg_app.select_single(objectName="messagesPage")
+        msg_app = self._get_app_proxy_object('messaging-app')
+        msg_app_view = msg_app.select_single('QQuickView')
+        msgs_pane = msg_app.select_single(objectName='messagesPage')
 
         # name of the app that we expect to be started on clicking the log
         # item, so that we can kill it
-        self.app_to_kill = "messaging-app"
+        self.app_to_kill = 'messaging-app'
         
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
