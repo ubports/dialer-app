@@ -129,11 +129,14 @@ ListItem.Empty {
                 topMargin: units.gu(2)
                 left: avatar.right
                 leftMargin: units.gu(2)
+                right: time.left
+                rightMargin: units.gu(1)
             }
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
             text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+            elide: Text.ElideRight
         }
 
         Label {
