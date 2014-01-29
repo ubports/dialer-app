@@ -22,36 +22,15 @@ from dialer_app.tests import DialerAppTestCase
 import os
 import subprocess
 import time
+import fixtures
 
 
-class TestCallLogs(DialerAppTestCase):
-    """Tests for the call log panel."""
-
-    db_file = 'history.sqlite'
-    local_db_dir = 'dialer_app/data/'
-    system_db_dir = '/usr/lib/python2.7/dist-packages/dialer_app/data/'
-    devnull = open(os.devnull, 'w')
-    app_to_kill = ''
+class TestabilityEnvironment(fixtures.Fixture):
 
     def setUp(self):
-        if os.path.exists('../../src/dialer-app'):
-            database = local_db_dir + db_file
-        else:
-            database = system_db_dir + db_file
-        
-        subprocess.call(['pkill', 'history-daemon'])
-        os.environ['HISTORY_SQLITE_DBPATH'] = database
-        subprocess.Popen(['history-daemon'], stderr=self.devnull)
-
-        super(TestCallLogs, self).setUp()
-
+        super(TestabilityEnvironment, self).setUp()
         self._set_testability_environment_variable()
-        self.main_view.switch_to_tab('callLogTab')
-
-    def tearDown(self):
-        super(TestCallLogs, self).tearDown()
-        subprocess.call(['pkill', self.app_to_kill])
-        self._reset_environment_variable()
+        self.addCleanup(self._reset_environment_variable)
 
     def _set_testability_environment_variable(self):
         """Make sure every app loads the testability driver."""
@@ -59,6 +38,7 @@ class TestCallLogs(DialerAppTestCase):
             [
                 '/sbin/initctl',
                 'set-env',
+                '--global',
                 'QT_LOAD_TESTABILITY=1'
             ]
         )
@@ -72,6 +52,30 @@ class TestCallLogs(DialerAppTestCase):
                 'QT_LOAD_TESTABILITY'
             ]
         )
+
+
+class TestCallLogs(DialerAppTestCase):
+    """Tests for the call log panel."""
+
+    db_file = 'history.sqlite'
+    local_db_dir = 'dialer_app/data/'
+    system_db_dir = '/usr/lib/python2.7/dist-packages/dialer_app/data/'
+    devnull = open(os.devnull, 'w')
+
+    def setUp(self):
+        if os.path.exists('../../src/dialer-app'):
+            database = self.local_db_dir + self.db_file
+        else:
+            database = self.system_db_dir + self.db_file
+        
+        subprocess.call(['pkill', 'history-daemon'])
+        os.environ['HISTORY_SQLITE_DBPATH'] = database
+        subprocess.Popen(['history-daemon'], stderr=self.devnull)
+
+        super(TestCallLogs, self).setUp()
+        testability_environment = TestabilityEnvironment()
+        self.useFixture(testability_environment)
+        self.main_view.switch_to_tab('callLogTab')
 
     def _get_app_pid(self, app):
         for i in range(10):
@@ -104,10 +108,8 @@ class TestCallLogs(DialerAppTestCase):
         msg_app = self._get_app_proxy_object('messaging-app')
         msg_app_view = msg_app.select_single('QQuickView')
         msgs_pane = msg_app.select_single(objectName='messagesPage')
-
-        # name of the app that we expect to be started on clicking the log
-        # item, so that we can kill it
-        self.app_to_kill = 'messaging-app'
         
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
+
+        self.addCleanup(os.system, 'pkill messaging-app')
