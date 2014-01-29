@@ -42,6 +42,7 @@ Depends: ${misc:Depends},
          python-autopilot,
          ubuntu-ui-toolkit-autopilot,
          ofono-phonesim-autostart,
+         messaging-app,
 Description: autopilot tests for dialer-app
  This package contains the autopilot tests for dialer-app.
  .
