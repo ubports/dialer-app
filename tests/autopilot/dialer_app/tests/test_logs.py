@@ -13,7 +13,9 @@
 from __future__ import absolute_import
 
 from autopilot.matchers import Eventually
+from autopilot.platform import model
 from testtools.matchers import Equals
+from testtools import skipIf
 
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
@@ -22,6 +24,8 @@ import os
 import subprocess
 
 
+@skipIf(model() == 'Desktop',
+        'only run on Ubuntu touch platforms')
 class TestCallLogs(DialerAppTestCase):
     """Tests for the call log panel."""
 
