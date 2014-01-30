@@ -132,6 +132,13 @@ bool DialerApplication::setup()
     m_view->rootContext()->setContextProperty("application", this);
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
+    // check if there is a contacts backend override
+    QString contactsBackend = qgetenv("DEFAULT_CONTACT_MANAGER");
+    if (!contactsBackend.isEmpty()) {
+        qDebug() << "Overriding the contacts backend, using:" << contactsBackend;
+        m_view->rootContext()->setContextProperty("DEFAULT_CONTACT_MANAGER", contactsBackend);
+    }
+
     QString pluginPath = ubuntuPhonePluginPath();
     if (!pluginPath.isNull()) {
         m_view->engine()->addImportPath(pluginPath);
