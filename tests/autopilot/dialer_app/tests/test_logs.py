@@ -49,6 +49,7 @@ class TestCallLogs(DialerAppTestCase):
         self.useFixture(testability_environment)
         self.main_view.switch_to_tab('callLogTab')
         self._ensure_call_log_item_expanded()
+        self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
 
     def _ensure_call_log_item_expanded(self):
         history_item = self.main_view.get_first_log()
