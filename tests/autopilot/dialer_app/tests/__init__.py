@@ -10,6 +10,7 @@
 """Dialer App autopilot tests."""
 
 from autopilot.input import Mouse, Touch, Pointer
+from autopilot.introspection import get_proxy_object_for_existing_process
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
@@ -19,6 +20,7 @@ from dialer_app import emulators
 
 import os
 import sys
+import time
 import logging
 import subprocess
 
@@ -86,6 +88,25 @@ class DialerAppTestCase(AutopilotTestCase):
                 "/usr/share/applications/dialer-app.desktop",
                 app_type='qt',
                 emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+
+    def _get_app_proxy_object(self, app_name):
+        return get_proxy_object_for_existing_process(
+            self._get_app_pid(app_name),
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
+
+    def _get_app_pid(self, app):
+        for i in range(10):
+            try:
+                return int(subprocess.check_output(['pidof', app]).strip())
+            except subprocess.CalledProcessError:
+                # application not started yet, check in a second
+                time.sleep(1)
+
+    def _click_object(self, objectName):
+        self.pointing_device.click_object(
+            self.app.select_single(objectName=objectName)
+        )
 
     @property
     def main_view(self):
