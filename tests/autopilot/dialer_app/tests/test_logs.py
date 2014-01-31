@@ -74,9 +74,9 @@ class TestCallLogs(DialerAppTestCase):
         
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
+        self.assertThat(msgs_pane.number, Eventually(Equals("800")))
 
         self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
-
 
     def test_add_new_contact_from_log(self):
         """Ensure tapping on 'add new contact' item of a call log opens
@@ -95,8 +95,10 @@ class TestCallLogs(DialerAppTestCase):
         cntct_app = self._get_app_proxy_object('address-book-app')
         cntct_app_view = self._get_main_view(cntct_app)
         cntct_edit_pane = cntct_app.select_single(objectName='contactEditorPage')
+        numbr_box = cntct_app.select_single(objectName="phoneNumber_0")
         
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
         self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))
+        self.assertThat(numbr_box.text, Eventually(Equals("800")))
         
         self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
