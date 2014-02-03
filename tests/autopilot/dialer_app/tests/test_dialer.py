@@ -57,5 +57,5 @@ class TestDialer(DialerAppTestCase):
     def test_dialer_view_is_default(self):
         """Ensure the dialer view is the default view on app startup."""
         dialer_page = self.main_view.dialer_page
-        
+
         self.assertThat(dialer_page.visible, Eventually(Equals(True)))

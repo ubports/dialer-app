@@ -39,7 +39,7 @@ class TestCallLogs(DialerAppTestCase):
             database = self.local_db_dir + self.db_file
         else:
             database = self.system_db_dir + self.db_file
-        
+
         subprocess.call(['pkill', 'history-daemon'])
         os.environ['HISTORY_SQLITE_DBPATH'] = database
         subprocess.Popen(['history-daemon'], stderr=self.devnull)
@@ -54,7 +54,7 @@ class TestCallLogs(DialerAppTestCase):
     def _ensure_call_log_item_expanded(self):
         history_item = self.main_view.get_first_log()
         self.pointing_device.click_object(history_item)
-        
+
         history_item.detailsShown.wait_for(True)
         history_item.animating.wait_for(False)
 
@@ -71,7 +71,7 @@ class TestCallLogs(DialerAppTestCase):
         msg_app = self._get_app_proxy_object('messaging-app')
         msg_app_view = self._get_main_view(msg_app)
         msgs_pane = msg_app.select_single(objectName='messagesPage')
-        
+
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.number, Eventually(Equals("800")))
@@ -94,11 +94,12 @@ class TestCallLogs(DialerAppTestCase):
 
         cntct_app = self._get_app_proxy_object('address-book-app')
         cntct_app_view = self._get_main_view(cntct_app)
-        cntct_edit_pane = cntct_app.select_single(objectName='contactEditorPage')
+        cntct_edit_pane = cntct_app.select_single(
+            objectName='contactEditorPage')
         numbr_box = cntct_app.select_single(objectName="phoneNumber_0")
-        
+
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
         self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))
         self.assertThat(numbr_box.text, Eventually(Equals("800")))
-        
+
         self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
