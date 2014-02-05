@@ -39,6 +39,19 @@ Page {
     property bool dtmfVisible: false
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
+
+    title: {
+        if (callManager.calls.length > 1) {
+            return i18n.tr("Two Calls");
+        } else {
+            return dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber;
+        }
+    }
+    tools: ToolbarItems {
+        opened: false
+        locked: true
+    }
+
     Timer {
         id: callWatcher
         interval: 10000
@@ -72,21 +85,6 @@ Page {
             }
         }
 
-        LiveCallKeypadButton {
-            id: switchCallsButton
-            iconSource: "switch"
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            width: visible ? units.gu(6) : 0
-            height: units.gu(6)
-            visible: callManager.hasBackgroundCall
-            anchors {
-                verticalCenter: parent.verticalCenter
-                right: parent.right
-            }
-
-            onClicked: callManager.backgroundCall.held = false
-        }
     }
 
     Binding {
@@ -94,13 +92,6 @@ Page {
         property: "contents"
         value: liveCall.active ? headerContent : null
         when: liveCall.header && liveCall.active
-    }
-
-    // TRANSLATORS: %1 is the duration of the call
-    title: dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
-    tools: ToolbarItems {
-        opened: false
-        locked: true
     }
 
     function endCall() {
@@ -193,7 +184,7 @@ Page {
     Item {
         id: topPanel
         clip: true
-        height: contactWatcher.isUnknown ? 0 : units.gu(5)
+        height: contactWatcher.isUnknown || callManager.calls.length > 1 ? 0 : units.gu(5)
         anchors {
             top: parent.top
             left: parent.left
@@ -229,16 +220,77 @@ Page {
             bottom: buttonsArea.top
         }
 
-        // FIXME: re-enable the keypad entry once design decides where to place it
-        /*KeypadEntry {
-            id: keypadEntry
+        Column {
+            id: multiCallArea
+            anchors {
+                fill: parent
+                margins: units.gu(1)
+            }
+            spacing: units.gu(1)
+            opacity: (callManager.calls.length > 1 && !keypad.visible) ? 1 : 0
+            visible: opacity > 0
 
-            anchors.centerIn: parent
-            placeHolder: liveCall.number
-            placeHolderPixelFontSize: units.dp(43)
-            focus: true
-            input.readOnly: true
-        }*/
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+
+            Repeater {
+                model: callManager.calls
+
+                Item {
+                    id: callDelegate
+                    property QtObject callEntry: modelData
+
+                    height: multiCallArea.height / 2 - units.gu(3)
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                    }
+
+                    Rectangle {
+                        color: callEntry.held ? "black" : "white"
+                        opacity: 0.5
+                        anchors.fill: parent
+
+                        Behavior on color {
+                            ColorAnimation {
+                                duration: 150
+                            }
+                        }
+                    }
+
+                    Column {
+                        anchors {
+                            fill: parent
+                            margins: units.gu(1)
+                        }
+
+                        ContactWatcher {
+                            id: watcher
+                            phoneNumber: callEntry.phoneNumber
+                        }
+
+                        Label {
+                            fontSize: "large"
+                            anchors.left: parent.left
+                            text: watcher.alias != "" ? watcher.alias : watcher.phoneNumber;
+                        }
+
+                        Label {
+                            fontSize: "medium"
+                            anchors.left: parent.left
+                            text: callEntry.held ? i18n.tr("on hold") : i18n.tr("active")
+                        }
+                    }
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: callEntry.held = false
+                    }
+                }
+
+            }
+        }
 
         Keypad {
             id: keypad
@@ -343,7 +395,15 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "pauseStartButton"
-                iconSource: selected ? "media-playback-start" : "media-playback-pause"
+                iconSource: {
+                    if (callManager.backgroundCall) {
+                        return "switch"
+                    } else if (selected) {
+                        return "media-playback-start"
+                    } else {
+                        return "media-playback-pause"
+                    }
+                }
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
