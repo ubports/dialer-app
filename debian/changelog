@@ -1,3 +1,38 @@
+dialer-app (0.1+14.04.20140130-0ubuntu1) trusty; urgency=low
+
+  [ Bill Filler ]
+  * o not pass the phone number as a parameter when pushing the live
+    call view for an outgoing call. The correct value will be taken from
+    the callManager. This fixes the problem of the header not updating
+    when switching between multiple calls. Re-add try catch around
+    autopilot test as the underlying mir/shell crash has not been fixed
+
+  [ Martin Pitt ]
+  * tests: Drop expected crash for LP#1240400, it's fixed now. (LP:
+    #1240400)
+
+  [ Gustavo Pichorim Boiko ]
+  * Implement support for switching calls.
+  * Fix a typo in the default avatar setting on history page.
+  * Fix the call duration parsing by using Qt.formatTime() to split
+    hours, minutes and seconds. (LP: #1242772)
+  * o not pass the phone number as a parameter when pushing the live
+    call view for an outgoing call. The correct value will be taken from
+    the callManager. This fixes the problem of the header not updating
+    when switching between multiple calls. Re-add try catch around
+    autopilot test as the underlying mir/shell crash has not been fixed
+
+  [ Omer Akram ]
+  * Load testability driver if QT_LOAD_TESTABILITY is in the
+    environment.
+
+  [ Dimitri John Ledkov ]
+  * Drop executing qmake, to query a variable, which is then not used.
+    Adjust dependency on any:arch python, fixes cross-compilation.
+    build-dependency installation.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 30 Jan 2014 17:06:44 +0000
+
 dialer-app (0.1+14.04.20131209-0ubuntu1) trusty; urgency=low
 
   [ Martin Pitt ]
