@@ -58,7 +58,7 @@ def is_phonesim_running():
             [
                 '/usr/share/ofono/scripts/list-modems',
             ], stderr=subprocess.PIPE)
-        return out.startswith('[ /phonesim ]'')
+        return out.startswith('[ /phonesim ]')
     except subprocess.CalledProcessError:
         return False
 
