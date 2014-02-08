@@ -21,17 +21,10 @@ from testtools.matchers import Equals, NotEquals
 from testtools import skipIf, skipUnless
 
 from dialer_app.tests import DialerAppTestCase
-
-# determine whether we are running with phonesim
-try:
-    out = subprocess.check_output(["/usr/share/ofono/scripts/list-modems"],
-                                  stderr=subprocess.PIPE)
-    have_phonesim = out.startswith("[ /phonesim ]")
-except subprocess.CalledProcessError:
-    have_phonesim = False
+from dialer_app import helpers
 
 
-@skipUnless(have_phonesim,
+@skipUnless(helpers.is_phonesim_running(),
             "this test needs to run under with-ofono-phonesim")
 @skipIf(os.uname()[2].endswith("maguro"),
         "tests cause Unity crashes on maguro")
