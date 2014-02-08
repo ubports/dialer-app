@@ -17,7 +17,7 @@ import os
 import time
 
 from autopilot.matchers import Eventually
-from testtools.matchers import Equals, NotEquals
+from testtools.matchers import Equals, NotEquals, MismatchError
 from testtools import skipIf, skipUnless
 
 from dialer_app.tests import DialerAppTestCase
