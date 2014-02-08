@@ -22,6 +22,7 @@ from dialer_app import fixture_setup
 
 import os
 import subprocess
+import time
 
 
 @skipIf(model() == 'Desktop',
@@ -47,7 +48,6 @@ class TestCallLogs(DialerAppTestCase):
         super(TestCallLogs, self).setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
-        self.main_view.switch_to_tab('callLogTab')
         self._ensure_call_log_item_expanded()
         self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
 
@@ -66,6 +66,12 @@ class TestCallLogs(DialerAppTestCase):
         the messaging app.
 
         """
+        # When a call disconnects there is an OSD notification to show the call
+        # has ended, it apears above the tabbar so at times results in a 
+        # test failure because tabs switching fails, wait a magic 3 seconds 
+        # before trying to switch tabs.
+        time.sleep(3)
+        self.main_view.switch_to_tab('callLogTab')
         self._click_object('logMessageButton')
 
         msg_app = self._get_app_proxy_object('messaging-app')
@@ -83,6 +89,7 @@ class TestCallLogs(DialerAppTestCase):
         the address-book app to allow adding new contact.
 
         """
+        self.main_view.switch_to_tab('callLogTab')
         self._click_object('logAddContactButton')
 
         save_contact_dialog = self.app.select_single(
