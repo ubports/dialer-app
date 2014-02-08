@@ -51,12 +51,11 @@ function formatFriendlyDate(timestamp) {
 }
 
 function formatFriendlyCallDuration(duration) {
-    var time = new Date(duration);
     var text = "";
 
-    var hours = time.getHours();
-    var minutes = time.getMinutes();
-    var seconds = time.getSeconds();
+    var hours = parseInt(Qt.formatTime(duration, "hh"));
+    var minutes = parseInt(Qt.formatTime(duration, "mm"));
+    var seconds = parseInt(Qt.formatTime(duration, "ss"));
 
     if (hours > 0) {
         text = i18n.tr("%1 hour", "%1 hours", hours).arg(hours)

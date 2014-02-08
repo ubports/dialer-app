@@ -72,7 +72,7 @@ MainView {
             callVoicemail()
         }
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), {"number": number})
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
         callManager.startCall(number);
     }
