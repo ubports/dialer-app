@@ -1,3 +1,13 @@
+dialer-app (0.1+14.04.20140210-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make the test
+    dialer_app.tests.test_calls.TestCalls.test_outgoing_answer_local_han
+    gup more robust by using Eventually() to compare the page title.
+    (LP: #1278519)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 10 Feb 2014 18:02:16 +0000
+
 dialer-app (0.1+14.04.20140130-0ubuntu1) trusty; urgency=low
 
   [ Bill Filler ]
