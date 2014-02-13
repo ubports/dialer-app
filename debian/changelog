@@ -1,3 +1,19 @@
+dialer-app (0.1+14.04.20140213-0ubuntu1) trusty; urgency=low
+
+  [ Ted Gould ]
+  * Add a file to configure the URL for URL dispatcher.
+
+  [ Gustavo Pichorim Boiko ]
+  * Truncate the contact name on call log if it doesn't fit. (LP:
+    #1268965)
+
+  [ Dimitri John Ledkov ]
+  * Change dbus-x11 depenendcy to dbus, as only `dbus-send' is used, not
+    `dbus-launch'. This helps to reduce amount of X11 libraries on the
+    image.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 13 Feb 2014 00:10:42 +0000
+
 dialer-app (0.1+14.04.20140210-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
