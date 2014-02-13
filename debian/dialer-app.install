@@ -1,4 +1,5 @@
 usr/share/applications/dialer-app*.desktop
+usr/share/url-dispatcher/urls
 usr/share/locale/*/LC_MESSAGES/dialer-app.mo
 usr/share/dialer-app/*.qml
 usr/share/dialer-app/LiveCallPage
