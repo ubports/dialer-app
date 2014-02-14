@@ -133,10 +133,10 @@ bool DialerApplication::setup()
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
     // check if there is a contacts backend override
-    QString contactsBackend = qgetenv("DEFAULT_CONTACT_MANAGER");
+    QString contactsBackend = qgetenv("QTCONTACTS_MANAGER_OVERRIDE");
     if (!contactsBackend.isEmpty()) {
         qDebug() << "Overriding the contacts backend, using:" << contactsBackend;
-        m_view->rootContext()->setContextProperty("DEFAULT_CONTACT_MANAGER", contactsBackend);
+        m_view->rootContext()->setContextProperty("QTCONTACTS_MANAGER_OVERRIDE", contactsBackend);
     }
 
     QString pluginPath = ubuntuPhonePluginPath();
