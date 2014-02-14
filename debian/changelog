@@ -1,3 +1,64 @@
+dialer-app (0.1+14.04.20140213-0ubuntu1) trusty; urgency=low
+
+  [ Ted Gould ]
+  * Add a file to configure the URL for URL dispatcher.
+
+  [ Gustavo Pichorim Boiko ]
+  * Truncate the contact name on call log if it doesn't fit. (LP:
+    #1268965)
+
+  [ Dimitri John Ledkov ]
+  * Change dbus-x11 depenendcy to dbus, as only `dbus-send' is used, not
+    `dbus-launch'. This helps to reduce amount of X11 libraries on the
+    image.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 13 Feb 2014 00:10:42 +0000
+
+dialer-app (0.1+14.04.20140210-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make the test
+    dialer_app.tests.test_calls.TestCalls.test_outgoing_answer_local_han
+    gup more robust by using Eventually() to compare the page title.
+    (LP: #1278519)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 10 Feb 2014 18:02:16 +0000
+
+dialer-app (0.1+14.04.20140130-0ubuntu1) trusty; urgency=low
+
+  [ Bill Filler ]
+  * o not pass the phone number as a parameter when pushing the live
+    call view for an outgoing call. The correct value will be taken from
+    the callManager. This fixes the problem of the header not updating
+    when switching between multiple calls. Re-add try catch around
+    autopilot test as the underlying mir/shell crash has not been fixed
+
+  [ Martin Pitt ]
+  * tests: Drop expected crash for LP#1240400, it's fixed now. (LP:
+    #1240400)
+
+  [ Gustavo Pichorim Boiko ]
+  * Implement support for switching calls.
+  * Fix a typo in the default avatar setting on history page.
+  * Fix the call duration parsing by using Qt.formatTime() to split
+    hours, minutes and seconds. (LP: #1242772)
+  * o not pass the phone number as a parameter when pushing the live
+    call view for an outgoing call. The correct value will be taken from
+    the callManager. This fixes the problem of the header not updating
+    when switching between multiple calls. Re-add try catch around
+    autopilot test as the underlying mir/shell crash has not been fixed
+
+  [ Omer Akram ]
+  * Load testability driver if QT_LOAD_TESTABILITY is in the
+    environment.
+
+  [ Dimitri John Ledkov ]
+  * Drop executing qmake, to query a variable, which is then not used.
+    Adjust dependency on any:arch python, fixes cross-compilation.
+    build-dependency installation.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 30 Jan 2014 17:06:44 +0000
+
 dialer-app (0.1+14.04.20131209-0ubuntu1) trusty; urgency=low
 
   [ Martin Pitt ]
