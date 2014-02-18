@@ -21,7 +21,6 @@ Package: dialer-app
 Architecture: any
 Depends: ${misc:Depends},
          ${shlibs:Depends},
-         dbus-x11,
          qtdeclarative5-ubuntu-history0.1 | qtdeclarative5-ubuntu-history-plugin,
          qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
          qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
@@ -35,6 +34,7 @@ Architecture: all
 Section: debug
 Depends: ${misc:Depends},
          autopilot-qt5,
+         dbus,
          libqt5test5,
          libqt5widgets5,
          dialer-app (>= ${binary:Version}),

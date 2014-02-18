@@ -166,6 +166,24 @@ class TestCalls(DialerAppTestCase, helpers.TelephonyTestHelpers):
         lcp = self.app.select_single(objectName="pageLiveCall")
         self.assertThat(lcp.title, Eventually(Equals(number)))
 
+    def wait_for_incoming_call(self):
+        """Wait up to 5 s for an incoming phone call"""
+
+        timeout = 10
+        while timeout >= 0:
+            out = subprocess.check_output(
+                ["/usr/share/ofono/scripts/list-calls"],
+                stderr=subprocess.PIPE)
+            if "State = incoming" in out:
+                break
+            timeout -= 1
+            time.sleep(0.5)
+        else:
+            self.fail("timed out waiting for incoming phonesim call")
+
+        # on desktop, notify-osd generates a persistent popup, clean this up
+        subprocess.call(['pkill', '-f', 'notify-osd'])
+
     def hangup(self):
         self.pointing_device.click_object(self.hangup_button)
 
