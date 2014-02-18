@@ -22,33 +22,31 @@ import sys
 import time
 
 
-class TelephonyTestHelpers(object):
+def wait_for_incoming_call(self):
+    """Wait up to 5 s for an incoming phone call"""
 
-    def wait_for_incoming_call(self):
-        """Wait up to 5 s for an incoming phone call"""
+    timeout = 10
+    while timeout >= 0:
+        out = subprocess.check_output(
+            ['/usr/share/ofono/scripts/list-calls'],
+            stderr=subprocess.PIPE)
+        if 'State = incoming' in out:
+            break
+        timeout -= 1
+        time.sleep(0.5)
+    raise RuntimeError('timed out waiting for incoming phonesim call')
 
-        timeout = 10
-        while timeout >= 0:
-            out = subprocess.check_output(
-                ['/usr/share/ofono/scripts/list-calls'],
-                stderr=subprocess.PIPE)
-            if 'State = incoming' in out:
-                break
-            timeout -= 1
-            time.sleep(0.5)
-        else:
-            self.fail('timed out waiting for incoming phonesim call')
+    # on desktop, notify-osd generates a persistent popup, clean this up
+    if model() == 'Desktop':
+        subprocess.call(['pkill', '-f', 'notify-osd'])
 
-        # on desktop, notify-osd generates a persistent popup, clean this up
-        if model() == 'Desktop':
-            subprocess.call(['pkill', '-f', 'notify-osd'])
 
-    def invoke_incoming_call(self):
-        """Invoke an incoming call for test purpose."""
-        # magic number 199 will cause a callback from 1234567; dialing 199
-        # itself will fail, so quiesce the error
-        subprocess.call(['/usr/share/ofono/scripts/dial-number', '199'],
-                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+def invoke_incoming_call(self):
+    """Invoke an incoming call for test purpose."""
+    # magic number 199 will cause a callback from 1234567; dialing 199
+    # itself will fail, so quiesce the error
+    subprocess.call(['/usr/share/ofono/scripts/dial-number', '199'],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 
 def is_phonesim_running():
