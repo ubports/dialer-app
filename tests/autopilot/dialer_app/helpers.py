@@ -22,7 +22,7 @@ import sys
 import time
 
 
-def wait_for_incoming_call(self):
+def wait_for_incoming_call():
     """Wait up to 5 s for an incoming phone call"""
 
     timeout = 10
@@ -34,14 +34,15 @@ def wait_for_incoming_call(self):
             break
         timeout -= 1
         time.sleep(0.5)
-    raise RuntimeError('timed out waiting for incoming phonesim call')
+    else:
+        raise RuntimeError('timed out waiting for incoming phonesim call')
 
     # on desktop, notify-osd generates a persistent popup, clean this up
     if model() == 'Desktop':
         subprocess.call(['pkill', '-f', 'notify-osd'])
 
 
-def invoke_incoming_call(self):
+def invoke_incoming_call():
     """Invoke an incoming call for test purpose."""
     # magic number 199 will cause a callback from 1234567; dialing 199
     # itself will fail, so quiesce the error
