@@ -1,3 +1,12 @@
+dialer-app (0.1+14.04.20140218-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make it possible to override the default contact manager. This is
+    particularly useful for running tests, when the memory backend can
+    be used.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 18 Feb 2014 21:38:48 +0000
+
 dialer-app (0.1+14.04.20140213-0ubuntu1) trusty; urgency=low
 
   [ Ted Gould ]
