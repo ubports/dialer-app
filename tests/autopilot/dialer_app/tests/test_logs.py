@@ -69,6 +69,7 @@ class TestCallLogs(DialerAppTestCase):
 
         """
         self._click_object('logMessageButton')
+        self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
         msg_app = self._get_app_proxy_object('messaging-app')
         msg_app_view = self._get_main_view(msg_app)
@@ -77,8 +78,6 @@ class TestCallLogs(DialerAppTestCase):
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.number, Eventually(Equals("800")))
-
-        self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
     @unittest.skip('Test is failing, due to OSD bug, will re-enable soon')
     def test_add_new_contact_from_log(self):
@@ -94,6 +93,7 @@ class TestCallLogs(DialerAppTestCase):
         self.assertThat(save_contact_dialog.opacity, Eventually(Equals(1)))
 
         self._click_object('addNewContactButton')
+        self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
 
         cntct_app = self._get_app_proxy_object('address-book-app')
         cntct_app_view = self._get_main_view(cntct_app)
@@ -104,5 +104,3 @@ class TestCallLogs(DialerAppTestCase):
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
         self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))
         self.assertThat(numbr_box.text, Eventually(Equals("800")))
-
-        self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
