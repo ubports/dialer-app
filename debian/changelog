@@ -1,3 +1,12 @@
+dialer-app (0.1+14.04.20140219-0ubuntu1) trusty; urgency=low
+
+  [ Omer Akram ]
+  * autopilot: add tests for inter-app integration per design spec
+  * change autopilot tests to create reusable helpers to be consumed by
+    ubuntu-integration-tests
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 19 Feb 2014 22:30:50 +0000
+
 dialer-app (0.1+14.04.20140218-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
