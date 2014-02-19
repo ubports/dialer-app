@@ -20,6 +20,9 @@ class MainView(toolkit_emulators.MainView):
     def dialer_page(self):
         return self.select_single(DialerPage)
 
+    def get_first_log(self):
+        return self.select_single(objectName="historyDelegate0")
+
 
 class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
     def __init__(self, *args):
