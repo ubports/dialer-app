@@ -27,14 +27,14 @@ AbstractButton {
 
     width: units.gu(7)
     height: units.gu(7)
+    opacity: enabled ? 1.0 : 0.2
+
+    Behavior on opacity {
+        UbuntuNumberAnimation { }
+    }
 
     property int iconWidth: 0
     property int iconHeight: 0
-
-    /*BorderImage {
-        anchors.fill: parent
-        source: (selected || pressed) ? "../assets/dialer_pad_bg_pressed.png" : "../assets/dialer_pad_bg.png"
-    }*/
 
     Icon {
         id: icon

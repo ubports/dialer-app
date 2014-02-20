@@ -55,21 +55,12 @@ MainView {
     }
 
     function callVoicemail() {
-        if (!telepathyHelper.connected || callManager.voicemailNumber === "") {
-            return
-        }
-        if (pageStack.depth === 1 && !callManager.hasCalls) {
-            pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
-        }
-        callManager.startCall(callManager.voicemailNumber);
+        call(callManager.voicemailNumber);
     }
 
     function call(number) {
         if (!telepathyHelper.connected) {
             return
-        }
-        if (number === callManager.voicemailNumber) {
-            callVoicemail()
         }
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
@@ -81,17 +72,14 @@ MainView {
         pageStack.currentPage.currentTab = 2;
     }
 
-    function isVoicemailActive() {
-        if (callManager.foregroundCall) {
-            return callManager.foregroundCall.voicemail;
-        } else {
-            return false
-        }
-    }
-
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
         pageStack.push(Qt.createComponent("MainPage.qml"))
+
+        // if there are calls, even if we don't have info about them yet, push the livecall view
+        if (callManager.hasCalls) {
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+        }
     }
 
     Connections {
@@ -112,12 +100,7 @@ MainView {
             }
             // if there are no calls, or if the views are already loaded, do not continue processing
             if ((callManager.foregroundCall || callManager.backgroundCall) && pageStack.depth === 1) {
-                if ((callManager.foregroundCall && callManager.foregroundCall.voicemail)
-                        || (callManager.backgroundCall && callManager.backgroundCall.voicemail)) {
-                    pageStack.push(Qt.resolvedUrl("VoicemailPage/VoicemailPage.qml"))
-                } else  {
-                    pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
-                }
+                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
                 application.activateWindow();
             }
         }
