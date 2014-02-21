@@ -23,7 +23,6 @@ from dialer_app import fixture_setup
 import os
 import subprocess
 import time
-import unittest
 
 
 @skipIf(model() == 'Desktop',
@@ -77,9 +76,8 @@ class TestCallLogs(DialerAppTestCase):
 
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
-        self.assertThat(msgs_pane.number, Eventually(Equals("800")))
+        self.assertThat(msgs_pane.title, Eventually(Equals("800")))
 
-    @unittest.skip('Test is failing, due to OSD bug, will re-enable soon')
     def test_add_new_contact_from_log(self):
         """Ensure tapping on 'add new contact' item of a call log opens
         the address-book app to allow adding new contact.
