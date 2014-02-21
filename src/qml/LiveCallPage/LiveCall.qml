@@ -387,6 +387,8 @@ Page {
             iconSource: "contact"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
+            // this button is fully disabled for now, but when it gets enabled again, we need to remember
+            // to still disable it while calling the voicemail
             enabled: false //!isVoicemail
 
             anchors {
