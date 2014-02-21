@@ -59,7 +59,7 @@ MainView {
     }
 
     function call(number) {
-        if (!telepathyHelper.connected) {
+        if (!telepathyHelper.connected  || number === "") {
             return
         }
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
