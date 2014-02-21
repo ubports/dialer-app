@@ -40,6 +40,12 @@ Page {
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
+
+    onCallChanged: {
+        // reset the DTMF keypad visibility status
+        dtmfVisible = (call && call.voicemail);
+    }
+
     Timer {
         id: callWatcher
         interval: 10000
