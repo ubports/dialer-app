@@ -43,6 +43,8 @@ Page {
     title: {
         if (callManager.calls.length > 1) {
             return i18n.tr("Two Calls");
+        } else if (call.isConference) {
+            return i18n.tr("Conference");
         } else {
             return dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber;
         }
@@ -84,7 +86,6 @@ Page {
                 right: switchCallsButton.left
             }
         }
-
     }
 
     Binding {
@@ -234,6 +235,11 @@ Page {
                 UbuntuNumberAnimation { }
             }
 
+            Button {
+                text: i18n.tr("Merge calls")
+                onClicked: callManager.mergeCalls(callManager.calls[0], callManager.calls[1])
+            }
+
             Repeater {
                 model: callManager.calls
 
@@ -288,7 +294,6 @@ Page {
                         onClicked: callEntry.held = false
                     }
                 }
-
             }
         }
 
