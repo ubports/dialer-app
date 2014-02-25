@@ -31,6 +31,7 @@ Item {
         anchors.fill: parent
 
         Tab {
+            objectName: "keypadTab"
             title: i18n.tr("Keypad")
             page: Loader{
                 id: dialerPage
@@ -40,6 +41,7 @@ Item {
         }
 
         Tab {
+            objectName: "contactsTab"
             title: i18n.tr("Contacts")
             page: Loader{
                 id: contactsPage
@@ -50,6 +52,7 @@ Item {
         }
 
         Tab {
+            objectName: "callLogTab"
             title: i18n.tr("Call log")
             page: Loader{
                 id: historyPage

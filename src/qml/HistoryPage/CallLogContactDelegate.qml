@@ -33,9 +33,11 @@ Item {
          id: newContactDialog
          Dialog {
              id: dialogue
+             objectName: "saveContactDialog"
              title: i18n.tr("Save contact")
              text: i18n.tr("How do you want to save the contact?")
              Button {
+                 objectName: "addToExistingContactButton"
                  text: i18n.tr("Add to existing contact")
                  color: UbuntuColors.orange
                  onClicked: {
@@ -44,6 +46,7 @@ Item {
                  }
              }
              Button {
+                 objectName: "addNewContactButton"
                  text: i18n.tr("Create new contact")
                  color: UbuntuColors.warmGrey
                  onClicked: {
@@ -52,6 +55,7 @@ Item {
                  }
              }
              Button {
+                 objectName: "saveContactDialogCancelButton"
                  text: i18n.tr("Cancel")
                  color: UbuntuColors.warmGrey
                  onClicked: {
@@ -105,6 +109,7 @@ Item {
             height: childrenRect.height
             width: parent.width
             ExpandableButton {
+                objectName: "logCallButton"
                 text: i18n.tr("Call now")
                 fontSize: "medium"
                 iconName: "call-start"
@@ -114,6 +119,7 @@ Item {
                 }
             }
             ExpandableButton {
+                objectName: "logMessageButton"
                 text: i18n.tr("Send text message")
                 fontSize: "small"
                 iconName: "messages"
@@ -122,6 +128,7 @@ Item {
                 }
             }
             ExpandableButton {
+                objectName: "logAddContactButton"
                 showDivider: false
                 text: unknownContact ? i18n.tr("Save contact") : i18n.tr("View contact")
                 fontSize: "small"

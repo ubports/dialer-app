@@ -35,6 +35,7 @@ ListItem.Empty {
     property alias contactId: contactWatcher.contactId
     property bool detailsShown: false
     property alias interactive: contactWatcher.interactive
+    property alias animating: detailsToggleAnimation.running
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
@@ -43,7 +44,7 @@ ListItem.Empty {
     clip: true
 
     Behavior on height {
-        UbuntuNumberAnimation { }
+        UbuntuNumberAnimation { id: detailsToggleAnimation }
     }
 
     onItemRemoved: {
@@ -129,11 +130,14 @@ ListItem.Empty {
                 topMargin: units.gu(2)
                 left: avatar.right
                 leftMargin: units.gu(2)
+                right: time.left
+                rightMargin: units.gu(1)
             }
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
             text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+            elide: Text.ElideRight
         }
 
         Label {

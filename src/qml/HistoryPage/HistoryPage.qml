@@ -104,6 +104,7 @@ Page {
             id: delegateComponent
             HistoryDelegate {
                 id: historyDelegate
+                objectName: "historyDelegate" + index
                 anchors.left: parent.left
                 anchors.right: parent.right
                 selected: historyList.isSelected(historyDelegate)
