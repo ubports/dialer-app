@@ -21,7 +21,7 @@ class MainView(toolkit_emulators.MainView):
         return self.select_single(DialerPage)
 
     def get_first_log(self):
-        return self.select_single(objectName="historyDelegate0")
+        return self.wait_select_single(objectName="historyDelegate0")
 
 
 class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
