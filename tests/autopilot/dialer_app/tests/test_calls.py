@@ -133,7 +133,7 @@ class TestCalls(DialerAppTestCase):
         # stop watch should start counting
         stop_watch = self.app.select_single(objectName="stopWatch")
         self.assertIn("00:0", stop_watch.elapsed)
-        
+
         try:
             self.hangup()
         except MismatchError as e:
@@ -167,6 +167,7 @@ class TestCalls(DialerAppTestCase):
         self.assertThat(lcp.title, Eventually(Equals(number)))
 
     def hangup(self):
+        self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
         self.pointing_device.click_object(self.hangup_button)
 
         # should switch to call log page
