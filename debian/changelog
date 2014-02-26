@@ -1,3 +1,11 @@
+dialer-app (0.1+14.04.20140226-0ubuntu1) trusty; urgency=low
+
+  [ chris.gagnon ]
+  * Use wait_select_single when getting HistoryDelegate0 instead of
+    select_single, to fix a couple flaky tests (LP: #1284316)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 26 Feb 2014 21:27:58 +0000
+
 dialer-app (0.1+14.04.20140221-0ubuntu1) trusty; urgency=low
 
   [ Ubuntu daily release ]
