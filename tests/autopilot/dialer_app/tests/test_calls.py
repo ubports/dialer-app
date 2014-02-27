@@ -81,12 +81,12 @@ class TestCalls(DialerAppTestCase):
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.main_view.live_call_page.stop_watch()
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         # should still be connected after some time
         time.sleep(3)
-        self.assertIn("00:0", stop_watch.elapsed)
+        self.assertIn("00:0", elapsed_time)
         self.main_view.live_call_page.click_hangup_button()
 
     def test_outgoing_answer_remote_hangup(self):
@@ -99,8 +99,8 @@ class TestCalls(DialerAppTestCase):
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.main_view.live_call_page.stop_watch()
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         # after remote hangs up, should switch to call log page and show call
         # to "Unknown"
@@ -131,8 +131,8 @@ class TestCalls(DialerAppTestCase):
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.main_view.live_call_page.stop_watch()
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         try:
             self.main_view.live_call_page.click_hangup_button()

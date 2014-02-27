@@ -35,25 +35,22 @@ class MainView(toolkit_emulators.MainView):
 
 
 class LiveCall(MainView):
-    def __init__(self, *args):
-        super(LiveCall, self).__init__(*args)
 
-    def stop_watch(self):
-        return self.wait_select_single(objectName="stopWatch")
+    def get_elapsed_call_time(self):
+        """Return the elapsed call time"""
+        return self.wait_select_single(objectName='stopWatch').elapsed
 
     def _get_hangup_button(self):
-        """Returns the hangup button"""
+        """Return the hangup button"""
         return self.wait_select_single(objectName='hangupButton')
 
     def click_hangup_button(self):
-        """Clicks and returns the hangup page"""
+        """Click and return the hangup page"""
         self.visible.wait_for(True)
         return self._click_button(self._get_hangup_button())
 
 
 class DialerPage(MainView):
-    def __init__(self, *args):
-        super(DialerPage, self).__init__(*args)
 
     def _get_keypad_entry(self):
         return self.select_single("KeypadEntry")
@@ -80,30 +77,30 @@ class DialerPage(MainView):
                                   objectName=buttons_dict[number])
 
     def _get_erase_button(self):
-        """Returns the erase button"""
+        """Return the erase button"""
         return self.select_single("CustomButton", objectName="eraseButton")
 
     def _get_call_button(self):
-        """Returns the call button"""
+        """Return the call button"""
         return self.select_single(objectName="callButton")
 
     def click_call_button(self):
-        """Clicks and returns the call button"""
+        """Click and return the call button"""
         return self._click_button(self._get_call_button())
 
     def click_erase_button(self):
-        """Clicks and returns the erase button"""
-        return self._click_button(self._get_erase_button())
+        """Click the erase button"""
+        self._click_button(self._get_erase_button())
 
     def click_keypad_button(self, keypad_button):
-        """clicks the keypad button
+        """click the keypad button
 
-        :param returns: the clicked keypad_button
+        :param keypad_button: the clicked keypad_button
         """
-        return self._click_button(keypad_button)
+        self._click_button(keypad_button)
 
     def dial_number(self, number):
-        """Dial given number (string) on the keypad and call
+        """Dial given number (string) on the keypad and return keypad entry
 
         :param number: the number to dial
         """
@@ -116,5 +113,6 @@ class DialerPage(MainView):
         return entry
 
     def call_number(self, number):
+        """Dial number and call return call_button"""
         self.dial_number(number)
         return self.click_call_button()
