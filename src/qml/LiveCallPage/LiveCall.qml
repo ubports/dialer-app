@@ -221,79 +221,30 @@ Page {
             bottom: buttonsArea.top
         }
 
-        Column {
+        MultiCallDisplay {
             id: multiCallArea
+            calls: callManager.calls
+            opacity: (calls.length > 1 && !keypad.visible && !conferenceCallArea.visible) ? 1 : 0
             anchors {
                 fill: parent
                 margins: units.gu(1)
             }
-            spacing: units.gu(1)
-            opacity: (callManager.calls.length > 1 && !keypad.visible) ? 1 : 0
-            visible: opacity > 0
+        }
 
-            Behavior on opacity {
-                UbuntuNumberAnimation { }
+        ConferenceCallDisplay {
+            id: conferenceCallArea
+            opacity: calls && !keypad.visible ? 1 : 0
+            anchors {
+                fill: parent
+                margins: units.gu(1)
             }
 
-            Button {
-                text: i18n.tr("Merge calls")
-                onClicked: callManager.mergeCalls(callManager.calls[0], callManager.calls[1])
-            }
-
-            Repeater {
-                model: callManager.calls
-
-                Item {
-                    id: callDelegate
-                    property QtObject callEntry: modelData
-
-                    height: multiCallArea.height / 2 - units.gu(3)
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
-
-                    Rectangle {
-                        color: callEntry.held ? "black" : "white"
-                        opacity: 0.5
-                        anchors.fill: parent
-
-                        Behavior on color {
-                            ColorAnimation {
-                                duration: 150
-                            }
-                        }
-                    }
-
-                    Column {
-                        anchors {
-                            fill: parent
-                            margins: units.gu(1)
-                        }
-
-                        ContactWatcher {
-                            id: watcher
-                            phoneNumber: callEntry.phoneNumber
-                        }
-
-                        Label {
-                            fontSize: "large"
-                            anchors.left: parent.left
-                            text: watcher.alias != "" ? watcher.alias : watcher.phoneNumber;
-                        }
-
-                        Label {
-                            fontSize: "medium"
-                            anchors.left: parent.left
-                            text: callEntry.held ? i18n.tr("on hold") : i18n.tr("active")
-                        }
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: callEntry.held = false
-                    }
-                }
+            // when there is only one call and it is a conference, bind the value of the conference call list
+            Binding {
+                target: conferenceCallArea
+                property: "calls"
+                value: callManager.foregroundCall.calls
+                when: callManager.foregroundCall && callManager.foregroundCall.isConference && !callManager.backgroundCall
             }
         }
 
