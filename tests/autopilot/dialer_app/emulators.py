@@ -115,4 +115,5 @@ class DialerPage(MainView):
     def call_number(self, number):
         """Dial number and call return call_button"""
         self.dial_number(number)
-        return self.click_call_button()
+        self.click_call_button()
+        return self.get_root_instance().wait_select_single(LiveCall)

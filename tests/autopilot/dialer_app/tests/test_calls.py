@@ -60,7 +60,7 @@ class TestCalls(DialerAppTestCase):
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
         number = "144"
-        self.call_button = self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number)
         self.assertThat(
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
@@ -76,7 +76,7 @@ class TestCalls(DialerAppTestCase):
         # 06123xx causes accept after xx seconds
         number = "0612302"
 
-        self.call_button = self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number)
         self.assertThat(
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
@@ -94,7 +94,7 @@ class TestCalls(DialerAppTestCase):
         number = "0512303"
 
         # 05123xx causes immediate accept and hangup after xx seconds
-        self.call_button = self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number)
         self.assertThat(
             self.main_view.live_call_page.title, Eventually(Equals(number)))
 
