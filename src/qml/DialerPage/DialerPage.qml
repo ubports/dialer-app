@@ -29,10 +29,6 @@ Page {
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
 
-    function isVoicemailActive() {
-        return mainView.isVoicemailActive();
-    }
-
     tools: ToolbarItems {
         opened: false
         locked: true
