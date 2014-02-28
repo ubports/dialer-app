@@ -40,18 +40,11 @@ class TestCalls(DialerAppTestCase):
             os.rename(self.history, self.history + ".orig")
 
         super(TestCalls, self).setUp()
-        self.entry = self.main_view.dialer_page.get_keypad_entry()
-        self.call_button = self.main_view.dialer_page.get_call_button()
-        self.hangup_button = None
 
         # should have an empty history at the beginning of each test
         self.history_list = self.app.select_single(objectName="historyList")
         self.assertThat(self.history_list.visible, Equals(False))
         self.assertThat(self.history_list.count, Equals(0))
-
-        self.keys = []
-        for i in range(10):
-            self.keys.append(self.main_view.dialer_page.get_keypad_key(str(i)))
 
     def tearDown(self):
         super(TestCalls, self).tearDown()
@@ -66,10 +59,12 @@ class TestCalls(DialerAppTestCase):
 
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
+        number = "144"
+        self.main_view.dialer_page.call_number(number)
+        self.assertThat(
+            self.main_view.live_call_page.title, Eventually(Equals(number)))
 
-        self.keypad_dial("144")
-        self.wait_live_call_page("144")
-        self.hangup()
+        self.main_view.live_call_page.click_hangup_button()
 
         # log should show call to "Unknown"
         self.assertThat(self.history_list.count, Eventually(Equals(1)))
@@ -78,31 +73,34 @@ class TestCalls(DialerAppTestCase):
 
     def test_outgoing_answer_local_hangup(self):
         """Outgoing call, remote answers, local hangs up"""
-
         # 06123xx causes accept after xx seconds
-        self.keypad_dial("0612302")
-        self.wait_live_call_page("0612302")
+        number = "0612302"
+
+        self.main_view.dialer_page.call_number(number)
+        self.assertThat(
+            self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.app.select_single(objectName="stopWatch")
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         # should still be connected after some time
         time.sleep(3)
-        self.assertIn("00:0", stop_watch.elapsed)
-
-        self.hangup()
+        self.assertIn("00:0", elapsed_time)
+        self.main_view.live_call_page.click_hangup_button()
 
     def test_outgoing_answer_remote_hangup(self):
         """Outgoing call, remote answers and hangs up"""
+        number = "0512303"
 
         # 05123xx causes immediate accept and hangup after xx seconds
-        self.keypad_dial("0512303")
-        self.wait_live_call_page("0512303")
+        self.main_view.dialer_page.call_number(number)
+        self.assertThat(
+            self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.app.select_single(objectName="stopWatch")
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         # after remote hangs up, should switch to call log page and show call
         # to "Unknown"
@@ -113,6 +111,7 @@ class TestCalls(DialerAppTestCase):
 
     def test_incoming(self):
         """Incoming call"""
+        number = "1234567"
         helpers.invoke_incoming_call()
 
         # wait for incoming call, accept; it would be nicer to fake-click the
@@ -128,47 +127,15 @@ class TestCalls(DialerAppTestCase):
             ], stdout=subprocess.PIPE)
 
         # call back is from that number
-        self.wait_live_call_page("1234567")
+        self.assertThat(
+            self.main_view.live_call_page.title, Eventually(Equals(number)))
 
         # stop watch should start counting
-        stop_watch = self.app.select_single(objectName="stopWatch")
-        self.assertIn("00:0", stop_watch.elapsed)
+        elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
+        self.assertIn("00:0", elapsed_time)
 
         try:
-            self.hangup()
+            self.main_view.live_call_page.click_hangup_button()
         except MismatchError as e:
             print('Expected failure due to known Mir crash '
                   '(https://launchpad.net/bugs/1240400): %s' % e)
-
-    #
-    # Helper methods
-    #
-
-    def keypad_dial(self, number):
-        """Dial given number (string) on the keypad and call"""
-        for digit in number:
-            self.pointing_device.click_object(self.keys[int(digit)])
-        self.assertThat(self.entry.value, Eventually(Equals(number)))
-
-        self.pointing_device.click_object(self.call_button)
-
-    def wait_live_call_page(self, number):
-        """Wait until live call page gets visible
-
-        Sets self.hangup_button.
-        """
-        self.hangup_button = self.app.wait_select_single(
-            objectName="hangupButton")
-        self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
-        self.assertThat(self.call_button.visible, Eventually(Equals(False)))
-
-        # should show called number in title page
-        lcp = self.app.select_single(objectName="pageLiveCall")
-        self.assertThat(lcp.title, Eventually(Equals(number)))
-
-    def hangup(self):
-        self.assertThat(self.hangup_button.visible, Eventually(Equals(True)))
-        self.pointing_device.click_object(self.hangup_button)
-
-        # should switch to call log page
-        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
