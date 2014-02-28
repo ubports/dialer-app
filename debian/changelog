@@ -1,3 +1,20 @@
+dialer-app (0.1+14.04.20140228-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Improve the live call view behavior by addressing the following
+    points: Start in the live call directly when there is an existing
+    call (to avoid showing the dialpad for a short time before loading
+    the live call view). Merge the voicemail view into the live call
+    one. This addresses a problem that when you were on a voicemail call
+    and got another call, there was no way to switch between them. (LP:
+    #1277763)
+
+  [ chris.gagnon ]
+  * use page object pattern, so maintaining code and finding bugs are
+    easier to find.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 28 Feb 2014 14:54:29 +0000
+
 dialer-app (0.1+14.04.20140226-0ubuntu1) trusty; urgency=low
 
   [ chris.gagnon ]
