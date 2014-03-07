@@ -78,7 +78,15 @@ Column {
                     top: parent.top
                     margins: units.gu(1)
                 }
-                text: watcher.alias != "" ? watcher.alias : watcher.phoneNumber;
+                text: {
+                    if (callEntry.isConference) {
+                        return i18n.tr("Conference");
+                    } else if (watcher.alias != "") {
+                        return watcher.alias;
+                    } else {
+                        return watcher.phoneNumber;
+                    }
+                }
             }
 
             Label {
@@ -93,14 +101,18 @@ Column {
 
             MouseArea {
                 anchors.fill: backgroundRect
-                onClicked: callEntry.held = false
+                onClicked: callEntry.held = false;
                 enabled: callEntry.held
             }
 
-            Button {
+            LiveCallKeypadButton {
                 id: participantsButton
                 visible: callEntry.isConference
-                text: i18n.tr("Participants")
+                iconSource: "navigation-menu"
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
+                width: visible ? units.gu(6) : 0
+                height: units.gu(6)
                 anchors {
                     verticalCenter: backgroundRect.verticalCenter
                     right: parent.right

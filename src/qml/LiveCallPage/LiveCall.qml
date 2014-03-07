@@ -267,20 +267,25 @@ Page {
                 margins: units.gu(1)
             }
 
-            // when there is only one call and it is a conference, bind the value of the conference call list
-            Binding {
-                target: conferenceCallArea
-                property: "conference"
-                value: callManager.foregroundCall
-                when: !callManager.backgroundCall && callManager.foregroundCall && callManager.foregroundCall.isConference
-            }
+            states: [
+                State {
+                    name: "whileInMulticall"
+                    when: callManager.foregroundCall && callManager.backgroundCall
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: null
+                    }
+                },
+                State {
+                    name: "singleCallIsConf"
+                    when: callManager.foregroundCall && !callManager.backgroundCall && callManager.foregroundCall.isConference
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: callManager.foregroundCall
+                    }
+                }
 
-            Binding {
-                target: conferenceCallArea
-                property: "conference"
-                value: null
-                when: callManager.foregroundCall && callManager.backgroundCall
-            }
+            ]
         }
 
         Keypad {

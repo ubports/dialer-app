@@ -44,10 +44,49 @@ Column {
             confirmRemoval: true
             showDivider: true
             height: (conferenceCallArea.height - units.gu(repeater.count-1)) / (repeater.count > 0 ? repeater.count : 1)
+
             anchors {
                 left: parent.left
                 right: parent.right
             }
+
+            backgroundIndicator: Rectangle {
+                id: body
+                anchors.fill: parent
+
+                color: "red"
+                clip: true
+
+                Row {
+                    anchors {
+                        top: parent.top
+                        bottom:  parent.bottom
+                        right: parent.right
+                        rightMargin: units.gu(2)
+                    }
+                    spacing: units.gu(2)
+                    Icon {
+                        name: "call-end"
+                        color: "white"
+                        anchors {
+                            verticalCenter: parent.verticalCenter
+                        }
+                        width: units.gu(5)
+                        height: units.gu(5)
+                    }
+                    Label {
+                        text: i18n.tr("Hangup")
+                        verticalAlignment: Text.AlignVCenter
+                        anchors {
+                            verticalCenter: parent.verticalCenter
+                        }
+                        width: units.gu(7)
+                        fontSize: "medium"
+                    }
+                }
+            }
+
+            onItemRemoved: callEntry.endCall()
 
             Rectangle {
                 color: callEntry.held ? "black" : "white"
@@ -85,11 +124,6 @@ Column {
                     margins: units.gu(1)
                 }
                 text: callEntry.held ? i18n.tr("on hold") : i18n.tr("active")
-            }
-
-            MouseArea {
-                anchors.fill: parent
-                onClicked: callEntry.held = false
             }
 
             Button {
