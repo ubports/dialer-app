@@ -83,8 +83,6 @@ Column {
 
                 opacity: 0.5
                 height: (multiCallArea.height - units.gu(7)) / (multiCallRepeater.count > 0 ? multiCallRepeater.count : 1)
-                radius: units.gu(0.5)
-                antialiasing: true
                 anchors {
                     left: parent.left
                     right: parent.right
