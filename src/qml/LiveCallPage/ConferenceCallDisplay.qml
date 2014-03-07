@@ -42,7 +42,7 @@ Column {
 
             removable: true
             confirmRemoval: true
-            showDivider: true
+            showDivider: false
             height: (conferenceCallArea.height - units.gu(repeater.count-1)) / (repeater.count > 0 ? repeater.count : 1)
 
             anchors {
@@ -92,6 +92,8 @@ Column {
                 color: callEntry.held ? "black" : "white"
                 opacity: 0.5
                 anchors.fill: parent
+                radius: units.gu(0.5)
+                antialiasing: true
 
                 Behavior on color {
                     ColorAnimation {
