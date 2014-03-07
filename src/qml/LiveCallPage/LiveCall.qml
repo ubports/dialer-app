@@ -185,7 +185,7 @@ Page {
 
         fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
-        source: (isVoicemail || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
+        source: (isVoicemail || callManager.calls.length > 1 || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
         anchors {
             top: topPanel.bottom
             left: parent.left

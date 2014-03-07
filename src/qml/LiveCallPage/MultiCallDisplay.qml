@@ -47,9 +47,40 @@ Column {
                 right: parent.right
             }
 
+            Image {
+                id: avatar
+                anchors.fill: backgroundRect
+                source: watcher.avatar
+                fillMode: Image.PreserveAspectCrop
+                smooth: true
+
+                Rectangle {
+                    anchors {
+                        left: parent.left
+                        top: parent.top
+                        right: parent.right
+                    }
+                    height: units.gu(8)
+                    color: "black"
+                    opacity: avatar.status == Image.Ready && !callEntry.held ? 0.4 : 0
+                    Behavior on opacity {
+                        UbuntuNumberAnimation { }
+                    }
+                }
+            }
+
             Rectangle {
                 id: backgroundRect
-                color: callEntry.held ? "black" : "white"
+                color: {
+                    if (callEntry.held) {
+                        return "black";
+                    } else if (avatar.status == Image.Null) {
+                        return "white";
+                    } else {
+                        return "transparent"
+                    }
+                }
+
                 opacity: 0.5
                 height: (multiCallArea.height - units.gu(7)) / (multiCallRepeater.count > 0 ? multiCallRepeater.count : 1)
                 radius: units.gu(0.5)
@@ -83,6 +114,8 @@ Column {
                 text: {
                     if (callEntry.isConference) {
                         return i18n.tr("Conference");
+                    } else if (callEntry.voicemail) {
+                        return i18n.tr("Voicemail");
                     } else if (watcher.alias != "") {
                         return watcher.alias;
                     } else {
