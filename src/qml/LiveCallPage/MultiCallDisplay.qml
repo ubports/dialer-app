@@ -94,6 +94,7 @@ Column {
             MouseArea {
                 anchors.fill: backgroundRect
                 onClicked: callEntry.held = false
+                enabled: callEntry.held
             }
 
             Button {
