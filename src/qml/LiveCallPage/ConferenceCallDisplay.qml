@@ -24,7 +24,7 @@ import Ubuntu.Telephony 0.1
 Column {
     id: conferenceCallArea
 
-    property variant calls: null
+    property QtObject conference: null
 
     spacing: units.gu(1)
     visible: opacity > 0
@@ -35,7 +35,7 @@ Column {
 
     Repeater {
         id: repeater
-        model: calls
+        model: conference ? conference.calls : null
         ListItem.Empty {
             id: callDelegate
             property QtObject callEntry: modelData
@@ -43,7 +43,7 @@ Column {
             removable: true
             confirmRemoval: true
             showDivider: true
-            height: conferenceCallArea.height / (repeater.count > 0 ? repeater.count : 1)
+            height: (conferenceCallArea.height - units.gu(repeater.count-1)) / (repeater.count > 0 ? repeater.count : 1)
             anchors {
                 left: parent.left
                 right: parent.right

@@ -233,7 +233,7 @@ Page {
 
         ConferenceCallDisplay {
             id: conferenceCallArea
-            opacity: calls && !keypad.visible ? 1 : 0
+            opacity: conference && !keypad.visible ? 1 : 0
             anchors {
                 fill: parent
                 margins: units.gu(1)
@@ -242,8 +242,8 @@ Page {
             // when there is only one call and it is a conference, bind the value of the conference call list
             Binding {
                 target: conferenceCallArea
-                property: "calls"
-                value: callManager.foregroundCall.calls
+                property: "conference"
+                value: callManager.foregroundCall
                 when: callManager.foregroundCall && callManager.foregroundCall.isConference && !callManager.backgroundCall
             }
         }

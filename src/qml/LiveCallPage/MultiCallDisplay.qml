@@ -105,7 +105,9 @@ Column {
                 }
 
                 text: i18n.tr("Merge calls")
-                onClicked: callManager.mergeCalls(callManager.calls[index], callManager.calls[index+1])
+                onClicked: {
+                    callManager.mergeCalls(callManager.calls[index], callManager.calls[index+1])
+                }
             }
         }
     }
