@@ -36,7 +36,8 @@ Page {
     property bool onHold: call ? call.held : false
     property bool isSpeaker: call ? call.speaker : false
     property bool isMuted: call ? call.muted : false
-    property bool dtmfVisible: false
+    property bool dtmfVisible: call ? call.voicemail : false
+    property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
 
@@ -52,6 +53,11 @@ Page {
     tools: ToolbarItems {
         opened: false
         locked: true
+    }
+
+    onCallChanged: {
+        // reset the DTMF keypad visibility status
+        dtmfVisible = (call && call.voicemail);
     }
 
     Timer {
@@ -179,7 +185,7 @@ Page {
 
         fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
-        source: contactWatcher.avatar != "" ? contactWatcher.avatar : "../assets/live_call_background.png"
+        source: (isVoicemail || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
         anchors {
             top: topPanel.bottom
             left: parent.left
@@ -202,7 +208,12 @@ Page {
     Item {
         id: topPanel
         clip: true
-        height: contactWatcher.isUnknown || callManager.calls.length > 1 ? 0 : units.gu(5)
+        height: (isVoicemail || contactWatcher.isUnknown || callManager.calls.length > 1) ? 0 : units.gu(5)
+
+        Behavior on height {
+            UbuntuNumberAnimation { }
+        }
+
         anchors {
             top: parent.top
             left: parent.left
@@ -280,7 +291,6 @@ Page {
             anchors.bottomMargin: units.gu(2)
             anchors.horizontalCenter: parent.horizontalCenter
             onKeyPressed: {
-                //keypadEntry.value += label
                 if (call) {
                     dtmfEntry += label
                     call.sendDTMF(label)
@@ -363,6 +373,7 @@ Page {
             LiveCallKeypadButton {
                 objectName: "muteButton"
                 iconSource: selected ? "microphone-mute" : "microphone"
+                enabled: !isVoicemail
                 selected: liveCall.isMuted
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -384,6 +395,7 @@ Page {
                         return "media-playback-pause"
                     }
                 }
+                enabled: !isVoicemail
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -422,7 +434,9 @@ Page {
             iconSource: "contact"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
-            opacity: 0.2
+            // this button is fully disabled for now, but when it gets enabled again, we need to remember
+            // to still disable it while calling the voicemail
+            enabled: false //!isVoicemail
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter
@@ -446,6 +460,7 @@ Page {
             iconSource: "keypad"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
+            enabled: !isVoicemail
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter

@@ -24,35 +24,33 @@ class TestDialer(DialerAppTestCase):
         super(TestDialer, self).setUp()
 
     def test_keypad_buttons(self):
-        keypad_entry = self.main_view.dialer_page.get_keypad_entry()
-        keypad_keys = self.main_view.dialer_page.get_keypad_keys()
+        keypad_entry = self.main_view.dialer_page._get_keypad_entry()
+        keypad_keys = self.main_view.dialer_page._get_keypad_keys()
 
         text = ""
         for key in keypad_keys:
-            self.pointing_device.click_object(key)
+            self.main_view.dialer_page.click_keypad_button(key)
             text += key.label
 
         self.assertThat(keypad_entry.value, Eventually(Equals(text)))
 
     def test_erase_button(self):
-        keypad_entry = self.main_view.dialer_page.get_keypad_entry()
-        buttonOne = self.main_view.dialer_page.get_keypad_key("1")
-        buttonTwo = self.main_view.dialer_page.get_keypad_key("2")
-        buttonThree = self.main_view.dialer_page.get_keypad_key("3")
-        eraseButton = self.main_view.dialer_page.get_erase_button()
 
-        self.pointing_device.click_object(buttonOne)
-        self.pointing_device.click_object(buttonTwo)
-        self.pointing_device.click_object(buttonThree)
+        keypad_entry = self.main_view.dialer_page.dial_number("123")
+        self.main_view.dialer_page.click_erase_button()
 
-        self.assertThat(keypad_entry.value, Eventually(Equals("123")))
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals("12"))
+        )
 
-        self.pointing_device.click_object(eraseButton)
-        self.assertThat(keypad_entry.value, Eventually(Equals("12")))
+        self.main_view.dialer_page.click_erase_button()
+        self.main_view.dialer_page.click_erase_button()
 
-        self.pointing_device.click_object(eraseButton)
-        self.pointing_device.click_object(eraseButton)
-        self.assertThat(keypad_entry.value, Eventually(Equals("")))
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals(""))
+        )
 
     def test_dialer_view_is_default(self):
         """Ensure the dialer view is the default view on app startup."""

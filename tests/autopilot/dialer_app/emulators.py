@@ -18,24 +18,48 @@ class MainView(toolkit_emulators.MainView):
 
     @property
     def dialer_page(self):
-        return self.select_single(DialerPage)
+        return self.wait_select_single(DialerPage)
+
+    @property
+    def live_call_page(self):
+        return self.wait_select_single(LiveCall)
 
     def get_first_log(self):
-        return self.select_single(objectName="historyDelegate0")
+        return self.wait_select_single(objectName="historyDelegate0")
+
+    def _click_button(self, button):
+        """Generic way to click a button"""
+        button.visible.wait_for(True)
+        self.pointing_device.click_object(button)
+        return button
 
 
-class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
-    def __init__(self, *args):
-        super(DialerPage, self).__init__(*args)
+class LiveCall(MainView):
 
-    def get_keypad_entry(self):
+    def get_elapsed_call_time(self):
+        """Return the elapsed call time"""
+        return self.wait_select_single(objectName='stopWatch').elapsed
+
+    def _get_hangup_button(self):
+        """Return the hangup button"""
+        return self.wait_select_single(objectName='hangupButton')
+
+    def click_hangup_button(self):
+        """Click and return the hangup page"""
+        self.visible.wait_for(True)
+        return self._click_button(self._get_hangup_button())
+
+
+class DialerPage(MainView):
+
+    def _get_keypad_entry(self):
         return self.select_single("KeypadEntry")
 
-    def get_keypad_keys(self):
+    def _get_keypad_keys(self):
         return self.select_many("KeypadButton")
 
-    def get_keypad_key(self, number):
-        buttonsDict = {
+    def _get_keypad_key(self, number):
+        buttons_dict = {
             "0": "buttonZero",
             "1": "buttonOne",
             "2": "buttonTwo",
@@ -50,10 +74,46 @@ class DialerPage(toolkit_emulators.UbuntuUIToolkitEmulatorBase):
             "#": "buttonHash",
         }
         return self.select_single("KeypadButton",
-                                  objectName=buttonsDict[number])
+                                  objectName=buttons_dict[number])
 
-    def get_erase_button(self):
+    def _get_erase_button(self):
+        """Return the erase button"""
         return self.select_single("CustomButton", objectName="eraseButton")
 
-    def get_call_button(self):
+    def _get_call_button(self):
+        """Return the call button"""
         return self.select_single(objectName="callButton")
+
+    def click_call_button(self):
+        """Click and return the call button"""
+        return self._click_button(self._get_call_button())
+
+    def click_erase_button(self):
+        """Click the erase button"""
+        self._click_button(self._get_erase_button())
+
+    def click_keypad_button(self, keypad_button):
+        """click the keypad button
+
+        :param keypad_button: the clicked keypad_button
+        """
+        self._click_button(keypad_button)
+
+    def dial_number(self, number):
+        """Dial given number (string) on the keypad and return keypad entry
+
+        :param number: the number to dial
+        """
+        for digit in number:
+            button = self._get_keypad_key(digit)
+            self.click_keypad_button(button)
+
+        entry = self._get_keypad_entry()
+        entry.value.wait_for(number)
+        return entry
+
+    def call_number(self, number):
+        """Dial number and call return call_button"""
+        self.dial_number(number)
+        self.click_call_button()
+        return self.get_root_instance().wait_select_single(LiveCall)
