@@ -98,6 +98,18 @@ Column {
             }
 
             Button {
+                id: participantsButton
+                visible: callEntry.isConference
+                text: i18n.tr("Participants")
+                anchors {
+                    verticalCenter: backgroundRect.verticalCenter
+                    right: parent.right
+                    rightMargin: units.gu(1)
+                }
+                onClicked: conferenceCallArea.conference = callEntry
+            }
+
+            Button {
                 id: mergeButton
                 visible: !isLast
                 anchors {

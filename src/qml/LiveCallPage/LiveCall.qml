@@ -86,6 +86,23 @@ Page {
                 right: switchCallsButton.left
             }
         }
+
+        LiveCallKeypadButton {
+            id: multiCallButton
+            iconSource: "back"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            width: visible ? units.gu(6) : 0
+            height: units.gu(6)
+            visible: callManager.foregroundCall && callManager.backgroundCall && conferenceCallArea.visible
+            anchors {
+                verticalCenter: parent.verticalCenter
+                right: parent.right
+            }
+
+            onClicked: conferenceCallArea.conference = null
+        }
+
     }
 
     Binding {
@@ -244,7 +261,14 @@ Page {
                 target: conferenceCallArea
                 property: "conference"
                 value: callManager.foregroundCall
-                when: callManager.foregroundCall && callManager.foregroundCall.isConference && !callManager.backgroundCall
+                when: !callManager.backgroundCall && callManager.foregroundCall && callManager.foregroundCall.isConference
+            }
+
+            Binding {
+                target: conferenceCallArea
+                property: "conference"
+                value: null
+                when: callManager.foregroundCall && callManager.backgroundCall
             }
         }
 
