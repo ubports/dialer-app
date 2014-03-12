@@ -23,6 +23,7 @@ import Ubuntu.Contacts 0.1
 Item {
     property string phoneNumber: ""
     property string contactId: ""
+    property string accountId: ""
     property bool unknownContact: contactId === ""
 
     signal itemClicked()
@@ -114,7 +115,7 @@ Item {
                 fontSize: "medium"
                 iconName: "call-start"
                 onClicked: {
-                    mainView.call(phoneNumber)
+                    mainView.call(phoneNumber, accountId)
                     itemClicked()
                 }
             }
