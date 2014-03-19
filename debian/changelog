@@ -1,3 +1,15 @@
+dialer-app (0.1+14.04.20140319-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * do not filter by accountId. specify accountId when calling back from
+    call log .
+
+  [ Tiago Salem Herrmann ]
+  * do not filter by accountId. specify accountId when calling back from
+    call log .
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 19 Mar 2014 02:43:36 +0000
+
 dialer-app (0.1+14.04.20140306-0ubuntu1) trusty; urgency=low
 
   * New rebuild forced
