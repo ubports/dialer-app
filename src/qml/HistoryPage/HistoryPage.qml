@@ -37,11 +37,6 @@ Page {
     HistoryEventModel {
         id: historyEventModel
         type: HistoryThreadModel.EventTypeVoice
-        filter: HistoryFilter {
-            filterProperty: "accountId"
-            filterValue: telepathyHelper.accountId
-        }
-
         sort: HistorySort {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
