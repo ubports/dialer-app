@@ -61,7 +61,7 @@ class TestCalls(DialerAppTestCase):
             subprocess.call(["pkill", "history-daemon"])
             os.rename(self.history + ".orig", self.history)
 
-        # make sure the modem is running on phonesim
+        # set the modem objpath in telepathy-ofono to the real modem
         subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/ril_0'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
