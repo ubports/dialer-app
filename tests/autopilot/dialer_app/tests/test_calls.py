@@ -39,6 +39,10 @@ class TestCalls(DialerAppTestCase):
             subprocess.call(["pkill", "history-daemon"])
             os.rename(self.history, self.history + ".orig")
 
+        # make sure the modem is running on phonesim
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/phonesim'])
+        subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
+
         super(TestCalls, self).setUp()
 
         # should have an empty history at the beginning of each test
@@ -56,6 +60,10 @@ class TestCalls(DialerAppTestCase):
         if os.path.exists(self.history + ".orig"):
             subprocess.call(["pkill", "history-daemon"])
             os.rename(self.history + ".orig", self.history)
+
+        # set the modem objpath in telepathy-ofono to the real modem
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/ril_0'])
+        subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
