@@ -1,3 +1,11 @@
+dialer-app (0.1+14.04.20140325-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure the telepathy-ofono account is using the correct modem
+    before running the tests.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 25 Mar 2014 05:35:33 +0000
+
 dialer-app (0.1+14.04.20140319-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
