@@ -24,6 +24,8 @@ MainView {
     id: mainView
 
     property bool applicationActive: Qt.application.active
+    property string pendingCallNumber: ""
+    property string pendingCallAccountId: ""
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
@@ -58,10 +60,33 @@ MainView {
         call(callManager.voicemailNumber);
     }
 
+    function checkUSSD(number) {
+        var endString = "#"
+        // check if it ends with #
+        if (number.slice(-endString.length) == endString) {
+            // check if it starts with any of these strings
+            var startStrings = ["*", "#", "**", "##", "*#"]
+            for(var i in startStrings) {
+                if (number.slice(0, startStrings[i].length) == startStrings[i]) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
     function call(number, accountId) {
         if (!telepathyHelper.connected  || number === "") {
             return
         }
+        if (mainView.pendingCallNumber === "" && checkUSSD(number)) {
+            mainView.pendingCallNumber = number
+            mainView.pendingCallAccountId = accountId ? accountId : ""
+            ussdManager.initiate(number, accountId)
+            return
+        }
+        mainView.pendingCallNumber = ""
+        mainView.pendingCallAccountId = ""
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
@@ -117,6 +142,15 @@ MainView {
                application.parseArgument(uris[i])
            }
        }
+    }
+
+    Connections {
+        target: ussdManager
+        onInitiateFailed: call(mainView.pendingCallNumber, mainView.pendingCallAccountId)
+        onInitiateUSSDComplete: {
+            mainView.pendingCallNumber = ""
+            mainView.pendingCallAccountId = ""
+        }
     }
 
     PageStack {
