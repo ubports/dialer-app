@@ -41,6 +41,20 @@ Page {
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
 
+    title: {
+        if (callManager.calls.length > 1) {
+            return i18n.tr("Two Calls");
+        } else if (call.isConference) {
+            return i18n.tr("Conference");
+        } else {
+            return dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber;
+        }
+    }
+    tools: ToolbarItems {
+        opened: false
+        locked: true
+    }
+
     onCallChanged: {
         // reset the DTMF keypad visibility status
         dtmfVisible = (call && call.voicemail);
@@ -80,20 +94,21 @@ Page {
         }
 
         LiveCallKeypadButton {
-            id: switchCallsButton
-            iconSource: "switch"
+            id: multiCallButton
+            iconSource: "back"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             width: visible ? units.gu(6) : 0
             height: units.gu(6)
-            visible: callManager.hasBackgroundCall
+            visible: callManager.foregroundCall && callManager.backgroundCall && conferenceCallArea.visible
             anchors {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
             }
 
-            onClicked: callManager.backgroundCall.held = false
+            onClicked: conferenceCallArea.conference = null
         }
+
     }
 
     Binding {
@@ -101,23 +116,6 @@ Page {
         property: "contents"
         value: liveCall.active ? headerContent : null
         when: liveCall.header && liveCall.active
-    }
-
-    title: {
-        if (dtmfLabelHelper.text !== "") {
-            return dtmfLabelHelper.text;
-        } else if (isVoicemail) {
-            return i18n.tr("Voicemail");
-        } else if (contactWatcher.alias != "") {
-            return contactWatcher.alias;
-        } else {
-            return contactWatcher.phoneNumber;
-        }
-    }
-
-    tools: ToolbarItems {
-        opened: false
-        locked: true
     }
 
     function endCall() {
@@ -187,7 +185,7 @@ Page {
 
         fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
-        source: (isVoicemail || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
+        source: (isVoicemail || callManager.calls.length > 1 || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
         anchors {
             top: topPanel.bottom
             left: parent.left
@@ -210,7 +208,8 @@ Page {
     Item {
         id: topPanel
         clip: true
-        height: (isVoicemail || contactWatcher.isUnknown) ? 0 : units.gu(5)
+        height: (isVoicemail || contactWatcher.isUnknown || callManager.calls.length > 1) ? 0 : units.gu(5)
+
         Behavior on height {
             UbuntuNumberAnimation { }
         }
@@ -248,6 +247,45 @@ Page {
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top
+        }
+
+        MultiCallDisplay {
+            id: multiCallArea
+            calls: callManager.calls
+            opacity: (calls.length > 1 && !keypad.visible && !conferenceCallArea.visible) ? 1 : 0
+            anchors {
+                fill: parent
+                margins: units.gu(1)
+            }
+        }
+
+        ConferenceCallDisplay {
+            id: conferenceCallArea
+            opacity: conference && !keypad.visible ? 1 : 0
+            anchors {
+                fill: parent
+                margins: units.gu(1)
+            }
+
+            states: [
+                State {
+                    name: "whileInMulticall"
+                    when: callManager.foregroundCall && callManager.backgroundCall
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: null
+                    }
+                },
+                State {
+                    name: "singleCallIsConf"
+                    when: callManager.foregroundCall && !callManager.backgroundCall && callManager.foregroundCall.isConference
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: callManager.foregroundCall
+                    }
+                }
+
+            ]
         }
 
         Keypad {
@@ -353,7 +391,15 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "pauseStartButton"
-                iconSource: selected ? "media-playback-start" : "media-playback-pause"
+                iconSource: {
+                    if (callManager.backgroundCall) {
+                        return "switch"
+                    } else if (selected) {
+                        return "media-playback-start"
+                    } else {
+                        return "media-playback-pause"
+                    }
+                }
                 enabled: !isVoicemail
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
