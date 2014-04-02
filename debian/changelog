@@ -1,3 +1,11 @@
+dialer-app (0.1+14.04.20140402-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Add a better UI (not final yet) for multi-calls and make it possible
+    to create and manage conference calls.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 02 Apr 2014 00:50:11 +0000
+
 dialer-app (0.1+14.04.20140325-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
