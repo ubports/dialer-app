@@ -18,19 +18,21 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 
 MainView {
     id: mainView
 
     property bool applicationActive: Qt.application.active
-    property string pendingCallNumber: ""
-    property string pendingCallAccountId: ""
+    property string ussdResponseTitle: ""
+    property string ussdResponseText: ""
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
 
     signal applicationReady
+    signal closeUSSDProgressIndicator
 
     onApplicationActiveChanged: {
         if (applicationActive) {
@@ -79,14 +81,11 @@ MainView {
         if (!telepathyHelper.connected  || number === "") {
             return
         }
-        if (mainView.pendingCallNumber === "" && checkUSSD(number)) {
-            mainView.pendingCallNumber = number
-            mainView.pendingCallAccountId = accountId ? accountId : ""
+        if (checkUSSD(number)) {
+            PopupUtils.open(ussdProgressDialog)
             ussdManager.initiate(number, accountId)
             return
         }
-        mainView.pendingCallNumber = ""
-        mainView.pendingCallAccountId = ""
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
@@ -108,6 +107,53 @@ MainView {
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+        }
+    }
+
+    Component {
+        id: ussdProgressDialog
+        Dialog {
+            id: ussdProgressIndicator
+            visible: false
+            title: i18n.tr("Please wait")
+            ActivityIndicator {
+                running: parent.visible
+            }
+            Connections {
+                target: mainView
+                onCloseUSSDProgressIndicator: {
+                    PopupUtils.close(ussdProgressIndicator)
+                }
+
+            }
+        }
+    }
+
+    Component {
+        id: ussdErrorDialog
+        Dialog {
+            id: ussdError
+            visible: false
+            title: i18n.tr("Error")
+            text: i18n.tr("Invalid USSD code")
+            Button {
+                text: i18n.tr("Dismiss")
+                onClicked: PopupUtils.close(ussdError)
+            }
+        }
+    }
+
+    Component {
+        id: ussdResponseDialog
+        Dialog {
+            id: ussdResponse
+            visible: false
+            title: mainView.ussdResponseTitle
+            text: mainView.ussdResponseText
+            Button {
+                text: i18n.tr("Dismiss")
+                onClicked: PopupUtils.close(ussdResponse)
+            }
         }
     }
 
@@ -146,10 +192,69 @@ MainView {
 
     Connections {
         target: ussdManager
-        onInitiateFailed: call(mainView.pendingCallNumber, mainView.pendingCallAccountId)
+        onInitiateFailed: {
+            mainView.closeUSSDProgressIndicator()
+            PopupUtils.open(ussdErrorDialog)
+        }
         onInitiateUSSDComplete: {
-            mainView.pendingCallNumber = ""
-            mainView.pendingCallAccountId = ""
+            mainView.closeUSSDProgressIndicator()
+        }
+        onBarringComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Call Barring") + " - " + cbService + "\n" + ssOp)
+            mainView.ussdResponseText = ""
+            for (var prop in cbMap) {
+                if (cbMap[prop] !== "") {
+                    mainView.ussdResponseText += String(prop + ": " + cbMap[prop] + "\n")
+                }
+            }
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onForwardingComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Call Forwarding") + " - " + cfService + "\n" + ssOp)
+            mainView.ussdResponseText = ""
+            for (var prop in cfMap) {
+                if (cfMap[prop] !== "") {
+                    mainView.ussdResponseText += String(prop + ": " + cfMap[prop] + "\n")
+                }
+            }
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onWaitingComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Call Waiting") + " - " + ssOp)
+            mainView.ussdResponseText = ""
+            for (var prop in cwMap) {
+                if (cwMap[prop] !== "") {
+                    mainView.ussdResponseText += String(prop + ": " + cwMap[prop] + "\n")
+                }
+            }
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onCallingLinePresentationComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Calling Line Presentation") + " - " + ssOp)
+            mainView.ussdResponseText = status
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onConnectedLinePresentationComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Connected Line Presentation") + " - " + ssOp)
+            mainView.ussdResponseText = status
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onCallingLineRestrictionComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Calling Line Restriction") + " - " + ssOp)
+            mainView.ussdResponseText = status
+            PopupUtils.open(ussdResponseDialog)
+        }
+        onConnectedLineRestrictionComplete: {
+            mainView.closeUSSDProgressIndicator()
+            mainView.ussdResponseTitle = String(i18n.tr("Connected Line Restriction") + " - " + ssOp)
+            mainView.ussdResponseText = status
+            PopupUtils.open(ussdResponseDialog)
         }
     }
 
