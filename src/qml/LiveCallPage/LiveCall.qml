@@ -72,7 +72,7 @@ Page {
                 color: "#221e1c"
             }
             id: sheet
-            title: "Add Contact"
+            title: i18n.tr("New call")
             doneButton: false
             modal: true
             contentsHeight: parent.height
