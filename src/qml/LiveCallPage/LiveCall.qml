@@ -82,11 +82,11 @@ Page {
                 detailToPick: ContactDetail.PhoneNumber
                 onContactClicked: {
                     // FIXME: search for favorite number
-                    mainView.call(contact.phoneNumber.number);
+                    callManager.startCall(contact.phoneNumber.number);
                     PopupUtils.close(sheet)
                 }
                 onDetailClicked: {
-                    mainView.call(detail.number)
+                    callManager.startCall(detail.number)
                     PopupUtils.close(sheet)
                 }
             }
@@ -473,7 +473,7 @@ Page {
             iconSource: "contact"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
-            enabled: (!callManager.backgroundCall && !callManager.foregroundCall.dialing)
+            enabled: (callManager.hasCalls && !callManager.backgroundCall && !callManager.foregroundCall.dialing)
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter
