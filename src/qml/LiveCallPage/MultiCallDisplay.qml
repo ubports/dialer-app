@@ -129,7 +129,15 @@ Column {
                     top: aliasLabel.bottom
                     margins: units.gu(1)
                 }
-                text: callEntry.held ? i18n.tr("on hold") : i18n.tr("active")
+                text: {
+                    if (callEntry.dialing) {
+                        return i18n.tr("calling");
+                    } else if (callEntry.held) {
+                        return i18n.tr("on hold");
+                    } else {
+                        return i18n.tr("active");
+                    }
+                }
             }
 
             MouseArea {
