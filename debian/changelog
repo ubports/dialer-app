@@ -1,3 +1,11 @@
+dialer-app (0.1+14.04.20140410-0ubuntu1) trusty; urgency=low
+
+  [ Dimitri John Ledkov ]
+  * Invoke magic 199 callback via dbus, instead of scripts to reliably
+    quiesce the error. (LP: #1287628) (LP: #1287628)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 10 Apr 2014 19:43:15 +0000
+
 dialer-app (0.1+14.04.20140407-0ubuntu1) trusty; urgency=low
 
   [ Tiago Salem Herrmann ]
