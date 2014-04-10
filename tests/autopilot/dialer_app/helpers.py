@@ -20,6 +20,7 @@ from autopilot.platform import model
 import subprocess
 import sys
 import time
+import dbus
 
 
 def wait_for_incoming_call():
@@ -29,7 +30,8 @@ def wait_for_incoming_call():
     while timeout >= 0:
         out = subprocess.check_output(
             ['/usr/share/ofono/scripts/list-calls'],
-            stderr=subprocess.PIPE)
+            stderr=subprocess.PIPE,
+            universal_newlines=True)
         if 'State = incoming' in out:
             break
         timeout -= 1
@@ -46,8 +48,12 @@ def invoke_incoming_call():
     """Invoke an incoming call for test purpose."""
     # magic number 199 will cause a callback from 1234567; dialing 199
     # itself will fail, so quiesce the error
-    subprocess.call(['/usr/share/ofono/scripts/dial-number', '199'],
-                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    bus = dbus.SystemBus()
+    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'), 'org.ofono.VoiceCallManager')
+    try:
+        vcm.Dial('199', 'default')
+    except dbus.DBusException:
+        pass
 
 
 def is_phonesim_running():
@@ -56,7 +62,7 @@ def is_phonesim_running():
         out = subprocess.check_output(
             [
                 '/usr/share/ofono/scripts/list-modems',
-            ], stderr=subprocess.PIPE)
+            ], stderr=subprocess.PIPE, universal_newlines=True)
         return out.startswith('[ /phonesim ]')
     except subprocess.CalledProcessError:
         return False
