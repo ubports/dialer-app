@@ -59,9 +59,10 @@ MainView {
     }
 
     function call(number) {
-        if (!telepathyHelper.connected  || number === "") {
+        if (number === "") {
             return
         }
+
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
