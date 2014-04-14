@@ -243,6 +243,7 @@ ListItem.Empty {
             if (status == Loader.Ready) {
                 pickerLoader.item.phoneNumber = participants[0]
                 pickerLoader.item.contactId = historyDelegate.contactId
+                pickerLoader.item.accountId = accountId
             }
         }
         Connections {

@@ -197,7 +197,7 @@ void DialerApplication::parseArgument(const QString &arg)
         if (value == "voicemail") {
             QMetaObject::invokeMethod(mainView, "callVoicemail");
         } else {
-            QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value));
+            QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()));
         }
     }
 }
