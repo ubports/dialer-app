@@ -1,3 +1,13 @@
+dialer-app (0.1+14.04.20140415-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Do not wait for the telepathy stuff to get ready to process the
+    command line arguments. This ensures that the dialpad view is not
+    visible when calling using the argument tel:///<number> (LP:
+    #1286358)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 15 Apr 2014 19:51:41 +0000
+
 dialer-app (0.1+14.04.20140411-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]
