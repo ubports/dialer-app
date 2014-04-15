@@ -167,15 +167,11 @@ void DialerApplication::onViewStatusChanged(QQuickView::Status status)
         return;
     }
 
-    QQuickItem *mainView = m_view->rootObject();
-    if (mainView) {
-        QObject::connect(mainView, SIGNAL(applicationReady()), this, SLOT(onApplicationReady()));
-    }
+    onApplicationReady();
 }
 
 void DialerApplication::onApplicationReady()
 {
-    QObject::disconnect(QObject::sender(), SIGNAL(applicationReady()), this, SLOT(onApplicationReady()));
     m_applicationIsReady = true;
     parseArgument(m_arg);
     m_arg.clear();

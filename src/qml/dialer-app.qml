@@ -78,17 +78,20 @@ MainView {
     }
 
     function call(number, accountId) {
-        if (!telepathyHelper.connected  || number === "") {
+        if (number === "") {
             return
         }
+
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
             ussdManager.initiate(number, accountId)
             return
         }
+
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
+
         if (accountId && telepathyHelper.accountIds.indexOf(accountId) != -1) {
             callManager.startCall(number, accountId);
             return
