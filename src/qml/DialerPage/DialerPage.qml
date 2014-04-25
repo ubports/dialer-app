@@ -78,6 +78,7 @@ Page {
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+            value: mainView.pendingNumberToDial
         }
 
         ContactSearchListView {
