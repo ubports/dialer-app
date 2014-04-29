@@ -47,6 +47,15 @@ Page {
         }
     }
 
+    Connections {
+        target: mainView
+        onPendingNumberToDialChanged: {
+            if (mainView.pendingNumberToDial !== "") {
+                keypadEntry.value = mainView.pendingNumberToDial;
+            }
+        }
+    }
+
     FocusScope {
         id: keypadContainer
 

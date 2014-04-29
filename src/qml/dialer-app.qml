@@ -82,6 +82,10 @@ MainView {
     }
 
     function call(number, accountId) {
+        // clear the values here so that the changed signals are fired when the new value is set
+        pendingNumberToDial = "";
+        pendingAccountId = "";
+
         if (number === "") {
             return
         }
