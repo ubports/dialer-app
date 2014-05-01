@@ -123,6 +123,10 @@ MainView {
         pageStack.currentPage.currentTab = 2;
     }
 
+    function switchToKeypadView() {
+        pageStack.currentPage.currentTab = 0;
+    }
+
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
         pageStack.push(Qt.createComponent("MainPage.qml"))

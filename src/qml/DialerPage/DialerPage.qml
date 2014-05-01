@@ -52,6 +52,7 @@ Page {
         onPendingNumberToDialChanged: {
             if (mainView.pendingNumberToDial !== "") {
                 keypadEntry.value = mainView.pendingNumberToDial;
+                mainView.switchToKeypadView();
             }
         }
     }
