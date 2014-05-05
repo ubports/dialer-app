@@ -23,8 +23,9 @@ import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import "../"
 
-Page {
+PageWithBottomEdge {
     id: page
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
@@ -34,6 +35,9 @@ Page {
         opened: false
         locked: true
     }
+
+    bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
+    bottomEdgeTitle: i18n.tr("Recent")
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
             // check for custom strings
@@ -181,6 +185,7 @@ Page {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
+            anchors.bottomMargin: units.gu(3)
             height: units.gu(10)
 
             CallButton {

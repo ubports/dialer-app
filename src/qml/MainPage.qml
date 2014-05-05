@@ -50,16 +50,5 @@ Item {
                 anchors.fill: parent
             }
         }
-
-        Tab {
-            objectName: "callLogTab"
-            title: i18n.tr("Call log")
-            page: Loader{
-                id: historyPage
-                source: Qt.resolvedUrl("HistoryPage/HistoryPage.qml")
-                asynchronous: true
-                anchors.fill: parent
-            }
-        }
     }
 }

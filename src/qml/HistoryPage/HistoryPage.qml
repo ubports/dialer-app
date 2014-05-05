@@ -27,13 +27,8 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyPage
     objectName: "historyPage"
-    tools: ToolbarItems {
-        opened: false
-        locked: true
-    }
-
     property string searchTerm
-
+    title: i18n.tr("Recent")
     HistoryEventModel {
         id: historyEventModel
         type: HistoryThreadModel.EventTypeVoice
