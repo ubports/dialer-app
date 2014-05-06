@@ -152,7 +152,7 @@ Page {
 
                 PropertyChanges {
                     target: bottomEdge
-                    y: - tip.height
+                    y: - tip.height + header.height
                 }
 
                 PropertyChanges {
@@ -173,7 +173,10 @@ Page {
                     }
 
                     ScriptAction {
-                        script: page.pageStack.push(edgeLoader.item)
+                        script: {
+                            page.pageStack.push(edgeLoader.item)
+                            edgeLoader.item.forceActiveFocus()
+                        }
                     }
                 }
             },
@@ -184,7 +187,6 @@ Page {
                         script: {
                             edgeLoader.item.parent = edgeLoader
                             edgeLoader.item.anchors.fill = edgeLoader
-                            //edgeLoader.item.anchors.topMargin = 0
                         }
                     }
                     UbuntuNumberAnimation {
@@ -199,6 +201,8 @@ Page {
                             var title = page.title
                             page.title = "Something else"
                             page.title = title
+                            // fix for a bug in the sdk header
+                            activeLeafNode = page
                         }
                     }
                 }
