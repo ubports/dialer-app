@@ -182,8 +182,8 @@ Page {
                 SequentialAnimation {
                     ScriptAction {
                         script: {
-                            edgeLoader.item.parent = edgePageBackground
-                            edgeLoader.item.anchors.fill = edgePageBackground
+                            edgeLoader.item.parent = edgeLoader
+                            edgeLoader.item.anchors.fill = edgeLoader
                             //edgeLoader.item.anchors.topMargin = 0
                         }
                     }
@@ -196,11 +196,9 @@ Page {
                         script: {
                             edgeLoader.active = false
                             // FIXME: this is ugly, but the header is not updating the title correctly
-                            if (page.title !== "") {
-                                var title = page.title
-                                page.title = "Something else"
-                                page.title = title
-                            }
+                            var title = page.title
+                            page.title = "Something else"
+                            page.title = title
                         }
                     }
                 }
@@ -217,7 +215,6 @@ Page {
                 right: parent.right
                 top: tip.bottom
                 bottom: parent.bottom
-                topMargin: (edgeLoader.status === Loader.Ready ? edgeLoader.item.flickable.contentY : 0)
             }
             color: Theme.palette.normal.background
 
@@ -226,6 +223,7 @@ Page {
 
                 active: false
                 anchors.fill: parent
+                anchors.topMargin: (edgeLoader.status === Loader.Ready ? edgeLoader.item.flickable.contentY : 0)
             }
         }
     }
