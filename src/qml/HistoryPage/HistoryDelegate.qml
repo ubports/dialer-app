@@ -96,6 +96,15 @@ ListItem.Empty {
         }
     }
 
+    Rectangle {
+        anchors.fill: parent
+        color: "white"
+        opacity: index == historyPage.currentIndex && !fullView ? 0.3 : 0
+        Behavior on opacity {
+            UbuntuNumberAnimation { }
+        }
+    }
+
     Item {
         id: helper
         function updateSubTypeLabel() {

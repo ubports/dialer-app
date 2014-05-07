@@ -32,7 +32,7 @@ Page {
     anchors.fill: parent
     property int delegateHeight: delegate.height
     property bool fullView: true
-
+    property int currentIndex: 0
     // Use this delegate just to calculate the height
     HistoryDelegate {
         id: delegate
