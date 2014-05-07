@@ -55,6 +55,9 @@ Page {
     property alias bottomEdgePageComponent: edgeLoader.sourceComponent
     property alias bottomEdgePageSource: edgeLoader.source
     property alias bottomEdgeTitle: tipLabel.text
+    property int bottomEdgeExpandThreshold: page.height * 0.3
+    property int bottomEdgeExposedArea: page.height - bottomEdge.y - tip.height
+    property alias bottomEdgePage: edgeLoader.item
 
     onActiveChanged: {
         if (active) {
@@ -123,7 +126,7 @@ Page {
                 drag.target: bottomEdge
 
                 onReleased: {
-                    if (bottomEdge.y < (page.height * 0.7)) {
+                    if (bottomEdge.y < (page.height - bottomEdgeExpandThreshold - tip.height)) {
                         bottomEdge.state = "expanded"
                     } else {
                         bottomEdge.state = "collapsed"

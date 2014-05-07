@@ -44,8 +44,18 @@ PageWithBottomEdge {
 
     title: i18n.tr("Keypad")
 
+    // -------- Bottom Edge Setup -----
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
+    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3.2 : 0
     bottomEdgeTitle: i18n.tr("Recent")
+    Binding {
+        target: bottomEdgePage
+        when: bottomEdgePage
+        property: "fullView"
+        value: bottomEdgeExposedArea > bottomEdgeExpandThreshold
+    }
+
+
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
             // check for custom strings

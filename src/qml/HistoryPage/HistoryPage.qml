@@ -30,6 +30,14 @@ Page {
     property string searchTerm
     title: i18n.tr("Recent")
     anchors.fill: parent
+    property int delegateHeight: delegate.height
+    property bool fullView: true
+
+    // Use this delegate just to calculate the height
+    HistoryDelegate {
+        id: delegate
+        visible: false
+    }
 
     // FIXME: this is a big hack to fix the placing of the listview items
     // when dragging the bottom edge
@@ -75,7 +83,7 @@ Page {
         anchors.fill: parent
         listModel: sortProxy
         acceptAction.text: i18n.tr("Delete")
-        section.property: "date"
+        /*section.property: "date"
         section.delegate: Item {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -94,7 +102,7 @@ Page {
             ListItem.ThinDivider {
                 anchors.bottom: parent.bottom
             }
-        }
+        }*/
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
@@ -113,6 +121,7 @@ Page {
                 selected: historyList.isSelected(historyDelegate)
                 isFirst: model.index == 0
                 removable: !historyList.isInSelectionMode
+                fullView: historyPage.fullView
 
                 Item {
                     Connections {

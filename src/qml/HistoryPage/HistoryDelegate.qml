@@ -36,12 +36,47 @@ ListItem.Empty {
     property bool detailsShown: false
     property alias interactive: contactWatcher.interactive
     property alias animating: detailsToggleAnimation.running
+    property bool fullView: true
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
     confirmRemoval: true
     showDivider: true
     clip: true
+
+    states: [
+        State {
+            name: "basicView"
+            when: !fullView
+            PropertyChanges {
+                target: timeline
+                opacity: 0
+            }
+            PropertyChanges {
+                target: phoneLabel
+                opacity: 0
+            }
+            PropertyChanges {
+                target: phoneIcon
+                opacity: 0
+            }
+            PropertyChanges {
+                target: time
+                opacity: 0
+            }
+            PropertyChanges {
+                target: duration
+                opacity: 0
+            }
+        }
+    ]
+    transitions: [
+        Transition {
+            UbuntuNumberAnimation {
+                properties: "opacity"
+            }
+        }
+    ]
 
     Behavior on height {
         UbuntuNumberAnimation { id: detailsToggleAnimation }
