@@ -33,6 +33,14 @@ Page {
     property int delegateHeight: delegate.height
     property bool fullView: true
     property int currentIndex: 0
+
+    function activateCurrentIndex() {
+        if (fullView || currentIndex < 0 || currentIndex >= historyList.count) {
+            return;
+        }
+        console.log("BLABLA triggering item " + currentIndex);
+    }
+
     // Use this delegate just to calculate the height
     HistoryDelegate {
         id: delegate

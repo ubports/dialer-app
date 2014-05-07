@@ -60,6 +60,9 @@ PageWithBottomEdge {
         property: "currentIndex"
         value: Math.floor(bottomEdgeExposedArea / bottomEdgePage.delegateHeight) - 1
     }
+    onBottomEdgeReleased: {
+        bottomEdgePage.activateCurrentIndex()
+    }
 
 
     onDialNumberChanged: {
