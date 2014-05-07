@@ -29,6 +29,8 @@ Page {
     objectName: "historyPage"
     property string searchTerm
     title: i18n.tr("Recent")
+    anchors.fill: parent
+
     HistoryEventModel {
         id: historyEventModel
         type: HistoryThreadModel.EventTypeVoice
