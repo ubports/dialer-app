@@ -32,9 +32,17 @@ PageWithBottomEdge {
     property alias input: keypadEntry.input
 
     tools: ToolbarItems {
-        opened: false
-        locked: true
+        ToolbarButton {
+            objectName: "contactButton"
+            action: Action {
+                iconSource: "image://theme/contact"
+                text: i18n.tr("Contacts")
+                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            }
+        }
     }
+
+    title: i18n.tr("Keypad")
 
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeTitle: i18n.tr("Recent")

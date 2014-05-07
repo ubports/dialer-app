@@ -174,6 +174,7 @@ Page {
 
                     ScriptAction {
                         script: {
+                            edgeLoader.item.active = true
                             page.pageStack.push(edgeLoader.item)
                             edgeLoader.item.forceActiveFocus()
                         }
@@ -187,6 +188,7 @@ Page {
                         script: {
                             edgeLoader.item.parent = edgeLoader
                             edgeLoader.item.anchors.fill = edgeLoader
+                            edgeLoader.item.active = false
                         }
                     }
                     UbuntuNumberAnimation {
@@ -228,6 +230,12 @@ Page {
                 active: false
                 anchors.fill: parent
                 anchors.topMargin: (edgeLoader.status === Loader.Ready ? edgeLoader.item.flickable.contentY : 0)
+
+                onStatusChanged: {
+                    if (status === Loader.Ready) {
+                        item.active = false;
+                    }
+                }
             }
         }
     }
