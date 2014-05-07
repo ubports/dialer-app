@@ -31,6 +31,17 @@ Page {
     title: i18n.tr("Recent")
     anchors.fill: parent
 
+    // FIXME: this is a big hack to fix the placing of the listview items
+    // when dragging the bottom edge
+    flickable: null
+    Connections {
+        target: pageStack
+        onDepthChanged: {
+            if (pageStack.depth > 1)
+                flickable = historyList
+        }
+    }
+
     HistoryEventModel {
         id: historyEventModel
         type: HistoryThreadModel.EventTypeVoice
