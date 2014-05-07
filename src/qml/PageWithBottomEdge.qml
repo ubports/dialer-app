@@ -69,7 +69,7 @@ Page {
         id: bottomEdge
 
         z: 1
-        height: page.height + tip.height
+        height: edgeLoader.item.flickable ? page.height + tip.height : page.height + tip.height - header.height
         y: page.height - tip.height
         clip: true
         anchors {
@@ -179,6 +179,8 @@ Page {
                         script: {
                             edgeLoader.item.active = true
                             page.pageStack.push(edgeLoader.item)
+                            if (edgeLoader.item.ready)
+                                edgeLoader.item.ready()
                             edgeLoader.item.forceActiveFocus()
                         }
                     }
