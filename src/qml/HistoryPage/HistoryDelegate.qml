@@ -38,6 +38,10 @@ ListItem.Empty {
     property alias animating: detailsToggleAnimation.running
     property bool fullView: true
 
+    function activate() {
+        mainView.call(model.participants[0], model.accountId)
+    }
+
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
     confirmRemoval: true
@@ -99,7 +103,7 @@ ListItem.Empty {
     Rectangle {
         anchors.fill: parent
         color: "white"
-        opacity: index == historyPage.currentIndex && !fullView ? 0.3 : 0
+        opacity: historyDelegate.ListView.isCurrentItem && !fullView ? 0.3 : 0
         Behavior on opacity {
             UbuntuNumberAnimation { }
         }

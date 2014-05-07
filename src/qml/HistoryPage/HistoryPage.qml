@@ -32,13 +32,14 @@ Page {
     anchors.fill: parent
     property int delegateHeight: delegate.height
     property bool fullView: true
-    property int currentIndex: 0
+    property alias currentIndex: historyList.currentIndex
 
     function activateCurrentIndex() {
-        if (fullView || currentIndex < 0 || currentIndex >= historyList.count) {
+        if (fullView || !historyList.currentItem) {
             return;
         }
-        console.log("BLABLA triggering item " + currentIndex);
+
+        historyList.currentItem.activate();
     }
 
     // Use this delegate just to calculate the height

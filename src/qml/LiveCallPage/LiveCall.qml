@@ -40,7 +40,6 @@ Page {
     property bool dtmfVisible: call ? call.voicemail : false
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
-    Component.onDestruction: mainView.switchToCallLogView()
 
     title: {
         if (callManager.calls.length > 1) {

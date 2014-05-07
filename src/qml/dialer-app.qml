@@ -100,10 +100,6 @@ MainView {
         callManager.startCall(number);
     }
 
-    function switchToCallLogView() {
-        pageStack.currentPage.currentTab = 2;
-    }
-
     Component.onCompleted: {
         Theme.name = "Ubuntu.Components.Themes.SuruGradient";
         pageStack.push(Qt.createComponent("DialerPage/DialerPage.qml"))
