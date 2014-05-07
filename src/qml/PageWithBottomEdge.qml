@@ -69,7 +69,7 @@ Page {
         id: bottomEdge
 
         z: 1
-        height: edgeLoader.item.flickable ? page.height + tip.height : page.height + tip.height - header.height
+        height: (edgeLoader.item && edgeLoader.item.flickable) ? page.height + tip.height : page.height + tip.height - header.height
         y: page.height - tip.height
         clip: true
         anchors {
