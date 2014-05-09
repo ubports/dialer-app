@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-01 11:46+0200\n"
+"POT-Creation-Date: 2014-05-09 15:20-0300\n"
 "PO-Revision-Date: 2013-06-14 21:06+0000\n"
 "Last-Translator: <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -19,104 +19,149 @@ msgstr ""
 "X-Launchpad-Export-Date: 2013-06-15 06:21+0000\n"
 "X-Generator: Launchpad (build 16667)\n"
 
-#: src/qml/DialerPage/Keypad.qml:201
+#: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:62
+#: src/qml/HistoryPage/dateUtils.js:61
 #, qt-format
-msgid "%1 hour call"
-msgid_plural "%1 hours call"
+msgid "%1 hour"
+msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/HistoryPage/dateUtils.js:64
+#: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
-msgid "%1 minute call"
-msgid_plural "%1 minutes call"
+msgid "%1 min"
+msgid_plural "%1 mins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/HistoryPage/dateUtils.js:66
+#: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
-msgid "%1 second call"
-msgid_plural "%1 seconds call"
+msgid "%1 sec"
+msgid_plural "%1 secs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/DialerPage/Keypad.qml:178
+#: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:188
+#: src/qml/DialerPage/Keypad.qml:189
 msgid "+"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:187
+#: src/qml/DialerPage/Keypad.qml:188
 msgid "0"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:85
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "1"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:96
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "2"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:106
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "3"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "4"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "5"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:136
+#: src/qml/DialerPage/Keypad.qml:137
 msgid "6"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:146
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "7"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:156
+#: src/qml/DialerPage/Keypad.qml:157
 msgid "8"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:166
+#: src/qml/DialerPage/Keypad.qml:167
 msgid "9"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:98
 msgid "ABC"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:108
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
+msgid "Add Contact"
+msgstr ""
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
 msgstr ""
 
-#: src/qml/MainPage.qml:53
+#: src/qml/dialer-app.qml:207
+msgid "Call Barring"
+msgstr ""
+
+#: src/qml/dialer-app.qml:218
+msgid "Call Forwarding"
+msgstr ""
+
+#: src/qml/dialer-app.qml:229
+msgid "Call Waiting"
+msgstr ""
+
+#: src/qml/MainPage.qml:56
 msgid "Call log"
 msgstr ""
 
-#: src/qml/MainPage.qml:43
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
+msgid "Call now"
+msgstr ""
+
+#: src/qml/dialer-app.qml:240
+msgid "Calling Line Presentation"
+msgstr ""
+
+#: src/qml/dialer-app.qml:252
+msgid "Calling Line Restriction"
+msgstr ""
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
+msgid "Cancel"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:49
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+msgid "Conference"
+msgstr ""
+
+#: src/qml/dialer-app.qml:246
+msgid "Connected Line Presentation"
+msgstr ""
+
+#: src/qml/dialer-app.qml:258
+msgid "Connected Line Restriction"
+msgstr ""
+
+#: src/qml/MainPage.qml:45
 msgid "Contacts"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:110
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:43
+#: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
 msgstr ""
 
@@ -132,39 +177,76 @@ msgstr ""
 msgid "Dialer application"
 msgstr ""
 
-#: src/qml/VoicemailPage/VoicemailPage.qml:86
-msgid "Dialing"
+#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+msgid "Dismiss"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:58
+#: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/dialer-app.qml:140
+msgid "Error"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
+msgid "Hangup"
+msgstr ""
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
+msgid "How do you want to save the contact?"
+msgstr ""
+
+#: src/qml/dialer-app.qml:141
+msgid "Invalid USSD code"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
 msgstr ""
 
-#: src/qml/MainPage.qml:34
+#: src/qml/MainPage.qml:35
 msgid "Keypad"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:173
+msgid "Merge calls"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:75
+msgid "New call"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
 msgstr ""
 
-#: src/qml/LiveCallPage/BackgroundCall.qml:54
-msgid "Swap Calls"
+#: src/qml/dialer-app.qml:121
+msgid "Please wait"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:157
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
+msgid "Private"
+msgstr ""
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
+msgid "Save contact"
+msgstr ""
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
+msgid "Send text message"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
 msgstr ""
 
@@ -172,15 +254,23 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:199
+#: src/qml/LiveCallPage/LiveCall.qml:47
+msgid "Two Calls"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
 msgstr ""
 
-#: src/qml/VoicemailPage/VoicemailPage.qml:44
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
+msgid "View contact"
+msgstr ""
+
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:167
+#: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
 msgstr ""
 
@@ -188,6 +278,17 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:268
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+msgid "active"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:409
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
+msgstr ""
+
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+msgid "on hold"
 msgstr ""
