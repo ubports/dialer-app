@@ -30,6 +30,7 @@ Page {
     property string searchTerm
     title: i18n.tr("Recent")
     anchors.fill: parent
+    active: false
     property int delegateHeight: delegate.height
     property bool fullView: true
     property alias currentIndex: historyList.currentIndex
