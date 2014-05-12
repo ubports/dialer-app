@@ -34,6 +34,10 @@ MainView {
     signal applicationReady
     signal closeUSSDProgressIndicator
 
+    property string pendingNumberToDial: ""
+    property string pendingAccountId: ""
+    property bool accountReady: false
+
     onApplicationActiveChanged: {
         if (applicationActive) {
             telepathyHelper.registerChannelObserver()
@@ -78,8 +82,18 @@ MainView {
     }
 
     function call(number, accountId) {
+        // clear the values here so that the changed signals are fired when the new value is set
+        pendingNumberToDial = "";
+        pendingAccountId = "";
+
         if (number === "") {
             return
+        }
+
+        if (!telepathyHelper.connected) {
+            pendingNumberToDial = number;
+            pendingAccountId = accountId;
+            return;
         }
 
         if (checkUSSD(number)) {
@@ -92,6 +106,12 @@ MainView {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
 
+        if (!accountReady) {
+            pendingNumberToDial = number;
+            pendingAccountId = accountId;
+            return;
+        }
+
         if (accountId && telepathyHelper.accountIds.indexOf(accountId) != -1) {
             callManager.startCall(number, accountId);
             return
@@ -101,6 +121,10 @@ MainView {
 
     function switchToCallLogView() {
         pageStack.currentPage.currentTab = 2;
+    }
+
+    function switchToKeypadView() {
+        pageStack.currentPage.currentTab = 0;
     }
 
     Component.onCompleted: {
@@ -163,7 +187,18 @@ MainView {
     Connections {
         target: telepathyHelper
         onAccountReady: {
+            accountReady = true;
             mainView.applicationReady()
+
+            if (!telepathyHelper.connected) {
+                return;
+            }
+
+            if (pendingNumberToDial != "") {
+                callManager.startCall(pendingNumberToDial, pendingAccountId);
+            }
+            pendingNumberToDial = "";
+            pendingAccountId = "";
         }
     }
 

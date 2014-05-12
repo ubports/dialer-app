@@ -47,6 +47,16 @@ Page {
         }
     }
 
+    Connections {
+        target: mainView
+        onPendingNumberToDialChanged: {
+            if (mainView.pendingNumberToDial !== "") {
+                keypadEntry.value = mainView.pendingNumberToDial;
+                mainView.switchToKeypadView();
+            }
+        }
+    }
+
     FocusScope {
         id: keypadContainer
 
@@ -78,6 +88,7 @@ Page {
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+            value: mainView.pendingNumberToDial
         }
 
         ContactSearchListView {
