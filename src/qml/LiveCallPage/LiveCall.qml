@@ -20,7 +20,6 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
-import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import QtContacts 5.0
@@ -51,46 +50,19 @@ Page {
         }
     }
     tools: ToolbarItems {
-        opened: false
-        locked: true
+        ToolbarButton {
+            objectName: "newCallButton"
+            action: Action {
+                iconSource: "image://theme/contact"
+                text: i18n.tr("New Call")
+                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            }
+        }
     }
 
     onCallChanged: {
         // reset the DTMF keypad visibility status
         dtmfVisible = (call && call.voicemail);
-    }
-
-    Component {
-        id: makeNewCallComponent
-        DefaultSheet {
-            // FIXME: workaround to set the contact list
-            // background to black
-            Rectangle {
-                anchors.fill: parent
-                anchors.margins: -units.gu(1)
-                color: "#221e1c"
-            }
-            id: sheet
-            title: i18n.tr("New call")
-            doneButton: false
-            modal: true
-            contentsHeight: parent.height
-            contentsWidth: parent.width
-            ContactListView {
-                anchors.fill: parent
-                detailToPick: ContactDetail.PhoneNumber
-                onContactClicked: {
-                    // FIXME: search for favorite number
-                    callManager.startCall(contact.phoneNumber.number);
-                    PopupUtils.close(sheet)
-                }
-                onDetailClicked: {
-                    callManager.startCall(detail.number)
-                    PopupUtils.close(sheet)
-                }
-            }
-            onDoneClicked: PopupUtils.close(sheet)
-        }
     }
 
     Timer {
@@ -465,25 +437,6 @@ Page {
         anchors.bottom: parent.bottom
         anchors.left: parent.left
         anchors.right: parent.right
-
-        LiveCallKeypadButton {
-            id: contactButton
-            objectName: "contactButton"
-            iconSource: "contact"
-            iconWidth: units.gu(4)
-            iconHeight: units.gu(4)
-            enabled: (callManager.hasCalls && !callManager.backgroundCall && !callManager.foregroundCall.dialing)
-
-            anchors {
-                verticalCenter: hangupButton.verticalCenter
-                right: hangupButton.left
-                rightMargin: units.gu(1)
-            }
-
-            onClicked: {
-                PopupUtils.open(makeNewCallComponent);
-            }
-        }
 
         HangupButton {
             id: hangupButton

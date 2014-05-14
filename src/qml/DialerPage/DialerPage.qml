@@ -99,17 +99,48 @@ PageWithBottomEdge {
         KeypadEntry {
             id: keypadEntry
 
-            // TODO: remove anchors.top once the new tabs are implemented
-            anchors.top: parent.top
-            anchors.topMargin: units.gu(2)
-            anchors.bottom: contactSearch.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottomMargin: units.gu(1)
+            anchors {
+                top: parent.top
+                topMargin: units.gu(2)
+                bottom: contactSearch.top
+                left: parent.left
+                right: parent.right
+                bottomMargin: units.gu(1)
+            }
 
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+        }
+
+        CustomButton {
+            id: backspace
+            objectName: "eraseButton"
+            anchors {
+                right: parent.right
+                rightMargin: units.gu(1)
+                verticalCenter: keypadEntry.verticalCenter
+            }
+            width: units.gu(3)
+            height: units.gu(3)
+            icon: "erase"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            opacity: input.text !== "" ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+
+            onPressAndHold: input.text = ""
+
+            onClicked:  {
+                if (input.cursorPosition != 0)  {
+                    var position = input.cursorPosition;
+                    input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
+                    input.cursorPosition = position - 1;
+                }
+            }
         }
 
         ContactSearchListView {
@@ -230,29 +261,6 @@ PageWithBottomEdge {
                 enabled: dialNumber != "" && telepathyHelper.connected
             }
 
-            CustomButton {
-                id: backspace
-                objectName: "eraseButton"
-                anchors.left: callButton.right
-                anchors.verticalCenter: callButton.verticalCenter
-                anchors.leftMargin: units.gu(2)
-                width: units.gu(7)
-                height: units.gu(7)
-                icon: "erase"
-                lighten: input.text != ""
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-
-                onPressAndHold: input.text = ""
-
-                onClicked:  {
-                    if (input.cursorPosition != 0)  {
-                        var position = input.cursorPosition;
-                        input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
-                        input.cursorPosition = position - 1;
-                    }
-                }
-            }
         }
     }
 }
