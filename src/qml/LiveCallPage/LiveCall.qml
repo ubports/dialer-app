@@ -50,6 +50,9 @@ Page {
         }
     }
     tools: ToolbarItems {
+        back: ToolbarButton {
+            iconSource: "image://theme/contact"
+        }
         ToolbarButton {
             objectName: "newCallButton"
             action: Action {
@@ -59,6 +62,12 @@ Page {
             }
         }
     }
+
+     onActiveChanged: {
+         if (active) {
+             header.__customBackAction = tools.back
+         }
+     }
 
     onCallChanged: {
         // reset the DTMF keypad visibility status
@@ -296,7 +305,6 @@ Page {
         Keypad {
             id: keypad
 
-            color: Qt.rgba(0,0,0, 0.4)
             anchors.bottom: parent.bottom
             anchors.bottomMargin: units.gu(2)
             anchors.horizontalCenter: parent.horizontalCenter
@@ -428,6 +436,16 @@ Page {
                     }
                 }
             }
+
+            LiveCallKeypadButton {
+                id: dtmfButton
+                objectName: "dtmfButton"
+                iconSource: "keypad"
+                iconWidth: units.gu(4)
+                iconHeight: units.gu(4)
+                enabled: !isVoicemail
+                onClicked: dtmfVisible = !dtmfVisible
+            }
         }
     }
 
@@ -445,23 +463,6 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenter: parent.verticalCenter
             onClicked: endCall()
-        }
-
-        LiveCallKeypadButton {
-            id: dtmfButton
-            objectName: "dtmfButton"
-            iconSource: "keypad"
-            iconWidth: units.gu(4)
-            iconHeight: units.gu(4)
-            enabled: !isVoicemail
-
-            anchors {
-                verticalCenter: hangupButton.verticalCenter
-                left: hangupButton.right
-                leftMargin: units.gu(1)
-            }
-
-            onClicked: dtmfVisible = !dtmfVisible
         }
     }
 }
