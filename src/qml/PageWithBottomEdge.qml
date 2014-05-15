@@ -1,4 +1,20 @@
 /*
+ * Copyright (C) 2014 Canonical, Ltd.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
     Example:
 
     MainView {
@@ -24,11 +40,6 @@
                 bottomEdgePageComponent: Page {
                     title: "Contents"
                     anchors.fill: parent
-
-                    // WORKAROUND: SKD changes the page header as soon as the page get created
-                    // setting active false will avoid that
-                    active: false
-
                     //anchors.topMargin: contentsPage.flickable.contentY
 
                     ListView {
@@ -67,6 +78,10 @@ Page {
 
     readonly property alias bottomEdgePage: edgeLoader.item
     readonly property bool isReady: (tip.opacity === 0.0)
+    readonly property bool isCollapsed: (tip.opacity === 1.0)
+    readonly property bool bottomEdgePageLoaded: (edgeLoader.status == Loader.Ready)
+
+    property bool _showEdgePageWhenReady: false
 
     signal bottomEdgeReleased()
     signal bottomEdgeDismissed()
@@ -74,7 +89,7 @@ Page {
     function showBottomEdgePage(source, properties)
     {
         edgeLoader.setSource(source, properties)
-        bottomEdge.state = "expanded"
+        _showEdgePageWhenReady = true
     }
 
     function setBottomEdgePage(source, properties)
@@ -85,6 +100,13 @@ Page {
     onActiveChanged: {
         if (active) {
             bottomEdge.state = "collapsed"
+        }
+    }
+
+    onBottomEdgePageLoadedChanged: {
+        if (_showEdgePageWhenReady && bottomEdgePageLoaded) {
+            bottomEdge.state = "expanded"
+            _showEdgePageWhenReady = false
         }
     }
 
@@ -214,6 +236,7 @@ Page {
                 }
             },
             Transition {
+                from: "expanded"
                 to: "collapsed"
                 SequentialAnimation {
                     ScriptAction {
@@ -248,6 +271,15 @@ Page {
                             edgeLoader.active = true
                         }
                     }
+                }
+            },
+            Transition {
+                from: "floating"
+                to: "collapsed"
+                UbuntuNumberAnimation {
+                    targets: [bottomEdge,tip]
+                    properties: "y,opacity"
+                    duration: 500
                 }
             }
         ]
