@@ -56,10 +56,10 @@ ListItem.Empty {
                 target: timeline
                 opacity: 0
             }
-            PropertyChanges {
+            /*PropertyChanges {
                 target: phoneLabel
                 opacity: 0
-            }
+            }*/
             PropertyChanges {
                 target: phoneIcon
                 opacity: 0
