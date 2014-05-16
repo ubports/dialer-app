@@ -97,6 +97,20 @@ Page {
         edgeLoader.setSource(source, properties)
     }
 
+    function _pushPage()
+    {
+        if (edgeLoader.status === Loader.Ready) {
+            edgeLoader.item.active = true
+            page.pageStack.push(edgeLoader.item)
+            if (edgeLoader.item.flickable) {
+                edgeLoader.item.flickable.contentY = -page.header.height
+                edgeLoader.item.flickable.returnToBounds()
+            }
+            if (edgeLoader.item.ready)
+                edgeLoader.item.ready()
+        }
+    }
+
     onActiveChanged: {
         if (active) {
             bottomEdge.state = "collapsed"
@@ -221,17 +235,7 @@ Page {
                     }
 
                     ScriptAction {
-                        script: {
-                            edgeLoader.item.active = true
-                            page.pageStack.push(edgeLoader.item)
-                            if (edgeLoader.item.ready)
-                                edgeLoader.item.ready()
-                            edgeLoader.item.forceActiveFocus()
-                            if (edgeLoader.item.flickable) {
-                                edgeLoader.item.flickable.contentY = -page.header.height
-                                edgeLoader.item.flickable.returnToBounds()
-                            }
-                        }
+                        script: page._pushPage()
                     }
                 }
             },
@@ -312,8 +316,11 @@ Page {
                 active: true
                 anchors.fill: parent
                 asynchronous: true
-
-                onLoaded: item.active = false
+                onLoaded: {
+                    if (page.isReady && edgeLoader.item.active != true) {
+                        page._pushPage()
+                    }
+                }
             }
         }
     }
