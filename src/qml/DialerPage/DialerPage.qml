@@ -79,6 +79,16 @@ PageWithBottomEdge {
         }
     }
 
+    Connections {
+        target: mainView
+        onPendingNumberToDialChanged: {
+            if (mainView.pendingNumberToDial !== "") {
+                keypadEntry.value = mainView.pendingNumberToDial;
+                mainView.switchToKeypadView();
+            }
+        }
+    }
+
     FocusScope {
         id: keypadContainer
 
@@ -111,6 +121,7 @@ PageWithBottomEdge {
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+            value: mainView.pendingNumberToDial
         }
 
         CustomButton {

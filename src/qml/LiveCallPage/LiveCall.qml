@@ -80,7 +80,7 @@ Page {
         repeat: false
         running: true
         onTriggered: {
-            if (!call) {
+            if (!callManager.hasCalls) {
                 // TODO: notify about failed call
                 pageStack.pop()
             }
