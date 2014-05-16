@@ -185,6 +185,7 @@ Page {
                 anchors.fill: parent
                 drag.axis: Drag.YAxis
                 drag.target: bottomEdge
+                drag.minimumY: 0
 
                 onReleased: {
                     page.bottomEdgeReleased()
