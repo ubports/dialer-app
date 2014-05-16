@@ -82,8 +82,8 @@ PageWithBottomEdge {
     Connections {
         target: mainView
         onPendingNumberToDialChanged: {
+            keypadEntry.value = mainView.pendingNumberToDial;
             if (mainView.pendingNumberToDial !== "") {
-                keypadEntry.value = mainView.pendingNumberToDial;
                 mainView.switchToKeypadView();
             }
         }
