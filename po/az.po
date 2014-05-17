@@ -1,23 +1,22 @@
-# Brazilian Portuguese translation for dialer-app
-# Copyright (c) 2013 Canonical Ltd 2013
+# Azerbaijani translation for dialer-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2013-10-04 06:49+0000\n"
-"Last-Translator: Tiago Hillebrandt <tiagohillebrandt@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2014-01-06 19:19+0000\n"
+"Last-Translator: Emin Mastizada <emin25@ovi.com>\n"
+"Language-Team: Azerbaijani <az@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
 "X-Generator: Launchpad (build 17007)\n"
-"Language: pt_BR\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -94,7 +93,7 @@ msgstr "9"
 
 #: src/qml/DialerPage/Keypad.qml:98
 msgid "ABC"
-msgstr "ABC"
+msgstr "ABCÇ"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
@@ -102,7 +101,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Adicionar para contato existente"
+msgstr "Mövcud əlaqələrə əlavə et"
 
 #: src/qml/dialer-app.qml:207
 msgid "Call Barring"
@@ -118,7 +117,7 @@ msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Registro de chamadas"
+msgstr "Zəng jurnalı"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
@@ -151,31 +150,31 @@ msgstr ""
 
 #: src/qml/MainPage.qml:45
 msgid "Contacts"
-msgstr "Contatos"
+msgstr "Əlaqələr"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Criar novo contato"
+msgstr "Yeni əlaqə yarat"
 
 #: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
-msgstr "DEF"
+msgstr "DEƏF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Sil"
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
-msgstr "Discador"
+msgstr "Yığan"
 
 #: src/dialer-app.desktop.in:4
 msgid "Dialer App"
-msgstr "App discador"
+msgstr "Yığan Tətbiq"
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
-msgstr "Aplicativo discador"
+msgstr "Dialer tətbiq"
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
@@ -183,7 +182,7 @@ msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
-msgstr "Informe um número"
+msgstr "Nömrəni daxil et"
 
 #: src/qml/dialer-app.qml:140
 msgid "Error"
@@ -191,7 +190,7 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
-msgstr "GHI"
+msgstr "GĞHX"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
@@ -211,11 +210,11 @@ msgstr "JKL"
 
 #: src/qml/MainPage.qml:35
 msgid "Keypad"
-msgstr "Teclado numérico"
+msgstr "Klaviatura"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
-msgstr "MNO"
+msgstr "MNOÖ"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
@@ -227,7 +226,7 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
-msgstr "PQRS"
+msgstr "PQRSŞ"
 
 #: src/qml/dialer-app.qml:121
 msgid "Please wait"
@@ -248,11 +247,11 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
-msgstr "TUV"
+msgstr "TUÜ"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Hoje"
+msgstr "Bu gün"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
@@ -260,7 +259,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Naməlum"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
@@ -268,15 +267,15 @@ msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Correio de voz"
+msgstr "Səsli Poçt"
 
 #: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr "VXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Ontem"
+msgstr "Dünən"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
@@ -286,7 +285,7 @@ msgstr ""
 #: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "chamando"
+msgstr "çağırır"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
