@@ -55,11 +55,14 @@ PageWithBottomEdge {
         property: "fullView"
         value: bottomEdgeExposedArea > bottomEdgeExpandThreshold
     }
+
+    property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
+
     Binding {
         target: bottomEdgePage
         when: bottomEdgePage
         property: "currentIndex"
-        value: Math.floor(bottomEdgeExposedArea / bottomEdgePage.delegateHeight) - 1
+        value: Math.max(Math.floor(bottomEdgeExposedArea / historyDelegateHeight) - 1, 0)
     }
     onBottomEdgeReleased: {
         bottomEdgePage.activateCurrentIndex()

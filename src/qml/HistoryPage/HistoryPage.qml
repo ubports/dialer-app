@@ -47,6 +47,10 @@ Page {
     HistoryDelegate {
         id: delegate
         visible: false
+        property variant model: Item {
+            property string senderId: "dummy"
+            property variant participants: ["dummy"]
+        }
     }
 
     // FIXME: this is a big hack to fix the placing of the listview items
