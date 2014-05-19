@@ -92,7 +92,6 @@ Page {
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy
-        acceptAction.text: i18n.tr("Delete")
         /*section.property: "date"
         section.delegate: Item {
             anchors.left: parent.left
