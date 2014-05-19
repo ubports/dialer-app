@@ -102,8 +102,8 @@ ListItem.Empty {
 
     Rectangle {
         anchors.fill: parent
-        color: "white"
-        opacity: historyDelegate.ListView.isCurrentItem && !fullView ? 0.3 : 0
+        color: "black"
+        opacity: historyDelegate.ListView.isCurrentItem && !fullView ? 0.2 : 0
         Behavior on opacity {
             UbuntuNumberAnimation { }
         }
@@ -199,7 +199,7 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.2
+            opacity: 0.5
             // FIXME: handle conference call
             text: phoneNumberSubTypeLabel
             visible: interactive // non-interactive entries are calls from unknown or private numbers

@@ -127,7 +127,6 @@ MainView {
     }
 
     Component.onCompleted: {
-        Theme.name = "Ubuntu.Components.Themes.SuruGradient";
         pageStack.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // if there are calls, even if we don't have info about them yet, push the livecall view

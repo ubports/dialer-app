@@ -57,7 +57,6 @@ AbstractButton {
             height: paintedHeight
             font.weight: Font.DemiBold
             verticalAlignment: Text.AlignTop
-            color: "#F3F3E7"
         }
 
         Label {
@@ -68,7 +67,6 @@ AbstractButton {
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
             fontSize: "x-small"
-            color: "#888888"
         }
 
         Icon {

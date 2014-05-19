@@ -62,7 +62,7 @@ PageWithBottomEdge {
         target: bottomEdgePage
         when: bottomEdgePage
         property: "currentIndex"
-        value: Math.max(Math.floor(bottomEdgeExposedArea / historyDelegateHeight) - 1, 0)
+        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight) - 1
     }
     onBottomEdgeReleased: {
         bottomEdgePage.activateCurrentIndex()
