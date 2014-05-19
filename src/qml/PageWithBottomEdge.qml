@@ -73,7 +73,7 @@ Page {
     property alias bottomEdgeTitle: tipLabel.text
     property alias bottomEdgeEnabled: bottomEdge.visible
     property int bottomEdgeExpandThreshold: page.height * 0.3
-    property int bottomEdgeExposedArea: page.height - bottomEdge.y - tip.height
+    property int bottomEdgeExposedArea: bottomEdge.state !== "expanded" ? (page.height - bottomEdge.y - tip.height) : _areaWhenExpanded
     property bool reloadBottomEdgePage: true
 
     readonly property alias bottomEdgePage: edgeLoader.item
@@ -82,6 +82,7 @@ Page {
     readonly property bool bottomEdgePageLoaded: (edgeLoader.status == Loader.Ready)
 
     property bool _showEdgePageWhenReady: false
+    property int _areaWhenExpanded: 0
 
     signal bottomEdgeReleased()
     signal bottomEdgeDismissed()
@@ -109,6 +110,12 @@ Page {
             if (edgeLoader.item.ready)
                 edgeLoader.item.ready()
         }
+    }
+
+    Component.onCompleted: {
+        // avoid a binding on the expanded height value
+        var expandedHeight = height;
+        _areaWhenExpanded = expandedHeight;
     }
 
     onActiveChanged: {
