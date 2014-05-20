@@ -21,7 +21,7 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
-import Ubuntu.Contacts 0.1
+//import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 import "../"
 
@@ -115,7 +115,7 @@ PageWithBottomEdge {
             anchors {
                 top: parent.top
                 topMargin: units.gu(2)
-                bottom: contactSearch.top
+                bottom: keypadEntryBackground.bottom
                 left: parent.left
                 right: parent.right
                 bottomMargin: units.gu(1)
@@ -157,7 +157,7 @@ PageWithBottomEdge {
             }
         }
 
-        ContactSearchListView {
+        /*ContactSearchListView {
             id: contactSearch
             property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
             anchors {
@@ -214,18 +214,18 @@ PageWithBottomEdge {
             }
 
             // FIXME: uncomment this code if we end up having both the header and the toolbar.
-            /*onCountChanged: {
+            onCountChanged: {
                 if (count > 0) {
                     page.header.hide();
                 } else {
                     page.header.show();
                 }
-            }*/
+            }
 
             onDetailClicked: {
                 mainView.call(detail.number);
             }
-        }
+        }*/
 
         ListItems.ThinDivider {
             id: divider

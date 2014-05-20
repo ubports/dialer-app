@@ -355,6 +355,7 @@ Page {
         id: footer
         height: units.gu(10)
         anchors.bottom: parent.bottom
+        anchors.bottomMargin: units.gu(3)
         anchors.left: parent.left
         anchors.right: parent.right
 
@@ -363,7 +364,8 @@ Page {
             objectName: "hangupButton"
 
             anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenter: parent.verticalCenter
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: units.gu(2)
             onClicked: endCall()
         }
     }
