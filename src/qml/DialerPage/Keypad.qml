@@ -24,7 +24,7 @@ Item {
     id: keypad
 
     property int keysWidth: parent.width / 3 //units.gu(11.33)
-    property int keysHeight: units.gu(8)
+    property int keysHeight: units.gu(7)
 
     width: keys.width
     height: keys.height

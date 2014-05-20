@@ -72,13 +72,13 @@ Page {
 
             PropertyChanges {
                 target: durationLabel
-                fontSize: "medium"
+                font.pixelSize: FontUtils.sizeToPixels("medium")
                 anchors.topMargin: units.gu(2)
             }
 
             PropertyChanges {
                 target: callerLabel
-                fontSize: "small"
+                font.pixelSize: FontUtils.sizeToPixels("small")
             }
 
             PropertyChanges {
@@ -92,7 +92,7 @@ Page {
         Transition {
             ParallelAnimation {
                 UbuntuNumberAnimation {
-                    targets: [durationLabel]
+                    targets: [durationLabel,callerLabel]
                     properties: "font.pixelSize,anchors.topMargin"
                 }
                 UbuntuNumberAnimation {
