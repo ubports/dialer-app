@@ -41,6 +41,6 @@ AbstractButton {
         anchors.centerIn: parent
         width: (iconWidth > 0) ? iconWidth : undefined
         height: (iconHeight > 0) ? iconHeight : undefined
-        color: "white"
+        color: Theme.palette.normal.baseText
     }
 }

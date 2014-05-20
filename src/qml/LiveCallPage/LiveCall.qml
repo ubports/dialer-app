@@ -39,16 +39,16 @@ Page {
     property bool dtmfVisible: call ? call.voicemail : false
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
-
-    title: {
-        if (callManager.calls.length > 1) {
-            return i18n.tr("Two Calls");
-        } else if (call.isConference) {
-            return i18n.tr("Conference");
+    property string caller: {
+        if (dtmfVisible && dtmfLabelHelper.text !== "") {
+            return dtmfLabelHelper.text;
+        } else if (contactWatcher.alias != "") {
+            return contactWatcher.alias;
         } else {
-            return dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber;
+            return contactWatcher.phoneNumber;
         }
     }
+    title: i18n.tr("Call")
     tools: ToolbarItems {
         back: ToolbarButton {
             iconSource: "image://theme/contact"
@@ -63,11 +63,52 @@ Page {
         }
     }
 
-     onActiveChanged: {
-         if (active) {
-             header.__customBackAction = tools.back
-         }
-     }
+    x: header ? header.height : 0
+
+    states: [
+        State {
+            name: "keypadVisible"
+            when: dtmfVisible
+
+            PropertyChanges {
+                target: durationLabel
+                fontSize: "medium"
+                anchors.topMargin: units.gu(2)
+            }
+
+            PropertyChanges {
+                target: callerLabel
+                fontSize: "small"
+            }
+
+            PropertyChanges {
+                target: keypad
+                opacity: 1.0
+            }
+        }
+    ]
+
+    transitions: [
+        Transition {
+            ParallelAnimation {
+                UbuntuNumberAnimation {
+                    targets: [durationLabel]
+                    properties: "font.pixelSize,anchors.topMargin"
+                }
+                UbuntuNumberAnimation {
+                    targets: [keypad]
+                    properties: "opacity"
+                }
+            }
+        }
+
+    ]
+
+    onActiveChanged: {
+        if (active) {
+            header.__customBackAction = tools.back
+        }
+    }
 
     onCallChanged: {
         // reset the DTMF keypad visibility status
@@ -85,51 +126,6 @@ Page {
                 pageStack.pop()
             }
         }
-    }
-
-    // FIXME: replace this label when the Header component make it possible to put extra content in it
-    Item {
-        id: headerContent
-        anchors.fill: parent
-
-        Label {
-            text: liveCall.title
-            fontSize: "x-large"
-            font.weight: Font.Light
-            verticalAlignment: Text.AlignVCenter
-            elide: Text.ElideRight
-            anchors {
-                left: parent.left
-                leftMargin: units.gu(1)
-                top: parent.top
-                bottom: parent.bottom
-                right: switchCallsButton.left
-            }
-        }
-
-        LiveCallKeypadButton {
-            id: multiCallButton
-            iconSource: "back"
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            width: visible ? units.gu(6) : 0
-            height: units.gu(6)
-            visible: callManager.foregroundCall && callManager.backgroundCall && conferenceCallArea.visible
-            anchors {
-                verticalCenter: parent.verticalCenter
-                right: parent.right
-            }
-
-            onClicked: conferenceCallArea.conference = null
-        }
-
-    }
-
-    Binding {
-        target: liveCall.header
-        property: "contents"
-        value: liveCall.active ? headerContent : null
-        when: liveCall.header && liveCall.active
     }
 
     function endCall() {
@@ -191,76 +187,41 @@ Page {
         id: stopWatch
         objectName: "stopWatch"
         time: call ? call.elapsedTime : 0
-        visible: false
-    }
-
-    Image {
-        id: background
-
-        fillMode: Image.PreserveAspectCrop
-        // FIXME: use something different than a hardcoded path of a unity8 asset
-        source: (isVoicemail || callManager.calls.length > 1 || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
-        anchors {
-            top: topPanel.bottom
-            left: parent.left
-            right: parent.right
-            bottom: footer.top
-        }
-        smooth: true
-        sourceSize.width: width * 1.5
-        sourceSize.height: height * 1.5
-    }
-
-    FastBlur {
-        anchors.fill: background
-        source: background
-        radius: 64
-        opacity: keypad.opacity
-        cached: true
-    }
-
-    Item {
-        id: topPanel
-        clip: true
-        height: (isVoicemail || contactWatcher.isUnknown || callManager.calls.length > 1) ? 0 : units.gu(5)
-
-        Behavior on height {
-            UbuntuNumberAnimation { }
-        }
-
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-        }
-        Label {
-            anchors {
-                left: parent.left
-                leftMargin: units.gu(2)
-                verticalCenter: parent.verticalCenter
-            }
-            fontSize: "medium"
-            text: phoneNumberSubTypeLabel
-        }
-        Label {
-            anchors {
-                right: parent.right
-                rightMargin: units.gu(2)
-                verticalCenter: parent.verticalCenter
-            }
-            text: contactWatcher.phoneNumber
-            fontSize: "medium"
-            opacity: 0.2
-        }
     }
 
     Item {
         id: centralArea
         anchors {
-            top: topPanel.bottom
+            top: parent.top
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top
+        }
+
+        Label {
+            id: durationLabel
+
+            anchors {
+                top: parent.top
+                topMargin: units.gu(5)
+                horizontalCenter: parent.horizontalCenter
+            }
+            horizontalAlignment: Qt.AlignHCenter
+            width: units.gu(11)
+            text: (call && call.active) ? stopWatch.elapsed : i18n.tr("calling")
+            fontSize: "x-large"
+        }
+
+        Label {
+            id: callerLabel
+
+            anchors {
+                top: durationLabel.bottom
+                topMargin: units.gu(1)
+                horizontalCenter: parent.horizontalCenter
+            }
+            text: caller
+            fontSize: "large"
         }
 
         MultiCallDisplay {
@@ -316,136 +277,77 @@ Page {
             }
 
             visible: opacity > 0.0
-            opacity: dtmfVisible ? 1.0 : 0.0
-
-            Behavior on opacity {
-                UbuntuNumberAnimation { }
-            }
+            opacity: 0.0
         }
     }
 
-    Item {
-        id: gridLinesVertical
-        height: buttonsArea.width
-        width: buttonsArea.height
-        rotation: -90
-        anchors.centerIn: buttonsArea
-        Column {
-            anchors.fill: parent
-            Item {
-                height: units.gu(11)
-                width: buttonsArea.height
-                ListItems.ThinDivider {
-                    anchors.bottom: parent.bottom
-                }
-            }
-            Item {
-                height: units.gu(7)
-                width: buttonsArea.height
-                ListItems.ThinDivider {
-                    anchors.bottom: parent.bottom
-                }
-            }
-            Item {
-                height: units.gu(7)
-                width: buttonsArea.height
-                ListItems.ThinDivider {
-                    anchors.bottom: parent.bottom
-                }
-            }
-        }
-    }
-
-    UbuntuShape {
+    Row {
         id: buttonsArea
-
-        color: Qt.rgba(0,0,0, 0.5)
-
         height: childrenRect.height
         width: childrenRect.width
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: footer.top
-            bottomMargin: units.gu(4)
+            bottomMargin: units.gu(2)
         }
-        radius: "medium"
 
-        Row {
-            id: controlButtons
-            height: childrenRect.height
-            width: childrenRect.width
-
-            Label {
-                id: durationLabel
-
-                anchors {
-                    top: parent.top
-                    bottom: parent.bottom
-                }
-                verticalAlignment: Qt.AlignVCenter
-                horizontalAlignment: Qt.AlignHCenter
-                width: units.gu(11)
-                text: (call && call.active) ? stopWatch.elapsed : i18n.tr("calling")
-            }
-
-            LiveCallKeypadButton {
-                objectName: "muteButton"
-                iconSource: selected ? "microphone-mute" : "microphone"
-                enabled: !isVoicemail
-                selected: liveCall.isMuted
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-                onClicked: {
-                    if (call) {
-                        call.muted = !call.muted
-                    }
+        LiveCallKeypadButton {
+            objectName: "muteButton"
+            iconSource: selected ? "microphone-mute" : "microphone"
+            enabled: !isVoicemail
+            selected: liveCall.isMuted
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    call.muted = !call.muted
                 }
             }
+        }
 
-            LiveCallKeypadButton {
-                objectName: "pauseStartButton"
-                iconSource: {
-                    if (callManager.backgroundCall) {
-                        return "switch"
-                    } else if (selected) {
-                        return "media-playback-start"
-                    } else {
-                        return "media-playback-pause"
-                    }
-                }
-                enabled: !isVoicemail
-                selected: liveCall.onHold
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-                onClicked: {
-                    if (call) {
-                        call.held = !call.held
-                    }
+        LiveCallKeypadButton {
+            objectName: "pauseStartButton"
+            iconSource: {
+                if (callManager.backgroundCall) {
+                    return "switch"
+                } else if (selected) {
+                    return "media-playback-start"
+                } else {
+                    return "media-playback-pause"
                 }
             }
-
-            LiveCallKeypadButton {
-                objectName: "speakerButton"
-                iconSource: selected ? "speaker" : "speaker-mute"
-                selected: liveCall.isSpeaker
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-                onClicked: {
-                    if (call) {
-                        call.speaker = !selected
-                    }
+            enabled: !isVoicemail
+            selected: liveCall.onHold
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    call.held = !call.held
                 }
             }
+        }
 
-            LiveCallKeypadButton {
-                id: dtmfButton
-                objectName: "dtmfButton"
-                iconSource: "keypad"
-                iconWidth: units.gu(4)
-                iconHeight: units.gu(4)
-                enabled: !isVoicemail
-                onClicked: dtmfVisible = !dtmfVisible
+        LiveCallKeypadButton {
+            objectName: "speakerButton"
+            iconSource: selected ? "speaker" : "speaker-mute"
+            selected: liveCall.isSpeaker
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    call.speaker = !selected
+                }
             }
+        }
+
+        LiveCallKeypadButton {
+            id: dtmfButton
+            objectName: "dtmfButton"
+            iconSource: "keypad"
+            iconWidth: units.gu(4)
+            iconHeight: units.gu(4)
+            enabled: !isVoicemail
+            onClicked: dtmfVisible = !dtmfVisible
         }
     }
 
