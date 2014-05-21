@@ -49,7 +49,8 @@ def invoke_incoming_call():
     # magic number 199 will cause a callback from 1234567; dialing 199
     # itself will fail, so quiesce the error
     bus = dbus.SystemBus()
-    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'), 'org.ofono.VoiceCallManager')
+    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'),
+                         'org.ofono.VoiceCallManager')
     try:
         vcm.Dial('199', 'default')
     except dbus.DBusException:
@@ -60,9 +61,9 @@ def get_phonesim():
     bus = dbus.SystemBus()
     try:
         manager = dbus.Interface(bus.get_object('org.ofono', '/'),
-                                                'org.ofono.Manager')
-    except dbus.exceptions.DBusException as e:
-       return False
+                                 'org.ofono.Manager')
+    except dbus.exceptions.DBusException:
+        return False
 
     modems = manager.GetModems()
 
@@ -76,14 +77,17 @@ def get_phonesim():
 def is_phonesim_running():
     """Determine whether we are running with phonesim."""
     phonesim = get_phonesim()
-    return phonesim != None
+    return phonesim is not None
+
 
 def ensure_ofono_account():
     # oFono modems are now set online by NetworkManager, so for the tests
     # we need to manually put them online.
     try:
-        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
-        subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
+        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem',
+                               '/phonesim'])
+        subprocess.check_call(['/usr/share/ofono/scripts/online-modem',
+                               '/phonesim'])
     except subprocess.CalledProcessError:
         sys.stderr.write('Failed to online the modem phonesim.!\n')
         sys.exit(1)
@@ -91,8 +95,13 @@ def ensure_ofono_account():
     # wait until the modem is actually online
     phonesim = get_phonesim()
     while phonesim['Online'] == 0:
-        sleep(1)
+        time.sleep(1)
         phonesim = get_phonesim()
+
+    # this is a bit drastic, but sometimes mission-control-5 won't recognize
+    # clients installed after it was started, so, we make sure it gets
+    # restarted
+    subprocess.check_call(['pkill', '-9', 'mission-control'])
 
     if not _is_ofono_account_set():
         subprocess.check_call(['ofono-setup'])
