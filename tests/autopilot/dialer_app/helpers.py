@@ -56,29 +56,41 @@ def invoke_incoming_call():
         pass
 
 
+def get_phonesim():
+    bus = dbus.SystemBus()
+    try:
+        manager = dbus.Interface(bus.get_object('org.ofono', '/'),
+                                                'org.ofono.Manager')
+    except dbus.exceptions.DBusException as e:
+       return False
+
+    modems = manager.GetModems()
+
+    for path, properties in modems:
+        if path == '/phonesim':
+            return properties
+
+    return None
+
+
 def is_phonesim_running():
     """Determine whether we are running with phonesim."""
-    try:
-        out = subprocess.check_output(
-            [
-                '/usr/share/ofono/scripts/list-modems',
-            ], stderr=subprocess.PIPE, universal_newlines=True)
-        # check the whole output because there is a chance phonesim is not the
-        # first modem on the list
-        for line in out.split('\n'):
-            if line.startswith('[ /phonesim'):
-                return True
-        return False
-    except subprocess.CalledProcessError:
-        return False
-
+    phonesim = get_phonesim()
+    return phonesim != None
 
 def ensure_ofono_account():
+    # oFono modems are now set online by NetworkManager, so for the tests
+    # we need to manually put them online.
+    subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
+    subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
+
+    # wait until the modem is actually online
+    phonesim = get_phonesim()
+    while phonesim['Online'] == 0:
+        sleep(1)
+        phonesim = get_phonesim()
+
     if not _is_ofono_account_set():
-        # oFono modems are now set online by NetworkManager, so for the tests
-        # we need to manually put them online.
-        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
-        subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
         subprocess.check_call(['ofono-setup'])
         if not _is_ofono_account_set():
             sys.stderr.write('ofono-setup failed to create ofono account!\n')
