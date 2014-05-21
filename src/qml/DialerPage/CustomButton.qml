@@ -20,8 +20,6 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 
 Button {
-    // FIXME: waiting on #1072733
-    //iconSource: "../assets/dialer_call.png"
     property alias icon: buttonIcon.name
     property alias iconWidth: buttonIcon.width
     property alias iconHeight: buttonIcon.height

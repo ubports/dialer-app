@@ -31,7 +31,7 @@ ListItem.Empty {
     property bool incoming: model.senderId != "self"
     property bool unknownContact: contactWatcher.contactId == ""
     property string phoneNumberSubTypeLabel: ""
-    property alias isFirst: timeline.isFirst
+    property bool isFirst: false
     property alias contactId: contactWatcher.contactId
     property bool detailsShown: false
     property alias interactive: contactWatcher.interactive
@@ -52,14 +52,6 @@ ListItem.Empty {
         State {
             name: "basicView"
             when: !fullView
-            PropertyChanges {
-                target: timeline
-                opacity: 0
-            }
-            /*PropertyChanges {
-                target: phoneLabel
-                opacity: 0
-            }*/
             PropertyChanges {
                 target: phoneIcon
                 opacity: 0
@@ -138,18 +130,9 @@ ListItem.Empty {
         }
     }
 
-    Timeline {
-        id: timeline
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: units.gu(1)
-        mainAreaHeight: mainSection.height
-    }
-
     Item {
         id: mainSection
-        anchors.left: timeline.right
+        anchors.left: parent.left
         anchors.right: selectionMark.left
         anchors.top: parent.top
         height: units.gu(8)
@@ -165,7 +148,7 @@ ListItem.Empty {
                 property bool defaultAvatar: unknownContact || contactWatcher.avatar == ""
                 fillMode: Image.PreserveAspectCrop
                 asynchronous: true
-                source: defaultAvatar ? Qt.resolvedUrl("../assets/contact_defaulticon.png") : contactWatcher.avatar
+                source: defaultAvatar ? "image://theme/contact" : contactWatcher.avatar
                 sourceSize.width: defaultAvatar ? undefined : width * 1.5
                 sourceSize.height: defaultAvatar ? undefined : height * 1.5
             }

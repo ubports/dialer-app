@@ -96,7 +96,7 @@ Page {
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy
-        section.property: "date"
+        /*section.property: "date"
         section.delegate: Item {
             anchors.left: parent.left
             anchors.right: parent.right
@@ -116,7 +116,7 @@ Page {
             ListItem.ThinDivider {
                 anchors.bottom: parent.bottom
             }
-        }
+        }*/
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
