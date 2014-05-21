@@ -81,8 +81,12 @@ def is_phonesim_running():
 def ensure_ofono_account():
     # oFono modems are now set online by NetworkManager, so for the tests
     # we need to manually put them online.
-    subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
-    subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
+    try:
+        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
+        subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
+    except subprocess.CalledProcessError:
+        sys.stderr.write('Failed to online the modem phonesim.!\n')
+        sys.exit(1)
 
     # wait until the modem is actually online
     phonesim = get_phonesim()
