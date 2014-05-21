@@ -19,6 +19,7 @@
 import QtContacts 5.0
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
@@ -32,6 +33,28 @@ Page {
     tools: ToolbarItems {
         opened: false
         locked: true
+    }
+    onDialNumberChanged: {
+        if(checkUSSD(dialNumber)) {
+            // check for custom strings
+            if (dialNumber == "*#06#") {
+                dialNumber = ""
+                mainView.ussdResponseTitle = "IMEI"
+                // TODO: handle dual sim
+                mainView.ussdResponseText = ussdManager.serial(telepathyHelper.accountIds[0])
+                PopupUtils.open(ussdResponseDialog)
+            }
+        }
+    }
+
+    Connections {
+        target: mainView
+        onPendingNumberToDialChanged: {
+            if (mainView.pendingNumberToDial !== "") {
+                keypadEntry.value = mainView.pendingNumberToDial;
+                mainView.switchToKeypadView();
+            }
+        }
     }
 
     FocusScope {
@@ -65,6 +88,7 @@ Page {
             focus: true
             placeHolder: i18n.tr("Enter a number")
             Keys.forwardTo: [callButton]
+            value: mainView.pendingNumberToDial
         }
 
         ContactSearchListView {

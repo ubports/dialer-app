@@ -1,23 +1,23 @@
-# Brazilian Portuguese translation for dialer-app
-# Copyright (c) 2013 Canonical Ltd 2013
+# Slovenian translation for dialer-app
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2013-10-04 06:49+0000\n"
-"Last-Translator: Tiago Hillebrandt <tiagohillebrandt@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2014-05-16 19:19+0000\n"
+"Last-Translator: Damir Jerovšek <Unknown>\n"
+"Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
+"n%100==4 ? 3 : 0);\n"
 "X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
 "X-Generator: Launchpad (build 17007)\n"
-"Language: pt_BR\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -27,22 +27,28 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ur"
+msgstr[1] "%1 ura"
+msgstr[2] "%1 uri"
+msgstr[3] "%1 ure"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
+msgstr[2] "%1 minuti"
+msgstr[3] "%1 minute"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sekund"
+msgstr[1] "%1 sekunda"
+msgstr[2] "%1 sekundi"
+msgstr[3] "%1 sekunde"
 
 #: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
@@ -98,11 +104,11 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr ""
+msgstr "Dodaj stik"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Adicionar para contato existente"
+msgstr "Dodaj v obstoječi stik"
 
 #: src/qml/dialer-app.qml:207
 msgid "Call Barring"
@@ -110,7 +116,7 @@ msgstr ""
 
 #: src/qml/dialer-app.qml:218
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Posredovanje klicev"
 
 #: src/qml/dialer-app.qml:229
 msgid "Call Waiting"
@@ -118,11 +124,11 @@ msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Registro de chamadas"
+msgstr "Dnevnik klicev"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr ""
+msgstr "Pokliči"
 
 #: src/qml/dialer-app.qml:240
 msgid "Calling Line Presentation"
@@ -134,7 +140,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr ""
+msgstr "Prekliči"
 
 #: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
@@ -151,11 +157,11 @@ msgstr ""
 
 #: src/qml/MainPage.qml:45
 msgid "Contacts"
-msgstr "Contatos"
+msgstr "Stiki"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Criar novo contato"
+msgstr "Ustvari nov stik"
 
 #: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
@@ -163,19 +169,19 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr "Excluir"
+msgstr "Izbriši"
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
-msgstr "Discador"
+msgstr "Klicalnik"
 
 #: src/dialer-app.desktop.in:4
 msgid "Dialer App"
-msgstr "App discador"
+msgstr "Program klicalnik"
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
-msgstr "Aplicativo discador"
+msgstr "Program klicalnik"
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
@@ -183,11 +189,11 @@ msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
-msgstr "Informe um número"
+msgstr "Vnesite številko"
 
 #: src/qml/dialer-app.qml:140
 msgid "Error"
-msgstr ""
+msgstr "Napaka"
 
 #: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
@@ -195,15 +201,15 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "Odloži"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr ""
+msgstr "Kako želite shraniti stik?"
 
 #: src/qml/dialer-app.qml:141
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Neveljavna koda USSD"
 
 #: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
@@ -211,7 +217,7 @@ msgstr "JKL"
 
 #: src/qml/MainPage.qml:35
 msgid "Keypad"
-msgstr "Teclado numérico"
+msgstr "Tipkovnica"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
@@ -219,11 +225,11 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Združi klice"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Nov klic"
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
@@ -231,20 +237,20 @@ msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:121
 msgid "Please wait"
-msgstr ""
+msgstr "Počakajte"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Zasebni"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr ""
+msgstr "Shrani stik"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "Pošlji sporočilo z besedilom"
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
@@ -252,23 +258,23 @@ msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Hoje"
+msgstr "Danes"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Dva klica"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "Neznano"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr ""
+msgstr "Poglej stik"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Correio de voz"
+msgstr "Glasovna pošta"
 
 #: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
@@ -276,19 +282,19 @@ msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Ontem"
+msgstr "Včeraj"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "dejaven"
 
 #: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "chamando"
+msgstr "klicanje"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "na čakanju"

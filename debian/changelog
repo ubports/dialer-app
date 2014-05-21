@@ -1,3 +1,64 @@
+dialer-app (0.1+14.10.20140512.1-0ubuntu1) utopic; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Tiago Salem Herrmann ]
+  * update po and pot files
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 12 May 2014 22:56:39 +0000
+
+dialer-app (0.1+14.10.20140512-0ubuntu1) utopic; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure placing calls via command line arguments works correctly
+    by delaying the actual start of the call until the dialer app is
+    ready, and by checking the connectivity status before actually
+    placing the call. (LP: #1309143)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 12 May 2014 19:20:59 +0000
+
+dialer-app (0.1+14.04.20140415-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Do not wait for the telepathy stuff to get ready to process the
+    command line arguments. This ensures that the dialpad view is not
+    visible when calling using the argument tel:///<number> (LP:
+    #1286358)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 15 Apr 2014 19:51:41 +0000
+
+dialer-app (0.1+14.04.20140411-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Make it possible to start a new call while already in a call. (LP:
+    #1306203)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 11 Apr 2014 12:49:15 +0000
+
+dialer-app (0.1+14.04.20140410-0ubuntu1) trusty; urgency=low
+
+  [ Dimitri John Ledkov ]
+  * Invoke magic 199 callback via dbus, instead of scripts to reliably
+    quiesce the error. (LP: #1287628) (LP: #1287628)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 10 Apr 2014 19:43:15 +0000
+
+dialer-app (0.1+14.04.20140407-0ubuntu1) trusty; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * Add initial USSD support (LP: #1195398)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 07 Apr 2014 23:08:51 +0000
+
+dialer-app (0.1+14.04.20140402-0ubuntu1) trusty; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Add a better UI (not final yet) for multi-calls and make it possible
+    to create and manage conference calls.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 02 Apr 2014 00:50:11 +0000
+
 dialer-app (0.1+14.04.20140325-0ubuntu1) trusty; urgency=low
 
   [ Gustavo Pichorim Boiko ]

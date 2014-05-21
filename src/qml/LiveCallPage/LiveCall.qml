@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import QtContacts 5.0
@@ -41,9 +42,56 @@ Page {
     property string phoneNumberSubTypeLabel: ""
     Component.onDestruction: mainView.switchToCallLogView()
 
+    title: {
+        if (callManager.calls.length > 1) {
+            return i18n.tr("Two Calls");
+        } else if (call.isConference) {
+            return i18n.tr("Conference");
+        } else {
+            return dtmfLabelHelper.text !== "" ? dtmfLabelHelper.text : contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber;
+        }
+    }
+    tools: ToolbarItems {
+        opened: false
+        locked: true
+    }
+
     onCallChanged: {
         // reset the DTMF keypad visibility status
         dtmfVisible = (call && call.voicemail);
+    }
+
+    Component {
+        id: makeNewCallComponent
+        DefaultSheet {
+            // FIXME: workaround to set the contact list
+            // background to black
+            Rectangle {
+                anchors.fill: parent
+                anchors.margins: -units.gu(1)
+                color: "#221e1c"
+            }
+            id: sheet
+            title: i18n.tr("New call")
+            doneButton: false
+            modal: true
+            contentsHeight: parent.height
+            contentsWidth: parent.width
+            ContactListView {
+                anchors.fill: parent
+                detailToPick: ContactDetail.PhoneNumber
+                onContactClicked: {
+                    // FIXME: search for favorite number
+                    callManager.startCall(contact.phoneNumber.number);
+                    PopupUtils.close(sheet)
+                }
+                onDetailClicked: {
+                    callManager.startCall(detail.number)
+                    PopupUtils.close(sheet)
+                }
+            }
+            onDoneClicked: PopupUtils.close(sheet)
+        }
     }
 
     Timer {
@@ -52,7 +100,7 @@ Page {
         repeat: false
         running: true
         onTriggered: {
-            if (!call) {
+            if (!callManager.hasCalls) {
                 // TODO: notify about failed call
                 pageStack.pop()
             }
@@ -80,20 +128,21 @@ Page {
         }
 
         LiveCallKeypadButton {
-            id: switchCallsButton
-            iconSource: "switch"
+            id: multiCallButton
+            iconSource: "back"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             width: visible ? units.gu(6) : 0
             height: units.gu(6)
-            visible: callManager.hasBackgroundCall
+            visible: callManager.foregroundCall && callManager.backgroundCall && conferenceCallArea.visible
             anchors {
                 verticalCenter: parent.verticalCenter
                 right: parent.right
             }
 
-            onClicked: callManager.backgroundCall.held = false
+            onClicked: conferenceCallArea.conference = null
         }
+
     }
 
     Binding {
@@ -101,23 +150,6 @@ Page {
         property: "contents"
         value: liveCall.active ? headerContent : null
         when: liveCall.header && liveCall.active
-    }
-
-    title: {
-        if (dtmfLabelHelper.text !== "") {
-            return dtmfLabelHelper.text;
-        } else if (isVoicemail) {
-            return i18n.tr("Voicemail");
-        } else if (contactWatcher.alias != "") {
-            return contactWatcher.alias;
-        } else {
-            return contactWatcher.phoneNumber;
-        }
-    }
-
-    tools: ToolbarItems {
-        opened: false
-        locked: true
     }
 
     function endCall() {
@@ -187,7 +219,7 @@ Page {
 
         fillMode: Image.PreserveAspectCrop
         // FIXME: use something different than a hardcoded path of a unity8 asset
-        source: (isVoicemail || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
+        source: (isVoicemail || callManager.calls.length > 1 || contactWatcher.avatar == "") ? "../assets/live_call_background.png" : contactWatcher.avatar
         anchors {
             top: topPanel.bottom
             left: parent.left
@@ -210,7 +242,8 @@ Page {
     Item {
         id: topPanel
         clip: true
-        height: (isVoicemail || contactWatcher.isUnknown) ? 0 : units.gu(5)
+        height: (isVoicemail || contactWatcher.isUnknown || callManager.calls.length > 1) ? 0 : units.gu(5)
+
         Behavior on height {
             UbuntuNumberAnimation { }
         }
@@ -248,6 +281,45 @@ Page {
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top
+        }
+
+        MultiCallDisplay {
+            id: multiCallArea
+            calls: callManager.calls
+            opacity: (calls.length > 1 && !keypad.visible && !conferenceCallArea.visible) ? 1 : 0
+            anchors {
+                fill: parent
+                margins: units.gu(1)
+            }
+        }
+
+        ConferenceCallDisplay {
+            id: conferenceCallArea
+            opacity: conference && !keypad.visible ? 1 : 0
+            anchors {
+                fill: parent
+                margins: units.gu(1)
+            }
+
+            states: [
+                State {
+                    name: "whileInMulticall"
+                    when: callManager.foregroundCall && callManager.backgroundCall
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: null
+                    }
+                },
+                State {
+                    name: "singleCallIsConf"
+                    when: callManager.foregroundCall && !callManager.backgroundCall && callManager.foregroundCall.isConference
+                    PropertyChanges {
+                        target: conferenceCallArea
+                        conference: callManager.foregroundCall
+                    }
+                }
+
+            ]
         }
 
         Keypad {
@@ -353,7 +425,15 @@ Page {
 
             LiveCallKeypadButton {
                 objectName: "pauseStartButton"
-                iconSource: selected ? "media-playback-start" : "media-playback-pause"
+                iconSource: {
+                    if (callManager.backgroundCall) {
+                        return "switch"
+                    } else if (selected) {
+                        return "media-playback-start"
+                    } else {
+                        return "media-playback-pause"
+                    }
+                }
                 enabled: !isVoicemail
                 selected: liveCall.onHold
                 iconWidth: units.gu(3)
@@ -393,14 +473,16 @@ Page {
             iconSource: "contact"
             iconWidth: units.gu(4)
             iconHeight: units.gu(4)
-            // this button is fully disabled for now, but when it gets enabled again, we need to remember
-            // to still disable it while calling the voicemail
-            enabled: false //!isVoicemail
+            enabled: (callManager.hasCalls && !callManager.backgroundCall && !callManager.foregroundCall.dialing)
 
             anchors {
                 verticalCenter: hangupButton.verticalCenter
                 right: hangupButton.left
                 rightMargin: units.gu(1)
+            }
+
+            onClicked: {
+                PopupUtils.open(makeNewCallComponent);
             }
         }
 
