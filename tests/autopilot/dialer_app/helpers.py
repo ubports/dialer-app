@@ -63,13 +63,22 @@ def is_phonesim_running():
             [
                 '/usr/share/ofono/scripts/list-modems',
             ], stderr=subprocess.PIPE, universal_newlines=True)
-        return out.startswith('[ /phonesim ]')
+        # check the whole output because there is a chance phonesim is not the
+        # first modem on the list
+        for line in out.split('\n'):
+            if line.startswith('[ /phonesim'):
+                return True
+        return False
     except subprocess.CalledProcessError:
         return False
 
 
 def ensure_ofono_account():
     if not _is_ofono_account_set():
+        # oFono modems are now set online by NetworkManager, so for the tests
+        # we need to manually put them online.
+        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem', '/phonesim'])
+        subprocess.check_call(['/usr/share/ofono/scripts/online-modem', '/phonesim'])
         subprocess.check_call(['ofono-setup'])
         if not _is_ofono_account_set():
             sys.stderr.write('ofono-setup failed to create ofono account!\n')
