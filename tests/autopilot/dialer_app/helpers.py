@@ -49,7 +49,8 @@ def invoke_incoming_call():
     # magic number 199 will cause a callback from 1234567; dialing 199
     # itself will fail, so quiesce the error
     bus = dbus.SystemBus()
-    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'), 'org.ofono.VoiceCallManager')
+    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'),
+                         'org.ofono.VoiceCallManager')
     try:
         vcm.Dial('199', 'default')
     except dbus.DBusException:

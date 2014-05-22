@@ -13,9 +13,6 @@ from ubuntuuitoolkit import emulators as toolkit_emulators
 
 
 class MainView(toolkit_emulators.MainView):
-    def __init__(self, *args):
-        super(MainView, self).__init__(*args)
-
     @property
     def dialer_page(self):
         return self.wait_select_single(DialerPage)
