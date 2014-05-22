@@ -21,6 +21,7 @@ import subprocess
 import sys
 import time
 import dbus
+import exceptions
 
 
 def wait_for_incoming_call():
@@ -83,20 +84,19 @@ def is_phonesim_running():
 def ensure_ofono_account():
     # oFono modems are now set online by NetworkManager, so for the tests
     # we need to manually put them online.
-    try:
-        subprocess.check_call(['/usr/share/ofono/scripts/enable-modem',
-                               '/phonesim'])
-        subprocess.check_call(['/usr/share/ofono/scripts/online-modem',
-                               '/phonesim'])
-    except subprocess.CalledProcessError:
-        sys.stderr.write('Failed to online the modem phonesim.!\n')
-        sys.exit(1)
+    subprocess.check_call(['/usr/share/ofono/scripts/enable-modem',
+                           '/phonesim'])
+    subprocess.check_call(['/usr/share/ofono/scripts/online-modem',
+                           '/phonesim'])
 
     # wait until the modem is actually online
-    phonesim = get_phonesim()
-    while phonesim['Online'] == 0:
-        time.sleep(1)
+    for index in range(10):
         phonesim = get_phonesim()
+        if phonesim['Online'] == 1:
+            break
+        time.sleep(1)
+    else:
+        raise exceptions.RuntimeError("oFono phone simulator didn't get online.")
 
     # this is a bit drastic, but sometimes mission-control-5 won't recognize
     # clients installed after it was started, so, we make sure it gets
