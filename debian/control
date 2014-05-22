@@ -6,7 +6,8 @@ Build-Depends: cmake,
                debhelper (>= 9),
                dh-translations,
                pkg-config,
-               python3-all,
+               python3-all:any,
+               dh-python,
                qt5-default,
                qtbase5-dev (>= 5.0),
                qtdeclarative5-dev (>= 5.0),
@@ -33,6 +34,7 @@ Package: dialer-app-autopilot
 Architecture: all
 Section: debug
 Depends: ${misc:Depends},
+         ${python3:Depends},
          autopilot-qt5,
          dbus,
          libqt5test5,
