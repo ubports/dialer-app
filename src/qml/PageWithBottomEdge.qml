@@ -73,7 +73,7 @@ Page {
     property alias bottomEdgeTitle: tipLabel.text
     property alias bottomEdgeEnabled: bottomEdge.visible
     property int bottomEdgeExpandThreshold: page.height * 0.2
-    property int bottomEdgeExposedArea: bottomEdge.state !== "expanded" ? (page.height - bottomEdge.y - tip.height) : _areaWhenExpanded
+    property int bottomEdgeExposedArea: bottomEdge.state !== "expanded" ? (page.height - bottomEdge.y - bottomEdge.tipHeight) : _areaWhenExpanded
     property bool reloadBottomEdgePage: true
 
     readonly property alias bottomEdgePage: edgeLoader.item
@@ -147,7 +147,7 @@ Page {
         objectName: "bottomEdge"
 
         readonly property int tipHeight: units.gu(3)
-        readonly property int pageStartY: 0
+        readonly property int pageStartY: page.headerHeight //0
 
         z: 1
         color: Theme.palette.normal.background
@@ -175,25 +175,32 @@ Page {
             }
         }
 
-        UbuntuShape {
-            id: tip
-
-            anchors.horizontalCenter: parent.horizontalCenter
-            width: tipLabel.paintedWidth + units.gu(6)
-            height: bottomEdge.tipHeight + units.gu(1)
+        Item {
+            id: tipContainer
+            width: childrenRect.width
+            height: bottomEdge.tipHeight
+            clip: true
             y: -bottomEdge.tipHeight
-            color: Theme.palette.normal.overlay
-            Label {
-                id: tipLabel
+            anchors.horizontalCenter: parent.horizontalCenter
 
-                anchors {
-                    top: parent.top
-                    left: parent.left
-                    right: parent.right
+            UbuntuShape {
+                id: tip
+
+                width: tipLabel.paintedWidth + units.gu(6)
+                height: bottomEdge.tipHeight + units.gu(1)
+                color: Theme.palette.normal.overlay
+                Label {
+                    id: tipLabel
+
+                    anchors {
+                        top: parent.top
+                        left: parent.left
+                        right: parent.right
+                    }
+                    height: bottomEdge.tipHeight
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
                 }
-                height: bottomEdge.tipHeight
-                verticalAlignment: Text.AlignVCenter
-                horizontalAlignment: Text.AlignHCenter
             }
         }
 
@@ -213,7 +220,7 @@ Page {
 
             onReleased: {
                 page.bottomEdgeReleased()
-                if (bottomEdge.y < (page.height - bottomEdgeExpandThreshold - tip.height)) {
+                if (bottomEdge.y < (page.height - bottomEdgeExpandThreshold - bottomEdge.tipHeight)) {
                     bottomEdge.state = "expanded"
                 } else {
                     bottomEdge.state = "collapsed"
@@ -237,7 +244,7 @@ Page {
                 name: "collapsed"
                 PropertyChanges {
                     target: bottomEdge
-                    y: bottomEdge.height
+                    y: page.height
                 }
                 PropertyChanges {
                     target: tip
@@ -300,12 +307,6 @@ Page {
                             if (page.reloadBottomEdgePage) {
                                 edgeLoader.active = false
                             }
-                            // FIXME: this is ugly, but the header is not updating the title correctly
-                            var title = page.title
-                            page.title = "Something else"
-                            page.title = title
-                            // fix for a bug in the sdk header
-                            activeLeafNode = page
 
                             // notify
                             page.bottomEdgeDismissed()
@@ -329,14 +330,10 @@ Page {
         Loader {
             id: edgeLoader
 
+            z: 1
             active: true
             asynchronous: true
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: tip.bottom
-                bottom: parent.bottom
-            }
+            anchors.fill: parent
 
             //WORKAROUND: The SDK move the page contents down to allocate space for the header we need to avoid that during the page dragging
             Binding {

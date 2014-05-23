@@ -53,15 +53,11 @@ ListItem.Empty {
             name: "basicView"
             when: !fullView
             PropertyChanges {
-                target: phoneIcon
-                opacity: 0
-            }
-            PropertyChanges {
                 target: time
                 opacity: 0
             }
             PropertyChanges {
-                target: duration
+                target: callType
                 opacity: 0
             }
         }
@@ -82,13 +78,13 @@ ListItem.Empty {
         historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
     }
 
-    function selectIcon()  {
+    function selectCallType()  {
         if (model.callMissed) {
-            return "missed-call";
+            return i18n.tr("Missed");
         } else if (incoming) {
-            return "incoming-call";
+            return i18n.tr("Incoming");
         } else {
-            return "outgoing-call";
+            return i18n.tr("Outgoing");
         }
     }
 
@@ -189,18 +185,6 @@ ListItem.Empty {
             visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
         }
 
-        Icon {
-            id: phoneIcon
-            anchors {
-                left: phoneLabel.right
-                leftMargin: units.gu(1)
-                verticalCenter: phoneLabel.verticalCenter
-            }
-            width:  units.gu(1.5)
-            height: width
-            name: selectIcon()
-        }
-
         // time and duration on the right side of the delegate
         Label {
             id: time
@@ -216,7 +200,7 @@ ListItem.Empty {
         }
 
         Label {
-            id: duration
+            id: callType
             anchors {
                 right: parent.right
                 rightMargin: units.gu(2)
@@ -225,9 +209,8 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.2
-            text: DateUtils.formatFriendlyCallDuration(model.callDuration)
-            visible: !model.callMissed
+            opacity: 0.4
+            text: selectCallType()
         }
     }
 
