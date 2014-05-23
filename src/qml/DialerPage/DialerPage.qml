@@ -46,15 +46,9 @@ PageWithBottomEdge {
 
     // -------- Bottom Edge Setup -----
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
-    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3.4 : 0
+    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
     reloadBottomEdgePage: false
-    Binding {
-        target: bottomEdgePage
-        when: bottomEdgePage
-        property: "fullView"
-        value: bottomEdgeExposedArea > bottomEdgeExpandThreshold
-    }
 
     property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
 

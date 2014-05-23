@@ -32,7 +32,7 @@ Page {
     anchors.fill: parent
     active: false
     property int delegateHeight: delegate.height
-    property bool fullView: true
+    property bool fullView: currentIndex > 2
     property alias currentIndex: historyList.currentIndex
 
     function activateCurrentIndex() {
