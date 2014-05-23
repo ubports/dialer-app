@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2013-10-21 22:23+0000\n"
+"PO-Revision-Date: 2014-05-22 09:56+0000\n"
 "Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-23 09:13+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -27,22 +27,34 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "أقل من ساعة (%1)"
+msgstr[1] "ساعة واحدة (%1)"
+msgstr[2] "ساعتان (%1)"
+msgstr[3] "%1 ساعات"
+msgstr[4] "%1 ساعة"
+msgstr[5] "%1 ساعة"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "أقل من دقيقة (%1)"
+msgstr[1] "دقيقة واحدة (%1)"
+msgstr[2] "دقيقتان (%1)"
+msgstr[3] "%1 دقائق"
+msgstr[4] "%1 دقيقة"
+msgstr[5] "%1 دقيقة"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "أقل من ثانية (%1)"
+msgstr[1] "ثانية واحدة (%1)"
+msgstr[2] "ثانيتان (%1)"
+msgstr[3] "%1 ثوان"
+msgstr[4] "%1 ثانية"
+msgstr[5] "%1 ثانية"
 
 #: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
@@ -98,7 +110,7 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr ""
+msgstr "إضافة شخص"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
@@ -106,15 +118,15 @@ msgstr "أضف إلى شخص موجود"
 
 #: src/qml/dialer-app.qml:207
 msgid "Call Barring"
-msgstr ""
+msgstr "حظر المكالمات"
 
 #: src/qml/dialer-app.qml:218
 msgid "Call Forwarding"
-msgstr ""
+msgstr "تحويل المكالمات"
 
 #: src/qml/dialer-app.qml:229
 msgid "Call Waiting"
-msgstr ""
+msgstr "انتظار المكالمات"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
@@ -134,7 +146,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr ""
+msgstr "إلغاء"
 
 #: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
@@ -179,7 +191,7 @@ msgstr "تطبيق الاتصال"
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
-msgstr ""
+msgstr "رفض"
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
@@ -187,7 +199,7 @@ msgstr "أدخِل رقما"
 
 #: src/qml/dialer-app.qml:140
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 #: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
@@ -195,11 +207,11 @@ msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "إغلاق الخط"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr ""
+msgstr "كيف ترغب بحفظ الشخص؟"
 
 #: src/qml/dialer-app.qml:141
 msgid "Invalid USSD code"
@@ -219,11 +231,11 @@ msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "دمج المكالمات"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "مكالمة جديدة"
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
@@ -231,20 +243,20 @@ msgstr ""
 
 #: src/qml/dialer-app.qml:121
 msgid "Please wait"
-msgstr ""
+msgstr "انتظر من فضلك"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "خاص"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr ""
+msgstr "حفظ الشخص"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "إرسال رسالة نصية"
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
