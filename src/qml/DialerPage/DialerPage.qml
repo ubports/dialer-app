@@ -62,7 +62,7 @@ PageWithBottomEdge {
         target: bottomEdgePage
         when: bottomEdgePage
         property: "currentIndex"
-        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight) - 1
+        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
     }
     onBottomEdgeReleased: {
         bottomEdgePage.activateCurrentIndex()
@@ -98,27 +98,14 @@ PageWithBottomEdge {
         anchors.fill: parent
         focus: true
 
-        Rectangle {
-            id: keypadEntryBackground
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: keypad.top
-            anchors.bottomMargin: units.gu(1.5)
-            color: "#FFFFFF"
-            opacity: 0.05
-        }
-
         KeypadEntry {
             id: keypadEntry
 
             anchors {
                 top: parent.top
-                topMargin: units.gu(2)
-                bottom: keypadEntryBackground.bottom
+                topMargin: units.gu(3)
                 left: parent.left
                 right: parent.right
-                bottomMargin: units.gu(1)
             }
 
             focus: true
@@ -230,16 +217,44 @@ PageWithBottomEdge {
         ListItems.ThinDivider {
             id: divider
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: keypadEntryBackground.bottom
+            anchors {
+                left: parent.left
+                leftMargin: units.gu(2)
+                right: parent.right
+                rightMargin: units.gu(2)
+                top: keypadEntry.bottom
+                topMargin: units.gu(4)
+            }
+        }
+
+        ContactWatcher {
+            id: contactWatcher
+            phoneNumber: keypadEntry.value
+        }
+
+        Label {
+            id: contactLabel
+            anchors {
+                horizontalCenter: divider.horizontalCenter
+                bottom: divider.top
+                bottomMargin: units.gu(1)
+            }
+            text: contactWatcher.isUnknown ? "" : contactWatcher.alias
+            color: UbuntuColors.lightAubergine
+            opacity: text != "" ? 1 : 0
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
         }
 
         Keypad {
             id: keypad
 
-            anchors.bottom: footer.top
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                bottom: footer.top
+                bottomMargin: units.gu(3)
+                horizontalCenter: parent.horizontalCenter
+            }
 
             onKeyPressed: {
                 if (input.cursorPosition != 0)  {
@@ -258,14 +273,13 @@ PageWithBottomEdge {
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: units.gu(3)
             height: units.gu(10)
 
             CallButton {
                 id: callButton
                 objectName: "callButton"
                 anchors.bottom: footer.bottom
-                anchors.bottomMargin: units.gu(2)
+                anchors.bottomMargin: units.gu(5)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);

@@ -167,8 +167,9 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
-            text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+            text: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
             elide: Text.ElideRight
+            color: UbuntuColors.lightAubergine
         }
 
         Label {
@@ -185,7 +186,7 @@ ListItem.Empty {
             opacity: 0.5
             // FIXME: handle conference call
             text: phoneNumberSubTypeLabel
-            visible: interactive // non-interactive entries are calls from unknown or private numbers
+            visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
         }
 
         Icon {

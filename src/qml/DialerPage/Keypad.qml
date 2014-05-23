@@ -23,8 +23,8 @@ import Ubuntu.Components.ListItems 0.1 as ListItems
 Item {
     id: keypad
 
-    property int keysWidth: parent.width / 3 //units.gu(11.33)
-    property int keysHeight: units.gu(7)
+    property int keysWidth: units.gu(13)
+    property int keysHeight: units.gu(8)
 
     width: keys.width
     height: keys.height

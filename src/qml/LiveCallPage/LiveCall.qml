@@ -40,9 +40,7 @@ Page {
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
-        if (dtmfVisible && dtmfLabelHelper.text !== "") {
-            return dtmfLabelHelper.text;
-        } else if (contactWatcher.alias != "") {
+        if (contactWatcher.alias != "") {
             return contactWatcher.alias;
         } else {
             return contactWatcher.phoneNumber;
@@ -208,7 +206,15 @@ Page {
             }
             horizontalAlignment: Qt.AlignHCenter
             width: units.gu(11)
-            text: (call && call.active) ? stopWatch.elapsed : i18n.tr("calling")
+            text: {
+                if (dtmfVisible && dtmfLabelHelper.text !== "") {
+                    return dtmfLabelHelper.text;
+                } else if (call && call.active) {
+                    return stopWatch.elapsed;
+                } else {
+                    return i18n.tr("calling")
+                }
+            }
             fontSize: "x-large"
         }
 
@@ -222,6 +228,7 @@ Page {
             }
             text: caller
             fontSize: "large"
+            color: UbuntuColors.lightAubergine
         }
 
         MultiCallDisplay {
@@ -354,18 +361,21 @@ Page {
     Item {
         id: footer
         height: units.gu(10)
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: units.gu(3)
-        anchors.left: parent.left
-        anchors.right: parent.right
+        anchors {
+            bottom: parent.bottom
+            left: parent.left
+            right: parent.right
+        }
 
         HangupButton {
             id: hangupButton
             objectName: "hangupButton"
 
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: units.gu(2)
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                bottom: parent.bottom
+                bottomMargin: units.gu(5)
+            }
             onClicked: endCall()
         }
     }

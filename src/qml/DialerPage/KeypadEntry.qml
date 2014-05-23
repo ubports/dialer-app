@@ -28,8 +28,7 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
-    // FIXME: enable this once the new tabs are implemented
-    //height: units.gu(11)
+    height: input.height
 
     TextInput {
         id: input
