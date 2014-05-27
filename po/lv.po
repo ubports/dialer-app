@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-05-19 20:14+0000\n"
+"PO-Revision-Date: 2014-05-25 20:21+0000\n"
 "Last-Translator: Jānis-Marks Gailis <jeanmarc.gailis@gmail.com>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-05-22 06:49+0000\n"
+"X-Launchpad-Export-Date: 2014-05-26 06:35+0000\n"
 "X-Generator: Launchpad (build 17017)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
@@ -161,7 +161,7 @@ msgstr "Izveidot jaunu kontaktu"
 
 #: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
@@ -217,7 +217,7 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
@@ -225,11 +225,11 @@ msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Jauns zvans"
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:121
 msgid "Please wait"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
@@ -258,7 +258,7 @@ msgstr "Šodien"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Divi zvani"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
