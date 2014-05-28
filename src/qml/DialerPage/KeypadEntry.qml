@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import Ubuntu.Telephony.PhoneNumber 0.1
 
 FocusScope {
     id: keypadEntry
@@ -42,7 +43,6 @@ FocusScope {
         anchors.rightMargin: units.gu(2)
         anchors.verticalCenter: parent.verticalCenter
         horizontalAlignment: TextInput.AlignHCenter
-        text: ""
         font.pixelSize: units.dp(39)
         font.weight: Font.Light
         font.family: "Ubuntu"
@@ -52,6 +52,20 @@ FocusScope {
         cursorVisible: true
         clip: true
         opacity: 0.9
+
+        AsYouTypeFormatter {
+            id: formatter
+
+            enabled: true
+            defaultRegionCode: "US"
+            text: input.text
+        }
+
+        Binding {
+            target: input
+            property: "text"
+            value: formatter.formattedText
+        }
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
         // https://bugs.launchpad.net/dialer-app/+bug/1188669
