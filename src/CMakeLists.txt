@@ -1,7 +1,5 @@
 set(DIALER_APP dialer-app)
 
-add_definitions(-DI18N_DIRECTORY="${CMAKE_INSTALL_PREFIX}/share/locale")
-
 set(dialer_app_HDRS
     dialerapplication.h
     )
