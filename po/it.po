@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-05-15 11:57+0000\n"
+"PO-Revision-Date: 2014-05-28 17:01+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-29 05:49+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -105,7 +105,7 @@ msgstr "Aggiungi a contatto esistente"
 
 #: src/qml/dialer-app.qml:207
 msgid "Call Barring"
-msgstr ""
+msgstr "Blocco chiamate"
 
 #: src/qml/dialer-app.qml:218
 msgid "Call Forwarding"
@@ -138,7 +138,7 @@ msgstr "Annulla"
 #: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr ""
+msgstr "Conferenza"
 
 #: src/qml/dialer-app.qml:246
 msgid "Connected Line Presentation"
@@ -178,7 +178,7 @@ msgstr "Applicazione per chiamate"
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
-msgstr ""
+msgstr "Scarta"
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
@@ -218,7 +218,7 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Unisci chiamate"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
@@ -280,7 +280,7 @@ msgstr "Ieri"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "attiva"
 
 #: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
@@ -290,4 +290,4 @@ msgstr "in chiamata"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "in attesa"
