@@ -130,6 +130,7 @@ bool DialerApplication::setup()
     m_view->setResizeMode(QQuickView::SizeRootObjectToView);
     m_view->setTitle("Dialer");
     m_view->rootContext()->setContextProperty("application", this);
+    m_view->rootContext()->setContextProperty("i18nDirectory", I18N_DIRECTORY);
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
     // check if there is a contacts backend override
