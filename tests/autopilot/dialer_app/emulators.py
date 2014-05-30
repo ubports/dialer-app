@@ -50,7 +50,28 @@ class LiveCall(MainView):
         return self._click_button(self._get_hangup_button())
 
 
-class DialerPage(MainView):
+class PageWithBottomEdge(MainView):
+    """An emulator class that makes it easy to interact with the bottom edge
+       swipe page"""
+    def __init__(self, *args):
+        super(PageWithBottomEdge, self).__init__(*args)
+
+    def reveal_bottom_edge_page(self):
+        """Bring the bottom edge page to the screen"""
+        self.bottomEdgePageLoaded.wait_for(True)
+        try:
+            action_item = self.wait_select_single('QQuickItem', objectName='bottomEdgeTip')
+            start_x = action_item.globalRect.x + (action_item.globalRect.width * 0.5)
+            start_y = action_item.globalRect.y + (action_item.height * 0.5)
+            stop_y = start_y - (self.height * 0.7)
+            self.pointing_device.drag(start_x, start_y, start_x, stop_y, rate=2)
+            self.isReady.wait_for(True)
+        except StateNotFoundError:
+            logger.error('BottomEdge element not found.')
+            raise
+
+
+class DialerPage(PageWithBottomEdge):
 
     def _get_keypad_entry(self):
         return self.select_single("KeypadEntry")

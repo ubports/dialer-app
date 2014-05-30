@@ -48,7 +48,7 @@ class TestCallLogs(DialerAppTestCase):
         super(TestCallLogs, self).setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
-        self.main_view.switch_to_tab('callLogTab')
+        self.main_view.dialer_page.reveal_bottom_edge_page()
         self._ensure_call_log_item_expanded()
         self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
 
