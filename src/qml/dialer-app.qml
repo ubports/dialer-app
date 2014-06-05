@@ -127,6 +127,8 @@ MainView {
     }
 
     Component.onCompleted: {
+        i18n.domain = "dialer-app"
+        i18n.bindtextdomain("dialer-app", i18nDirectory)
         pageStack.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
