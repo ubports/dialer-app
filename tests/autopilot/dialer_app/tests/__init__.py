@@ -73,11 +73,8 @@ class DialerAppTestCase(AutopilotTestCase):
                 "dialer-app",
                 emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
         else:
-            self.app = self.launch_test_application(
+            self.app = self.launch_upstart_application(
                 "dialer-app",
-                "--desktop_file_hint="
-                "/usr/share/applications/dialer-app.desktop",
-                app_type='qt',
                 emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
 
     def _get_app_proxy_object(self, app_name):

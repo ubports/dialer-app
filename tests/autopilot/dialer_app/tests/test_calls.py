@@ -49,7 +49,7 @@ class TestCalls(DialerAppTestCase):
         super(TestCalls, self).tearDown()
 
         # ensure that there are no leftover calls in case of failed tests
-        subprocess.call(["/usr/share/ofono/scripts/hangup-all"])
+        subprocess.call(["/usr/share/ofono/scripts/hangup-all", "/phonesim"])
 
         # restore history
         if os.path.exists(self.history + ".orig"):

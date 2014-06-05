@@ -1,48 +1,47 @@
-# Brazilian Portuguese translation for dialer-app
-# Copyright (c) 2013 Canonical Ltd 2013
+# Japanese translation for dialer-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-05-19 18:13+0000\n"
-"Last-Translator: Rafael Neri <Unknown>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2014-01-18 15:31+0000\n"
+"Last-Translator: Shushi Kurose <md81bird@hitaki.net>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-05-22 06:49+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
-"Language: pt_BR\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
+"X-Generator: Launchpad (build 17007)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 hora"
-msgstr[1] "%1 horas"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 seg"
-msgstr[1] "%1 seg"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
@@ -98,11 +97,11 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "Adicionar contato"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Adicionar para contato existente"
+msgstr ""
 
 #: src/qml/dialer-app.qml:207
 msgid "Call Barring"
@@ -110,19 +109,19 @@ msgstr ""
 
 #: src/qml/dialer-app.qml:218
 msgid "Call Forwarding"
-msgstr "Encaminhamento de chamada"
+msgstr ""
 
 #: src/qml/dialer-app.qml:229
 msgid "Call Waiting"
-msgstr "Chamada em espera"
+msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Registro de chamadas"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "Ligar agora"
+msgstr ""
 
 #: src/qml/dialer-app.qml:240
 msgid "Calling Line Presentation"
@@ -151,11 +150,11 @@ msgstr ""
 
 #: src/qml/MainPage.qml:45
 msgid "Contacts"
-msgstr "Contatos"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Criar novo contato"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
@@ -163,19 +162,19 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr "Excluir"
+msgstr "削除"
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
-msgstr "Discador"
+msgstr ""
 
 #: src/dialer-app.desktop.in:4
 msgid "Dialer App"
-msgstr "App discador"
+msgstr ""
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
-msgstr "Aplicativo discador"
+msgstr ""
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
@@ -183,7 +182,7 @@ msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
-msgstr "Informe um número"
+msgstr ""
 
 #: src/qml/dialer-app.qml:140
 msgid "Error"
@@ -211,7 +210,7 @@ msgstr "JKL"
 
 #: src/qml/MainPage.qml:35
 msgid "Keypad"
-msgstr "Teclado numérico"
+msgstr "キーパッド"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
@@ -252,7 +251,7 @@ msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Hoje"
+msgstr "今日"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
@@ -260,7 +259,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Desconhecido"
+msgstr "不明"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
@@ -268,7 +267,7 @@ msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Correio de voz"
+msgstr "ボイスメール"
 
 #: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
@@ -276,7 +275,7 @@ msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Ontem"
+msgstr "昨日"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
@@ -286,7 +285,7 @@ msgstr ""
 #: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "chamando"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
