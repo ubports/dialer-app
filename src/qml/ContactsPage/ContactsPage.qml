@@ -32,9 +32,8 @@ Page {
     ContactListView {
         id: contactList
         anchors.fill: parent
-        onContactClicked: {
-            // FIXME: search for favorite number
-            mainView.call(contact.phoneNumber.number)
+        onInfoRequested: {
+           // FIXME: implement
         }
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
