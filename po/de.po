@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2013-10-19 10:26+0000\n"
-"Last-Translator: Daniel Bücheler <daniel.buecheler@t-online.de>\n"
+"PO-Revision-Date: 2014-05-27 13:58+0000\n"
+"Last-Translator: Michael Hahn <michaelr.hahn97@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-05-28 05:54+0000\n"
+"X-Generator: Launchpad (build 17017)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -26,22 +26,22 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 Stunde"
+msgstr[1] "%1 Stunden"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 Minute"
+msgstr[1] "%1 Minuten"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 Sek"
+msgstr[1] "%1 Sek"
 
 #: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
@@ -97,7 +97,7 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr ""
+msgstr "Kontakt hinzufügen"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/qml/dialer-app.qml:218
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Anrufweiterleitung"
 
 #: src/qml/dialer-app.qml:229
 msgid "Call Waiting"
@@ -121,7 +121,7 @@ msgstr "Anrufprotokoll"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr ""
+msgstr "Jetzt anrufen"
 
 #: src/qml/dialer-app.qml:240
 msgid "Calling Line Presentation"
@@ -133,12 +133,12 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr ""
+msgstr "Abbrechen"
 
 #: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr ""
+msgstr "Konferenz"
 
 #: src/qml/dialer-app.qml:246
 msgid "Connected Line Presentation"
@@ -178,7 +178,7 @@ msgstr "Telefonanwendung"
 
 #: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
 msgid "Dismiss"
-msgstr ""
+msgstr "Ablehnen"
 
 #: src/qml/DialerPage/DialerPage.qml:79
 msgid "Enter a number"
@@ -186,7 +186,7 @@ msgstr "Geben Sie eine Zahl ein"
 
 #: src/qml/dialer-app.qml:140
 msgid "Error"
-msgstr ""
+msgstr "Fehler"
 
 #: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
@@ -194,15 +194,15 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "Auflegen"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr ""
+msgstr "Wie möchten Sie den Kontakt speichern?"
 
 #: src/qml/dialer-app.qml:141
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Ungültiger USSD-Code"
 
 #: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
@@ -218,11 +218,11 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Anrufe zusammenführen"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Neuer Anruf"
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
@@ -230,20 +230,20 @@ msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:121
 msgid "Please wait"
-msgstr ""
+msgstr "Bitte warten"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr ""
+msgstr "Kontakt speichern"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "SMS senden"
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
@@ -255,7 +255,7 @@ msgstr "Heute"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Zwei Anrufe"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
@@ -263,7 +263,7 @@ msgstr "Unbekannt"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr ""
+msgstr "Kontakt anzeigen"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
@@ -280,7 +280,7 @@ msgstr "Gestern"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
 #: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
@@ -290,4 +290,4 @@ msgstr "wählen"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "gehalten"
