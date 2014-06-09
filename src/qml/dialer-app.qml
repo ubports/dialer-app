@@ -129,6 +129,12 @@ MainView {
     function populateDialpad(number, accountId) {
         // populate the dialpad with the given number but don't start the call
         // FIXME: check what to do when not in the dialpad view
+
+        // if not on the livecall view, go back to the dialpad
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
         if (pageStack.currentPage && typeof(pageStack.currentPage.dialNumber) != 'undefined') {
             pageStack.currentPage.dialNumber = number;
         }
