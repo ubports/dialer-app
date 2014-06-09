@@ -39,7 +39,11 @@ ListItem.Empty {
     property bool fullView: true
 
     function activate() {
-        mainView.call(model.participants[0], model.accountId)
+        if (fullView) {
+            mainView.call(model.participants[0], model.accountId);
+        } else {
+            mainView.call(model.participants[0], model.accountId);
+        }
     }
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)

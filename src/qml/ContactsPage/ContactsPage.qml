@@ -38,7 +38,7 @@ Page {
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
             pageStack.pop()
-            mainView.call(detail.number)
+            mainView.populateDialer(detail.number)
         }
     }
 

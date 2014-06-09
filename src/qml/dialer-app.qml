@@ -103,6 +103,12 @@ MainView {
             return
         }
 
+        // pop the stack if the live call is not the visible view
+        // FIXME: using the objectName here is not pretty, change by something less prone to errors
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
@@ -118,6 +124,14 @@ MainView {
             return
         }
         callManager.startCall(number);
+    }
+
+    function populateDialpad(number, accountId) {
+        // populate the dialpad with the given number but don't start the call
+        // FIXME: check what to do when not in the dialpad view
+        if (pageStack.currentPage && typeof(pageStack.currentPage.dialNumber) != 'undefined') {
+            pageStack.currentPage.dialNumber = number;
+        }
     }
 
     function switchToKeypadView() {
