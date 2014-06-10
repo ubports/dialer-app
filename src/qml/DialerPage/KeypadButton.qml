@@ -42,7 +42,19 @@ AbstractButton {
 
         Behavior on scale {
             UbuntuNumberAnimation {
-                duration: 250
+                duration: UbuntuAnimation.BriskDuration
+            }
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            color: Qt.rgba(0, 0, 0, 0.15)
+            opacity: button.pressed ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation {
+                    duration: UbuntuAnimation.BriskDuration
+                }
             }
         }
 
