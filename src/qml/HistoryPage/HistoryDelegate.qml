@@ -42,7 +42,7 @@ ListItem.Empty {
         if (fullView) {
             mainView.call(model.participants[0], model.accountId);
         } else {
-            mainView.call(model.participants[0], model.accountId);
+            mainView.populateDialpad(model.participants[0], model.accountId);
         }
     }
 

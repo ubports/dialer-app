@@ -235,18 +235,16 @@ MainView {
 
     Connections {
         target: callManager
-        onForegroundCallChanged: {
-            if(!callManager.hasCalls) {
-                while (pageStack.depth > 1) {
-                    pageStack.pop();
-                }
-                return
+        onHasCallsChanged: {
+            if (!callManager.hasCalls) {
+                return;
             }
-            // if there are no calls, or if the views are already loaded, do not continue processing
-            if ((callManager.foregroundCall || callManager.backgroundCall) && pageStack.depth === 1) {
-                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
-                application.activateWindow();
-            }
+
+            // go back to keypad
+            switchToKeypadView();
+
+            // and load the livecall
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
         }
     }
 

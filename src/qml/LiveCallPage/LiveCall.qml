@@ -49,12 +49,14 @@ Page {
     title: i18n.tr("Call")
     tools: ToolbarItems {
         back: ToolbarButton {
-            iconSource: "image://theme/contact"
+            action: Action {
+                objectName: "fakeBackButton"
+            }
         }
         ToolbarButton {
             objectName: "newCallButton"
             action: Action {
-                iconSource: "image://theme/contact"
+                iconName: "contact"
                 text: i18n.tr("New Call")
                 onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
             }
@@ -62,6 +64,16 @@ Page {
     }
 
     x: header ? header.height : 0
+
+    // if there are no calls, just reset the view
+    Connections {
+        target: callManager
+        onHasCallsChanged: {
+            if(!callManager.hasCalls) {
+                mainView.switchToKeypadView();
+            }
+        }
+    }
 
     states: [
         State {
@@ -102,12 +114,6 @@ Page {
 
     ]
 
-    onActiveChanged: {
-        if (active) {
-            header.__customBackAction = tools.back
-        }
-    }
-
     onCallChanged: {
         // reset the DTMF keypad visibility status
         dtmfVisible = (call && call.voicemail);
@@ -121,7 +127,7 @@ Page {
         onTriggered: {
             if (!callManager.hasCalls) {
                 // TODO: notify about failed call
-                pageStack.pop()
+                mainView.switchToKeypadView();
             }
         }
     }
