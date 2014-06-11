@@ -38,7 +38,11 @@ Page {
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
             pageStack.pop()
-            mainView.populateDialpad(detail.number)
+            if (callManager.hasCalls) {
+                mainView.call(detail.number);
+            } else {
+                mainView.populateDialpad(detail.number)
+            }
         }
     }
 
