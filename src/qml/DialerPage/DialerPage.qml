@@ -21,7 +21,6 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
-//import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 import "../"
 
