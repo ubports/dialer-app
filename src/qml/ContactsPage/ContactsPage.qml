@@ -33,12 +33,12 @@ Page {
         id: contactList
         anchors.fill: parent
         onInfoRequested: {
-           // FIXME: implement
+           mainView.viewContact(contact.contactId)
         }
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
             pageStack.pop()
-            mainView.populateDialer(detail.number)
+            mainView.populateDialpad(detail.number)
         }
     }
 
