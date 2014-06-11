@@ -28,12 +28,13 @@ Page {
     id: historyPage
     objectName: "historyPage"
     property string searchTerm
-    title: i18n.tr("Recent")
+    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
     anchors.fill: parent
     active: false
     property int delegateHeight: delegate.height
     property bool fullView: currentIndex > 2
     property alias currentIndex: historyList.currentIndex
+    property alias selectionMode: historyList.isInSelectionMode
 
     function activateCurrentIndex() {
         if (fullView || !historyList.currentItem) {
@@ -41,6 +42,46 @@ Page {
         }
 
         historyList.currentItem.activate();
+    }
+
+    ToolbarItems {
+        id: historySelectionToolbar
+        visible: false
+        back: ToolbarButton {
+            id: selectionModeCancelButton
+            objectName: "selectionModeCancelButton"
+            action: Action {
+                objectName: "selectionModeCancelAction"
+                iconName: "close"
+                onTriggered: historyList.cancelSelection()
+            }
+        }
+        ToolbarButton {
+            id: selectionModeSelectAllButton
+            objectName: "selectionModeSelectAllButton"
+            action: Action {
+                objectName: "selectionModeSelectAllAction"
+                iconName: "filter"
+                onTriggered: historyList.selectAll()
+            }
+        }
+        ToolbarButton {
+            id: selectionModeDeleteButton
+            objectName: "selectionModeDeleteButton"
+            action: Action {
+                objectName: "selectionModeDeleteAction"
+                enabled: historyList.selectedItems.count > 0
+                iconName: "delete"
+                onTriggered: historyList.endSelection()
+            }
+        }
+    }
+
+    tools: selectionMode ? historySelectionToolbar : null
+    onActiveChanged: {
+        if (!active && selectionMode) {
+            historyList.cancelSelection();
+        }
     }
 
     // Use this delegate just to calculate the height
