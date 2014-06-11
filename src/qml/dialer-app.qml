@@ -31,6 +31,7 @@ MainView {
     width: units.gu(40)
     height: units.gu(71)
     useDeprecatedToolbar: false
+    property bool hasCalls: callManager.hasCalls
 
     signal applicationReady
     signal closeUSSDProgressIndicator
