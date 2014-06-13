@@ -98,7 +98,7 @@ PageWithBottomEdge {
                 top: parent.top
                 topMargin: units.gu(3)
                 left: parent.left
-                right: parent.right
+                right: backspace.left
             }
 
             focus: true
@@ -115,7 +115,7 @@ PageWithBottomEdge {
                 rightMargin: units.gu(1)
                 verticalCenter: keypadEntry.verticalCenter
             }
-            width: units.gu(3)
+            width: input.text !== "" ? units.gu(3) : 0
             height: units.gu(3)
             icon: "erase"
             iconWidth: units.gu(3)
@@ -123,6 +123,10 @@ PageWithBottomEdge {
             opacity: input.text !== "" ? 1 : 0
 
             Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+
+            Behavior on width {
                 UbuntuNumberAnimation { }
             }
 
