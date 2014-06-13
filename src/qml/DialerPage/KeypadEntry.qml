@@ -55,7 +55,9 @@ FocusScope {
         AsYouTypeFormatter {
             id: formatter
 
-            enabled: true
+            // FIXME: this should probably be done in the component itself
+            property string firstDigit: input.text.slice(0,1)
+            enabled: firstDigit != "*" && firstDigit != "#"
             defaultRegionCode: "US"
             text: input.text
         }
