@@ -11,7 +11,7 @@
 
 from autopilot.introspection.dbus import StateNotFoundError
 from ubuntuuitoolkit import emulators as toolkit_emulators
-from autopilot import logging
+import logging
 
 
 class MainView(toolkit_emulators.MainView):
