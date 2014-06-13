@@ -20,7 +20,6 @@ from dialer_app import emulators
 from dialer_app import helpers
 
 import os
-import sys
 import time
 import logging
 import subprocess

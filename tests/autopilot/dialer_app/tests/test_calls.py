@@ -40,7 +40,8 @@ class TestCalls(DialerAppTestCase):
             os.rename(self.history, self.history + ".orig")
 
         # make sure the modem is running on phonesim
-        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/phonesim'])
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/phonesim'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
         super(TestCalls, self).setUp()
@@ -57,7 +58,8 @@ class TestCalls(DialerAppTestCase):
             os.rename(self.history + ".orig", self.history)
 
         # set the modem objpath in telepathy-ofono to the real modem
-        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/ril_0'])
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/ril_0'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
     @property
@@ -74,7 +76,8 @@ class TestCalls(DialerAppTestCase):
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
         number = "144"
-        self.main_view.dialer_page.call_number(number)
+        formattedNumber = "1 44"
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
             self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
@@ -91,8 +94,9 @@ class TestCalls(DialerAppTestCase):
         """Outgoing call, remote answers, local hangs up"""
         # 06123xx causes accept after xx seconds
         number = "0612302"
+        formattedNumber = "061-2302"
 
-        self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
             self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
@@ -108,9 +112,10 @@ class TestCalls(DialerAppTestCase):
     def test_outgoing_answer_remote_hangup(self):
         """Outgoing call, remote answers and hangs up"""
         number = "0512303"
+        formattedNumber = "051-2303"
 
         # 05123xx causes immediate accept and hangup after xx seconds
-        self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
             self.main_view.live_call_page.caller, Eventually(Equals(number)))
 

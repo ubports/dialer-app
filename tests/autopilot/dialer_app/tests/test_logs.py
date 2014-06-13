@@ -22,7 +22,6 @@ from dialer_app import fixture_setup
 
 import os
 import subprocess
-import time
 
 
 @skipIf(model() == 'Desktop',
