@@ -46,7 +46,7 @@ Page {
             return contactWatcher.phoneNumber;
         }
     }
-    title: i18n.tr("Call")
+    title: caller //i18n.tr("Call")
     tools: ToolbarItems {
         back: ToolbarButton {
             action: Action {
