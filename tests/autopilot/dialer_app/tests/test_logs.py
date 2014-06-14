@@ -96,7 +96,7 @@ class TestCallLogs(DialerAppTestCase):
         cntct_app_view = self._get_main_view(cntct_app)
         cntct_edit_pane = cntct_app.select_single(
             objectName='contactEditorPage')
-        numbr_box = cntct_app.select_single(objectName="phoneNumber_0")
+        numbr_box = cntct_app.wait_select_single(objectName="phoneNumber_0")
 
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
         self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))
