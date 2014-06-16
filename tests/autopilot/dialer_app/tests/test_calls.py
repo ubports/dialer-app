@@ -40,15 +40,11 @@ class TestCalls(DialerAppTestCase):
             os.rename(self.history, self.history + ".orig")
 
         # make sure the modem is running on phonesim
-        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/phonesim'])
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/phonesim'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
         super(TestCalls, self).setUp()
-
-        # should have an empty history at the beginning of each test
-        self.history_list = self.app.select_single(objectName="historyList")
-        self.assertThat(self.history_list.visible, Equals(False))
-        self.assertThat(self.history_list.count, Equals(0))
 
     def tearDown(self):
         super(TestCalls, self).tearDown()
@@ -62,31 +58,47 @@ class TestCalls(DialerAppTestCase):
             os.rename(self.history + ".orig", self.history)
 
         # set the modem objpath in telepathy-ofono to the real modem
-        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0', 'string:modem-objpath=/ril_0'])
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/ril_0'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
+
+    @property
+    def history_list(self):
+        # because of the object tree, more than just one item is returned, but
+        # all references point to the same item, so take the first
+        return self.app.select_many(objectName="historyList")[0]
+
+    def get_history_for_number(self, number):
+        # because of the bottom edge tree structure, multiple copies of the
+        # same item are returned, so just use the first one
+        return self.history_list.select_many("Label", text=number)[0]
 
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
         number = "144"
-        self.main_view.dialer_page.call_number(number)
+        formattedNumber = "1 44"
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
-            self.main_view.live_call_page.title, Eventually(Equals(number)))
+            self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
         self.main_view.live_call_page.click_hangup_button()
 
-        # log should show call to "Unknown"
+        # log should show call to the phone number
+        self.main_view.dialer_page.reveal_bottom_edge_page()
         self.assertThat(self.history_list.count, Eventually(Equals(1)))
-        self.assertThat(self.history_list.select_single(
-            "Label", text="Unknown"), NotEquals(None))
+        # because of the bottom edge tree structure, multiple copies of the
+        # same item are returned, so just use the first one
+        self.assertThat(self.get_history_for_number(number), NotEquals(None))
 
     def test_outgoing_answer_local_hangup(self):
         """Outgoing call, remote answers, local hangs up"""
         # 06123xx causes accept after xx seconds
         number = "0612302"
+        formattedNumber = "061-2302"
 
-        self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
-            self.main_view.live_call_page.title, Eventually(Equals(number)))
+            self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
         # stop watch should start counting
         elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
@@ -100,22 +112,22 @@ class TestCalls(DialerAppTestCase):
     def test_outgoing_answer_remote_hangup(self):
         """Outgoing call, remote answers and hangs up"""
         number = "0512303"
+        formattedNumber = "051-2303"
 
         # 05123xx causes immediate accept and hangup after xx seconds
-        self.main_view.dialer_page.call_number(number)
+        self.main_view.dialer_page.call_number(number, formattedNumber)
         self.assertThat(
-            self.main_view.live_call_page.title, Eventually(Equals(number)))
+            self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
         # stop watch should start counting
         elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
         self.assertIn("00:0", elapsed_time)
 
         # after remote hangs up, should switch to call log page and show call
-        # to "Unknown"
+        # to number
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
         self.assertThat(self.history_list.count, Eventually(Equals(1)))
-        self.assertThat(self.history_list.select_single(
-            "Label", text="Unknown"), NotEquals(None))
+        self.assertThat(self.get_history_for_number(number), NotEquals(None))
 
     def test_incoming(self):
         """Incoming call"""
@@ -136,7 +148,7 @@ class TestCalls(DialerAppTestCase):
 
         # call back is from that number
         self.assertThat(
-            self.main_view.live_call_page.title, Eventually(Equals(number)))
+            self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
         # stop watch should start counting
         elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()

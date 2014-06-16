@@ -21,19 +21,47 @@ import QtQuick 2.0
 import Ubuntu.Components 0.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
-import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import "../"
 
-Page {
+PageWithBottomEdge {
     id: page
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
 
     tools: ToolbarItems {
-        opened: false
-        locked: true
+        ToolbarButton {
+            objectName: "contactButton"
+            action: Action {
+                iconSource: "image://theme/contact"
+                text: i18n.tr("Contacts")
+                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            }
+        }
     }
+
+    title: i18n.tr("Keypad")
+
+    // -------- Bottom Edge Setup -----
+    bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
+    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
+    bottomEdgeTitle: i18n.tr("Recent")
+    reloadBottomEdgePage: false
+
+    property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
+
+    Binding {
+        target: bottomEdgePage
+        when: bottomEdgePage
+        property: "currentIndex"
+        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
+    }
+    onBottomEdgeReleased: {
+        bottomEdgePage.activateCurrentIndex()
+    }
+
+
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
             // check for custom strings
@@ -50,8 +78,8 @@ Page {
     Connections {
         target: mainView
         onPendingNumberToDialChanged: {
+            keypadEntry.value = mainView.pendingNumberToDial;
             if (mainView.pendingNumberToDial !== "") {
-                keypadEntry.value = mainView.pendingNumberToDial;
                 mainView.switchToKeypadView();
             }
         }
@@ -63,27 +91,15 @@ Page {
         anchors.fill: parent
         focus: true
 
-        Rectangle {
-            id: keypadEntryBackground
-            anchors.top: parent.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: keypad.top
-            anchors.bottomMargin: units.gu(1.5)
-            color: "#FFFFFF"
-            opacity: 0.05
-        }
-
         KeypadEntry {
             id: keypadEntry
 
-            // TODO: remove anchors.top once the new tabs are implemented
-            anchors.top: parent.top
-            anchors.topMargin: units.gu(2)
-            anchors.bottom: contactSearch.top
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottomMargin: units.gu(1)
+            anchors {
+                top: parent.top
+                topMargin: units.gu(3)
+                left: parent.left
+                right: backspace.left
+            }
 
             focus: true
             placeHolder: i18n.tr("Enter a number")
@@ -91,7 +107,41 @@ Page {
             value: mainView.pendingNumberToDial
         }
 
-        ContactSearchListView {
+        CustomButton {
+            id: backspace
+            objectName: "eraseButton"
+            anchors {
+                right: parent.right
+                rightMargin: units.gu(2)
+                verticalCenter: keypadEntry.verticalCenter
+            }
+            width: input.text !== "" ? units.gu(3) : 0
+            height: units.gu(3)
+            icon: "erase"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            opacity: input.text !== "" ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+
+            Behavior on width {
+                UbuntuNumberAnimation { }
+            }
+
+            onPressAndHold: input.text = ""
+
+            onClicked:  {
+                if (input.cursorPosition != 0)  {
+                    var position = input.cursorPosition;
+                    input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
+                    input.cursorPosition = position - 1;
+                }
+            }
+        }
+
+        /*ContactSearchListView {
             id: contactSearch
             property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
             anchors {
@@ -148,32 +198,60 @@ Page {
             }
 
             // FIXME: uncomment this code if we end up having both the header and the toolbar.
-            /*onCountChanged: {
+            onCountChanged: {
                 if (count > 0) {
                     page.header.hide();
                 } else {
                     page.header.show();
                 }
-            }*/
+            }
 
             onDetailClicked: {
                 mainView.call(detail.number);
             }
-        }
+        }*/
 
         ListItems.ThinDivider {
             id: divider
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: keypadEntryBackground.bottom
+            anchors {
+                left: parent.left
+                leftMargin: units.gu(2)
+                right: parent.right
+                rightMargin: units.gu(2)
+                top: keypadEntry.bottom
+                topMargin: units.gu(4)
+            }
+        }
+
+        ContactWatcher {
+            id: contactWatcher
+            phoneNumber: keypadEntry.value
+        }
+
+        Label {
+            id: contactLabel
+            anchors {
+                horizontalCenter: divider.horizontalCenter
+                bottom: divider.top
+                bottomMargin: units.gu(1)
+            }
+            text: contactWatcher.isUnknown ? "" : contactWatcher.alias
+            color: UbuntuColors.lightAubergine
+            opacity: text != "" ? 1 : 0
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
         }
 
         Keypad {
             id: keypad
 
-            anchors.bottom: footer.top
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                bottom: footer.top
+                bottomMargin: units.gu(3)
+                horizontalCenter: parent.horizontalCenter
+            }
 
             onKeyPressed: {
                 if (input.cursorPosition != 0)  {
@@ -198,7 +276,7 @@ Page {
                 id: callButton
                 objectName: "callButton"
                 anchors.bottom: footer.bottom
-                anchors.bottomMargin: units.gu(2)
+                anchors.bottomMargin: units.gu(5)
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
@@ -208,29 +286,6 @@ Page {
                 enabled: dialNumber != "" && telepathyHelper.connected
             }
 
-            CustomButton {
-                id: backspace
-                objectName: "eraseButton"
-                anchors.left: callButton.right
-                anchors.verticalCenter: callButton.verticalCenter
-                anchors.leftMargin: units.gu(2)
-                width: units.gu(7)
-                height: units.gu(7)
-                icon: "erase"
-                lighten: input.text != ""
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-
-                onPressAndHold: input.text = ""
-
-                onClicked:  {
-                    if (input.cursorPosition != 0)  {
-                        var position = input.cursorPosition;
-                        input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
-                        input.cursorPosition = position - 1;
-                    }
-                }
-            }
         }
     }
 }

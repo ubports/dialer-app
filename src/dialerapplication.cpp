@@ -196,9 +196,11 @@ void DialerApplication::parseArgument(const QString &arg)
 
     if (scheme == "tel") {
         if (value == "voicemail") {
+            // FIXME: check if we should call the voicemail directly or just populate it
             QMetaObject::invokeMethod(mainView, "callVoicemail");
         } else {
-            QMetaObject::invokeMethod(mainView, "call", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()));
+            // do not call the number directly, instead only populate the dialpad view
+            QMetaObject::invokeMethod(mainView, "populateDialpad", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()));
         }
     }
 }

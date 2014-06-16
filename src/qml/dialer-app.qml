@@ -30,6 +30,8 @@ MainView {
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
+    useDeprecatedToolbar: false
+    property bool hasCalls: callManager.hasCalls
 
     signal applicationReady
     signal closeUSSDProgressIndicator
@@ -102,6 +104,12 @@ MainView {
             return
         }
 
+        // pop the stack if the live call is not the visible view
+        // FIXME: using the objectName here is not pretty, change by something less prone to errors
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
         if (pageStack.depth === 1 && !callManager.hasCalls)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
@@ -119,24 +127,46 @@ MainView {
         callManager.startCall(number);
     }
 
-    function switchToCallLogView() {
-        pageStack.currentPage.currentTab = 2;
+    function populateDialpad(number, accountId) {
+        // populate the dialpad with the given number but don't start the call
+        // FIXME: check what to do when not in the dialpad view
+
+        // if not on the livecall view, go back to the dialpad
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
+        if (pageStack.currentPage && typeof(pageStack.currentPage.dialNumber) != 'undefined') {
+            pageStack.currentPage.dialNumber = number;
+        }
     }
 
     function switchToKeypadView() {
-        pageStack.currentPage.currentTab = 0;
+        while (pageStack.depth > 1) {
+            pageStack.pop();
+        }
     }
 
     Component.onCompleted: {
-        Theme.name = "Ubuntu.Components.Themes.SuruGradient";
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
-        pageStack.push(Qt.createComponent("MainPage.qml"))
+        pageStack.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
         }
+    }
+
+    Image {
+        id: background
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        source: Qt.resolvedUrl("assets/dialer_background_full.png")
     }
 
     Component {
@@ -206,18 +236,16 @@ MainView {
 
     Connections {
         target: callManager
-        onForegroundCallChanged: {
-            if(!callManager.hasCalls) {
-                while (pageStack.depth > 1) {
-                    pageStack.pop();
-                }
-                return
+        onHasCallsChanged: {
+            if (!callManager.hasCalls) {
+                return;
             }
-            // if there are no calls, or if the views are already loaded, do not continue processing
-            if ((callManager.foregroundCall || callManager.backgroundCall) && pageStack.depth === 1) {
-                pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
-                application.activateWindow();
-            }
+
+            // go back to keypad
+            switchToKeypadView();
+
+            // and load the livecall
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
         }
     }
 

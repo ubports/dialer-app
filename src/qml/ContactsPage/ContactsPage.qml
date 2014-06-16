@@ -26,17 +26,24 @@ import QtContacts 5.0
 Page {
     id: contactsPage
     objectName: "contactsPage"
+    title: i18n.tr("Contacts")
     property QtObject contact
 
     ContactListView {
         id: contactList
         anchors.fill: parent
-        onContactClicked: {
-            // FIXME: search for favorite number
-            mainView.call(contact.phoneNumber.number)
+        onInfoRequested: {
+           mainView.viewContact(contact.contactId)
         }
         detailToPick: ContactDetail.PhoneNumber
-        onDetailClicked: mainView.call(detail.number)
+        onDetailClicked: {
+            pageStack.pop()
+            if (callManager.hasCalls) {
+                mainView.call(detail.number);
+            } else {
+                mainView.populateDialpad(detail.number)
+            }
+        }
     }
 
 }

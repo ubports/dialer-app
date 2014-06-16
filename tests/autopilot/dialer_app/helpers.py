@@ -96,7 +96,7 @@ def ensure_ofono_account():
             break
         time.sleep(1)
     else:
-        raise exceptions.RuntimeError("oFono phone simulator didn't get online.")
+        raise exceptions.RuntimeError("oFono simulator didn't get online.")
 
     # this is a bit drastic, but sometimes mission-control-5 won't recognize
     # clients installed after it was started, so, we make sure it gets

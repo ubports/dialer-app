@@ -9,12 +9,15 @@
 
 """Dialer app autopilot emulators."""
 
+from autopilot.introspection.dbus import StateNotFoundError
 from ubuntuuitoolkit import emulators as toolkit_emulators
+import logging
 
 
 class MainView(toolkit_emulators.MainView):
     def __init__(self, *args):
         super(MainView, self).__init__(*args)
+        self.logger = logging.getLogger(__name__)
 
     @property
     def dialer_page(self):
@@ -22,6 +25,8 @@ class MainView(toolkit_emulators.MainView):
 
     @property
     def live_call_page(self):
+        # wait until we actually have the calls before returning the live call
+        self.hasCalls.wait_for(True)
         return self.wait_select_single(LiveCall)
 
     def get_first_log(self):
@@ -50,7 +55,31 @@ class LiveCall(MainView):
         return self._click_button(self._get_hangup_button())
 
 
-class DialerPage(MainView):
+class PageWithBottomEdge(MainView):
+    """An emulator class that makes it easy to interact with the bottom edge
+       swipe page"""
+    def __init__(self, *args):
+        super(PageWithBottomEdge, self).__init__(*args)
+
+    def reveal_bottom_edge_page(self):
+        """Bring the bottom edge page to the screen"""
+        self.bottomEdgePageLoaded.wait_for(True)
+        try:
+            action_item = self.wait_select_single('QQuickItem',
+                                                  objectName='bottomEdgeTip')
+            start_x = (action_item.globalRect.x +
+                      (action_item.globalRect.width * 0.5))
+            start_y = action_item.globalRect.y + (action_item.height * 0.5)
+            stop_y = start_y - (self.height * 0.7)
+            self.pointing_device.drag(start_x, start_y, start_x, stop_y,
+                                      rate=2)
+            self.isReady.wait_for(True)
+        except StateNotFoundError:
+            self.logger.error('BottomEdge element not found.')
+            raise
+
+
+class DialerPage(PageWithBottomEdge):
 
     def _get_keypad_entry(self):
         return self.select_single("KeypadEntry")
@@ -99,7 +128,7 @@ class DialerPage(MainView):
         """
         self._click_button(keypad_button)
 
-    def dial_number(self, number):
+    def dial_number(self, number, formattedNumber):
         """Dial given number (string) on the keypad and return keypad entry
 
         :param number: the number to dial
@@ -109,11 +138,11 @@ class DialerPage(MainView):
             self.click_keypad_button(button)
 
         entry = self._get_keypad_entry()
-        entry.value.wait_for(number)
+        entry.value.wait_for(formattedNumber)
         return entry
 
-    def call_number(self, number):
+    def call_number(self, number, formattedNumber):
         """Dial number and call return call_button"""
-        self.dial_number(number)
+        self.dial_number(number, formattedNumber)
         self.click_call_button()
         return self.get_root_instance().wait_select_single(LiveCall)
