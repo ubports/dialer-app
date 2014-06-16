@@ -112,7 +112,7 @@ PageWithBottomEdge {
             objectName: "eraseButton"
             anchors {
                 right: parent.right
-                rightMargin: units.gu(1)
+                rightMargin: units.gu(2)
                 verticalCenter: keypadEntry.verticalCenter
             }
             width: input.text !== "" ? units.gu(3) : 0
