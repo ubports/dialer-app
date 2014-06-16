@@ -71,6 +71,7 @@ Page {
         onHasCallsChanged: {
             if(!callManager.hasCalls) {
                 mainView.switchToKeypadView();
+                pageStack.currentPage.dialNumber = pendingNumberToDial;
             }
         }
     }
