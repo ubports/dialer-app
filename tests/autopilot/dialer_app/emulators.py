@@ -103,11 +103,12 @@ class DialerPage(PageWithBottomEdge):
             "#": "buttonHash",
         }
         return self.wait_select_single("KeypadButton",
-                                  objectName=buttons_dict[number])
+                                       objectName=buttons_dict[number])
 
     def _get_erase_button(self):
         """Return the erase button"""
-        return self.wait_select_single("CustomButton", objectName="eraseButton")
+        return self.wait_select_single("CustomButton",
+                                       objectName="eraseButton")
 
     def _get_call_button(self):
         """Return the call button"""

@@ -71,7 +71,8 @@ class TestCallLogs(DialerAppTestCase):
 
         msg_app = self._get_app_proxy_object('messaging-app')
         msg_app_view = self._get_main_view(msg_app)
-        msgs_pane = msg_app.wait_select_single(objectName='messagesPage', title='800')
+        msgs_pane = msg_app.wait_select_single(objectName='messagesPage',
+                                               title='800')
 
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
