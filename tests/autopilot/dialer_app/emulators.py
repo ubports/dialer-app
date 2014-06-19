@@ -82,7 +82,7 @@ class PageWithBottomEdge(MainView):
 class DialerPage(PageWithBottomEdge):
 
     def _get_keypad_entry(self):
-        return self.select_single("KeypadEntry")
+        return self.wait_select_single("KeypadEntry")
 
     def _get_keypad_keys(self):
         return self.select_many("KeypadButton")
@@ -102,16 +102,16 @@ class DialerPage(PageWithBottomEdge):
             "*": "buttonAsterisk",
             "#": "buttonHash",
         }
-        return self.select_single("KeypadButton",
+        return self.wait_select_single("KeypadButton",
                                   objectName=buttons_dict[number])
 
     def _get_erase_button(self):
         """Return the erase button"""
-        return self.select_single("CustomButton", objectName="eraseButton")
+        return self.wait_select_single("CustomButton", objectName="eraseButton")
 
     def _get_call_button(self):
         """Return the call button"""
-        return self.select_single(objectName="callButton")
+        return self.wait_select_single(objectName="callButton")
 
     def click_call_button(self):
         """Click and return the call button"""
