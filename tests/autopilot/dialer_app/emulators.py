@@ -27,7 +27,7 @@ class MainView(toolkit_emulators.MainView):
     def live_call_page(self):
         # wait until we actually have the calls before returning the live call
         self.hasCalls.wait_for(True)
-        return self.wait_select_single(LiveCall)
+        return self.wait_select_single(LiveCall, active=True)
 
     def get_first_log(self):
         return self.wait_select_single(objectName="historyDelegate0")
