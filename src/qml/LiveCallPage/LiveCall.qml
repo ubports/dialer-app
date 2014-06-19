@@ -120,6 +120,14 @@ Page {
         dtmfVisible = (call && call.voicemail);
     }
 
+    onActiveChanged: {
+        callManager.callIndicatorVisible = !active;
+    }
+
+    Component.onCompleted: {
+        callManager.callIndicatorVisible = !active;
+    }
+
     Timer {
         id: callWatcher
         interval: 10000
