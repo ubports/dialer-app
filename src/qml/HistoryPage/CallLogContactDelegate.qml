@@ -69,13 +69,6 @@ Item {
     Component {
         id: addPhoneNumberToContactSheet
         DefaultSheet {
-            // FIXME: workaround to set the contact list
-            // background to black
-            Rectangle {
-                anchors.fill: parent
-                anchors.margins: -units.gu(1)
-                color: "#221e1c"
-            }
             id: sheet
             title: i18n.tr("Add Contact")
             doneButton: false
@@ -84,10 +77,10 @@ Item {
             contentsWidth: parent.width
             ContactListView {
                 anchors.fill: parent
-                onContactClicked: {
+                /*onContactClicked: {
                     mainView.addPhoneNumberToExistingContact(contact.contactId, phoneNumber)
                     PopupUtils.close(sheet)
-                }
+                }*/
             }
         }
     }

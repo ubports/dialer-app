@@ -45,7 +45,7 @@ class TestCallLogs(DialerAppTestCase):
         super(TestCallLogs, self).setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
-        self.main_view.switch_to_tab('callLogTab')
+        self.main_view.dialer_page.reveal_bottom_edge_page()
         self._ensure_call_log_item_expanded()
         self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
 
@@ -69,7 +69,7 @@ class TestCallLogs(DialerAppTestCase):
 
         msg_app = self._get_app_proxy_object('messaging-app')
         msg_app_view = self._get_main_view(msg_app)
-        msgs_pane = msg_app.select_single(objectName='messagesPage')
+        msgs_pane = msg_app.wait_select_single(objectName='messagesPage', title='800')
 
         self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
         self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
@@ -94,7 +94,7 @@ class TestCallLogs(DialerAppTestCase):
         cntct_app_view = self._get_main_view(cntct_app)
         cntct_edit_pane = cntct_app.select_single(
             objectName='contactEditorPage')
-        numbr_box = cntct_app.select_single(objectName="phoneNumber_0")
+        numbr_box = cntct_app.wait_select_single(objectName="phoneNumber_0")
 
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
         self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))

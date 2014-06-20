@@ -21,8 +21,8 @@ import Ubuntu.Components 0.1
 
 AbstractButton {
     id: button
-    width: units.gu(18)
-    height: units.gu(6)
+    width: units.gu(21)
+    height: units.gu(4.5)
     opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
     UbuntuShape {
@@ -30,13 +30,12 @@ AbstractButton {
         color: "#0F8B21"
         gradientColor: "#37B349"
         radius: "medium"
-
     }
 
     Icon {
         anchors.centerIn: parent
-        width: units.gu(4)
-        height: units.gu(4)
+        width: units.gu(3)
+        height: units.gu(3)
         name: "call-start"
         color: "white"
         z: 1

@@ -27,12 +27,83 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyPage
     objectName: "historyPage"
-    tools: ToolbarItems {
-        opened: false
-        locked: true
+    property string searchTerm
+    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
+    anchors.fill: parent
+    active: false
+    property int delegateHeight: delegate.height
+    property bool fullView: currentIndex > 2
+    property alias currentIndex: historyList.currentIndex
+    property alias selectionMode: historyList.isInSelectionMode
+
+    function activateCurrentIndex() {
+        if (fullView || !historyList.currentItem) {
+            return;
+        }
+
+        historyList.currentItem.activate();
     }
 
-    property string searchTerm
+    ToolbarItems {
+        id: historySelectionToolbar
+        visible: false
+        back: ToolbarButton {
+            id: selectionModeCancelButton
+            objectName: "selectionModeCancelButton"
+            action: Action {
+                objectName: "selectionModeCancelAction"
+                iconName: "close"
+                onTriggered: historyList.cancelSelection()
+            }
+        }
+        ToolbarButton {
+            id: selectionModeSelectAllButton
+            objectName: "selectionModeSelectAllButton"
+            action: Action {
+                objectName: "selectionModeSelectAllAction"
+                iconName: "filter"
+                onTriggered: historyList.selectAll()
+            }
+        }
+        ToolbarButton {
+            id: selectionModeDeleteButton
+            objectName: "selectionModeDeleteButton"
+            action: Action {
+                objectName: "selectionModeDeleteAction"
+                enabled: historyList.selectedItems.count > 0
+                iconName: "delete"
+                onTriggered: historyList.endSelection()
+            }
+        }
+    }
+
+    tools: selectionMode ? historySelectionToolbar : null
+    onActiveChanged: {
+        if (!active && selectionMode) {
+            historyList.cancelSelection();
+        }
+    }
+
+    // Use this delegate just to calculate the height
+    HistoryDelegate {
+        id: delegate
+        visible: false
+        property variant model: Item {
+            property string senderId: "dummy"
+            property variant participants: ["dummy"]
+        }
+    }
+
+    // FIXME: this is a big hack to fix the placing of the listview items
+    // when dragging the bottom edge
+    flickable: null
+    Connections {
+        target: pageStack
+        onDepthChanged: {
+            if (pageStack.depth > 1)
+                flickable = historyList
+        }
+    }
 
     HistoryEventModel {
         id: historyEventModel
@@ -66,12 +137,12 @@ Page {
         property int currentContactExpanded: -1
         anchors.fill: parent
         listModel: sortProxy
-        acceptAction.text: i18n.tr("Delete")
-        section.property: "date"
+        /*section.property: "date"
         section.delegate: Item {
             anchors.left: parent.left
             anchors.right: parent.right
-            height: units.gu(5)
+            height: historyPage.fullView ? 0 : units.gu(5)
+            clip: true
             Label {
                 anchors.left: parent.left
                 anchors.leftMargin: units.gu(2)
@@ -86,7 +157,7 @@ Page {
             ListItem.ThinDivider {
                 anchors.bottom: parent.bottom
             }
-        }
+        }*/
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
@@ -105,6 +176,7 @@ Page {
                 selected: historyList.isSelected(historyDelegate)
                 isFirst: model.index == 0
                 removable: !historyList.isInSelectionMode
+                fullView: historyPage.fullView
 
                 Item {
                     Connections {

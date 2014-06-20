@@ -31,17 +31,48 @@ ListItem.Empty {
     property bool incoming: model.senderId != "self"
     property bool unknownContact: contactWatcher.contactId == ""
     property string phoneNumberSubTypeLabel: ""
-    property alias isFirst: timeline.isFirst
+    property bool isFirst: false
     property alias contactId: contactWatcher.contactId
     property bool detailsShown: false
     property alias interactive: contactWatcher.interactive
     property alias animating: detailsToggleAnimation.running
+    property bool fullView: true
+
+    function activate() {
+        if (fullView) {
+            mainView.call(model.participants[0], model.accountId);
+        } else {
+            mainView.populateDialpad(model.participants[0], model.accountId);
+        }
+    }
 
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
     removable: true
     confirmRemoval: true
     showDivider: true
     clip: true
+
+    states: [
+        State {
+            name: "basicView"
+            when: !fullView
+            PropertyChanges {
+                target: time
+                opacity: 0
+            }
+            PropertyChanges {
+                target: callType
+                opacity: 0
+            }
+        }
+    ]
+    transitions: [
+        Transition {
+            UbuntuNumberAnimation {
+                properties: "opacity"
+            }
+        }
+    ]
 
     Behavior on height {
         UbuntuNumberAnimation { id: detailsToggleAnimation }
@@ -51,13 +82,22 @@ ListItem.Empty {
         historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
     }
 
-    function selectIcon()  {
+    function selectCallType()  {
         if (model.callMissed) {
-            return "missed-call";
+            return i18n.tr("Missed");
         } else if (incoming) {
-            return "incoming-call";
+            return i18n.tr("Incoming");
         } else {
-            return "outgoing-call";
+            return i18n.tr("Outgoing");
+        }
+    }
+
+    Rectangle {
+        anchors.fill: parent
+        color: "black"
+        opacity: historyDelegate.ListView.isCurrentItem && !fullView ? 0.2 : 0
+        Behavior on opacity {
+            UbuntuNumberAnimation { }
         }
     }
 
@@ -90,18 +130,9 @@ ListItem.Empty {
         }
     }
 
-    Timeline {
-        id: timeline
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.left: parent.left
-        anchors.leftMargin: units.gu(1)
-        mainAreaHeight: mainSection.height
-    }
-
     Item {
         id: mainSection
-        anchors.left: timeline.right
+        anchors.left: parent.left
         anchors.right: selectionMark.left
         anchors.top: parent.top
         height: units.gu(8)
@@ -117,7 +148,7 @@ ListItem.Empty {
                 property bool defaultAvatar: unknownContact || contactWatcher.avatar == ""
                 fillMode: Image.PreserveAspectCrop
                 asynchronous: true
-                source: defaultAvatar ? Qt.resolvedUrl("../assets/contact_defaulticon.png") : contactWatcher.avatar
+                source: defaultAvatar ? "image://theme/contact" : contactWatcher.avatar
                 sourceSize.width: defaultAvatar ? undefined : width * 1.5
                 sourceSize.height: defaultAvatar ? undefined : height * 1.5
             }
@@ -136,8 +167,9 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
-            text: contactWatcher.alias != "" ? contactWatcher.alias : i18n.tr("Unknown")
+            text: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
             elide: Text.ElideRight
+            color: UbuntuColors.lightAubergine
         }
 
         Label {
@@ -151,22 +183,10 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.2
+            opacity: 0.5
             // FIXME: handle conference call
             text: phoneNumberSubTypeLabel
-            visible: interactive // non-interactive entries are calls from unknown or private numbers
-        }
-
-        Icon {
-            id: phoneIcon
-            anchors {
-                left: phoneLabel.right
-                leftMargin: units.gu(1)
-                verticalCenter: phoneLabel.verticalCenter
-            }
-            width:  units.gu(1.5)
-            height: width
-            name: selectIcon()
+            visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
         }
 
         // time and duration on the right side of the delegate
@@ -184,7 +204,7 @@ ListItem.Empty {
         }
 
         Label {
-            id: duration
+            id: callType
             anchors {
                 right: parent.right
                 rightMargin: units.gu(2)
@@ -193,9 +213,8 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.2
-            text: DateUtils.formatFriendlyCallDuration(model.callDuration)
-            visible: !model.callMissed
+            opacity: 0.4
+            text: selectCallType()
         }
     }
 

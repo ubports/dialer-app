@@ -42,7 +42,19 @@ AbstractButton {
 
         Behavior on scale {
             UbuntuNumberAnimation {
-                duration: 250
+                duration: UbuntuAnimation.BriskDuration
+            }
+        }
+
+        Rectangle {
+            anchors.fill: parent
+            color: Qt.rgba(0, 0, 0, 0.15)
+            opacity: button.pressed ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation {
+                    duration: UbuntuAnimation.BriskDuration
+                }
             }
         }
 
@@ -57,7 +69,6 @@ AbstractButton {
             height: paintedHeight
             font.weight: Font.DemiBold
             verticalAlignment: Text.AlignTop
-            color: "#F3F3E7"
         }
 
         Label {
@@ -68,7 +79,6 @@ AbstractButton {
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
             fontSize: "x-small"
-            color: "#888888"
         }
 
         Icon {
