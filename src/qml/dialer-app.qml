@@ -146,7 +146,7 @@ MainView {
             pageStack.pop();
         }
 
-        if (pageStack.depth === 1 && !callManager.hasCalls)  {
+        if (pageStack.depth === 1)  {
             pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
         }
     }
