@@ -30,8 +30,11 @@ PageWithBottomEdge {
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
 
+    objectName: "dialerPage"
+
     tools: ToolbarItems {
         ToolbarButton {
+            id: contactButton
             objectName: "contactButton"
             action: Action {
                 iconSource: "image://theme/contact"
@@ -41,7 +44,26 @@ PageWithBottomEdge {
         }
     }
 
+    ToolbarItems {
+        id: emptyToolbar
+        visible: false
+    }
+
     title: i18n.tr("Keypad")
+
+    // -------- Greeter mode ----------
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+
+            PropertyChanges {
+                target: page
+                tools: emptyToolbar
+                bottomEdgeEnabled: false
+            }
+        }
+    ]
 
     // -------- Bottom Edge Setup -----
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")

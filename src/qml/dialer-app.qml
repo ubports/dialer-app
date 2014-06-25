@@ -24,6 +24,8 @@ import Ubuntu.Telephony 0.1
 MainView {
     id: mainView
 
+    objectName: "mainView"
+
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
@@ -48,15 +50,37 @@ MainView {
         }
     }
 
+    // FIXME: remove this test code before releasing
     Item {
         id: greeter
-        property bool greeterActive: true
+        property bool greeterActive: false
+    }
+
+    Timer {
+        id: greeterTimer
+        repeat: true
+        running: true
+        interval: 3000
+        onTriggered: {
+            greeter.greeterActive = !greeter.greeterActive
+        }
     }
 
     states: [
         State {
             name: "greeterMode"
             when: greeter.greeterActive
+
+            StateChangeScript {
+                script: {
+                    // make sure to reset the view so that the contacts page is not loaded
+                    if (callManager.hasCalls) {
+                        switchToLiveCall();
+                    } else {
+                        switchToKeypadView();
+                    }
+                }
+            }
         }
     ]
 
