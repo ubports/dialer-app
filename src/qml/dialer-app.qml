@@ -116,15 +116,7 @@ MainView {
             return
         }
 
-        // pop the stack if the live call is not the visible view
-        // FIXME: using the objectName here is not pretty, change by something less prone to errors
-        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
-            pageStack.pop();
-        }
-
-        if (pageStack.depth === 1 && !callManager.hasCalls)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
-        }
+        switchToLiveCall();
 
         if (!accountReady) {
             pendingNumberToDial = number;
@@ -159,6 +151,18 @@ MainView {
         }
     }
 
+    function switchToLiveCall() {
+        // pop the stack if the live call is not the visible view
+        // FIXME: using the objectName here is not pretty, change by something less prone to errors
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
+        if (pageStack.depth === 1)  {
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
+        }
+    }
+
     Component.onCompleted: {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
@@ -166,7 +170,7 @@ MainView {
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            switchToLiveCall();
         }
     }
 
@@ -253,11 +257,8 @@ MainView {
                 return;
             }
 
-            // go back to keypad
-            switchToKeypadView();
-
-            // and load the livecall
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            // load the live call
+            switchToLiveCall();
         }
     }
 
