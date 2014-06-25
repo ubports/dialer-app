@@ -48,6 +48,18 @@ MainView {
         }
     }
 
+    Item {
+        id: greeter
+        property bool greeterActive: true
+    }
+
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+        }
+    ]
+
     function viewContact(contactId) {
         Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
     }
