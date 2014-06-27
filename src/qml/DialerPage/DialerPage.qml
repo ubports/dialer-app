@@ -305,7 +305,17 @@ PageWithBottomEdge {
                     mainView.call(keypadEntry.value);
                     keypadEntry.value = "";
                 }
-                enabled: dialNumber != "" && telepathyHelper.connected
+                enabled: {
+                    if (dialNumber == "") {
+                        return false;
+                    }
+
+                    if (greeter.greeterActive || !telepathyHelper.connected) {
+                        return mainView.isEmergencyNumber(dialNumber);
+                    }
+
+                    return true;
+                }
             }
 
         }

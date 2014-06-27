@@ -66,6 +66,10 @@ MainView {
         }
     }
 
+    PhoneUtils {
+        id: phoneUtils
+    }
+
     states: [
         State {
             name: "greeterMode"
@@ -83,6 +87,15 @@ MainView {
             }
         }
     ]
+
+    function isEmergencyNumber(number) {
+        for (var i in callManager.emergencyNumbers) {
+            if (phoneUtils.comparePhoneNumbers(number, callManager.emergencyNumbers[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     function viewContact(contactId) {
         Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
