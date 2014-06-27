@@ -50,22 +50,6 @@ MainView {
         }
     }
 
-    // FIXME: remove this test code before releasing
-    Item {
-        id: greeter
-        property bool greeterActive: false
-    }
-
-    Timer {
-        id: greeterTimer
-        repeat: true
-        running: true
-        interval: 3000
-        onTriggered: {
-            greeter.greeterActive = !greeter.greeterActive
-        }
-    }
-
     PhoneUtils {
         id: phoneUtils
     }
@@ -141,7 +125,7 @@ MainView {
             return
         }
 
-        if (!telepathyHelper.connected) {
+        if (!telepathyHelper.connected && !isEmergencyNumber((number))) {
             pendingNumberToDial = number;
             pendingAccountId = accountId;
             return;
