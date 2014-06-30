@@ -29,12 +29,30 @@ Page {
     title: i18n.tr("Contacts")
     property QtObject contact
 
+    __customHeaderContents: TextField {
+        id: searchField
+
+        anchors {
+            left: parent.left
+            leftMargin: units.gu(2)
+            right: parent.right
+            rightMargin: units.gu(2)
+            topMargin: units.gu(1.5)
+            bottomMargin: units.gu(1.5)
+            verticalCenter: parent.verticalCenter
+        }
+        onTextChanged: contactList.currentIndex = -1
+        inputMethodHints: Qt.ImhNoPredictiveText
+        placeholderText: i18n.tr("Type a name or phone to search")
+    }
+
     ContactListView {
         id: contactList
         anchors.fill: parent
         onInfoRequested: {
            mainView.viewContact(contact.contactId)
         }
+        filterTerm: searchField.text
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
             pageStack.pop()
@@ -44,7 +62,12 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
+        onCountChanged: {
+            // move list up if searching
+            if (searchField.text !== "") {
+                contactList.positionViewAtBeginning()
+            }
+        }
     }
-
 }
 
