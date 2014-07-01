@@ -1,3 +1,10 @@
+dialer-app (0.1+14.10.20140701-0ubuntu1) utopic; urgency=low
+
+  [ Michał Sawicz ]
+  * New icon from suru theme.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 01 Jul 2014 07:33:40 +0000
+
 dialer-app (0.1+14.10.20140616-0ubuntu1) utopic; urgency=low
 
   [ Gustavo Pichorim Boiko ]
