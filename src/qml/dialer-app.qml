@@ -98,6 +98,9 @@ MainView {
     }
 
     function callVoicemail() {
+        if (greeter.greeterActive) {
+            return;
+        }
         call(callManager.voicemailNumber);
     }
 

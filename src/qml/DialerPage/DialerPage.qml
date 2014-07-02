@@ -62,10 +62,15 @@ PageWithBottomEdge {
                 tools: emptyToolbar
                 bottomEdgeEnabled: false
             }
+            PropertyChanges {
+                target: contactLabel
+                visible: false
+            }
         }
     ]
 
     // -------- Bottom Edge Setup -----
+    bottomEdgeEnabled: true
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
