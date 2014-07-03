@@ -71,7 +71,7 @@ Page {
     property alias bottomEdgePageComponent: edgeLoader.sourceComponent
     property alias bottomEdgePageSource: edgeLoader.source
     property alias bottomEdgeTitle: tipLabel.text
-    property alias bottomEdgeEnabled: bottomEdge.visible
+    property alias bottomEdgeEnabled: bottomEdge.enabled
     property int bottomEdgeExpandThreshold: page.height * 0.2
     property int bottomEdgeExposedArea: bottomEdge.state !== "expanded" ? (page.height - bottomEdge.y - bottomEdge.tipHeight) : _areaWhenExpanded
     property bool reloadBottomEdgePage: true
@@ -151,6 +151,7 @@ Page {
         readonly property int pageStartY: 0
 
         z: 1
+        opacity: enabled ? 1 : 0
         color: Theme.palette.normal.background
         parent: page
         anchors {

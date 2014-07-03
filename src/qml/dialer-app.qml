@@ -24,6 +24,8 @@ import Ubuntu.Telephony 0.1
 MainView {
     id: mainView
 
+    objectName: "mainView"
+
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
@@ -48,6 +50,37 @@ MainView {
         }
     }
 
+    PhoneUtils {
+        id: phoneUtils
+    }
+
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+
+            StateChangeScript {
+                script: {
+                    // make sure to reset the view so that the contacts page is not loaded
+                    if (callManager.hasCalls) {
+                        switchToLiveCall();
+                    } else {
+                        switchToKeypadView();
+                    }
+                }
+            }
+        }
+    ]
+
+    function isEmergencyNumber(number) {
+        for (var i in callManager.emergencyNumbers) {
+            if (phoneUtils.comparePhoneNumbers(number, callManager.emergencyNumbers[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function viewContact(contactId) {
         Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
     }
@@ -65,6 +98,9 @@ MainView {
     }
 
     function callVoicemail() {
+        if (greeter.greeterActive) {
+            return;
+        }
         call(callManager.voicemailNumber);
     }
 
@@ -92,7 +128,7 @@ MainView {
             return
         }
 
-        if (!telepathyHelper.connected) {
+        if (!telepathyHelper.connected && !isEmergencyNumber((number))) {
             pendingNumberToDial = number;
             pendingAccountId = accountId;
             return;

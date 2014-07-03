@@ -30,8 +30,11 @@ PageWithBottomEdge {
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
 
+    objectName: "dialerPage"
+
     tools: ToolbarItems {
         ToolbarButton {
+            id: contactButton
             objectName: "contactButton"
             action: Action {
                 iconSource: "image://theme/contact"
@@ -41,9 +44,33 @@ PageWithBottomEdge {
         }
     }
 
+    ToolbarItems {
+        id: emptyToolbar
+        visible: false
+    }
+
     title: i18n.tr("Keypad")
 
+    // -------- Greeter mode ----------
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+
+            PropertyChanges {
+                target: page
+                tools: emptyToolbar
+                bottomEdgeEnabled: false
+            }
+            PropertyChanges {
+                target: contactLabel
+                visible: false
+            }
+        }
+    ]
+
     // -------- Bottom Edge Setup -----
+    bottomEdgeEnabled: true
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
@@ -283,7 +310,17 @@ PageWithBottomEdge {
                     mainView.call(keypadEntry.value);
                     keypadEntry.value = "";
                 }
-                enabled: dialNumber != "" && telepathyHelper.connected
+                enabled: {
+                    if (dialNumber == "") {
+                        return false;
+                    }
+
+                    if (greeter.greeterActive || !telepathyHelper.connected) {
+                        return mainView.isEmergencyNumber(dialNumber);
+                    }
+
+                    return true;
+                }
             }
 
         }
