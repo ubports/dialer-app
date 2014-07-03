@@ -92,9 +92,9 @@ class DialerAppTestCase(AutopilotTestCase):
 
     def _click_object(self, objectName):
         self.pointing_device.click_object(
-            self.app.select_single(objectName=objectName)
+            self.app.wait_select_single(objectName=objectName)
         )
 
     @property
     def main_view(self):
-        return self.app.select_single(emulators.MainView)
+        return self.app.wait_select_single(emulators.MainView)
