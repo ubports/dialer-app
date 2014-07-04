@@ -62,12 +62,6 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
-        onCountChanged: {
-            // move list up if searching
-            if (searchField.text !== "") {
-                contactList.positionViewAtBeginning()
-            }
-        }
     }
 }
 
