@@ -1,4 +1,4 @@
-# English (United Kingdom) translation for dialer-app
+# Portuguese translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-07-02 13:42+0000\n"
+"PO-Revision-Date: 2014-07-03 20:12+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: English (United Kingdom) <en_GB@li.org>\n"
+"Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,8 +26,8 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 hour"
-msgstr[1] "%1 hours"
+msgstr[0] "%1 hora"
+msgstr[1] "%1 horas"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
@@ -40,8 +40,8 @@ msgstr[1] "%1 mins"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sec"
-msgstr[1] "%1 secs"
+msgstr[0] "%1 seg"
+msgstr[1] "%1 segs"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
@@ -97,23 +97,23 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:73
 msgid "Add Contact"
-msgstr "Add Contact"
+msgstr "Adicionar Contacto"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Add to existing contact"
+msgstr "Adicionar contacto existente"
 
 #: src/qml/dialer-app.qml:309
 msgid "Call Barring"
-msgstr "Call Barring"
+msgstr "Barramento de Chamada"
 
 #: src/qml/dialer-app.qml:320
 msgid "Call Forwarding"
-msgstr "Call Forwarding"
+msgstr ""
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Waiting"
-msgstr "Call Waiting"
+msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
@@ -121,44 +121,44 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:107
 msgid "Call now"
-msgstr "Call now"
+msgstr ""
 
 #: src/qml/dialer-app.qml:342
 msgid "Calling Line Presentation"
-msgstr "Calling Line Presentation"
+msgstr ""
 
 #: src/qml/dialer-app.qml:354
 msgid "Calling Line Restriction"
-msgstr "Calling Line Restriction"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "Cancel"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "Conference"
+msgstr ""
 
 #: src/qml/dialer-app.qml:348
 msgid "Connected Line Presentation"
-msgstr "Connected Line Presentation"
+msgstr ""
 
 #: src/qml/dialer-app.qml:360
 msgid "Connected Line Restriction"
-msgstr "Connected Line Restriction"
+msgstr ""
 
 #: src/qml/ContactsPage/ContactsPage.qml:29
 #: src/qml/DialerPage/DialerPage.qml:41
 msgid "Contacts"
-msgstr "Contacts"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Create new contact"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
@@ -166,11 +166,11 @@ msgstr ""
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
-msgstr "Dialer"
+msgstr ""
 
 #: src/dialer-app.desktop.in:4
 msgid "Dialer App"
-msgstr "Dialer App"
+msgstr ""
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
@@ -182,11 +182,11 @@ msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:132
 msgid "Enter a number"
-msgstr "Enter a number"
+msgstr ""
 
 #: src/qml/dialer-app.qml:236
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
