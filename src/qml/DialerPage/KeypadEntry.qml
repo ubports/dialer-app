@@ -52,6 +52,7 @@ FocusScope {
         clip: true
         opacity: 0.9
         defaultRegion: i18n.tr("US")
+        updateOnlyWhenFocused: false
         // FIXME: this should probably be done in the component itself
         autoFormat: input.text.length > 0 && input.text.charAt(0) !== "*" && input.text.charAt(0) !== "#"
 
