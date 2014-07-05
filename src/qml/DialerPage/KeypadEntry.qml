@@ -52,7 +52,8 @@ FocusScope {
         clip: true
         opacity: 0.9
         // FIXME: this should probably be done in the component itself
-        autoFormat: input.text.length > 0 && input.text.at(0) !== "*" && input.text.at(0) !== "#"
+        defaultRegion: i18n.tr("US")
+        autoFormat: input.text.length > 0 && input.text.charAt(0) !== "*" && input.text.charAt(0) !== "#"
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
         // https://bugs.launchpad.net/dialer-app/+bug/1188669
