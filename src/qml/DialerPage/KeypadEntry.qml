@@ -51,8 +51,8 @@ FocusScope {
         cursorVisible: true
         clip: true
         opacity: 0.9
-        // FIXME: this should probably be done in the component itself
         defaultRegion: i18n.tr("US")
+        // FIXME: this should probably be done in the component itself
         autoFormat: input.text.length > 0 && input.text.charAt(0) !== "*" && input.text.charAt(0) !== "#"
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
