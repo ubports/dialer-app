@@ -48,7 +48,13 @@ Page {
 
     ContactListView {
         id: contactList
-        anchors.fill: parent
+
+        anchors{
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: keyboardRect.top
+        }
         onInfoRequested: {
            mainView.viewContact(contact.contactId)
         }
@@ -66,6 +72,10 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
+    }
+
+    KeyboardRectagle {
+        id: keyboardRect
     }
 }
 
