@@ -55,6 +55,10 @@ Page {
         filterTerm: searchField.text
         detailToPick: ContactDetail.PhoneNumber
         onDetailClicked: {
+            if (action === "message") {
+                Qt.openUrlExternally("message:///" + encodeURIComponent(detail.number))
+                return
+            }
             pageStack.pop()
             if (callManager.hasCalls) {
                 mainView.call(detail.number);
