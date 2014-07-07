@@ -20,6 +20,7 @@
 
 #include <QDir>
 #include <QUrl>
+#include <QUrlQuery>
 #include <QDebug>
 #include <QStringList>
 #include <QQuickItem>
@@ -39,6 +40,7 @@ static void printUsage(const QStringList& arguments)
              << arguments.at(0).toUtf8().constData()
              << "[tel:///PHONE_NUMBER]"
              << "[tel:///voicemail]"
+             << "[dialer:///?view=<view name>]"
              << "[--fullscreen]"
              << "[--help]"
              << "[-testability]";
@@ -69,7 +71,7 @@ bool DialerApplication::setup()
     bool fullScreen = false;
 
     if (validSchemes.isEmpty()) {
-        validSchemes << "tel";
+        validSchemes << "tel" << "dialer";
     }
 
     QStringList arguments = this->arguments();
@@ -202,6 +204,13 @@ void DialerApplication::parseArgument(const QString &arg)
             // do not call the number directly, instead only populate the dialpad view
             QMetaObject::invokeMethod(mainView, "populateDialpad", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()));
         }
+    } else if (scheme == "dialer") {
+        QUrlQuery query(url);
+        QString viewName = query.queryItemValue("view");
+        if (viewName == "liveCall") {
+            QMetaObject::invokeMethod(mainView, "switchToLiveCall");
+        }
+
     }
 }
 

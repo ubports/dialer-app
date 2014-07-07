@@ -1,4 +1,4 @@
-# Catalan translation for dialer-app
+# Portuguese translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-07-04 15:06+0000\n"
-"Last-Translator: David Planella <david.planella@ubuntu.com>\n"
-"Language-Team: Catalan <ca@li.org>\n"
+"PO-Revision-Date: 2014-07-03 20:12+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-05 05:59+0000\n"
+"X-Launchpad-Export-Date: 2014-07-04 06:32+0000\n"
 "X-Generator: Launchpad (build 17086)\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
@@ -27,21 +27,21 @@ msgstr "#"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 hora"
-msgstr[1] "%1 hores"
+msgstr[1] "%1 horas"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 minut"
-msgstr[1] "%1 minuts"
+msgstr[0] "%1 min"
+msgstr[1] "%1 mins"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 segon"
-msgstr[1] "%1 segons"
+msgstr[0] "%1 seg"
+msgstr[1] "%1 segs"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
@@ -97,15 +97,15 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:73
 msgid "Add Contact"
-msgstr "Afegeix un contacte"
+msgstr "Adicionar Contacto"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Afegeix a un contacte existent"
+msgstr "Adicionar contacto existente"
 
 #: src/qml/dialer-app.qml:309
 msgid "Call Barring"
-msgstr ""
+msgstr "Barramento de Chamada"
 
 #: src/qml/dialer-app.qml:320
 msgid "Call Forwarding"
@@ -117,11 +117,11 @@ msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Registre de trucades"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:107
 msgid "Call now"
-msgstr "Truca-hi ara"
+msgstr ""
 
 #: src/qml/dialer-app.qml:342
 msgid "Calling Line Presentation"
@@ -133,11 +133,11 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "Canceŀla"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "Conferència"
+msgstr ""
 
 #: src/qml/dialer-app.qml:348
 msgid "Connected Line Presentation"
@@ -150,55 +150,55 @@ msgstr ""
 #: src/qml/ContactsPage/ContactsPage.qml:29
 #: src/qml/DialerPage/DialerPage.qml:41
 msgid "Contacts"
-msgstr "Contactes"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Crea un contacte nou"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr "Suprimeix"
+msgstr ""
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
-msgstr "Marcador"
+msgstr ""
 
 #: src/dialer-app.desktop.in:4
 msgid "Dialer App"
-msgstr "Aplicació de marcatge"
+msgstr ""
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
-msgstr "Aplicació de marcatge"
+msgstr ""
 
 #: src/qml/dialer-app.qml:239 src/qml/dialer-app.qml:253
 msgid "Dismiss"
-msgstr "Descarta"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:132
 msgid "Enter a number"
-msgstr "Introduïu un número"
+msgstr ""
 
 #: src/qml/dialer-app.qml:236
 msgid "Error"
-msgstr "Error"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "Penja"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "Com voleu desar el contacte?"
+msgstr ""
 
 #: src/qml/dialer-app.qml:237
 msgid "Invalid USSD code"
@@ -206,15 +206,15 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
-msgstr "Teclat numèric"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
@@ -222,72 +222,72 @@ msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "Trucada nova"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: src/qml/dialer-app.qml:217
 msgid "Please wait"
-msgstr "Espereu"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr "Privat"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:127
 msgid "Save contact"
-msgstr "Desa el contacte"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:117
 msgid "Send text message"
-msgstr "Envia un missatge de text"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Avui"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr "Dues trucades"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Desconegut"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:127
 msgid "View contact"
-msgstr "Mostra el contacte"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Missatge de veu"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
-msgstr "WYZ"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Ahir"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr "activa"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "s'està trucant"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr "en espera"
+msgstr ""

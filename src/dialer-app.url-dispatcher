@@ -2,4 +2,7 @@
 	{
 		"protocol": "tel"
 	}
+	{
+		"protocol": "dialer"
+	}
 ]
