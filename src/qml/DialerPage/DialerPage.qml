@@ -160,10 +160,8 @@ PageWithBottomEdge {
             onPressAndHold: input.text = ""
 
             onClicked:  {
-                if (input.cursorPosition != 0)  {
-                    var position = input.cursorPosition;
-                    input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
-                    input.cursorPosition = position - 1;
+                if (input.cursorPosition > 0)  {
+                    input.remove(input.cursorPosition, input.cursorPosition - 1)
                 }
             }
         }
@@ -281,13 +279,7 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                if (input.cursorPosition != 0)  {
-                    var position = input.cursorPosition;
-                    input.text = input.text.slice(0, input.cursorPosition) + label + input.text.slice(input.cursorPosition);
-                    input.cursorPosition = position +1 ;
-                } else {
-                    keypadEntry.value += label
-                }
+                input.insert(input.cursorPosition, label)
             }
         }
 
