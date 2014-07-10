@@ -137,21 +137,16 @@ ListItem.Empty {
         anchors.top: parent.top
         height: units.gu(8)
 
-        UbuntuShape {
+        ContactAvatar {
             id: avatar
             anchors.left: parent.left
             anchors.leftMargin: units.gu(1)
             anchors.verticalCenter: parent.verticalCenter
             height: units.gu(6)
             width: height
-            image: Image {
-                property bool defaultAvatar: unknownContact || contactWatcher.avatar == ""
-                fillMode: Image.PreserveAspectCrop
-                asynchronous: true
-                source: defaultAvatar ? "image://theme/contact" : contactWatcher.avatar
-                sourceSize.width: defaultAvatar ? undefined : width * 1.5
-                sourceSize.height: defaultAvatar ? undefined : height * 1.5
-            }
+            fallbackAvatarUrl: contactWatcher.avatar === "" ? "image://theme/stock_contact" : contactWatcher.avatar
+            fallbackDisplayName: contactWatcher.alias !== "" ? contactWatcher.alias : contactWatcher.phoneNumber
+            showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
         }
 
         Label {
@@ -183,7 +178,6 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.5
             // FIXME: handle conference call
             text: phoneNumberSubTypeLabel
             visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
@@ -213,7 +207,6 @@ ListItem.Empty {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
-            opacity: 0.4
             text: selectCallType()
         }
     }
