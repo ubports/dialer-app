@@ -18,6 +18,7 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 0.1
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.History 0.1
 import Ubuntu.Telephony 0.1
@@ -241,6 +242,40 @@ Page {
 
                 onSwippingChanged: historyList._updateSwipeState(historyDelegate)
                 onSwipeStateChanged: historyList._updateSwipeState(historyDelegate)
+
+                leftSideAction: Action {
+                    iconName: "delete"
+                    text: i18n.tr("Delete")
+                    onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+                }
+                rightSideActions: [
+                    Action {
+                        iconName: "stock_contact"
+                        text: i18n.tr("Details")
+                        onTriggered: {
+                            if (unknownContact) {
+                                PopupUtils.open(newContactDialog)
+                            } else {
+                                mainView.viewContact(contactId)
+                            }
+                        }
+                    },
+                    Action {
+                        iconName: "message"
+                        text: i18n.tr("Send message")
+                        onTriggered: {
+                            mainView.sendMessage(phoneNumber)
+                        }
+                    },
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("More info")
+                        onTriggered: {
+                            //TODO
+                        }
+                    }
+
+                ]
             }
         }
     }
@@ -248,5 +283,43 @@ Page {
     Scrollbar {
         flickableItem: historyList
         align: Qt.AlignTrailing
+    }
+
+    Component {
+         id: newContactDialog
+
+         Dialog {
+             id: dialogue
+             objectName: "saveContactDialog"
+             title: i18n.tr("Save contact")
+             text: i18n.tr("How do you want to save the contact?")
+             Button {
+                 objectName: "addToExistingContactButton"
+                 text: i18n.tr("Add to existing contact")
+                 color: UbuntuColors.orange
+                 onClicked: {
+                     PopupUtils.close(dialogue)
+                     //FIXME
+                     //PopupUtils.open(addPhoneNumberToContactSheet)
+                 }
+             }
+             Button {
+                 objectName: "addNewContactButton"
+                 text: i18n.tr("Create new contact")
+                 color: UbuntuColors.warmGrey
+                 onClicked: {
+                     mainView.addNewContact(phoneNumber)
+                     PopupUtils.close(dialogue)
+                 }
+             }
+             Button {
+                 objectName: "saveContactDialogCancelButton"
+                 text: i18n.tr("Cancel")
+                 color: UbuntuColors.warmGrey
+                 onClicked: {
+                     PopupUtils.close(dialogue)
+                 }
+             }
+         }
     }
 }

@@ -28,12 +28,14 @@ import "dateUtils.js" as DateUtils
 ListItemWithActions {
     id: historyDelegate
 
-    property bool incoming: model.senderId !== "self"
-    property bool unknownContact: contactWatcher.contactId === ""
+    readonly property bool incoming: model.senderId !== "self"
+    readonly property bool unknownContact: contactWatcher.contactId === ""
+    readonly property alias phoneNumber: contactWatcher.phoneNumber
+    readonly property alias contactId: contactWatcher.contactId
+    readonly property alias interactive: contactWatcher.interactive
+
     property string phoneNumberSubTypeLabel: ""
     property bool isFirst: false
-    property alias contactId: contactWatcher.contactId
-    property alias interactive: contactWatcher.interactive
     property bool selected: false
     property bool fullView: false
 
@@ -56,13 +58,8 @@ ListItemWithActions {
     }
 
     color: Theme.palette.normal.background
-
     height: mainSection.height
-    leftSideAction: Action {
-        iconName: "delete"
-        text: i18n.tr("Delete")
-        onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
-    }
+    triggerActionOnMouseRelease: true
 
     states: [
         State {

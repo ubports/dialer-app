@@ -30,41 +30,7 @@ Item {
 
     height: details.height + units.gu(1)
 
-    Component {
-         id: newContactDialog
-         Dialog {
-             id: dialogue
-             objectName: "saveContactDialog"
-             title: i18n.tr("Save contact")
-             text: i18n.tr("How do you want to save the contact?")
-             Button {
-                 objectName: "addToExistingContactButton"
-                 text: i18n.tr("Add to existing contact")
-                 color: UbuntuColors.orange
-                 onClicked: {
-                     PopupUtils.close(dialogue)
-                     PopupUtils.open(addPhoneNumberToContactSheet)
-                 }
-             }
-             Button {
-                 objectName: "addNewContactButton"
-                 text: i18n.tr("Create new contact")
-                 color: UbuntuColors.warmGrey
-                 onClicked: {
-                     mainView.addNewContact(phoneNumber)
-                     PopupUtils.close(dialogue)
-                 }
-             }
-             Button {
-                 objectName: "saveContactDialogCancelButton"
-                 text: i18n.tr("Cancel")
-                 color: UbuntuColors.warmGrey
-                 onClicked: {
-                     PopupUtils.close(dialogue)
-                 }
-             }
-         }
-    }
+
 
     Component {
         id: addPhoneNumberToContactSheet
