@@ -27,22 +27,22 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyPage
     objectName: "historyPage"
+
     property string searchTerm
-    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    anchors.fill: parent
-    active: false
     property int delegateHeight: delegate.height
     property bool fullView: false
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
     function activateCurrentIndex() {
-        if ((historyList.currentIndex > 2) || !historyList.currentItem) {
-            return;
+        if (historyList.currentItem) {
+            historyList.currentItem.activate();
         }
-
-        historyList.currentItem.activate();
     }
+
+    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
+    anchors.fill: parent
+    active: false
 
     ToolbarItems {
         id: historySelectionToolbar
@@ -157,27 +157,7 @@ Page {
         currentIndex: -1
         anchors.fill: parent
         listModel: sortProxy
-        /*section.property: "date"
-        section.delegate: Item {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: historyPage.fullView ? 0 : units.gu(5)
-            clip: true
-            Label {
-                anchors.left: parent.left
-                anchors.leftMargin: units.gu(2)
-                anchors.verticalCenter: parent.verticalCenter
-                fontSize: "medium"
-                elide: Text.ElideRight
-                color: "gray"
-                opacity: 0.6
-                text: DateUtils.friendlyDay(Qt.formatDate(section, "yyyy/MM/dd"));
-                verticalAlignment: Text.AlignVCenter
-            }
-            ListItem.ThinDivider {
-                anchors.bottom: parent.bottom
-            }
-        }*/
+
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
@@ -198,16 +178,18 @@ Page {
             HistoryDelegate {
                 id: historyDelegate
                 objectName: "historyDelegate" + index
-                anchors.left: parent.left
-                anchors.right: parent.right
-                selected: historyList.isSelected(historyDelegate)
+
+                anchors{
+                    left: parent.left
+                    right: parent.right
+                }
+
+                selected: historyDelegate.ListView.isCurrentItem || historyList.isSelected(historyDelegate)
                 isFirst: model.index === 0
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
-                detailsShown: ListView.isCurrentItem && fullView
-                active: historyDelegate.ListView.isCurrentItem && !fullView
 
-                // collapse the item before remove it, to avoid crash
+                // Animate item removal
                 ListView.onRemove: SequentialAnimation {
                     PropertyAction {
                         target: historyDelegate
@@ -225,6 +207,13 @@ Page {
                             }
                         }
                     }
+
+                    UbuntuNumberAnimation {
+                        target: historyDelegate
+                        property: "height"
+                        value: 0
+                    }
+
                     PropertyAction {
                         target: historyDelegate
                         property: "ListView.delayRemove"
@@ -238,6 +227,7 @@ Page {
                     }
                     historyList.selectItem(historyDelegate)
                 }
+
                 onItemClicked: {
                     if (historyList.isInSelectionMode) {
                         if (!historyList.selectItem(historyDelegate)) {
@@ -246,18 +236,9 @@ Page {
                         return
                     }
 
-                    if (!interactive) {
-                        return;
-                    }
-
-                    if (historyList.currentIndex == index) {
-                        historyList.currentIndex = -1
-                        return
-                    // expand and display the extended options
-                    } else {
-                        historyList.currentIndex = index
-                    }
+                    historyDelegate.activate()
                 }
+
                 onSwippingChanged: historyList._updateSwipeState(historyDelegate)
                 onSwipeStateChanged: historyList._updateSwipeState(historyDelegate)
             }

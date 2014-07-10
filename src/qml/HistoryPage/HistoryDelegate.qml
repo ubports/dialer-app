@@ -28,17 +28,14 @@ import "dateUtils.js" as DateUtils
 ListItemWithActions {
     id: historyDelegate
 
-    property bool incoming: model.senderId != "self"
-    property bool unknownContact: contactWatcher.contactId == ""
+    property bool incoming: model.senderId !== "self"
+    property bool unknownContact: contactWatcher.contactId === ""
     property string phoneNumberSubTypeLabel: ""
     property bool isFirst: false
     property alias contactId: contactWatcher.contactId
-    property bool detailsShown: false
     property alias interactive: contactWatcher.interactive
-    property alias animating: detailsToggleAnimation.running
-    property bool fullView: true
     property bool selected: false
-    property bool active: false
+    property bool fullView: false
 
     function activate() {
         if (fullView) {
@@ -48,8 +45,25 @@ ListItemWithActions {
         }
     }
 
+    function selectCallType()  {
+        if (model.callMissed) {
+            return i18n.tr("Missed");
+        } else if (incoming) {
+            return i18n.tr("Incoming");
+        } else {
+            return i18n.tr("Outgoing");
+        }
+    }
+
     color: Theme.palette.normal.background
-    height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
+
+    height: mainSection.height
+    leftSideAction: Action {
+        iconName: "delete"
+        text: i18n.tr("Delete")
+        onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+    }
+
     states: [
         State {
             name: "basicView"
@@ -64,6 +78,7 @@ ListItemWithActions {
             }
         }
     ]
+
     transitions: [
         Transition {
             UbuntuNumberAnimation {
@@ -72,30 +87,11 @@ ListItemWithActions {
         }
     ]
 
-    Behavior on height {
-        UbuntuNumberAnimation { id: detailsToggleAnimation }
-    }
-
-    leftSideAction: Action {
-        iconName: "delete"
-        text: i18n.tr("Delete")
-        onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
-    }
-
-    function selectCallType()  {
-        if (model.callMissed) {
-            return i18n.tr("Missed");
-        } else if (incoming) {
-            return i18n.tr("Incoming");
-        } else {
-            return i18n.tr("Outgoing");
-        }
-    }
 
     Rectangle {
         anchors.fill: parent
         color: "black"
-        opacity: historyDelegate.active ? 0.2 : 0
+        opacity: historyDelegate.selected ? 0.2 : 0
         Behavior on opacity {
             UbuntuNumberAnimation { }
         }
@@ -103,9 +99,11 @@ ListItemWithActions {
 
     Item {
         id: helper
+
         function updateSubTypeLabel() {
             phoneNumberSubTypeLabel = contactWatcher.isUnknown ? model.participants[0] : phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
         }
+
         Component.onCompleted: updateSubTypeLabel()
 
         ContactWatcher {
@@ -116,7 +114,6 @@ ListItemWithActions {
             onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
             onIsUnknownChanged: helper.updateSubTypeLabel()
         }
-
 
         PhoneNumber {
             id: phoneDetail
@@ -132,9 +129,12 @@ ListItemWithActions {
 
     Item {
         id: mainSection
-        anchors.left: parent.left
-        anchors.right: selectionMark.left
-        anchors.top: parent.top
+
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
+        }
         height: units.gu(8)
 
         ContactAvatar {
@@ -208,59 +208,6 @@ ListItemWithActions {
             verticalAlignment: Text.AlignVCenter
             fontSize: "small"
             text: selectCallType()
-        }
-    }
-
-    Rectangle {
-        id: selectionMark
-
-        anchors {
-            top: parent.top
-            bottom: parent.bottom
-            right: parent.right
-        }
-
-        color: "black"
-        opacity: historyDelegate.selected ? 1.0 : 0.0
-        visible: opacity > 0.0
-        width: historyDelegate.selected ?  units.gu(5) : 0
-
-        Behavior on opacity {
-            UbuntuNumberAnimation { }
-        }
-
-        Behavior on width {
-            UbuntuNumberAnimation { }
-        }
-
-        Icon {
-            name: "select"
-            height: units.gu(3)
-            width: height
-            anchors.centerIn: parent
-        }
-    }
-
-    Loader {
-        id: pickerLoader
-
-        source: historyDelegate.detailsShown ? Qt.resolvedUrl("CallLogContactDelegate.qml") : ""
-        anchors {
-            top: mainSection.bottom
-            left: parent.left
-            leftMargin: units.gu(2)
-            right: parent.right
-        }
-        onStatusChanged: {
-            if (status == Loader.Ready) {
-                pickerLoader.item.phoneNumber = participants[0]
-                pickerLoader.item.contactId = historyDelegate.contactId
-                pickerLoader.item.accountId = accountId
-            }
-        }
-        Connections {
-            target: pickerLoader.item
-            onItemClicked: historyList.currentContactExpanded = -1
         }
     }
 }
