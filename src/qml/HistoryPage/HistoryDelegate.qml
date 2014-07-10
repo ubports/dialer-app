@@ -25,7 +25,7 @@ import Ubuntu.Contacts 0.1
 import QtContacts 5.0
 import "dateUtils.js" as DateUtils
 
-ListItem.Empty {
+ListItemWithActions {
     id: historyDelegate
 
     property bool incoming: model.senderId != "self"
@@ -37,6 +37,8 @@ ListItem.Empty {
     property alias interactive: contactWatcher.interactive
     property alias animating: detailsToggleAnimation.running
     property bool fullView: true
+    property bool selected: false
+    property bool active: false
 
     function activate() {
         if (fullView) {
@@ -46,12 +48,8 @@ ListItem.Empty {
         }
     }
 
+    color: Theme.palette.normal.background
     height: mainSection.height + (detailsShown ? pickerLoader.height : 0)
-    removable: true
-    confirmRemoval: true
-    showDivider: true
-    clip: true
-
     states: [
         State {
             name: "basicView"
@@ -78,8 +76,10 @@ ListItem.Empty {
         UbuntuNumberAnimation { id: detailsToggleAnimation }
     }
 
-    onItemRemoved: {
-        historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+    leftSideAction: Action {
+        iconName: "delete"
+        text: i18n.tr("Delete")
+        onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
     }
 
     function selectCallType()  {
@@ -95,7 +95,7 @@ ListItem.Empty {
     Rectangle {
         anchors.fill: parent
         color: "black"
-        opacity: historyDelegate.ListView.isCurrentItem && !fullView ? 0.2 : 0
+        opacity: historyDelegate.active ? 0.2 : 0
         Behavior on opacity {
             UbuntuNumberAnimation { }
         }

@@ -32,12 +32,12 @@ Page {
     anchors.fill: parent
     active: false
     property int delegateHeight: delegate.height
-    property bool fullView: currentIndex > 2
+    property bool fullView: false
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
     function activateCurrentIndex() {
-        if (fullView || !historyList.currentItem) {
+        if ((historyList.currentIndex > 2) || !historyList.currentItem) {
             return;
         }
 
@@ -125,16 +125,36 @@ Page {
         id: historyList
         objectName: "historyList"
 
+        property var _currentSwipedItem: null
+
+        function _updateSwipeState(item)
+        {
+            if (item.swipping) {
+                return
+            }
+
+            if (item.swipeState !== "Normal") {
+                if (_currentSwipedItem !== item) {
+                    if (_currentSwipedItem) {
+                        _currentSwipedItem.resetSwipe()
+                    }
+                    _currentSwipedItem = item
+                }
+            } else if (item.swipeState !== "Normal" && _currentSwipedItem === item) {
+                _currentSwipedItem = null
+            }
+        }
+
         Connections {
             target: Qt.application
             onActiveChanged: {
                 if (!Qt.application.active) {
-                    historyList.currentContactExpanded = -1
+                    historyList.currentIndex = -1
                 }
             }
         }
 
-        property int currentContactExpanded: -1
+        currentIndex: -1
         anchors.fill: parent
         listModel: sortProxy
         /*section.property: "date"
@@ -164,6 +184,13 @@ Page {
                 historyEventModel.removeEvent(event.accountId, event.threadId, event.eventId, event.type)
             }
         }
+        onIsInSelectionModeChanged: {
+            if (isInSelectionMode && _currentSwipedItem) {
+                _currentSwipedItem.resetSwipe()
+                _currentSwipedItem = null
+            }
+        }
+
         listDelegate: delegateComponent
 
         Component {
@@ -174,28 +201,44 @@ Page {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 selected: historyList.isSelected(historyDelegate)
-                isFirst: model.index == 0
-                removable: !historyList.isInSelectionMode
+                isFirst: model.index === 0
+                locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
+                detailsShown: ListView.isCurrentItem && fullView
+                active: historyDelegate.ListView.isCurrentItem && !fullView
 
-                Item {
-                    Connections {
-                        target: historyList
-                        onCurrentContactExpandedChanged: {
-                            if (index != historyList.currentContactExpanded) {
-                                historyDelegate.detailsShown = false
+                // collapse the item before remove it, to avoid crash
+                ListView.onRemove: SequentialAnimation {
+                    PropertyAction {
+                        target: historyDelegate
+                        property: "ListView.delayRemove"
+                        value: true
+                    }
+                    ScriptAction {
+                        script: {
+                            if (historyList._currentSwipedItem === historyDelegate) {
+                                historyList._currentSwipedItem = null
+                            }
+
+                            if (ListView.isCurrentItem) {
+                                contactListView.currentIndex = -1
                             }
                         }
                     }
+                    PropertyAction {
+                        target: historyDelegate
+                        property: "ListView.delayRemove"
+                        value: false
+                    }
                 }
 
-                onPressAndHold: {
+                onItemPressAndHold: {
                     if (!historyList.isInSelectionMode) {
                         historyList.startSelection()
                     }
                     historyList.selectItem(historyDelegate)
                 }
-                onClicked: {
+                onItemClicked: {
                     if (historyList.isInSelectionMode) {
                         if (!historyList.selectItem(historyDelegate)) {
                             historyList.deselectItem(historyDelegate)
@@ -207,16 +250,16 @@ Page {
                         return;
                     }
 
-                    if (historyList.currentContactExpanded == index) {
-                        historyList.currentContactExpanded = -1
-                        detailsShown = false
+                    if (historyList.currentIndex == index) {
+                        historyList.currentIndex = -1
                         return
                     // expand and display the extended options
                     } else {
-                        historyList.currentContactExpanded = index
-                        detailsShown = !detailsShown
+                        historyList.currentIndex = index
                     }
                 }
+                onSwippingChanged: historyList._updateSwipeState(historyDelegate)
+                onSwipeStateChanged: historyList._updateSwipeState(historyDelegate)
             }
         }
     }
