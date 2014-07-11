@@ -85,8 +85,8 @@ MainView {
         Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
     }
 
-    function addNewContact(phoneNumber) {
-        Qt.openUrlExternally("addressbook:///create?phone=" + encodeURIComponent(phoneNumber))
+    function addNewPhone(phoneNumber) {
+        Qt.openUrlExternally("addressbook:///addnewphone?phone=" + encodeURIComponent(phoneNumber))
     }
 
     function addPhoneNumberToExistingContact(contactId, phoneNumber) {
