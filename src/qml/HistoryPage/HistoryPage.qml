@@ -44,6 +44,11 @@ Page {
     anchors.fill: parent
     active: false
 
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.normal.background
+    }
+
     ToolbarItems {
         id: historySelectionToolbar
         visible: false
@@ -196,9 +201,12 @@ Page {
                         property: "ListView.delayRemove"
                         value: true
                     }
+
+                    // reset swipe state
                     ScriptAction {
                         script: {
                             if (historyList._currentSwipedItem === historyDelegate) {
+                                historyList._currentSwipedItem.resetSwipe()
                                 historyList._currentSwipedItem = null
                             }
 
@@ -208,10 +216,11 @@ Page {
                         }
                     }
 
+                    // animate the removal
                     UbuntuNumberAnimation {
                         target: historyDelegate
                         property: "height"
-                        value: 0
+                        to: 1
                     }
 
                     PropertyAction {
