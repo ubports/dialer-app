@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-07-02 13:42+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-07-10 15:52+0000\n"
+"Last-Translator: Alan Pope ㋛ <alan@ubuntu.com>\n"
 "Language-Team: English (United Kingdom) <en_GB@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-04 06:32+0000\n"
-"X-Generator: Launchpad (build 17086)\n"
+"X-Launchpad-Export-Date: 2014-07-11 06:16+0000\n"
+"X-Generator: Launchpad (build 17111)\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
@@ -117,7 +117,7 @@ msgstr "Call Waiting"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr ""
+msgstr "Call log"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:107
 msgid "Call now"
@@ -162,7 +162,7 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: src/dialer-app.desktop.in:3
 msgid "Dialer"
@@ -174,11 +174,11 @@ msgstr "Dialer App"
 
 #: src/dialer-app.desktop.in:5
 msgid "Dialer application"
-msgstr ""
+msgstr "Dialer application"
 
 #: src/qml/dialer-app.qml:239 src/qml/dialer-app.qml:253
 msgid "Dismiss"
-msgstr ""
+msgstr "Dismiss"
 
 #: src/qml/DialerPage/DialerPage.qml:132
 msgid "Enter a number"
@@ -190,104 +190,104 @@ msgstr "Error"
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "Hang up"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr ""
+msgstr "How do you want to save the contact?"
 
 #: src/qml/dialer-app.qml:237
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Invalid USSD code"
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
-msgstr ""
+msgstr "Keypad"
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Merge calls"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "New call"
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:217
 msgid "Please wait"
-msgstr ""
+msgstr "Please wait"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Private"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:127
 msgid "Save contact"
-msgstr ""
+msgstr "Save contact"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:117
 msgid "Send text message"
-msgstr ""
+msgstr "Send text message"
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr ""
+msgstr "Today"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Two Calls"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr ""
+msgstr "Unknown"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:127
 msgid "View contact"
-msgstr ""
+msgstr "View contact"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr ""
+msgstr "Voicemail"
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr ""
+msgstr "Yesterday"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "active"
 
 #: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr ""
+msgstr "calling"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "on hold"
