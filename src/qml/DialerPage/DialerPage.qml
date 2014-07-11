@@ -79,6 +79,10 @@ PageWithBottomEdge {
     property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
 
     onBottomEdgeExposedAreaChanged: {
+        if (!bottomEdgePage)  {
+            return
+        }
+
         var index =  Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
         if (index < 3) {
             bottomEdgePage.currentIndex = index

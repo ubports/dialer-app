@@ -21,6 +21,7 @@ import Ubuntu.Components 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Telephony.PhoneNumber 0.1 as PhoneUtils
 import Ubuntu.Contacts 0.1
 import QtContacts 5.0
 import "dateUtils.js" as DateUtils
@@ -159,7 +160,7 @@ ListItemWithActions {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
-            text: contactWatcher.alias != "" ? contactWatcher.alias : contactWatcher.phoneNumber
+            text: contactWatcher.alias != "" ? contactWatcher.alias : PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber, i18n.tr("US"))
             elide: Text.ElideRight
             color: UbuntuColors.lightAubergine
         }
