@@ -160,7 +160,7 @@ ListItemWithActions {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
-            text: contactWatcher.alias != "" ? contactWatcher.alias : PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber, i18n.tr("US"))
+            text: contactWatcher.alias != "" ? contactWatcher.alias : PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
             elide: Text.ElideRight
             color: UbuntuColors.lightAubergine
         }
