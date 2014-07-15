@@ -19,6 +19,7 @@ from testtools import skipIf
 
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
+from dialer_app import ListItemWithActions
 
 import os
 import subprocess
@@ -48,15 +49,7 @@ class TestCallLogs(DialerAppTestCase):
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
         self.main_view.dialer_page.reveal_bottom_edge_page()
-        self._ensure_call_log_item_expanded()
         self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
-
-    def _ensure_call_log_item_expanded(self):
-        history_item = self.main_view.get_first_log()
-        self.pointing_device.click_object(history_item)
-
-        history_item.detailsShown.wait_for(True)
-        history_item.animating.wait_for(False)
 
     def _get_main_view(self, proxy_object):
         return proxy_object.wait_select_single('QQuickView')
@@ -66,7 +59,9 @@ class TestCallLogs(DialerAppTestCase):
         the messaging app.
 
         """
-        self._click_object('logMessageButton')
+        delegate = self.main_view.wait_select_single(
+            ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
+        delegate.active_action(2)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
         msg_app = self._get_app_proxy_object('messaging-app')
@@ -83,22 +78,16 @@ class TestCallLogs(DialerAppTestCase):
         the address-book app to allow adding new contact.
 
         """
-        self._click_object('logAddContactButton')
-
-        save_contact_dialog = self.app.wait_select_single(
-            objectName='saveContactDialog'
-        )
-        self.assertThat(save_contact_dialog.opacity, Eventually(Equals(1)))
-
-        self._click_object('addNewContactButton')
+        delegate = self.main_view.wait_select_single(
+            ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
+        delegate.active_action(1)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
 
         cntct_app = self._get_app_proxy_object('address-book-app')
         cntct_app_view = self._get_main_view(cntct_app)
-        cntct_edit_pane = cntct_app.wait_select_single(
-            objectName='contactEditorPage', active=True)
-        numbr_box = cntct_app.wait_select_single(objectName="phoneNumber_0")
+        cntct_list_page = cntct_app.wait_select_single(
+            objectName='contactListPage', active=True)
 
         self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
-        self.assertThat(cntct_edit_pane.visible, Eventually(Equals(True)))
-        self.assertThat(numbr_box.text, Eventually(Equals("800")))
+        self.assertThat(cntct_list_page.state, Eventually(Equals("newphone")))
+        self.assertThat(cntct_list_page.newPhoneToAdd, Eventually(Equals("800")))
