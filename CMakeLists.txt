@@ -1,9 +1,13 @@
 project(dialer-app)
 cmake_minimum_required(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
+set(DESKTOP_FILE dialer-app.desktop)
 
 # Standard install paths
 include(GNUInstallDirs)
+
+find_program(INTLTOOL_MERGE intltool-merge)
+find_program(INTLTOOL_EXTRACT intltool-extract)
 
 # Check for include files
 include(CheckIncludeFileCXX)
