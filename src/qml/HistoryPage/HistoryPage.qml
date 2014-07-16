@@ -259,7 +259,7 @@ Page {
                 rightSideActions: [
                     // FIXME: the first action should go to contac call log details page
                     Action {
-                        iconName: "stock_contact"
+                        iconName: unknownContact ? "contact-new" : "stock_contact"
                         text: i18n.tr("Details")
                         onTriggered: {
                             if (unknownContact) {
