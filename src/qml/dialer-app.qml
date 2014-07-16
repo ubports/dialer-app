@@ -82,15 +82,11 @@ MainView {
     }
 
     function viewContact(contactId) {
-        Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
+        Qt.openUrlExternally("addressbook:///contact?callback=dialer-app.desktop&id=" + encodeURIComponent(contactId))
     }
 
-    function addNewContact(phoneNumber) {
-        Qt.openUrlExternally("addressbook:///create?phone=" + encodeURIComponent(phoneNumber))
-    }
-
-    function addPhoneNumberToExistingContact(contactId, phoneNumber) {
-        Qt.openUrlExternally("addressbook:///addphone?id=" + encodeURIComponent(contactId) + "&phone=" + encodeURIComponent(phoneNumber))
+    function addNewPhone(phoneNumber) {
+        Qt.openUrlExternally("addressbook:///addnewphone?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
     }
 
     function sendMessage(phoneNumber) {

@@ -27,21 +27,26 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyPage
     objectName: "historyPage"
+
     property string searchTerm
-    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    anchors.fill: parent
-    active: false
     property int delegateHeight: delegate.height
-    property bool fullView: currentIndex > 2
+    property bool fullView: false
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
     function activateCurrentIndex() {
-        if (fullView || !historyList.currentItem) {
-            return;
+        if (historyList.currentItem) {
+            historyList.currentItem.activate();
         }
+    }
 
-        historyList.currentItem.activate();
+    title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
+    anchors.fill: parent
+    active: false
+
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.normal.background
     }
 
     ToolbarItems {
@@ -125,45 +130,52 @@ Page {
         id: historyList
         objectName: "historyList"
 
+        property var _currentSwipedItem: null
+
+        function _updateSwipeState(item)
+        {
+            if (item.swipping) {
+                return
+            }
+
+            if (item.swipeState !== "Normal") {
+                if (_currentSwipedItem !== item) {
+                    if (_currentSwipedItem) {
+                        _currentSwipedItem.resetSwipe()
+                    }
+                    _currentSwipedItem = item
+                }
+            } else if (item.swipeState !== "Normal" && _currentSwipedItem === item) {
+                _currentSwipedItem = null
+            }
+        }
+
         Connections {
             target: Qt.application
             onActiveChanged: {
                 if (!Qt.application.active) {
-                    historyList.currentContactExpanded = -1
+                    historyList.currentIndex = -1
                 }
             }
         }
 
-        property int currentContactExpanded: -1
+        currentIndex: -1
         anchors.fill: parent
         listModel: sortProxy
-        /*section.property: "date"
-        section.delegate: Item {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            height: historyPage.fullView ? 0 : units.gu(5)
-            clip: true
-            Label {
-                anchors.left: parent.left
-                anchors.leftMargin: units.gu(2)
-                anchors.verticalCenter: parent.verticalCenter
-                fontSize: "medium"
-                elide: Text.ElideRight
-                color: "gray"
-                opacity: 0.6
-                text: DateUtils.friendlyDay(Qt.formatDate(section, "yyyy/MM/dd"));
-                verticalAlignment: Text.AlignVCenter
-            }
-            ListItem.ThinDivider {
-                anchors.bottom: parent.bottom
-            }
-        }*/
+
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
                 historyEventModel.removeEvent(event.accountId, event.threadId, event.eventId, event.type)
             }
         }
+        onIsInSelectionModeChanged: {
+            if (isInSelectionMode && _currentSwipedItem) {
+                _currentSwipedItem.resetSwipe()
+                _currentSwipedItem = null
+            }
+        }
+
         listDelegate: delegateComponent
 
         Component {
@@ -171,31 +183,61 @@ Page {
             HistoryDelegate {
                 id: historyDelegate
                 objectName: "historyDelegate" + index
-                anchors.left: parent.left
-                anchors.right: parent.right
-                selected: historyList.isSelected(historyDelegate)
-                isFirst: model.index == 0
-                removable: !historyList.isInSelectionMode
+
+                anchors{
+                    left: parent.left
+                    right: parent.right
+                }
+
+                selected: historyDelegate.ListView.isCurrentItem || historyList.isSelected(historyDelegate)
+                isFirst: model.index === 0
+                locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
 
-                Item {
-                    Connections {
-                        target: historyList
-                        onCurrentContactExpandedChanged: {
-                            if (index != historyList.currentContactExpanded) {
-                                historyDelegate.detailsShown = false
+                // Animate item removal
+                ListView.onRemove: SequentialAnimation {
+                    PropertyAction {
+                        target: historyDelegate
+                        property: "ListView.delayRemove"
+                        value: true
+                    }
+
+                    // reset swipe state
+                    ScriptAction {
+                        script: {
+                            if (historyList._currentSwipedItem === historyDelegate) {
+                                historyList._currentSwipedItem.resetSwipe()
+                                historyList._currentSwipedItem = null
+                            }
+
+                            if (ListView.isCurrentItem) {
+                                contactListView.currentIndex = -1
                             }
                         }
                     }
+
+                    // animate the removal
+                    UbuntuNumberAnimation {
+                        target: historyDelegate
+                        property: "height"
+                        to: 1
+                    }
+
+                    PropertyAction {
+                        target: historyDelegate
+                        property: "ListView.delayRemove"
+                        value: false
+                    }
                 }
 
-                onPressAndHold: {
+                onItemPressAndHold: {
                     if (!historyList.isInSelectionMode) {
                         historyList.startSelection()
                     }
                     historyList.selectItem(historyDelegate)
                 }
-                onClicked: {
+
+                onItemClicked: {
                     if (historyList.isInSelectionMode) {
                         if (!historyList.selectItem(historyDelegate)) {
                             historyList.deselectItem(historyDelegate)
@@ -203,20 +245,38 @@ Page {
                         return
                     }
 
-                    if (!interactive) {
-                        return;
-                    }
-
-                    if (historyList.currentContactExpanded == index) {
-                        historyList.currentContactExpanded = -1
-                        detailsShown = false
-                        return
-                    // expand and display the extended options
-                    } else {
-                        historyList.currentContactExpanded = index
-                        detailsShown = !detailsShown
-                    }
+                    historyDelegate.activate()
                 }
+
+                onSwippingChanged: historyList._updateSwipeState(historyDelegate)
+                onSwipeStateChanged: historyList._updateSwipeState(historyDelegate)
+
+                leftSideAction: Action {
+                    iconName: "delete"
+                    text: i18n.tr("Delete")
+                    onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+                }
+                rightSideActions: [
+                    // FIXME: the first action should go to contac call log details page
+                    Action {
+                        iconName: unknownContact ? "contact-new" : "stock_contact"
+                        text: i18n.tr("Details")
+                        onTriggered: {
+                            if (unknownContact) {
+                                mainView.addNewPhone(phoneNumber)
+                            } else {
+                                mainView.viewContact(contactId)
+                            }
+                        }
+                    },
+                    Action {
+                        iconName: "message"
+                        text: i18n.tr("Send message")
+                        onTriggered: {
+                            mainView.sendMessage(phoneNumber)
+                        }
+                    }
+                ]
             }
         }
     }

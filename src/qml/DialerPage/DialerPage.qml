@@ -78,16 +78,30 @@ PageWithBottomEdge {
 
     property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
 
-    Binding {
-        target: bottomEdgePage
-        when: bottomEdgePage
-        property: "currentIndex"
-        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
-    }
-    onBottomEdgeReleased: {
-        bottomEdgePage.activateCurrentIndex()
+    onBottomEdgeExposedAreaChanged: {
+        if (!bottomEdgePage)  {
+            return
+        }
+
+        var index =  Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
+        if (index < 3) {
+            bottomEdgePage.currentIndex = index
+        } else {
+            bottomEdgePage.currentIndex = -1
+        }
     }
 
+    onBottomEdgeReleased: {
+        if (bottomEdgePage.currentIndex < 3) {
+            bottomEdgePage.activateCurrentIndex()
+        } else {
+            bottomEdgePage.currentIndex = -1
+        }
+    }
+
+    onIsReadyChanged: {
+        bottomEdgePage.fullView = isReady;
+    }
 
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
