@@ -6,20 +6,21 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-16 19:26+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-07-17 13:58-0300\n"
 "PO-Revision-Date: 2014-05-15 12:09+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
-#: src/qml/DialerPage/Keypad.qml:202
+#: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
 msgstr "#"
 
@@ -47,140 +48,124 @@ msgstr[0] "%1 секунда"
 msgstr[1] "%1 секунди"
 msgstr[2] "%1 секунд"
 
-#: src/qml/DialerPage/Keypad.qml:179
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:189
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:188
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:45
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:56
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:66
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:76
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: src/qml/DialerPage/Keypad.qml:96
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:106
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:157
+#: src/qml/DialerPage/Keypad.qml:116
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:167
+#: src/qml/DialerPage/Keypad.qml:126
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:98
+#: src/qml/DialerPage/Keypad.qml:57
 msgid "ABC"
 msgstr "АБВГ"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
-msgid "Add Contact"
-msgstr "Додати контакт"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
-msgid "Add to existing contact"
-msgstr "Додати до наявного запису"
-
-#: src/qml/dialer-app.qml:244
+#: src/qml/dialer-app.qml:331
 msgid "Call Barring"
 msgstr "Заборона викликів"
 
-#: src/qml/dialer-app.qml:255
+#: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
 msgstr "Переадресація викликів"
 
-#: src/qml/dialer-app.qml:266
+#: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
 msgstr "Очікування викликів"
 
-#: src/qml/MainPage.qml:56
-msgid "Call log"
-msgstr "Журнал дзвінків"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
-msgid "Call now"
-msgstr "Дзвонити"
-
-#: src/qml/dialer-app.qml:277
+#: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
 msgstr "Представлення лінії викликів"
 
-#: src/qml/dialer-app.qml:289
+#: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
 msgstr "Обмеження лінії викликів"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
-msgid "Cancel"
-msgstr "Скасувати"
+#: src/qml/dialer-app.qml:225
+msgid "Close"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
-#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Конференція"
 
-#: src/qml/dialer-app.qml:283
+#: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
 msgstr "Представлення з’єднаної лінії"
 
-#: src/qml/dialer-app.qml:295
+#: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
 msgstr "Обмеження з’єднаної лінії"
 
-#: src/qml/MainPage.qml:45
+#: src/qml/ContactsPage/ContactsPage.qml:29
+#: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
 msgstr "Контакти"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
-msgid "Create new contact"
-msgstr "Створити запис"
-
-#: src/qml/DialerPage/Keypad.qml:108
+#: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
 msgstr "ДЕЄЖЗ"
 
-#: src/qml/HistoryPage/HistoryPage.qml:69
+#: src/qml/HistoryPage/HistoryPage.qml:256
 msgid "Delete"
 msgstr "Вилучити"
 
-#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
+#: src/qml/HistoryPage/HistoryPage.qml:263
+msgid "Details"
+msgstr ""
+
+#: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
 msgstr "Відкинути"
 
-#: src/qml/DialerPage/DialerPage.qml:89
+#: src/qml/DialerPage/DialerPage.qml:181
 msgid "Enter a number"
 msgstr "Введіть номер"
 
-#: src/qml/dialer-app.qml:166
+#: src/qml/dialer-app.qml:258
 msgid "Error"
 msgstr "Помилка"
 
-#: src/qml/DialerPage/Keypad.qml:118
+#: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
 msgstr "ІЇИЙКЛ"
 
@@ -188,23 +173,23 @@ msgstr "ІЇИЙКЛ"
 msgid "Hangup"
 msgstr "Від’єднання"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
-msgid "How do you want to save the contact?"
-msgstr "У який спосіб слід зберегти контакт?"
+#: src/qml/HistoryPage/HistoryDelegate.qml:55
+msgid "Incoming"
+msgstr ""
 
-#: src/qml/dialer-app.qml:167
+#: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
 msgstr "Некоректний код USSD"
 
-#: src/qml/DialerPage/Keypad.qml:128
+#: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
 msgstr "МНОП"
 
-#: src/qml/MainPage.qml:35
+#: src/qml/DialerPage/DialerPage.qml:51
 msgid "Keypad"
 msgstr "Цифрова клавіатура"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
 msgstr "РСТУ"
 
@@ -212,15 +197,28 @@ msgstr "РСТУ"
 msgid "Merge calls"
 msgstr "Об’єднати виклики"
 
-#: src/qml/LiveCallPage/LiveCall.qml:75
-msgid "New call"
+#: src/qml/HistoryPage/HistoryDelegate.qml:53
+msgid "Missed"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:62
+#, fuzzy
+msgid "New Call"
 msgstr "Новий виклик"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/dialer-app.qml:221
+msgid "No network"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:57
+msgid "Outgoing"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
 msgstr "ФХЦЧ"
 
-#: src/qml/dialer-app.qml:147
+#: src/qml/dialer-app.qml:239
 msgid "Please wait"
 msgstr "Будь ласка, зачекайте"
 
@@ -228,40 +226,45 @@ msgstr "Будь ласка, зачекайте"
 msgid "Private"
 msgstr "Конфіденційне"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "Save contact"
-msgstr "Зберегти контакт"
+#: src/qml/DialerPage/DialerPage.qml:75 src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Recent"
+msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
-msgid "Send text message"
+#: src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Select"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryPage.qml:274
+#, fuzzy
+msgid "Send message"
 msgstr "Надіслати текстове повідомлення"
 
-#: src/qml/DialerPage/Keypad.qml:158
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
 msgstr "ШЩ"
+
+#: src/qml/dialer-app.qml:222
+#, qt-format
+msgid "There is currently no network on %1"
+msgstr ""
+
+#: src/qml/dialer-app.qml:222
+msgid "There is currently no network."
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
 msgstr "Сьогодні"
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-msgid "Two Calls"
-msgstr "Два виклики"
-
-#: src/qml/HistoryPage/HistoryDelegate.qml:139
-msgid "Unknown"
-msgstr "Невідомо"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "View contact"
-msgstr "Переглянути контакт"
+#: src/qml/ContactsPage/ContactsPage.qml:46
+msgid "Type a name or phone to search"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr "Голосова пошта"
 
-#: src/qml/DialerPage/Keypad.qml:168
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
 msgstr "ЬЮЯ"
 
@@ -269,20 +272,53 @@ msgstr "ЬЮЯ"
 msgid "Yesterday"
 msgstr "Вчора"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "активний"
 
+#: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "дзвінок"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr "призупинений"
+
+#~ msgid "Add Contact"
+#~ msgstr "Додати контакт"
+
+#~ msgid "Add to existing contact"
+#~ msgstr "Додати до наявного запису"
+
+#~ msgid "Call log"
+#~ msgstr "Журнал дзвінків"
+
+#~ msgid "Call now"
+#~ msgstr "Дзвонити"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасувати"
+
+#~ msgid "Create new contact"
+#~ msgstr "Створити запис"
+
+#~ msgid "How do you want to save the contact?"
+#~ msgstr "У який спосіб слід зберегти контакт?"
+
+#~ msgid "Save contact"
+#~ msgstr "Зберегти контакт"
+
+#~ msgid "Two Calls"
+#~ msgstr "Два виклики"
+
+#~ msgid "Unknown"
+#~ msgstr "Невідомо"
+
+#~ msgid "View contact"
+#~ msgstr "Переглянути контакт"
 
 #~ msgid "Dialer App"
 #~ msgstr "Програма для додзвону"
