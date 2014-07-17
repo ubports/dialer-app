@@ -29,7 +29,6 @@ PageWithBottomEdge {
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
-
     objectName: "dialerPage"
 
     tools: ToolbarItems {
@@ -109,8 +108,7 @@ PageWithBottomEdge {
             if (dialNumber == "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
-                // TODO: handle dual sim
-                mainView.ussdResponseText = ussdManager.serial(telepathyHelper.accountIds[0])
+                mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
         }
@@ -132,11 +130,48 @@ PageWithBottomEdge {
         anchors.fill: parent
         focus: true
 
+        // TODO replace by the sdk sections component when it's released
+        Rectangle {
+            id: accountList
+            clip: true
+            z: 1
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+            }
+            height: telepathyHelper.accountIds.length > 1 ? childrenRect.height : 0
+            color: "white"
+            Row {
+                anchors {
+                    top: parent.top
+                    horizontalCenter: parent.horizontalCenter
+                }
+                height: childrenRect.height
+                width: childrenRect.width
+                spacing: units.gu(2)
+                Repeater {
+                    model: telepathyHelper.accountIds
+                    delegate: Label {
+                        width: paintedWidth
+                        height: paintedHeight
+                        text: mainView.accounts[modelData]
+                        font.pixelSize: FontUtils.sizeToPixels("small")
+                        color: mainView.accountId == modelData ? "red" : "#5d5d5d"
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: mainView.accountId = modelData
+                        }
+                    }
+                }
+            }
+        }
+
         KeypadEntry {
             id: keypadEntry
 
             anchors {
-                top: parent.top
+                top: accountList.bottom
                 topMargin: units.gu(3)
                 left: parent.left
                 right: backspace.left
@@ -313,7 +348,12 @@ PageWithBottomEdge {
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
-                    mainView.call(keypadEntry.value);
+                    // avoid cleaning the keypadEntry in case there is no signal
+                    if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+                        PopupUtils.open(noNetworkDialog)
+                        return
+                    }
+                    mainView.call(keypadEntry.value, mainView.accountId);
                     keypadEntry.value = "";
                 }
                 enabled: {
@@ -321,7 +361,7 @@ PageWithBottomEdge {
                         return false;
                     }
 
-                    if (greeter.greeterActive || !telepathyHelper.connected) {
+                    if (greeter.greeterActive) {
                         return mainView.isEmergencyNumber(dialNumber);
                     }
 
