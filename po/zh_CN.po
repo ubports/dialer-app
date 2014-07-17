@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-27 16:33+0000\n"
 "Last-Translator: Anthony Wong <anthony.wong@ubuntu.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-05-28 05:54+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -100,15 +100,15 @@ msgstr "添加联系人"
 msgid "Add to existing contact"
 msgstr "添加到已有联系人"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "呼叫限制"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "呼叫转移"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "呼叫等待"
 
@@ -120,11 +120,11 @@ msgstr "通话记录"
 msgid "Call now"
 msgstr "现在呼叫"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr "来电显示"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr "限制显示身份"
 
@@ -132,16 +132,16 @@ msgstr "限制显示身份"
 msgid "Cancel"
 msgstr "取消"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "会议"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr "通话时来电显示"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr "通话时限制显示身份"
 
@@ -161,27 +161,15 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "删除"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "拨号器"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "拨号应用"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "拨号应用"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "忽略"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "输入号码"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "错误"
 
@@ -197,7 +185,7 @@ msgstr "挂断"
 msgid "How do you want to save the contact?"
 msgstr "怎样保存联系人？"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "无效的 USSD 码"
 
@@ -225,7 +213,7 @@ msgstr "新通话"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "请稍候"
 
@@ -279,8 +267,8 @@ msgstr "昨天"
 msgid "active"
 msgstr "有效"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "呼叫中"
 
@@ -288,3 +276,12 @@ msgstr "呼叫中"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "通话保持"
+
+#~ msgid "Dialer App"
+#~ msgstr "拨号应用"
+
+#~ msgid "Dialer application"
+#~ msgstr "拨号应用"
+
+#~ msgid "Dialer"
+#~ msgstr "拨号器"

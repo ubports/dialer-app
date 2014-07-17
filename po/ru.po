@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-15 13:00+0000\n"
 "Last-Translator: Roman Mindlin <mindline@mail.ru>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -107,15 +107,15 @@ msgstr "Добавить контакт"
 msgid "Add to existing contact"
 msgstr "Добавить к существующему контакту"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "Запрет вызовов"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "Переадресация вызовов"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "Ожидание вызова"
 
@@ -127,11 +127,11 @@ msgstr "Журнал вызовов"
 msgid "Call now"
 msgstr "Позвонить сейчас"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr "Индикация вызывающей линии"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr "Запрет вызывающей линии"
 
@@ -139,16 +139,16 @@ msgstr "Запрет вызывающей линии"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Конференция"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr "Индикация подключенной линии"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr "Ограничение подключенной линии"
 
@@ -168,27 +168,15 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Удалить"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Набор номера"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "Телефон"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "Приложение для набора номера"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "Отменить"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Введите номер"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "Ошибка"
 
@@ -204,7 +192,7 @@ msgstr "Отбой"
 msgid "How do you want to save the contact?"
 msgstr "Как сохранить контакт?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "Неверный USSD код"
 
@@ -232,7 +220,7 @@ msgstr "Новый вызов"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "Подождите"
 
@@ -286,8 +274,8 @@ msgstr "Вчера"
 msgid "active"
 msgstr "активно"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "вызывает"
 
@@ -295,3 +283,12 @@ msgstr "вызывает"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "На линии"
+
+#~ msgid "Dialer App"
+#~ msgstr "Телефон"
+
+#~ msgid "Dialer application"
+#~ msgstr "Приложение для набора номера"
+
+#~ msgid "Dialer"
+#~ msgstr "Набор номера"

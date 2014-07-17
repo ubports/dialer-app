@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-15 21:09+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -103,15 +103,15 @@ msgstr "הוספת איש קשר"
 msgid "Add to existing contact"
 msgstr "הוספה לאיש קשר קיים"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "חסימת שיחות"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "העברת שיחות"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "שיחה ממתינה"
 
@@ -123,11 +123,11 @@ msgstr "יומן שיחות"
 msgid "Call now"
 msgstr "להתקשר כעת"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr "ייצוג קו השיחה"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr "הגבלות קו השיחה"
 
@@ -135,16 +135,16 @@ msgstr "הגבלות קו השיחה"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "ועידה"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr "ייצוג הקו המחובר"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr "מגבלות הקו המחובר"
 
@@ -164,27 +164,15 @@ msgstr "אבג"
 msgid "Delete"
 msgstr "מחיקה"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "חייגן"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "יישום חייגן"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "יישום חייגן"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "התעלמות"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "נא להזין מספר"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "שגיאה"
 
@@ -200,7 +188,7 @@ msgstr "לנתק"
 msgid "How do you want to save the contact?"
 msgstr "איך ברצונך לשמור את איש הקשר?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "קוד USSD שגוי"
 
@@ -228,7 +216,7 @@ msgstr "שיחה חדשה"
 msgid "PQRS"
 msgstr "רשת"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "נא להמתין"
 
@@ -282,8 +270,8 @@ msgstr "אתמול"
 msgid "active"
 msgstr "פעילה"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "בהתקשרות"
 
@@ -291,3 +279,12 @@ msgstr "בהתקשרות"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "בהמתנה"
+
+#~ msgid "Dialer App"
+#~ msgstr "יישום חייגן"
+
+#~ msgid "Dialer application"
+#~ msgstr "יישום חייגן"
+
+#~ msgid "Dialer"
+#~ msgstr "חייגן"
