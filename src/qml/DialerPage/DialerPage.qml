@@ -133,7 +133,6 @@ PageWithBottomEdge {
         // TODO replace by the sdk sections component when it's released
         Rectangle {
             id: accountList
-            clip: true
             z: 1
             anchors {
                 left: parent.left
@@ -159,8 +158,16 @@ PageWithBottomEdge {
                         font.pixelSize: FontUtils.sizeToPixels("small")
                         color: mainView.accountId == modelData ? "red" : "#5d5d5d"
                         MouseArea {
-                            anchors.fill: parent
+                            anchors {
+                                fill: parent
+                                // increase touch area
+                                leftMargin: units.gu(-1)
+                                rightMargin: units.gu(-1)
+                                bottomMargin: units.gu(-1)
+                                topMargin: units.gu(-1)
+                            }
                             onClicked: mainView.accountId = modelData
+                            z: 2
                         }
                     }
                 }
