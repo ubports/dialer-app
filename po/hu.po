@@ -6,12 +6,11 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-07-17 13:58-0300\n"
+"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-15 12:04+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
-"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +18,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
-#: src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
 msgstr "#"
 
@@ -44,124 +43,140 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 másodperc"
 msgstr[1] "%1 másodperc"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:189
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:188
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:45
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:56
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:66
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:76
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:96
+#: src/qml/DialerPage/Keypad.qml:137
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:106
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: src/qml/DialerPage/Keypad.qml:157
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: src/qml/DialerPage/Keypad.qml:167
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:57
+#: src/qml/DialerPage/Keypad.qml:98
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/dialer-app.qml:331
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
+msgid "Add Contact"
+msgstr "Kapcsolat hozzáadása"
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
+msgid "Add to existing contact"
+msgstr "Hozzáadás létező kapcsolathoz"
+
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "Híváskorlátozás"
 
-#: src/qml/dialer-app.qml:342
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "Hívástovábbítás"
 
-#: src/qml/dialer-app.qml:353
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "Hívásvárakoztatás"
 
-#: src/qml/dialer-app.qml:364
+#: src/qml/MainPage.qml:56
+msgid "Call log"
+msgstr "Hívásnapló"
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
+msgid "Call now"
+msgstr "Azonnali hívás"
+
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:376
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr ""
 
-#: src/qml/dialer-app.qml:225
-msgid "Close"
-msgstr ""
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
+msgid "Cancel"
+msgstr "Mégse"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Konferencia"
 
-#: src/qml/dialer-app.qml:370
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:382
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:29
-#: src/qml/DialerPage/DialerPage.qml:40
+#: src/qml/MainPage.qml:45
 msgid "Contacts"
 msgstr "Kapcsolatok"
 
-#: src/qml/DialerPage/Keypad.qml:67
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
+msgid "Create new contact"
+msgstr "Új kapcsolat létrehozása"
+
+#: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:256
+#: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
 msgstr "Törlés"
 
-#: src/qml/HistoryPage/HistoryPage.qml:263
-msgid "Details"
-msgstr ""
-
-#: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "Elvetés"
 
-#: src/qml/DialerPage/DialerPage.qml:181
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Adjon meg egy számot"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "Hiba"
 
-#: src/qml/DialerPage/Keypad.qml:77
+#: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
 msgstr "GHI"
 
@@ -169,23 +184,23 @@ msgstr "GHI"
 msgid "Hangup"
 msgstr "Bontás"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:55
-msgid "Incoming"
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
+msgid "How do you want to save the contact?"
 msgstr ""
 
-#: src/qml/dialer-app.qml:259
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "Érvénytelen USSD kód"
 
-#: src/qml/DialerPage/Keypad.qml:87
+#: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/MainPage.qml:35
 msgid "Keypad"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
 msgstr "MNO"
 
@@ -193,28 +208,15 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:53
-msgid "Missed"
-msgstr ""
-
-#: src/qml/LiveCallPage/LiveCall.qml:62
-#, fuzzy
-msgid "New Call"
+#: src/qml/LiveCallPage/LiveCall.qml:75
+msgid "New call"
 msgstr "Új hívás"
 
-#: src/qml/dialer-app.qml:221
-msgid "No network"
-msgstr ""
-
-#: src/qml/HistoryPage/HistoryDelegate.qml:57
-msgid "Outgoing"
-msgstr ""
-
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:239
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "Kérem várjon"
 
@@ -222,45 +224,40 @@ msgstr "Kérem várjon"
 msgid "Private"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:75 src/qml/HistoryPage/HistoryPage.qml:43
-msgid "Recent"
-msgstr ""
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
+msgid "Save contact"
+msgstr "Kapcsolat mentése"
 
-#: src/qml/HistoryPage/HistoryPage.qml:43
-msgid "Select"
-msgstr ""
-
-#: src/qml/HistoryPage/HistoryPage.qml:274
-#, fuzzy
-msgid "Send message"
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
+msgid "Send text message"
 msgstr "Szöveges üzenet küldése"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
 msgstr "TUV"
-
-#: src/qml/dialer-app.qml:222
-#, qt-format
-msgid "There is currently no network on %1"
-msgstr ""
-
-#: src/qml/dialer-app.qml:222
-msgid "There is currently no network."
-msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
 msgstr "Ma"
 
-#: src/qml/ContactsPage/ContactsPage.qml:46
-msgid "Type a name or phone to search"
+#: src/qml/LiveCallPage/LiveCall.qml:47
+msgid "Two Calls"
 msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:139
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
+msgid "View contact"
+msgstr "Kapcsolat megtekintése"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr "Hangposta"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
 msgstr "WXYZ"
 
@@ -268,47 +265,20 @@ msgstr "WXYZ"
 msgid "Yesterday"
 msgstr "Tegnap"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
 msgstr "aktív"
 
-#: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "hívás"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr ""
-
-#~ msgid "Add Contact"
-#~ msgstr "Kapcsolat hozzáadása"
-
-#~ msgid "Add to existing contact"
-#~ msgstr "Hozzáadás létező kapcsolathoz"
-
-#~ msgid "Call log"
-#~ msgstr "Hívásnapló"
-
-#~ msgid "Call now"
-#~ msgstr "Azonnali hívás"
-
-#~ msgid "Cancel"
-#~ msgstr "Mégse"
-
-#~ msgid "Create new contact"
-#~ msgstr "Új kapcsolat létrehozása"
-
-#~ msgid "Save contact"
-#~ msgstr "Kapcsolat mentése"
-
-#~ msgid "Unknown"
-#~ msgstr "Ismeretlen"
-
-#~ msgid "View contact"
-#~ msgstr "Kapcsolat megtekintése"
 
 #~ msgid "Dialer application"
 #~ msgstr "Tárcsázó alkalmazás"
