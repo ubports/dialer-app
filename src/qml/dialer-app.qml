@@ -29,6 +29,10 @@ MainView {
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
+    // FIXME this info must come from system settings or telephony-service
+    property var accounts: {"ofono/ofono/account0": "SIM 1", "ofono/ofono/account1": "SIM 2"}
+    property string accountId: telepathyHelper.accountIds[0]
+
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
@@ -130,6 +134,11 @@ MainView {
             return;
         }
 
+        if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+            PopupUtils.open(noNetworkDialog)
+            return
+        }
+ 
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
             ussdManager.initiate(number, accountId)
@@ -203,6 +212,23 @@ MainView {
         }
 
         source: Qt.resolvedUrl("assets/dialer_background_full.png")
+    }
+
+    Component {
+        id: noNetworkDialog
+        Dialog {
+            id: dialogue
+            title: i18n.tr("No network")
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts[mainView.accountId]) : i18n.tr("There is currently no network.")
+            Button {
+                objectName: "closeNoNetworkDialog"
+                text: i18n.tr("Close")
+                color: UbuntuColors.orange
+                onClicked: {
+                    PopupUtils.close(dialogue)
+                }
+            }
+        }
     }
 
     Component {

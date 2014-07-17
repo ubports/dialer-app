@@ -42,9 +42,9 @@ ListItemWithActions {
 
     function activate() {
         if (fullView) {
-            mainView.call(model.participants[0], model.accountId);
+            mainView.call(model.participants[0], mainView.accountId);
         } else {
-            mainView.populateDialpad(model.participants[0], model.accountId);
+            mainView.populateDialpad(model.participants[0], mainView.accountId);
         }
     }
 
