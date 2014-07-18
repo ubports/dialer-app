@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-03 20:12+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-07-17 11:46+0000\n"
+"Last-Translator: Alexandre Fidalgo <alexandremagnos15@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-17 06:38+0000\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
@@ -117,7 +117,7 @@ msgstr "Chamada em Espera"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr ""
+msgstr "Registro da chamadas"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
@@ -162,7 +162,7 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Delete"
-msgstr ""
+msgstr "Eliminar"
 
 #: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
@@ -210,7 +210,7 @@ msgstr "Juntar chamadas"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Nova chamada"
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
@@ -243,11 +243,11 @@ msgstr "Hoje"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Duas chamadas"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
