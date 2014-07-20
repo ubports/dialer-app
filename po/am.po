@@ -1,4 +1,4 @@
-# Dutch translation for dialer-app
+# Amharic translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-19 17:05+0000\n"
-"Last-Translator: rob <linuxned@gmail.com>\n"
-"Language-Team: Dutch <nl@li.org>\n"
+"PO-Revision-Date: 2014-07-19 19:28+0000\n"
+"Last-Translator: samson <Unknown>\n"
+"Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Launchpad-Export-Date: 2014-07-20 06:18+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
@@ -26,22 +26,22 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 uur"
-msgstr[1] "%1 uren"
+msgstr[0] "%1 ሰአት"
+msgstr[1] "%1 ሰአቶች"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 minuut"
-msgstr[1] "%1 minuten"
+msgstr[0] "%1 ደቂቃ"
+msgstr[1] "%1 ደቂቆች"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 seconde"
-msgstr[1] "%1 seconden"
+msgstr[0] "%1 ሰከንድ"
+msgstr[1] "%1 ሰከንዶች"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
@@ -97,64 +97,64 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "Contact toevoegen"
+msgstr "ግንኙነት መጨመሪያ"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Toevoegen aan bestaand contact"
+msgstr "ወደ ነበረው ግንኙነት መጨመሪያ"
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr "Gespreksblokkeringen"
+msgstr ""
 
 #: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
-msgstr "Gesprek doorschakelen"
+msgstr ""
 
 #: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr "Gesprek in de wacht"
+msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Gesprekslogboek"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "Nu bellen"
+msgstr ""
 
 #: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
-msgstr "Identificatie uitgaand gesprek inschakelen"
+msgstr ""
 
 #: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
-msgstr "Identificatie uitgaand gesprek uitschakelen"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "መሰረዣ"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "Groepsgesprek"
+msgstr ""
 
 #: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
-msgstr "Identificatie inkomend gesprek inschakelen"
+msgstr ""
 
 #: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
-msgstr "Identificatie inkomend gesprek uitschakelen"
+msgstr ""
 
 #: src/qml/ContactsPage/ContactsPage.qml:29
 #: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
-msgstr "Contacten"
+msgstr "ግንኙነቶች"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Nieuw contact aanmaken"
+msgstr "አዲስ ግንኙነት መፍጠሪያ"
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
@@ -162,19 +162,19 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:256
 msgid "Delete"
-msgstr "Verwijderen"
+msgstr "ማጥፊያ"
 
 #: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr "Weggaan"
+msgstr "መደምሰሻ"
 
 #: src/qml/DialerPage/DialerPage.qml:188
 msgid "Enter a number"
-msgstr "Voer een nummer in"
+msgstr "ቁጥር ያስገቡ"
 
 #: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr "Fout"
+msgstr "ስህተት"
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
@@ -182,15 +182,15 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "Ophangen"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "Hoe wilt u het contact opslaan?"
+msgstr "ግንኙነቱን እንዴት ነው ማስቀመጥ የሚፈልጉት?"
 
 #: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
-msgstr "Onjuiste USSD-code"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
@@ -198,7 +198,7 @@ msgstr "JKL"
 
 #: src/qml/DialerPage/DialerPage.qml:51
 msgid "Keypad"
-msgstr "Toetsenblok"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
@@ -206,11 +206,11 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr "Gesprekken samenvoegen"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "Nieuw gesprek"
+msgstr "አዲስ ጥሪ"
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
@@ -218,20 +218,20 @@ msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr "Even geduld a.u.b."
+msgstr "እባክዎን ይቆዩ"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr "Privé"
+msgstr "የ ግል"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr "Contact opslaan"
+msgstr "ግንኙነት ማስቀመጫ"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr "Sms versturen"
+msgstr "የ ጽሁፍ መልእክት መላኪያ"
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
@@ -239,23 +239,23 @@ msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Vandaag"
+msgstr "ዛሬ"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr "Twee gesprekken"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr "ያልታወቀ"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr "Contact tonen"
+msgstr "ግንኙነት መመልከቻ"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Voicemail"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
@@ -263,19 +263,19 @@ msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Gisteren"
+msgstr "ትናንትና"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr "Actief"
+msgstr "ንቁ"
 
 #: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "Bellen"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr "in de wacht"
+msgstr ""
