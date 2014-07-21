@@ -1,4 +1,4 @@
-# Amharic translation for dialer-app
+# Danish translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,100 +8,100 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-21 00:52+0000\n"
-"Last-Translator: samson <Unknown>\n"
-"Language-Team: Amharic <am@li.org>\n"
+"PO-Revision-Date: 2014-07-20 20:47+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2014-07-21 07:05+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ሰአት"
-msgstr[1] "%1 ሰአቶች"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 ደቂቃ"
-msgstr[1] "%1 ደቂቆች"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 ሰከንድ"
-msgstr[1] "%1 ሰከንዶች"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
-msgstr "*"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:147
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:45
 msgid "1"
-msgstr "1"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:56
 msgid "2"
-msgstr "2"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:66
 msgid "3"
-msgstr "3"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:76
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:86
 msgid "5"
-msgstr "5"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:96
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:106
 msgid "7"
-msgstr "7"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:116
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:126
 msgid "9"
-msgstr "9"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:57
 msgid "ABC"
-msgstr "ABC"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "ግንኙነት መጨመሪያ"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "ወደ ነበረው ግንኙነት መጨመሪያ"
+msgstr ""
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Barring"
@@ -121,7 +121,7 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "አሁን መጥሪያ"
+msgstr ""
 
 #: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
@@ -133,11 +133,11 @@ msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "መሰረዣ"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "ስብሰባ"
+msgstr ""
 
 #: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
@@ -150,43 +150,43 @@ msgstr ""
 #: src/qml/ContactsPage/ContactsPage.qml:29
 #: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
-msgstr "ግንኙነቶች"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "አዲስ ግንኙነት መፍጠሪያ"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryPage.qml:256
 msgid "Delete"
-msgstr "ማጥፊያ"
+msgstr ""
 
 #: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr "መደምሰሻ"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:188
 msgid "Enter a number"
-msgstr "ቁጥር ያስገቡ"
+msgstr ""
 
 #: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr "ስህተት"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "መዝጊያ"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "ግንኙነቱን እንዴት ነው ማስቀመጥ የሚፈልጉት?"
+msgstr ""
 
 #: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
@@ -194,7 +194,7 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:51
 msgid "Keypad"
@@ -202,44 +202,44 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr "ጥሪ ማዋሀጃ"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "አዲስ ጥሪ"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr "እባክዎን ይቆዩ"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr "የ ግል"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr "ግንኙነት ማስቀመጫ"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr "የ ጽሁፍ መልእክት መላኪያ"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "ዛሬ"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
@@ -247,11 +247,11 @@ msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "ያልታወቀ"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr "ግንኙነት መመልከቻ"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
@@ -259,21 +259,21 @@ msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "ትናንትና"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr "ንቁ"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr "በመጥራት ላይ"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
