@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-15 12:04+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -103,15 +103,15 @@ msgstr "Kapcsolat hozzáadása"
 msgid "Add to existing contact"
 msgstr "Hozzáadás létező kapcsolathoz"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "Híváskorlátozás"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "Hívástovábbítás"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "Hívásvárakoztatás"
 
@@ -123,11 +123,11 @@ msgstr "Hívásnapló"
 msgid "Call now"
 msgstr "Azonnali hívás"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -135,16 +135,16 @@ msgstr ""
 msgid "Cancel"
 msgstr "Mégse"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Konferencia"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr ""
 
@@ -164,27 +164,15 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Törlés"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Tárcsázó"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "Tárcsázó alkalmazás"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "Tárcsázó alkalmazás"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "Elvetés"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Adjon meg egy számot"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "Hiba"
 
@@ -200,7 +188,7 @@ msgstr "Bontás"
 msgid "How do you want to save the contact?"
 msgstr ""
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "Érvénytelen USSD kód"
 
@@ -228,7 +216,7 @@ msgstr "Új hívás"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "Kérem várjon"
 
@@ -282,8 +270,8 @@ msgstr "Tegnap"
 msgid "active"
 msgstr "aktív"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "hívás"
 
@@ -291,3 +279,12 @@ msgstr "hívás"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr ""
+
+#~ msgid "Dialer application"
+#~ msgstr "Tárcsázó alkalmazás"
+
+#~ msgid "Dialer"
+#~ msgstr "Tárcsázó"
+
+#~ msgid "Dialer App"
+#~ msgstr "Tárcsázó alkalmazás"

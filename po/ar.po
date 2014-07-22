@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-24 11:50+0000\n"
 "Last-Translator: Ibrahim Saed <ibraheem5000@gmail.com>\n"
 "Language-Team: Arabic <ar@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n % 100 >= "
 "3 && n % 100 <= 10 ? 3 : n % 100 >= 11 && n % 100 <= 99 ? 4 : 5;\n"
-"X-Launchpad-Export-Date: 2014-05-25 06:12+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -116,15 +116,15 @@ msgstr "إضافة شخص"
 msgid "Add to existing contact"
 msgstr "أضف إلى شخص موجود"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "حظر المكالمات"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "تحويل المكالمات"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "انتظار المكالمات"
 
@@ -136,11 +136,11 @@ msgstr "سجل المكالمات"
 msgid "Call now"
 msgstr ""
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -148,16 +148,16 @@ msgstr ""
 msgid "Cancel"
 msgstr "إلغاء"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr ""
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr ""
 
@@ -177,27 +177,15 @@ msgstr ""
 msgid "Delete"
 msgstr "احذف"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "الاتصال"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "تطبيق الاتصال"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "تطبيق الاتصال"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "رفض"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "أدخِل رقما"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "خطأ"
 
@@ -213,7 +201,7 @@ msgstr "إغلاق الخط"
 msgid "How do you want to save the contact?"
 msgstr "كيف ترغب بحفظ الشخص؟"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr ""
 
@@ -241,7 +229,7 @@ msgstr "مكالمة جديدة"
 msgid "PQRS"
 msgstr ""
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "انتظر من فضلك"
 
@@ -295,8 +283,8 @@ msgstr "أمس"
 msgid "active"
 msgstr "نشط"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr ""
 
@@ -304,3 +292,12 @@ msgstr ""
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "في الانتظار"
+
+#~ msgid "Dialer App"
+#~ msgstr "تطبيق الاتصال"
+
+#~ msgid "Dialer application"
+#~ msgstr "تطبيق الاتصال"
+
+#~ msgid "Dialer"
+#~ msgstr "الاتصال"

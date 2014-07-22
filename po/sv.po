@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-06-07 19:19+0000\n"
-"Last-Translator: Erik Simmesgård <Unknown>\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
+"PO-Revision-Date: 2014-07-21 12:59+0000\n"
+"Last-Translator: Josef Andersson <Unknown>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-08 05:56+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-07-22 07:18+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
-#: src/qml/DialerPage/Keypad.qml:202
+#: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
 msgstr "#"
 
@@ -26,72 +26,72 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 timme"
+msgstr[1] "%1 timmar"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sek"
+msgstr[1] "%1 sek"
 
-#: src/qml/DialerPage/Keypad.qml:179
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:189
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:188
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:45
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:56
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:66
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:76
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: src/qml/DialerPage/Keypad.qml:96
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:106
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:157
+#: src/qml/DialerPage/Keypad.qml:116
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:167
+#: src/qml/DialerPage/Keypad.qml:126
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:98
+#: src/qml/DialerPage/Keypad.qml:57
 msgid "ABC"
 msgstr "ABC"
 
@@ -101,54 +101,54 @@ msgstr "Lägg till kontakt"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr ""
+msgstr "Lägg till i befintlig kontakt"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr ""
+msgstr "Annat samtal blockerar"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Samtal vidarekopplas"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr ""
+msgstr "Samtal väntar"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr ""
+msgstr "Samtalslogg"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr ""
+msgstr "Ring nu"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "Visa nummer"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "Dolt nummer"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr ""
+msgstr "Konferens"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "Visa nummer"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "Dolt nummer"
 
-#: src/qml/MainPage.qml:45
+#: src/qml/ContactsPage/ContactsPage.qml:29
+#: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
 msgstr "Kontakter"
 
@@ -156,85 +156,73 @@ msgstr "Kontakter"
 msgid "Create new contact"
 msgstr "Skapa ny kontakt"
 
-#: src/qml/DialerPage/Keypad.qml:108
+#: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:69
+#: src/qml/HistoryPage/HistoryPage.qml:256
 msgid "Delete"
 msgstr "Ta bort"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr ""
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr ""
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr ""
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr ""
+msgstr "Avfärda"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:188
 msgid "Enter a number"
-msgstr ""
+msgstr "Ange nummer"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr ""
+msgstr "Fel"
 
-#: src/qml/DialerPage/Keypad.qml:118
+#: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "Lägg på"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
 msgstr "Hur vill du spara kontakten?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Ogiltig USSD-kod"
 
-#: src/qml/DialerPage/Keypad.qml:128
+#: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
-#: src/qml/MainPage.qml:35
+#: src/qml/DialerPage/DialerPage.qml:51
 msgid "Keypad"
-msgstr ""
+msgstr "Knappsats"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Koppla ihop samtal"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Nytt samtal"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr ""
+msgstr "Var god vänta"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
@@ -243,11 +231,11 @@ msgstr "Spara kontakt"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "Skicka textmeddelande"
 
-#: src/qml/DialerPage/Keypad.qml:158
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
@@ -255,7 +243,7 @@ msgstr "Idag"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Två samtal"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
@@ -267,11 +255,11 @@ msgstr "Visa kontakt"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr ""
+msgstr "Telefonsvarare"
 
-#: src/qml/DialerPage/Keypad.qml:168
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
@@ -280,14 +268,14 @@ msgstr "Igår"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "aktiv"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
+#: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
-msgstr ""
+msgstr "ringer"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "väntar"

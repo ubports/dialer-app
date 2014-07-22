@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
-"PO-Revision-Date: 2014-06-09 04:35+0000\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
+"PO-Revision-Date: 2014-07-07 08:43+0000\n"
 "Last-Translator: Adolfo Jayme <fitoschido@gmail.com>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-06-10 06:50+0000\n"
-"X-Generator: Launchpad (build 17031)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:29+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -103,15 +103,15 @@ msgstr "Añadir contacto"
 msgid "Add to existing contact"
 msgstr "Añadir a contacto existente"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "Restricción de llamadas"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "Desvío de llamadas"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "Llamada en espera"
 
@@ -123,30 +123,30 @@ msgstr "Lista de llamadas"
 msgid "Call now"
 msgstr "Llamar ahora"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "Mostrar línea de llamada"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "Restringir línea de llamada"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Conferencia"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "Mostrar línea conectada"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "Restricción de línea conectada"
 
 #: src/qml/MainPage.qml:45
 msgid "Contacts"
@@ -164,27 +164,15 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Marcador"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "Aplicación Marcador"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "Aplicación Marcador"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "Ignorar"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Escriba un número"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "Error"
 
@@ -200,7 +188,7 @@ msgstr "Colgar"
 msgid "How do you want to save the contact?"
 msgstr "¿Cómo quiere guardar el contacto?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "Código USSD no válido"
 
@@ -210,7 +198,7 @@ msgstr "JKL"
 
 #: src/qml/MainPage.qml:35
 msgid "Keypad"
-msgstr "Tec. numérico"
+msgstr "Teclado"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
@@ -228,7 +216,7 @@ msgstr "Llamada nueva"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "Espere"
 
@@ -282,8 +270,8 @@ msgstr "Ayer"
 msgid "active"
 msgstr "activa"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "llamando"
 
@@ -291,3 +279,12 @@ msgstr "llamando"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "en espera"
+
+#~ msgid "Dialer App"
+#~ msgstr "Aplicación Marcador"
+
+#~ msgid "Dialer application"
+#~ msgstr "Aplicación Marcador"
+
+#~ msgid "Dialer"
+#~ msgstr "Marcador"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-01-17 09:41+0000\n"
 "Last-Translator: abuyop <Unknown>\n"
 "Language-Team: Malay <ms@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-05-17 07:15+0000\n"
-"X-Generator: Launchpad (build 17007)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
@@ -26,22 +26,22 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 jam"
+msgstr[1] "%1 jam"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 saat"
+msgstr[1] "%1 saat"
 
 #: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
@@ -97,23 +97,23 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr ""
+msgstr "Tambah Kenalan"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
 msgstr "Tambah ke kenalan sedia ada"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
-msgstr ""
+msgstr "Sekatan Panggilan"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Pemajuan Panggilan"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
-msgstr ""
+msgstr "Menunggu Panggilan"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
@@ -121,32 +121,32 @@ msgstr "Log panggilan"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr ""
+msgstr "Panggil sekarang"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "Persembahan Talian Panggilan"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "Sekatan Talian Panggilan"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr ""
+msgstr "Batal"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
-msgstr ""
+msgstr "Sidang"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "Persembahan Talian Bersambung"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "Sekatan Talian Bersambung"
 
 #: src/qml/MainPage.qml:45
 msgid "Contacts"
@@ -164,29 +164,17 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Padam"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Pendail"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "Apl Pendail"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "Aplikasi pendail"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
-msgstr ""
+msgstr "Singkir"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Masukkan nombor"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
-msgstr ""
+msgstr "Ralat"
 
 #: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
@@ -194,15 +182,15 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "Letak"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr ""
+msgstr "Bagaiamana anda mahu menyimpan kenalan?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Kod USSD tidak sah"
 
 #: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
@@ -218,7 +206,7 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Gabung panggilan"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
@@ -228,22 +216,22 @@ msgstr ""
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
-msgstr ""
+msgstr "Tunggu sebentar"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Peribadi"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr ""
+msgstr "Simpan kenalan"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "Hantar mesej teks"
 
 #: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
@@ -263,7 +251,7 @@ msgstr "Tidak diketahui"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr ""
+msgstr "Lihat kenalan"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
@@ -280,14 +268,23 @@ msgstr "Semalam"
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr ""
+msgstr "aktif"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "memanggil"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
-msgstr ""
+msgstr "ditangguh"
+
+#~ msgid "Dialer App"
+#~ msgstr "Apl Pendail"
+
+#~ msgid "Dialer"
+#~ msgstr "Pendail"
+
+#~ msgid "Dialer application"
+#~ msgstr "Aplikasi pendail"

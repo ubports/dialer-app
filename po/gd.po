@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-05-20 05:05+0000\n"
 "Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
 "Language-Team: Akerbeltz\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2014-05-22 06:49+0000\n"
-"X-Generator: Launchpad (build 17017)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 "Language: gd\n"
 
 #: src/qml/DialerPage/Keypad.qml:202
@@ -111,15 +111,15 @@ msgstr "Cuir neach-aithne ris"
 msgid "Add to existing contact"
 msgstr "Cuir ri neach-aithne làithreach"
 
-#: src/qml/dialer-app.qml:207
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr "Bacadh ghairmean"
 
-#: src/qml/dialer-app.qml:218
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "Sìneadh air adhart ghairmean"
 
-#: src/qml/dialer-app.qml:229
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "Tha gairm a' feitheamh"
 
@@ -131,11 +131,11 @@ msgstr "Loga nan gairmean"
 msgid "Call now"
 msgstr "Cuir fòn an-dràsta"
 
-#: src/qml/dialer-app.qml:240
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr "Taisbeanadh de ghairmean a thig a-steach"
 
-#: src/qml/dialer-app.qml:252
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr "Bacadh de ghairmean a thig a-steach"
 
@@ -143,16 +143,16 @@ msgstr "Bacadh de ghairmean a thig a-steach"
 msgid "Cancel"
 msgstr "Sguir dheth"
 
-#: src/qml/LiveCallPage/LiveCall.qml:49
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Gairm co-labhairt"
 
-#: src/qml/dialer-app.qml:246
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr "Taisbeanadh de ghairmean ceangailte"
 
-#: src/qml/dialer-app.qml:258
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr "Bacadh de ghairmean ceangailte"
 
@@ -172,27 +172,15 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Sguab às"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Daithealair"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "An aplacaid daithealaidh"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "An aplacaid daithealaidh"
-
-#: src/qml/dialer-app.qml:143 src/qml/dialer-app.qml:157
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "Cuir air falbh"
 
-#: src/qml/DialerPage/DialerPage.qml:79
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "Cuir a-steach àireamh"
 
-#: src/qml/dialer-app.qml:140
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "Mearachd"
 
@@ -208,7 +196,7 @@ msgstr "Cuir sìos am fòn"
 msgid "How do you want to save the contact?"
 msgstr "Ciamar a shàbhaileas sinn an neach-aithne dhut?"
 
-#: src/qml/dialer-app.qml:141
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "Còd USSD mì-dhligheach"
 
@@ -236,7 +224,7 @@ msgstr "Gairm ùr"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:121
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "Fuirich ort"
 
@@ -290,8 +278,8 @@ msgstr "An-dè"
 msgid "active"
 msgstr "beò"
 
-#: src/qml/LiveCallPage/LiveCall.qml:409
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "a' fònaigeadh"
 
@@ -299,3 +287,12 @@ msgstr "a' fònaigeadh"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "'ga chumail"
+
+#~ msgid "Dialer"
+#~ msgstr "Daithealair"
+
+#~ msgid "Dialer App"
+#~ msgstr "An aplacaid daithealaidh"
+
+#~ msgid "Dialer application"
+#~ msgstr "An aplacaid daithealaidh"

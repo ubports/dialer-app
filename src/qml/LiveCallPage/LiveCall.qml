@@ -47,7 +47,9 @@ Page {
         }
     }
     title: caller //i18n.tr("Call")
-    tools: ToolbarItems {
+    ToolbarItems {
+        id: regularToolbar
+        visible: false
         back: ToolbarButton {
             action: Action {
                 objectName: "fakeBackButton"
@@ -62,6 +64,18 @@ Page {
             }
         }
     }
+
+    ToolbarItems {
+        id: greeterModeToolbar
+        visible: false
+        back: ToolbarButton {
+            action: Action {
+                objectName: "fakeBackButton"
+            }
+        }
+    }
+
+    tools: greeter.greeterActive ? greeterModeToolbar : regularToolbar
 
     x: header ? header.height : 0
 
@@ -118,6 +132,14 @@ Page {
     onCallChanged: {
         // reset the DTMF keypad visibility status
         dtmfVisible = (call && call.voicemail);
+    }
+
+    onActiveChanged: {
+        callManager.callIndicatorVisible = !active;
+    }
+
+    Component.onCompleted: {
+        callManager.callIndicatorVisible = !active;
     }
 
     Timer {

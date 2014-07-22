@@ -29,9 +29,11 @@ PageWithBottomEdge {
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    objectName: "dialerPage"
 
     tools: ToolbarItems {
         ToolbarButton {
+            id: contactButton
             objectName: "contactButton"
             action: Action {
                 iconSource: "image://theme/contact"
@@ -41,9 +43,33 @@ PageWithBottomEdge {
         }
     }
 
+    ToolbarItems {
+        id: emptyToolbar
+        visible: false
+    }
+
     title: i18n.tr("Keypad")
 
+    // -------- Greeter mode ----------
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+
+            PropertyChanges {
+                target: page
+                tools: emptyToolbar
+                bottomEdgeEnabled: false
+            }
+            PropertyChanges {
+                target: contactLabel
+                visible: false
+            }
+        }
+    ]
+
     // -------- Bottom Edge Setup -----
+    bottomEdgeEnabled: true
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
@@ -51,16 +77,30 @@ PageWithBottomEdge {
 
     property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
 
-    Binding {
-        target: bottomEdgePage
-        when: bottomEdgePage
-        property: "currentIndex"
-        value: Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
-    }
-    onBottomEdgeReleased: {
-        bottomEdgePage.activateCurrentIndex()
+    onBottomEdgeExposedAreaChanged: {
+        if (!bottomEdgePage)  {
+            return
+        }
+
+        var index =  Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
+        if (index < 3) {
+            bottomEdgePage.currentIndex = index
+        } else {
+            bottomEdgePage.currentIndex = -1
+        }
     }
 
+    onBottomEdgeReleased: {
+        if (bottomEdgePage.currentIndex < 3) {
+            bottomEdgePage.activateCurrentIndex()
+        } else {
+            bottomEdgePage.currentIndex = -1
+        }
+    }
+
+    onIsReadyChanged: {
+        bottomEdgePage.fullView = isReady;
+    }
 
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
@@ -68,8 +108,7 @@ PageWithBottomEdge {
             if (dialNumber == "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
-                // TODO: handle dual sim
-                mainView.ussdResponseText = ussdManager.serial(telepathyHelper.accountIds[0])
+                mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
         }
@@ -91,11 +130,55 @@ PageWithBottomEdge {
         anchors.fill: parent
         focus: true
 
+        // TODO replace by the sdk sections component when it's released
+        Rectangle {
+            id: accountList
+            z: 1
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: parent.top
+            }
+            height: telepathyHelper.accountIds.length > 1 ? childrenRect.height : 0
+            color: "white"
+            Row {
+                anchors {
+                    top: parent.top
+                    horizontalCenter: parent.horizontalCenter
+                }
+                height: childrenRect.height
+                width: childrenRect.width
+                spacing: units.gu(2)
+                Repeater {
+                    model: telepathyHelper.accountIds
+                    delegate: Label {
+                        width: paintedWidth
+                        height: paintedHeight
+                        text: mainView.accounts[modelData]
+                        font.pixelSize: FontUtils.sizeToPixels("small")
+                        color: mainView.accountId == modelData ? "red" : "#5d5d5d"
+                        MouseArea {
+                            anchors {
+                                fill: parent
+                                // increase touch area
+                                leftMargin: units.gu(-1)
+                                rightMargin: units.gu(-1)
+                                bottomMargin: units.gu(-1)
+                                topMargin: units.gu(-1)
+                            }
+                            onClicked: mainView.accountId = modelData
+                            z: 2
+                        }
+                    }
+                }
+            }
+        }
+
         KeypadEntry {
             id: keypadEntry
 
             anchors {
-                top: parent.top
+                top: accountList.bottom
                 topMargin: units.gu(3)
                 left: parent.left
                 right: backspace.left
@@ -133,10 +216,8 @@ PageWithBottomEdge {
             onPressAndHold: input.text = ""
 
             onClicked:  {
-                if (input.cursorPosition != 0)  {
-                    var position = input.cursorPosition;
-                    input.text = input.text.slice(0, input.cursorPosition - 1) + input.text.slice(input.cursorPosition);
-                    input.cursorPosition = position - 1;
+                if (input.cursorPosition > 0)  {
+                    input.remove(input.cursorPosition, input.cursorPosition - 1)
                 }
             }
         }
@@ -254,13 +335,7 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                if (input.cursorPosition != 0)  {
-                    var position = input.cursorPosition;
-                    input.text = input.text.slice(0, input.cursorPosition) + label + input.text.slice(input.cursorPosition);
-                    input.cursorPosition = position +1 ;
-                } else {
-                    keypadEntry.value += label
-                }
+                input.insert(input.cursorPosition, label)
             }
         }
 
@@ -280,10 +355,25 @@ PageWithBottomEdge {
                 anchors.horizontalCenter: parent.horizontalCenter
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
-                    mainView.call(keypadEntry.value);
+                    // avoid cleaning the keypadEntry in case there is no signal
+                    if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+                        PopupUtils.open(noNetworkDialog)
+                        return
+                    }
+                    mainView.call(keypadEntry.value, mainView.accountId);
                     keypadEntry.value = "";
                 }
-                enabled: dialNumber != "" && telepathyHelper.connected
+                enabled: {
+                    if (dialNumber == "") {
+                        return false;
+                    }
+
+                    if (greeter.greeterActive) {
+                        return mainView.isEmergencyNumber(dialNumber);
+                    }
+
+                    return true;
+                }
             }
 
         }

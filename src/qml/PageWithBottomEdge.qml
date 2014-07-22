@@ -140,6 +140,16 @@ Page {
         color: "black"
         anchors.fill: page
         opacity: 0.7 * ((page.height - bottomEdge.y) / page.height)
+        z: 1
+    }
+
+    Timer {
+        id: hideIndicator
+
+        interval: 3000
+        running: true
+        repeat: false
+        onTriggered: tipContainer.y = -units.gu(1)
     }
 
     Rectangle {
@@ -178,12 +188,16 @@ Page {
 
         Item {
             id: tipContainer
+            objectName: "bottomEdgeTip"
+
             width: childrenRect.width
             height: bottomEdge.tipHeight
             clip: true
             y: -bottomEdge.tipHeight
             anchors.horizontalCenter: parent.horizontalCenter
-            objectName: "bottomEdgeTip"
+            Behavior on y {
+                UbuntuNumberAnimation {}
+            }
 
             UbuntuShape {
                 id: tip
@@ -206,6 +220,33 @@ Page {
             }
         }
 
+        MouseArea {
+            preventStealing: true
+            drag.axis: Drag.YAxis
+            drag.target: bottomEdge
+            drag.minimumY: bottomEdge.pageStartY
+            drag.maximumY: page.height
+
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            height: bottomEdge.tipHeight
+            y: -height
+
+            onReleased: {
+                page.bottomEdgeReleased()
+                if (bottomEdge.y < (page.height - bottomEdgeExpandThreshold - bottomEdge.tipHeight)) {
+                    bottomEdge.state = "expanded"
+                } else {
+                    bottomEdge.state = "collapsed"
+                    bottomEdge.y = bottomEdge.height
+                }
+            }
+
+            onPressed: bottomEdge.state = "floating"
+        }
+
         Behavior on y {
             UbuntuNumberAnimation {}
         }
@@ -216,11 +257,19 @@ Page {
                 name: "collapsed"
                 PropertyChanges {
                     target: bottomEdge
-                    y: page.height
+                    y: bottomEdge.height
                 }
                 PropertyChanges {
                     target: tip
                     opacity: 1.0
+                }
+                PropertyChanges {
+                    target: tipContainer
+                    y: -bottomEdge.tipHeight
+                }
+                PropertyChanges {
+                    target: hideIndicator
+                    running: true
                 }
             },
             State {
@@ -233,12 +282,28 @@ Page {
                     target: tip
                     opacity: 0.0
                 }
+                PropertyChanges {
+                    target: tipContainer
+                    y: -bottomEdge.tipHeight
+                }
+                PropertyChanges {
+                    target: hideIndicator
+                    running: false
+                }
             },
             State {
                 name: "floating"
                 PropertyChanges {
                     target: shadow
                     opacity: 1.0
+                }
+                PropertyChanges {
+                    target: hideIndicator
+                    running: false
+                }
+                PropertyChanges {
+                    target: tipContainer
+                    y: -bottomEdge.tipHeight
                 }
             }
         ]
@@ -263,8 +328,10 @@ Page {
                 SequentialAnimation {
                     ScriptAction {
                         script: {
+                            Qt.inputMethod.hide()
                             edgeLoader.item.parent = edgeLoader
                             edgeLoader.item.anchors.fill = edgeLoader
+                            edgeLoader.item.active = false
                         }
                     }
                     UbuntuNumberAnimation {
@@ -284,6 +351,8 @@ Page {
 
                             // load a new bottom page in memory
                             edgeLoader.active = true
+
+                            hideIndicator.restart()
                         }
                     }
                 }

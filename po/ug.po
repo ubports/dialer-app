@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-05-09 15:20-0300\n"
+"POT-Creation-Date: 2014-06-16 19:26+0200\n"
 "PO-Revision-Date: 2014-06-19 11:13+0000\n"
 "Last-Translator: Gheyret T.Kenji <Unknown>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -15,10 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-06-20 06:09+0000\n"
-"X-Generator: Launchpad (build 17058)\n"
+"X-Launchpad-Export-Date: 2014-07-18 05:29+0000\n"
+"X-Generator: Launchpad (build 17114)\n"
 
-#: src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/Keypad.qml:202
 msgid "#"
 msgstr "#"
 
@@ -40,59 +40,59 @@ msgid "%1 sec"
 msgid_plural "%1 secs"
 msgstr[0] "%1 سېكۇنت"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:179
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:189
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:188
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:45
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:56
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:66
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:76
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:96
+#: src/qml/DialerPage/Keypad.qml:137
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:106
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: src/qml/DialerPage/Keypad.qml:157
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: src/qml/DialerPage/Keypad.qml:167
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:57
+#: src/qml/DialerPage/Keypad.qml:98
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:73
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
 msgstr "ئالاقەداش قوش"
 
@@ -100,15 +100,15 @@ msgstr "ئالاقەداش قوش"
 msgid "Add to existing contact"
 msgstr "مەۋجۇت ئالاقەداشقا قوش"
 
-#: src/qml/dialer-app.qml:272
+#: src/qml/dialer-app.qml:244
 msgid "Call Barring"
 msgstr ""
 
-#: src/qml/dialer-app.qml:283
+#: src/qml/dialer-app.qml:255
 msgid "Call Forwarding"
 msgstr "چاقىرىشنى يۆتكەۋاتىدۇ"
 
-#: src/qml/dialer-app.qml:294
+#: src/qml/dialer-app.qml:266
 msgid "Call Waiting"
 msgstr "چاقىرىۋاتىدۇ"
 
@@ -116,15 +116,15 @@ msgstr "چاقىرىۋاتىدۇ"
 msgid "Call log"
 msgstr "چاقىرىش خاتىرىسى"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:107
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
 msgstr "ھازىرلا چاقىر"
 
-#: src/qml/dialer-app.qml:305
+#: src/qml/dialer-app.qml:277
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:317
+#: src/qml/dialer-app.qml:289
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -133,19 +133,19 @@ msgid "Cancel"
 msgstr "ئەمەلدىن قالدۇر"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "يىغىن"
 
-#: src/qml/dialer-app.qml:311
+#: src/qml/dialer-app.qml:283
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:323
+#: src/qml/dialer-app.qml:295
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:38
-#: src/qml/ContactsPage/ContactsPage.qml:29
+#: src/qml/MainPage.qml:45
 msgid "Contacts"
 msgstr "ئالاقەداشلار"
 
@@ -153,7 +153,7 @@ msgstr "ئالاقەداشلار"
 msgid "Create new contact"
 msgstr "يېڭى ئالاقەداش قۇر"
 
-#: src/qml/DialerPage/Keypad.qml:67
+#: src/qml/DialerPage/Keypad.qml:108
 msgid "DEF"
 msgstr "DEF"
 
@@ -161,31 +161,19 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "ئۆچۈر"
 
-#: src/dialer-app.desktop.in:3
-msgid "Dialer"
-msgstr "Dialer"
-
-#: src/dialer-app.desktop.in:4
-msgid "Dialer App"
-msgstr "Dialer ئېپى"
-
-#: src/dialer-app.desktop.in:5
-msgid "Dialer application"
-msgstr "Dialer دىن چېكىندى"
-
-#: src/qml/dialer-app.qml:199 src/qml/dialer-app.qml:213
+#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
 msgid "Dismiss"
 msgstr "تاشلىۋەت"
 
-#: src/qml/DialerPage/DialerPage.qml:105
+#: src/qml/DialerPage/DialerPage.qml:89
 msgid "Enter a number"
 msgstr "نومۇر كىرگۈزۈڭ"
 
-#: src/qml/dialer-app.qml:196
+#: src/qml/dialer-app.qml:166
 msgid "Error"
 msgstr "خاتالىق"
 
-#: src/qml/DialerPage/Keypad.qml:77
+#: src/qml/DialerPage/Keypad.qml:118
 msgid "GHI"
 msgstr "GHI"
 
@@ -197,19 +185,19 @@ msgstr "ئېسىپ قوي"
 msgid "How do you want to save the contact?"
 msgstr ""
 
-#: src/qml/dialer-app.qml:197
+#: src/qml/dialer-app.qml:167
 msgid "Invalid USSD code"
 msgstr "ئىناۋەتسىز USSD كودى"
 
-#: src/qml/DialerPage/Keypad.qml:87
+#: src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:44
+#: src/qml/MainPage.qml:35
 msgid "Keypad"
 msgstr "ھەرپ تاختا"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "MNO"
 msgstr "MNO"
 
@@ -221,11 +209,11 @@ msgstr ""
 msgid "New call"
 msgstr "يېڭى چاقىرىش"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:177
+#: src/qml/dialer-app.qml:147
 msgid "Please wait"
 msgstr "سەل ساقلاڭ"
 
@@ -234,15 +222,15 @@ msgid "Private"
 msgstr "شەخسىي"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:127
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
 msgstr "ئالاقەداش ساقلا"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:117
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
 msgstr "تېكىست ئۇچۇرى ئەۋەت"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:158
 msgid "TUV"
 msgstr "TUV"
 
@@ -258,7 +246,7 @@ msgstr ""
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:127
+#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
 msgstr "ئالاقەداشنى كۆرسەت"
 
@@ -266,7 +254,7 @@ msgstr "ئالاقەداشنى كۆرسەت"
 msgid "Voicemail"
 msgstr "ئۈنخەت"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:168
 msgid "WXYZ"
 msgstr "WXYZ"
 
@@ -274,17 +262,26 @@ msgstr "WXYZ"
 msgid "Yesterday"
 msgstr "تۈنۈگۈن"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
 msgstr "ئاكتىپ"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:222
+#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "چاقىر"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "كۈتۈپ تۇر"
+
+#~ msgid "Dialer"
+#~ msgstr "Dialer"
+
+#~ msgid "Dialer App"
+#~ msgstr "Dialer ئېپى"
+
+#~ msgid "Dialer application"
+#~ msgstr "Dialer دىن چېكىندى"

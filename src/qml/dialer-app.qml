@@ -24,9 +24,15 @@ import Ubuntu.Telephony 0.1
 MainView {
     id: mainView
 
+    objectName: "mainView"
+
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
+    // FIXME this info must come from system settings or telephony-service
+    property var accounts: {"ofono/ofono/account0": "SIM 1", "ofono/ofono/account1": "SIM 2"}
+    property string accountId: telepathyHelper.accountIds[0]
+
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
@@ -48,16 +54,43 @@ MainView {
         }
     }
 
+    PhoneUtils {
+        id: phoneUtils
+    }
+
+    states: [
+        State {
+            name: "greeterMode"
+            when: greeter.greeterActive
+
+            StateChangeScript {
+                script: {
+                    // make sure to reset the view so that the contacts page is not loaded
+                    if (callManager.hasCalls) {
+                        switchToLiveCall();
+                    } else {
+                        switchToKeypadView();
+                    }
+                }
+            }
+        }
+    ]
+
+    function isEmergencyNumber(number) {
+        for (var i in callManager.emergencyNumbers) {
+            if (phoneUtils.comparePhoneNumbers(number, callManager.emergencyNumbers[i])) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     function viewContact(contactId) {
-        Qt.openUrlExternally("addressbook:///contact?id=" + encodeURIComponent(contactId))
+        Qt.openUrlExternally("addressbook:///contact?callback=dialer-app.desktop&id=" + encodeURIComponent(contactId))
     }
 
-    function addNewContact(phoneNumber) {
-        Qt.openUrlExternally("addressbook:///create?phone=" + encodeURIComponent(phoneNumber))
-    }
-
-    function addPhoneNumberToExistingContact(contactId, phoneNumber) {
-        Qt.openUrlExternally("addressbook:///addphone?id=" + encodeURIComponent(contactId) + "&phone=" + encodeURIComponent(phoneNumber))
+    function addNewPhone(phoneNumber) {
+        Qt.openUrlExternally("addressbook:///addnewphone?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
     }
 
     function sendMessage(phoneNumber) {
@@ -65,6 +98,9 @@ MainView {
     }
 
     function callVoicemail() {
+        if (greeter.greeterActive) {
+            return;
+        }
         call(callManager.voicemailNumber);
     }
 
@@ -92,27 +128,24 @@ MainView {
             return
         }
 
-        if (!telepathyHelper.connected) {
+        if (!telepathyHelper.connected && !isEmergencyNumber((number))) {
             pendingNumberToDial = number;
             pendingAccountId = accountId;
             return;
         }
 
+        if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+            PopupUtils.open(noNetworkDialog)
+            return
+        }
+ 
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
             ussdManager.initiate(number, accountId)
             return
         }
 
-        // pop the stack if the live call is not the visible view
-        // FIXME: using the objectName here is not pretty, change by something less prone to errors
-        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
-            pageStack.pop();
-        }
-
-        if (pageStack.depth === 1 && !callManager.hasCalls)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
-        }
+        switchToLiveCall();
 
         if (!accountReady) {
             pendingNumberToDial = number;
@@ -147,6 +180,18 @@ MainView {
         }
     }
 
+    function switchToLiveCall() {
+        // pop the stack if the live call is not the visible view
+        // FIXME: using the objectName here is not pretty, change by something less prone to errors
+        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
+            pageStack.pop();
+        }
+
+        if (pageStack.depth === 1)  {
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
+        }
+    }
+
     Component.onCompleted: {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
@@ -154,7 +199,7 @@ MainView {
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            switchToLiveCall();
         }
     }
 
@@ -167,6 +212,23 @@ MainView {
         }
 
         source: Qt.resolvedUrl("assets/dialer_background_full.png")
+    }
+
+    Component {
+        id: noNetworkDialog
+        Dialog {
+            id: dialogue
+            title: i18n.tr("No network")
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts[mainView.accountId]) : i18n.tr("There is currently no network.")
+            Button {
+                objectName: "closeNoNetworkDialog"
+                text: i18n.tr("Close")
+                color: UbuntuColors.orange
+                onClicked: {
+                    PopupUtils.close(dialogue)
+                }
+            }
+        }
     }
 
     Component {
@@ -241,11 +303,8 @@ MainView {
                 return;
             }
 
-            // go back to keypad
-            switchToKeypadView();
-
-            // and load the livecall
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"));
+            // load the live call
+            switchToLiveCall();
         }
     }
 

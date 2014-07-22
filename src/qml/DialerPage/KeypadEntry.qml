@@ -31,7 +31,7 @@ FocusScope {
 
     height: input.height
 
-    TextInput {
+    PhoneNumberInput {
         id: input
 
         property bool __adjusting: false
@@ -51,22 +51,10 @@ FocusScope {
         cursorVisible: true
         clip: true
         opacity: 0.9
-
-        AsYouTypeFormatter {
-            id: formatter
-
-            // FIXME: this should probably be done in the component itself
-            property string firstDigit: input.text.slice(0,1)
-            enabled: firstDigit != "*" && firstDigit != "#"
-            defaultRegionCode: "US"
-            text: input.text
-        }
-
-        Binding {
-            target: input
-            property: "text"
-            value: formatter.formattedText
-        }
+        defaultRegion: PhoneUtils.defaultRegion
+        updateOnlyWhenFocused: false
+        // FIXME: this should probably be done in the component itself
+        autoFormat: input.text.length > 0 && input.text.charAt(0) !== "*" && input.text.charAt(0) !== "#"
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
         // https://bugs.launchpad.net/dialer-app/+bug/1188669
