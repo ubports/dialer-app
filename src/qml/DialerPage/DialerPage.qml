@@ -184,11 +184,12 @@ PageWithBottomEdge {
                 id: keypadEntry
 
                 anchors {
-                    verticalCenter: parent.verticalCenter
+                    top: parent.top
+                    topMargin: units.gu(3)
                     left: addContact.right
                     right: backspace.left
                 }
-
+                height: units.gu(4)
                 focus: true
                 placeHolder: i18n.tr("Enter a number")
                 Keys.forwardTo: [callButton]
@@ -266,7 +267,7 @@ PageWithBottomEdge {
 
             anchors {
                 top: divider.bottom
-                topMargin: units.gu(3)
+                topMargin: units.gu(2)
                 horizontalCenter: parent.horizontalCenter
             }
 
@@ -345,6 +346,7 @@ PageWithBottomEdge {
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0
+                callButton.color = callButton.defaultColor
             }
         }
     }

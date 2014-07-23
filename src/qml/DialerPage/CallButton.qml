@@ -22,6 +22,7 @@ import Ubuntu.Components 1.1
 AbstractButton {
     id: button
 
+    readonly property string defaultColor: "#0F8B21"
     property alias iconRotation: icon.rotation
     property alias color: shape.color
 
@@ -33,7 +34,7 @@ AbstractButton {
         id: shape
 
         anchors.fill: parent
-        color: "#0F8B21"
+        color: defaultColor
         radius: "medium"
     }
 

@@ -36,8 +36,8 @@ Item {
 
         rows: 4
         columns: 3
-        columnSpacing: units.gu(1)
-        rowSpacing: units.gu(1)
+        columnSpacing: units.gu(2.0)
+        rowSpacing: units.gu(0.5)
         anchors.centerIn: parent
 
         KeypadButton {

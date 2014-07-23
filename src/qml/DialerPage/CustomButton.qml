@@ -23,12 +23,11 @@ Button {
     property alias icon: buttonIcon.name
     property alias iconWidth: buttonIcon.width
     property alias iconHeight: buttonIcon.height
-    property bool lighten: false
 
     Icon {
         id: buttonIcon
         anchors.centerIn: parent
-        color: lighten ? "white" : UbuntuColors.warmGrey
+        color: UbuntuColors.darkGrey
     }
     color: "transparent"
 }

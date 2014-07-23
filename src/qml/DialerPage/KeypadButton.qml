@@ -65,8 +65,9 @@ AbstractButton {
             anchors.verticalCenterOffset: -units.gu(0.5)
             horizontalAlignment: Text.AlignHCenter
             height: paintedHeight
-            fontSize: "x-large"
+            font.pixelSize: units.dp(30)
             verticalAlignment: Text.AlignTop
+            color: UbuntuColors.darkGrey
         }
 
         Label {
@@ -77,6 +78,7 @@ AbstractButton {
             anchors.horizontalCenter: parent.horizontalCenter
             horizontalAlignment: Text.AlignHCenter
             fontSize: "x-small"
+            color: UbuntuColors.darkGrey
         }
 
         Icon {

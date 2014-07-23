@@ -29,12 +29,12 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
-    height: input.height
 
     PhoneNumberInput {
         id: input
 
         property bool __adjusting: false
+        readonly property double maximumFontSize: units.dp(30)
 
         anchors {
             left: parent.left
@@ -44,9 +44,9 @@ FocusScope {
             verticalCenter: parent.verticalCenter
         }
         horizontalAlignment: TextInput.AlignHCenter
-        font.pixelSize: FontUtils.sizeToPixels("x-large")
+        font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
-        //color: "#AAAAAA"
+        color: UbuntuColors.darkGrey
         maximumLength: 20
         focus: true
         cursorVisible: true
@@ -63,7 +63,7 @@ FocusScope {
             anchors.bottom: parent.bottom
             width: units.dp(3)
             color: "#DD4814"
-            visible: input.text != ""
+            visible: input.text !== ""
         }
 
         // force cursor to be always visible
@@ -81,7 +81,7 @@ FocusScope {
             __adjusting = true;
 
             // start by resetting the font size to discover the scale that should be used
-            font.pixelSize = units.dp(39);
+            font.pixelSize = maximumFontSize
 
             // check if it really needs to be scaled
             if (contentWidth > width) {
@@ -99,7 +99,7 @@ FocusScope {
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
         }
         onPressAndHold: {
-            if (input.text != "") {
+            if (input.text !== "") {
                 held = true
                 input.selectAll()
                 input.copy()
@@ -112,19 +112,16 @@ FocusScope {
                 input.deselect()
                 held = false
             }
-
         }
     }
 
     Label {
         id: hint
         visible: input.text === ""
-        anchors.centerIn: input
+        anchors.centerIn: parent
         text: ""
-        fontSize: "x-large"
-        font.weight: Font.Light
-        font.family: "Ubuntu"
-        color: "#464646"
+        font.pixelSize: input.maximumFontSize
+        color: UbuntuColors.darkGrey
         opacity: 0.9
     }
 }
