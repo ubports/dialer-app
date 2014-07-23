@@ -18,7 +18,7 @@
 
 import QtContacts 5.0
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
@@ -31,22 +31,13 @@ PageWithBottomEdge {
     property alias input: keypadEntry.input
     objectName: "dialerPage"
 
-    tools: ToolbarItems {
-        ToolbarButton {
-            id: contactButton
-            objectName: "contactButton"
-            action: Action {
+    head.actions: [
+        Action {
                 iconSource: "image://theme/contact"
                 text: i18n.tr("Contacts")
                 onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-            }
         }
-    }
-
-    ToolbarItems {
-        id: emptyToolbar
-        visible: false
-    }
+    ]
 
     title: i18n.tr("Keypad")
 
@@ -57,8 +48,8 @@ PageWithBottomEdge {
             when: greeter.greeterActive
 
             PropertyChanges {
-                target: page
-                tools: emptyToolbar
+                target: page.head
+                actions: []
                 bottomEdgeEnabled: false
             }
             PropertyChanges {
@@ -105,7 +96,7 @@ PageWithBottomEdge {
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
             // check for custom strings
-            if (dialNumber == "*#06#") {
+            if (dialNumber === "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
                 mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
@@ -122,6 +113,23 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
+        onAccountIdChanged: {
+            var newAccountIndex = mainView.accounts.indexOf(accountId)
+            if (newAccountIndex !== page.head.sections.selectedIndex) {
+                page.head.sections.selectedIndex = newAccountIndex
+            }
+        }
+    }
+
+    head.sections.model: mainView.accounts
+    Connections {
+        target: head.sections
+        onSelectedIndexChanged: {
+            var currentAccountIndex = mainView.accounts.indexOf(mainView.accountId)
+            if (currentAccountIndex !== selectedIndex) {
+                mainView.accountId = mainView.accounts[selectedIndex]
+            }
+        }
     }
 
     FocusScope {
@@ -130,167 +138,89 @@ PageWithBottomEdge {
         anchors.fill: parent
         focus: true
 
-        // TODO replace by the sdk sections component when it's released
-        Rectangle {
-            id: accountList
-            z: 1
+        Item {
+            id: entryWithButtons
+
             anchors {
-                left: parent.left
-                right: parent.right
                 top: parent.top
+                left: parent.left
+                right: parent.right
             }
-            height: telepathyHelper.accountIds.length > 1 ? childrenRect.height : 0
-            color: "white"
-            Row {
+            height: units.gu(10)
+
+            CustomButton {
+                id: addContact
+
                 anchors {
-                    top: parent.top
-                    horizontalCenter: parent.horizontalCenter
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
                 }
-                height: childrenRect.height
-                width: childrenRect.width
-                spacing: units.gu(2)
-                Repeater {
-                    model: telepathyHelper.accountIds
-                    delegate: Label {
-                        width: paintedWidth
-                        height: paintedHeight
-                        text: mainView.accounts[modelData]
-                        font.pixelSize: FontUtils.sizeToPixels("small")
-                        color: mainView.accountId == modelData ? "red" : "#5d5d5d"
-                        MouseArea {
-                            anchors {
-                                fill: parent
-                                // increase touch area
-                                leftMargin: units.gu(-1)
-                                rightMargin: units.gu(-1)
-                                bottomMargin: units.gu(-1)
-                                topMargin: units.gu(-1)
-                            }
-                            onClicked: mainView.accountId = modelData
-                            z: 2
-                        }
+                width: height
+                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? units.gu(3) : 0
+                icon: "contact-new"
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
+                opacity: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? 1.0 : 0.0
+
+                Behavior on opacity {
+                    UbuntuNumberAnimation { }
+                }
+
+                Behavior on width {
+                    UbuntuNumberAnimation { }
+                }
+
+                onClicked: mainView.addNewPhone(keypadEntry.value)
+            }
+
+            KeypadEntry {
+                id: keypadEntry
+
+                anchors {
+                    verticalCenter: parent.verticalCenter
+                    left: addContact.right
+                    right: backspace.left
+                }
+
+                focus: true
+                placeHolder: i18n.tr("Enter a number")
+                Keys.forwardTo: [callButton]
+                value: mainView.pendingNumberToDial
+            }
+
+            CustomButton {
+                id: backspace
+                objectName: "eraseButton"
+                anchors {
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
+                }
+                width: height
+                height: input.text !== "" ? units.gu(3) : 0
+                icon: "erase"
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
+                opacity: input.text !== "" ? 1 : 0
+
+                Behavior on opacity {
+                    UbuntuNumberAnimation { }
+                }
+
+                Behavior on width {
+                    UbuntuNumberAnimation { }
+                }
+
+                onPressAndHold: input.text = ""
+
+                onClicked:  {
+                    if (input.cursorPosition > 0)  {
+                        input.remove(input.cursorPosition, input.cursorPosition - 1)
                     }
                 }
             }
         }
-
-        KeypadEntry {
-            id: keypadEntry
-
-            anchors {
-                top: accountList.bottom
-                topMargin: units.gu(3)
-                left: parent.left
-                right: backspace.left
-            }
-
-            focus: true
-            placeHolder: i18n.tr("Enter a number")
-            Keys.forwardTo: [callButton]
-            value: mainView.pendingNumberToDial
-        }
-
-        CustomButton {
-            id: backspace
-            objectName: "eraseButton"
-            anchors {
-                right: parent.right
-                rightMargin: units.gu(2)
-                verticalCenter: keypadEntry.verticalCenter
-            }
-            width: input.text !== "" ? units.gu(3) : 0
-            height: units.gu(3)
-            icon: "erase"
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            opacity: input.text !== "" ? 1 : 0
-
-            Behavior on opacity {
-                UbuntuNumberAnimation { }
-            }
-
-            Behavior on width {
-                UbuntuNumberAnimation { }
-            }
-
-            onPressAndHold: input.text = ""
-
-            onClicked:  {
-                if (input.cursorPosition > 0)  {
-                    input.remove(input.cursorPosition, input.cursorPosition - 1)
-                }
-            }
-        }
-
-        /*ContactSearchListView {
-            id: contactSearch
-            property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: keypadEntryBackground.bottom
-                margins: units.gu(0.5)
-            }
-
-            states: [
-                State {
-                    name: "empty"
-                    when: contactSearch.count == 0
-                    PropertyChanges {
-                        target: contactSearch
-                        height: 0
-                    }
-                }
-            ]
-
-            Behavior on height {
-                UbuntuNumberAnimation { }
-            }
-
-            filter: UnionFilter {
-                DetailFilter {
-                    detail: ContactDetail.Name
-                    field: Name.FirstName
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchKeypadCollation | DetailFilter.MatchContains
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.Name
-                    field: Name.LastName
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchContains | DetailFilter.MatchKeypadCollation
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.PhoneNumber
-                    field: PhoneNumber.Number
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchPhoneNumber
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.PhoneNumber
-                    field: PhoneNumber.Number
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchContains
-                }
-
-            }
-
-            // FIXME: uncomment this code if we end up having both the header and the toolbar.
-            onCountChanged: {
-                if (count > 0) {
-                    page.header.hide();
-                } else {
-                    page.header.show();
-                }
-            }
-
-            onDetailClicked: {
-                mainView.call(detail.number);
-            }
-        }*/
 
         ListItems.ThinDivider {
             id: divider
@@ -300,8 +230,7 @@ PageWithBottomEdge {
                 leftMargin: units.gu(2)
                 right: parent.right
                 rightMargin: units.gu(2)
-                top: keypadEntry.bottom
-                topMargin: units.gu(4)
+                top: entryWithButtons.bottom
             }
         }
 
@@ -314,12 +243,13 @@ PageWithBottomEdge {
             id: contactLabel
             anchors {
                 horizontalCenter: divider.horizontalCenter
-                bottom: divider.top
+                bottom: entryWithButtons.bottom
                 bottomMargin: units.gu(1)
             }
             text: contactWatcher.isUnknown ? "" : contactWatcher.alias
             color: UbuntuColors.lightAubergine
             opacity: text != "" ? 1 : 0
+            fontSize: "small"
             Behavior on opacity {
                 UbuntuNumberAnimation { }
             }
@@ -329,8 +259,8 @@ PageWithBottomEdge {
             id: keypad
 
             anchors {
-                bottom: footer.top
-                bottomMargin: units.gu(3)
+                top: divider.bottom
+                topMargin: units.gu(3)
                 horizontalCenter: parent.horizontalCenter
             }
 
@@ -342,17 +272,21 @@ PageWithBottomEdge {
         Item {
             id: footer
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
             height: units.gu(10)
 
             CallButton {
                 id: callButton
                 objectName: "callButton"
-                anchors.bottom: footer.bottom
-                anchors.bottomMargin: units.gu(5)
-                anchors.horizontalCenter: parent.horizontalCenter
+                anchors {
+                    bottom: footer.bottom
+                    bottomMargin: units.gu(5)
+                    horizontalCenter: parent.horizontalCenter
+                }
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
                     // avoid cleaning the keypadEntry in case there is no signal
