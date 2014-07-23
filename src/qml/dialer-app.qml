@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 
@@ -138,7 +138,7 @@ MainView {
             PopupUtils.open(noNetworkDialog)
             return
         }
- 
+
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
             ussdManager.initiate(number, accountId)
@@ -388,5 +388,12 @@ MainView {
     PageStack {
         id: pageStack
         anchors.fill: parent
+    }
+
+    Image {
+        anchors.fill: parent
+        source: Qt.resolvedUrl("DialerPage/image.jpg")
+        z: 100
+        opacity: 0.7
     }
 }

@@ -17,13 +17,13 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 
 Item {
     id: keypad
 
-    property int keysWidth: units.gu(13)
+    property int keysWidth: units.gu(11)
     property int keysHeight: units.gu(8)
 
     width: keys.width
@@ -36,6 +36,8 @@ Item {
 
         rows: 4
         columns: 3
+        columnSpacing: units.gu(1)
+        rowSpacing: units.gu(1)
         anchors.centerIn: parent
 
         KeypadButton {
