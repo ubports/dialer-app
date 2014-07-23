@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 import Ubuntu.Telephony.PhoneNumber 0.1
 
@@ -36,21 +36,21 @@ FocusScope {
 
         property bool __adjusting: false
 
-        anchors.left: parent.left
-        anchors.leftMargin: units.gu(2)
-        anchors.right: parent.right
-        anchors.rightMargin: units.gu(2)
-        anchors.verticalCenter: parent.verticalCenter
+        anchors {
+            left: parent.left
+            leftMargin: units.gu(2)
+            right: parent.right
+            rightMargin: units.gu(2)
+            verticalCenter: parent.verticalCenter
+        }
         horizontalAlignment: TextInput.AlignHCenter
-        font.pixelSize: units.dp(39)
-        font.weight: Font.Light
+        font.pixelSize: FontUtils.sizeToPixels("x-large")
         font.family: "Ubuntu"
-        color: "#AAAAAA"
+        //color: "#AAAAAA"
         maximumLength: 20
         focus: true
         cursorVisible: true
         clip: true
-        opacity: 0.9
         defaultRegion: PhoneUtils.defaultRegion
         updateOnlyWhenFocused: false
         // FIXME: this should probably be done in the component itself
@@ -118,7 +118,7 @@ FocusScope {
 
     Label {
         id: hint
-        visible: input.text == ""
+        visible: input.text === ""
         anchors.centerIn: input
         text: ""
         fontSize: "x-large"
@@ -127,5 +127,4 @@ FocusScope {
         color: "#464646"
         opacity: 0.9
     }
-
 }
