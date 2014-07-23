@@ -389,11 +389,4 @@ MainView {
         id: pageStack
         anchors.fill: parent
     }
-
-    Image {
-        anchors.fill: parent
-        source: Qt.resolvedUrl("DialerPage/image.jpg")
-        z: 100
-        opacity: 0.7
-    }
 }
