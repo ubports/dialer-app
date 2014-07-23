@@ -43,7 +43,7 @@ Page {
         }
         onTextChanged: contactList.currentIndex = -1
         inputMethodHints: Qt.ImhNoPredictiveText
-        placeholderText: i18n.tr("Type a name or phone to search")
+        placeholderText: i18n.tr("Search...")
     }
 
     // background
