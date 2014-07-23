@@ -34,9 +34,14 @@ PageWithBottomEdge {
 
     head.actions: [
         Action {
-                iconSource: "image://theme/contact"
-                text: i18n.tr("Contacts")
-                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            iconName: "contact"
+            text: i18n.tr("Contacts")
+            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+        },
+        Action {
+            iconName: "settings"
+            text: i18n.tr("Settings")
+            onTriggered: Qt.openUrlExternally("settings:///system/phone")
         }
     ]
 
@@ -337,7 +342,9 @@ PageWithBottomEdge {
         ScriptAction {
             script: {
                 mainView.call(keypadEntry.value, mainView.accountId);
-                keypadEntry.value = "";
+                keypadEntry.value = ""
+                callButton.iconRotation = 0.0
+                keypadContainer.opacity = 1.0
             }
         }
     }
