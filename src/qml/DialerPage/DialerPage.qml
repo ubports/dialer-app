@@ -29,6 +29,7 @@ PageWithBottomEdge {
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property bool multipleAccounts: telepathyHelper.accountIds.length > 1
     objectName: "dialerPage"
 
     tools: ToolbarItems {
@@ -133,13 +134,14 @@ PageWithBottomEdge {
         // TODO replace by the sdk sections component when it's released
         Rectangle {
             id: accountList
-            z: 1
             anchors {
                 left: parent.left
                 right: parent.right
                 top: parent.top
             }
-            height: telepathyHelper.accountIds.length > 1 ? childrenRect.height : 0
+            clip: !multipleAccounts
+            height: multipleAccounts ? childrenRect.height : 0
+            z: 1
             color: "white"
             Row {
                 anchors {

@@ -84,9 +84,13 @@ Page {
 
     tools: selectionMode ? historySelectionToolbar : null
     onActiveChanged: {
-        if (!active && selectionMode) {
-            historyList.cancelSelection();
+        if (!active) {
+            if (selectionMode) {
+                historyList.cancelSelection();
+            }
+            historyList.resetSwipe()
         }
+
     }
 
     // Use this delegate just to calculate the height
@@ -131,6 +135,14 @@ Page {
         objectName: "historyList"
 
         property var _currentSwipedItem: null
+
+        function resetSwipe()
+        {
+            if (_currentSwipedItem) {
+                _currentSwipedItem.resetSwipe()
+                _currentSwipedItem = null
+            }
+        }
 
         function _updateSwipeState(item)
         {
