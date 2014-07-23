@@ -268,48 +268,76 @@ PageWithBottomEdge {
                 input.insert(input.cursorPosition, label)
             }
         }
+    }
+    Item {
+        id: footer
 
-        Item {
-            id: footer
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: units.gu(10)
 
+        CallButton {
+            id: callButton
+            objectName: "callButton"
             anchors {
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
+                bottom: footer.bottom
+                bottomMargin: units.gu(5)
+                horizontalCenter: parent.horizontalCenter
             }
-            height: units.gu(10)
-
-            CallButton {
-                id: callButton
-                objectName: "callButton"
-                anchors {
-                    bottom: footer.bottom
-                    bottomMargin: units.gu(5)
-                    horizontalCenter: parent.horizontalCenter
+            onClicked: {
+                console.log("Starting a call to " + keypadEntry.value);
+                // avoid cleaning the keypadEntry in case there is no signal
+                if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+                    PopupUtils.open(noNetworkDialog)
+                    return
                 }
-                onClicked: {
-                    console.log("Starting a call to " + keypadEntry.value);
-                    // avoid cleaning the keypadEntry in case there is no signal
-                    if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
-                        PopupUtils.open(noNetworkDialog)
-                        return
-                    }
-                    mainView.call(keypadEntry.value, mainView.accountId);
-                    keypadEntry.value = "";
-                }
-                enabled: {
-                    if (dialNumber == "") {
-                        return false;
-                    }
-
-                    if (greeter.greeterActive) {
-                        return mainView.isEmergencyNumber(dialNumber);
-                    }
-
-                    return true;
-                }
+                callAnimation.start()
             }
+            enabled: {
+                if (dialNumber == "") {
+                    return false;
+                }
 
+                if (greeter.greeterActive) {
+                    return mainView.isEmergencyNumber(dialNumber);
+                }
+
+                return true;
+            }
+        }
+    }
+
+    SequentialAnimation {
+        id: callAnimation
+
+        PropertyAction {
+            target: callButton
+            property: "color"
+            value: "red"
+        }
+
+        ParallelAnimation {
+            UbuntuNumberAnimation {
+                target: keypadContainer
+                property: "opacity"
+                to: 0.0
+                duration: UbuntuAnimation.SlowDuration
+            }
+            UbuntuNumberAnimation {
+                target: callButton
+                property: "iconRotation"
+                to: -90.0
+                duration: UbuntuAnimation.SlowDuration
+            }
+        }
+        ScriptAction {
+            script: {
+                mainView.call(keypadEntry.value, mainView.accountId);
+                keypadEntry.value = "";
+            }
         }
     }
 }

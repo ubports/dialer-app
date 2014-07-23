@@ -21,17 +21,25 @@ import Ubuntu.Components 1.1
 
 AbstractButton {
     id: button
+
+    property alias iconRotation: icon.rotation
+    property alias color: shape.color
+
     width: units.gu(21)
     height: units.gu(4.5)
     opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
     UbuntuShape {
+        id: shape
+
         anchors.fill: parent
         color: "#0F8B21"
         radius: "medium"
     }
 
     Icon {
+        id: icon
+
         anchors.centerIn: parent
         width: units.gu(3)
         height: units.gu(3)
