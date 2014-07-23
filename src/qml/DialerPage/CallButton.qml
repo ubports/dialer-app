@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 
 AbstractButton {
     id: button
@@ -28,7 +28,6 @@ AbstractButton {
     UbuntuShape {
         anchors.fill: parent
         color: "#0F8B21"
-        gradientColor: "#37B349"
         radius: "medium"
     }
 
