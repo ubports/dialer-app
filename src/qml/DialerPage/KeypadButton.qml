@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 
 AbstractButton {
     id: button
@@ -33,6 +33,17 @@ AbstractButton {
     property bool isCorner: false
     property int corner
 
+    UbuntuShape {
+        anchors.fill: parent
+        opacity: button.pressed ? 1 : 0
+
+        Behavior on opacity {
+            UbuntuNumberAnimation {
+                duration: UbuntuAnimation.BriskDuration
+            }
+        }
+    }
+
     Item {
         height: childrenRect.height
         width: parent.width
@@ -46,18 +57,6 @@ AbstractButton {
             }
         }
 
-        Rectangle {
-            anchors.fill: parent
-            color: Qt.rgba(0, 0, 0, 0.15)
-            opacity: button.pressed ? 1 : 0
-
-            Behavior on opacity {
-                UbuntuNumberAnimation {
-                    duration: UbuntuAnimation.BriskDuration
-                }
-            }
-        }
-
         Label {
             id: labelItem
 
@@ -65,9 +64,8 @@ AbstractButton {
             anchors.horizontalCenter: parent.horizontalCenter
             anchors.verticalCenterOffset: -units.gu(0.5)
             horizontalAlignment: Text.AlignHCenter
-            fontSize: "large"
             height: paintedHeight
-            font.weight: Font.DemiBold
+            fontSize: "x-large"
             verticalAlignment: Text.AlignTop
         }
 
