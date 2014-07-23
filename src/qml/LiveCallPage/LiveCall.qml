@@ -40,43 +40,36 @@ Page {
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
-        if (contactWatcher.alias != "") {
+        if (contactWatcher.alias !== "") {
             return contactWatcher.alias;
-        } else {
+        } else if (contactWatcher.phoneNumber !== "") {
             return contactWatcher.phoneNumber;
+        } else {
+            return "Calling..."
         }
     }
-    title: caller //i18n.tr("Call")
-    ToolbarItems {
-        id: regularToolbar
-        visible: false
-        back: ToolbarButton {
-            action: Action {
-                objectName: "fakeBackButton"
-            }
-        }
-        ToolbarButton {
+
+    property list<Action> regularActions: [
+        Action {
+            objectName: "fakeBackButton"
+            visible: false
+        },
+        Action {
             objectName: "newCallButton"
-            action: Action {
-                iconName: "contact"
-                text: i18n.tr("New Call")
-                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-            }
+            iconName: "contact"
+            text: i18n.tr("New Call")
+            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         }
-    }
-
-    ToolbarItems {
-        id: greeterModeToolbar
-        visible: false
-        back: ToolbarButton {
-            action: Action {
-                objectName: "fakeBackButton"
-            }
+    ]
+    property list<Action> greeterModeActions: [
+        Action {
+            objectName: "fakeBackButton"
+            visible: false
         }
-    }
+    ]
 
-    tools: greeter.greeterActive ? greeterModeToolbar : regularToolbar
-
+    title: caller
+    head.actions: greeter.greeterActive ? greeterModeActions : regularActions
     x: header ? header.height : 0
 
     // if there are no calls, just reset the view
