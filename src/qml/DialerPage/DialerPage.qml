@@ -29,6 +29,7 @@ PageWithBottomEdge {
     property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property bool multipleAccounts: telepathyHelper.accountIds.length > 1
     objectName: "dialerPage"
 
     head.actions: [
@@ -121,7 +122,7 @@ PageWithBottomEdge {
         }
     }
 
-    head.sections.model: mainView.accounts
+    head.sections.model: multipleAccounts ? mainView.accounts : []
     Connections {
         target: head.sections
         onSelectedIndexChanged: {

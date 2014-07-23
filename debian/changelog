@@ -1,3 +1,14 @@
+dialer-app (0.1+14.10.20140718.1-0ubuntu1) utopic; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * Hide account switcher when there is only one account.
+
+  [ Renato Araujo Oliveira Filho ]
+  * [HistoryPage] Reset any swiped item in HistoryPage after go back to
+    DialerPage. [ContactsPage] Use a opaque background on ContactsPage.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 18 Jul 2014 19:19:31 +0000
+
 dialer-app (0.1+14.10.20140717.2-0ubuntu1) utopic; urgency=low
 
   [ Tiago Salem Herrmann ]

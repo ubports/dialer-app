@@ -46,6 +46,12 @@ Page {
         placeholderText: i18n.tr("Type a name or phone to search")
     }
 
+    // background
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.normal.background
+    }
+
     ContactListView {
         id: contactList
 
