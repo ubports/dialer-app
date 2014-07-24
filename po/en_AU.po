@@ -1,284 +1,281 @@
-# translation of po_dialer-app-is to Icelandic
-# Icelandic translation for dialer-app
+# English (Australia) translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
-#
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
-# Sveinn í Felli <sv1@fellsnet.is>, 2014.
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: po_dialer-app-is\n"
+"Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-23 05:51+0000\n"
-"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
-"Language-Team: Icelandic <translation-team-is@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2014-07-24 04:35+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2014-07-24 06:32+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
-"Language: is\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 klukkustund"
-msgstr[1] "%1 klukkustundir"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 mínúta"
-msgstr[1] "%1 mínútur"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sekúnda"
-msgstr[1] "%1 sekúndur"
+msgstr[0] ""
+msgstr[1] ""
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
-msgstr "*"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:148
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:147
 msgid "0"
-msgstr "0"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:45
 msgid "1"
-msgstr "1"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:56
 msgid "2"
-msgstr "2"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:66
 msgid "3"
-msgstr "3"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:76
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:86
 msgid "5"
-msgstr "5"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:96
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:106
 msgid "7"
-msgstr "7"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:116
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:126
 msgid "9"
-msgstr "9"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:57
 msgid "ABC"
-msgstr "ABC"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "Bæta við tengilið"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Bæta við tengilið sem fyrir er"
+msgstr ""
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr "Útilokun símtala"
+msgstr ""
 
 #: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
-msgstr "Áframsending símtala"
+msgstr ""
 
 #: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr "Bið símtala"
+msgstr ""
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Hringiannáll"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "Hringja núna"
+msgstr ""
 
 #: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
-msgstr "Kynning hringilínu"
+msgstr ""
 
 #: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
-msgstr "Takmarkanir hringilínu"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "Hætta við"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "Ráðstefna"
+msgstr ""
 
 #: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
-msgstr "Kynning tengdrar línu"
+msgstr ""
 
 #: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
-msgstr "Takmarkanir tengdrar línu"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:41
 #: src/qml/ContactsPage/ContactsPage.qml:29
 msgid "Contacts"
-msgstr "Tengiliðir"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Búa til nýjan tengilið"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryPage.qml:268
 msgid "Delete"
-msgstr "Eyða"
+msgstr ""
 
 #: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr "Hafna"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:190
 msgid "Enter a number"
-msgstr "Sláðu inn tölu"
+msgstr ""
 
 #: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr "Villa"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "Leggja á"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "Hvernig viltu vista tengiliðinn?"
+msgstr ""
 
 #: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
-msgstr "Ógilur USSD-kóði"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
-msgstr "Talnaborð"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr "Sameina símtöl"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "Nýtt símtal"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr "Bíddu aðeins"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr "Einka"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr "Vista tengilið"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr "Senda textaskilaboð"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Í dag"
+msgstr ""
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr "Tvö símtöl"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Óþekkt"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr "Skoða tengilið"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Raddpóstur"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Í gær"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
-msgstr "virkt"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:244
 msgid "calling"
-msgstr "hringi"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
-msgstr "í bið"
+msgstr ""
