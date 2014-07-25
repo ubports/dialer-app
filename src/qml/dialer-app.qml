@@ -77,8 +77,8 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
-        for (var i in callManager.emergencyNumbers) {
-            if (phoneUtils.comparePhoneNumbers(number, callManager.emergencyNumbers[i])) {
+        for (var i in mainView.account.emergencyNumbers) {
+            if (phoneUtils.comparePhoneNumbers(number, mainView.account.emergencyNumbers[i])) {
                 return true;
             }
         }
@@ -101,7 +101,7 @@ MainView {
         if (greeter.greeterActive) {
             return;
         }
-        call(callManager.voicemailNumber);
+        call(mainView.account.voicemailNumber);
     }
 
     function checkUSSD(number) {
@@ -219,7 +219,8 @@ MainView {
         Dialog {
             id: dialogue
             title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName) : i18n.tr("There is currently no network.")
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName)
+                                                         : i18n.tr("There is currently no network.")
             Button {
                 objectName: "closeNoNetworkDialog"
                 text: i18n.tr("Close")
