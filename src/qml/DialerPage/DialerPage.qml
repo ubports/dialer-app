@@ -26,7 +26,6 @@ import "../"
 
 PageWithBottomEdge {
     id: page
-    property string voicemailNumber: callManager.voicemailNumber
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property bool multipleAccounts: telepathyHelper.accountIds.length > 1

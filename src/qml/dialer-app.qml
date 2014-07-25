@@ -30,7 +30,6 @@ MainView {
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     // FIXME this info must come from system settings or telephony-service
-    property var accounts: {"ofono/ofono/account0": "SIM 1", "ofono/ofono/account1": "SIM 2"}
     property QtObject account: telepathyHelper.accounts[0]
 
     automaticOrientation: false
