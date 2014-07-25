@@ -60,7 +60,6 @@ PageWithBottomEdge {
             PropertyChanges {
                 target: page
                 tools: emptyToolbar
-                bottomEdgeEnabled: false
             }
             PropertyChanges {
                 target: contactLabel
@@ -70,7 +69,7 @@ PageWithBottomEdge {
     ]
 
     // -------- Bottom Edge Setup -----
-    bottomEdgeEnabled: true
+    bottomEdgeEnabled: !greeter.greeterActive
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
