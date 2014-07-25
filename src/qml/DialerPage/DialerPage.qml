@@ -162,7 +162,7 @@ PageWithBottomEdge {
                     leftMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: height
+                width: units.gu(3)
                 height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? units.gu(3) : 0
                 icon: "contact-new"
                 iconWidth: units.gu(3)
@@ -204,7 +204,7 @@ PageWithBottomEdge {
                     rightMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: height
+                width: units.gu(3)
                 height: input.text !== "" ? units.gu(3) : 0
                 icon: "erase"
                 iconWidth: units.gu(3)
