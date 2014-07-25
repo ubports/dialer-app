@@ -121,6 +121,7 @@ Page {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
+        filter: HistoryFilter {}
     }
 
     SortProxyModel {
