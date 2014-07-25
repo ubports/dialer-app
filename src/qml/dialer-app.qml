@@ -31,7 +31,7 @@ MainView {
     property string ussdResponseText: ""
     // FIXME this info must come from system settings or telephony-service
     property var accounts: {"ofono/ofono/account0": "SIM 1", "ofono/ofono/account1": "SIM 2"}
-    property string accountId: telepathyHelper.accountIds[0]
+    property QtObject account: telepathyHelper.accounts[0]
 
     automaticOrientation: false
     width: units.gu(40)
@@ -134,7 +134,7 @@ MainView {
             return;
         }
 
-        if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+        if (!mainView.account.connected) {
             PopupUtils.open(noNetworkDialog)
             return
         }
@@ -219,7 +219,7 @@ MainView {
         Dialog {
             id: dialogue
             title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts[mainView.accountId]) : i18n.tr("There is currently no network.")
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName) : i18n.tr("There is currently no network.")
             Button {
                 objectName: "closeNoNetworkDialog"
                 text: i18n.tr("Close")

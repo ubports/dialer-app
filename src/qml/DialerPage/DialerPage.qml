@@ -109,7 +109,7 @@ PageWithBottomEdge {
             if (dialNumber == "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
-                mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
+                mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
         }
@@ -152,13 +152,13 @@ PageWithBottomEdge {
                 width: childrenRect.width
                 spacing: units.gu(2)
                 Repeater {
-                    model: telepathyHelper.accountIds
+                    model: telepathyHelper.accounts
                     delegate: Label {
                         width: paintedWidth
                         height: paintedHeight
-                        text: mainView.accounts[modelData]
+                        text: model.displayName
                         font.pixelSize: FontUtils.sizeToPixels("small")
-                        color: mainView.accountId == modelData ? "red" : "#5d5d5d"
+                        color: mainView.account == modelData ? "red" : "#5d5d5d"
                         MouseArea {
                             anchors {
                                 fill: parent
@@ -168,7 +168,7 @@ PageWithBottomEdge {
                                 bottomMargin: units.gu(-1)
                                 topMargin: units.gu(-1)
                             }
-                            onClicked: mainView.accountId = modelData
+                            onClicked: mainView.account = modelData
                             z: 2
                         }
                     }
@@ -358,11 +358,11 @@ PageWithBottomEdge {
                 onClicked: {
                     console.log("Starting a call to " + keypadEntry.value);
                     // avoid cleaning the keypadEntry in case there is no signal
-                    if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+                    if (!mainView.account.connected) {
                         PopupUtils.open(noNetworkDialog)
                         return
                     }
-                    mainView.call(keypadEntry.value, mainView.accountId);
+                    mainView.call(keypadEntry.value, mainView.account.accountId);
                     keypadEntry.value = "";
                 }
                 enabled: {
