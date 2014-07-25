@@ -1,3 +1,23 @@
+dialer-app (0.1+14.10.20140725.1-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Set the bottom edge visibility directly and not using the QML
+    states. For some reason the bottom edge widget doesn't like it. (LP:
+    #1346996)
+  * Fix the displayed label for unknown and private numbers, and also do
+    not allow placing calls for those numbers. (LP: #1340386)
+
+  [ Tiago Salem Herrmann ]
+  * Use an empty filter to return all the entries
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 25 Jul 2014 18:49:41 +0000
+
 dialer-app (0.1+14.10.20140718.1-0ubuntu1) utopic; urgency=low
 
   [ Tiago Salem Herrmann ]
