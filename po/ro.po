@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2014-07-26 07:17+0000\n"
+"X-Launchpad-Export-Date: 2014-07-27 06:35+0000\n"
 "X-Generator: Launchpad (build 17131)\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
@@ -161,7 +161,7 @@ msgstr ""
 msgid "DEF"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:268
+#: src/qml/HistoryPage/HistoryPage.qml:269
 msgid "Delete"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Dismiss"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:190
+#: src/qml/DialerPage/DialerPage.qml:189
 msgid "Enter a number"
 msgstr ""
 
