@@ -1,4 +1,4 @@
-# English (Australia) translation for dialer-app
+# Albanian translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-27 13:01+0000\n"
-"Last-Translator: zondayonda <Unknown>\n"
-"Language-Team: English (Australia) <en_AU@li.org>\n"
+"PO-Revision-Date: 2014-07-27 09:59+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,22 +26,22 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 hour"
-msgstr[1] "%1 hours"
+msgstr[0] "%1 orë"
+msgstr[1] "%1 orë"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 min"
-msgstr[1] "%1 mins"
+msgstr[1] "%1 min"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sec"
-msgstr[1] "%1 secs"
+msgstr[0] "%1 sek"
+msgstr[1] "%1 sek"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
@@ -97,64 +97,64 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "Add Contact"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "Add to existing contact"
+msgstr ""
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr "Call Barring"
+msgstr "Bllokim Thirrjesh"
 
 #: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
-msgstr "Call Forwarding"
+msgstr "Transferimi i Thirrjes"
 
 #: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr "Call Waiting"
+msgstr "Thirrje Në Pritje"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "Call log"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "Call now"
+msgstr ""
 
 #: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
-msgstr "Calling Line Presentation"
+msgstr ""
 
 #: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
-msgstr "Calling Line Restriction"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "Cancel"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "Conference"
+msgstr "Konferencë"
 
 #: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
-msgstr "Connected Line Presentation"
+msgstr ""
 
 #: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
-msgstr "Connected Line Restriction"
+msgstr ""
 
 #: src/qml/DialerPage/DialerPage.qml:41
 #: src/qml/ContactsPage/ContactsPage.qml:29
 msgid "Contacts"
-msgstr "Contacts"
+msgstr "Kontaktet"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "Create new contact"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
@@ -162,19 +162,19 @@ msgstr "DEF"
 
 #: src/qml/HistoryPage/HistoryPage.qml:269
 msgid "Delete"
-msgstr "Delete"
+msgstr "Fshije"
 
 #: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr "Dismiss"
+msgstr "Anulloje"
 
 #: src/qml/DialerPage/DialerPage.qml:189
 msgid "Enter a number"
-msgstr "Enter a number"
+msgstr "Fut një numër"
 
 #: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr "Error"
+msgstr "Gabim"
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
@@ -182,15 +182,15 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "Hangup"
+msgstr "Mbylle"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "How do you want to save the contact?"
+msgstr ""
 
 #: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
-msgstr "Invalid USSD code"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
@@ -198,7 +198,7 @@ msgstr "JKL"
 
 #: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
-msgstr "Keypad"
+msgstr "Tastiera"
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
@@ -206,11 +206,11 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr "Merge calls"
+msgstr "Bashkoji thirrjet"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "New call"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
@@ -218,7 +218,7 @@ msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr "Please wait"
+msgstr "Ju lutem prisni"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
@@ -227,11 +227,11 @@ msgstr "Private"
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr "Save contact"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr "Send text message"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
@@ -239,23 +239,23 @@ msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "Today"
+msgstr "Sot"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr "Two Calls"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "Unknown"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr "View contact"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "Voicemail"
+msgstr "Postë zanore"
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
@@ -263,19 +263,19 @@ msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "Yesterday"
+msgstr "Dje"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
-msgstr "active"
+msgstr "aktiv"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:244
 msgid "calling"
-msgstr "calling"
+msgstr "duke thirrur"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
-msgstr "on hold"
+msgstr "në pritje"
