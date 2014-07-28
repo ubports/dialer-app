@@ -100,7 +100,7 @@ MainView {
         if (greeter.greeterActive) {
             return;
         }
-        call(mainView.account.voicemailNumber);
+        call(mainView.account.voicemailNumber, mainView.account.accountId);
     }
 
     function checkUSSD(number) {
@@ -123,6 +123,7 @@ MainView {
         pendingNumberToDial = "";
         pendingAccountId = "";
 
+
         if (number === "") {
             return
         }
@@ -133,14 +134,19 @@ MainView {
             return;
         }
 
-        if (!mainView.account.connected) {
+        var account = telepathyHelper.accountForId(accountId);
+        if (!account) {
+            account = telepathyHelper.accounts[0];
+        }
+
+        if (!account.connected) {
             PopupUtils.open(noNetworkDialog)
             return
         }
- 
+
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
-            ussdManager.initiate(number, accountId)
+            ussdManager.initiate(number, account.accountId)
             return
         }
 
@@ -152,11 +158,9 @@ MainView {
             return;
         }
 
-        if (accountId && telepathyHelper.accountIds.indexOf(accountId) != -1) {
-            callManager.startCall(number, accountId);
-            return
+        if (account && account.connected) {
+            callManager.startCall(number, account.accountId);
         }
-        callManager.startCall(number);
     }
 
     function populateDialpad(number, accountId) {
