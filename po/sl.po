@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-05-16 19:19+0000\n"
+"PO-Revision-Date: 2014-07-24 08:47+0000\n"
 "Last-Translator: Damir Jerovšek <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2014-07-18 05:29+0000\n"
+"X-Launchpad-Export-Date: 2014-07-25 07:54+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 
-#: src/qml/DialerPage/Keypad.qml:202
+#: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
 msgstr "#"
 
@@ -50,55 +50,55 @@ msgstr[1] "%1 sekunda"
 msgstr[2] "%1 sekundi"
 msgstr[3] "%1 sekunde"
 
-#: src/qml/DialerPage/Keypad.qml:179
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:189
+#: src/qml/DialerPage/Keypad.qml:148
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:188
+#: src/qml/DialerPage/Keypad.qml:147
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:45
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:56
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:66
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:76
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:86
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: src/qml/DialerPage/Keypad.qml:96
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:106
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:157
+#: src/qml/DialerPage/Keypad.qml:116
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:167
+#: src/qml/DialerPage/Keypad.qml:126
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:98
+#: src/qml/DialerPage/Keypad.qml:57
 msgid "ABC"
 msgstr "ABC"
 
@@ -110,17 +110,17 @@ msgstr "Dodaj stik"
 msgid "Add to existing contact"
 msgstr "Dodaj v obstoječi stik"
 
-#: src/qml/dialer-app.qml:244
+#: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr ""
+msgstr "Zapora za klice"
 
-#: src/qml/dialer-app.qml:255
+#: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
 msgstr "Posredovanje klicev"
 
-#: src/qml/dialer-app.qml:266
+#: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr ""
+msgstr "Čakanje klica"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
@@ -130,11 +130,11 @@ msgstr "Dnevnik klicev"
 msgid "Call now"
 msgstr "Pokliči"
 
-#: src/qml/dialer-app.qml:277
+#: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:289
+#: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -143,19 +143,19 @@ msgid "Cancel"
 msgstr "Prekliči"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
-#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
-msgstr ""
+msgstr "Konferenca"
 
-#: src/qml/dialer-app.qml:283
+#: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:295
+#: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/MainPage.qml:45
+#: src/qml/DialerPage/DialerPage.qml:41
+#: src/qml/ContactsPage/ContactsPage.qml:29
 msgid "Contacts"
 msgstr "Stiki"
 
@@ -163,27 +163,27 @@ msgstr "Stiki"
 msgid "Create new contact"
 msgstr "Ustvari nov stik"
 
-#: src/qml/DialerPage/Keypad.qml:108
+#: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:69
+#: src/qml/HistoryPage/HistoryPage.qml:268
 msgid "Delete"
 msgstr "Izbriši"
 
-#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
+#: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr ""
+msgstr "Opusti"
 
-#: src/qml/DialerPage/DialerPage.qml:89
+#: src/qml/DialerPage/DialerPage.qml:190
 msgid "Enter a number"
 msgstr "Vnesite številko"
 
-#: src/qml/dialer-app.qml:166
+#: src/qml/dialer-app.qml:258
 msgid "Error"
 msgstr "Napaka"
 
-#: src/qml/DialerPage/Keypad.qml:118
+#: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
 msgstr "GHI"
 
@@ -195,19 +195,19 @@ msgstr "Odloži"
 msgid "How do you want to save the contact?"
 msgstr "Kako želite shraniti stik?"
 
-#: src/qml/dialer-app.qml:167
+#: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
 msgstr "Neveljavna koda USSD"
 
-#: src/qml/DialerPage/Keypad.qml:128
+#: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/MainPage.qml:35
+#: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
 msgstr "Tipkovnica"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
 msgstr "MNO"
 
@@ -219,11 +219,11 @@ msgstr "Združi klice"
 msgid "New call"
 msgstr "Nov klic"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:147
+#: src/qml/dialer-app.qml:239
 msgid "Please wait"
 msgstr "Počakajte"
 
@@ -240,7 +240,7 @@ msgstr "Shrani stik"
 msgid "Send text message"
 msgstr "Pošlji sporočilo z besedilom"
 
-#: src/qml/DialerPage/Keypad.qml:158
+#: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
 msgstr "TUV"
 
@@ -264,7 +264,7 @@ msgstr "Poglej stik"
 msgid "Voicemail"
 msgstr "Glasovna pošta"
 
-#: src/qml/DialerPage/Keypad.qml:168
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
 msgstr "WXYZ"
 
@@ -272,26 +272,17 @@ msgstr "WXYZ"
 msgid "Yesterday"
 msgstr "Včeraj"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "dejaven"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:409
+#: src/qml/LiveCallPage/LiveCall.qml:244
 msgid "calling"
 msgstr "klicanje"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr "na čakanju"
-
-#~ msgid "Dialer App"
-#~ msgstr "Program klicalnik"
-
-#~ msgid "Dialer application"
-#~ msgstr "Program klicalnik"
-
-#~ msgid "Dialer"
-#~ msgstr "Klicalnik"

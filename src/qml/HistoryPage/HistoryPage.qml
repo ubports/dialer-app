@@ -121,6 +121,7 @@ Page {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
+        filter: HistoryFilter {}
     }
 
     SortProxyModel {
@@ -268,6 +269,7 @@ Page {
                     text: i18n.tr("Delete")
                     onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
                 }
+                property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
                 rightSideActions: [
                     // FIXME: the first action should go to contac call log details page
                     Action {
@@ -280,6 +282,8 @@ Page {
                                 mainView.viewContact(contactId)
                             }
                         }
+                        visible: knownNumber
+                        enabled: knownNumber
                     },
                     Action {
                         iconName: "message"
@@ -287,6 +291,8 @@ Page {
                         onTriggered: {
                             mainView.sendMessage(phoneNumber)
                         }
+                        visible: knownNumber
+                        enabled: knownNumber
                     }
                 ]
             }

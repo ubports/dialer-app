@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-23 07:01+0000\n"
+"X-Launchpad-Export-Date: 2014-07-24 06:32+0000\n"
 "X-Generator: Launchpad (build 17114)\n"
 "Language: is\n"
 
@@ -150,8 +150,8 @@ msgstr "Kynning tengdrar línu"
 msgid "Connected Line Restriction"
 msgstr "Takmarkanir tengdrar línu"
 
+#: src/qml/DialerPage/DialerPage.qml:41
 #: src/qml/ContactsPage/ContactsPage.qml:29
-#: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
 msgstr "Tengiliðir"
 
@@ -163,7 +163,7 @@ msgstr "Búa til nýjan tengilið"
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:256
+#: src/qml/HistoryPage/HistoryPage.qml:268
 msgid "Delete"
 msgstr "Eyða"
 
@@ -171,7 +171,7 @@ msgstr "Eyða"
 msgid "Dismiss"
 msgstr "Hafna"
 
-#: src/qml/DialerPage/DialerPage.qml:188
+#: src/qml/DialerPage/DialerPage.qml:190
 msgid "Enter a number"
 msgstr "Sláðu inn tölu"
 
@@ -199,7 +199,7 @@ msgstr "Ógilur USSD-kóði"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
 msgstr "Talnaborð"
 
@@ -268,17 +268,17 @@ msgstr "WXYZ"
 msgid "Yesterday"
 msgstr "Í gær"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "virkt"
 
-#: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:244
 msgid "calling"
 msgstr "hringi"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr "í bið"

@@ -41,6 +41,11 @@ ListItemWithActions {
     property bool fullView: false
 
     function activate() {
+        // ignore private and unknown numbers
+        if (model.participants[0] == "x-ofono-private" || model.participants[0] == "x-ofono-unknown") {
+            return;
+        }
+
         if (fullView) {
             mainView.call(model.participants[0], mainView.accountId);
         } else {
@@ -160,7 +165,16 @@ ListItemWithActions {
             height: units.gu(2)
             verticalAlignment: Text.AlignVCenter
             fontSize: "medium"
-            text: contactWatcher.alias != "" ? contactWatcher.alias : PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+            text: {
+                if (contactWatcher.phoneNumber == "x-ofono-private") {
+                    return i18n.tr("Private number")
+                } else if (contactWatcher.phoneNumber == "x-ofono-unknown") {
+                    return i18n.tr("Unknown number")
+                } else if (contactWatcher.alias != "") {
+                    return contactWatcher.alias
+                }
+                return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+            }
             elide: Text.ElideRight
             color: UbuntuColors.lightAubergine
         }
