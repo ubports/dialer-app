@@ -202,10 +202,11 @@ Page {
                     right: parent.right
                 }
 
-                selected: historyDelegate.ListView.isCurrentItem || historyList.isSelected(historyDelegate)
+                selected: historyList.isSelected(historyDelegate)
                 isFirst: model.index === 0
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
+                active: ListView.isCurrentItem
 
                 // Animate item removal
                 ListView.onRemove: SequentialAnimation {
