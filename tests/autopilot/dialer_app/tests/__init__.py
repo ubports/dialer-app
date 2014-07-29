@@ -70,20 +70,24 @@ class DialerAppTestCase(AutopilotTestCase):
         # We set up the language to english to check the formatting of the
         # dialed number.
         self.useFixture(
-            fixtures.EnvironmentVariable('LANGUAGE', newvalue='en'))
+            fixtures.EnvironmentVariable('LANGUAGE', newvalue='en')
+        )
         self.useFixture(
-            fixture_setup.InitctlEnvironmentVariable(LANGUAGE='en'))
+            fixture_setup.InitctlEnvironmentVariable(LANGUAGE='en')
+        )
 
     def launch_test_local(self):
         self.app = self.launch_test_application(
             self.local_location,
             app_type='qt',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def launch_test_installed(self):
         self.app = self.launch_upstart_application(
             'dialer-app',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def _get_app_proxy_object(self, app_name):
         return get_proxy_object_for_existing_process(
