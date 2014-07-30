@@ -126,14 +126,24 @@ PageWithBottomEdge {
         }
     }
 
-    head.sections.model: multipleAccounts ? mainView.accounts : []
+    head.sections.model: {
+        // does not show dual sim switch if there is only one sim
+        if (telepathyHelper.accountIds.length <= 1) {
+            return []
+        }
+
+        var accountNames = []
+        for(var i=0; i < telepathyHelper.accountIds.length; i++) {
+            var accountId = telepathyHelper.accountIds[i]
+            accountNames.push(mainView.accounts[accountId])
+        }
+        return accountNames
+    }
+    head.sections.selectedIndex: Math.max(0, telepathyHelper.accountIds.indexOf(mainView.accountId))
     Connections {
-        target: head.sections
+        target: mainView.head.sections
         onSelectedIndexChanged: {
-            var currentAccountIndex = mainView.accounts.indexOf(mainView.accountId)
-            if (currentAccountIndex !== selectedIndex) {
-                mainView.accountId = mainView.accounts[selectedIndex]
-            }
+            mainView.accountId = telepathyHelper.accountIds[head.sections.selectedIndex]
         }
     }
 
