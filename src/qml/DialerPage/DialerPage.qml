@@ -129,7 +129,7 @@ PageWithBottomEdge {
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
         if (telepathyHelper.accountIds.length <= 1) {
-            return []
+            return undefined
         }
 
         var accountNames = []
