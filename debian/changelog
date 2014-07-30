@@ -1,3 +1,26 @@
+dialer-app (0.1+14.10.20140730-0ubuntu1) utopic; urgency=low
+
+  [ Bill Filler ]
+  * change name of app per design
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Use the account objects exposed from telephony QML plugin.
+
+  [ Leo Arias ]
+  * Set up the locale for autopilot tests. (LP: #1349582)
+  * On autopilot tests, swipe from the top of the bottom tip. (LP:
+    #1349641)
+
+  [ Pawel Stolowski ]
+  * Added X-Ubuntu-Default-Department-ID key to the desktop file. This
+    is required by click scope to support departments for preinstalled
+    applications.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 30 Jul 2014 17:56:15 +0000
+
 dialer-app (0.1+14.10.20140725.1-0ubuntu1) utopic; urgency=low
 
   [ CI bot ]
