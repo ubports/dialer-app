@@ -73,7 +73,7 @@ Page {
             }
             pageStack.pop()
             if (callManager.hasCalls) {
-                mainView.call(detail.number, mainView.accountId);
+                mainView.call(detail.number, mainView.account.accountId);
             } else {
                 mainView.populateDialpad(detail.number)
             }
