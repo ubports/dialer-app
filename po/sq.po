@@ -1,22 +1,22 @@
-# Chinese (Traditional) translation for dialer-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Albanian translation for dialer-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-07-22 17:02+0000\n"
-"Last-Translator: Walter Cheuk <wwycheuk@gmail.com>\n"
-"Language-Team: Chinese (Traditional) <zh_TW@li.org>\n"
+"PO-Revision-Date: 2014-07-27 09:59+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-07-23 07:01+0000\n"
-"X-Generator: Launchpad (build 17114)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2014-07-28 06:44+0000\n"
+"X-Generator: Launchpad (build 17131)\n"
 
 #: src/qml/DialerPage/Keypad.qml:161
 msgid "#"
@@ -26,19 +26,22 @@ msgstr "#"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 小時"
+msgstr[0] "%1 orë"
+msgstr[1] "%1 orë"
 
 #: src/qml/HistoryPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 分鐘"
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
 
 #: src/qml/HistoryPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 秒"
+msgstr[0] "%1 sek"
+msgstr[1] "%1 sek"
 
 #: src/qml/DialerPage/Keypad.qml:138
 msgid "*"
@@ -94,84 +97,84 @@ msgstr "ABC"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:80
 msgid "Add Contact"
-msgstr "加入聯絡人"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:42
 msgid "Add to existing contact"
-msgstr "加入至現有聯絡人"
+msgstr ""
 
 #: src/qml/dialer-app.qml:331
 msgid "Call Barring"
-msgstr "來電限制中"
+msgstr "Bllokim Thirrjesh"
 
 #: src/qml/dialer-app.qml:342
 msgid "Call Forwarding"
-msgstr "來電轉接中"
+msgstr "Transferimi i Thirrjes"
 
 #: src/qml/dialer-app.qml:353
 msgid "Call Waiting"
-msgstr "來電等待中"
+msgstr "Thirrje Në Pritje"
 
 #: src/qml/MainPage.qml:56
 msgid "Call log"
-msgstr "通話紀錄"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr "立刻撥打"
+msgstr ""
 
 #: src/qml/dialer-app.qml:364
 msgid "Calling Line Presentation"
-msgstr "發話號碼顯示"
+msgstr ""
 
 #: src/qml/dialer-app.qml:376
 msgid "Calling Line Restriction"
-msgstr "發話號碼不顯示"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:60
 msgid "Cancel"
-msgstr "取消"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr "會議"
+msgstr "Konferencë"
 
 #: src/qml/dialer-app.qml:370
 msgid "Connected Line Presentation"
-msgstr "連線號碼顯示"
+msgstr ""
 
 #: src/qml/dialer-app.qml:382
 msgid "Connected Line Restriction"
-msgstr "連線號碼不顯示"
+msgstr ""
 
+#: src/qml/DialerPage/DialerPage.qml:41
 #: src/qml/ContactsPage/ContactsPage.qml:29
-#: src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
-msgstr "聯絡人"
+msgstr "Kontaktet"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
-msgstr "建立新聯絡人"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:67
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:256
+#: src/qml/HistoryPage/HistoryPage.qml:269
 msgid "Delete"
-msgstr "刪除"
+msgstr "Fshije"
 
 #: src/qml/dialer-app.qml:261 src/qml/dialer-app.qml:275
 msgid "Dismiss"
-msgstr "拒接"
+msgstr "Anulloje"
 
-#: src/qml/DialerPage/DialerPage.qml:188
+#: src/qml/DialerPage/DialerPage.qml:189
 msgid "Enter a number"
-msgstr "輸入號碼"
+msgstr "Fut një numër"
 
 #: src/qml/dialer-app.qml:258
 msgid "Error"
-msgstr "錯誤"
+msgstr "Gabim"
 
 #: src/qml/DialerPage/Keypad.qml:77
 msgid "GHI"
@@ -179,23 +182,23 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr "掛斷"
+msgstr "Mbylle"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
-msgstr "想要如何儲存這位聯絡人？"
+msgstr ""
 
 #: src/qml/dialer-app.qml:259
 msgid "Invalid USSD code"
-msgstr "無效的 USSD 碼"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:87
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/DialerPage/DialerPage.qml:52
 msgid "Keypad"
-msgstr "數字盤"
+msgstr "Tastiera"
 
 #: src/qml/DialerPage/Keypad.qml:97
 msgid "MNO"
@@ -203,11 +206,11 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr "合併通話"
+msgstr "Bashkoji thirrjet"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr "新的通話"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:107
 msgid "PQRS"
@@ -215,20 +218,20 @@ msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:239
 msgid "Please wait"
-msgstr "請稍候"
+msgstr "Ju lutem prisni"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr "私人"
+msgstr "Private"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr "儲存聯絡人"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr "傳送文字訊息"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:117
 msgid "TUV"
@@ -236,23 +239,23 @@ msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr "今天"
+msgstr "Sot"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr "兩通來電"
+msgstr ""
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr "不詳"
+msgstr ""
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr "檢視聯絡人"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr "語音留言"
+msgstr "Postë zanore"
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "WXYZ"
@@ -260,19 +263,19 @@ msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "昨天"
+msgstr "Dje"
 
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
-msgstr "通話中"
+msgstr "aktiv"
 
-#: src/qml/LiveCallPage/LiveCall.qml:244
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
+#: src/qml/LiveCallPage/LiveCall.qml:244
 msgid "calling"
-msgstr "撥打中"
+msgstr "duke thirrur"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
-msgstr "等候"
+msgstr "në pritje"
