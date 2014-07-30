@@ -123,7 +123,7 @@ ListItemWithActions {
     Rectangle {
         anchors {
             fill: parent
-            topMargin: units.gu(-11)
+            topMargin: units.gu(-1)
             bottomMargin: units.gu(-1)
             leftMargin: units.gu(-2)
             rightMargin: units.gu(-2)
