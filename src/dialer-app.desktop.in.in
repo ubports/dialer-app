@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-_Name=Dialer
-_GenericName=Dialer App
-_Comment=Dialer application
-_Keywords=Dialer;Dial;Call;Keypad
+_Name=Phone
+_GenericName=Phone App
+_Comment=Phone application
+_Keywords=Phone;Dialer;Dial;Call;Keypad
 Exec=dialer-app %u
 Terminal=false
 Icon=dialer-app
