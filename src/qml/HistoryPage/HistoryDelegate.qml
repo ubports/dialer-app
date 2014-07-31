@@ -94,7 +94,14 @@ ListItemWithActions {
         id: helper
 
         function updateSubTypeLabel() {
-            phoneNumberSubTypeLabel = contactWatcher.isUnknown ? model.participants[0] : phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
+            var subLabel = contactWatcher.isUnknown
+            if (model.participants[0]) {
+                var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
+                if (typeInfo) {
+                    subLabel = typeInfo.label
+                }
+            }
+            phoneNumberSubTypeLabel = subLabel
         }
 
         Component.onCompleted: updateSubTypeLabel()

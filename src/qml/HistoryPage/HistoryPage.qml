@@ -54,16 +54,23 @@ Page {
             when: selectionMode
             head: historyPage.head
 
+            backAction: Action {
+                objectName: "selectionModeCancelAction"
+                iconName: "close"
+                onTriggered: historyList.cancelSelection()
+            }
+
             actions: [
                 Action {
-                    objectName: "selectionModeCancelAction"
-                    iconName: "close"
-                    onTriggered: historyList.cancelSelection()
-                },
-                Action {
                     objectName: "selectionModeSelectAllAction"
-                    iconName: "filter"
-                    onTriggered: historyList.selectAll()
+                    iconName: "select"
+                    onTriggered: {
+                        if (historyList.selectedItems.count === historyList.count) {
+                            historyList.clearSelection()
+                        } else {
+                            historyList.selectAll()
+                        }
+                    }
                 },
                 Action {
                     objectName: "selectionModeDeleteAction"
@@ -196,6 +203,7 @@ Page {
                 }
 
                 selected: historyList.isSelected(historyDelegate)
+                selectionMode: historyList.isInSelectionMode
                 isFirst: model.index === 0
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView

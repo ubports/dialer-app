@@ -97,7 +97,9 @@ PageWithBottomEdge {
     }
 
     onIsReadyChanged: {
-        bottomEdgePage.fullView = isReady;
+        if (bottomEdgePage) {
+            bottomEdgePage.fullView = isReady
+        }
     }
 
     onDialNumberChanged: {
