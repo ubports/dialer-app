@@ -37,6 +37,26 @@ FocusScope {
         readonly property double maximumFontSize: units.dp(30)
         readonly property double minimumFontSize: FontUtils.sizeToPixels("large")
 
+        function adjustTextSize()
+        {
+            // avoid infinite recursion here
+            if (__adjusting) {
+                return;
+            }
+
+            __adjusting = true;
+
+            // start by resetting the font size to discover the scale that should be used
+            font.pixelSize = maximumFontSize
+
+            // check if it really needs to be scaled
+            if (contentWidth > width) {
+                var factor = width / contentWidth;
+                font.pixelSize = Math.max(font.pixelSize * factor, minimumFontSize);
+            }
+            __adjusting = false
+        }
+
         anchors {
             left: parent.left
             leftMargin: units.gu(2)
@@ -44,7 +64,7 @@ FocusScope {
             rightMargin: units.gu(2)
             verticalCenter: parent.verticalCenter
         }
-        horizontalAlignment: contentWidth < width ? TextInput.AlignHCenter : TextInput.AlignRight
+        horizontalAlignment: (text.length < 19 ? TextInput.AlignHCenter : TextInput.AlignRight)
         font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
         color: UbuntuColors.darkGrey
@@ -72,25 +92,7 @@ FocusScope {
                 cursorVisible = true
         }
 
-        onContentWidthChanged: {
-            // avoid infinite recursion here
-            if (__adjusting) {
-                return;
-            }
-
-            __adjusting = true;
-
-            // start by resetting the font size to discover the scale that should be used
-            font.pixelSize = maximumFontSize
-
-            // check if it really needs to be scaled
-            if (contentWidth > width) {
-                var factor = width / contentWidth;
-                font.pixelSize = Math.max(font.pixelSize * factor, minimumFontSize);
-                console.debug("PIX SIZE:" + font.pixelSize + "/" + minimumFontSize)
-            }
-            __adjusting = false;
-        }
+        onContentWidthChanged: adjustTextSize()
     }
 
     MouseArea {
