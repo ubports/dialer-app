@@ -296,7 +296,6 @@ Page {
             id: keypad
 
             anchors.bottom: parent.bottom
-            anchors.bottomMargin: units.gu(2)
             anchors.horizontalCenter: parent.horizontalCenter
             onKeyPressed: {
                 if (call) {
@@ -317,7 +316,7 @@ Page {
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: footer.top
-            bottomMargin: units.gu(2)
+            bottomMargin: units.gu(1)
         }
 
         LiveCallKeypadButton {
