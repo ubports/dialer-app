@@ -48,41 +48,33 @@ Page {
         anchors.fill: parent
         color: Theme.palette.normal.background
     }
+    states: [
+        PageHeadState {
+            name: "select"
+            when: selectionMode
+            head: historyPage.head
 
-    ToolbarItems {
-        id: historySelectionToolbar
-        visible: false
-        back: ToolbarButton {
-            id: selectionModeCancelButton
-            objectName: "selectionModeCancelButton"
-            action: Action {
-                objectName: "selectionModeCancelAction"
-                iconName: "close"
-                onTriggered: historyList.cancelSelection()
-            }
+            actions: [
+                Action {
+                    objectName: "selectionModeCancelAction"
+                    iconName: "close"
+                    onTriggered: historyList.cancelSelection()
+                },
+                Action {
+                    objectName: "selectionModeSelectAllAction"
+                    iconName: "filter"
+                    onTriggered: historyList.selectAll()
+                },
+                Action {
+                    objectName: "selectionModeDeleteAction"
+                    enabled: historyList.selectedItems.count > 0
+                    iconName: "delete"
+                    onTriggered: historyList.endSelection()
+                }
+            ]
         }
-        ToolbarButton {
-            id: selectionModeSelectAllButton
-            objectName: "selectionModeSelectAllButton"
-            action: Action {
-                objectName: "selectionModeSelectAllAction"
-                iconName: "filter"
-                onTriggered: historyList.selectAll()
-            }
-        }
-        ToolbarButton {
-            id: selectionModeDeleteButton
-            objectName: "selectionModeDeleteButton"
-            action: Action {
-                objectName: "selectionModeDeleteAction"
-                enabled: historyList.selectedItems.count > 0
-                iconName: "delete"
-                onTriggered: historyList.endSelection()
-            }
-        }
-    }
+    ]
 
-    tools: selectionMode ? historySelectionToolbar : null
     onActiveChanged: {
         if (!active) {
             if (selectionMode) {
