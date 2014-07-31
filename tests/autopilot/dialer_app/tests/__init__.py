@@ -9,13 +9,17 @@
 
 """Dialer App autopilot tests."""
 
+import fixtures
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.introspection import get_proxy_object_for_existing_process
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
 from testtools.matchers import Equals
-from ubuntuuitoolkit import emulators as toolkit_emulators
+from ubuntuuitoolkit import (
+    emulators as toolkit_emulators,
+    fixture_setup
+)
 from dialer_app import emulators
 from dialer_app import helpers
 
@@ -53,6 +57,8 @@ class DialerAppTestCase(AutopilotTestCase):
         self.pointing_device = Pointer(self.input_device_class.create())
         super(DialerAppTestCase, self).setUp()
 
+        self.set_up_locale()
+
         if os.path.exists(self.local_location):
             self.launch_test_local()
         else:
@@ -60,21 +66,28 @@ class DialerAppTestCase(AutopilotTestCase):
 
         self.assertThat(self.main_view.visible, Eventually(Equals(True)))
 
+    def set_up_locale(self):
+        # We set up the language to english to check the formatting of the
+        # dialed number.
+        self.useFixture(
+            fixtures.EnvironmentVariable('LANGUAGE', newvalue='en')
+        )
+        self.useFixture(
+            fixture_setup.InitctlEnvironmentVariable(LANGUAGE='en')
+        )
+
     def launch_test_local(self):
         self.app = self.launch_test_application(
             self.local_location,
             app_type='qt',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def launch_test_installed(self):
-        if model() == 'Desktop':
-            self.app = self.launch_test_application(
-                "dialer-app",
-                emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
-        else:
-            self.app = self.launch_upstart_application(
-                "dialer-app",
-                emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase)
+        self.app = self.launch_upstart_application(
+            'dialer-app',
+            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+        )
 
     def _get_app_proxy_object(self, app_name):
         return get_proxy_object_for_existing_process(

@@ -1,9 +1,9 @@
 [Desktop Entry]
 Type=Application
-_Name=Dialer
-_GenericName=Dialer App
-_Comment=Dialer application
-_Keywords=Dialer;Dial;Call;Keypad
+_Name=Phone
+_GenericName=Phone App
+_Comment=Phone application
+_Keywords=Phone;Dialer;Dial;Call;Keypad
 Exec=dialer-app %u
 Terminal=false
 Icon=dialer-app
@@ -11,4 +11,5 @@ MimeType=x-scheme-handler/contact;x-scheme-handler/call
 X-Ubuntu-Touch=true
 X-Ubuntu-StageHint=SideStage
 X-Ubuntu-Single-Instance=true
+X-Ubuntu-Default-Department-ID=accessories
 X-Screenshot=@CMAKE_INSTALL_PREFIX@/@DIALER_APP_DIR@/assets/dialer-app-screenshot.png

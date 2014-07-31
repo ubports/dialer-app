@@ -28,7 +28,7 @@ import "../"
 
 PageWithBottomEdge {
     id: page
-    property string voicemailNumber: callManager.voicemailNumber
+
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property bool multipleAccounts: telepathyHelper.accountIds.length > 1
@@ -109,6 +109,7 @@ PageWithBottomEdge {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
                 mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
+                mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
         }
@@ -132,22 +133,23 @@ PageWithBottomEdge {
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
-        if (telepathyHelper.accountIds.length <= 1) {
+        if (!multipleAccounts) {
             return undefined
         }
 
         var accountNames = []
-        for(var i=0; i < telepathyHelper.accountIds.length; i++) {
-            var accountId = telepathyHelper.accountIds[i]
-            accountNames.push(mainView.accounts[accountId])
+        for(var i=0; i < telepathyHelper.accounts.length; i++) {
+            accountNames.push(telepathyHelper.accounts[i].displayName)
         }
         return accountNames
     }
-    head.sections.selectedIndex: Math.max(0, telepathyHelper.accountIds.indexOf(mainView.accountId))
+
+    // Account switcher
+    head.sections.selectedIndex: Math.max(0, telepathyHelper.accounts.indexOf(mainView.account))
     Connections {
-        target: mainView.head.sections
+        target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.accountId = telepathyHelper.accountIds[head.sections.selectedIndex]
+            mainView.account = telepathyHelper.accounts[page.head.sections.selectedIndex]
         }
     }
 
@@ -310,7 +312,7 @@ PageWithBottomEdge {
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
                 // avoid cleaning the keypadEntry in case there is no signal
-                if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+                if (!mainView.account.connected) {
                     PopupUtils.open(noNetworkDialog)
                     return
                 }
@@ -355,7 +357,7 @@ PageWithBottomEdge {
         }
         ScriptAction {
             script: {
-                mainView.call(keypadEntry.value, mainView.accountId);
+                mainView.call(keypadEntry.value, mainView.account.accountId);
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0
