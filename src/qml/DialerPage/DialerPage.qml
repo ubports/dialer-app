@@ -123,8 +123,8 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountIdChanged: {
-            var newAccountIndex = mainView.accounts.indexOf(accountId)
+        onAccountChanged: {
+            var newAccountIndex = telepathyHelper.accounts.indexOf(accountId)
             if (newAccountIndex !== page.head.sections.selectedIndex) {
                 page.head.sections.selectedIndex = newAccountIndex
             }

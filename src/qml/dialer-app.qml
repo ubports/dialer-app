@@ -222,7 +222,7 @@ MainView {
         Dialog {
             id: dialogue
             title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName)
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
                                                          : i18n.tr("There is currently no network.")
             Button {
                 objectName: "closeNoNetworkDialog"
