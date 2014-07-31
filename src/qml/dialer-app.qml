@@ -30,8 +30,7 @@ MainView {
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     // FIXME this info must come from system settings or telephony-service
-    property var accounts: {"ofono/ofono/account0": "SIM 1", "ofono/ofono/account1": "SIM 2"}
-    property string accountId: telepathyHelper.accountIds[0]
+    property QtObject account: telepathyHelper.accounts[0]
 
     automaticOrientation: false
     width: units.gu(40)
@@ -77,8 +76,8 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
-        for (var i in callManager.emergencyNumbers) {
-            if (phoneUtils.comparePhoneNumbers(number, callManager.emergencyNumbers[i])) {
+        for (var i in mainView.account.emergencyNumbers) {
+            if (phoneUtils.comparePhoneNumbers(number, mainView.account.emergencyNumbers[i])) {
                 return true;
             }
         }
@@ -101,7 +100,7 @@ MainView {
         if (greeter.greeterActive) {
             return;
         }
-        call(callManager.voicemailNumber);
+        call(mainView.account.voicemailNumber, mainView.account.accountId);
     }
 
     function checkUSSD(number) {
@@ -124,6 +123,7 @@ MainView {
         pendingNumberToDial = "";
         pendingAccountId = "";
 
+
         if (number === "") {
             return
         }
@@ -134,14 +134,19 @@ MainView {
             return;
         }
 
-        if (!telepathyHelper.isAccountConnected(mainView.accountId)) {
+        var account = telepathyHelper.accountForId(accountId);
+        if (!account) {
+            account = telepathyHelper.accounts[0];
+        }
+
+        if (!account.connected) {
             PopupUtils.open(noNetworkDialog)
             return
         }
- 
+
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
-            ussdManager.initiate(number, accountId)
+            ussdManager.initiate(number, account.accountId)
             return
         }
 
@@ -153,11 +158,9 @@ MainView {
             return;
         }
 
-        if (accountId && telepathyHelper.accountIds.indexOf(accountId) != -1) {
-            callManager.startCall(number, accountId);
-            return
+        if (account && account.connected) {
+            callManager.startCall(number, account.accountId);
         }
-        callManager.startCall(number);
     }
 
     function populateDialpad(number, accountId) {
@@ -219,7 +222,8 @@ MainView {
         Dialog {
             id: dialogue
             title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts[mainView.accountId]) : i18n.tr("There is currently no network.")
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName)
+                                                         : i18n.tr("There is currently no network.")
             Button {
                 objectName: "closeNoNetworkDialog"
                 text: i18n.tr("Close")
