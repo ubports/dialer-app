@@ -115,6 +115,17 @@ PageWithBottomEdge {
         }
     }
 
+    function accountIndex(account) {
+        var index = -1;
+        for (var i in telepathyHelper.accounts) {
+            if (telepathyHelper.accounts[i] == account) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+
     Connections {
         target: mainView
         onPendingNumberToDialChanged: {
@@ -124,8 +135,8 @@ PageWithBottomEdge {
             }
         }
         onAccountChanged: {
-            var newAccountIndex = telepathyHelper.accounts.indexOf(accountId)
-            if (newAccountIndex !== page.head.sections.selectedIndex) {
+            var newAccountIndex = accountIndex(account);
+            if (newAccountIndex >= 0 && newAccountIndex !== page.head.sections.selectedIndex) {
                 page.head.sections.selectedIndex = newAccountIndex
             }
         }
@@ -145,7 +156,7 @@ PageWithBottomEdge {
     }
 
     // Account switcher
-    head.sections.selectedIndex: Math.max(0, telepathyHelper.accounts.indexOf(mainView.account))
+    head.sections.selectedIndex: Math.max(0, accountIndex(mainView.account))
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
