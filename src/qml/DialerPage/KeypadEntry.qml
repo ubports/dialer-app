@@ -35,6 +35,7 @@ FocusScope {
 
         property bool __adjusting: false
         readonly property double maximumFontSize: units.dp(30)
+        readonly property double minimumFontSize: FontUtils.sizeToPixels("large")
 
         anchors {
             left: parent.left
@@ -43,11 +44,10 @@ FocusScope {
             rightMargin: units.gu(2)
             verticalCenter: parent.verticalCenter
         }
-        horizontalAlignment: TextInput.AlignHCenter
+        horizontalAlignment: contentWidth < width ? TextInput.AlignHCenter : TextInput.AlignRight
         font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
         color: UbuntuColors.darkGrey
-        maximumLength: 20
         focus: true
         cursorVisible: true
         clip: true
@@ -86,7 +86,8 @@ FocusScope {
             // check if it really needs to be scaled
             if (contentWidth > width) {
                 var factor = width / contentWidth;
-                font.pixelSize = font.pixelSize * factor;
+                font.pixelSize = Math.max(font.pixelSize * factor, minimumFontSize);
+                console.debug("PIX SIZE:" + font.pixelSize + "/" + minimumFontSize)
             }
             __adjusting = false;
         }
