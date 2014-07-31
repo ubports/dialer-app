@@ -89,6 +89,7 @@ Page {
                 historyList.cancelSelection();
             }
             historyList.resetSwipe()
+            historyList.positionViewAtBeginning()
         }
 
     }
