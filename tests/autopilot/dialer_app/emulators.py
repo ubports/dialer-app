@@ -53,6 +53,8 @@ class LiveCall(MainView):
         """Click and return the hangup page"""
         self.visible.wait_for(True)
         return self._click_button(self._get_hangup_button())
+        import time
+        time.sleep(10)
 
 
 class PageWithBottomEdge(MainView):
