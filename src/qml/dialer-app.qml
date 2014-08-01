@@ -92,6 +92,11 @@ MainView {
         Qt.openUrlExternally("addressbook:///addnewphone?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
     }
 
+    function addPhoneToContact(contactId, phoneNumber) {
+        Qt.openUrlExternally("addressbook:///addphone?callback=dialer-app.desktop&id=%1&phone=%2".arg(encodeURIComponent(contactId))
+                             .arg(encodeURIComponent(phoneNumber)))
+    }
+
     function sendMessage(phoneNumber) {
         Qt.openUrlExternally("message:///" + encodeURIComponent(phoneNumber))
     }

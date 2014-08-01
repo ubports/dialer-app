@@ -78,6 +78,7 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
+        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId, " ")
     }
 
     KeyboardRectagle {
