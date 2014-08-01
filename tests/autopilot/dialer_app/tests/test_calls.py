@@ -42,10 +42,10 @@ class TestCalls(DialerAppTestCase):
                          'string:modem-objpath=/phonesim'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
-        super(TestCalls, self).setUp()
+        super().setUp()
 
     def tearDown(self):
-        super(TestCalls, self).tearDown()
+        super().tearDown()
 
         # ensure that there are no leftover calls in case of failed tests
         subprocess.call(["/usr/share/ofono/scripts/hangup-all", "/phonesim"])

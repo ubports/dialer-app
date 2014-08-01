@@ -55,7 +55,7 @@ class DialerAppTestCase(AutopilotTestCase):
 
     def setUp(self):
         self.pointing_device = Pointer(self.input_device_class.create())
-        super(DialerAppTestCase, self).setUp()
+        super().setUp()
 
         self.set_up_locale()
 

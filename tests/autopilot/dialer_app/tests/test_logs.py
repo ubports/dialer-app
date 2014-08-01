@@ -43,7 +43,7 @@ class TestCallLogs(DialerAppTestCase):
         with open(os.devnull, 'w') as devnull:
             subprocess.Popen(['history-daemon'], stderr=devnull)
 
-        super(TestCallLogs, self).setUp()
+        super().setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
         self.main_view.dialer_page.reveal_bottom_edge_page()
