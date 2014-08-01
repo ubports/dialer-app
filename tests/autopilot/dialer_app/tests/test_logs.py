@@ -57,9 +57,8 @@ class TestCallLogs(DialerAppTestCase):
         the messaging app.
 
         """
-        ## delegate = self.main_view.wait_select_single(
-        ##     ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate = self.main_view.get_first_log()
+        delegate = self.main_view.wait_select_single(
+            ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(2)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
@@ -77,9 +76,8 @@ class TestCallLogs(DialerAppTestCase):
         the address-book app to allow adding new contact.
 
         """
-        ## delegate = self.main_view.wait_select_single(
-        ##     ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate = self.main_view.get_first_log()
+        delegate = self.main_view.wait_select_single(
+            ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(1)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
 
