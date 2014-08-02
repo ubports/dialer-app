@@ -52,8 +52,9 @@ class LiveCall(MainView):
     def click_hangup_button(self):
         """Click and return the hangup page"""
         self.visible.wait_for(True)
-        button = self._click_button(self._get_hangup_button())
         import time
+        time.sleep(10)
+        button = self._click_button(self._get_hangup_button())
         time.sleep(10)
         return button
 
