@@ -79,6 +79,9 @@ class TestCalls(DialerAppTestCase):
         self.assertThat(
             self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
+        # If we press the hangup button too quickly it won't end the call.
+        # Reported as bug http://pad.lv/1351817
+        time.sleep(1)
         self.main_view.live_call_page.click_hangup_button()
 
         # log should show call to the phone number
