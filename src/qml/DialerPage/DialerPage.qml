@@ -108,7 +108,6 @@ PageWithBottomEdge {
             if (dialNumber === "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
-                mainView.ussdResponseText = ussdManager.serial(mainView.accountId)
                 mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
