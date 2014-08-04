@@ -336,6 +336,7 @@ PageWithBottomEdge {
 
             onKeyPressed: {
                 input.insert(input.cursorPosition, label)
+                callManager.sendDTMF(label);
             }
         }
 
