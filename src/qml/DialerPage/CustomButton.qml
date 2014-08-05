@@ -17,18 +17,17 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 
 Button {
     property alias icon: buttonIcon.name
     property alias iconWidth: buttonIcon.width
     property alias iconHeight: buttonIcon.height
-    property bool lighten: false
 
     Icon {
         id: buttonIcon
         anchors.centerIn: parent
-        color: lighten ? "white" : UbuntuColors.warmGrey
+        color: UbuntuColors.darkGrey
     }
     color: "transparent"
 }

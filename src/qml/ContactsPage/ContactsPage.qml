@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Contacts 0.1
@@ -43,7 +43,7 @@ Page {
         }
         onTextChanged: contactList.currentIndex = -1
         inputMethodHints: Qt.ImhNoPredictiveText
-        placeholderText: i18n.tr("Type a name or phone to search")
+        placeholderText: i18n.tr("Search...")
     }
 
     // background
@@ -78,6 +78,7 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
+        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId, " ")
     }
 
     KeyboardRectagle {

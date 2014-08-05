@@ -18,35 +18,34 @@
 
 import QtContacts 5.0
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+
 import "../"
 
 PageWithBottomEdge {
     id: page
+
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property bool multipleAccounts: telepathyHelper.accountIds.length > 1
     objectName: "dialerPage"
 
-    tools: ToolbarItems {
-        ToolbarButton {
-            id: contactButton
-            objectName: "contactButton"
-            action: Action {
-                iconSource: "image://theme/contact"
-                text: i18n.tr("Contacts")
-                onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-            }
+    head.actions: [
+        Action {
+            iconName: "contact"
+            text: i18n.tr("Contacts")
+            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+        },
+        Action {
+            iconName: "settings"
+            text: i18n.tr("Settings")
+            onTriggered: Qt.openUrlExternally("settings:///system/phone")
         }
-    }
-
-    ToolbarItems {
-        id: emptyToolbar
-        visible: false
-    }
+    ]
 
     title: i18n.tr("Keypad")
 
@@ -57,8 +56,8 @@ PageWithBottomEdge {
             when: greeter.greeterActive
 
             PropertyChanges {
-                target: page
-                tools: emptyToolbar
+                target: page.head
+                actions: []
             }
             PropertyChanges {
                 target: contactLabel
@@ -98,19 +97,32 @@ PageWithBottomEdge {
     }
 
     onIsReadyChanged: {
-        bottomEdgePage.fullView = isReady;
+        if (bottomEdgePage) {
+            bottomEdgePage.fullView = isReady
+        }
     }
 
     onDialNumberChanged: {
         if(checkUSSD(dialNumber)) {
             // check for custom strings
-            if (dialNumber == "*#06#") {
+            if (dialNumber === "*#06#") {
                 dialNumber = ""
                 mainView.ussdResponseTitle = "IMEI"
                 mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
                 PopupUtils.open(ussdResponseDialog)
             }
         }
+    }
+
+    function accountIndex(account) {
+        var index = -1;
+        for (var i in telepathyHelper.accounts) {
+            if (telepathyHelper.accounts[i] == account) {
+                index = i;
+                break;
+            }
+        }
+        return index;
     }
 
     Connections {
@@ -121,6 +133,34 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
+        onAccountChanged: {
+            var newAccountIndex = accountIndex(account);
+            if (newAccountIndex >= 0 && newAccountIndex !== page.head.sections.selectedIndex) {
+                page.head.sections.selectedIndex = newAccountIndex
+            }
+        }
+    }
+
+    head.sections.model: {
+        // does not show dual sim switch if there is only one sim
+        if (!multipleAccounts) {
+            return undefined
+        }
+
+        var accountNames = []
+        for(var i=0; i < telepathyHelper.accounts.length; i++) {
+            accountNames.push(telepathyHelper.accounts[i].displayName)
+        }
+        return accountNames
+    }
+
+    // Account switcher
+    head.sections.selectedIndex: Math.max(0, accountIndex(mainView.account))
+    Connections {
+        target: page.head.sections
+        onSelectedIndexChanged: {
+            mainView.account = telepathyHelper.accounts[page.head.sections.selectedIndex]
+        }
     }
 
     FocusScope {
@@ -129,168 +169,90 @@ PageWithBottomEdge {
         anchors.fill: parent
         focus: true
 
-        // TODO replace by the sdk sections component when it's released
-        Rectangle {
-            id: accountList
+        Item {
+            id: entryWithButtons
+
             anchors {
+                top: parent.top
                 left: parent.left
                 right: parent.right
-                top: parent.top
             }
-            clip: !multipleAccounts
-            height: multipleAccounts ? childrenRect.height : 0
-            z: 1
-            color: "white"
-            Row {
+            height: units.gu(10)
+
+            CustomButton {
+                id: addContact
+
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
+                }
+                width: units.gu(3)
+                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? units.gu(3) : 0
+                icon: "contact-new"
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
+                opacity: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? 1.0 : 0.0
+
+                Behavior on opacity {
+                    UbuntuNumberAnimation { }
+                }
+
+                Behavior on width {
+                    UbuntuNumberAnimation { }
+                }
+
+                onClicked: mainView.addNewPhone(keypadEntry.value)
+            }
+
+            KeypadEntry {
+                id: keypadEntry
+
                 anchors {
                     top: parent.top
-                    horizontalCenter: parent.horizontalCenter
+                    topMargin: units.gu(3)
+                    left: addContact.right
+                    right: backspace.left
                 }
-                height: childrenRect.height
-                width: childrenRect.width
-                spacing: units.gu(2)
-                Repeater {
-                    model: telepathyHelper.accounts
-                    delegate: Label {
-                        width: paintedWidth
-                        height: paintedHeight
-                        text: model.displayName
-                        font.pixelSize: FontUtils.sizeToPixels("small")
-                        color: mainView.account == modelData ? "red" : "#5d5d5d"
-                        MouseArea {
-                            anchors {
-                                fill: parent
-                                // increase touch area
-                                leftMargin: units.gu(-1)
-                                rightMargin: units.gu(-1)
-                                bottomMargin: units.gu(-1)
-                                topMargin: units.gu(-1)
-                            }
-                            onClicked: mainView.account = modelData
-                            z: 2
-                        }
+                height: units.gu(4)
+                focus: true
+                placeHolder: i18n.tr("Enter a number")
+                Keys.forwardTo: [callButton]
+                value: mainView.pendingNumberToDial
+            }
+
+            CustomButton {
+                id: backspace
+                objectName: "eraseButton"
+                anchors {
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
+                }
+                width: units.gu(3)
+                height: input.text !== "" ? units.gu(3) : 0
+                icon: "erase"
+                iconWidth: units.gu(3)
+                iconHeight: units.gu(3)
+                opacity: input.text !== "" ? 1 : 0
+
+                Behavior on opacity {
+                    UbuntuNumberAnimation { }
+                }
+
+                Behavior on width {
+                    UbuntuNumberAnimation { }
+                }
+
+                onPressAndHold: input.text = ""
+
+                onClicked:  {
+                    if (input.cursorPosition > 0)  {
+                        input.remove(input.cursorPosition, input.cursorPosition - 1)
                     }
                 }
             }
         }
-
-        KeypadEntry {
-            id: keypadEntry
-
-            anchors {
-                top: accountList.bottom
-                topMargin: units.gu(3)
-                left: parent.left
-                right: backspace.left
-            }
-
-            focus: true
-            placeHolder: i18n.tr("Enter a number")
-            Keys.forwardTo: [callButton]
-            value: mainView.pendingNumberToDial
-        }
-
-        CustomButton {
-            id: backspace
-            objectName: "eraseButton"
-            anchors {
-                right: parent.right
-                rightMargin: units.gu(2)
-                verticalCenter: keypadEntry.verticalCenter
-            }
-            width: input.text !== "" ? units.gu(3) : 0
-            height: units.gu(3)
-            icon: "erase"
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            opacity: input.text !== "" ? 1 : 0
-
-            Behavior on opacity {
-                UbuntuNumberAnimation { }
-            }
-
-            Behavior on width {
-                UbuntuNumberAnimation { }
-            }
-
-            onPressAndHold: input.text = ""
-
-            onClicked:  {
-                if (input.cursorPosition > 0)  {
-                    input.remove(input.cursorPosition, input.cursorPosition - 1)
-                }
-            }
-        }
-
-        /*ContactSearchListView {
-            id: contactSearch
-            property string searchTerm: keypadEntry.value != "" ? keypadEntry.value : "some value that won't match"
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: keypadEntryBackground.bottom
-                margins: units.gu(0.5)
-            }
-
-            states: [
-                State {
-                    name: "empty"
-                    when: contactSearch.count == 0
-                    PropertyChanges {
-                        target: contactSearch
-                        height: 0
-                    }
-                }
-            ]
-
-            Behavior on height {
-                UbuntuNumberAnimation { }
-            }
-
-            filter: UnionFilter {
-                DetailFilter {
-                    detail: ContactDetail.Name
-                    field: Name.FirstName
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchKeypadCollation | DetailFilter.MatchContains
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.Name
-                    field: Name.LastName
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchContains | DetailFilter.MatchKeypadCollation
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.PhoneNumber
-                    field: PhoneNumber.Number
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchPhoneNumber
-                }
-
-                DetailFilter {
-                    detail: ContactDetail.PhoneNumber
-                    field: PhoneNumber.Number
-                    value: contactSearch.searchTerm
-                    matchFlags: DetailFilter.MatchContains
-                }
-
-            }
-
-            // FIXME: uncomment this code if we end up having both the header and the toolbar.
-            onCountChanged: {
-                if (count > 0) {
-                    page.header.hide();
-                } else {
-                    page.header.show();
-                }
-            }
-
-            onDetailClicked: {
-                mainView.call(detail.number);
-            }
-        }*/
 
         ListItems.ThinDivider {
             id: divider
@@ -300,8 +262,7 @@ PageWithBottomEdge {
                 leftMargin: units.gu(2)
                 right: parent.right
                 rightMargin: units.gu(2)
-                top: keypadEntry.bottom
-                topMargin: units.gu(4)
+                top: entryWithButtons.bottom
             }
         }
 
@@ -314,12 +275,13 @@ PageWithBottomEdge {
             id: contactLabel
             anchors {
                 horizontalCenter: divider.horizontalCenter
-                bottom: divider.top
+                bottom: entryWithButtons.bottom
                 bottomMargin: units.gu(1)
             }
             text: contactWatcher.isUnknown ? "" : contactWatcher.alias
             color: UbuntuColors.lightAubergine
             opacity: text != "" ? 1 : 0
+            fontSize: "small"
             Behavior on opacity {
                 UbuntuNumberAnimation { }
             }
@@ -329,8 +291,8 @@ PageWithBottomEdge {
             id: keypad
 
             anchors {
-                bottom: footer.top
-                bottomMargin: units.gu(3)
+                top: divider.bottom
+                topMargin: units.gu(2)
                 horizontalCenter: parent.horizontalCenter
             }
 
@@ -338,44 +300,79 @@ PageWithBottomEdge {
                 input.insert(input.cursorPosition, label)
             }
         }
+    }
+    Item {
+        id: footer
 
-        Item {
-            id: footer
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: units.gu(10)
 
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.bottom: parent.bottom
-            height: units.gu(10)
-
-            CallButton {
-                id: callButton
-                objectName: "callButton"
-                anchors.bottom: footer.bottom
-                anchors.bottomMargin: units.gu(5)
-                anchors.horizontalCenter: parent.horizontalCenter
-                onClicked: {
-                    console.log("Starting a call to " + keypadEntry.value);
-                    // avoid cleaning the keypadEntry in case there is no signal
-                    if (!mainView.account.connected) {
-                        PopupUtils.open(noNetworkDialog)
-                        return
-                    }
-                    mainView.call(keypadEntry.value, mainView.account.accountId);
-                    keypadEntry.value = "";
-                }
-                enabled: {
-                    if (dialNumber == "") {
-                        return false;
-                    }
-
-                    if (greeter.greeterActive) {
-                        return mainView.isEmergencyNumber(dialNumber);
-                    }
-
-                    return true;
-                }
+        CallButton {
+            id: callButton
+            objectName: "callButton"
+            anchors {
+                bottom: footer.bottom
+                bottomMargin: units.gu(5)
+                horizontalCenter: parent.horizontalCenter
             }
+            onClicked: {
+                console.log("Starting a call to " + keypadEntry.value);
+                // avoid cleaning the keypadEntry in case there is no signal
+                if (!mainView.account.connected) {
+                    PopupUtils.open(noNetworkDialog)
+                    return
+                }
+                callAnimation.start()
+            }
+            enabled: {
+                if (dialNumber == "") {
+                    return false;
+                }
 
+                if (greeter.greeterActive) {
+                    return mainView.isEmergencyNumber(dialNumber);
+                }
+
+                return true;
+            }
+        }
+    }
+
+    SequentialAnimation {
+        id: callAnimation
+
+        PropertyAction {
+            target: callButton
+            property: "color"
+            value: "red"
+        }
+
+        ParallelAnimation {
+            UbuntuNumberAnimation {
+                target: keypadContainer
+                property: "opacity"
+                to: 0.0
+                duration: UbuntuAnimation.SlowDuration
+            }
+            UbuntuNumberAnimation {
+                target: callButton
+                property: "iconRotation"
+                to: -90.0
+                duration: UbuntuAnimation.SlowDuration
+            }
+        }
+        ScriptAction {
+            script: {
+                mainView.call(keypadEntry.value, mainView.account.accountId);
+                keypadEntry.value = ""
+                callButton.iconRotation = 0.0
+                keypadContainer.opacity = 1.0
+                callButton.color = callButton.defaultColor
+            }
         }
     }
 }

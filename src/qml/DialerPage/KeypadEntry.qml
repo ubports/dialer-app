@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 import Ubuntu.Telephony.PhoneNumber 0.1
 
@@ -29,28 +29,48 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
-    height: input.height
 
     PhoneNumberInput {
         id: input
 
         property bool __adjusting: false
+        readonly property double maximumFontSize: units.dp(30)
+        readonly property double minimumFontSize: FontUtils.sizeToPixels("large")
 
-        anchors.left: parent.left
-        anchors.leftMargin: units.gu(2)
-        anchors.right: parent.right
-        anchors.rightMargin: units.gu(2)
-        anchors.verticalCenter: parent.verticalCenter
-        horizontalAlignment: TextInput.AlignHCenter
-        font.pixelSize: units.dp(39)
-        font.weight: Font.Light
+        function adjustTextSize()
+        {
+            // avoid infinite recursion here
+            if (__adjusting) {
+                return;
+            }
+
+            __adjusting = true;
+
+            // start by resetting the font size to discover the scale that should be used
+            font.pixelSize = maximumFontSize
+
+            // check if it really needs to be scaled
+            if (contentWidth > width) {
+                var factor = width / contentWidth;
+                font.pixelSize = Math.max(font.pixelSize * factor, minimumFontSize);
+            }
+            __adjusting = false
+        }
+
+        anchors {
+            left: parent.left
+            leftMargin: units.gu(2)
+            right: parent.right
+            rightMargin: units.gu(2)
+            verticalCenter: parent.verticalCenter
+        }
+        horizontalAlignment: (text.length < 19 ? TextInput.AlignHCenter : TextInput.AlignRight)
+        font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
-        color: "#AAAAAA"
-        maximumLength: 20
+        color: UbuntuColors.darkGrey
         focus: true
         cursorVisible: true
         clip: true
-        opacity: 0.9
         defaultRegion: PhoneUtils.defaultRegion
         updateOnlyWhenFocused: false
         // FIXME: this should probably be done in the component itself
@@ -63,7 +83,7 @@ FocusScope {
             anchors.bottom: parent.bottom
             width: units.dp(3)
             color: "#DD4814"
-            visible: input.text != ""
+            visible: input.text !== ""
         }
 
         // force cursor to be always visible
@@ -72,24 +92,7 @@ FocusScope {
                 cursorVisible = true
         }
 
-        onContentWidthChanged: {
-            // avoid infinite recursion here
-            if (__adjusting) {
-                return;
-            }
-
-            __adjusting = true;
-
-            // start by resetting the font size to discover the scale that should be used
-            font.pixelSize = units.dp(39);
-
-            // check if it really needs to be scaled
-            if (contentWidth > width) {
-                var factor = width / contentWidth;
-                font.pixelSize = font.pixelSize * factor;
-            }
-            __adjusting = false;
-        }
+        onContentWidthChanged: adjustTextSize()
     }
 
     MouseArea {
@@ -99,7 +102,7 @@ FocusScope {
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
         }
         onPressAndHold: {
-            if (input.text != "") {
+            if (input.text !== "") {
                 held = true
                 input.selectAll()
                 input.copy()
@@ -112,20 +115,16 @@ FocusScope {
                 input.deselect()
                 held = false
             }
-
         }
     }
 
     Label {
         id: hint
-        visible: input.text == ""
-        anchors.centerIn: input
+        visible: input.text === ""
+        anchors.centerIn: parent
         text: ""
-        fontSize: "x-large"
-        font.weight: Font.Light
-        font.family: "Ubuntu"
-        color: "#464646"
+        font.pixelSize: input.maximumFontSize
+        color: UbuntuColors.darkGrey
         opacity: 0.9
     }
-
 }

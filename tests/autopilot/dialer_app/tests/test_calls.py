@@ -71,7 +71,7 @@ class TestCalls(DialerAppTestCase):
     def get_history_for_number(self, number):
         # because of the bottom edge tree structure, multiple copies of the
         # same item are returned, so just use the first one
-        return self.history_list.select_many("Label", text=number)[0]
+        return self.history_list.select_many("HistoryDelegate", phoneNumber=number)[0]
 
     def test_outgoing_noanswer(self):
         """Outgoing call to a normal number, no answer"""
