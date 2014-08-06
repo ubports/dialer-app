@@ -286,6 +286,7 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
+                callManager.sendDTMF(label);
                 input.insert(input.cursorPosition, label)
 
                 if(checkUSSD(dialNumber)) {
