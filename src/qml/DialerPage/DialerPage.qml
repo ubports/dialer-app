@@ -286,9 +286,8 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                callManager.sendDTMF(label);
+                callManager.playTone(label);
                 input.insert(input.cursorPosition, label)
-
                 if(checkUSSD(dialNumber)) {
                     // check for custom strings
                     if (dialNumber === "*#06#") {
