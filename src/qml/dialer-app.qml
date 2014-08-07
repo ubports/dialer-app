@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 
@@ -90,6 +90,11 @@ MainView {
 
     function addNewPhone(phoneNumber) {
         Qt.openUrlExternally("addressbook:///addnewphone?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
+    }
+
+    function addPhoneToContact(contactId, phoneNumber) {
+        Qt.openUrlExternally("addressbook:///addphone?callback=dialer-app.desktop&id=%1&phone=%2".arg(encodeURIComponent(contactId))
+                             .arg(encodeURIComponent(phoneNumber)))
     }
 
     function sendMessage(phoneNumber) {
@@ -222,7 +227,7 @@ MainView {
         Dialog {
             id: dialogue
             title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.accounts.displayName)
+            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
                                                          : i18n.tr("There is currently no network.")
             Button {
                 objectName: "closeNoNetworkDialog"

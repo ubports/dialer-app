@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
@@ -37,8 +37,8 @@ ListItemWithActions {
 
     property string phoneNumberSubTypeLabel: ""
     property bool isFirst: false
-    property bool selected: false
     property bool fullView: false
+    property bool active: false
 
     function activate() {
         // ignore private and unknown numbers
@@ -63,8 +63,8 @@ ListItemWithActions {
         }
     }
 
+    height: units.gu(8)
     color: Theme.palette.normal.background
-    height: mainSection.height
     triggerActionOnMouseRelease: true
 
     states: [
@@ -90,21 +90,18 @@ ListItemWithActions {
         }
     ]
 
-
-    Rectangle {
-        anchors.fill: parent
-        color: "black"
-        opacity: historyDelegate.selected ? 0.2 : 0
-        Behavior on opacity {
-            UbuntuNumberAnimation { }
-        }
-    }
-
     Item {
         id: helper
 
         function updateSubTypeLabel() {
-            phoneNumberSubTypeLabel = contactWatcher.isUnknown ? model.participants[0] : phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
+            var subLabel = contactWatcher.isUnknown
+            if (model.participants[0]) {
+                var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
+                if (typeInfo) {
+                    subLabel = typeInfo.label
+                }
+            }
+            phoneNumberSubTypeLabel = subLabel
         }
 
         Component.onCompleted: updateSubTypeLabel()
@@ -130,96 +127,96 @@ ListItemWithActions {
         }
     }
 
-    Item {
-        id: mainSection
+    Rectangle {
+        anchors {
+            fill: parent
+            topMargin: units.gu(-1)
+            bottomMargin: units.gu(-1)
+            leftMargin: units.gu(-2)
+            rightMargin: units.gu(-2)
+        }
+        opacity: historyDelegate.active ? 0.2 : 0.0
+        color: "black"
+        Behavior on opacity {
+            UbuntuNumberAnimation {}
+        }
+    }
 
+    ContactAvatar {
+        id: avatar
         anchors {
             left: parent.left
-            right: parent.right
             top: parent.top
+            bottom: parent.bottom
         }
-        height: units.gu(8)
+        width: height
+        fallbackAvatarUrl: contactWatcher.avatar === "" ? "image://theme/stock_contact" : contactWatcher.avatar
+        fallbackDisplayName: contactWatcher.alias !== "" ? contactWatcher.alias : contactWatcher.phoneNumber
+        showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
+    }
 
-        ContactAvatar {
-            id: avatar
-            anchors.left: parent.left
-            anchors.leftMargin: units.gu(1)
-            anchors.verticalCenter: parent.verticalCenter
-            height: units.gu(6)
-            width: height
-            fallbackAvatarUrl: contactWatcher.avatar === "" ? "image://theme/stock_contact" : contactWatcher.avatar
-            fallbackDisplayName: contactWatcher.alias !== "" ? contactWatcher.alias : contactWatcher.phoneNumber
-            showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
+    Label {
+        id: titleLabel
+        anchors {
+            top: parent.top
+            left: avatar.right
+            leftMargin: units.gu(2)
+            right: time.left
         }
+        height: units.gu(2)
+        verticalAlignment: Text.AlignVCenter
+        fontSize: "medium"
+        text: {
+            if (contactWatcher.phoneNumber == "x-ofono-private") {
+                return i18n.tr("Private number")
+            } else if (contactWatcher.phoneNumber == "x-ofono-unknown") {
+                return i18n.tr("Unknown number")
+            } else if (contactWatcher.alias != "") {
+                return contactWatcher.alias
+            }
+            return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+        }
+        elide: Text.ElideRight
+        color: UbuntuColors.lightAubergine
+    }
 
-        Label {
-            id: titleLabel
-            anchors {
-                top: parent.top
-                topMargin: units.gu(2)
-                left: avatar.right
-                leftMargin: units.gu(2)
-                right: time.left
-                rightMargin: units.gu(1)
-            }
-            height: units.gu(2)
-            verticalAlignment: Text.AlignVCenter
-            fontSize: "medium"
-            text: {
-                if (contactWatcher.phoneNumber == "x-ofono-private") {
-                    return i18n.tr("Private number")
-                } else if (contactWatcher.phoneNumber == "x-ofono-unknown") {
-                    return i18n.tr("Unknown number")
-                } else if (contactWatcher.alias != "") {
-                    return contactWatcher.alias
-                }
-                return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
-            }
-            elide: Text.ElideRight
-            color: UbuntuColors.lightAubergine
+    Label {
+        id: phoneLabel
+        anchors {
+            bottom: parent.bottom
+            left: avatar.right
+            leftMargin: units.gu(2)
         }
+        height: units.gu(2)
+        verticalAlignment: Text.AlignVCenter
+        fontSize: "small"
+        // FIXME: handle conference call
+        text: phoneNumberSubTypeLabel
+        visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
+    }
 
-        Label {
-            id: phoneLabel
-            anchors {
-                bottom: parent.bottom
-                bottomMargin: units.gu(2)
-                left: avatar.right
-                leftMargin: units.gu(2)
-            }
-            height: units.gu(2)
-            verticalAlignment: Text.AlignVCenter
-            fontSize: "small"
-            // FIXME: handle conference call
-            text: phoneNumberSubTypeLabel
-            visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
+    // time and duration on the right side of the delegate
+    Label {
+        id: time
+        anchors {
+            right: parent.right
+            verticalCenter: titleLabel.verticalCenter
         }
+        height: units.gu(2)
+        verticalAlignment: Text.AlignVCenter
+        fontSize: "small"
+        text: Qt.formatTime(model.timestamp, "hh:mm")
+    }
 
-        // time and duration on the right side of the delegate
-        Label {
-            id: time
-            anchors {
-                right: parent.right
-                rightMargin: units.gu(2)
-                verticalCenter: titleLabel.verticalCenter
-            }
-            height: units.gu(2)
-            verticalAlignment: Text.AlignVCenter
-            fontSize: "small"
-            text: Qt.formatTime(model.timestamp, "hh:mm")
+    Label {
+        id: callType
+        anchors {
+            right: parent.right
+            verticalCenter: phoneLabel.verticalCenter
         }
-
-        Label {
-            id: callType
-            anchors {
-                right: parent.right
-                rightMargin: units.gu(2)
-                verticalCenter: phoneLabel.verticalCenter
-            }
-            height: units.gu(2)
-            verticalAlignment: Text.AlignVCenter
-            fontSize: "small"
-            text: selectCallType()
-        }
+        height: units.gu(2)
+        verticalAlignment: Text.AlignVCenter
+        fontSize: "small"
+        text: selectCallType()
     }
 }

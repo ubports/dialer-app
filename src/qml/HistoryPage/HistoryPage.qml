@@ -17,7 +17,7 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 0.1
+import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItem
 import Ubuntu.History 0.1
 import Ubuntu.Telephony 0.1
@@ -48,47 +48,47 @@ Page {
         anchors.fill: parent
         color: Theme.palette.normal.background
     }
+    states: [
+        PageHeadState {
+            name: "select"
+            when: selectionMode
+            head: historyPage.head
 
-    ToolbarItems {
-        id: historySelectionToolbar
-        visible: false
-        back: ToolbarButton {
-            id: selectionModeCancelButton
-            objectName: "selectionModeCancelButton"
-            action: Action {
+            backAction: Action {
                 objectName: "selectionModeCancelAction"
                 iconName: "close"
                 onTriggered: historyList.cancelSelection()
             }
-        }
-        ToolbarButton {
-            id: selectionModeSelectAllButton
-            objectName: "selectionModeSelectAllButton"
-            action: Action {
-                objectName: "selectionModeSelectAllAction"
-                iconName: "filter"
-                onTriggered: historyList.selectAll()
-            }
-        }
-        ToolbarButton {
-            id: selectionModeDeleteButton
-            objectName: "selectionModeDeleteButton"
-            action: Action {
-                objectName: "selectionModeDeleteAction"
-                enabled: historyList.selectedItems.count > 0
-                iconName: "delete"
-                onTriggered: historyList.endSelection()
-            }
-        }
-    }
 
-    tools: selectionMode ? historySelectionToolbar : null
+            actions: [
+                Action {
+                    objectName: "selectionModeSelectAllAction"
+                    iconName: "select"
+                    onTriggered: {
+                        if (historyList.selectedItems.count === historyList.count) {
+                            historyList.clearSelection()
+                        } else {
+                            historyList.selectAll()
+                        }
+                    }
+                },
+                Action {
+                    objectName: "selectionModeDeleteAction"
+                    enabled: historyList.selectedItems.count > 0
+                    iconName: "delete"
+                    onTriggered: historyList.endSelection()
+                }
+            ]
+        }
+    ]
+
     onActiveChanged: {
         if (!active) {
             if (selectionMode) {
                 historyList.cancelSelection();
             }
             historyList.resetSwipe()
+            historyList.positionViewAtBeginning()
         }
 
     }
@@ -202,10 +202,12 @@ Page {
                     right: parent.right
                 }
 
-                selected: historyDelegate.ListView.isCurrentItem || historyList.isSelected(historyDelegate)
+                selected: historyList.isSelected(historyDelegate)
+                selectionMode: historyList.isInSelectionMode
                 isFirst: model.index === 0
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
+                active: ListView.isCurrentItem
 
                 // Animate item removal
                 ListView.onRemove: SequentialAnimation {
