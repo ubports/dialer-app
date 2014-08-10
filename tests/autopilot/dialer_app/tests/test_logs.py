@@ -30,7 +30,7 @@ class TestCallLogs(DialerAppTestCase):
 
     db_file = 'history.sqlite'
     local_db_dir = 'dialer_app/data/'
-    system_db_dir = '/usr/lib/python2.7/dist-packages/dialer_app/data/'
+    system_db_dir = '/usr/lib/python3/dist-packages/dialer_app/data/'
 
     def setUp(self):
         if os.path.exists('../../src/dialer-app'):
