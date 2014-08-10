@@ -91,7 +91,7 @@ class DialerAppTestCase(AutopilotTestCase):
 
     def _get_app_proxy_object(self, app_name):
         return get_proxy_object_for_existing_process(
-            self._get_app_pid(app_name),
+            pid=self._get_app_pid(app_name),
             emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
         )
 
