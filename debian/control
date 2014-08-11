@@ -44,11 +44,10 @@ Depends: ${misc:Depends},
          libqt5widgets5,
          dialer-app (>= ${binary:Version}),
          ofono-scripts,
+         ofono-phonesim-autostart,
          python3-autopilot,
          ubuntu-ui-toolkit-autopilot,
-         ofono-phonesim-autostart,
-         messaging-app,
-         address-book-app,
+         url-dispatcher-testability,
 Description: autopilot tests for dialer-app
  This package contains the autopilot tests for dialer-app.
  .

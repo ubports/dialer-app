@@ -10,10 +10,9 @@
 
 """Tests for the Dialer App"""
 
-from autopilot.matchers import Eventually
 from autopilot.platform import model
-from testtools.matchers import Equals
 from testtools import skipIf
+from url_dispatcher_testability import fixture_setup as url_dispatcher_fixtures
 
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
@@ -57,35 +56,29 @@ class TestCallLogs(DialerAppTestCase):
         the messaging app.
 
         """
+        fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
+        self.useFixture(fake_url_dispatcher)
+
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(2)
-        self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
-        msg_app = self._get_app_proxy_object('messaging-app')
-        msg_app_view = self._get_main_view(msg_app)
-        msgs_pane = msg_app.wait_select_single(objectName='messagesPage',
-                                               title='800')
-
-        self.assertThat(msg_app_view.visible, Eventually(Equals(True)))
-        self.assertThat(msgs_pane.visible, Eventually(Equals(True)))
-        self.assertThat(msgs_pane.title, Eventually(Equals("800")))
+        self.assertEqual(
+            fake_url_dispatcher.get_last_dispatch_url_call_parameter(),
+            'message:///800')
 
     def test_add_new_contact_from_log(self):
         """Ensure tapping on 'add new contact' item of a call log opens
         the address-book app to allow adding new contact.
 
         """
+        fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
+        self.useFixture(fake_url_dispatcher)
+
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(1)
-        self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
 
-        cntct_app = self._get_app_proxy_object('address-book-app')
-        cntct_app_view = self._get_main_view(cntct_app)
-        cntct_list_page = cntct_app.wait_select_single(
-            objectName='contactListPage', active=True)
-
-        self.assertThat(cntct_app_view.visible, Eventually(Equals(True)))
-        self.assertThat(cntct_list_page.state, Eventually(Equals("newphone")))
-        self.assertThat(cntct_list_page.newPhoneToAdd, Eventually(Equals("800")))
+        self.assertEqual(
+            fake_url_dispatcher.get_last_dispatch_url_call_parameter(),
+            'addressbook:///addnewphone?phone=800')
