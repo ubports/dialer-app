@@ -329,7 +329,7 @@ PageWithBottomEdge {
                 // check if at least one account is selected
                 if (multipleAccounts && !mainView.account) {
                     Qt.inputMethod.hide()
-                    PopupUtils.open(noSimCardSelectedDialog)
+                    PopupUtils.open(Qt.createObject("../Dialogs/NoSIMCardSelectedDialog.qml").(page))
                     return
                 }
 
@@ -337,7 +337,7 @@ PageWithBottomEdge {
                     var properties = {}
                     properties["phoneNumber"] = dialNumber
                     properties["accountId"] = mainView.account.accountId
-                    PopupUtils.open(setDefaultSimCardDialog, footer, properties)
+                    PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
                     return
                 }
 
