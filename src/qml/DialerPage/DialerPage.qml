@@ -31,7 +31,6 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
-    property bool multipleAccounts: telepathyHelper.accountIds.length > 1
     objectName: "dialerPage"
 
     head.actions: [
@@ -155,7 +154,13 @@ PageWithBottomEdge {
     }
 
     // Account switcher
-    head.sections.selectedIndex: Math.max(0, accountIndex(mainView.account))
+    head.sections.selectedIndex: {
+        if (!mainView.account) {
+            return -1
+        }
+        return accountIndex(mainView.account)
+    }
+
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
@@ -321,6 +326,21 @@ PageWithBottomEdge {
             }
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
+                // check if at least one account is selected
+                if (multipleAccounts && !mainView.account) {
+                    Qt.inputMethod.hide()
+                    PopupUtils.open(noSimCardSelectedDialog)
+                    return
+                }
+
+                if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
+                    var properties = {}
+                    properties["phoneNumber"] = dialNumber
+                    properties["accountId"] = mainView.account.accountId
+                    PopupUtils.open(setDefaultSimCardDialog, footer, properties)
+                    return
+                }
+
                 // avoid cleaning the keypadEntry in case there is no signal
                 if (!mainView.account.connected) {
                     PopupUtils.open(noNetworkDialog)
