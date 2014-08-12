@@ -17,7 +17,10 @@ from autopilot.platform import model
 from autopilot.matchers import Eventually
 from testtools import skipIf
 from testtools.matchers import Equals
-from url_dispatcher_testability import fixture_setup as url_dispatcher_fixtures
+from url_dispatcher_testability import (
+    fake_dispatcher,
+    fixture_setup as url_dispatcher_fixtures
+)
 
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
@@ -49,24 +52,30 @@ class TestCallLogs(DialerAppTestCase):
         self.useFixture(testability_environment)
         self.main_view.dialer_page.reveal_bottom_edge_page()
         self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
+        self.fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
+        self.useFixture(self.fake_url_dispatcher)
 
     def _get_main_view(self, proxy_object):
         return proxy_object.wait_select_single('QQuickView')
+
+    def get_last_dispatch_url_call_parameter(self):
+        try:
+            fake = self.fake_url_dispatcher
+            return fake.get_last_dispatch_url_call_parameter()
+        except fake_dispatcher.FakeDispatcherException:
+            return None
 
     def test_call_log_item_opens_messaging(self):
         """Ensure tapping on 'send text message' item of a call log opens
         the messaging app.
 
         """
-        fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
-        self.useFixture(fake_url_dispatcher)
-
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(2)
 
         self.assertThat(
-            fake_url_dispatcher.get_last_dispatch_url_call_parameter,
+            self.get_last_dispatch_url_call_parameter,
             Eventually(Equals('message:///800')))
 
     def test_add_new_contact_from_log(self):
@@ -74,15 +83,12 @@ class TestCallLogs(DialerAppTestCase):
         the address-book app to allow adding new contact.
 
         """
-        fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
-        self.useFixture(fake_url_dispatcher)
-
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(1)
 
         self.assertThat(
-            fake_url_dispatcher.get_last_dispatch_url_call_parameter,
+            self.get_last_dispatch_url_call_parameter,
             Eventually(Equals(
                 'addressbook:///addnewphone?callback=dialer-app.desktop&'
                 'phone=800')))
