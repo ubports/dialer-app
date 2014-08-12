@@ -10,16 +10,18 @@
 
 """Tests for the Dialer App"""
 
+import os
+import subprocess
+
 from autopilot.platform import model
+from autopilot.matchers import Eventually
 from testtools import skipIf
+from testtools.matchers import Equals
 from url_dispatcher_testability import fixture_setup as url_dispatcher_fixtures
 
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
 from dialer_app import ListItemWithActions
-
-import os
-import subprocess
 
 
 @skipIf(model() == 'Desktop',
@@ -63,9 +65,9 @@ class TestCallLogs(DialerAppTestCase):
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(2)
 
-        self.assertEqual(
-            fake_url_dispatcher.get_last_dispatch_url_call_parameter(),
-            'message:///800')
+        self.assertThat(
+            fake_url_dispatcher.get_last_dispatch_url_call_parameter,
+            Eventually(Equals('message:///800')))
 
     def test_add_new_contact_from_log(self):
         """Ensure tapping on 'add new contact' item of a call log opens
@@ -79,6 +81,8 @@ class TestCallLogs(DialerAppTestCase):
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.active_action(1)
 
-        self.assertEqual(
-            fake_url_dispatcher.get_last_dispatch_url_call_parameter(),
-            'addressbook:///addnewphone?callback=dialer-app.desktop&phone=800')
+        self.assertThat(
+            fake_url_dispatcher.get_last_dispatch_url_call_parameter,
+            Eventually(Equals(
+                'addressbook:///addnewphone?callback=dialer-app.desktop&'
+                'phone=800')))
