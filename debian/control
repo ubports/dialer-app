@@ -14,10 +14,10 @@ Build-Depends: cmake,
                qtdeclarative5-dev (>= 5.0),
                qtdeclarative5-dev-tools,
                qtdeclarative5-qtcontacts-plugin,
-               qtdeclarative5-ubuntu-contacts0.1,
+               qtdeclarative5-ubuntu-contacts0.1 (>= 0.2+14.10.20140805),
                qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
                qtdeclarative5-ubuntu-telephony-phonenumber0.1,
-               qtdeclarative5-ubuntu-ui-toolkit-plugin,,
+               qtdeclarative5-ubuntu-ui-toolkit-plugin,
                xvfb,
 Standards-Version: 3.9.4
 Homepage: https://launchpad.net/dialer-app
