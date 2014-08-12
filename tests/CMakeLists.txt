@@ -1,3 +1,5 @@
+add_subdirectory(qml)
+
 set(AUTOPILOT_DIR autopilot/dialer_app)
 
 execute_process(COMMAND python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"

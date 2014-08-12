@@ -1,3 +1,5 @@
+project(qml)
+
 file(GLOB QML_JS_FILES *.qml *.js)
 
 # make the files visible on qtcreator
