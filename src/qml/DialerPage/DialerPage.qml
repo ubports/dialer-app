@@ -329,7 +329,7 @@ PageWithBottomEdge {
                 // check if at least one account is selected
                 if (multipleAccounts && !mainView.account) {
                     Qt.inputMethod.hide()
-                    PopupUtils.open(Qt.createObject("../Dialogs/NoSIMCardSelectedDialog.qml").(page))
+                    PopupUtils.open(Qt.createObject("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
                     return
                 }
 
