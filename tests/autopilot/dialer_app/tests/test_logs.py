@@ -81,4 +81,4 @@ class TestCallLogs(DialerAppTestCase):
 
         self.assertEqual(
             fake_url_dispatcher.get_last_dispatch_url_call_parameter(),
-            'addressbook:///addnewphone?phone=800')
+            'addressbook:///addnewphone?callback=dialer-app.desktop&phone=800')
