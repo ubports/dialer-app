@@ -92,11 +92,6 @@ class DialerAppTestCase(AutopilotTestCase):
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
-    def _click_object(self, objectName):
-        self.pointing_device.click_object(
-            self.app.wait_select_single(objectName=objectName)
-        )
-
     @property
     def main_view(self):
         return self.app.wait_select_single(dialer_app.MainView)
