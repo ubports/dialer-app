@@ -39,20 +39,10 @@ class DialerAppTestCase(AutopilotTestCase):
 
     """
 
-    if model() == 'Desktop':
-        scenarios = [
-            ('with mouse', dict(input_device_class=Mouse)),
-        ]
-    else:
-        scenarios = [
-            ('with touch', dict(input_device_class=Touch)),
-        ]
-
     LOCAL_BINARY_PATH = 'src/dialer-app'
     # The path to the locally built binary, relative to the build directory.
 
     def setUp(self):
-        self.pointing_device = Pointer(self.input_device_class.create())
         super().setUp()
 
         self.set_up_locale()
