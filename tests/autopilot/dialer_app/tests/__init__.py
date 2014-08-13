@@ -11,7 +11,6 @@
 
 import fixtures
 from autopilot.input import Mouse, Touch, Pointer
-from autopilot.introspection import get_proxy_object_for_existing_process
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
@@ -24,9 +23,7 @@ from dialer_app import emulators
 from dialer_app import helpers
 
 import os
-import time
 import logging
-import subprocess
 
 logger = logging.getLogger(__name__)
 
