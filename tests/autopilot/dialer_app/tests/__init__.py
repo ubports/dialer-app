@@ -1,5 +1,5 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2012, 2013 Canonical
+# Copyright 2012, 2013, 2014 Canonical
 #
 # This file is part of dialer-app.
 #
@@ -50,7 +50,8 @@ class DialerAppTestCase(AutopilotTestCase):
             ('with touch', dict(input_device_class=Touch)),
         ]
 
-    local_location = "../../src/dialer-app"
+    LOCAL_BINARY_PATH = 'src/dialer-app'
+    # The path to the locally built binary, relative to the build directory.
 
     def setUp(self):
         self.pointing_device = Pointer(self.input_device_class.create())
@@ -58,10 +59,7 @@ class DialerAppTestCase(AutopilotTestCase):
 
         self.set_up_locale()
 
-        if os.path.exists(self.local_location):
-            self.launch_test_local()
-        else:
-            self.launch_test_installed()
+        self.launch_application()
 
         self.assertThat(self.main_view.visible, Eventually(Equals(True)))
 
@@ -75,14 +73,22 @@ class DialerAppTestCase(AutopilotTestCase):
             fixture_setup.InitctlEnvironmentVariable(LANGUAGE='en')
         )
 
-    def launch_test_local(self):
+    def launch_application(self):
+        build_dir = os.environ.get('BUILD_DIR', None)
+        if build_dir is not None:
+            self.launch_built_application(build_dir)
+        else:
+            self.launch_installed_application()
+
+    def launch_built_application(self, build_dir):
+        binary_path = os.path.join(build_dir, self.LOCAL_BINARY_PATH)
         self.app = self.launch_test_application(
-            self.local_location,
+            binary_path,
             app_type='qt',
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
-    def launch_test_installed(self):
+    def launch_installed_application(self):
         self.app = self.launch_upstart_application(
             'dialer-app',
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
