@@ -298,6 +298,7 @@ PageWithBottomEdge {
 
             onKeyPressed: {
                 input.insert(input.cursorPosition, label)
+                callManager.playTone(label);
             }
         }
     }
