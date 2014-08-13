@@ -114,21 +114,15 @@ Page {
         }
     }
 
-    HistoryEventModel {
+    HistoryGroupedEventsModel {
         id: historyEventModel
+        groupingProperty: "participants"
         type: HistoryThreadModel.EventTypeVoice
         sort: HistorySort {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
         filter: HistoryFilter {}
-    }
-
-    SortProxyModel {
-        id: sortProxy
-        sortRole: HistoryEventModel.TimestampRole
-        sourceModel: historyEventModel
-        ascending: false
     }
 
     MultipleSelectionListView {
@@ -174,7 +168,7 @@ Page {
 
         currentIndex: -1
         anchors.fill: parent
-        listModel: sortProxy
+        listModel: historyEventModel
 
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
@@ -269,7 +263,12 @@ Page {
                 leftSideAction: Action {
                     iconName: "delete"
                     text: i18n.tr("Delete")
-                    onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+                    onTriggered:  {
+                        var events = model.events;
+                        for (var i in events) {
+                            historyEventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type)
+                        }
+                    }
                 }
                 property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
                 rightSideActions: [
