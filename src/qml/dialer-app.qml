@@ -110,6 +110,11 @@ MainView {
         return false;
     }
 
+    function createNewContactForPhone(phoneNumber)
+    {
+        Qt.openUrlExternally("addressbook:///create?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
+    }
+
     function viewContact(contactId) {
         Qt.openUrlExternally("addressbook:///contact?callback=dialer-app.desktop&id=" + encodeURIComponent(contactId))
     }
