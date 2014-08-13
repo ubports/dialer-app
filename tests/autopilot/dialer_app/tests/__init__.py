@@ -11,13 +11,10 @@
 
 import logging
 import os
-import subprocess
-import time
 
 import fixtures
 import ubuntuuitoolkit
 from autopilot.input import Mouse, Touch, Pointer
-from autopilot.introspection import get_proxy_object_for_existing_process
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
@@ -26,6 +23,7 @@ from ubuntuuitoolkit import fixture_setup
 
 import dialer_app
 from dialer_app import helpers
+
 
 logger = logging.getLogger(__name__)
 
