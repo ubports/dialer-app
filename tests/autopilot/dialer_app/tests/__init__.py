@@ -94,20 +94,6 @@ class DialerAppTestCase(AutopilotTestCase):
             emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
-    def _get_app_proxy_object(self, app_name):
-        return get_proxy_object_for_existing_process(
-            pid=self._get_app_pid(app_name),
-            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
-        )
-
-    def _get_app_pid(self, app):
-        for i in range(10):
-            try:
-                return int(subprocess.check_output(['pidof', app]).strip())
-            except subprocess.CalledProcessError:
-                # application not started yet, check in a second
-                time.sleep(1)
-
     def _click_object(self, objectName):
         self.pointing_device.click_object(
             self.app.wait_select_single(objectName=objectName)
