@@ -14,7 +14,7 @@ override_dh_auto_configure:
 
 override_dh_auto_test:
 #	make -C obj-$(DEB_HOST_GNU_TYPE) test
-	xvfb-run -a -s "-screen 0 1024x768x24" qmltestrunner -input tests/qml
+	xvfb-run -a -s "-screen 0 1024x768x24" qmltestrunner -import src/qml -input tests/qml
 
 override_dh_translations:
 	# Override dh_translations to work around http://pad.lv/1183262.
