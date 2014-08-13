@@ -25,11 +25,13 @@ Item {
 
     property int keysWidth: units.gu(11)
     property int keysHeight: units.gu(8)
+    property bool showVoicemail: false
 
     width: keys.width
     height: keys.height
 
     signal keyPressed(int keycode, string label)
+    signal keyPressAndHold(int keycode, string label)
 
     Grid {
         id: keys
@@ -46,9 +48,9 @@ Item {
             height: keysHeight
             label: i18n.tr("1")
             keycode: Qt.Key_1
-            onClicked: keypad.keyPressed(keycode, label)
-            onPressAndHold: mainView.callVoicemail()
-            iconSource: "voicemail"
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
+            iconSource: showVoicemail ? "voicemail" : ""
         }
 
         KeypadButton {
@@ -58,7 +60,8 @@ Item {
             label: i18n.tr("2")
             sublabel: i18n.tr("ABC")
             keycode: Qt.Key_2
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -68,7 +71,8 @@ Item {
             label: i18n.tr("3")
             sublabel: i18n.tr("DEF")
             keycode: Qt.Key_3
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -78,7 +82,8 @@ Item {
             label: i18n.tr("4")
             sublabel: i18n.tr("GHI")
             keycode: Qt.Key_4
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -88,7 +93,8 @@ Item {
             label: i18n.tr("5")
             sublabel: i18n.tr("JKL")
             keycode: Qt.Key_5
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -98,7 +104,8 @@ Item {
             label: i18n.tr("6")
             sublabel: i18n.tr("MNO")
             keycode: Qt.Key_6
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -108,7 +115,8 @@ Item {
             label: i18n.tr("7")
             sublabel: i18n.tr("PQRS")
             keycode: Qt.Key_7
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -118,7 +126,8 @@ Item {
             label: i18n.tr("8")
             sublabel: i18n.tr("TUV")
             keycode: Qt.Key_8
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -128,7 +137,8 @@ Item {
             label: i18n.tr("9")
             sublabel: i18n.tr("WXYZ")
             keycode: Qt.Key_9
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -139,7 +149,8 @@ Item {
             corner: Qt.BottomLeftCorner
             label: i18n.tr("*")
             keycode: Qt.Key_Asterisk
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -150,8 +161,8 @@ Item {
             sublabel: i18n.tr("+")
             sublabelSize: "medium"
             keycode: Qt.Key_0
-            onClicked: keypad.keyPressed(keycode, label)
-            onPressAndHold: keypad.keyPressed(keycode, sublabel)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
 
         KeypadButton {
@@ -162,7 +173,8 @@ Item {
             corner: Qt.BottomRightCorner
             label: i18n.tr("#")
             keycode: Qt.Key_ssharp
-            onClicked: keypad.keyPressed(keycode, label)
+            onKeyPressed: keypad.keyPressed(keycode, label)
+            onPressAndHold: keypad.keyPressAndHold(keycode, label)
         }
     }
 }

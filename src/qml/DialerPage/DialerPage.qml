@@ -101,18 +101,6 @@ PageWithBottomEdge {
         }
     }
 
-    onDialNumberChanged: {
-        if(checkUSSD(dialNumber)) {
-            // check for custom strings
-            if (dialNumber === "*#06#") {
-                dialNumber = ""
-                mainView.ussdResponseTitle = "IMEI"
-                mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
-                PopupUtils.open(ussdResponseDialog)
-            }
-        }
-    }
-
     function accountIndex(account) {
         var index = -1;
         for (var i in telepathyHelper.accounts) {
@@ -294,6 +282,7 @@ PageWithBottomEdge {
 
         Keypad {
             id: keypad
+            showVoicemail: true
 
             anchors {
                 top: divider.bottom
@@ -302,11 +291,33 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                input.insert(input.cursorPosition, label)
                 callManager.playTone(label);
+                input.insert(input.cursorPosition, label)
+                if(checkUSSD(dialNumber)) {
+                    // check for custom strings
+                    if (dialNumber === "*#06#") {
+                        dialNumber = ""
+                        mainView.ussdResponseTitle = "IMEI"
+                        mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
+                        PopupUtils.open(ussdResponseDialog)
+                    }
+                }
+            }
+            onKeyPressAndHold: {
+                // we should only call voicemail if the keypad entry was empty,
+                // but as we add numbers when onKeyPressed is triggered, the keypad entry will be "1"
+                if (keycode == Qt.Key_1 && dialNumber == "1") {
+                    dialNumber = ""
+                    mainView.callVoicemail()
+                } else if (keycode == Qt.Key_0) {
+                    // replace 0 by +
+                    dialNumber = dialNumber.substring(0, dialNumber.length - 1)
+                    dialNumber += i18n.tr("+")
+                }
             }
         }
     }
+
     Item {
         id: footer
 
