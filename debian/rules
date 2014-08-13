@@ -7,7 +7,7 @@
 export DPKG_GENSYMBOLS_CHECK_LEVEL=4
 
 %:
-	dh $@ --parallel --fail-missing --with translations
+	dh $@ --parallel --fail-missing --with translations,python3
 
 override_dh_auto_configure:
 	dh_auto_configure -- -DCMAKE_BUILD_TYPE=Debug
@@ -20,3 +20,6 @@ override_dh_translations:
 	# Unfortunately, the default build directory is not exposed
 	# (see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=601774).
 	$(MAKE) -C obj-$(DEB_HOST_GNU_TYPE) dialer-app.pot
+
+override_dh_python3:
+	dh_python3 -pdialer-app-autopilot

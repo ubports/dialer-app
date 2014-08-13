@@ -10,8 +10,6 @@
 
 """Tests for the Dialer App using ofono-phonesim"""
 
-from __future__ import absolute_import
-
 import subprocess
 import os
 import time
@@ -44,10 +42,10 @@ class TestCalls(DialerAppTestCase):
                          'string:modem-objpath=/phonesim'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
-        super(TestCalls, self).setUp()
+        super().setUp()
 
     def tearDown(self):
-        super(TestCalls, self).tearDown()
+        super().tearDown()
 
         # ensure that there are no leftover calls in case of failed tests
         subprocess.call(["/usr/share/ofono/scripts/hangup-all", "/phonesim"])
@@ -81,6 +79,9 @@ class TestCalls(DialerAppTestCase):
         self.assertThat(
             self.main_view.live_call_page.caller, Eventually(Equals(number)))
 
+        # If we press the hangup button too quickly it won't end the call.
+        # Reported as bug http://pad.lv/1351817
+        time.sleep(1)
         self.main_view.live_call_page.click_hangup_button()
 
         # log should show call to the phone number

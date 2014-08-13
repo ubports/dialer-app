@@ -16,7 +16,7 @@ import logging
 
 class MainView(toolkit_emulators.MainView):
     def __init__(self, *args):
-        super(MainView, self).__init__(*args)
+        super().__init__(*args)
         self.logger = logging.getLogger(__name__)
 
     @property
@@ -58,8 +58,6 @@ class LiveCall(MainView):
 class PageWithBottomEdge(MainView):
     """An emulator class that makes it easy to interact with the bottom edge
        swipe page"""
-    def __init__(self, *args):
-        super(PageWithBottomEdge, self).__init__(*args)
 
     def reveal_bottom_edge_page(self):
         """Bring the bottom edge page to the screen"""
