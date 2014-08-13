@@ -27,8 +27,9 @@ Page {
     id: contactsPage
     objectName: "contactsPage"
 
+    property QtObject contact
+
     title: i18n.tr("Contacts")
-        property QtObject contact
 
     TextField {
         id: searchField
