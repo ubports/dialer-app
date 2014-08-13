@@ -42,9 +42,7 @@ class DialerAppTestCase(AutopilotTestCase):
 
     def setUp(self):
         super().setUp()
-
         self.set_up_locale()
-
         self.launch_application()
 
         self.assertThat(self.main_view.visible, Eventually(Equals(True)))
