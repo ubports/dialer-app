@@ -14,9 +14,7 @@ import os
 
 import fixtures
 import ubuntuuitoolkit
-from autopilot.input import Mouse, Touch, Pointer
 from autopilot.matchers import Eventually
-from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
 from testtools.matchers import Equals
 from ubuntuuitoolkit import fixture_setup
