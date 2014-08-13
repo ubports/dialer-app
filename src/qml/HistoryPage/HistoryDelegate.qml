@@ -162,6 +162,7 @@ ListItemWithActions {
             left: avatar.right
             leftMargin: units.gu(2)
             right: time.left
+            rightMargin: units.gu(1) + (countLabel.visible ? countLabel.width : 0)
         }
         height: units.gu(2)
         verticalAlignment: Text.AlignVCenter
@@ -178,6 +179,31 @@ ListItemWithActions {
         }
         elide: Text.ElideRight
         color: UbuntuColors.lightAubergine
+    }
+
+    // this item has the width of the text above. It is used to be able to align
+    Item {
+        id: titleLabelArea
+        anchors {
+            top: titleLabel.top
+            left: titleLabel.left
+            bottom: titleLabel.bottom
+        }
+        width: titleLabel.paintedWidth
+    }
+
+    Label {
+        id: countLabel
+        anchors {
+            left: titleLabelArea.right
+            leftMargin: units.gu(0.5)
+            verticalCenter: titleLabel.verticalCenter
+        }
+        height: units.gu(2)
+        fontSize: "medium"
+        visible: model.eventCount > 1
+        // TRANSLATORS: this is the count of events grouped into this single item
+        text: i18n.tr("(%1)").arg(model.eventCount)
     }
 
     Label {
