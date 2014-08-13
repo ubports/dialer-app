@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-08-12 06:44+0000\n"
-"Last-Translator: Marian Vasile <marianvasile1972@gmail.com>\n"
+"PO-Revision-Date: 2014-08-12 06:46+0000\n"
+"Last-Translator: Angelescu <titus0818@yahoo.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2014-08-12 06:44+0000\n"
+"X-Launchpad-Export-Date: 2014-08-13 06:56+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #: src/qml/DialerPage/Keypad.qml:163
@@ -194,92 +194,92 @@ msgstr "Cum doriți să salvați contactul?"
 
 #: src/qml/dialer-app.qml:268
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Cod USSD nevalid"
 
 #: src/qml/DialerPage/Keypad.qml:89
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: src/qml/DialerPage/DialerPage.qml:50
 msgid "Keypad"
-msgstr ""
+msgstr "Tastatură"
 
 #: src/qml/DialerPage/Keypad.qml:99
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "Mod conferință"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "Apel nou"
 
 #: src/qml/DialerPage/Keypad.qml:109
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: src/qml/dialer-app.qml:248
 msgid "Please wait"
-msgstr ""
+msgstr "Așteptați"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "Save contact"
-msgstr ""
+msgstr "Salvează contactul"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "Trimiteți mesaj text"
 
 #: src/qml/DialerPage/Keypad.qml:119
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
-msgstr ""
+msgstr "Astăzi"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "Două apeluri"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
-msgstr ""
+msgstr "Necunoscut"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr ""
+msgstr "Vizualizare contact"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
-msgstr ""
+msgstr "Mesagerie vocală"
 
 #: src/qml/DialerPage/Keypad.qml:129
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr ""
+msgstr "Ieri"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
-msgstr ""
+msgstr "activ"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:237
 msgid "calling"
-msgstr ""
+msgstr "se apelează"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
-msgstr ""
+msgstr "în așteptare"
