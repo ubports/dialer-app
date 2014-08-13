@@ -9,24 +9,23 @@
 
 """Dialer App autopilot tests."""
 
+import logging
+import os
+import subprocess
+import time
+
 import fixtures
+import ubuntuuitoolkit
 from autopilot.input import Mouse, Touch, Pointer
 from autopilot.introspection import get_proxy_object_for_existing_process
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from autopilot.testcase import AutopilotTestCase
 from testtools.matchers import Equals
-from ubuntuuitoolkit import (
-    emulators as toolkit_emulators,
-    fixture_setup
-)
-from dialer_app import emulators
-from dialer_app import helpers
+from ubuntuuitoolkit import fixture_setup
 
-import os
-import time
-import logging
-import subprocess
+import dialer_app
+from dialer_app import helpers
 
 logger = logging.getLogger(__name__)
 
@@ -80,19 +79,19 @@ class DialerAppTestCase(AutopilotTestCase):
         self.app = self.launch_test_application(
             self.local_location,
             app_type='qt',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
     def launch_test_installed(self):
         self.app = self.launch_upstart_application(
             'dialer-app',
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
     def _get_app_proxy_object(self, app_name):
         return get_proxy_object_for_existing_process(
             pid=self._get_app_pid(app_name),
-            emulator_base=toolkit_emulators.UbuntuUIToolkitEmulatorBase
+            emulator_base=ubuntuuitoolkit.UbuntuUIToolkitCustomProxyObjectBase
         )
 
     def _get_app_pid(self, app):
@@ -110,4 +109,4 @@ class DialerAppTestCase(AutopilotTestCase):
 
     @property
     def main_view(self):
-        return self.app.wait_select_single(emulators.MainView)
+        return self.app.wait_select_single(dialer_app.MainView)

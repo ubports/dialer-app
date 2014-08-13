@@ -7,9 +7,8 @@
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
 
-"""Dialer app autopilot emulators."""
+"""Dialer app autopilot custom proxy objects."""
 
-from autopilot.introspection.dbus import StateNotFoundError
 from ubuntuuitoolkit._custom_proxy_objects import _common
 
 

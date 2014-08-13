@@ -6,11 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-16 19:26+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-13 10:39-0600\n"
 "PO-Revision-Date: 2014-08-05 06:56+0000\n"
 "Last-Translator: goof <goof@coppernet.zm>\n"
 "Language-Team: Bemba <bem@li.org>\n"
+"Language: bem\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,7 +19,7 @@ msgstr ""
 "X-Launchpad-Export-Date: 2014-08-06 06:55+0000\n"
 "X-Generator: Launchpad (build 17147)\n"
 
-#: src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/Keypad.qml:163
 msgid "#"
 msgstr "#"
 
@@ -43,140 +44,124 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 sec"
 msgstr[1] "%1 secs"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/DialerPage/Keypad.qml:140
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:150
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:149
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:45
+#: src/qml/DialerPage/Keypad.qml:47
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:56
+#: src/qml/DialerPage/Keypad.qml:58
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:66
+#: src/qml/DialerPage/Keypad.qml:68
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:76
+#: src/qml/DialerPage/Keypad.qml:78
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:88
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:96
+#: src/qml/DialerPage/Keypad.qml:98
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:106
+#: src/qml/DialerPage/Keypad.qml:108
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: src/qml/DialerPage/Keypad.qml:118
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: src/qml/DialerPage/Keypad.qml:128
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:57
+#: src/qml/DialerPage/Keypad.qml:59
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
-msgid "Add Contact"
-msgstr "Ukubika mu chitabo"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
-msgid "Add to existing contact"
-msgstr "Ukubika pawaba kale mucitabo"
-
-#: src/qml/dialer-app.qml:335
+#: src/qml/dialer-app.qml:340
 msgid "Call Barring"
 msgstr "Ukulesha abaletuma"
 
-#: src/qml/dialer-app.qml:346
+#: src/qml/dialer-app.qml:351
 msgid "Call Forwarding"
 msgstr "Ukutuma ama phone kumbi"
 
-#: src/qml/dialer-app.qml:357
+#: src/qml/dialer-app.qml:362
 msgid "Call Waiting"
 msgstr "Ukulolela"
 
-#: src/qml/MainPage.qml:56
-msgid "Call log"
-msgstr "Amalamya yakunuma"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
-msgid "Call now"
-msgstr "Ukutuma nombaline"
-
-#: src/qml/dialer-app.qml:368
+#: src/qml/dialer-app.qml:373
 msgid "Calling Line Presentation"
 msgstr "Imimonekele ya lamya ngailelila"
 
-#: src/qml/dialer-app.qml:380
+#: src/qml/dialer-app.qml:385
 msgid "Calling Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
-msgid "Cancel"
-msgstr "Ukukansa"
+#: src/qml/dialer-app.qml:234
+msgid "Close"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
 msgstr "Ukulanda nabantu abengi"
 
-#: src/qml/dialer-app.qml:374
+#: src/qml/dialer-app.qml:379
 msgid "Connected Line Presentation"
 msgstr "Imimonekele nga nabasuka"
 
-#: src/qml/dialer-app.qml:386
+#: src/qml/dialer-app.qml:391
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:29
 #: src/qml/DialerPage/DialerPage.qml:40
+#: src/qml/ContactsPage/ContactsPage.qml:29
 msgid "Contacts"
 msgstr "Amashina yabantu"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
-msgid "Create new contact"
-msgstr "Ukwingisha ishina"
-
-#: src/qml/DialerPage/Keypad.qml:67
+#: src/qml/DialerPage/Keypad.qml:69
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:269
+#: src/qml/HistoryPage/HistoryPage.qml:271
 msgid "Delete"
 msgstr "Ukufuta"
 
-#: src/qml/dialer-app.qml:265 src/qml/dialer-app.qml:279
+#: src/qml/HistoryPage/HistoryPage.qml:279
+msgid "Details"
+msgstr ""
+
+#: src/qml/dialer-app.qml:270 src/qml/dialer-app.qml:284
 msgid "Dismiss"
 msgstr "Ukufumyapo"
 
-#: src/qml/DialerPage/DialerPage.qml:188
+#: src/qml/DialerPage/DialerPage.qml:219
 msgid "Enter a number"
 msgstr "Ukwingisha namba"
 
-#: src/qml/dialer-app.qml:262
+#: src/qml/dialer-app.qml:267
 msgid "Error"
 msgstr "Pali icalubana"
 
-#: src/qml/DialerPage/Keypad.qml:77
+#: src/qml/DialerPage/Keypad.qml:79
 msgid "GHI"
 msgstr "GHI"
 
@@ -184,23 +169,23 @@ msgstr "GHI"
 msgid "Hangup"
 msgstr "Ukuputula"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
-msgid "How do you want to save the contact?"
-msgstr "Imisungile yeshina yamusango shani?"
+#: src/qml/HistoryPage/HistoryDelegate.qml:60
+msgid "Incoming"
+msgstr ""
 
-#: src/qml/dialer-app.qml:263
+#: src/qml/dialer-app.qml:268
 msgid "Invalid USSD code"
 msgstr "Iyi USSD code takwaba"
 
-#: src/qml/DialerPage/Keypad.qml:87
+#: src/qml/DialerPage/Keypad.qml:89
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/DialerPage/DialerPage.qml:50
 msgid "Keypad"
 msgstr "Apakutinika"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:99
 msgid "MNO"
 msgstr "MNO"
 
@@ -208,15 +193,28 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:75
-msgid "New call"
+#: src/qml/HistoryPage/HistoryDelegate.qml:58
+msgid "Missed"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:60
+#, fuzzy
+msgid "New Call"
 msgstr "Ukutuma"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/dialer-app.qml:229
+msgid "No network"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:62
+msgid "Outgoing"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:109
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:243
+#: src/qml/dialer-app.qml:248
 msgid "Please wait"
 msgstr ""
 
@@ -224,40 +222,57 @@ msgstr ""
 msgid "Private"
 msgstr "Munkama"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "Save contact"
-msgstr "Ukusunga ishina"
+#: src/qml/HistoryPage/HistoryDelegate.qml:171
+#, fuzzy
+msgid "Private number"
+msgstr "Munkama"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
-msgid "Send text message"
+#: src/qml/DialerPage/DialerPage.qml:73 src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Recent"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/ContactsPage/ContactsPage.qml:46
+msgid "Search..."
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Select"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryPage.qml:292
+msgid "Send message"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:45
+msgid "Settings"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:119
 msgid "TUV"
+msgstr ""
+
+#: src/qml/dialer-app.qml:230
+#, qt-format
+msgid "There is currently no network on %1"
+msgstr ""
+
+#: src/qml/dialer-app.qml:231
+msgid "There is currently no network."
 msgstr ""
 
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-msgid "Two Calls"
-msgstr ""
-
-#: src/qml/HistoryPage/HistoryDelegate.qml:139
-msgid "Unknown"
-msgstr ""
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "View contact"
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
+msgid "Unknown number"
 msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:129
 msgid "WXYZ"
 msgstr ""
 
@@ -265,17 +280,41 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:244
+#: src/qml/LiveCallPage/LiveCall.qml:237
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr ""
+
+#~ msgid "Add Contact"
+#~ msgstr "Ukubika mu chitabo"
+
+#~ msgid "Add to existing contact"
+#~ msgstr "Ukubika pawaba kale mucitabo"
+
+#~ msgid "Call log"
+#~ msgstr "Amalamya yakunuma"
+
+#~ msgid "Call now"
+#~ msgstr "Ukutuma nombaline"
+
+#~ msgid "Cancel"
+#~ msgstr "Ukukansa"
+
+#~ msgid "Create new contact"
+#~ msgstr "Ukwingisha ishina"
+
+#~ msgid "How do you want to save the contact?"
+#~ msgstr "Imisungile yeshina yamusango shani?"
+
+#~ msgid "Save contact"
+#~ msgstr "Ukusunga ishina"
