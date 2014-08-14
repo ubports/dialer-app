@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-08-13 00:32+0000\n"
+"PO-Revision-Date: 2014-08-13 11:36+0000\n"
 "Last-Translator: Kentaro Kazuhama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-08-13 06:56+0000\n"
+"X-Launchpad-Export-Date: 2014-08-14 07:38+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #: src/qml/DialerPage/Keypad.qml:163
@@ -103,11 +103,11 @@ msgstr "既存の連絡先に追加"
 
 #: src/qml/dialer-app.qml:340
 msgid "Call Barring"
-msgstr ""
+msgstr "発信規制"
 
 #: src/qml/dialer-app.qml:351
 msgid "Call Forwarding"
-msgstr "着信転送"
+msgstr ""
 
 #: src/qml/dialer-app.qml:362
 msgid "Call Waiting"
@@ -123,7 +123,7 @@ msgstr ""
 
 #: src/qml/dialer-app.qml:373
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "発信者番号通知"
 
 #: src/qml/dialer-app.qml:385
 msgid "Calling Line Restriction"
@@ -180,7 +180,7 @@ msgstr "GHI"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
 msgid "Hangup"
-msgstr ""
+msgstr "通話を終了"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:39
 msgid "How do you want to save the contact?"
@@ -188,7 +188,7 @@ msgstr "連絡先に保存しますか？"
 
 #: src/qml/dialer-app.qml:268
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "無効なUSSDコードです"
 
 #: src/qml/DialerPage/Keypad.qml:89
 msgid "JKL"
@@ -204,7 +204,7 @@ msgstr "MNO"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
-msgstr ""
+msgstr "通話を統合"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
@@ -220,7 +220,7 @@ msgstr "お待ちください"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
-msgstr ""
+msgstr "プライベート"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:38
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
@@ -229,7 +229,7 @@ msgstr "連絡先を保存"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:124
 msgid "Send text message"
-msgstr ""
+msgstr "テキストメッセージを送信"
 
 #: src/qml/DialerPage/Keypad.qml:119
 msgid "TUV"
@@ -249,7 +249,7 @@ msgstr "不明"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:134
 msgid "View contact"
-msgstr ""
+msgstr "連絡先を表示"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
