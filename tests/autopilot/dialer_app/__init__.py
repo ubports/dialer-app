@@ -65,8 +65,9 @@ class PageWithBottomEdge(MainView):
         self.bottomEdgePageLoaded.wait_for(True)
         try:
             action_item = self.wait_select_single(objectName='bottomEdgeTip')
-            start_x = (action_item.globalRect.x +
-                      (action_item.globalRect.width * 0.5))
+            start_x = (
+                action_item.globalRect.x +
+                (action_item.globalRect.width * 0.5))
             # Start swiping from the top of the component because after some
             # seconds it gets almost fully hidden. The center will be out of
             # view.

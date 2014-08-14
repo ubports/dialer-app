@@ -34,5 +34,6 @@ class ListItemWithActions(_common.UbuntuUIToolkitCustomProxyObjectBase):
 
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
 
+
 class HistoryDelegate(ListItemWithActions):
     pass
