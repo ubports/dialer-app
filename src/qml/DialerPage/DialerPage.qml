@@ -51,7 +51,11 @@ PageWithBottomEdge {
             return i18n.tr("Flight mode")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
-        } 
+        } else if (multipleAccounts && !mainView.account) {
+            // TODO: check what should be displayed when there are multiple accounts
+            // but no default selected
+            return i18n.tr("Keypad")
+        }
         return i18n.tr("No network")
     }
 

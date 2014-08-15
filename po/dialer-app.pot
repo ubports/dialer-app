@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-15 17:30-0300\n"
+"POT-Creation-Date: 2014-08-15 18:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,7 +47,7 @@ msgstr[1] ""
 msgid "*"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:322
+#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:326
 msgid "+"
 msgstr ""
 
@@ -172,7 +172,7 @@ msgstr ""
 msgid "Don't ask again"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:219
+#: src/qml/DialerPage/DialerPage.qml:223
 msgid "Enter a number"
 msgstr ""
 
@@ -208,6 +208,10 @@ msgstr ""
 msgid "JKL"
 msgstr ""
 
+#: src/qml/DialerPage/DialerPage.qml:57
+msgid "Keypad"
+msgstr ""
+
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
 msgstr ""
@@ -237,7 +241,7 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:55 src/qml/dialer-app.qml:265
+#: src/qml/DialerPage/DialerPage.qml:59 src/qml/dialer-app.qml:265
 msgid "No network"
 msgstr ""
 
@@ -261,7 +265,7 @@ msgstr ""
 msgid "Private number"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:79 src/qml/HistoryPage/HistoryPage.qml:43
+#: src/qml/DialerPage/DialerPage.qml:83 src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Recent"
 msgstr ""
 
