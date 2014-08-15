@@ -46,7 +46,14 @@ PageWithBottomEdge {
         }
     ]
 
-    title: i18n.tr("Keypad")
+    title: {
+        if (telepathyHelper.flightMode) {
+            return i18n.tr("Flight mode")
+        } else if (mainView.account && mainView.account.networkName != "") {
+            return mainView.account.networkName
+        } 
+        return i18n.tr("No network")
+    }
 
     // -------- Greeter mode ----------
     states: [
@@ -135,8 +142,8 @@ PageWithBottomEdge {
         }
 
         var accountNames = []
-        for(var i=0; i < telepathyHelper.accounts.length; i++) {
-            accountNames.push(telepathyHelper.accounts[i].displayName)
+        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
+            accountNames.push(telepathyHelper.activeAccounts[i].displayName)
         }
         return accountNames
     }
@@ -152,7 +159,7 @@ PageWithBottomEdge {
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.account = telepathyHelper.accounts[page.head.sections.selectedIndex]
+            mainView.account = telepathyHelper.activeAccounts[page.head.sections.selectedIndex]
         }
     }
 
