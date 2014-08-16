@@ -116,7 +116,7 @@ Page {
 
     HistoryGroupedEventsModel {
         id: historyEventModel
-        groupingProperty: "participants"
+        groupingProperties: ["participants", "date"]
         type: HistoryThreadModel.EventTypeVoice
         sort: HistorySort {
             sortField: "timestamp"
@@ -182,6 +182,24 @@ Page {
                 _currentSwipedItem = null
             }
         }
+
+        Component {
+            id: sectionComponent
+            Label {
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                }
+                text: DateUtils.friendlyDay(section)
+                height: units.gu(5)
+                fontSize: "medium"
+                verticalAlignment: Text.AlignVCenter
+            }
+        }
+
+        section.property: "date"
+        section.delegate: fullView ? sectionComponent : null
 
         listDelegate: delegateComponent
 
@@ -272,10 +290,19 @@ Page {
                 }
                 property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
                 rightSideActions: [
-                    // FIXME: the first action should go to contac call log details page
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("Details")
+                        onTriggered: {
+                            pageStack.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
+                                                          { phoneNumber: participants[0],
+                                                            events: model.events,
+                                                            eventModel: historyEventModel})
+                        }
+                    },
                     Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
-                        text: i18n.tr("Details")
+                        text: i18n.tr("Contact Details")
                         onTriggered: {
                             if (unknownContact) {
                                 mainView.addNewPhone(phoneNumber)

@@ -53,9 +53,10 @@ function formatFriendlyDate(timestamp) {
 function formatFriendlyCallDuration(duration) {
     var text = "";
 
-    var hours = parseInt(Qt.formatTime(duration, "hh"));
-    var minutes = parseInt(Qt.formatTime(duration, "mm"));
-    var seconds = parseInt(Qt.formatTime(duration, "ss"));
+    var durationTime = new Date(duration * 1000);
+    var hours = parseInt(Qt.formatTime(durationTime, "hh"));
+    var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
+    var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
 
     if (hours > 0) {
         text = i18n.tr("%1 hour", "%1 hours", hours).arg(hours)
@@ -65,5 +66,23 @@ function formatFriendlyCallDuration(duration) {
         text = i18n.tr("%1 sec", "%1 secs", seconds).arg(seconds)
     }
 
+    return text;
+}
+
+function formatCallDuration(duration) {
+    var text = ""
+
+    var durationTime = new Date(duration * 1000);
+    var hours = parseInt(Qt.formatTime(durationTime, "hh"));
+    var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
+    var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
+
+    if (hours > 0) {
+        // TRANSLATORS: this is the duration time format when the call lasted more than an hour
+        text = Qt.formatTime(durationTime, i18n.tr("hh:mm:ss"));
+    } else {
+        // TRANSLATORS: this is the duration time format when the call lasted less than an hour
+        text = Qt.formatTime(durationTime, i18n.tr("mm:ss"));
+    }
     return text;
 }
