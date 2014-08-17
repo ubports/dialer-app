@@ -46,10 +46,10 @@ ListItemWithActions {
             return;
         }
 
-        if (fullView) {
+        if (fullView && mainView.account) {
             mainView.call(model.participants[0], mainView.account.accountId);
         } else {
-            mainView.populateDialpad(model.participants[0], mainView.account.accountId);
+            mainView.populateDialpad(model.participants[0], mainView.account ? mainView.account.accountId : "");
         }
     }
 

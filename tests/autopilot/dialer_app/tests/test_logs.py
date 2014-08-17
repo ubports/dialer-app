@@ -10,8 +10,6 @@
 
 """Tests for the Dialer App"""
 
-from __future__ import absolute_import
-
 from autopilot.matchers import Eventually
 from autopilot.platform import model
 from testtools.matchers import Equals
@@ -32,8 +30,7 @@ class TestCallLogs(DialerAppTestCase):
 
     db_file = 'history.sqlite'
     local_db_dir = 'dialer_app/data/'
-    system_db_dir = '/usr/lib/python2.7/dist-packages/dialer_app/data/'
-    devnull = open(os.devnull, 'w')
+    system_db_dir = '/usr/lib/python3/dist-packages/dialer_app/data/'
 
     def setUp(self):
         if os.path.exists('../../src/dialer-app'):
@@ -43,9 +40,10 @@ class TestCallLogs(DialerAppTestCase):
 
         subprocess.call(['pkill', 'history-daemon'])
         os.environ['HISTORY_SQLITE_DBPATH'] = database
-        subprocess.Popen(['history-daemon'], stderr=self.devnull)
+        with open(os.devnull, 'w') as devnull:
+            subprocess.Popen(['history-daemon'], stderr=devnull)
 
-        super(TestCallLogs, self).setUp()
+        super().setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
         self.main_view.dialer_page.reveal_bottom_edge_page()

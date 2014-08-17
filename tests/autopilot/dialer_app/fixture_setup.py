@@ -24,7 +24,7 @@ import subprocess
 class TestabilityEnvironment(fixtures.Fixture):
 
     def setUp(self):
-        super(TestabilityEnvironment, self).setUp()
+        super().setUp()
         self._set_testability_environment_variable()
         self.addCleanup(self._reset_environment_variable)
 

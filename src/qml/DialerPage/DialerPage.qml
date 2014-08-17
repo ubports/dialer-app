@@ -31,7 +31,6 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
-    property bool multipleAccounts: telepathyHelper.accountIds.length > 1
     objectName: "dialerPage"
 
     head.actions: [
@@ -97,18 +96,6 @@ PageWithBottomEdge {
         }
     }
 
-    onDialNumberChanged: {
-        if(checkUSSD(dialNumber)) {
-            // check for custom strings
-            if (dialNumber === "*#06#") {
-                dialNumber = ""
-                mainView.ussdResponseTitle = "IMEI"
-                mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
-                PopupUtils.open(ussdResponseDialog)
-            }
-        }
-    }
-
     function accountIndex(account) {
         var index = -1;
         for (var i in telepathyHelper.accounts) {
@@ -150,7 +137,13 @@ PageWithBottomEdge {
     }
 
     // Account switcher
-    head.sections.selectedIndex: Math.max(0, accountIndex(mainView.account))
+    head.sections.selectedIndex: {
+        if (!mainView.account) {
+            return -1
+        }
+        return accountIndex(mainView.account)
+    }
+
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
@@ -284,6 +277,7 @@ PageWithBottomEdge {
 
         Keypad {
             id: keypad
+            showVoicemail: true
 
             anchors {
                 top: divider.bottom
@@ -292,10 +286,33 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
+                callManager.playTone(label);
                 input.insert(input.cursorPosition, label)
+                if(checkUSSD(dialNumber)) {
+                    // check for custom strings
+                    if (dialNumber === "*#06#") {
+                        dialNumber = ""
+                        mainView.ussdResponseTitle = "IMEI"
+                        mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
+                        PopupUtils.open(ussdResponseDialog)
+                    }
+                }
+            }
+            onKeyPressAndHold: {
+                // we should only call voicemail if the keypad entry was empty,
+                // but as we add numbers when onKeyPressed is triggered, the keypad entry will be "1"
+                if (keycode == Qt.Key_1 && dialNumber == "1") {
+                    dialNumber = ""
+                    mainView.callVoicemail()
+                } else if (keycode == Qt.Key_0) {
+                    // replace 0 by +
+                    dialNumber = dialNumber.substring(0, dialNumber.length - 1)
+                    dialNumber += i18n.tr("+")
+                }
             }
         }
     }
+
     Item {
         id: footer
 
@@ -316,6 +333,21 @@ PageWithBottomEdge {
             }
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
+                // check if at least one account is selected
+                if (multipleAccounts && !mainView.account) {
+                    Qt.inputMethod.hide()
+                    PopupUtils.open(Qt.createObject("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
+                    return
+                }
+
+                if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
+                    var properties = {}
+                    properties["phoneNumber"] = dialNumber
+                    properties["accountId"] = mainView.account.accountId
+                    PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
+                    return
+                }
+
                 // avoid cleaning the keypadEntry in case there is no signal
                 if (!mainView.account.connected) {
                     PopupUtils.open(noNetworkDialog)

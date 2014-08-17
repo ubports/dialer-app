@@ -1,3 +1,34 @@
+dialer-app (0.1+14.10.20140813.3-0ubuntu1) utopic; urgency=low
+
+  [ Barry Warsaw ]
+  * Port autopilot tests to python3.
+
+  [ Leo Arias ]
+  * Port autopilot tests to python3.
+
+  [ Martti Piirainen ]
+  * Adding audible/haptic feedback while dialing (LP: #1228711). (LP:
+    #1228711)
+
+  [ Tiago Salem Herrmann ]
+  * Implement default sim dialogs.
+  * move MMI code to onKeyPressed(). use onPressed() instead of
+    onClicked() (LP: #1347370)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Do not update the .po files during `make`, update only the .pot
+    file.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Add header section on ContactsPage to allow the user to switch
+    between the "all" and "favorites" contacts. Add an "Add new" button
+    on contact list header. (LP: #1356179)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 13 Aug 2014 22:28:22 +0000
+
 dialer-app (0.1+14.10.20140806-0ubuntu1) utopic; urgency=low
 
   [ Gustavo Pichorim Boiko ]

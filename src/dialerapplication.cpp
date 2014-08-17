@@ -62,6 +62,7 @@ DialerApplication::DialerApplication(int &argc, char **argv)
     : QGuiApplication(argc, argv), m_view(0), m_applicationIsReady(false)
 {
     setApplicationName("DialerApp");
+    setOrganizationName("com.ubuntu.dialer-app");
 }
 
 bool DialerApplication::setup()

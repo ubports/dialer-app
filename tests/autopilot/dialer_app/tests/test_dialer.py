@@ -9,8 +9,6 @@
 
 """Tests for the Dialer App"""
 
-from __future__ import absolute_import
-
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
 
@@ -19,9 +17,6 @@ from dialer_app.tests import DialerAppTestCase
 
 class TestDialer(DialerAppTestCase):
     """Tests for the Call panel."""
-
-    def setUp(self):
-        super(TestDialer, self).setUp()
 
     # FIXME: test disabled until we get a better way to test the keypad keys
     # def test_keypad_buttons(self):

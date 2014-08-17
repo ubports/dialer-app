@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import Qt.labs.settings 1.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
@@ -29,8 +30,16 @@ MainView {
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
-    // FIXME this info must come from system settings or telephony-service
-    property QtObject account: telepathyHelper.accounts[0]
+    property bool multipleAccounts: telepathyHelper.accounts.length > 1
+    property QtObject account: {
+        // we only use the default account property if we have more
+        // than one account, otherwise we use always the first one
+        if (multipleAccounts) {
+            return telepathyHelper.defaultCallAccount
+        } else {
+            return telepathyHelper.accounts[0]
+        }
+    }
 
     automaticOrientation: false
     width: units.gu(40)
@@ -51,6 +60,23 @@ MainView {
         } else {
             telepathyHelper.unregisterChannelObserver()
         }
+    }
+
+    Connections {
+        target: telepathyHelper
+        onSetupReady: {
+            if (multipleAccounts && !telepathyHelper.defaultCallAccount && 
+                settings.mainViewDontAskCount < 3 && pageStack.depth === 1) {
+                PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
+            }
+        }
+    }
+
+    Settings {
+        id: settings
+        category: "DualSim"
+        property bool dialPadDontAsk: false
+        property int mainViewDontAskCount: 0
     }
 
     PhoneUtils {
@@ -82,6 +108,11 @@ MainView {
             }
         }
         return false;
+    }
+
+    function createNewContactForPhone(phoneNumber)
+    {
+        Qt.openUrlExternally("addressbook:///create?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
     }
 
     function viewContact(contactId) {
@@ -130,6 +161,11 @@ MainView {
 
 
         if (number === "") {
+            return
+        }
+
+        if (multipleAccounts && !mainView.account) {
+            PopupUtils.open(Qt.createComponent("Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
             return
         }
 
