@@ -65,6 +65,7 @@ Page {
             onTriggered: {
                 // FIXME: implement
             }
+            visible: false
         },
         Action {
             iconName: "delete"
@@ -272,7 +273,7 @@ Page {
             Label {
                 id: typeLabel
                 text: {
-                    if (modelData.callMissed) {
+                    if (modelData.missed) {
                         return i18n.tr("Missed");
                     } else if (incoming) {
                         return i18n.tr("Incoming");

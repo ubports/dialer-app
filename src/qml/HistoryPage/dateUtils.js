@@ -33,7 +33,11 @@ function formatLogDate(timestamp) {
 }
 
 function friendlyDay(timestamp) {
-    var date = new Date(timestamp);
+    var year = Qt.formatDate(timestamp, "yyyy");
+    var month = Qt.formatDate(timestamp, "MM");
+    var day = Qt.formatDate(timestamp, "dd");
+    // NOTE: it is very weird, but javascript Date() object expects months to be between 0 and 11
+    var date = new Date(year, month-1, day);
     var today = new Date();
     var yesterday = new Date();
     yesterday.setDate(today.getDate()-1);
