@@ -167,7 +167,7 @@ Page {
                     top: phoneTypeLabel.bottom
                     topMargin: units.gu(2)
                 }
-                text: DateUtils.friendlyDay(events[0].date)
+                text: DateUtils.friendlyDay(historyDetailsPage.events[0].date)
                 height: units.gu(3)
                 fontSize: "medium"
                 font.weight: Font.DemiBold
@@ -232,7 +232,13 @@ Page {
                 iconName: "delete"
                 text: i18n.tr("Delete")
                 onTriggered:  {
+                    // remove from the history service
                     eventModel.removeEvent(modelData.accountId, modelData.threadId, modelData.eventId, modelData.type)
+
+                    // as this page only displays an array of events, we need to update manually
+                    // the list of displayed events
+                    updatedEvents.splice(index, 1);
+                    historyDetailsPage.events = updatedEvents
                 }
             }
 
