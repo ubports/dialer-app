@@ -27,6 +27,13 @@ import "dateUtils.js" as DateUtils
 
 Page {
     id: historyDetailsPage
+
+    property alias phoneNumber: contactWatcher.phoneNumber
+    property string phoneNumberSubTypeLabel
+    property variant events: null
+    property QtObject eventModel: null
+    readonly property bool unknownContact: contactWatcher.contactId === ""
+
     objectName: "historyDetailsPage"
     anchors.fill: parent
     title: {
@@ -40,10 +47,37 @@ Page {
         return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
     }
 
-    property alias phoneNumber: contactWatcher.phoneNumber
-    property string phoneNumberSubTypeLabel
-    property variant events: null
-    property QtObject eventModel: null
+    head.actions: [
+        Action {
+            iconName: unknownContact ? "contact-new" : "stock_contact"
+            text: i18n.tr("Contact Details")
+            onTriggered: {
+                if (unknownContact) {
+                    mainView.addNewPhone(phoneNumber)
+                } else {
+                    mainView.viewContact(contactWatcher.contactId)
+                }
+            }
+        },
+        Action {
+            iconName: "share"
+            text: i18n.tr("Share")
+            onTriggered: {
+                // FIXME: implement
+            }
+        },
+        Action {
+            iconName: "delete"
+            text: i18n.tr("Delete")
+            onTriggered: {
+                for (var i in events) {
+                    eventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type);
+                }
+                pageStack.pop();
+            }
+        }
+
+    ]
 
     Item {
         id: helper
@@ -127,15 +161,28 @@ Page {
             }
 
             Label {
+                id: dateLabel
                 anchors {
                     left: phoneLabel.left
                     top: phoneTypeLabel.bottom
-
+                    topMargin: units.gu(2)
                 }
                 text: DateUtils.friendlyDay(events[0].date)
-                height: units.gu(5)
+                height: units.gu(3)
                 fontSize: "medium"
+                font.weight: Font.DemiBold
                 verticalAlignment: Text.AlignVCenter
+            }
+
+            ListItem.ThinDivider {
+                id: divider
+                anchors {
+                    top: dateLabel.bottom
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                }
             }
 
             AbstractButton {
