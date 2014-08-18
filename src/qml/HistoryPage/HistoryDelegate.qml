@@ -95,7 +95,7 @@ ListItemWithActions {
 
         function updateSubTypeLabel() {
             var subLabel = contactWatcher.isUnknown
-            if (model.participants[0]) {
+            if (model.participants && model.participants[0]) {
                 var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
                 if (typeInfo) {
                     subLabel = typeInfo.label
