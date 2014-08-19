@@ -31,7 +31,9 @@ MainView {
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
-    property QtObject account: {
+    property QtObject account: defaultAccount()
+
+    function defaultAccount() {
         // we only use the default account property if we have more
         // than one account, otherwise we use always the first one
         if (multipleAccounts) {
@@ -69,6 +71,19 @@ MainView {
                 settings.mainViewDontAskCount < 3 && pageStack.depth === 1) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
+        }
+    }
+
+    Connections {
+        target: telepathyHelper
+        onActiveAccountsChanged: {
+            // check if the selected account is not active anymore
+            for (var i in telepathyHelper.activeAccounts) {
+                if (telepathyHelper.activeAccounts[i] == account) {
+                    return;
+                }
+            }
+            account = Qt.binding(defaultAccount)
         }
     }
 
