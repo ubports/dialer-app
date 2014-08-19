@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-08-16 15:03+0000\n"
-"Last-Translator: Kentaro Kazuhama <Unknown>\n"
+"PO-Revision-Date: 2014-08-18 15:54+0000\n"
+"Last-Translator: Mitsuya Shibata <mty.shibata@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-08-17 06:39+0000\n"
+"X-Launchpad-Export-Date: 2014-08-19 06:59+0000\n"
 "X-Generator: Launchpad (build 17156)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -38,8 +38,7 @@ msgstr[0] "%1 分"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1秒"
 
 #: src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -119,7 +118,7 @@ msgstr "通話ログ"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:114
 msgid "Call now"
-msgstr ""
+msgstr "今すぐ発信"
 
 #: src/qml/dialer-app.qml:409
 msgid "Calling Line Presentation"
@@ -135,7 +134,7 @@ msgstr "キャンセル"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
-msgstr ""
+msgstr "電話会議"
 
 #: src/qml/dialer-app.qml:415
 msgid "Connected Line Presentation"
@@ -148,7 +147,7 @@ msgstr ""
 #: src/qml/DialerPage/DialerPage.qml:39
 #: src/qml/ContactsPage/ContactsPage.qml:32
 msgid "Contacts"
-msgstr ""
+msgstr "連絡先"
 
 #: src/qml/HistoryPage/CallLogContactDelegate.qml:51
 msgid "Create new contact"
@@ -208,7 +207,7 @@ msgstr "通話を統合"
 
 #: src/qml/LiveCallPage/LiveCall.qml:75
 msgid "New call"
-msgstr ""
+msgstr "発信"
 
 #: src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
@@ -241,7 +240,7 @@ msgstr "今日"
 
 #: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Two Calls"
-msgstr ""
+msgstr "二つの通話"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:139
 msgid "Unknown"
@@ -266,14 +265,14 @@ msgstr "昨日"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
-msgstr ""
+msgstr "通話中"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:237
 msgid "calling"
-msgstr ""
+msgstr "呼び出し中"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
-msgstr ""
+msgstr "保留中"
