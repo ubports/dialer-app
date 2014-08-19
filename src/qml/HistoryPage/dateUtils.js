@@ -54,10 +54,37 @@ function formatFriendlyDate(timestamp) {
     return Qt.formatTime(timestamp, Qt.DefaultLocaleShortDate) + " - " + friendlyDay(timestamp);
 }
 
+function dateFromDuration(duration) {
+    var durationTime = new Date();
+    var processedDuration = duration;
+    var seconds = processedDuration % 60;
+    var minutes = 0;
+    var hours = 0;
+
+
+    // divide by 60 to get the minutes
+    processedDuration = Math.floor(processedDuration / 60);
+    if (processedDuration > 0) {
+        minutes = processedDuration % 60;
+
+        // divide again to get the hours
+        processedDuration = Math.floor(processedDuration / 60);
+        hours = processedDuration;
+    }
+
+    console.log("BLABLA time after conversion: " + hours + ":" + minutes + ":" + seconds);
+
+    durationTime.setHours(hours);
+    durationTime.setMinutes(minutes);
+    durationTime.setSeconds(seconds);
+    console.log("Date object: " + durationTime);
+}
+
 function formatFriendlyCallDuration(duration) {
     var text = "";
 
-    var durationTime = new Date(duration * 1000);
+    var durationTime = dateFromDuration(duration);
+
     var hours = parseInt(Qt.formatTime(durationTime, "hh"));
     var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
     var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
@@ -75,8 +102,8 @@ function formatFriendlyCallDuration(duration) {
 
 function formatCallDuration(duration) {
     var text = ""
+    var durationTime = dateFromDuration(duration);
 
-    var durationTime = new Date(duration * 1000);
     var hours = parseInt(Qt.formatTime(durationTime, "hh"));
     var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
     var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
