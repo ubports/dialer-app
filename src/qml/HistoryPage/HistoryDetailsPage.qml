@@ -275,7 +275,7 @@ Page {
                 anchors {
                     right: parent.right
                     top: parent.top
-                    topMargin: units.gu(-1)
+                    topMargin: units.gu(-0.5)
                 }
                 verticalAlignment: Text.AlignTop
                 visible: !modelData.missed
@@ -297,7 +297,7 @@ Page {
                 anchors {
                     right: parent.right
                     bottom: parent.bottom
-                    bottomMargin: units.gu(-1)
+                    bottomMargin: units.gu(-0.5)
                 }
                 verticalAlignment: Text.AlignBottom
                 fontSize: "x-small"
