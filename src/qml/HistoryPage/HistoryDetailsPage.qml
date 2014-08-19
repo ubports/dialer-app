@@ -33,6 +33,7 @@ Page {
     property variant events: null
     property QtObject eventModel: null
     readonly property bool unknownContact: contactWatcher.contactId === ""
+    property bool knownNumber: phoneNumber != "x-ofono-private" && phoneNumber != "x-ofono-unknown"
 
     objectName: "historyDetailsPage"
     anchors.fill: parent
@@ -195,6 +196,8 @@ Page {
                 }
                 width: units.gu(4)
                 height: units.gu(4)
+                visible: knownNumber
+                enabled: knownNumber
 
                 Icon {
                     name: "message"
@@ -202,6 +205,8 @@ Page {
                     height: units.gu(2)
                     anchors.centerIn: parent
                 }
+
+                onClicked: mainView.sendMessage(phoneNumber)
             }
 
             AbstractButton {
@@ -212,11 +217,19 @@ Page {
                 }
                 width: units.gu(4)
                 height: units.gu(4)
+                visible: knownNumber
                 Icon {
                     name: "call-start"
                     width: units.gu(2)
                     height: units.gu(2)
                     anchors.centerIn: parent
+                }
+                onClicked: {
+                    if (mainView.account) {
+                        mainView.call(phoneNumber, mainView.account.accountId);
+                    } else {
+                        mainView.populateDialpad(phoneNumber, mainView.account ? mainView.account.accountId : "");
+                    }
                 }
             }
         }
