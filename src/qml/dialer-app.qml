@@ -85,6 +85,7 @@ MainView {
             }
             account = Qt.binding(defaultAccount)
         }
+        onDefaultCallAccountChanged: account = Qt.binding(defaultAccount)
     }
 
     Settings {

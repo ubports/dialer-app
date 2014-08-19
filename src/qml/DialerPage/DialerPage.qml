@@ -131,13 +131,10 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountChanged: {
-            var newAccountIndex = accountIndex(account);
-            if (newAccountIndex >= 0 && newAccountIndex !== page.head.sections.selectedIndex) {
-                page.head.sections.selectedIndex = newAccountIndex
-            }
-        }
+        onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
+
+    Component.onCompleted: head.sections.selectedIndex = accountIndex(mainView.account)
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
@@ -150,14 +147,6 @@ PageWithBottomEdge {
             accountNames.push(telepathyHelper.activeAccounts[i].displayName)
         }
         return accountNames
-    }
-
-    // Account switcher
-    head.sections.selectedIndex: {
-        if (!mainView.account) {
-            return -1
-        }
-        return accountIndex(mainView.account)
     }
 
     Connections {
