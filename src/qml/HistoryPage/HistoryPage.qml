@@ -30,7 +30,7 @@ Page {
 
     property string searchTerm
     property int delegateHeight: delegate.height
-    property bool fullView: false
+    property bool fullView: currentIndex == -1
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 

@@ -85,7 +85,6 @@ PageWithBottomEdge {
         } else {
             bottomEdgePage.currentIndex = -1
         }
-        bottomEdgePage.fullView = index >= 3;
     }
 
     onBottomEdgeReleased: {
