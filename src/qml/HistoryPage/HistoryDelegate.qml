@@ -233,7 +233,10 @@ ListItemWithActions {
         height: units.gu(2)
         verticalAlignment: Text.AlignBottom
         fontSize: "small"
-        text: Qt.formatTime(model.timestamp, "hh:mm")
+        // TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
+        // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+        // please change according to your language
+        text: Qt.formatTime(model.timestamp, i18n.tr("hh:mm ap"))
     }
 
     Label {

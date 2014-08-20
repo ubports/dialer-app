@@ -260,8 +260,8 @@ Page {
             Label {
                 id: timeLabel
                 // TRANSLATORS: HH:mm is the time format, translate it according to:
-                // http://qt-project.org/doc/qt-4.8/qml-qt.html#formatDateTime-method
-                text:Qt.formatTime(modelData.timestamp, i18n.tr("hh:mm"))
+                // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+                text:Qt.formatTime(modelData.timestamp, i18n.tr("hh:mm ap"))
                 anchors {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
