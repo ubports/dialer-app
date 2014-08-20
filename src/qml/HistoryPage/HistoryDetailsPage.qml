@@ -252,8 +252,9 @@ Page {
 
                     // as this page only displays an array of events, we need to update manually
                     // the list of displayed events
+                    var updatedEvents = historyDetailsPage.events;
                     updatedEvents.splice(index, 1);
-                    historyDetailsPage.events = updatedEvents
+                    historyDetailsPage.events = updatedEvents;
                 }
             }
 
@@ -261,7 +262,7 @@ Page {
                 id: timeLabel
                 // TRANSLATORS: HH:mm is the time format, translate it according to:
                 // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-                text:Qt.formatTime(modelData.timestamp, i18n.tr("hh:mm ap"))
+                text: Qt.formatTime(modelData.timestamp, i18n.tr("hh:mm ap"))
                 anchors {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
