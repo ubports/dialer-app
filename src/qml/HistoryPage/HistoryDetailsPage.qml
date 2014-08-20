@@ -52,6 +52,7 @@ Page {
         Action {
             iconName: unknownContact ? "contact-new" : "stock_contact"
             text: i18n.tr("Contact Details")
+            visible: knownNumber
             onTriggered: {
                 if (unknownContact) {
                     mainView.addNewPhone(phoneNumber)
