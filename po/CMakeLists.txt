@@ -9,12 +9,12 @@ include(FindGettext)
 set(DOMAIN dialer-app)
 set(POT_FILE ${DOMAIN}.pot)
 file(GLOB PO_FILES *.po)
-file(GLOB_RECURSE I18N_SRCS RELATIVE ${CMAKE_SOURCE_DIR}/po
+file(GLOB_RECURSE I18N_SRCS RELATIVE ${CMAKE_SOURCE_DIR}
     ${CMAKE_SOURCE_DIR}/src/*.qml
     ${CMAKE_SOURCE_DIR}/src/*.js
     ${CMAKE_SOURCE_DIR}/src/*.cpp
 )
-list(APPEND I18N_SRCS ${DESKTOP_FILE}.in.in.h)
+list(SORT I18N_SRCS)
 
 foreach(PO_FILE ${PO_FILES})
     get_filename_component(LANG ${PO_FILE} NAME_WE)
@@ -27,7 +27,7 @@ endforeach(PO_FILE)
 
 find_program(XGETTEXT_EXECUTABLE xgettext)
 if(XGETTEXT_EXECUTABLE)
-    add_custom_target(${POT_FILE}  ALL
+    add_custom_target(${POT_FILE}
               COMMENT "Generating translation template"
               COMMAND ${INTLTOOL_EXTRACT} --update --type=gettext/ini
                       --srcdir=${CMAKE_SOURCE_DIR}/src ${DESKTOP_FILE}.in.in
@@ -35,10 +35,10 @@ if(XGETTEXT_EXECUTABLE)
               COMMAND ${XGETTEXT_EXECUTABLE} 
                       --c++ --qt --add-comments=TRANSLATORS 
                       --keyword=tr --keyword=tr:1,2 --keyword=N_ 
-                      -D ${CMAKE_SOURCE_DIR} 
-                      -D ${CMAKE_CURRENT_SOURCE_DIR} 
                       -s -p ${CMAKE_CURRENT_SOURCE_DIR} 
                       -o ${POT_FILE} ${I18N_SRCS}
+                      -D ${CMAKE_SOURCE_DIR} ${I18N_SRCS}
+                      -D ${CMAKE_CURRENT_BINARY_DIR} ${DESKTOP_FILE}.in.in.h
     )
 
     add_custom_target(translations
