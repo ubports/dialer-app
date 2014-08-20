@@ -271,6 +271,21 @@ Page {
             }
 
             Label {
+                id: simLabel
+                anchors {
+                    left: timeLabel.right
+                    leftMargin: units.gu(1)
+                    verticalCenter: timeLabel.verticalCenter
+                }
+
+                height: units.gu(2)
+                fontSize: "x-small"
+                text: telepathyHelper.accountForId(modelData.accountId).displayName
+                verticalAlignment: Text.AlignVCenter
+                visible: telepathyHelper.activeAccounts.length > 1
+            }
+
+            Label {
                 id: durationLabel
                 text: DateUtils.formatCallDuration(modelData.duration)
                 anchors {
