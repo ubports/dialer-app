@@ -159,13 +159,14 @@ ListItemWithActions {
         id: titleLabel
         anchors {
             top: parent.top
+            topMargin: units.gu(0.5)
             left: avatar.right
             leftMargin: units.gu(2)
             right: time.left
             rightMargin: units.gu(1) + (countLabel.visible ? countLabel.width : 0)
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignTop
         fontSize: "medium"
         text: {
             if (contactWatcher.phoneNumber == "x-ofono-private") {
@@ -197,7 +198,7 @@ ListItemWithActions {
         anchors {
             left: titleLabelArea.right
             leftMargin: units.gu(0.5)
-            verticalCenter: titleLabel.verticalCenter
+            top: titleLabel.top
         }
         height: units.gu(2)
         fontSize: "medium"
@@ -209,12 +210,13 @@ ListItemWithActions {
     Label {
         id: phoneLabel
         anchors {
-            bottom: parent.bottom
+            top: titleLabel.bottom
+            topMargin: units.gu(1)
             left: avatar.right
             leftMargin: units.gu(2)
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignTop
         fontSize: "small"
         // FIXME: handle conference call
         text: phoneNumberSubTypeLabel
@@ -226,10 +228,10 @@ ListItemWithActions {
         id: time
         anchors {
             right: parent.right
-            verticalCenter: titleLabel.verticalCenter
+            bottom: titleLabel.bottom
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignBottom
         fontSize: "small"
         text: Qt.formatTime(model.timestamp, "hh:mm")
     }
@@ -238,10 +240,10 @@ ListItemWithActions {
         id: callType
         anchors {
             right: parent.right
-            verticalCenter: phoneLabel.verticalCenter
+            bottom: phoneLabel.bottom
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignBottom
         fontSize: "small"
         text: selectCallType()
     }
