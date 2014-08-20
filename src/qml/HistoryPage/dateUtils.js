@@ -72,12 +72,11 @@ function dateFromDuration(duration) {
         hours = processedDuration;
     }
 
-    console.log("BLABLA time after conversion: " + hours + ":" + minutes + ":" + seconds);
-
     durationTime.setHours(hours);
     durationTime.setMinutes(minutes);
     durationTime.setSeconds(seconds);
-    console.log("Date object: " + durationTime);
+
+    return durationTime;
 }
 
 function formatFriendlyCallDuration(duration) {
