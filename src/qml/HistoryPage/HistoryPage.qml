@@ -190,11 +190,21 @@ Page {
                     left: parent.left
                     leftMargin: units.gu(2)
                     right: parent.right
+                    rightMargin: units.gu(2)
                 }
                 text: DateUtils.friendlyDay(section)
                 height: units.gu(5)
                 fontSize: "medium"
+                font.weight: Font.DemiBold
                 verticalAlignment: Text.AlignVCenter
+                ListItem.ThinDivider {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        bottomMargin: units.gu(0.5)
+                    }
+                }
             }
         }
 
