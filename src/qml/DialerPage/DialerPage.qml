@@ -31,9 +31,8 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
-    objectName: "dialerPage"
-
-    head.actions: [
+    property list<Action> actionsGreeter
+    property list<Action> actionsNormal: [
         Action {
             iconName: "contact"
             text: i18n.tr("Contacts")
@@ -45,6 +44,9 @@ PageWithBottomEdge {
             onTriggered: Qt.openUrlExternally("settings:///system/phone")
         }
     ]
+    head.actions: greeter.greeterActive ? actionsGreeter : actionsNormal
+ 
+    objectName: "dialerPage"
 
     title: {
         if (telepathyHelper.flightMode) {
@@ -59,20 +61,31 @@ PageWithBottomEdge {
         return i18n.tr("No network")
     }
 
+    state: greeter.greeterActive ? "greeterMode" : "normalMode"
     // -------- Greeter mode ----------
     states: [
         State {
             name: "greeterMode"
-            when: greeter.greeterActive
-
-            PropertyChanges {
-                target: page.head
-                actions: []
-            }
             PropertyChanges {
                 target: contactLabel
                 visible: false
             }
+            PropertyChanges {
+                target: addContact
+                visible: false
+            }
+        },
+        State {
+            name: "normalMode"
+            PropertyChanges {
+                target: contactLabel
+                visible: true
+            }
+            PropertyChanges {
+                target: addContact
+                visible: true
+            }
+ 
         }
     ]
 
