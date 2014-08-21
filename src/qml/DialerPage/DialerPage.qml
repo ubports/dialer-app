@@ -46,7 +46,18 @@ PageWithBottomEdge {
         }
     ]
 
-    title: i18n.tr("Keypad")
+    title: {
+        if (telepathyHelper.flightMode) {
+            return i18n.tr("Flight mode")
+        } else if (mainView.account && mainView.account.networkName != "") {
+            return mainView.account.networkName
+        } else if (multipleAccounts && !mainView.account) {
+            // TODO: check what should be displayed when there are multiple accounts
+            // but no default selected
+            return i18n.tr("Keypad")
+        }
+        return i18n.tr("No network")
+    }
 
     // -------- Greeter mode ----------
     states: [
@@ -120,13 +131,10 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountChanged: {
-            var newAccountIndex = accountIndex(account);
-            if (newAccountIndex >= 0 && newAccountIndex !== page.head.sections.selectedIndex) {
-                page.head.sections.selectedIndex = newAccountIndex
-            }
-        }
+        onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
+
+    Component.onCompleted: head.sections.selectedIndex = accountIndex(mainView.account)
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
@@ -135,24 +143,16 @@ PageWithBottomEdge {
         }
 
         var accountNames = []
-        for(var i=0; i < telepathyHelper.accounts.length; i++) {
-            accountNames.push(telepathyHelper.accounts[i].displayName)
+        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
+            accountNames.push(telepathyHelper.activeAccounts[i].displayName)
         }
         return accountNames
-    }
-
-    // Account switcher
-    head.sections.selectedIndex: {
-        if (!mainView.account) {
-            return -1
-        }
-        return accountIndex(mainView.account)
     }
 
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.account = telepathyHelper.accounts[page.head.sections.selectedIndex]
+            mainView.account = telepathyHelper.activeAccounts[page.head.sections.selectedIndex]
         }
     }
 
@@ -341,7 +341,7 @@ PageWithBottomEdge {
                 // check if at least one account is selected
                 if (multipleAccounts && !mainView.account) {
                     Qt.inputMethod.hide()
-                    PopupUtils.open(Qt.createObject("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
+                    PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
                     return
                 }
 
