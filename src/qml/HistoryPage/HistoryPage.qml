@@ -44,6 +44,9 @@ Page {
     anchors.fill: parent
     active: false
 
+    head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
+    head.sections.selectedIndex: 0
+
     Rectangle {
         anchors.fill: parent
         color: Theme.palette.normal.background
@@ -93,6 +96,12 @@ Page {
 
     }
 
+    onFullViewChanged: {
+        if (!fullView) {
+             head.sections.selectedIndex = 0;
+        }
+    }
+
     // Use this delegate just to calculate the height
     HistoryDelegate {
         id: delegate
@@ -114,6 +123,16 @@ Page {
         }
     }
 
+    HistoryFilter {
+        id: emptyFilter
+    }
+
+    HistoryFilter {
+        id: missedFilter
+        filterProperty: "missed"
+        filterValue: true
+    }
+
     HistoryGroupedEventsModel {
         id: historyEventModel
         groupingProperties: ["participants", "date"]
@@ -122,7 +141,7 @@ Page {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
-        filter: HistoryFilter {}
+        filter: head.sections.selectedIndex == 0 ? emptyFilter : missedFilter
     }
 
     MultipleSelectionListView {
