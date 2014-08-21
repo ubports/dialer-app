@@ -272,6 +272,7 @@ MainView {
         }
 
         source: Qt.resolvedUrl("assets/dialer_background_full.png")
+        asynchronous: true
     }
 
     Component {

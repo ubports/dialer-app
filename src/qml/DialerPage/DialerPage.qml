@@ -119,12 +119,6 @@ PageWithBottomEdge {
         }
     }
 
-    onIsReadyChanged: {
-        if (bottomEdgePage) {
-            bottomEdgePage.fullView = isReady
-        }
-    }
-
     function accountIndex(account) {
         var index = -1;
         for (var i in telepathyHelper.accounts) {
