@@ -1,3 +1,20 @@
+dialer-app (0.1+14.10.20140821-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Group call history entries by phone number (when calls have happened
+    one after another) and by date
+
+  [ Tiago Salem Herrmann ]
+  * Display operator name in the header when available. Do not display
+    slots without sim cards. (LP: #1346804)
+  * Fix bug when displaying header actions after leaving the lock
+    screen. (LP: #1353952)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 21 Aug 2014 13:51:03 +0000
+
 dialer-app (0.1+14.10.20140813.3-0ubuntu1) utopic; urgency=low
 
   [ Barry Warsaw ]
