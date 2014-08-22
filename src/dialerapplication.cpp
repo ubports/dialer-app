@@ -33,6 +33,7 @@
 #include <QLibrary>
 #include "config.h"
 #include <QQmlEngine>
+#include <QDir>
 
 static void printUsage(const QStringList& arguments)
 {
@@ -221,4 +222,20 @@ void DialerApplication::activateWindow()
         m_view->raise();
         m_view->requestActivate();
     }
+}
+
+QStringList DialerApplication::mmiPluginList()
+{
+    QStringList plugins;
+    QString mmiDirectory = dialerAppDirectory() + "/MMI";
+    QString mmiCustomDirectory = "/custom" + mmiDirectory;
+    QDir directory(mmiDirectory);
+    QDir customDirectory(mmiCustomDirectory);
+    Q_FOREACH(const QString &file, directory.entryList(QStringList() << "*.qml")) {
+        plugins << directory.filePath(file);
+    }
+    Q_FOREACH(const QString &file, customDirectory.entryList(QStringList() << "*.qml")) {
+        plugins << customDirectory.filePath(file);
+    }
+    return plugins;
 }

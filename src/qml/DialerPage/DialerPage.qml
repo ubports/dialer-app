@@ -31,6 +31,7 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property var mmiPlugins: []
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
@@ -141,7 +142,15 @@ PageWithBottomEdge {
         onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
 
-    Component.onCompleted: head.sections.selectedIndex = accountIndex(mainView.account)
+    Component.onCompleted: {
+        head.sections.selectedIndex = accountIndex(mainView.account)
+        // load MMI plugins
+        var plugins = application.mmiPluginList()
+        for (var i in plugins) {
+            var component = Qt.createComponent(plugins[i]);
+            mmiPlugins.push(component.createObject(page))
+        }
+    }
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
@@ -300,13 +309,13 @@ PageWithBottomEdge {
             onKeyPressed: {
                 callManager.playTone(label);
                 input.insert(input.cursorPosition, label)
-                if(checkUSSD(dialNumber)) {
+                if(checkMMI(dialNumber)) {
                     // check for custom strings
-                    if (dialNumber === "*#06#") {
-                        dialNumber = ""
-                        mainView.ussdResponseTitle = "IMEI"
-                        mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
-                        PopupUtils.open(ussdResponseDialog)
+                    for (var i in mmiPlugins) {
+                        if (mmiPlugins[i].code == dialNumber) {
+                            dialNumber = ""
+                            mmiPlugins[i].trigger()
+                        }
                     }
                 }
             }
