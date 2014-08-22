@@ -45,12 +45,12 @@ Page {
     active: false
 
     head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
-    head.sections.selectedIndex: 0
 
     Rectangle {
         anchors.fill: parent
         color: Theme.palette.normal.background
     }
+
     states: [
         PageHeadState {
             name: "select"
@@ -96,12 +96,6 @@ Page {
 
     }
 
-    onFullViewChanged: {
-        if (!fullView) {
-             head.sections.selectedIndex = 0;
-        }
-    }
-
     // Use this delegate just to calculate the height
     HistoryDelegate {
         id: delegate
@@ -123,6 +117,21 @@ Page {
         }
     }
 
+    Connections {
+        target: head.sections
+        onSelectedIndexChanged: {
+            // NOTE: be careful on changing the way filters are assigned, if we create a
+            // binding on head.sections, we might get weird results when the page moves to the bottom
+            if (pageStack.depth > 1) {
+                if (head.sections.selectedIndex == 0) {
+                    historyEventModel.filter = emptyFilter;
+                } else {
+                    historyEventModel.filter = missedFilter;
+                }
+            }
+        }
+    }
+
     HistoryFilter {
         id: emptyFilter
     }
@@ -141,7 +150,7 @@ Page {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
-        filter: head.sections.selectedIndex == 0 ? emptyFilter : missedFilter
+        filter: emptyFilter
     }
 
     MultipleSelectionListView {
@@ -149,6 +158,7 @@ Page {
         objectName: "historyList"
 
         property var _currentSwipedItem: null
+        property bool transitionsEnabled: true
 
         function resetSwipe()
         {
@@ -231,6 +241,30 @@ Page {
         section.delegate: fullView ? sectionComponent : null
 
         listDelegate: delegateComponent
+        displaced: Transition {
+            UbuntuNumberAnimation {
+                property: "y"
+            }
+        }
+
+        remove: Transition {
+            ParallelAnimation {
+                UbuntuNumberAnimation {
+                    property: "height"
+                    to: 0
+                }
+
+                UbuntuNumberAnimation {
+                    properties: "opacity"
+                    to: 0
+                }
+                ScriptAction {
+                    script: {
+                        historyList.resetSwipe()
+                    }
+                }
+            }
+        }
 
         Component {
             id: delegateComponent
@@ -249,42 +283,6 @@ Page {
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
                 active: ListView.isCurrentItem
-
-                // Animate item removal
-                ListView.onRemove: SequentialAnimation {
-                    PropertyAction {
-                        target: historyDelegate
-                        property: "ListView.delayRemove"
-                        value: true
-                    }
-
-                    // reset swipe state
-                    ScriptAction {
-                        script: {
-                            if (historyList._currentSwipedItem === historyDelegate) {
-                                historyList._currentSwipedItem.resetSwipe()
-                                historyList._currentSwipedItem = null
-                            }
-
-                            if (ListView.isCurrentItem) {
-                                contactListView.currentIndex = -1
-                            }
-                        }
-                    }
-
-                    // animate the removal
-                    UbuntuNumberAnimation {
-                        target: historyDelegate
-                        property: "height"
-                        to: 1
-                    }
-
-                    PropertyAction {
-                        target: historyDelegate
-                        property: "ListView.delayRemove"
-                        value: false
-                    }
-                }
 
                 onItemPressAndHold: {
                     if (!historyList.isInSelectionMode) {

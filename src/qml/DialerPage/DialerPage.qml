@@ -95,6 +95,13 @@ PageWithBottomEdge {
         }
     }
 
+    onIsCollapsedChanged: {
+        if (isCollapsed && bottomEdgePage) {
+            // reset the history page to the "All" view
+            bottomEdgePage.head.sections.selectedIndex = 0;
+        }
+    }
+
     function accountIndex(account) {
         var index = -1;
         for (var i in telepathyHelper.accounts) {
