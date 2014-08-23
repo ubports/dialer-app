@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-16 19:26+0200\n"
+"POT-Creation-Date: 2014-08-15 18:33-0300\n"
 "PO-Revision-Date: 2014-08-18 13:25+0000\n"
 "Last-Translator: Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-08-19 06:59+0000\n"
-"X-Generator: Launchpad (build 17156)\n"
+"X-Launchpad-Export-Date: 2014-08-23 07:18+0000\n"
+"X-Generator: Launchpad (build 17163)\n"
 "Language: pt_BR\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -48,9 +48,13 @@ msgstr[1] "%1 seg"
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:315
+#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:326
 msgid "+"
 msgstr "+"
+
+#: src/qml/ContactsPage/ContactsPage.qml:186
+msgid "+ Create New"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:160
 msgid "0"
@@ -96,13 +100,9 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
-msgid "Add Contact"
-msgstr "Adicionar contato"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
-msgid "Add to existing contact"
-msgstr "Adicionar para contato existente"
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "All"
+msgstr ""
 
 #: src/qml/dialer-app.qml:376
 msgid "Call Barring"
@@ -116,14 +116,6 @@ msgstr "Encaminhamento de chamada"
 msgid "Call Waiting"
 msgstr "Chamada em espera"
 
-#: src/qml/MainPage.qml:56
-msgid "Call log"
-msgstr "Registro de chamadas"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
-msgid "Call now"
-msgstr "Ligar agora"
-
 #: src/qml/dialer-app.qml:409
 msgid "Calling Line Presentation"
 msgstr ""
@@ -135,6 +127,14 @@ msgstr ""
 #: src/qml/ContactsPage/ContactsPage.qml:85
 msgid "Cancel"
 msgstr "Cancelar"
+
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:29
+msgid "Change all Call associations to "
+msgstr ""
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:270
+msgid "Close"
+msgstr "Fechar"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
@@ -148,14 +148,10 @@ msgstr ""
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:39
 #: src/qml/ContactsPage/ContactsPage.qml:32
+#: src/qml/DialerPage/DialerPage.qml:39
 msgid "Contacts"
 msgstr "Contatos"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
-msgid "Create new contact"
-msgstr "Criar novo contato"
 
 #: src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
@@ -165,17 +161,33 @@ msgstr "DEF"
 msgid "Delete"
 msgstr "Excluir"
 
+#: src/qml/HistoryPage/HistoryPage.qml:279
+msgid "Details"
+msgstr "Detalhes"
+
 #: src/qml/dialer-app.qml:306 src/qml/dialer-app.qml:320
 msgid "Dismiss"
 msgstr "Ignorar"
 
-#: src/qml/DialerPage/DialerPage.qml:212
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:66
+msgid "Don't ask again"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:223
 msgid "Enter a number"
 msgstr "Informe um número"
 
 #: src/qml/dialer-app.qml:303
 msgid "Error"
 msgstr "Erro"
+
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "Favorites"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:51
+msgid "Flight mode"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -185,9 +197,9 @@ msgstr "GHI"
 msgid "Hangup"
 msgstr "Desligar"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
-msgid "How do you want to save the contact?"
-msgstr "Como deseja salvar o contato?"
+#: src/qml/HistoryPage/HistoryDelegate.qml:60
+msgid "Incoming"
+msgstr "Recebidas"
 
 #: src/qml/dialer-app.qml:304
 msgid "Invalid USSD code"
@@ -197,9 +209,13 @@ msgstr "Código USSD inválido"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:49
+#: src/qml/DialerPage/DialerPage.qml:57
 msgid "Keypad"
 msgstr "Teclado numérico"
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
+msgid "Later"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
@@ -209,9 +225,30 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "Combinar chamadas"
 
-#: src/qml/LiveCallPage/LiveCall.qml:75
-msgid "New call"
+#: src/qml/HistoryPage/HistoryDelegate.qml:58
+msgid "Missed"
+msgstr "Não atendida"
+
+#: src/qml/LiveCallPage/LiveCall.qml:60
+msgid "New Call"
 msgstr "Nova chamada"
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
+msgid "No"
+msgstr ""
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
+msgid "No SIM card selected"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:59 src/qml/dialer-app.qml:265
+msgid "No network"
+msgstr "Sem rede"
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:62
+msgid "Outgoing"
+msgstr "Enviando"
 
 #: src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
@@ -225,34 +262,64 @@ msgstr "Por favor, aguarde"
 msgid "Private"
 msgstr "Privado"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "Save contact"
-msgstr "Salvar contato"
+#: src/qml/HistoryPage/HistoryDelegate.qml:171
+msgid "Private number"
+msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
-msgid "Send text message"
-msgstr "Enviar mensagem de texto"
+#: src/qml/DialerPage/DialerPage.qml:83 src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Recent"
+msgstr "Recente"
+
+#: src/qml/ContactsPage/ContactsPage.qml:60
+msgid "Search"
+msgstr ""
+
+#: src/qml/ContactsPage/ContactsPage.qml:48
+msgid "Search..."
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Select"
+msgstr "Selecionar"
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
+msgid ""
+"Select a default SIM for all outgoing calls. You can always alter your "
+"choice in <a href=\"system_settings\">System Settings</a>."
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryPage.qml:292
+msgid "Send message"
+msgstr "Enviar mensagem"
+
+#: src/qml/DialerPage/DialerPage.qml:44
+msgid "Settings"
+msgstr ""
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
+msgid "Switch to default SIM:"
+msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
 msgstr "TUV"
 
+#: src/qml/dialer-app.qml:266
+#, qt-format
+msgid "There is currently no network on %1"
+msgstr "Não há atualmente nenhuma rede em %1"
+
+#: src/qml/dialer-app.qml:267
+msgid "There is currently no network."
+msgstr "Não há atualmente nenhuma rede."
+
 #: src/qml/HistoryPage/dateUtils.js:41
 msgid "Today"
 msgstr "Hoje"
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-msgid "Two Calls"
-msgstr "Duas chamadas"
-
-#: src/qml/HistoryPage/HistoryDelegate.qml:139
-msgid "Unknown"
-msgstr "Desconhecido"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "View contact"
-msgstr "Ver contato"
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
+msgid "Unknown number"
+msgstr ""
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
@@ -262,17 +329,25 @@ msgstr "Correio de voz"
 msgid "WXYZ"
 msgstr "WXYZ"
 
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:49
+msgid "Yes"
+msgstr ""
+
 #: src/qml/HistoryPage/dateUtils.js:43
 msgid "Yesterday"
 msgstr "Ontem"
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
+msgid "You need to select a SIM card"
+msgstr ""
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "ativo"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:237
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr "chamando"
 
