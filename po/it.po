@@ -8,35 +8,35 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-15 18:33-0300\n"
-"PO-Revision-Date: 2014-07-16 15:05+0000\n"
+"PO-Revision-Date: 2014-08-23 07:46+0000\n"
 "Last-Translator: Claudio Arseni <claudio.arseni@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-08-23 07:18+0000\n"
+"X-Launchpad-Export-Date: 2014-08-24 06:46+0000\n"
 "X-Generator: Launchpad (build 17163)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
-#: src/qml/HistoryPage/dateUtils.js:61
+#: src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 ora"
 msgstr[1] "%1 ore"
 
-#: src/qml/HistoryPage/dateUtils.js:63
+#: src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minuti"
 
-#: src/qml/HistoryPage/dateUtils.js:65
+#: src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
@@ -47,7 +47,7 @@ msgstr[1] "%1 secondi"
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:326
+#: src/qml/DialerPage/DialerPage.qml:322 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
@@ -103,23 +103,23 @@ msgstr "ABC"
 msgid "All"
 msgstr "Tutto"
 
-#: src/qml/dialer-app.qml:376
+#: src/qml/dialer-app.qml:393
 msgid "Call Barring"
 msgstr "Blocco chiamate"
 
-#: src/qml/dialer-app.qml:387
+#: src/qml/dialer-app.qml:404
 msgid "Call Forwarding"
 msgstr "Inoltro chiamata"
 
-#: src/qml/dialer-app.qml:398
+#: src/qml/dialer-app.qml:415
 msgid "Call Waiting"
 msgstr "Chiamata in attesa"
 
-#: src/qml/dialer-app.qml:409
+#: src/qml/dialer-app.qml:426
 msgid "Calling Line Presentation"
 msgstr "Mostra ID chiamante (CLIP)"
 
-#: src/qml/dialer-app.qml:421
+#: src/qml/dialer-app.qml:438
 msgid "Calling Line Restriction"
 msgstr "Nascondi ID chiamante (CLIR)"
 
@@ -131,7 +131,7 @@ msgstr "Annulla"
 msgid "Change all Call associations to "
 msgstr "Cambia tutte le associazioni di chiamata a "
 
-#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:270
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:287
 msgid "Close"
 msgstr "Chiudi"
 
@@ -139,16 +139,16 @@ msgstr "Chiudi"
 msgid "Conference"
 msgstr "Conferenza"
 
-#: src/qml/dialer-app.qml:415
+#: src/qml/dialer-app.qml:432
 msgid "Connected Line Presentation"
 msgstr "Mostra numero chiamato (COLP)"
 
-#: src/qml/dialer-app.qml:427
+#: src/qml/dialer-app.qml:444
 msgid "Connected Line Restriction"
 msgstr "Nascondi numero chiamato (COLR)"
 
 #: src/qml/ContactsPage/ContactsPage.qml:32
-#: src/qml/DialerPage/DialerPage.qml:39
+#: src/qml/DialerPage/DialerPage.qml:38
 msgid "Contacts"
 msgstr "Contatti"
 
@@ -156,15 +156,17 @@ msgstr "Contatti"
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:271
+#: src/qml/HistoryPage/HistoryPage.qml:293
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:74
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:248
 msgid "Delete"
 msgstr "Elimina"
 
-#: src/qml/HistoryPage/HistoryPage.qml:279
+#: src/qml/HistoryPage/HistoryPage.qml:305
 msgid "Details"
 msgstr "Dettagli"
 
-#: src/qml/dialer-app.qml:306 src/qml/dialer-app.qml:320
+#: src/qml/dialer-app.qml:323 src/qml/dialer-app.qml:337
 msgid "Dismiss"
 msgstr "Scarta"
 
@@ -172,11 +174,11 @@ msgstr "Scarta"
 msgid "Don't ask again"
 msgstr "Non chiedere di nuovo"
 
-#: src/qml/DialerPage/DialerPage.qml:223
+#: src/qml/DialerPage/DialerPage.qml:219
 msgid "Enter a number"
 msgstr "Inserire un numero"
 
-#: src/qml/dialer-app.qml:303
+#: src/qml/dialer-app.qml:320
 msgid "Error"
 msgstr "Errore"
 
@@ -184,9 +186,9 @@ msgstr "Errore"
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/DialerPage/DialerPage.qml:53
 msgid "Flight mode"
-msgstr ""
+msgstr "Modalità aereo"
 
 #: src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -197,10 +199,11 @@ msgid "Hangup"
 msgstr "Riaggancia"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr "In entrata"
 
-#: src/qml/dialer-app.qml:304
+#: src/qml/dialer-app.qml:321
 msgid "Invalid USSD code"
 msgstr "Codice USSD non valido"
 
@@ -208,7 +211,7 @@ msgstr "Codice USSD non valido"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:57
+#: src/qml/DialerPage/DialerPage.qml:59
 msgid "Keypad"
 msgstr "Tastierino"
 
@@ -225,6 +228,7 @@ msgid "Merge calls"
 msgstr "Unisci chiamate"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Missed"
 msgstr "Perse"
 
@@ -232,8 +236,8 @@ msgstr "Perse"
 msgid "New Call"
 msgstr "Nuova chiamata"
 
-#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
 msgstr "No"
 
@@ -241,11 +245,12 @@ msgstr "No"
 msgid "No SIM card selected"
 msgstr "Nessuna SIM rilevata"
 
-#: src/qml/DialerPage/DialerPage.qml:59 src/qml/dialer-app.qml:265
+#: src/qml/dialer-app.qml:282 src/qml/DialerPage/DialerPage.qml:61
 msgid "No network"
 msgstr "Nessuna rete"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr "In uscita"
 
@@ -253,7 +258,7 @@ msgstr "In uscita"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:284
+#: src/qml/dialer-app.qml:301
 msgid "Please wait"
 msgstr "Attendere"
 
@@ -261,11 +266,12 @@ msgstr "Attendere"
 msgid "Private"
 msgstr "Provato"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:171
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Numero privato"
 
-#: src/qml/DialerPage/DialerPage.qml:83 src/qml/HistoryPage/HistoryPage.qml:43
+#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:96
 msgid "Recent"
 msgstr "Recenti"
 
@@ -290,11 +296,11 @@ msgstr ""
 "possibile modificare la propria scelta nelle <a "
 "href=\"system_settings\">Impostazioni di sistema</a>."
 
-#: src/qml/HistoryPage/HistoryPage.qml:292
+#: src/qml/HistoryPage/HistoryPage.qml:328
 msgid "Send message"
 msgstr "Invia messaggio"
 
-#: src/qml/DialerPage/DialerPage.qml:44
+#: src/qml/DialerPage/DialerPage.qml:43
 msgid "Settings"
 msgstr "Impostazioni"
 
@@ -306,20 +312,21 @@ msgstr "Passa alla SIM predefinita:"
 msgid "TUV"
 msgstr "TUV"
 
-#: src/qml/dialer-app.qml:266
+#: src/qml/dialer-app.qml:283
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Attualmente non è disponibile alcuna rete per %1"
 
-#: src/qml/dialer-app.qml:267
+#: src/qml/dialer-app.qml:284
 msgid "There is currently no network."
 msgstr "Attualmente non è disponibile alcuna rete."
 
-#: src/qml/HistoryPage/dateUtils.js:41
+#: src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
 msgstr "Oggi"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Numero sconosciuto"
 
@@ -335,7 +342,7 @@ msgstr "WXYZ"
 msgid "Yes"
 msgstr "Sì"
 
-#: src/qml/HistoryPage/dateUtils.js:43
+#: src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
 msgstr "Ieri"
 
@@ -343,17 +350,17 @@ msgstr "Ieri"
 msgid "You need to select a SIM card"
 msgstr "È necessario selezionare una scheda SIM"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
 msgstr "attiva"
 
-#: src/qml/LiveCallPage/LiveCall.qml:237
+#: src/qml/LiveCallPage/LiveCall.qml:238
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr "in chiamata"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "in attesa"
