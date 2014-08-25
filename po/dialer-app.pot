@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-25 09:56-0300\n"
+"POT-Creation-Date: 2014-08-25 09:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "*"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:316 src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/DialerPage.qml:329 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr ""
 
@@ -110,23 +110,23 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: src/qml/dialer-app.qml:377
+#: src/qml/dialer-app.qml:393
 msgid "Call Barring"
 msgstr ""
 
-#: src/qml/dialer-app.qml:388
+#: src/qml/dialer-app.qml:404
 msgid "Call Forwarding"
 msgstr ""
 
-#: src/qml/dialer-app.qml:399
+#: src/qml/dialer-app.qml:415
 msgid "Call Waiting"
 msgstr ""
 
-#: src/qml/dialer-app.qml:410
+#: src/qml/dialer-app.qml:426
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:422
+#: src/qml/dialer-app.qml:438
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -138,7 +138,7 @@ msgstr ""
 msgid "Change all Call associations to "
 msgstr ""
 
-#: src/qml/dialer-app.qml:271 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
+#: src/qml/dialer-app.qml:287 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 msgid "Close"
 msgstr ""
 
@@ -146,11 +146,11 @@ msgstr ""
 msgid "Conference"
 msgstr ""
 
-#: src/qml/dialer-app.qml:416
+#: src/qml/dialer-app.qml:432
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:428
+#: src/qml/dialer-app.qml:444
 msgid "Connected Line Restriction"
 msgstr ""
 
@@ -159,7 +159,7 @@ msgstr ""
 msgid "Contact Details"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:39
+#: src/qml/DialerPage/DialerPage.qml:38
 #: src/qml/ContactsPage/ContactsPage.qml:32
 msgid "Contacts"
 msgstr ""
@@ -178,7 +178,7 @@ msgstr ""
 msgid "Details"
 msgstr ""
 
-#: src/qml/dialer-app.qml:307 src/qml/dialer-app.qml:321
+#: src/qml/dialer-app.qml:323 src/qml/dialer-app.qml:337
 msgid "Dismiss"
 msgstr ""
 
@@ -186,16 +186,20 @@ msgstr ""
 msgid "Don't ask again"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:213
+#: src/qml/DialerPage/DialerPage.qml:226
 msgid "Enter a number"
 msgstr ""
 
-#: src/qml/dialer-app.qml:304
+#: src/qml/dialer-app.qml:320
 msgid "Error"
 msgstr ""
 
 #: src/qml/ContactsPage/ContactsPage.qml:71
 msgid "Favorites"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:53
+msgid "Flight mode"
 msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:83
@@ -211,7 +215,7 @@ msgstr ""
 msgid "Incoming"
 msgstr ""
 
-#: src/qml/dialer-app.qml:305
+#: src/qml/dialer-app.qml:321
 msgid "Invalid USSD code"
 msgstr ""
 
@@ -219,7 +223,7 @@ msgstr ""
 msgid "JKL"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:49
+#: src/qml/DialerPage/DialerPage.qml:59
 msgid "Keypad"
 msgstr ""
 
@@ -254,7 +258,7 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/dialer-app.qml:266
+#: src/qml/DialerPage/DialerPage.qml:61 src/qml/dialer-app.qml:282
 msgid "No network"
 msgstr ""
 
@@ -267,7 +271,7 @@ msgstr ""
 msgid "PQRS"
 msgstr ""
 
-#: src/qml/dialer-app.qml:285
+#: src/qml/dialer-app.qml:301
 msgid "Please wait"
 msgstr ""
 
@@ -280,7 +284,7 @@ msgstr ""
 msgid "Private number"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:72 src/qml/HistoryPage/HistoryPage.qml:43
+#: src/qml/DialerPage/DialerPage.qml:96 src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Recent"
 msgstr ""
 
@@ -306,7 +310,7 @@ msgstr ""
 msgid "Send message"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:44
+#: src/qml/DialerPage/DialerPage.qml:43
 msgid "Settings"
 msgstr ""
 
@@ -322,12 +326,12 @@ msgstr ""
 msgid "TUV"
 msgstr ""
 
-#: src/qml/dialer-app.qml:267
+#: src/qml/dialer-app.qml:283
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: src/qml/dialer-app.qml:268
+#: src/qml/dialer-app.qml:284
 msgid "There is currently no network."
 msgstr ""
 
@@ -365,7 +369,7 @@ msgstr ""
 msgid "active"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:237
+#: src/qml/LiveCallPage/LiveCall.qml:238
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr ""
