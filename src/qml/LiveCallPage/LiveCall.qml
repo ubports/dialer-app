@@ -37,10 +37,13 @@ Page {
     property bool isSpeaker: call ? call.speaker : false
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: call ? call.voicemail : false
+    property bool multiCall: callManager.calls.length > 1
     property bool isVoicemail: call ? call.voicemail : false
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
-        if (contactWatcher.alias !== "") {
+        if (call && call.isConference) {
+            return i18n.tr("Conference");
+        } else if (contactWatcher.alias !== "") {
             return contactWatcher.alias;
         } else if (contactWatcher.phoneNumber !== "") {
             return contactWatcher.phoneNumber;
@@ -91,7 +94,6 @@ Page {
 
             PropertyChanges {
                 target: durationLabel
-                //font.pixelSize: FontUtils.sizeToPixels("medium")
                 anchors.topMargin: units.gu(3)
             }
 
@@ -108,6 +110,26 @@ Page {
                 target: liveCall
                 title: ""
             }
+        },
+
+        State {
+            name: "multiCall"
+            when: (multiCall || call && call.isConference) && !dtmfVisible
+
+            PropertyChanges {
+                target: durationLabel
+                opacity: 0.0
+            }
+
+            PropertyChanges {
+                target: callerLabel
+                opacity: 0.0
+            }
+
+            PropertyChanges {
+                target: multiCallArea
+                opacity: 1.0
+            }
         }
     ]
 
@@ -116,7 +138,7 @@ Page {
             ParallelAnimation {
                 UbuntuNumberAnimation {
                     targets: [durationLabel,callerLabel]
-                    properties: "font.pixelSize,anchors.topMargin"
+                    properties: "font.pixelSize,anchors.topMargin,opacity"
                 }
                 UbuntuNumberAnimation {
                     targets: [keypad]
@@ -240,7 +262,7 @@ Page {
                     // TRANSLATORS: %1 is the call duration here.
                     return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
                 } else {
-                    return i18n.tr("calling")
+                    return i18n.tr("Calling")
                 }
             }
             fontSize: "x-large"
@@ -262,40 +284,10 @@ Page {
         MultiCallDisplay {
             id: multiCallArea
             calls: callManager.calls
-            opacity: (calls.length > 1 && !keypad.visible && !conferenceCallArea.visible) ? 1 : 0
+            opacity: 0
             anchors {
                 fill: parent
-                margins: units.gu(1)
             }
-        }
-
-        ConferenceCallDisplay {
-            id: conferenceCallArea
-            opacity: conference && !keypad.visible ? 1 : 0
-            anchors {
-                fill: parent
-                margins: units.gu(1)
-            }
-
-            states: [
-                State {
-                    name: "whileInMulticall"
-                    when: callManager.foregroundCall && callManager.backgroundCall
-                    PropertyChanges {
-                        target: conferenceCallArea
-                        conference: null
-                    }
-                },
-                State {
-                    name: "singleCallIsConf"
-                    when: callManager.foregroundCall && !callManager.backgroundCall && callManager.foregroundCall.isConference
-                    PropertyChanges {
-                        target: conferenceCallArea
-                        conference: callManager.foregroundCall
-                    }
-                }
-
-            ]
         }
 
         ListItems.ThinDivider {
@@ -330,14 +322,66 @@ Page {
     }
 
     Row {
-        id: buttonsArea
-        height: childrenRect.height
+        id: multiCallActionArea
+
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: buttonsArea.top
+            bottomMargin: units.gu(2)
+        }
+
         width: childrenRect.width
+        height: childrenRect.height
+        opacity: multiCall && !dtmfVisible ? 1 : 0
+        enabled : opacity > 0
+        spacing: units.gu(3)
+
+        Behavior on opacity {
+            UbuntuNumberAnimation { }
+        }
+
+        Button {
+            id: swapButton
+            visible: calls.length > 1
+            anchors {
+                verticalCenter: parent.verticalCenter
+            }
+
+            text: i18n.tr("Switch calls")
+            color: mainView.backgroundColor
+            strokeColor: UbuntuColors.green
+            onClicked: {
+                callManager.foregroundCall.held = true
+            }
+        }
+
+        Button {
+            id: mergeButton
+            visible: calls.length > 1
+            anchors {
+                verticalCenter: parent.verticalCenter
+            }
+
+            text: i18n.tr("Merge calls")
+            color: mainView.backgroundColor
+            strokeColor: UbuntuColors.green
+            onClicked: {
+                callManager.mergeCalls(callManager.calls[0], callManager.calls[1])
+            }
+        }
+    }
+
+    Row {
+        id: buttonsArea
+
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: footer.top
             bottomMargin: units.gu(1)
         }
+
+        height: childrenRect.height
+        width: childrenRect.width
 
         LiveCallKeypadButton {
             objectName: "muteButton"
@@ -357,7 +401,7 @@ Page {
             objectName: "pauseStartButton"
             iconSource: {
                 if (callManager.backgroundCall) {
-                    return "switch"
+                    return "swap"
                 } else if (selected) {
                     return "media-playback-start"
                 } else {
