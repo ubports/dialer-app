@@ -158,7 +158,6 @@ Page {
         objectName: "historyList"
 
         property var _currentSwipedItem: null
-        property bool transitionsEnabled: true
 
         function resetSwipe()
         {
