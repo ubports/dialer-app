@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import QtContacts 5.0
@@ -34,10 +35,11 @@ Page {
     property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
-    property bool isSpeaker: call ? call.speaker : false
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: call ? call.voicemail : false
     property bool isVoicemail: call ? call.voicemail : false
+    property string activeAudioOutput: call ? call.activeAudioOutput : ""
+    property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
         if (contactWatcher.alias !== "") {
@@ -80,6 +82,33 @@ Page {
             if(!callManager.hasCalls) {
                 mainView.switchToKeypadView();
                 pageStack.currentPage.dialNumber = pendingNumberToDial;
+            }
+        }
+    }
+
+    Component {
+        id: audioOutputsPopover
+        Popover {
+            id: popover
+            Column {
+                id: containerLayout
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    right: parent.right
+                }
+                ListItems.Header { text: "Switch audio source:" }
+                Repeater {
+                    model: audioOutputs
+                    ListItems.Standard { 
+                        text: modelData.name 
+                        showDivider: index != model.count-1
+                        onClicked: {
+                            call.activeAudioOutput = modelData.id
+                            PopupUtils.close(popover)
+                        }
+                    }
+                }
             }
         }
     }
@@ -357,14 +386,42 @@ Page {
         }
 
         LiveCallKeypadButton {
+            id: speakerButton
             objectName: "speakerButton"
-            iconSource: selected ? "speaker" : "speaker-mute"
-            selected: liveCall.isSpeaker
+            iconSource: {
+                if (audioOutputs && audioOutputs.length <= 2) {
+                    if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    }
+                    return "speaker-mute"
+                } else {
+                    if (activeAudioOutput == "bluetooth") {
+                        return "audio-speakers-bluetooth-symbolic"
+                    } else if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    } else {
+                        return "speaker-mute"
+                    }
+                }
+            }
+            selected: activeAudioOutput != "default"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             onClicked: {
                 if (call) {
-                    call.speaker = !selected
+                    // all phones have at least two outputs: speaker and default,
+                    // where default is either earpiece or wired headset
+                    // if we have more than 2, we have to show a popup so users
+                    // can select the active audio output
+                    if (audioOutputs.length > 2) {
+                        PopupUtils.open(audioOutputsPopover, speakerButton)
+                        return
+                    }
+                    if (call.activeAudioOutput == "default") {
+                        call.activeAudioOutput = "speaker"
+                    } else {
+                        call.activeAudioOutput = "default"
+                    }
                 }
             }
         }
