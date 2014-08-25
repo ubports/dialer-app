@@ -91,8 +91,8 @@ Page {
 
             PropertyChanges {
                 target: durationLabel
-                font.pixelSize: FontUtils.sizeToPixels("medium")
-                anchors.topMargin: units.gu(2)
+                //font.pixelSize: FontUtils.sizeToPixels("medium")
+                anchors.topMargin: units.gu(3)
             }
 
             PropertyChanges {
@@ -103,6 +103,10 @@ Page {
             PropertyChanges {
                 target: keypad
                 opacity: 1.0
+            }
+            PropertyChanges {
+                target: liveCall
+                title: ""
             }
         }
     ]
@@ -294,11 +298,25 @@ Page {
             ]
         }
 
+        ListItems.ThinDivider {
+            id: divider
+            opacity: keypad.opacity
+            anchors {
+                left: parent.left
+                right: parent.right
+                top: callerLabel.bottom
+                topMargin: units.gu(2)
+            }
+        }
+
         Keypad {
             id: keypad
 
-            anchors.bottom: parent.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                top: divider.bottom
+                topMargin: units.gu(2)
+                horizontalCenter: parent.horizontalCenter
+            }
             onKeyPressed: {
                 if (call) {
                     dtmfEntry += label
