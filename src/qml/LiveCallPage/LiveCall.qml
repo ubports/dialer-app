@@ -87,6 +87,7 @@ Page {
         }
     }
 
+
     states: [
         State {
             name: "keypadVisible"
@@ -109,6 +110,10 @@ Page {
             PropertyChanges {
                 target: liveCall
                 title: ""
+            }
+            PropertyChanges {
+                target: dtmfButton
+                iconColor: UbuntuColors.green
             }
         },
 
