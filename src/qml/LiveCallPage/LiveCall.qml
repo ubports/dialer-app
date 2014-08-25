@@ -30,7 +30,7 @@ Page {
     id: liveCall
     objectName: "pageLiveCall"
 
-    property QtObject call: callManager.foregroundCall
+    property var call: callManager.foregroundCall
     property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
@@ -233,7 +233,8 @@ Page {
                 if (dtmfVisible && dtmfLabelHelper.text !== "") {
                     return dtmfLabelHelper.text;
                 } else if (call && call.active) {
-                    return stopWatch.elapsed;
+                    // TRANSLATORS: %1 is the call duration here.
+                    return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
                 } else {
                     return i18n.tr("calling")
                 }
