@@ -101,7 +101,7 @@ Page {
                 Repeater {
                     model: audioOutputs
                     ListItems.Standard { 
-                        text: modelData.name 
+                        text: nameForAudioId(modelData.id)
                         showDivider: index != model.count-1
                         onClicked: {
                             call.activeAudioOutput = modelData.id
@@ -182,6 +182,17 @@ Page {
         if (call) {
             call.endCall();
         }
+    }
+
+    function nameForAudioId(id) {
+        if (id == "bluetooth") {
+            return i18n.tr("Bluetooth device")
+        } else if (id == "default") {
+            return i18n.tr("Ubuntu Phone")
+        } else if (id == "speaker") {
+            return i18n.tr("Phone Speaker")
+        }
+        return i18n.tr("Unknown device")
     }
 
     // FIXME: this invisible label is only used for
