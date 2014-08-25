@@ -70,6 +70,7 @@ Page {
 
     title: caller
     head.actions: greeter.greeterActive ? greeterModeActions : regularActions
+    head.sections.model: multipleAccounts ? [call.account.displayName] : []
     x: header ? header.height : 0
 
     // if there are no calls, just reset the view
