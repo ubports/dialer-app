@@ -58,6 +58,7 @@ Page {
             visible: false
         },
         Action {
+            id: newCallAction
             objectName: "newCallButton"
             iconName: "contact"
             text: i18n.tr("New Call")
@@ -82,7 +83,9 @@ Page {
             return;
         }
         statusLabel.text = text;
-        liveCall.call = callObject
+        liveCall.call = callObject;
+        liveCall.dtmfVisible = false;
+        newCallAction.visible = false;
         closeTimer.running = true;
     }
 
