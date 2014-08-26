@@ -38,7 +38,7 @@ Page {
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: call ? call.voicemail : false
     property bool multiCall: callManager.calls.length > 1
-    property bool isVoicemail: call ? call.voicemail : false
+    property bool isVoicemail: (call ? call.voicemail : false) && callManager.calls.length === 1
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
         if (call && call.isConference) {
@@ -483,7 +483,6 @@ Page {
                     return "media-playback-pause"
                 }
             }
-            enabled: !isVoicemail
             selected: liveCall.onHold
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
