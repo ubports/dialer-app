@@ -76,17 +76,34 @@ Page {
     head.sections.model: multipleAccounts ? [call.account.displayName] : []
     x: header ? header.height : 0
 
-    // if there are no calls, just reset the view
+    function reportStatus(callObject, text) {
+        // if a previous status was already set, do not overwrite it
+        if (statusLabel.text !== "" || callManager.hasCalls) {
+            return;
+        }
+        statusLabel.text = text;
+        liveCall.call = callObject
+        closeTimer.running = true;
+    }
+
     Connections {
         target: callManager
         onHasCallsChanged: {
             if(!callManager.hasCalls) {
-                mainView.switchToKeypadView();
-                pageStack.currentPage.dialNumber = pendingNumberToDial;
+                reportStatus({}, i18n.tr("No calls"));
             }
         }
     }
 
+    Connections {
+        target: call
+        onCallEnded: {
+            var callObject = {};
+            callObject["elapsedTime"] = call.elapsedTime;
+            callObject["active"] = true;
+            reportStatus(callObject, i18n.tr("Call ended"));
+        }
+    }
 
     states: [
         State {
@@ -135,7 +152,24 @@ Page {
                 target: multiCallArea
                 opacity: 1.0
             }
+        },
+
+        State {
+            name: "closing"
+            when: closeTimer.running
+
+            PropertyChanges {
+                target: buttonsArea
+                opacity: 0.0
+                enabled: false
+            }
+
+            PropertyChanges {
+                target: hangupButton
+                enabled: false
+            }
         }
+
     ]
 
     transitions: [
@@ -146,7 +180,7 @@ Page {
                     properties: "font.pixelSize,anchors.topMargin,opacity"
                 }
                 UbuntuNumberAnimation {
-                    targets: [keypad]
+                    targets: [keypad,multiCallArea]
                     properties: "opacity"
                 }
             }
@@ -169,13 +203,26 @@ Page {
 
     Timer {
         id: callWatcher
-        interval: 10000
+        interval: 7000
         repeat: false
         running: true
         onTriggered: {
             if (!callManager.hasCalls) {
                 // TODO: notify about failed call
+                reportStatus({}, i18n.tr("Call failed"))
+            }
+        }
+    }
+
+    Timer {
+        id: closeTimer
+        interval: 3000
+        repeat: false
+        running: false
+        onTriggered: {
+            if (!callManager.hasCalls) {
                 mainView.switchToKeypadView();
+                pageStack.currentPage.dialNumber = pendingNumberToDial;
             }
         }
     }
@@ -248,6 +295,22 @@ Page {
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top
+        }
+
+        Label {
+            id: statusLabel
+            anchors {
+                bottom: durationLabel.top
+                bottomMargin: units.gu(1)
+                horizontalCenter: durationLabel.horizontalCenter
+            }
+            text: ""
+            fontSize: "large"
+            opacity: text !== "" ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
         }
 
         Label {
