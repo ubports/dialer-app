@@ -168,8 +168,12 @@ Page {
                 target: hangupButton
                 enabled: false
             }
-        }
 
+            PropertyChanges {
+                target: durationLabel
+                anchors.topMargin: units.gu(9)
+            }
+        }
     ]
 
     transitions: [
@@ -180,7 +184,7 @@ Page {
                     properties: "font.pixelSize,anchors.topMargin,opacity"
                 }
                 UbuntuNumberAnimation {
-                    targets: [keypad,multiCallArea]
+                    targets: [keypad,multiCallArea,buttonsArea]
                     properties: "opacity"
                 }
             }
