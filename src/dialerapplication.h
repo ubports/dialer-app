@@ -36,6 +36,7 @@ public:
 public Q_SLOTS:
     void activateWindow();
     void parseArgument(const QString &arg);
+    QStringList mmiPluginList();
 
 private Q_SLOTS:
     void onViewStatusChanged(QQuickView::Status status);
