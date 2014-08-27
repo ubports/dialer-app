@@ -92,6 +92,7 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
+            historyPage.flickable = null
         }
 
     }
