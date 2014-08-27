@@ -1,0 +1,76 @@
+/*
+ * Copyright 2012-2013 Canonical Ltd.
+ *
+ * This file is part of dialer-app.
+ *
+ * dialer-app is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; version 3.
+ *
+ * dialer-app is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+import QtQuick 2.0
+import Ubuntu.Components 1.1
+import Ubuntu.Components.Popups 0.1
+import Ubuntu.Telephony 0.1
+
+Component {
+    Dialog {
+        id: dialogue
+        property string phoneNumber: ""
+        property string accountId: ""
+        text: i18n.tr("Change all Call associations to " + mainView.account.displayName +"?")
+        Column {
+            anchors.left: parent.left
+            anchors.right: parent.right
+            spacing: units.gu(2)
+            Row {
+                anchors.horizontalCenter: parent.horizontalCenter
+                spacing: units.gu(4)
+                Button {
+                    objectName: "setDefaultSimCardDialogNo"
+                    text: i18n.tr("No")
+                    color: UbuntuColors.orange
+                    onClicked: {
+                        PopupUtils.close(dialogue)
+                        mainView.call(phoneNumber, accountId)
+                        Qt.inputMethod.hide()
+                    }
+                }
+                Button {
+                    objectName: "setDefaultSimCardDialogYes"
+                    text: i18n.tr("Yes")
+                    color: UbuntuColors.orange
+                    onClicked: {
+                        telepathyHelper.setDefaultAccount(TelepathyHelper.Call, mainView.account)
+                        PopupUtils.close(dialogue)
+                        mainView.call(phoneNumber, accountId)
+                        Qt.inputMethod.hide()
+                    }
+                }
+            }
+            Row {
+                CheckBox {
+                    id: dontAskAgainCheckbox
+                    checked: false
+                    onCheckedChanged: settings.dialPadDontAsk = checked
+                }
+                Label {
+                    text: i18n.tr("Don't ask again")
+                    anchors.verticalCenter: dontAskAgainCheckbox.verticalCenter
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: dontAskAgainCheckbox.checked = !dontAskAgainCheckbox.checked
+                    }
+                }
+            }
+        }
+    }
+}

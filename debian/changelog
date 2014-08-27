@@ -1,3 +1,58 @@
+dialer-app (0.1+14.10.20140825-0ubuntu1) utopic; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * Add modular MMI support
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 25 Aug 2014 18:17:50 +0000
+
+dialer-app (0.1+14.10.20140821-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Group call history entries by phone number (when calls have happened
+    one after another) and by date
+
+  [ Tiago Salem Herrmann ]
+  * Display operator name in the header when available. Do not display
+    slots without sim cards. (LP: #1346804)
+  * Fix bug when displaying header actions after leaving the lock
+    screen. (LP: #1353952)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 21 Aug 2014 13:51:03 +0000
+
+dialer-app (0.1+14.10.20140813.3-0ubuntu1) utopic; urgency=low
+
+  [ Barry Warsaw ]
+  * Port autopilot tests to python3.
+
+  [ Leo Arias ]
+  * Port autopilot tests to python3.
+
+  [ Martti Piirainen ]
+  * Adding audible/haptic feedback while dialing (LP: #1228711). (LP:
+    #1228711)
+
+  [ Tiago Salem Herrmann ]
+  * Implement default sim dialogs.
+  * move MMI code to onKeyPressed(). use onPressed() instead of
+    onClicked() (LP: #1347370)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Do not update the .po files during `make`, update only the .pot
+    file.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Add header section on ContactsPage to allow the user to switch
+    between the "all" and "favorites" contacts. Add an "Add new" button
+    on contact list header. (LP: #1356179)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 13 Aug 2014 22:28:22 +0000
+
 dialer-app (0.1+14.10.20140806-0ubuntu1) utopic; urgency=low
 
   [ Gustavo Pichorim Boiko ]

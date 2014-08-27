@@ -30,7 +30,7 @@ Page {
 
     property string searchTerm
     property int delegateHeight: delegate.height
-    property bool fullView: false
+    property bool fullView: currentIndex == -1
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
@@ -114,21 +114,15 @@ Page {
         }
     }
 
-    HistoryEventModel {
+    HistoryGroupedEventsModel {
         id: historyEventModel
+        groupingProperties: ["participants", "date"]
         type: HistoryThreadModel.EventTypeVoice
         sort: HistorySort {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
         filter: HistoryFilter {}
-    }
-
-    SortProxyModel {
-        id: sortProxy
-        sortRole: HistoryEventModel.TimestampRole
-        sourceModel: historyEventModel
-        ascending: false
     }
 
     MultipleSelectionListView {
@@ -174,7 +168,7 @@ Page {
 
         currentIndex: -1
         anchors.fill: parent
-        listModel: sortProxy
+        listModel: historyEventModel
 
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
@@ -188,6 +182,34 @@ Page {
                 _currentSwipedItem = null
             }
         }
+
+        Component {
+            id: sectionComponent
+            Label {
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                }
+                text: DateUtils.friendlyDay(section)
+                height: units.gu(5)
+                fontSize: "medium"
+                font.weight: Font.DemiBold
+                verticalAlignment: Text.AlignVCenter
+                ListItem.ThinDivider {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        bottomMargin: units.gu(0.5)
+                    }
+                }
+            }
+        }
+
+        section.property: "date"
+        section.delegate: fullView ? sectionComponent : null
 
         listDelegate: delegateComponent
 
@@ -269,14 +291,28 @@ Page {
                 leftSideAction: Action {
                     iconName: "delete"
                     text: i18n.tr("Delete")
-                    onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+                    onTriggered:  {
+                        var events = model.events;
+                        for (var i in events) {
+                            historyEventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type)
+                        }
+                    }
                 }
                 property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
                 rightSideActions: [
-                    // FIXME: the first action should go to contac call log details page
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("Details")
+                        onTriggered: {
+                            pageStack.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
+                                                          { phoneNumber: participants[0],
+                                                            events: model.events,
+                                                            eventModel: historyEventModel})
+                        }
+                    },
                     Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
-                        text: i18n.tr("Details")
+                        text: i18n.tr("Contact Details")
                         onTriggered: {
                             if (unknownContact) {
                                 mainView.addNewPhone(phoneNumber)

@@ -7,176 +7,190 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-05-15 17:30+0000\n"
+"POT-Creation-Date: 2014-08-15 18:33-0300\n"
+"PO-Revision-Date: 2014-08-25 06:05+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-07-18 05:28+0000\n"
-"X-Generator: Launchpad (build 17114)\n"
+"X-Launchpad-Export-Date: 2014-08-27 07:46+0000\n"
+"X-Generator: Launchpad (build 17174)\n"
 
-#: src/qml/DialerPage/Keypad.qml:202
+#: src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
-#: src/qml/HistoryPage/dateUtils.js:61
+#: src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 tunti"
 msgstr[1] "%1 tuntia"
 
-#: src/qml/HistoryPage/dateUtils.js:63
+#: src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 min"
 msgstr[1] "%1 min"
 
-#: src/qml/HistoryPage/dateUtils.js:65
+#: src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
 msgstr[0] "%1 s"
 msgstr[1] "%1 s"
 
-#: src/qml/DialerPage/Keypad.qml:179
+#: src/qml/DialerPage/Keypad.qml:150
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:189
+#: src/qml/DialerPage/DialerPage.qml:322 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:188
+#: src/qml/ContactsPage/ContactsPage.qml:186
+msgid "+ Create New"
+msgstr "+ Luo uusi"
+
+#: src/qml/DialerPage/Keypad.qml:160
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:49
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/DialerPage/Keypad.qml:60
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/DialerPage/Keypad.qml:71
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:117
+#: src/qml/DialerPage/Keypad.qml:82
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: src/qml/DialerPage/Keypad.qml:93
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: src/qml/DialerPage/Keypad.qml:104
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/DialerPage/Keypad.qml:115
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:157
+#: src/qml/DialerPage/Keypad.qml:126
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:167
+#: src/qml/DialerPage/Keypad.qml:137
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:98
+#: src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
-msgid "Add Contact"
-msgstr "Lisää yhteystieto"
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "All"
+msgstr "Kaikki"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
-msgid "Add to existing contact"
-msgstr "Lisää olemassa olevaan yhteystietoon"
-
-#: src/qml/dialer-app.qml:244
+#: src/qml/dialer-app.qml:393
 msgid "Call Barring"
 msgstr "Puhelurajoitus"
 
-#: src/qml/dialer-app.qml:255
+#: src/qml/dialer-app.qml:404
 msgid "Call Forwarding"
 msgstr "Puhelunohjaus"
 
-#: src/qml/dialer-app.qml:266
+#: src/qml/dialer-app.qml:415
 msgid "Call Waiting"
 msgstr "Koputus"
 
-#: src/qml/MainPage.qml:56
-msgid "Call log"
-msgstr "Puheluloki"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
-msgid "Call now"
-msgstr "Soita nyt"
-
-#: src/qml/dialer-app.qml:277
+#: src/qml/dialer-app.qml:426
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:289
+#: src/qml/dialer-app.qml:438
 msgid "Calling Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
+#: src/qml/ContactsPage/ContactsPage.qml:85
 msgid "Cancel"
 msgstr "Peru"
 
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:29
+msgid "Change all Call associations to "
+msgstr ""
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:287
+msgid "Close"
+msgstr "Sulje"
+
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:114
-#: src/qml/LiveCallPage/LiveCall.qml:49
 msgid "Conference"
 msgstr "Ryhmäpuhelu"
 
-#: src/qml/dialer-app.qml:283
+#: src/qml/dialer-app.qml:432
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:295
+#: src/qml/dialer-app.qml:444
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/MainPage.qml:45
+#: src/qml/ContactsPage/ContactsPage.qml:32
+#: src/qml/DialerPage/DialerPage.qml:38
 msgid "Contacts"
 msgstr "Yhteystiedot"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
-msgid "Create new contact"
-msgstr "Luo uusi yhteystieto"
-
-#: src/qml/DialerPage/Keypad.qml:108
+#: src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:69
+#: src/qml/HistoryPage/HistoryPage.qml:293
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:74
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:248
 msgid "Delete"
 msgstr "Poista"
 
-#: src/qml/dialer-app.qml:169 src/qml/dialer-app.qml:183
+#: src/qml/HistoryPage/HistoryPage.qml:305
+msgid "Details"
+msgstr "Tiedot"
+
+#: src/qml/dialer-app.qml:323 src/qml/dialer-app.qml:337
 msgid "Dismiss"
 msgstr "Hylkää"
 
-#: src/qml/DialerPage/DialerPage.qml:89
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:66
+msgid "Don't ask again"
+msgstr "Älä kysy uudestaan"
+
+#: src/qml/DialerPage/DialerPage.qml:219
 msgid "Enter a number"
 msgstr "Anna numero"
 
-#: src/qml/dialer-app.qml:166
+#: src/qml/dialer-app.qml:320
 msgid "Error"
 msgstr "Virhe"
 
-#: src/qml/DialerPage/Keypad.qml:118
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "Favorites"
+msgstr "Suosikit"
+
+#: src/qml/DialerPage/DialerPage.qml:53
+msgid "Flight mode"
+msgstr "Lentokonetila"
+
+#: src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
 msgstr "GHI"
 
@@ -184,23 +198,28 @@ msgstr "GHI"
 msgid "Hangup"
 msgstr "Katkaise"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
-msgid "How do you want to save the contact?"
-msgstr "Miten haluat tallentaa yhteystiedon?"
+#: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
+msgid "Incoming"
+msgstr "Saapuva"
 
-#: src/qml/dialer-app.qml:167
+#: src/qml/dialer-app.qml:321
 msgid "Invalid USSD code"
 msgstr "Virheellinen USSD-koodi"
 
-#: src/qml/DialerPage/Keypad.qml:128
+#: src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/MainPage.qml:35
+#: src/qml/DialerPage/DialerPage.qml:59
 msgid "Keypad"
 msgstr "Numeronäppäimistö"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
+msgid "Later"
+msgstr "Myöhemmin"
+
+#: src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
 msgstr "MNO"
 
@@ -208,15 +227,38 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "Yhdistä puhelut"
 
-#: src/qml/LiveCallPage/LiveCall.qml:75
-msgid "New call"
+#: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
+msgid "Missed"
+msgstr "Vastaamaton"
+
+#: src/qml/LiveCallPage/LiveCall.qml:60
+msgid "New Call"
 msgstr "Uusi puhelu"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+msgid "No"
+msgstr "Ei"
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
+msgid "No SIM card selected"
+msgstr "SIM-korttia ei havaittu"
+
+#: src/qml/dialer-app.qml:282 src/qml/DialerPage/DialerPage.qml:61
+msgid "No network"
+msgstr "Ei verkkoa"
+
+#: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
+msgid "Outgoing"
+msgstr "Lähtevä"
+
+#: src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:147
+#: src/qml/dialer-app.qml:301
 msgid "Please wait"
 msgstr "Odota hetki"
 
@@ -224,54 +266,96 @@ msgstr "Odota hetki"
 msgid "Private"
 msgstr "Yksityinen"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "Save contact"
-msgstr "Tallenna yhteystieto"
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
+msgid "Private number"
+msgstr "Salainen numero"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
-msgid "Send text message"
-msgstr "Lähetä tekstiviesti"
+#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:96
+msgid "Recent"
+msgstr "Viimeisimmät"
 
-#: src/qml/DialerPage/Keypad.qml:158
+#: src/qml/ContactsPage/ContactsPage.qml:60
+msgid "Search"
+msgstr "Etsi"
+
+#: src/qml/ContactsPage/ContactsPage.qml:48
+msgid "Search..."
+msgstr "Etsi..."
+
+#: src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Select"
+msgstr "Valitse"
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
+msgid ""
+"Select a default SIM for all outgoing calls. You can always alter your "
+"choice in <a href=\"system_settings\">System Settings</a>."
+msgstr ""
+"Valitse lähteville puheluille oletuksena käytettävä SIM-kortti. Voit vaihtaa "
+"asetusta myöhemmin <a href=\"system_settings\">järjestelmän asetuksissa</a>."
+
+#: src/qml/HistoryPage/HistoryPage.qml:328
+msgid "Send message"
+msgstr "Lähetä viesti"
+
+#: src/qml/DialerPage/DialerPage.qml:43
+msgid "Settings"
+msgstr "Asetukset"
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
+msgid "Switch to default SIM:"
+msgstr "Vaihda oletus-SIM-korttiin:"
+
+#: src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
 msgstr "TUV"
 
-#: src/qml/HistoryPage/dateUtils.js:41
+#: src/qml/dialer-app.qml:283
+#, qt-format
+msgid "There is currently no network on %1"
+msgstr "Ei verkkoa juuri nyt - %1"
+
+#: src/qml/dialer-app.qml:284
+msgid "There is currently no network."
+msgstr "Ei verkkoa juuri nyt."
+
+#: src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
 msgstr "Tänään"
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-msgid "Two Calls"
-msgstr "Kaksi puhelua"
-
-#: src/qml/HistoryPage/HistoryDelegate.qml:139
-msgid "Unknown"
-msgstr "Tuntematon"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "View contact"
-msgstr "Näytä yhteystieto"
+#: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
+msgid "Unknown number"
+msgstr "Tuntematon numero"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr "Vastaaja"
 
-#: src/qml/DialerPage/Keypad.qml:168
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
 msgstr "WXYZ"
 
-#: src/qml/HistoryPage/dateUtils.js:43
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:49
+msgid "Yes"
+msgstr "Kyllä"
+
+#: src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
 msgstr "Eilen"
+
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
+msgid "You need to select a SIM card"
+msgstr "Valitse SIM-kortti"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "active"
 msgstr "aktiivisena"
 
+#: src/qml/LiveCallPage/LiveCall.qml:238
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:409
 msgid "calling"
 msgstr "soitetaan"
 
@@ -279,12 +363,3 @@ msgstr "soitetaan"
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 msgid "on hold"
 msgstr "pidossa"
-
-#~ msgid "Dialer App"
-#~ msgstr "Puhelinsovellus"
-
-#~ msgid "Dialer application"
-#~ msgstr "Puhelinsovellus"
-
-#~ msgid "Dialer"
-#~ msgstr "Puhelin"

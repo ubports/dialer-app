@@ -59,7 +59,7 @@ class TestCallLogs(DialerAppTestCase):
         """
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate.active_action(2)
+        delegate.active_action(3)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'messaging-app'])
 
         msg_app = self._get_app_proxy_object('messaging-app')
@@ -78,7 +78,7 @@ class TestCallLogs(DialerAppTestCase):
         """
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate.active_action(1)
+        delegate.active_action(2)
         self.addCleanup(subprocess.call, ['pkill', '-f', 'address-book-app'])
 
         cntct_app = self._get_app_proxy_object('address-book-app')

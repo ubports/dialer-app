@@ -31,10 +31,9 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
-    property bool multipleAccounts: telepathyHelper.accountIds.length > 1
-    objectName: "dialerPage"
-
-    head.actions: [
+    property var mmiPlugins: []
+    property list<Action> actionsGreeter
+    property list<Action> actionsNormal: [
         Action {
             iconName: "contact"
             text: i18n.tr("Contacts")
@@ -46,23 +45,48 @@ PageWithBottomEdge {
             onTriggered: Qt.openUrlExternally("settings:///system/phone")
         }
     ]
+    head.actions: greeter.greeterActive ? actionsGreeter : actionsNormal
+ 
+    objectName: "dialerPage"
 
-    title: i18n.tr("Keypad")
+    title: {
+        if (telepathyHelper.flightMode) {
+            return i18n.tr("Flight mode")
+        } else if (mainView.account && mainView.account.networkName != "") {
+            return mainView.account.networkName
+        } else if (multipleAccounts && !mainView.account) {
+            // TODO: check what should be displayed when there are multiple accounts
+            // but no default selected
+            return i18n.tr("Keypad")
+        }
+        return i18n.tr("No network")
+    }
 
+    state: greeter.greeterActive ? "greeterMode" : "normalMode"
     // -------- Greeter mode ----------
     states: [
         State {
             name: "greeterMode"
-            when: greeter.greeterActive
-
-            PropertyChanges {
-                target: page.head
-                actions: []
-            }
             PropertyChanges {
                 target: contactLabel
                 visible: false
             }
+            PropertyChanges {
+                target: addContact
+                visible: false
+            }
+        },
+        State {
+            name: "normalMode"
+            PropertyChanges {
+                target: contactLabel
+                visible: true
+            }
+            PropertyChanges {
+                target: addContact
+                visible: true
+            }
+ 
         }
     ]
 
@@ -96,24 +120,6 @@ PageWithBottomEdge {
         }
     }
 
-    onIsReadyChanged: {
-        if (bottomEdgePage) {
-            bottomEdgePage.fullView = isReady
-        }
-    }
-
-    onDialNumberChanged: {
-        if(checkUSSD(dialNumber)) {
-            // check for custom strings
-            if (dialNumber === "*#06#") {
-                dialNumber = ""
-                mainView.ussdResponseTitle = "IMEI"
-                mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
-                PopupUtils.open(ussdResponseDialog)
-            }
-        }
-    }
-
     function accountIndex(account) {
         var index = -1;
         for (var i in telepathyHelper.accounts) {
@@ -133,11 +139,16 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountChanged: {
-            var newAccountIndex = accountIndex(account);
-            if (newAccountIndex >= 0 && newAccountIndex !== page.head.sections.selectedIndex) {
-                page.head.sections.selectedIndex = newAccountIndex
-            }
+        onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
+    }
+
+    Component.onCompleted: {
+        head.sections.selectedIndex = accountIndex(mainView.account)
+        // load MMI plugins
+        var plugins = application.mmiPluginList()
+        for (var i in plugins) {
+            var component = Qt.createComponent(plugins[i]);
+            mmiPlugins.push(component.createObject(page))
         }
     }
 
@@ -148,18 +159,16 @@ PageWithBottomEdge {
         }
 
         var accountNames = []
-        for(var i=0; i < telepathyHelper.accounts.length; i++) {
-            accountNames.push(telepathyHelper.accounts[i].displayName)
+        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
+            accountNames.push(telepathyHelper.activeAccounts[i].displayName)
         }
         return accountNames
     }
 
-    // Account switcher
-    head.sections.selectedIndex: Math.max(0, accountIndex(mainView.account))
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.account = telepathyHelper.accounts[page.head.sections.selectedIndex]
+            mainView.account = telepathyHelper.activeAccounts[page.head.sections.selectedIndex]
         }
     }
 
@@ -289,6 +298,7 @@ PageWithBottomEdge {
 
         Keypad {
             id: keypad
+            showVoicemail: true
 
             anchors {
                 top: divider.bottom
@@ -297,10 +307,33 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
+                callManager.playTone(label);
                 input.insert(input.cursorPosition, label)
+                if(checkMMI(dialNumber)) {
+                    // check for custom strings
+                    for (var i in mmiPlugins) {
+                        if (mmiPlugins[i].code == dialNumber) {
+                            dialNumber = ""
+                            mmiPlugins[i].trigger()
+                        }
+                    }
+                }
+            }
+            onKeyPressAndHold: {
+                // we should only call voicemail if the keypad entry was empty,
+                // but as we add numbers when onKeyPressed is triggered, the keypad entry will be "1"
+                if (keycode == Qt.Key_1 && dialNumber == "1") {
+                    dialNumber = ""
+                    mainView.callVoicemail()
+                } else if (keycode == Qt.Key_0) {
+                    // replace 0 by +
+                    dialNumber = dialNumber.substring(0, dialNumber.length - 1)
+                    dialNumber += i18n.tr("+")
+                }
             }
         }
     }
+
     Item {
         id: footer
 
@@ -321,6 +354,21 @@ PageWithBottomEdge {
             }
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
+                // check if at least one account is selected
+                if (multipleAccounts && !mainView.account) {
+                    Qt.inputMethod.hide()
+                    PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
+                    return
+                }
+
+                if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
+                    var properties = {}
+                    properties["phoneNumber"] = dialNumber
+                    properties["accountId"] = mainView.account.accountId
+                    PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
+                    return
+                }
+
                 // avoid cleaning the keypadEntry in case there is no signal
                 if (!mainView.account.connected) {
                     PopupUtils.open(noNetworkDialog)
