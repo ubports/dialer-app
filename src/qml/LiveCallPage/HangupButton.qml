@@ -27,6 +27,10 @@ AbstractButton {
     //iconSource: "../assets/dialer_call.png"
     opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
+    Behavior on opacity {
+        UbuntuNumberAnimation { }
+    }
+
     UbuntuShape {
         anchors.fill: parent
         //color: button.pressed ? "#cd3804" : "#dd4814"
