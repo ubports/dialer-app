@@ -259,6 +259,9 @@ Page {
             if (!callManager.hasCalls) {
                 mainView.switchToKeypadView();
                 pageStack.currentPage.dialNumber = pendingNumberToDial;
+                if (greeter.greeterActive) {
+                    greeter.showGreeter();
+                }
             }
         }
     }

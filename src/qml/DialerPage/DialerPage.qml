@@ -46,6 +46,12 @@ PageWithBottomEdge {
         }
     ]
     head.actions: greeter.greeterActive ? actionsGreeter : actionsNormal
+    head.backAction: Action {
+        iconName: "back"
+        text: i18n.tr("Close")
+        visible: greeter.greeterActive
+        onTriggered: greeter.showGreeter()
+    }
  
     objectName: "dialerPage"
 
