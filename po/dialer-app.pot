@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-29 08:11+0200\n"
+"POT-Creation-Date: 2014-08-29 17:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -53,7 +53,7 @@ msgstr ""
 msgid "*"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:331
+#: src/qml/DialerPage/DialerPage.qml:338 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr ""
 
@@ -106,6 +106,7 @@ msgid "ABC"
 msgstr ""
 
 #: src/qml/ContactsPage/ContactsPage.qml:71
+#: src/qml/HistoryPage/HistoryPage.qml:47
 msgid "All"
 msgstr ""
 
@@ -157,7 +158,7 @@ msgstr ""
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:315
+#: src/qml/HistoryPage/HistoryPage.qml:332
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:54
 msgid "Contact Details"
 msgstr ""
@@ -171,13 +172,13 @@ msgstr ""
 msgid "DEF"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:293
+#: src/qml/HistoryPage/HistoryPage.qml:310
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:248
 msgid "Delete"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:305
+#: src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Details"
 msgstr ""
 
@@ -190,7 +191,7 @@ msgstr ""
 msgid "Don't ask again"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:228
+#: src/qml/DialerPage/DialerPage.qml:235
 msgid "Enter a number"
 msgstr ""
 
@@ -218,8 +219,8 @@ msgstr ""
 msgid "IMEI"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr ""
 
@@ -247,8 +248,9 @@ msgstr ""
 msgid "Merge calls"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
+#: src/qml/HistoryPage/HistoryPage.qml:47
 #: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Missed"
 msgstr ""
 
@@ -265,12 +267,12 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:62
+#: src/qml/DialerPage/DialerPage.qml:62 src/qml/dialer-app.qml:298
 msgid "No network"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 #: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr ""
 
@@ -290,12 +292,12 @@ msgstr ""
 msgid "Private"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 #: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:97
+#: src/qml/DialerPage/DialerPage.qml:97 src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Recent"
 msgstr ""
 
@@ -317,7 +319,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:328
+#: src/qml/HistoryPage/HistoryPage.qml:345
 msgid "Send message"
 msgstr ""
 
@@ -358,8 +360,8 @@ msgstr ""
 msgid "Unknown device"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 #: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr ""
 
@@ -383,23 +385,23 @@ msgstr ""
 msgid "You need to select a SIM card"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 #: src/qml/LiveCallPage/LiveCall.qml:278
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr ""
 
-#. TRANSLATORS: HH:mm is the time format, translate it according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#. TRANSLATORS: HH:mm is the time format, translate it according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #: src/qml/HistoryPage/HistoryDelegate.qml:239
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr ""
 
@@ -413,7 +415,7 @@ msgstr ""
 msgid "mm:ss"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr ""
