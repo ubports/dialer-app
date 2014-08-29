@@ -25,6 +25,11 @@ AbstractButton {
     height: units.gu(4.5)
     // FIXME: waiting on #1072733
     //iconSource: "../assets/dialer_call.png"
+    opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
+
+    Behavior on opacity {
+        UbuntuNumberAnimation { }
+    }
 
     UbuntuShape {
         anchors.fill: parent

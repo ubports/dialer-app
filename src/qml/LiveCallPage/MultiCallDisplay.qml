@@ -18,6 +18,8 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 1.1
+import Ubuntu.Components.ListItems 0.1 as ListItems
+import Ubuntu.Contacts 0.1
 import Ubuntu.Telephony 0.1
 
 Column {
@@ -41,139 +43,114 @@ Column {
             property QtObject callEntry: modelData
             property bool isLast: index == (multiCallRepeater.count - 1)
 
-            height: backgroundRect.height + (isLast ? 0 : mergeButton.height + units.gu(1))
+            height: units.gu(10) + conferenceArea.height
             anchors {
                 left: parent.left
                 right: parent.right
             }
 
-            Image {
-                id: avatar
-                anchors.fill: backgroundRect
-                source: watcher.avatar
-                fillMode: Image.PreserveAspectCrop
-                smooth: true
-
-                Rectangle {
-                    anchors {
-                        left: parent.left
-                        top: parent.top
-                        right: parent.right
-                    }
-                    height: units.gu(8)
-                    color: "black"
-                    opacity: avatar.status == Image.Ready && !callEntry.held ? 0.4 : 0
-                    Behavior on opacity {
-                        UbuntuNumberAnimation { }
-                    }
-                }
+            ContactWatcher {
+                id: contactWatcher
+                phoneNumber: callEntry.phoneNumber
             }
 
-            Rectangle {
-                id: backgroundRect
-                color: {
-                    if (callEntry.held) {
-                        return "black";
-                    } else if (avatar.status == Image.Null) {
-                        return "white";
-                    } else {
-                        return "transparent"
-                    }
-                }
-
-                opacity: 0.5
-                height: (multiCallArea.height - units.gu(7)) / (multiCallRepeater.count > 0 ? multiCallRepeater.count : 1)
+            ContactAvatar {
+                id: avatar
                 anchors {
                     left: parent.left
-                    right: parent.right
+                    leftMargin: units.gu(2)
                     top: parent.top
+                    topMargin: units.gu(2)
                 }
-
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 150
-                    }
-                }
-            }
-
-            ContactWatcher {
-                id: watcher
-                phoneNumber: callEntry.phoneNumber
+                width: height
+                height: units.gu(6)
+                fallbackAvatarUrl: contactWatcher.avatar === "" ? "image://theme/stock_contact" : contactWatcher.avatar
+                fallbackDisplayName: aliasLabel.text
+                showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
             }
 
             Label {
                 id: aliasLabel
                 fontSize: "large"
                 anchors {
-                    left: parent.left
-                    top: parent.top
-                    margins: units.gu(1)
+                    left: avatar.right
+                    leftMargin: units.gu(1)
+                    verticalCenter: avatar.verticalCenter
                 }
                 text: {
                     if (callEntry.isConference) {
                         return i18n.tr("Conference");
                     } else if (callEntry.voicemail) {
                         return i18n.tr("Voicemail");
-                    } else if (watcher.alias != "") {
-                        return watcher.alias;
+                    } else if (contactWatcher.alias != "") {
+                        return contactWatcher.alias;
                     } else {
-                        return watcher.phoneNumber;
+                        return contactWatcher.phoneNumber;
                     }
+                }
+            }
+
+            StopWatch {
+                id: stopWatch
+                time: callEntry.elapsedTime
+            }
+
+            Label {
+                id: durationLabel
+                text: callEntry.active ? stopWatch.elapsed : i18n.tr("Calling")
+                anchors {
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    verticalCenter: avatar.verticalCenter
                 }
             }
 
             Label {
+                id: callStatus
                 fontSize: "medium"
                 anchors {
-                    left: parent.left
-                    top: aliasLabel.bottom
-                    margins: units.gu(1)
+                    right: durationLabel.left
+                    rightMargin: units.gu(2)
+                    verticalCenter: durationLabel.verticalCenter
                 }
+                color: callEntry.held ? UbuntuColors.red : UbuntuColors.green
                 text: {
                     if (callEntry.dialing) {
-                        return i18n.tr("calling");
+                        return ""
                     } else if (callEntry.held) {
-                        return i18n.tr("on hold");
+                        return i18n.tr("On hold");
                     } else {
-                        return i18n.tr("active");
+                        return i18n.tr("Active");
                     }
+                }
+                font.weight: Font.DemiBold
+            }
+
+            ConferenceCallDisplay {
+                id: conferenceArea
+                conference: callEntry
+                anchors {
+                    left: aliasLabel.left
+                    right: parent.right
+                    top: avatar.bottom
                 }
             }
 
             MouseArea {
-                anchors.fill: backgroundRect
+                anchors.fill: parent
                 onClicked: callEntry.held = false;
                 enabled: callEntry.held
             }
 
-            LiveCallKeypadButton {
-                id: participantsButton
-                visible: callEntry.isConference
-                iconSource: "navigation-menu"
-                iconWidth: units.gu(3)
-                iconHeight: units.gu(3)
-                width: visible ? units.gu(6) : 0
-                height: units.gu(6)
+            ListItems.ThinDivider {
                 anchors {
-                    verticalCenter: backgroundRect.verticalCenter
+                    left: parent.left
+                    leftMargin: units.gu(2)
                     right: parent.right
-                    rightMargin: units.gu(1)
-                }
-                onClicked: conferenceCallArea.conference = callEntry
-            }
-
-            Button {
-                id: mergeButton
-                visible: !isLast
-                anchors {
+                    rightMargin: units.gu(2)
                     bottom: parent.bottom
-                    horizontalCenter: parent.horizontalCenter
                 }
-
-                text: i18n.tr("Merge calls")
-                onClicked: {
-                    callManager.mergeCalls(callManager.calls[index], callManager.calls[index+1])
-                }
+                visible: !isLast
             }
         }
     }
