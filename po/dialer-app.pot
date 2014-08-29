@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-27 16:58-0300\n"
+"POT-Creation-Date: 2014-08-29 17:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -158,7 +158,7 @@ msgstr ""
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:333
+#: src/qml/HistoryPage/HistoryPage.qml:332
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:54
 msgid "Contact Details"
 msgstr ""
@@ -172,13 +172,13 @@ msgstr ""
 msgid "DEF"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:311
+#: src/qml/HistoryPage/HistoryPage.qml:310
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:248
 msgid "Delete"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:323
+#: src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Details"
 msgstr ""
 
@@ -319,7 +319,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:346
+#: src/qml/HistoryPage/HistoryPage.qml:345
 msgid "Send message"
 msgstr ""
 
