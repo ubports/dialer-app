@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Launchpad-Export-Date: 2014-08-27 07:46+0000\n"
+"X-Launchpad-Export-Date: 2014-08-28 06:30+0000\n"
 "X-Generator: Launchpad (build 17174)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -47,7 +47,7 @@ msgstr[1] "%1 secs"
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/DialerPage.qml:322 src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/DialerPage.qml:331 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
@@ -103,23 +103,23 @@ msgstr "ABC"
 msgid "All"
 msgstr ""
 
-#: src/qml/dialer-app.qml:393
+#: src/qml/dialer-app.qml:409
 msgid "Call Barring"
 msgstr "Ukulesha abaletuma"
 
-#: src/qml/dialer-app.qml:404
+#: src/qml/dialer-app.qml:420
 msgid "Call Forwarding"
 msgstr "Ukutuma ama phone kumbi"
 
-#: src/qml/dialer-app.qml:415
+#: src/qml/dialer-app.qml:431
 msgid "Call Waiting"
 msgstr "Ukulolela"
 
-#: src/qml/dialer-app.qml:426
+#: src/qml/dialer-app.qml:442
 msgid "Calling Line Presentation"
 msgstr "Imimonekele ya lamya ngailelila"
 
-#: src/qml/dialer-app.qml:438
+#: src/qml/dialer-app.qml:454
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -131,7 +131,7 @@ msgstr "Ukukansa"
 msgid "Change all Call associations to "
 msgstr ""
 
-#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:287
+#: src/qml/dialer-app.qml:303 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 msgid "Close"
 msgstr "Ukwisala"
 
@@ -139,16 +139,16 @@ msgstr "Ukwisala"
 msgid "Conference"
 msgstr "Ukulanda nabantu abengi"
 
-#: src/qml/dialer-app.qml:432
+#: src/qml/dialer-app.qml:448
 msgid "Connected Line Presentation"
 msgstr "Imimonekele nga nabasuka"
 
-#: src/qml/dialer-app.qml:444
+#: src/qml/dialer-app.qml:460
 msgid "Connected Line Restriction"
 msgstr ""
 
+#: src/qml/DialerPage/DialerPage.qml:39
 #: src/qml/ContactsPage/ContactsPage.qml:32
-#: src/qml/DialerPage/DialerPage.qml:38
 msgid "Contacts"
 msgstr "Amashina yabantu"
 
@@ -166,7 +166,8 @@ msgstr "Ukufuta"
 msgid "Details"
 msgstr "Nafimbi"
 
-#: src/qml/dialer-app.qml:323 src/qml/dialer-app.qml:337
+#: src/qml/MMI/IMEI.qml:39 src/qml/dialer-app.qml:339
+#: src/qml/dialer-app.qml:353
 msgid "Dismiss"
 msgstr "Ukufumyapo"
 
@@ -174,11 +175,11 @@ msgstr "Ukufumyapo"
 msgid "Don't ask again"
 msgstr "Takuli kwipusha nakabili"
 
-#: src/qml/DialerPage/DialerPage.qml:219
+#: src/qml/DialerPage/DialerPage.qml:228
 msgid "Enter a number"
 msgstr "Ukwingisha namba"
 
-#: src/qml/dialer-app.qml:320
+#: src/qml/dialer-app.qml:336
 msgid "Error"
 msgstr "Pali icalubana"
 
@@ -186,7 +187,7 @@ msgstr "Pali icalubana"
 msgid "Favorites"
 msgstr "Ifyatemwikwa sana"
 
-#: src/qml/DialerPage/DialerPage.qml:53
+#: src/qml/DialerPage/DialerPage.qml:54
 msgid "Flight mode"
 msgstr "Ukulesha ukulila"
 
@@ -198,12 +199,12 @@ msgstr "GHI"
 msgid "Hangup"
 msgstr "Ukuputula"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:60
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: src/qml/HistoryPage/HistoryDelegate.qml:60
 msgid "Incoming"
 msgstr "Iyileisa"
 
-#: src/qml/dialer-app.qml:321
+#: src/qml/dialer-app.qml:337
 msgid "Invalid USSD code"
 msgstr "Iyi USSD code takwaba"
 
@@ -211,7 +212,7 @@ msgstr "Iyi USSD code takwaba"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:59
+#: src/qml/DialerPage/DialerPage.qml:60
 msgid "Keypad"
 msgstr "Apakutinika"
 
@@ -227,12 +228,12 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "Ukubika pamo ama lamya"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:58
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:307
+#: src/qml/HistoryPage/HistoryDelegate.qml:58
 msgid "Missed"
 msgstr "Ukupusa"
 
-#: src/qml/LiveCallPage/LiveCall.qml:60
+#: src/qml/LiveCallPage/LiveCall.qml:62
 msgid "New Call"
 msgstr ""
 
@@ -245,12 +246,12 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/dialer-app.qml:282 src/qml/DialerPage/DialerPage.qml:61
+#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:62
 msgid "No network"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:62
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: src/qml/HistoryPage/HistoryDelegate.qml:62
 msgid "Outgoing"
 msgstr ""
 
@@ -258,7 +259,7 @@ msgstr ""
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:301
+#: src/qml/dialer-app.qml:317
 msgid "Please wait"
 msgstr ""
 
@@ -266,12 +267,12 @@ msgstr ""
 msgid "Private"
 msgstr "Munkama"
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:173
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
 msgid "Private number"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:96
+#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:97
 msgid "Recent"
 msgstr ""
 
@@ -297,7 +298,7 @@ msgstr ""
 msgid "Send message"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:43
+#: src/qml/DialerPage/DialerPage.qml:44
 msgid "Settings"
 msgstr ""
 
@@ -309,12 +310,12 @@ msgstr ""
 msgid "TUV"
 msgstr ""
 
-#: src/qml/dialer-app.qml:283
+#: src/qml/dialer-app.qml:299
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: src/qml/dialer-app.qml:284
+#: src/qml/dialer-app.qml:300
 msgid "There is currently no network."
 msgstr ""
 
@@ -322,8 +323,8 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:175
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: src/qml/HistoryPage/HistoryDelegate.qml:175
 msgid "Unknown number"
 msgstr ""
 
@@ -347,17 +348,17 @@ msgstr ""
 msgid "You need to select a SIM card"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:238
+#: src/qml/LiveCallPage/LiveCall.qml:278
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
 msgid "calling"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr ""
