@@ -27,6 +27,9 @@ class ListItemWithActions(_common.UbuntuUIToolkitCustomProxyObjectBase):
         action_margin = ((self.actionWidth / 5) * 2)
         x_offset = ((self.actionWidth + action_margin) * action_index)
         x_offset += self.actionThreshold
+        # just in case, drag it a bit more to make sure the correct action is
+        # selected
+        x_offset += action_margin
 
         x, y, width, height = self.globalRect
         start_x = x + (width * 0.5)
