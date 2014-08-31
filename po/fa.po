@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-29 08:11+0200\n"
+"POT-Creation-Date: 2014-08-29 17:12-0300\n"
 "PO-Revision-Date: 2014-08-29 18:26+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
 "Language-Team: Persian <fa@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-08-30 07:47+0000\n"
+"X-Launchpad-Export-Date: 2014-08-31 07:31+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -50,7 +50,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:344
+#: src/qml/DialerPage/DialerPage.qml:331 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
@@ -103,11 +103,10 @@ msgid "ABC"
 msgstr "ABC"
 
 #: src/qml/ContactsPage/ContactsPage.qml:71
-#: src/qml/HistoryPage/HistoryPage.qml:47
 msgid "All"
 msgstr "همه"
 
-#: src/qml/LiveCallPage/LiveCall.qml:277
+#: src/qml/LiveCallPage/LiveCall.qml:189
 msgid "Bluetooth device"
 msgstr "دستگاه بلوتوث"
 
@@ -140,12 +139,10 @@ msgid "Change all Call associations to "
 msgstr "تغییر همه‌ی تماس‌ها به "
 
 #: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:303
-#: src/qml/DialerPage/DialerPage.qml:51
 msgid "Close"
 msgstr "بستن"
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
 msgstr "کنفرانس"
 
@@ -157,13 +154,13 @@ msgstr "ارائه خط وصل شده"
 msgid "Connected Line Restriction"
 msgstr "محدودیت خط متصل"
 
+#: src/qml/HistoryPage/HistoryPage.qml:315
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr "جزئیات مخاطب"
 
-#: src/qml/ContactsPage/ContactsPage.qml:32
 #: src/qml/DialerPage/DialerPage.qml:39
+#: src/qml/ContactsPage/ContactsPage.qml:32
 msgid "Contacts"
 msgstr "مخاطبین"
 
@@ -171,18 +168,18 @@ msgstr "مخاطبین"
 msgid "DEF"
 msgstr "DEF"
 
+#: src/qml/HistoryPage/HistoryPage.qml:293
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Delete"
 msgstr "حذف"
 
-#: src/qml/HistoryPage/HistoryPage.qml:322
+#: src/qml/HistoryPage/HistoryPage.qml:305
 msgid "Details"
 msgstr "جزئیات ‌"
 
-#: src/qml/dialer-app.qml:339 src/qml/dialer-app.qml:353
-#: src/qml/MMI/IMEI.qml:39
+#: src/qml/MMI/IMEI.qml:39 src/qml/dialer-app.qml:339
+#: src/qml/dialer-app.qml:353
 msgid "Dismiss"
 msgstr "رد کردن"
 
@@ -190,7 +187,7 @@ msgstr "رد کردن"
 msgid "Don't ask again"
 msgstr "دیگر پرسیده نشود"
 
-#: src/qml/DialerPage/DialerPage.qml:241
+#: src/qml/DialerPage/DialerPage.qml:228
 msgid "Enter a number"
 msgstr "شماره‌ای را وارد کنید"
 
@@ -202,7 +199,7 @@ msgstr "خطا"
 msgid "Favorites"
 msgstr "برگزیده‌ها"
 
-#: src/qml/DialerPage/DialerPage.qml:60
+#: src/qml/DialerPage/DialerPage.qml:54
 msgid "Flight mode"
 msgstr "حالت پرواز"
 
@@ -218,8 +215,8 @@ msgstr "قطع کردن"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr "دریافتی"
 
@@ -231,7 +228,7 @@ msgstr "کد USSD نامعتبر است"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:66
+#: src/qml/DialerPage/DialerPage.qml:60
 msgid "Keypad"
 msgstr "صفحه کلید"
 
@@ -243,22 +240,21 @@ msgstr "بعداً"
 msgid "MNO"
 msgstr "MNO"
 
-#: src/qml/LiveCallPage/LiveCall.qml:483
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
 msgstr "ادغام تماس ها"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: src/qml/HistoryPage/HistoryPage.qml:47
 #: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Missed"
 msgstr "بی‌پاسخ"
 
-#: src/qml/LiveCallPage/LiveCall.qml:66
+#: src/qml/LiveCallPage/LiveCall.qml:60
 msgid "New Call"
 msgstr "تماس جدید"
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
 msgid "No"
 msgstr "خیر"
 
@@ -266,12 +262,12 @@ msgstr "خیر"
 msgid "No SIM card selected"
 msgstr "سیم‌کارتی انتخاب نشده است"
 
-#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:68
+#: src/qml/DialerPage/DialerPage.qml:62 src/qml/dialer-app.qml:298
 msgid "No network"
 msgstr "شبکه‌ای موجود نیست"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 #: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr "خروجی"
 
@@ -279,7 +275,7 @@ msgstr "خروجی"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/LiveCallPage/LiveCall.qml:281
+#: src/qml/LiveCallPage/LiveCall.qml:193
 msgid "Phone Speaker"
 msgstr "بلندگوی تلفن"
 
@@ -287,17 +283,16 @@ msgstr "بلندگوی تلفن"
 msgid "Please wait"
 msgstr "لطفاً صبر کنید"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
 msgstr "خصوصی"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 #: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "شماره‌ی خصوصی"
 
-#: src/qml/HistoryPage/HistoryPage.qml:43
-#: src/qml/DialerPage/DialerPage.qml:103
+#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:97
 msgid "Recent"
 msgstr "اخیر"
 
@@ -321,7 +316,7 @@ msgstr ""
 "برای تماس‌های خروجی یک سیم‌کارت پیش‌گزیده انتخاب کنید. شما همواره می‌توانید "
 "انتخابتان را در <a href=\"system_settings\">تنظیمات سامانه</a> تغییر دهید."
 
-#: src/qml/HistoryPage/HistoryPage.qml:345
+#: src/qml/HistoryPage/HistoryPage.qml:328
 msgid "Send message"
 msgstr "ارسال پیام"
 
@@ -354,21 +349,20 @@ msgstr "در حال حاضر شبکه‌ای موجود نیست."
 msgid "Today"
 msgstr "امروز"
 
-#: src/qml/LiveCallPage/LiveCall.qml:279
+#: src/qml/LiveCallPage/LiveCall.qml:191
 msgid "Ubuntu Phone"
 msgstr "تلفن اوبونتویی"
 
-#: src/qml/LiveCallPage/LiveCall.qml:283
+#: src/qml/LiveCallPage/LiveCall.qml:195
 msgid "Unknown device"
 msgstr "دستگاه ناشناس"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 #: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "شماره‌ی ناشناس"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr "پست صوتی"
 
@@ -388,23 +382,23 @@ msgstr "دیروز"
 msgid "You need to select a SIM card"
 msgstr "باید یک سیم‌کارت برگزینید"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "فعّال"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:278
+#: src/qml/LiveCallPage/LiveCall.qml:238
 msgid "calling"
 msgstr "در حال تماس"
 
-#. TRANSLATORS: HH:mm is the time format, translate it according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#. TRANSLATORS: HH:mm is the time format, translate it according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #: src/qml/HistoryPage/HistoryDelegate.qml:239
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr "hh:mm ap"
 
@@ -418,7 +412,7 @@ msgstr "hh:mm:ss"
 msgid "mm:ss"
 msgstr "mm:ss"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr "در حالت انتظار"

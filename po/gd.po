@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-08-29 08:11+0200\n"
+"POT-Creation-Date: 2014-08-29 17:12-0300\n"
 "PO-Revision-Date: 2014-05-20 05:05+0000\n"
 "Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
 "Language-Team: Akerbeltz\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2014-08-30 07:46+0000\n"
+"X-Launchpad-Export-Date: 2014-08-31 07:30+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 "Language: gd\n"
 
@@ -61,7 +61,7 @@ msgstr ""
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:344
+#: src/qml/DialerPage/DialerPage.qml:331 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
@@ -114,11 +114,10 @@ msgid "ABC"
 msgstr "ABC"
 
 #: src/qml/ContactsPage/ContactsPage.qml:71
-#: src/qml/HistoryPage/HistoryPage.qml:47
 msgid "All"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:277
+#: src/qml/LiveCallPage/LiveCall.qml:189
 msgid "Bluetooth device"
 msgstr ""
 
@@ -151,12 +150,10 @@ msgid "Change all Call associations to "
 msgstr ""
 
 #: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30 src/qml/dialer-app.qml:303
-#: src/qml/DialerPage/DialerPage.qml:51
 msgid "Close"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:114
 msgid "Conference"
 msgstr "Gairm co-labhairt"
 
@@ -168,13 +165,13 @@ msgstr "Taisbeanadh de ghairmean ceangailte"
 msgid "Connected Line Restriction"
 msgstr "Bacadh de ghairmean ceangailte"
 
+#: src/qml/HistoryPage/HistoryPage.qml:315
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:32
 #: src/qml/DialerPage/DialerPage.qml:39
+#: src/qml/ContactsPage/ContactsPage.qml:32
 msgid "Contacts"
 msgstr "Luchd-aithne"
 
@@ -182,18 +179,18 @@ msgstr "Luchd-aithne"
 msgid "DEF"
 msgstr "DEF"
 
+#: src/qml/HistoryPage/HistoryPage.qml:293
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Delete"
 msgstr "Sguab às"
 
-#: src/qml/HistoryPage/HistoryPage.qml:322
+#: src/qml/HistoryPage/HistoryPage.qml:305
 msgid "Details"
 msgstr ""
 
-#: src/qml/dialer-app.qml:339 src/qml/dialer-app.qml:353
-#: src/qml/MMI/IMEI.qml:39
+#: src/qml/MMI/IMEI.qml:39 src/qml/dialer-app.qml:339
+#: src/qml/dialer-app.qml:353
 msgid "Dismiss"
 msgstr "Cuir air falbh"
 
@@ -201,7 +198,7 @@ msgstr "Cuir air falbh"
 msgid "Don't ask again"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:241
+#: src/qml/DialerPage/DialerPage.qml:228
 msgid "Enter a number"
 msgstr "Cuir a-steach àireamh"
 
@@ -213,7 +210,7 @@ msgstr "Mearachd"
 msgid "Favorites"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:60
+#: src/qml/DialerPage/DialerPage.qml:54
 msgid "Flight mode"
 msgstr ""
 
@@ -229,8 +226,8 @@ msgstr "Cuir sìos am fòn"
 msgid "IMEI"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr ""
 
@@ -242,7 +239,7 @@ msgstr "Còd USSD mì-dhligheach"
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:66
+#: src/qml/DialerPage/DialerPage.qml:60
 msgid "Keypad"
 msgstr "Pada-iuchraichean"
 
@@ -254,22 +251,21 @@ msgstr ""
 msgid "MNO"
 msgstr "MNO"
 
-#: src/qml/LiveCallPage/LiveCall.qml:483
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:173
 msgid "Merge calls"
 msgstr "Co-aonaich na gairmean"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: src/qml/HistoryPage/HistoryPage.qml:47
 #: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Missed"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:66
+#: src/qml/LiveCallPage/LiveCall.qml:60
 msgid "New Call"
 msgstr ""
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
 msgid "No"
 msgstr ""
 
@@ -277,12 +273,12 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:68
+#: src/qml/DialerPage/DialerPage.qml:62 src/qml/dialer-app.qml:298
 msgid "No network"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 #: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr ""
 
@@ -290,7 +286,7 @@ msgstr ""
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/LiveCallPage/LiveCall.qml:281
+#: src/qml/LiveCallPage/LiveCall.qml:193
 msgid "Phone Speaker"
 msgstr ""
 
@@ -298,17 +294,16 @@ msgstr ""
 msgid "Please wait"
 msgstr "Fuirich ort"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
 msgid "Private"
 msgstr "Prìobhaideach"
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 #: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:43
-#: src/qml/DialerPage/DialerPage.qml:103
+#: src/qml/HistoryPage/HistoryPage.qml:43 src/qml/DialerPage/DialerPage.qml:97
 msgid "Recent"
 msgstr ""
 
@@ -330,7 +325,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:345
+#: src/qml/HistoryPage/HistoryPage.qml:328
 msgid "Send message"
 msgstr ""
 
@@ -363,21 +358,20 @@ msgstr ""
 msgid "Today"
 msgstr "An-diugh"
 
-#: src/qml/LiveCallPage/LiveCall.qml:279
+#: src/qml/LiveCallPage/LiveCall.qml:191
 msgid "Ubuntu Phone"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:283
+#: src/qml/LiveCallPage/LiveCall.qml:195
 msgid "Unknown device"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 #: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr ""
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:116
 msgid "Voicemail"
 msgstr "Post-gutha"
 
@@ -397,23 +391,23 @@ msgstr "An-dè"
 msgid "You need to select a SIM card"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
 msgid "active"
 msgstr "beò"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-#: src/qml/LiveCallPage/LiveCall.qml:278
+#: src/qml/LiveCallPage/LiveCall.qml:238
 msgid "calling"
 msgstr "a' fònaigeadh"
 
-#. TRANSLATORS: HH:mm is the time format, translate it according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#. TRANSLATORS: HH:mm is the time format, translate it according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #: src/qml/HistoryPage/HistoryDelegate.qml:239
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr ""
 
@@ -427,7 +421,7 @@ msgstr ""
 msgid "mm:ss"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
 msgid "on hold"
 msgstr "'ga chumail"
