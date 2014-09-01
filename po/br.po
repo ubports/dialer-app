@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-29 17:12-0300\n"
-"PO-Revision-Date: 2014-08-26 07:45+0000\n"
+"PO-Revision-Date: 2014-09-01 07:22+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-08-31 07:30+0000\n"
+"X-Launchpad-Export-Date: 2014-09-01 07:34+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -47,7 +47,7 @@ msgstr[1] "%1 eil"
 #: src/qml/HistoryPage/HistoryDelegate.qml:207
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -111,7 +111,7 @@ msgstr "An holl anezho"
 
 #: src/qml/LiveCallPage/LiveCall.qml:189
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Benveg Bluetooth"
 
 #: src/qml/dialer-app.qml:409
 msgid "Call Barring"
@@ -160,7 +160,7 @@ msgstr "Strishaat ar re a zo o pellgomz"
 #: src/qml/HistoryPage/HistoryPage.qml:315
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:54
 msgid "Contact Details"
-msgstr ""
+msgstr "Munudoù an darempred"
 
 #: src/qml/DialerPage/DialerPage.qml:39
 #: src/qml/ContactsPage/ContactsPage.qml:32
@@ -216,7 +216,7 @@ msgstr "Advarc'hañ"
 
 #: src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:309
@@ -280,7 +280,7 @@ msgstr "PQRS"
 
 #: src/qml/LiveCallPage/LiveCall.qml:193
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Uhelgomzer ar pellgomzer"
 
 #: src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -330,7 +330,7 @@ msgstr "Arventennoù"
 
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "Rannañ"
 
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
@@ -355,11 +355,11 @@ msgstr "Hiziv"
 
 #: src/qml/LiveCallPage/LiveCall.qml:191
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Pellgomzer Ubuntu"
 
 #: src/qml/LiveCallPage/LiveCall.qml:195
 msgid "Unknown device"
-msgstr ""
+msgstr "Benveg dianav"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:175
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:44
@@ -404,17 +404,17 @@ msgstr "o pellgomz"
 #: src/qml/HistoryPage/HistoryDelegate.qml:239
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm ap"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
 
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:136

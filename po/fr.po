@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-08-29 17:12-0300\n"
-"PO-Revision-Date: 2014-08-28 17:47+0000\n"
+"PO-Revision-Date: 2014-08-31 20:05+0000\n"
 "Last-Translator: Jean Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-08-31 07:30+0000\n"
+"X-Launchpad-Export-Date: 2014-09-01 07:34+0000\n"
 "X-Generator: Launchpad (build 17176)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -111,7 +111,7 @@ msgstr "Tous"
 
 #: src/qml/LiveCallPage/LiveCall.qml:189
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Périphérique Bluetooth"
 
 #: src/qml/dialer-app.qml:409
 msgid "Call Barring"
@@ -216,7 +216,7 @@ msgstr "Raccrocher"
 
 #: src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:60
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:309
@@ -280,7 +280,7 @@ msgstr "PQRS"
 
 #: src/qml/LiveCallPage/LiveCall.qml:193
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Haut-parleur téléphonique"
 
 #: src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -355,11 +355,11 @@ msgstr "Aujourd'hui"
 
 #: src/qml/LiveCallPage/LiveCall.qml:191
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Téléphone Ubuntu"
 
 #: src/qml/LiveCallPage/LiveCall.qml:195
 msgid "Unknown device"
-msgstr ""
+msgstr "Périphérique inconnu"
 
 #: src/qml/HistoryPage/HistoryDelegate.qml:175
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:44
@@ -404,7 +404,7 @@ msgstr "appel en cours"
 #: src/qml/HistoryPage/HistoryDelegate.qml:239
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm ap"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: src/qml/HistoryPage/dateUtils.js:112
