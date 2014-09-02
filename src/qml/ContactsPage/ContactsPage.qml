@@ -87,6 +87,7 @@ Page {
                 onTriggered: {
                     contactList.forceActiveFocus()
                     contactsPage.state = "default"
+                    contactsPage.head.sections.selectedIndex = 0
                 }
             }
 
