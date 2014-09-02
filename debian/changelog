@@ -1,3 +1,31 @@
+dialer-app (0.1+14.10.20140829.1-0ubuntu1) utopic; urgency=low
+
+  [ Martin Pitt ]
+  * update PO template
+
+  [ Gustavo Pichorim Boiko ]
+  * Add All/Missed categories to the call log page. (LP: #1320437)
+  * Update the live call designs according to the spec, including the
+    following changes: hide the header when DTMF keypad is active.
+    update the visuals and behavior of the multi call and conference
+    call scenarios. keep the live call view visible for a few seconds
+    showing the status of an ended call (LP: #1303260)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 29 Aug 2014 22:42:54 +0000
+
+dialer-app (0.1+14.10.20140827-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Tiago Salem Herrmann ]
+  * Display available audio routes on the live call view
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 27 Aug 2014 16:11:24 +0000
+
 dialer-app (0.1+14.10.20140825-0ubuntu1) utopic; urgency=low
 
   [ Tiago Salem Herrmann ]

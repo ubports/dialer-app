@@ -26,8 +26,8 @@ Column {
 
     property QtObject conference: null
 
-    spacing: units.gu(1)
     visible: opacity > 0
+    height: childrenRect.height
 
     Behavior on opacity {
         UbuntuNumberAnimation { }
@@ -39,15 +39,40 @@ Column {
         ListItem.Empty {
             id: callDelegate
             property QtObject callEntry: modelData
+            property bool isLast: index == (repeater.count - 1)
 
             removable: true
             confirmRemoval: true
             showDivider: false
-            height: (conferenceCallArea.height - units.gu(repeater.count-1)) / (repeater.count > 0 ? repeater.count : 1)
+            height: units.gu(4)
 
             anchors {
                 left: parent.left
                 right: parent.right
+            }
+
+            ContactWatcher {
+                id: contactWatcher
+                phoneNumber: callEntry.phoneNumber
+            }
+
+            Label {
+                id: aliasLabel
+                fontSize: "large"
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(1)
+                    verticalCenter: parent.verticalCenter
+                }
+                text: {
+                    if (callEntry.voicemail) {
+                        return i18n.tr("Voicemail");
+                    } else if (contactWatcher.alias != "") {
+                        return contactWatcher.alias;
+                    } else {
+                        return contactWatcher.phoneNumber;
+                    }
+                }
             }
 
             backgroundIndicator: Rectangle {
@@ -57,86 +82,71 @@ Column {
                 color: "red"
                 clip: true
 
-                Row {
+                Icon {
+                    name: "call-end"
+                    color: "white"
                     anchors {
                         top: parent.top
-                        bottom:  parent.bottom
-                        right: parent.right
-                        rightMargin: units.gu(2)
+                        bottom: parent.bottom
+                        margins: units.gu(1)
+                        horizontalCenter: parent.horizontalCenter
                     }
-                    spacing: units.gu(2)
-                    Icon {
-                        name: "call-end"
-                        color: "white"
-                        anchors {
-                            verticalCenter: parent.verticalCenter
-                        }
-                        width: units.gu(5)
-                        height: units.gu(5)
-                    }
-                    Label {
-                        text: i18n.tr("Hangup")
-                        verticalAlignment: Text.AlignVCenter
-                        anchors {
-                            verticalCenter: parent.verticalCenter
-                        }
-                        width: units.gu(7)
-                        fontSize: "medium"
-                    }
+                    width: height
                 }
             }
 
             onItemRemoved: callEntry.endCall()
 
-            Rectangle {
-                color: callEntry.held ? "black" : "white"
-                opacity: 0.5
-                anchors.fill: parent
-                radius: units.gu(0.5)
-                antialiasing: true
-
-                Behavior on color {
-                    ColorAnimation {
-                        duration: 150
-                    }
-                }
-            }
-
-            ContactWatcher {
-                id: watcher
-                phoneNumber: callEntry.phoneNumber
+            StopWatch {
+                id: stopWatch
+                time: callEntry.elapsedTime
             }
 
             Label {
-                id: aliasLabel
-                fontSize: "large"
+                id: durationLabel
+                text: callEntry.active ? stopWatch.elapsed : i18n.tr("Calling")
                 anchors {
-                    left: parent.left
-                    top: parent.top
-                    margins: units.gu(1)
-                }
-                text: watcher.alias != "" ? watcher.alias : watcher.phoneNumber;
-            }
-
-            Label {
-                fontSize: "medium"
-                anchors {
-                    left: parent.left
-                    top: aliasLabel.bottom
-                    margins: units.gu(1)
-                }
-                text: callEntry.held ? i18n.tr("on hold") : i18n.tr("active")
-            }
-
-            Button {
-                text: i18n.tr("Private")
-                anchors {
-                    verticalCenter: parent.verticalCenter
                     right: parent.right
-                    rightMargin: units.gu(1)
+                    rightMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
                 }
+            }
+
+            AbstractButton {
+                id: splitButton
+
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    right: durationLabel.left
+                }
+                width: callStatus.width + units.gu(2)
+
                 visible: !callManager.backgroundCall
                 onClicked: callEntry.splitCall()
+
+                Label {
+                    id: callStatus
+                    fontSize: "medium"
+                    anchors {
+                        centerIn: parent
+                    }
+                    color: UbuntuColors.lightAubergine
+                    text: i18n.tr("Private")
+                    font.weight: Font.DemiBold
+                    verticalAlignment: Text.AlignVCenter
+                    horizontalAlignment: Text.AlignHCenter
+                }
+            }
+
+            ListItem.ThinDivider {
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    bottom: parent.bottom
+                }
+                visible: !isLast
             }
         }
     }
