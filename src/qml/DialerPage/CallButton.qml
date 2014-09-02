@@ -30,6 +30,10 @@ AbstractButton {
     height: units.gu(4.5)
     opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
 
+    Behavior on opacity {
+        UbuntuNumberAnimation { }
+    }
+
     UbuntuShape {
         id: shape
 

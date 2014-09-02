@@ -85,6 +85,11 @@ class TestCalls(DialerAppTestCase):
         time.sleep(1)
         self.main_view.live_call_page.click_hangup_button()
 
+        # now the live call view stays open for a few seconds after the call
+        # ends, so we need to wait for the dialpad view to be active before
+        # trying to interact with the bottom edge
+        self.main_view.dialer_page.active.wait_for(True)
+
         # log should show call to the phone number
         self.main_view.dialer_page.reveal_bottom_edge_page()
         self.assertThat(self.history_list.count, Eventually(Equals(1)))

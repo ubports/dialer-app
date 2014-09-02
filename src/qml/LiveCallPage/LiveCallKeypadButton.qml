@@ -23,6 +23,7 @@ AbstractButton {
     id: button
 
     property alias iconSource: icon.name
+    property alias iconColor: icon.color
     property bool selected: false
 
     width: units.gu(7)
@@ -42,5 +43,12 @@ AbstractButton {
         width: (iconWidth > 0) ? iconWidth : undefined
         height: (iconHeight > 0) ? iconHeight : undefined
         color: Theme.palette.normal.baseText
+
+        Behavior on color {
+            ColorAnimation {
+                duration: UbuntuAnimation.FastDuration
+                easing: UbuntuAnimation.StandardEasing
+            }
+        }
     }
 }

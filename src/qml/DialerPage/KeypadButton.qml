@@ -32,6 +32,9 @@ AbstractButton {
     property int keycode
     property bool isCorner: false
     property int corner
+    property alias pressed: mouseArea.pressed
+ 
+    signal keyPressed()
 
     UbuntuShape {
         anchors.fill: parent
@@ -91,5 +94,13 @@ AbstractButton {
             width: units.gu(2)
             height: units.gu(2)
         }
+    }
+
+    // WORKAROUND: AbstractButton does not provide onPressed()
+    MouseArea {
+        id: mouseArea
+        anchors.fill: parent
+        onPressed: button.keyPressed()
+        onPressAndHold: button.pressAndHold()
     }
 }

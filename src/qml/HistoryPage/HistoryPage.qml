@@ -30,7 +30,7 @@ Page {
 
     property string searchTerm
     property int delegateHeight: delegate.height
-    property bool fullView: false
+    property bool fullView: currentIndex == -1
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
@@ -44,10 +44,13 @@ Page {
     anchors.fill: parent
     active: false
 
+    head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
+
     Rectangle {
         anchors.fill: parent
         color: Theme.palette.normal.background
     }
+
     states: [
         PageHeadState {
             name: "select"
@@ -89,6 +92,7 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
+            historyPage.flickable = null
         }
 
     }
@@ -114,21 +118,40 @@ Page {
         }
     }
 
-    HistoryEventModel {
+    Connections {
+        target: head.sections
+        onSelectedIndexChanged: {
+            // NOTE: be careful on changing the way filters are assigned, if we create a
+            // binding on head.sections, we might get weird results when the page moves to the bottom
+            if (pageStack.depth > 1) {
+                if (head.sections.selectedIndex == 0) {
+                    historyEventModel.filter = emptyFilter;
+                } else {
+                    historyEventModel.filter = missedFilter;
+                }
+            }
+        }
+    }
+
+    HistoryFilter {
+        id: emptyFilter
+    }
+
+    HistoryFilter {
+        id: missedFilter
+        filterProperty: "missed"
+        filterValue: true
+    }
+
+    HistoryGroupedEventsModel {
         id: historyEventModel
+        groupingProperties: ["participants", "date"]
         type: HistoryThreadModel.EventTypeVoice
         sort: HistorySort {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
-        filter: HistoryFilter {}
-    }
-
-    SortProxyModel {
-        id: sortProxy
-        sortRole: HistoryEventModel.TimestampRole
-        sourceModel: historyEventModel
-        ascending: false
+        filter: emptyFilter
     }
 
     MultipleSelectionListView {
@@ -174,7 +197,7 @@ Page {
 
         currentIndex: -1
         anchors.fill: parent
-        listModel: sortProxy
+        listModel: historyEventModel
 
         onSelectionDone: {
             for (var i=0; i < items.count; i++) {
@@ -189,7 +212,59 @@ Page {
             }
         }
 
+        Component {
+            id: sectionComponent
+            Label {
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                }
+                text: DateUtils.friendlyDay(section)
+                height: units.gu(5)
+                fontSize: "medium"
+                font.weight: Font.DemiBold
+                verticalAlignment: Text.AlignVCenter
+                ListItem.ThinDivider {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                        bottomMargin: units.gu(0.5)
+                    }
+                }
+            }
+        }
+
+        section.property: "date"
+        section.delegate: fullView ? sectionComponent : null
+
         listDelegate: delegateComponent
+        displaced: Transition {
+            UbuntuNumberAnimation {
+                property: "y"
+            }
+        }
+
+        remove: Transition {
+            ParallelAnimation {
+                UbuntuNumberAnimation {
+                    property: "height"
+                    to: 0
+                }
+
+                UbuntuNumberAnimation {
+                    properties: "opacity"
+                    to: 0
+                }
+                ScriptAction {
+                    script: {
+                        historyList.resetSwipe()
+                    }
+                }
+            }
+        }
 
         Component {
             id: delegateComponent
@@ -208,42 +283,6 @@ Page {
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
                 active: ListView.isCurrentItem
-
-                // Animate item removal
-                ListView.onRemove: SequentialAnimation {
-                    PropertyAction {
-                        target: historyDelegate
-                        property: "ListView.delayRemove"
-                        value: true
-                    }
-
-                    // reset swipe state
-                    ScriptAction {
-                        script: {
-                            if (historyList._currentSwipedItem === historyDelegate) {
-                                historyList._currentSwipedItem.resetSwipe()
-                                historyList._currentSwipedItem = null
-                            }
-
-                            if (ListView.isCurrentItem) {
-                                contactListView.currentIndex = -1
-                            }
-                        }
-                    }
-
-                    // animate the removal
-                    UbuntuNumberAnimation {
-                        target: historyDelegate
-                        property: "height"
-                        to: 1
-                    }
-
-                    PropertyAction {
-                        target: historyDelegate
-                        property: "ListView.delayRemove"
-                        value: false
-                    }
-                }
 
                 onItemPressAndHold: {
                     if (!historyList.isInSelectionMode) {
@@ -269,14 +308,28 @@ Page {
                 leftSideAction: Action {
                     iconName: "delete"
                     text: i18n.tr("Delete")
-                    onTriggered:  historyEventModel.removeEvent(model.accountId, model.threadId, model.eventId, model.type)
+                    onTriggered:  {
+                        var events = model.events;
+                        for (var i in events) {
+                            historyEventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type)
+                        }
+                    }
                 }
                 property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
                 rightSideActions: [
-                    // FIXME: the first action should go to contac call log details page
+                    Action {
+                        iconName: "info"
+                        text: i18n.tr("Details")
+                        onTriggered: {
+                            pageStack.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
+                                                          { phoneNumber: participants[0],
+                                                            events: model.events,
+                                                            eventModel: historyEventModel})
+                        }
+                    },
                     Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
-                        text: i18n.tr("Details")
+                        text: i18n.tr("Contact Details")
                         onTriggered: {
                             if (unknownContact) {
                                 mainView.addNewPhone(phoneNumber)

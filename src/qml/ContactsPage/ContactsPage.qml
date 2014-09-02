@@ -26,10 +26,12 @@ import QtContacts 5.0
 Page {
     id: contactsPage
     objectName: "contactsPage"
-    title: i18n.tr("Contacts")
+
     property QtObject contact
 
-    __customHeaderContents: TextField {
+    title: i18n.tr("Contacts")
+
+    TextField {
         id: searchField
 
         anchors {
@@ -44,6 +46,77 @@ Page {
         onTextChanged: contactList.currentIndex = -1
         inputMethodHints: Qt.ImhNoPredictiveText
         placeholderText: i18n.tr("Search...")
+        visible: false
+    }
+
+    state: "default"
+    states: [
+        PageHeadState {
+            id: defaultState
+
+            name: "default"
+            actions: [
+                Action {
+                    text: i18n.tr("Search")
+                    iconName: "search"
+                    onTriggered: {
+                        contactsPage.state = "searching"
+                        searchField.forceActiveFocus()
+                    }
+                }
+            ]
+            PropertyChanges {
+                target: contactsPage.head
+                actions: defaultState.actions
+                sections.model: [i18n.tr("All"), i18n.tr("Favorites")]
+            }
+            PropertyChanges {
+                target: searchField
+                text: ""
+                visible: false
+            }
+        },
+        PageHeadState {
+            id: searchingState
+
+            name: "searching"
+            backAction: Action {
+                iconName: "close"
+                text: i18n.tr("Cancel")
+                onTriggered: {
+                    contactList.forceActiveFocus()
+                    contactsPage.state = "default"
+                }
+            }
+
+            PropertyChanges {
+                target: contactsPage.head
+                backAction: searchingState.backAction
+                contents: searchField
+            }
+
+            PropertyChanges {
+                target: searchField
+                text: ""
+                visible: true
+            }
+        }
+    ]
+
+    Connections {
+        target: contactsPage.head.sections
+        onSelectedIndexChanged: {
+            switch (contactsPage.head.sections.selectedIndex) {
+            case 0:
+                contactList.showAllContacts()
+                break;
+            case 1:
+                contactList.showFavoritesContacts()
+                break;
+            default:
+                break;
+            }
+        }
     }
 
     // background
@@ -61,6 +134,67 @@ Page {
             right: parent.right
             bottom: keyboardRect.top
         }
+
+
+        header: Item {
+            id: addNewContactButton
+            objectName: "addNewContact"
+
+            anchors {
+                left: parent.left
+                right: parent.right
+            }
+            height: units.gu(8)
+
+            Rectangle {
+                anchors.fill: parent
+                color: Theme.palette.selected.background
+                opacity: addNewContactButtonArea.pressed ?  1.0 : 0.0
+            }
+
+            UbuntuShape {
+                id: addIcon
+
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    bottom: parent.bottom
+                    margins: units.gu(1)
+                }
+                width: height
+                radius: "medium"
+                color: Theme.palette.normal.overlay
+                Image {
+                    anchors.centerIn: parent
+                    width: units.gu(2)
+                    height: units.gu(2)
+                    source: "image://theme/add"
+                }
+            }
+
+            Label {
+                id: name
+
+                anchors {
+                    left: addIcon.right
+                    leftMargin: units.gu(2)
+                    verticalCenter: parent.verticalCenter
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                }
+                color: UbuntuColors.lightAubergine
+                text: i18n.tr("+ Create New")
+                elide: Text.ElideRight
+            }
+
+            MouseArea {
+                id: addNewContactButtonArea
+
+                anchors.fill: parent
+                onClicked: mainView.createNewContactForPhone(" ")
+            }
+        }
+
         onInfoRequested: {
            mainView.viewContact(contact.contactId)
         }
