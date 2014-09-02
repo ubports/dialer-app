@@ -7,9 +7,8 @@
 # under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
 
-"""Dialer app autopilot emulators."""
+"""Dialer app autopilot custom proxy objects."""
 
-from autopilot.introspection.dbus import StateNotFoundError
 from ubuntuuitoolkit._custom_proxy_objects import _common
 
 
@@ -34,6 +33,7 @@ class ListItemWithActions(_common.UbuntuUIToolkitCustomProxyObjectBase):
         start_y = stop_y = y + (height // 2)
 
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
+
 
 class HistoryDelegate(ListItemWithActions):
     pass
