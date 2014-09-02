@@ -17,34 +17,28 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
+import Ubuntu.Telephony 0.1
+import Ubuntu.Components 0.1
+import Ubuntu.Components.Popups 0.1
 
-AbstractButton {
-    id: button
-    width: units.gu(21)
-    height: units.gu(4.5)
-    // FIXME: waiting on #1072733
-    //iconSource: "../assets/dialer_call.png"
-    opacity: button.pressed ? 0.5 : (enabled ? 1 : 0.2)
+Item {
+    property string code: "*#06#"
 
-    Behavior on opacity {
-        UbuntuNumberAnimation { }
+    function trigger() {
+        PopupUtils.open(imeiDialog)
     }
 
-    UbuntuShape {
-        anchors.fill: parent
-        //color: button.pressed ? "#cd3804" : "#dd4814"
-        color: button.pressed ? "#dd4814" : "red"
-        gradientColor: "#e24b3a"
-        radius: "medium"
-    }
-
-    Icon {
-        anchors.centerIn: parent
-        width: units.gu(3)
-        height: units.gu(3)
-        name: "call-end"
-        color: "white"
-        z: 1
+    Component {
+        id: imeiDialog
+        Dialog {
+            id: imei
+            visible: false
+            title: i18n.tr("IMEI")
+            text: ussdManager.serial(mainView.account.accountId)
+            Button {
+                text: i18n.tr("Dismiss")
+                onClicked: PopupUtils.close(imei)
+            }
+        }
     }
 }

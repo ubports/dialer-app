@@ -33,7 +33,11 @@ function formatLogDate(timestamp) {
 }
 
 function friendlyDay(timestamp) {
-    var date = new Date(timestamp);
+    var year = Qt.formatDate(timestamp, "yyyy");
+    var month = Qt.formatDate(timestamp, "MM");
+    var day = Qt.formatDate(timestamp, "dd");
+    // NOTE: it is very weird, but javascript Date() object expects months to be between 0 and 11
+    var date = new Date(year, month-1, day);
     var today = new Date();
     var yesterday = new Date();
     yesterday.setDate(today.getDate()-1);
@@ -50,12 +54,39 @@ function formatFriendlyDate(timestamp) {
     return Qt.formatTime(timestamp, Qt.DefaultLocaleShortDate) + " - " + friendlyDay(timestamp);
 }
 
+function dateFromDuration(duration) {
+    var durationTime = new Date();
+    var processedDuration = duration;
+    var seconds = processedDuration % 60;
+    var minutes = 0;
+    var hours = 0;
+
+
+    // divide by 60 to get the minutes
+    processedDuration = Math.floor(processedDuration / 60);
+    if (processedDuration > 0) {
+        minutes = processedDuration % 60;
+
+        // divide again to get the hours
+        processedDuration = Math.floor(processedDuration / 60);
+        hours = processedDuration;
+    }
+
+    durationTime.setHours(hours);
+    durationTime.setMinutes(minutes);
+    durationTime.setSeconds(seconds);
+
+    return durationTime;
+}
+
 function formatFriendlyCallDuration(duration) {
     var text = "";
 
-    var hours = parseInt(Qt.formatTime(duration, "hh"));
-    var minutes = parseInt(Qt.formatTime(duration, "mm"));
-    var seconds = parseInt(Qt.formatTime(duration, "ss"));
+    var durationTime = dateFromDuration(duration);
+
+    var hours = parseInt(Qt.formatTime(durationTime, "hh"));
+    var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
+    var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
 
     if (hours > 0) {
         text = i18n.tr("%1 hour", "%1 hours", hours).arg(hours)
@@ -65,5 +96,23 @@ function formatFriendlyCallDuration(duration) {
         text = i18n.tr("%1 sec", "%1 secs", seconds).arg(seconds)
     }
 
+    return text;
+}
+
+function formatCallDuration(duration) {
+    var text = ""
+    var durationTime = dateFromDuration(duration);
+
+    var hours = parseInt(Qt.formatTime(durationTime, "hh"));
+    var minutes = parseInt(Qt.formatTime(durationTime, "mm"));
+    var seconds = parseInt(Qt.formatTime(durationTime, "ss"));
+
+    if (hours > 0) {
+        // TRANSLATORS: this is the duration time format when the call lasted more than an hour
+        text = Qt.formatTime(durationTime, i18n.tr("hh:mm:ss"));
+    } else {
+        // TRANSLATORS: this is the duration time format when the call lasted less than an hour
+        text = Qt.formatTime(durationTime, i18n.tr("mm:ss"));
+    }
     return text;
 }

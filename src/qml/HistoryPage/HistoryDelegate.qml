@@ -46,10 +46,10 @@ ListItemWithActions {
             return;
         }
 
-        if (fullView) {
+        if (fullView && mainView.account) {
             mainView.call(model.participants[0], mainView.account.accountId);
         } else {
-            mainView.populateDialpad(model.participants[0], mainView.account.accountId);
+            mainView.populateDialpad(model.participants[0], mainView.account ? mainView.account.accountId : "");
         }
     }
 
@@ -95,7 +95,7 @@ ListItemWithActions {
 
         function updateSubTypeLabel() {
             var subLabel = contactWatcher.isUnknown
-            if (model.participants[0]) {
+            if (model.participants && model.participants[0]) {
                 var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
                 if (typeInfo) {
                     subLabel = typeInfo.label
@@ -159,12 +159,14 @@ ListItemWithActions {
         id: titleLabel
         anchors {
             top: parent.top
+            topMargin: units.gu(0.5)
             left: avatar.right
             leftMargin: units.gu(2)
             right: time.left
+            rightMargin: units.gu(1) + (countLabel.visible ? countLabel.width : 0)
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignTop
         fontSize: "medium"
         text: {
             if (contactWatcher.phoneNumber == "x-ofono-private") {
@@ -180,15 +182,41 @@ ListItemWithActions {
         color: UbuntuColors.lightAubergine
     }
 
+    // this item has the width of the text above. It is used to be able to align
+    Item {
+        id: titleLabelArea
+        anchors {
+            top: titleLabel.top
+            left: titleLabel.left
+            bottom: titleLabel.bottom
+        }
+        width: titleLabel.paintedWidth
+    }
+
+    Label {
+        id: countLabel
+        anchors {
+            left: titleLabelArea.right
+            leftMargin: units.gu(0.5)
+            top: titleLabel.top
+        }
+        height: units.gu(2)
+        fontSize: "medium"
+        visible: model.eventCount > 1
+        // TRANSLATORS: this is the count of events grouped into this single item
+        text: i18n.tr("(%1)").arg(model.eventCount)
+    }
+
     Label {
         id: phoneLabel
         anchors {
-            bottom: parent.bottom
+            top: titleLabel.bottom
+            topMargin: units.gu(1)
             left: avatar.right
             leftMargin: units.gu(2)
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignTop
         fontSize: "small"
         // FIXME: handle conference call
         text: phoneNumberSubTypeLabel
@@ -200,22 +228,25 @@ ListItemWithActions {
         id: time
         anchors {
             right: parent.right
-            verticalCenter: titleLabel.verticalCenter
+            bottom: titleLabel.bottom
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignBottom
         fontSize: "small"
-        text: Qt.formatTime(model.timestamp, "hh:mm")
+        // TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
+        // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+        // please change according to your language
+        text: Qt.formatTime(model.timestamp, i18n.tr("hh:mm ap"))
     }
 
     Label {
         id: callType
         anchors {
             right: parent.right
-            verticalCenter: phoneLabel.verticalCenter
+            bottom: phoneLabel.bottom
         }
         height: units.gu(2)
-        verticalAlignment: Text.AlignVCenter
+        verticalAlignment: Text.AlignBottom
         fontSize: "small"
         text: selectCallType()
     }

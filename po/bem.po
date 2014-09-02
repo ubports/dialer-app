@@ -7,275 +7,439 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-06-16 19:26+0200\n"
-"PO-Revision-Date: 2014-08-05 06:56+0000\n"
+"POT-Creation-Date: 2014-09-01 15:47+0200\n"
+"PO-Revision-Date: 2014-08-27 06:17+0000\n"
 "Last-Translator: goof <goof@coppernet.zm>\n"
 "Language-Team: Bemba <bem@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
-"X-Launchpad-Export-Date: 2014-08-06 06:55+0000\n"
-"X-Generator: Launchpad (build 17147)\n"
+"X-Launchpad-Export-Date: 2014-09-02 07:21+0000\n"
+"X-Generator: Launchpad (build 17192)\n"
 
-#: src/qml/DialerPage/Keypad.qml:161
+#: src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
-#: src/qml/HistoryPage/dateUtils.js:61
+#. TRANSLATORS: %1 is the call duration here.
+#: src/qml/LiveCallPage/LiveCall.qml:381
+#, qt-format
+msgid "%1 - on hold"
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "Insa %1"
 msgstr[1] "Insa %1"
 
-#: src/qml/HistoryPage/dateUtils.js:63
+#: src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 min"
 msgstr[1] "%1 mins"
 
-#: src/qml/HistoryPage/dateUtils.js:65
+#: src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
 msgstr[0] "%1 sec"
 msgstr[1] "%1 secs"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#. TRANSLATORS: this is the count of events grouped into this single item
+#: src/qml/HistoryPage/HistoryDelegate.qml:207
+#, qt-format
+msgid "(%1)"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:150
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:148
+#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:344
 msgid "+"
 msgstr "+"
 
-#: src/qml/DialerPage/Keypad.qml:147
+#: src/qml/ContactsPage/ContactsPage.qml:186
+msgid "+ Create New"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:160
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:45
+#: src/qml/DialerPage/Keypad.qml:49
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:56
+#: src/qml/DialerPage/Keypad.qml:60
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:66
+#: src/qml/DialerPage/Keypad.qml:71
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:76
+#: src/qml/DialerPage/Keypad.qml:82
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:86
+#: src/qml/DialerPage/Keypad.qml:93
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:96
+#: src/qml/DialerPage/Keypad.qml:104
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:106
+#: src/qml/DialerPage/Keypad.qml:115
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: src/qml/DialerPage/Keypad.qml:126
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: src/qml/DialerPage/Keypad.qml:137
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:57
+#: src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:80
-msgid "Add Contact"
-msgstr "Ukubika mu chitabo"
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:123
+msgid "Active"
+msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:42
-msgid "Add to existing contact"
-msgstr "Ukubika pawaba kale mucitabo"
+#: src/qml/HistoryPage/HistoryPage.qml:47
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "All"
+msgstr ""
 
-#: src/qml/dialer-app.qml:335
+#: src/qml/LiveCallPage/LiveCall.qml:277
+msgid "Bluetooth device"
+msgstr ""
+
+#: src/qml/dialer-app.qml:409
 msgid "Call Barring"
 msgstr "Ukulesha abaletuma"
 
-#: src/qml/dialer-app.qml:346
+#: src/qml/dialer-app.qml:420
 msgid "Call Forwarding"
 msgstr "Ukutuma ama phone kumbi"
 
-#: src/qml/dialer-app.qml:357
+#: src/qml/dialer-app.qml:431
 msgid "Call Waiting"
 msgstr "Ukulolela"
 
-#: src/qml/MainPage.qml:56
-msgid "Call log"
-msgstr "Amalamya yakunuma"
+#: src/qml/LiveCallPage/LiveCall.qml:109
+msgid "Call ended"
+msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:114
-msgid "Call now"
-msgstr "Ukutuma nombaline"
+#: src/qml/LiveCallPage/LiveCall.qml:248
+msgid "Call failed"
+msgstr ""
 
-#: src/qml/dialer-app.qml:368
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: src/qml/LiveCallPage/LiveCall.qml:383
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+msgid "Calling"
+msgstr ""
+
+#: src/qml/dialer-app.qml:442
 msgid "Calling Line Presentation"
 msgstr "Imimonekele ya lamya ngailelila"
 
-#: src/qml/dialer-app.qml:380
+#: src/qml/dialer-app.qml:454
 msgid "Calling Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:60
+#: src/qml/ContactsPage/ContactsPage.qml:85
 msgid "Cancel"
 msgstr "Ukukansa"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:114
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:29
+msgid "Change all Call associations to "
+msgstr ""
+
+#: src/qml/dialer-app.qml:303 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
+#: src/qml/DialerPage/DialerPage.qml:51
+msgid "Close"
+msgstr "Ukwisala"
+
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: src/qml/LiveCallPage/LiveCall.qml:47
 msgid "Conference"
 msgstr "Ukulanda nabantu abengi"
 
-#: src/qml/dialer-app.qml:374
+#: src/qml/dialer-app.qml:448
 msgid "Connected Line Presentation"
 msgstr "Imimonekele nga nabasuka"
 
-#: src/qml/dialer-app.qml:386
+#: src/qml/dialer-app.qml:460
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:29
-#: src/qml/DialerPage/DialerPage.qml:40
+#: src/qml/HistoryPage/HistoryPage.qml:332
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:54
+msgid "Contact Details"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:39
+#: src/qml/ContactsPage/ContactsPage.qml:32
 msgid "Contacts"
 msgstr "Amashina yabantu"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:51
-msgid "Create new contact"
-msgstr "Ukwingisha ishina"
-
-#: src/qml/DialerPage/Keypad.qml:67
+#: src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:269
+#: src/qml/HistoryPage/HistoryPage.qml:310
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:74
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:248
 msgid "Delete"
 msgstr "Ukufuta"
 
-#: src/qml/dialer-app.qml:265 src/qml/dialer-app.qml:279
+#: src/qml/HistoryPage/HistoryPage.qml:322
+msgid "Details"
+msgstr "Nafimbi"
+
+#: src/qml/dialer-app.qml:339 src/qml/dialer-app.qml:353
+#: src/qml/MMI/IMEI.qml:39
 msgid "Dismiss"
 msgstr "Ukufumyapo"
 
-#: src/qml/DialerPage/DialerPage.qml:188
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:66
+msgid "Don't ask again"
+msgstr "Takuli kwipusha nakabili"
+
+#: src/qml/DialerPage/DialerPage.qml:241
 msgid "Enter a number"
 msgstr "Ukwingisha namba"
 
-#: src/qml/dialer-app.qml:262
+#: src/qml/dialer-app.qml:336
 msgid "Error"
 msgstr "Pali icalubana"
 
-#: src/qml/DialerPage/Keypad.qml:77
+#: src/qml/ContactsPage/ContactsPage.qml:71
+msgid "Favorites"
+msgstr "Ifyatemwikwa sana"
+
+#: src/qml/DialerPage/DialerPage.qml:60
+msgid "Flight mode"
+msgstr "Ukulesha ukulila"
+
+#: src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
 msgstr "GHI"
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:78
-msgid "Hangup"
-msgstr "Ukuputula"
+#: src/qml/MMI/IMEI.qml:36
+msgid "IMEI"
+msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:39
-msgid "How do you want to save the contact?"
-msgstr "Imisungile yeshina yamusango shani?"
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: src/qml/HistoryPage/HistoryDelegate.qml:60
+msgid "Incoming"
+msgstr "Iyileisa"
 
-#: src/qml/dialer-app.qml:263
+#: src/qml/dialer-app.qml:337
 msgid "Invalid USSD code"
 msgstr "Iyi USSD code takwaba"
 
-#: src/qml/DialerPage/Keypad.qml:87
+#: src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/DialerPage/DialerPage.qml:66
 msgid "Keypad"
 msgstr "Apakutinika"
 
-#: src/qml/DialerPage/Keypad.qml:97
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
+msgid "Later"
+msgstr "Inshita imbi"
+
+#: src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
 msgstr "MNO"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:173
+#: src/qml/LiveCallPage/LiveCall.qml:483
 msgid "Merge calls"
+msgstr "Ukubika pamo ama lamya"
+
+#: src/qml/HistoryPage/HistoryPage.qml:47
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
+#: src/qml/HistoryPage/HistoryDelegate.qml:58
+msgid "Missed"
+msgstr "Ukupusa"
+
+#: src/qml/LiveCallPage/LiveCall.qml:66
+msgid "New Call"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:75
-msgid "New call"
-msgstr "Ukutuma"
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+msgid "No"
+msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:107
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
+msgid "No SIM card selected"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:98
+msgid "No calls"
+msgstr ""
+
+#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:68
+msgid "No network"
+msgstr ""
+
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:121
+msgid "On hold"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: src/qml/HistoryPage/HistoryDelegate.qml:62
+msgid "Outgoing"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/dialer-app.qml:243
+#: src/qml/LiveCallPage/LiveCall.qml:281
+msgid "Phone Speaker"
+msgstr ""
+
+#: src/qml/dialer-app.qml:317
 msgid "Please wait"
 msgstr ""
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:132
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
 msgstr "Munkama"
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:38
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "Save contact"
-msgstr "Ukusunga ishina"
-
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:124
-msgid "Send text message"
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: src/qml/HistoryPage/HistoryDelegate.qml:173
+msgid "Private number"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:117
-msgid "TUV"
+#: src/qml/HistoryPage/HistoryPage.qml:43
+#: src/qml/DialerPage/DialerPage.qml:103
+msgid "Recent"
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:41
-msgid "Today"
+#: src/qml/ContactsPage/ContactsPage.qml:60
+msgid "Search"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:47
-msgid "Two Calls"
+#: src/qml/ContactsPage/ContactsPage.qml:48
+msgid "Search..."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDelegate.qml:139
-msgid "Unknown"
+#: src/qml/HistoryPage/HistoryPage.qml:43
+msgid "Select"
 msgstr ""
 
-#: src/qml/HistoryPage/CallLogContactDelegate.qml:134
-msgid "View contact"
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
+msgid ""
+"Select a default SIM for all outgoing calls. You can always alter your "
+"choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:116
-msgid "Voicemail"
+#: src/qml/HistoryPage/HistoryPage.qml:345
+msgid "Send message"
+msgstr ""
+
+#: src/qml/DialerPage/DialerPage.qml:44
+msgid "Settings"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:66
+msgid "Share"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:468
+msgid "Switch calls"
+msgstr ""
+
+#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
+msgid "Switch to default SIM:"
 msgstr ""
 
 #: src/qml/DialerPage/Keypad.qml:127
+msgid "TUV"
+msgstr ""
+
+#: src/qml/dialer-app.qml:299
+#, qt-format
+msgid "There is currently no network on %1"
+msgstr ""
+
+#: src/qml/dialer-app.qml:300
+msgid "There is currently no network."
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:45
+msgid "Today"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:279
+msgid "Ubuntu Phone"
+msgstr ""
+
+#: src/qml/LiveCallPage/LiveCall.qml:283
+msgid "Unknown device"
+msgstr ""
+
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: src/qml/HistoryPage/HistoryDelegate.qml:175
+msgid "Unknown number"
+msgstr ""
+
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+msgid "Voicemail"
+msgstr ""
+
+#: src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:43
+#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:49
+msgid "Yes"
+msgstr ""
+
+#: src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:138
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
-msgid "active"
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
+msgid "You need to select a SIM card"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:244
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:134
-msgid "calling"
+#. TRANSLATORS: HH:mm is the time format, translate it according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+#. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+#. please change according to your language
+#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#: src/qml/HistoryPage/HistoryDelegate.qml:239
+msgid "hh:mm ap"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:136
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:128
-msgid "on hold"
+#. TRANSLATORS: this is the duration time format when the call lasted more than an hour
+#: src/qml/HistoryPage/dateUtils.js:112
+msgid "hh:mm:ss"
 msgstr ""
+
+#. TRANSLATORS: this is the duration time format when the call lasted less than an hour
+#: src/qml/HistoryPage/dateUtils.js:115
+msgid "mm:ss"
+msgstr ""
+
+#~ msgid "Hangup"
+#~ msgstr "Ukuputula"
