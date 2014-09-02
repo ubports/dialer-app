@@ -170,6 +170,22 @@ MainView {
         return false
     }
 
+    function checkMMI(number) {
+        var endString1 = "#"
+        var endString2 = "*"
+        // check if it ends with # or *
+        if (number.slice(-endString1.length) == endString1 || number.slice(-endString2.length) == endString2) {
+            // check if it starts with any of these strings
+            var startStrings = ["*", "#", "**", "##", "*#"]
+            for(var i in startStrings) {
+                if (number.slice(0, startStrings[i].length) == startStrings[i]) {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
     function call(number, accountId) {
         // clear the values here so that the changed signals are fired when the new value is set
         pendingNumberToDial = "";

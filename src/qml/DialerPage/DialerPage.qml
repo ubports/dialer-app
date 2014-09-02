@@ -31,6 +31,7 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property var mmiPlugins: []
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
@@ -45,6 +46,12 @@ PageWithBottomEdge {
         }
     ]
     head.actions: greeter.greeterActive ? actionsGreeter : actionsNormal
+    head.backAction: Action {
+        iconName: "back"
+        text: i18n.tr("Close")
+        visible: greeter.greeterActive
+        onTriggered: greeter.showGreeter()
+    }
  
     objectName: "dialerPage"
 
@@ -94,7 +101,7 @@ PageWithBottomEdge {
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
-    reloadBottomEdgePage: false
+    reloadBottomEdgePage: true
 
     property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
 
@@ -116,6 +123,13 @@ PageWithBottomEdge {
             bottomEdgePage.activateCurrentIndex()
         } else {
             bottomEdgePage.currentIndex = -1
+        }
+    }
+
+    onIsCollapsedChanged: {
+        if (isCollapsed && bottomEdgePage) {
+            // reset the history page to the "All" view
+            bottomEdgePage.head.sections.selectedIndex = 0;
         }
     }
 
@@ -141,7 +155,15 @@ PageWithBottomEdge {
         onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
 
-    Component.onCompleted: head.sections.selectedIndex = accountIndex(mainView.account)
+    Component.onCompleted: {
+        head.sections.selectedIndex = accountIndex(mainView.account)
+        // load MMI plugins
+        var plugins = application.mmiPluginList()
+        for (var i in plugins) {
+            var component = Qt.createComponent(plugins[i]);
+            mmiPlugins.push(component.createObject(page))
+        }
+    }
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
@@ -300,13 +322,13 @@ PageWithBottomEdge {
             onKeyPressed: {
                 callManager.playTone(label);
                 input.insert(input.cursorPosition, label)
-                if(checkUSSD(dialNumber)) {
+                if(checkMMI(dialNumber)) {
                     // check for custom strings
-                    if (dialNumber === "*#06#") {
-                        dialNumber = ""
-                        mainView.ussdResponseTitle = "IMEI"
-                        mainView.ussdResponseText = ussdManager.serial(mainView.account.accountId)
-                        PopupUtils.open(ussdResponseDialog)
+                    for (var i in mmiPlugins) {
+                        if (mmiPlugins[i].code == dialNumber) {
+                            dialNumber = ""
+                            mmiPlugins[i].trigger()
+                        }
                     }
                 }
             }

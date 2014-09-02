@@ -20,6 +20,7 @@ import QtQuick 2.0
 import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
+import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 import QtContacts 5.0
@@ -30,17 +31,21 @@ Page {
     id: liveCall
     objectName: "pageLiveCall"
 
-    property QtObject call: callManager.foregroundCall
+    property var call: callManager.foregroundCall
     property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
-    property bool isSpeaker: call ? call.speaker : false
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: call ? call.voicemail : false
-    property bool isVoicemail: call ? call.voicemail : false
+    property bool multiCall: callManager.calls.length > 1
+    property bool isVoicemail: (call ? call.voicemail : false) && callManager.calls.length === 1
+    property string activeAudioOutput: call ? call.activeAudioOutput : ""
+    property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
     property string caller: {
-        if (contactWatcher.alias !== "") {
+        if (call && call.isConference) {
+            return i18n.tr("Conference");
+        } else if (contactWatcher.alias !== "") {
             return contactWatcher.alias;
         } else if (contactWatcher.phoneNumber !== "") {
             return contactWatcher.phoneNumber;
@@ -55,6 +60,7 @@ Page {
             visible: false
         },
         Action {
+            id: newCallAction
             objectName: "newCallButton"
             iconName: "contact"
             text: i18n.tr("New Call")
@@ -73,13 +79,60 @@ Page {
     head.sections.model: multipleAccounts ? [call.account.displayName] : []
     x: header ? header.height : 0
 
-    // if there are no calls, just reset the view
+    function reportStatus(callObject, text) {
+        // if a previous status was already set, do not overwrite it
+        if (statusLabel.text !== "" || callManager.hasCalls) {
+            return;
+        }
+        statusLabel.text = text;
+        liveCall.call = callObject;
+        liveCall.dtmfVisible = false;
+        newCallAction.visible = false;
+        closeTimer.running = true;
+    }
+
     Connections {
         target: callManager
         onHasCallsChanged: {
             if(!callManager.hasCalls) {
-                mainView.switchToKeypadView();
-                pageStack.currentPage.dialNumber = pendingNumberToDial;
+                reportStatus({}, i18n.tr("No calls"));
+            }
+        }
+    }
+
+    Connections {
+        target: call
+        onCallEnded: {
+            var callObject = {};
+            callObject["elapsedTime"] = call.elapsedTime;
+            callObject["active"] = true;
+            reportStatus(callObject, i18n.tr("Call ended"));
+        }
+    }
+
+    Component {
+        id: audioOutputsPopover
+        Popover {
+            id: popover
+            Column {
+                id: containerLayout
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    right: parent.right
+                }
+                ListItems.Header { text: "Switch audio source:" }
+                Repeater {
+                    model: audioOutputs
+                    ListItems.Standard { 
+                        text: nameForAudioId(modelData.id)
+                        showDivider: index != model.count-1
+                        onClicked: {
+                            call.activeAudioOutput = modelData.id
+                            PopupUtils.close(popover)
+                        }
+                    }
+                }
             }
         }
     }
@@ -91,8 +144,7 @@ Page {
 
             PropertyChanges {
                 target: durationLabel
-                font.pixelSize: FontUtils.sizeToPixels("medium")
-                anchors.topMargin: units.gu(2)
+                anchors.topMargin: units.gu(3)
             }
 
             PropertyChanges {
@@ -104,6 +156,55 @@ Page {
                 target: keypad
                 opacity: 1.0
             }
+            PropertyChanges {
+                target: liveCall
+                title: ""
+            }
+            PropertyChanges {
+                target: dtmfButton
+                iconColor: UbuntuColors.green
+            }
+        },
+
+        State {
+            name: "multiCall"
+            when: (multiCall || call && call.isConference) && !dtmfVisible
+
+            PropertyChanges {
+                target: durationLabel
+                opacity: 0.0
+            }
+
+            PropertyChanges {
+                target: callerLabel
+                opacity: 0.0
+            }
+
+            PropertyChanges {
+                target: multiCallArea
+                opacity: 1.0
+            }
+        },
+
+        State {
+            name: "closing"
+            when: closeTimer.running
+
+            PropertyChanges {
+                target: buttonsArea
+                opacity: 0.0
+                enabled: false
+            }
+
+            PropertyChanges {
+                target: hangupButton
+                enabled: false
+            }
+
+            PropertyChanges {
+                target: durationLabel
+                anchors.topMargin: units.gu(9)
+            }
         }
     ]
 
@@ -112,10 +213,10 @@ Page {
             ParallelAnimation {
                 UbuntuNumberAnimation {
                     targets: [durationLabel,callerLabel]
-                    properties: "font.pixelSize,anchors.topMargin"
+                    properties: "font.pixelSize,anchors.topMargin,opacity"
                 }
                 UbuntuNumberAnimation {
-                    targets: [keypad]
+                    targets: [keypad,multiCallArea,buttonsArea]
                     properties: "opacity"
                 }
             }
@@ -138,13 +239,29 @@ Page {
 
     Timer {
         id: callWatcher
-        interval: 10000
+        interval: 7000
         repeat: false
         running: true
         onTriggered: {
             if (!callManager.hasCalls) {
                 // TODO: notify about failed call
+                reportStatus({}, i18n.tr("Call failed"))
+            }
+        }
+    }
+
+    Timer {
+        id: closeTimer
+        interval: 3000
+        repeat: false
+        running: false
+        onTriggered: {
+            if (!callManager.hasCalls) {
                 mainView.switchToKeypadView();
+                pageStack.currentPage.dialNumber = pendingNumberToDial;
+                if (greeter.greeterActive) {
+                    greeter.showGreeter();
+                }
             }
         }
     }
@@ -153,6 +270,17 @@ Page {
         if (call) {
             call.endCall();
         }
+    }
+
+    function nameForAudioId(id) {
+        if (id == "bluetooth") {
+            return i18n.tr("Bluetooth device")
+        } else if (id == "default") {
+            return i18n.tr("Ubuntu Phone")
+        } else if (id == "speaker") {
+            return i18n.tr("Phone Speaker")
+        }
+        return i18n.tr("Unknown device")
     }
 
     // FIXME: this invisible label is only used for
@@ -220,6 +348,22 @@ Page {
         }
 
         Label {
+            id: statusLabel
+            anchors {
+                bottom: durationLabel.top
+                bottomMargin: units.gu(1)
+                horizontalCenter: durationLabel.horizontalCenter
+            }
+            text: ""
+            fontSize: "large"
+            opacity: text !== "" ? 1 : 0
+
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+        }
+
+        Label {
             id: durationLabel
 
             anchors {
@@ -233,9 +377,10 @@ Page {
                 if (dtmfVisible && dtmfLabelHelper.text !== "") {
                     return dtmfLabelHelper.text;
                 } else if (call && call.active) {
-                    return stopWatch.elapsed;
+                    // TRANSLATORS: %1 is the call duration here.
+                    return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
                 } else {
-                    return i18n.tr("calling")
+                    return i18n.tr("Calling")
                 }
             }
             fontSize: "x-large"
@@ -257,47 +402,31 @@ Page {
         MultiCallDisplay {
             id: multiCallArea
             calls: callManager.calls
-            opacity: (calls.length > 1 && !keypad.visible && !conferenceCallArea.visible) ? 1 : 0
+            opacity: 0
             anchors {
                 fill: parent
-                margins: units.gu(1)
             }
         }
 
-        ConferenceCallDisplay {
-            id: conferenceCallArea
-            opacity: conference && !keypad.visible ? 1 : 0
+        ListItems.ThinDivider {
+            id: divider
+            opacity: keypad.opacity
             anchors {
-                fill: parent
-                margins: units.gu(1)
+                left: parent.left
+                right: parent.right
+                top: callerLabel.bottom
+                topMargin: units.gu(2)
             }
-
-            states: [
-                State {
-                    name: "whileInMulticall"
-                    when: callManager.foregroundCall && callManager.backgroundCall
-                    PropertyChanges {
-                        target: conferenceCallArea
-                        conference: null
-                    }
-                },
-                State {
-                    name: "singleCallIsConf"
-                    when: callManager.foregroundCall && !callManager.backgroundCall && callManager.foregroundCall.isConference
-                    PropertyChanges {
-                        target: conferenceCallArea
-                        conference: callManager.foregroundCall
-                    }
-                }
-
-            ]
         }
 
         Keypad {
             id: keypad
 
-            anchors.bottom: parent.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                top: divider.bottom
+                topMargin: units.gu(2)
+                horizontalCenter: parent.horizontalCenter
+            }
             onKeyPressed: {
                 if (call) {
                     dtmfEntry += label
@@ -311,14 +440,66 @@ Page {
     }
 
     Row {
-        id: buttonsArea
-        height: childrenRect.height
+        id: multiCallActionArea
+
+        anchors {
+            horizontalCenter: parent.horizontalCenter
+            bottom: buttonsArea.top
+            bottomMargin: units.gu(2)
+        }
+
         width: childrenRect.width
+        height: childrenRect.height
+        opacity: multiCall && !dtmfVisible ? 1 : 0
+        enabled : opacity > 0
+        spacing: units.gu(3)
+
+        Behavior on opacity {
+            UbuntuNumberAnimation { }
+        }
+
+        Button {
+            id: swapButton
+            visible: calls.length > 1
+            anchors {
+                verticalCenter: parent.verticalCenter
+            }
+
+            text: i18n.tr("Switch calls")
+            color: mainView.backgroundColor
+            strokeColor: UbuntuColors.green
+            onClicked: {
+                callManager.foregroundCall.held = true
+            }
+        }
+
+        Button {
+            id: mergeButton
+            visible: calls.length > 1
+            anchors {
+                verticalCenter: parent.verticalCenter
+            }
+
+            text: i18n.tr("Merge calls")
+            color: mainView.backgroundColor
+            strokeColor: UbuntuColors.green
+            onClicked: {
+                callManager.mergeCalls(callManager.calls[0], callManager.calls[1])
+            }
+        }
+    }
+
+    Row {
+        id: buttonsArea
+
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: footer.top
             bottomMargin: units.gu(1)
         }
+
+        height: childrenRect.height
+        width: childrenRect.width
 
         LiveCallKeypadButton {
             objectName: "muteButton"
@@ -338,14 +519,13 @@ Page {
             objectName: "pauseStartButton"
             iconSource: {
                 if (callManager.backgroundCall) {
-                    return "switch"
+                    return "swap"
                 } else if (selected) {
                     return "media-playback-start"
                 } else {
                     return "media-playback-pause"
                 }
             }
-            enabled: !isVoicemail
             selected: liveCall.onHold
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
@@ -357,14 +537,42 @@ Page {
         }
 
         LiveCallKeypadButton {
+            id: speakerButton
             objectName: "speakerButton"
-            iconSource: selected ? "speaker" : "speaker-mute"
-            selected: liveCall.isSpeaker
+            iconSource: {
+                if (audioOutputs && audioOutputs.length <= 2) {
+                    if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    }
+                    return "speaker-mute"
+                } else {
+                    if (activeAudioOutput == "bluetooth") {
+                        return "audio-speakers-bluetooth-symbolic"
+                    } else if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    } else {
+                        return "speaker-mute"
+                    }
+                }
+            }
+            selected: activeAudioOutput != "default"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             onClicked: {
                 if (call) {
-                    call.speaker = !selected
+                    // all phones have at least two outputs: speaker and default,
+                    // where default is either earpiece or wired headset
+                    // if we have more than 2, we have to show a popup so users
+                    // can select the active audio output
+                    if (audioOutputs.length > 2) {
+                        PopupUtils.open(audioOutputsPopover, speakerButton)
+                        return
+                    }
+                    if (call.activeAudioOutput == "default") {
+                        call.activeAudioOutput = "speaker"
+                    } else {
+                        call.activeAudioOutput = "default"
+                    }
                 }
             }
         }
