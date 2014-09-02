@@ -72,7 +72,7 @@ class TestCallLogs(DialerAppTestCase):
         """
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate.active_action(3)
+        delegate.send_message()
 
         self.assertThat(
             self.get_last_dispatch_url_call_parameter,
@@ -85,7 +85,7 @@ class TestCallLogs(DialerAppTestCase):
         """
         delegate = self.main_view.wait_select_single(
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
-        delegate.active_action(2)
+        delegate.add_contact()
 
         self.assertThat(
             self.get_last_dispatch_url_call_parameter,

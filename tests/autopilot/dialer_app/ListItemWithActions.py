@@ -9,7 +9,6 @@
 
 """Dialer app autopilot emulators."""
 
-from autopilot.introspection.dbus import StateNotFoundError
 from ubuntuuitoolkit._custom_proxy_objects import _common
 
 
@@ -23,17 +22,26 @@ class ListItemWithActions(_common.UbuntuUIToolkitCustomProxyObjectBase):
 
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
 
-    def active_action(self, action_index):
-        action_margin = ((self.actionWidth / 5) * 2)
-        x_offset = ((self.actionWidth + action_margin) * action_index)
-        x_offset += self.actionThreshold
 
+class HistoryDelegate(ListItemWithActions):
+
+    """Autopilot helper for the History delegate."""
+
+    def send_message(self):
+        self._show_actions()
+        icon = self.select_single('Icon11', name='message')
+        self.pointing_device.click_object(icon)
+
+    def _show_actions(self):
         x, y, width, height = self.globalRect
-        start_x = x + (width * 0.5)
-        stop_x = start_x - x_offset
+        start_x = x + (width * 0.8)
+        stop_x = x + (width * 0.2)
         start_y = stop_y = y + (height // 2)
 
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
 
-class HistoryDelegate(ListItemWithActions):
-    pass
+    def add_contact(self):
+        self._show_actions()
+        icon = self.select_single('Icon11', name='contact-new')
+        self.pointing_device.click_object(icon)
+
