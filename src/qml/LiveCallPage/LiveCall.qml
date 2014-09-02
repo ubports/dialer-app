@@ -76,7 +76,7 @@ Page {
 
     title: caller
     head.actions: greeter.greeterActive ? greeterModeActions : regularActions
-    head.sections.model: multipleAccounts ? [call.account.displayName] : []
+    head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
 
     function reportStatus(callObject, text) {
