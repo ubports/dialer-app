@@ -24,6 +24,7 @@
 #include <QString>
 #include <QTemporaryFile>
 #include <QTextStream>
+#include <QQmlDebuggingEnabler>
 
 // libc
 #include <cerrno>
@@ -34,8 +35,9 @@
 #include "dialerapplication.h"
 #include "config.h"
 
-// Temporarily disable the telepathy folks backend
-// as it doesn’t play well with QtFolks.
+// make it possible to do QML profiling
+static QQmlDebuggingEnabler debuggingEnabler(false);
+
 int main(int argc, char** argv)
 {
     QGuiApplication::setApplicationName("Dialer App");
