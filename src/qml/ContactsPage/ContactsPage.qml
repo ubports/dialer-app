@@ -61,6 +61,7 @@ Page {
                     iconName: "search"
                     onTriggered: {
                         contactsPage.state = "searching"
+                        contactList.showAllContacts()
                         searchField.forceActiveFocus()
                     }
                 }
@@ -86,6 +87,7 @@ Page {
                 onTriggered: {
                     contactList.forceActiveFocus()
                     contactsPage.state = "default"
+                    contactsPage.head.sections.selectedIndex = 0
                 }
             }
 
