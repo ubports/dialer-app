@@ -183,6 +183,7 @@ Page {
                     rightMargin: units.gu(2)
                 }
                 color: UbuntuColors.lightAubergine
+                // TRANSLATORS: this refers to a new contact
                 text: i18n.tr("+ Create New")
                 elide: Text.ElideRight
             }
