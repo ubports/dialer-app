@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-01 15:47+0200\n"
-"PO-Revision-Date: 2014-08-30 08:51+0000\n"
+"PO-Revision-Date: 2014-09-02 08:27+0000\n"
 "Last-Translator: Richard Somlói <ricsipontaz@gmail.com>\n"
 "Language-Team: Hungarian <hu@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-02 07:21+0000\n"
-"X-Generator: Launchpad (build 17192)\n"
+"X-Launchpad-Export-Date: 2014-09-03 07:05+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -26,7 +26,7 @@ msgstr "#"
 #: src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - hívás várakoztatva"
 
 #: src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -59,7 +59,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:344
+#: src/qml/DialerPage/DialerPage.qml:344 src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
@@ -142,11 +142,11 @@ msgstr "Hívás befejezve"
 
 #: src/qml/LiveCallPage/LiveCall.qml:248
 msgid "Call failed"
-msgstr ""
+msgstr "A hívás sikertelen"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:100
 #: src/qml/LiveCallPage/LiveCall.qml:383
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Hívás"
 
@@ -166,13 +166,13 @@ msgstr "Mégse"
 msgid "Change all Call associations to "
 msgstr "Összes hívás hozzátársítás változtatása erre: "
 
-#: src/qml/dialer-app.qml:303 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/dialer-app.qml:303 src/qml/DialerPage/DialerPage.qml:51
+#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 msgid "Close"
 msgstr "Bezárás"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
 #: src/qml/LiveCallPage/LiveCall.qml:47
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Konferencia"
 
@@ -208,8 +208,8 @@ msgstr "Törlés"
 msgid "Details"
 msgstr "Részletek"
 
-#: src/qml/dialer-app.qml:339 src/qml/dialer-app.qml:353
-#: src/qml/MMI/IMEI.qml:39
+#: src/qml/MMI/IMEI.qml:39 src/qml/dialer-app.qml:339
+#: src/qml/dialer-app.qml:353
 msgid "Dismiss"
 msgstr "Elvetés"
 
@@ -299,7 +299,7 @@ msgstr "Nincs hálózat"
 
 #: src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "Várakoztatás"
 
 #: src/qml/HistoryPage/HistoryDetailsPage.qml:311
 #: src/qml/HistoryPage/HistoryDelegate.qml:62
@@ -367,7 +367,7 @@ msgstr "Megosztás"
 
 #: src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
-msgstr ""
+msgstr "Váltás a hívások között"
 
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
@@ -403,8 +403,8 @@ msgstr "Ismeretlen eszköz"
 msgid "Unknown number"
 msgstr "Ismeretlen szám"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "Hangposta"
 
@@ -443,15 +443,3 @@ msgstr "hh.mm.ss"
 #: src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm.ss"
-
-#~ msgid "Hangup"
-#~ msgstr "Bontás"
-
-#~ msgid "calling"
-#~ msgstr "hívás"
-
-#~ msgid "active"
-#~ msgstr "aktív"
-
-#~ msgid "on hold"
-#~ msgstr "várakozik"
