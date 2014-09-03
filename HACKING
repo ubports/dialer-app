@@ -1,5 +1,34 @@
+dialer-app hacking guide
+========================
+
+Getting dialer-app
+------------------
+
+To get the main development branch of dialer-app:
+
+    $ bzr branch lp:dialer-app
+
+
+Building the app
+----------------
+
+This app is built using cmake. Here's an example on how to build it:
+
+    $ cmake .
+    $ make -j 8
+
+
+Running the built app
+---------------------
+
+After building the app, it can be run with:
+
+    $ ./src/dialer-app
+
+
 Test coverage
 -------------
+
 dialer-app has autopilot tests which cover basic use cases like making an
 outgoing call and receiving an incoming call. They are integration tests which
 cover dialer-app itself, all the user session APIs below it (libofono-qt,
@@ -11,20 +40,30 @@ be skipped.
 The tests should run on both a desktop (like an Ubuntu desktop live session or
 Otto [http://launchpad.net/otto]) and a phone environment.
 
-How to run the tests
---------------------
+
+Running the autopilot tests with the installed app
+--------------------------------------------------
+
 The easiest and standard way across Ubuntu phablet packages is to install the
 dialer-app-autopilot package and run the tests from the system Python path:
 
-  sudo apt-get install dialer-app-autopilot
-  autopilot run dialer_app
+    $ sudo apt-get install dialer-app-autopilot
+    $ autopilot3 run dialer_app
 
 dialer-app-autopilot depends on ofono-phonesim-autostart to set up the
 simulated Modem automatically, and all the other additional test dependencies
 for autopilot. You can also run the tests right out of the source tree for
 development:
 
-  cd tests/autopilot
-  autopilot run dialer_app
+    $ cd tests/autopilot
+    $ autopilot3 run dialer_app
 
 (but you still need all the dialer-app-autopilot dependencies installed).
+
+
+Running the autopilot tests with the built app
+----------------------------------------------
+
+After building the app, the autopilot tests can be run with:
+
+    $ make test-autopilot
