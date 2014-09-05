@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-01 15:47+0200\n"
-"PO-Revision-Date: 2014-09-02 17:04+0000\n"
-"Last-Translator: Jean Marc <Unknown>\n"
+"PO-Revision-Date: 2014-09-04 19:37+0000\n"
+"Last-Translator: Anne <anneonyme017@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-09-03 07:05+0000\n"
+"X-Launchpad-Export-Date: 2014-09-05 07:51+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgstr "#"
 #: src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - en attente"
 
 #: src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -142,7 +142,7 @@ msgstr "Appel terminé"
 
 #: src/qml/LiveCallPage/LiveCall.qml:248
 msgid "Call failed"
-msgstr ""
+msgstr "Échec de l'appel"
 
 #: src/qml/LiveCallPage/LiveCall.qml:383
 #: src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
@@ -367,7 +367,7 @@ msgstr "Partager"
 
 #: src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
-msgstr ""
+msgstr "Permuter les appels"
 
 #: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
