@@ -16,7 +16,7 @@ macro(DECLARE_QML_TEST TST_NAME TST_QML_FILE)
 endmacro()
 
 if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
-    declare_qml_test("dialer_page" tst_DialerPage.qml)
+    declare_qml_test("keypad_button" tst_KeypadButton.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)
         message(WARNING "Qml tests disabled: qmltestrunner not found")
@@ -26,6 +26,6 @@ else()
 endif()
 
 set(QML_TST_FILES
-    tst_DialerPage.qml
+    tst_KeypadButton.qml
 )
 add_custom_target(tst_QmlFiles ALL SOURCES ${QML_TST_FILES})
