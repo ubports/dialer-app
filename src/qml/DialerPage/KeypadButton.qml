@@ -37,6 +37,7 @@ AbstractButton {
     signal keyPressed()
 
     UbuntuShape {
+        objectName: "keypadButtonUbuntuShape"
         anchors.fill: parent
         opacity: button.pressed ? 1 : 0
 

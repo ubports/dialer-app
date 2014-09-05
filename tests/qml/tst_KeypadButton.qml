@@ -36,6 +36,12 @@ Item {
         anchors.fill: parent
     }
 
+    SignalSpy {
+        id: spyOnKeyPressed
+        target: keypadButton
+        signalName: 'keyPressed'
+    }
+
     UbuntuTestCase {
         id: keypadButtonTestCase
         name: 'keypadButtonTestCase'
@@ -44,6 +50,10 @@ Item {
 
         function init() {
             waitForRendering(keypadButton);
+        }
+
+        function cleanup() {
+            spyOnKeyPressed.clear()
         }
 
         function test_clickMouseAreaMustScaleLabelsContainer() {
@@ -60,5 +70,32 @@ Item {
 
             tryCompare(labelsContainer, 'scale', 1)
         }
+
+        function test_clickMouseAreaMustMakeUbuntuShapeVisible() {
+            var ubuntuShape = findChild(
+                keypadButton, 'keypadButtonUbuntuShape')
+            compare(ubuntuShape.opacity, 0)
+
+            var mouseArea = findChild(keypadButton, 'keypadButtonMouseArea')
+            mousePress(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+
+            tryCompare(ubuntuShape, 'opacity', 1)
+
+            mouseRelease(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+
+            tryCompare(ubuntuShape, 'opacity', 0)
+        }
+
+        function test_clickMouseAreaMustEmitKeyPressed() {
+            var mouseArea = findChild(keypadButton, 'keypadButtonMouseArea')
+            mouseClick(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+
+            spyOnKeyPressed.wait()
+            compare(
+                spyOnKeyPressed.count, 1,
+                'keyPressed signal was not emitted.')
+        }
+
     }
+
 }
