@@ -1,3 +1,37 @@
+dialer-app (0.1+14.10.20140903.3-0ubuntu1) utopic; urgency=low
+
+  [ Ugo Riboni ]
+  * Make sure the strings from the .desktop file end up in the .pot
+    file. Follow convention and make paths in .pot file relative to po
+    dir as well.
+
+  [ Leo Arias ]
+  * Isolate the autopilot tests, use a fake url-dispatcher instead of
+    depending on messaging app and address book.
+  * Stop using the deprecated emulators namespace. (LP: #1341681)
+
+  [ Martin Pitt ]
+  * POT update
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure the strings from the .desktop file end up in the .pot
+    file. Follow convention and make paths in .pot file relative to po
+    dir as well.
+  * Set the header sections model as undefined when there is only one
+    account available.
+  * Make it possible to profile the app without recompiling.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Make sure the strings from the .desktop file end up in the .pot
+    file. Follow convention and make paths in .pot file relative to po
+    dir as well.
+  * Make sure that all contacts are visible before start the search.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 03 Sep 2014 17:08:23 +0000
+
 dialer-app (0.1+14.10.20140829.1-0ubuntu1) utopic; urgency=low
 
   [ Martin Pitt ]

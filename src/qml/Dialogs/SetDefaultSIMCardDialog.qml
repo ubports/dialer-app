@@ -26,7 +26,8 @@ Component {
         id: dialogue
         property string phoneNumber: ""
         property string accountId: ""
-        text: i18n.tr("Change all Call associations to " + mainView.account.displayName +"?")
+        // TRANSLATORS: this refers to which SIM card will be used as default for calls
+        text: i18n.tr("Change all Call associations to %1?").arg(mainView.account.displayName)
         Column {
             anchors.left: parent.left
             anchors.right: parent.right

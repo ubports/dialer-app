@@ -61,6 +61,7 @@ Page {
                     iconName: "search"
                     onTriggered: {
                         contactsPage.state = "searching"
+                        contactList.showAllContacts()
                         searchField.forceActiveFocus()
                     }
                 }
@@ -86,6 +87,7 @@ Page {
                 onTriggered: {
                     contactList.forceActiveFocus()
                     contactsPage.state = "default"
+                    contactsPage.head.sections.selectedIndex = 0
                 }
             }
 
@@ -183,6 +185,7 @@ Page {
                     rightMargin: units.gu(2)
                 }
                 color: UbuntuColors.lightAubergine
+                // TRANSLATORS: this refers to a new contact
                 text: i18n.tr("+ Create New")
                 elide: Text.ElideRight
             }
