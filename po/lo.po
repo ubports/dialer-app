@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-01 15:47+0200\n"
+"POT-Creation-Date: 2014-09-02 17:23-0300\n"
 "PO-Revision-Date: 2013-10-03 04:06+0000\n"
 "Last-Translator: Anousak <anousak@gmail.com>\n"
 "Language-Team: Lao <lo@li.org>\n"
@@ -15,34 +15,34 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-09-02 07:21+0000\n"
-"X-Generator: Launchpad (build 17192)\n"
+"X-Launchpad-Export-Date: 2014-09-06 07:34+0000\n"
+"X-Generator: Launchpad (build 17196)\n"
 
-#: src/qml/DialerPage/Keypad.qml:174
+#: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: src/qml/LiveCallPage/LiveCall.qml:381
+#: ../src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:92
+#: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/HistoryPage/dateUtils.js:94
+#: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/qml/HistoryPage/dateUtils.js:96
+#: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
@@ -50,396 +50,414 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: src/qml/HistoryPage/HistoryDelegate.qml:207
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:207
 #, qt-format
 msgid "(%1)"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:150
+#: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
 msgstr "*"
 
-#: src/qml/DialerPage/Keypad.qml:161 src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
 
-#: src/qml/ContactsPage/ContactsPage.qml:186
+#. TRANSLATORS: this refers to a new contact
+#: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:160
+#: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
 msgstr "0"
 
-#: src/qml/DialerPage/Keypad.qml:49
+#: ../src/qml/DialerPage/Keypad.qml:49
 msgid "1"
 msgstr "1"
 
-#: src/qml/DialerPage/Keypad.qml:60
+#: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
 msgstr "2"
 
-#: src/qml/DialerPage/Keypad.qml:71
+#: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
 msgstr "3"
 
-#: src/qml/DialerPage/Keypad.qml:82
+#: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
 msgstr "4"
 
-#: src/qml/DialerPage/Keypad.qml:93
+#: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
 msgstr "5"
 
-#: src/qml/DialerPage/Keypad.qml:104
+#: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
 msgstr "6"
 
-#: src/qml/DialerPage/Keypad.qml:115
+#: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
 msgstr "7"
 
-#: src/qml/DialerPage/Keypad.qml:126
+#: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
 msgstr "8"
 
-#: src/qml/DialerPage/Keypad.qml:137
+#: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
 msgstr "9"
 
-#: src/qml/DialerPage/Keypad.qml:61
+#: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
 msgstr "ABC"
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:47
-#: src/qml/ContactsPage/ContactsPage.qml:71
+#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "All"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:277
+#: ../src/qml/LiveCallPage/LiveCall.qml:277
 msgid "Bluetooth device"
 msgstr ""
 
-#: src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:409
 msgid "Call Barring"
 msgstr ""
 
-#: src/qml/dialer-app.qml:420
+#: ../src/qml/dialer-app.qml:420
 msgid "Call Forwarding"
 msgstr ""
 
-#: src/qml/dialer-app.qml:431
+#: ../src/qml/dialer-app.qml:431
 msgid "Call Waiting"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "Call ended"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:248
+#: ../src/qml/LiveCallPage/LiveCall.qml:248
 msgid "Call failed"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:100
-#: src/qml/LiveCallPage/LiveCall.qml:383
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/LiveCall.qml:383
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr ""
 
-#: src/qml/dialer-app.qml:442
+#: ../src/qml/dialer-app.qml:442
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:454
+#: ../src/qml/dialer-app.qml:454
 msgid "Calling Line Restriction"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:85
+#: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
 msgstr ""
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:29
-msgid "Change all Call associations to "
+#. TRANSLATORS: this refers to which SIM card will be used as default for calls
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
+#, qt-format
+msgid "Change all Call associations to %1?"
 msgstr ""
 
-#: src/qml/dialer-app.qml:303 src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: src/qml/DialerPage/DialerPage.qml:51
+#: ../src/qml/DialerPage/DialerPage.qml:51
+#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
+#: ../src/qml/dialer-app.qml:303
 msgid "Close"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:82
-#: src/qml/LiveCallPage/LiveCall.qml:47
+#: ../src/qml/LiveCallPage/LiveCall.qml:47
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr ""
 
-#: src/qml/dialer-app.qml:448
+#: ../src/qml/dialer-app.qml:448
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: src/qml/dialer-app.qml:460
+#: ../src/qml/dialer-app.qml:460
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:332
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:39
-#: src/qml/ContactsPage/ContactsPage.qml:32
+#: ../src/qml/ContactsPage/ContactsPage.qml:32
+#: ../src/qml/DialerPage/DialerPage.qml:39
 msgid "Contacts"
 msgstr "ສາຍພົວພັນ"
 
-#: src/qml/DialerPage/Keypad.qml:72
+#: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
 msgstr "DEF"
 
-#: src/qml/HistoryPage/HistoryPage.qml:310
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:248
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
+#: ../src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Delete"
 msgstr "ລຶບ"
 
-#: src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Details"
 msgstr ""
 
-#: src/qml/dialer-app.qml:339 src/qml/dialer-app.qml:353
-#: src/qml/MMI/IMEI.qml:39
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
+#: ../src/qml/dialer-app.qml:353
 msgid "Dismiss"
 msgstr ""
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:66
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:241
+#: ../src/qml/DialerPage/DialerPage.qml:241
 msgid "Enter a number"
 msgstr "ປ້ອນເລກໂທ"
 
-#: src/qml/dialer-app.qml:336
+#: ../src/qml/dialer-app.qml:336
 msgid "Error"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:71
+#: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:60
+#: ../src/qml/DialerPage/DialerPage.qml:60
 msgid "Flight mode"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:83
+#: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
 msgstr "GHI"
 
-#: src/qml/MMI/IMEI.qml:36
+#: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:309
-#: src/qml/HistoryPage/HistoryDelegate.qml:60
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:60
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr ""
 
-#: src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:337
 msgid "Invalid USSD code"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:94
+#: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
 msgstr "JKL"
 
-#: src/qml/DialerPage/DialerPage.qml:66
+#: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Keypad"
 msgstr "ກະດານ"
 
-#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
+#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:105
+#: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
 msgstr "MNO"
 
-#: src/qml/LiveCallPage/LiveCall.qml:483
+#: ../src/qml/LiveCallPage/LiveCall.qml:483
 msgid "Merge calls"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:47
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: src/qml/HistoryPage/HistoryDelegate.qml:58
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:58
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Missed"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:66
+#: ../src/qml/LiveCallPage/LiveCall.qml:66
 msgid "New Call"
 msgstr ""
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:39
-#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr ""
 
-#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
+#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:98
+#: ../src/qml/LiveCallPage/LiveCall.qml:98
 msgid "No calls"
 msgstr ""
 
-#: src/qml/dialer-app.qml:298 src/qml/DialerPage/DialerPage.qml:68
+#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
 msgid "No network"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:311
-#: src/qml/HistoryPage/HistoryDelegate.qml:62
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:116
+#: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
 msgstr "PQRS"
 
-#: src/qml/LiveCallPage/LiveCall.qml:281
+#: ../src/dialer-app.desktop.in.in.h:1
+msgid "Phone"
+msgstr ""
+
+#: ../src/dialer-app.desktop.in.in.h:2
+msgid "Phone App"
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Phone Speaker"
 msgstr ""
 
-#: src/qml/dialer-app.qml:317
+#: ../src/dialer-app.desktop.in.in.h:3
+msgid "Phone application"
+msgstr ""
+
+#: ../src/dialer-app.desktop.in.in.h:4
+msgid "Phone;Dialer;Dial;Call;Keypad"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
 msgstr ""
 
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:42
-#: src/qml/HistoryPage/HistoryDelegate.qml:173
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:173
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:43
-#: src/qml/DialerPage/DialerPage.qml:103
+#: ../src/qml/DialerPage/DialerPage.qml:103
+#: ../src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Recent"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:60
+#: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
 msgstr ""
 
-#: src/qml/ContactsPage/ContactsPage.qml:48
+#: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Select"
 msgstr ""
 
-#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
+#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:345
 msgid "Send message"
 msgstr ""
 
-#: src/qml/DialerPage/DialerPage.qml:44
+#: ../src/qml/DialerPage/DialerPage.qml:44
 msgid "Settings"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:468
+#: ../src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
 msgstr ""
 
-#: src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
+#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
 msgstr ""
 
-#: src/qml/DialerPage/Keypad.qml:127
+#: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
 msgstr "TUV"
 
-#: src/qml/dialer-app.qml:299
+#: ../src/qml/dialer-app.qml:299
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: src/qml/dialer-app.qml:300
+#: ../src/qml/dialer-app.qml:300
 msgid "There is currently no network."
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:45
+#: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
 msgstr "ວັນນີ້"
 
-#: src/qml/LiveCallPage/LiveCall.qml:279
+#: ../src/qml/LiveCallPage/LiveCall.qml:279
 msgid "Ubuntu Phone"
 msgstr ""
 
-#: src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Unknown device"
 msgstr ""
 
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:44
-#: src/qml/HistoryPage/HistoryDelegate.qml:175
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:175
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr ""
 
-#: src/qml/LiveCallPage/MultiCallDisplay.qml:84
-#: src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "ບັນຖຶກສຽງໂທ"
 
-#: src/qml/DialerPage/Keypad.qml:138
+#: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
 msgstr "WXYZ"
 
-#: src/qml/Dialogs/SetDefaultSIMCardDialog.qml:49
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
 msgstr ""
 
-#: src/qml/HistoryPage/dateUtils.js:47
+#: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
 msgstr "ມື້ວານນີ້"
 
-#: src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
+#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
 msgid "You need to select a SIM card"
 msgstr ""
 
-#. TRANSLATORS: HH:mm is the time format, translate it according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
-#: src/qml/HistoryPage/HistoryDetailsPage.qml:265
-#: src/qml/HistoryPage/HistoryDelegate.qml:239
+#. TRANSLATORS: HH:mm is the time format, translate it according to:
+#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:239
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
-#: src/qml/HistoryPage/dateUtils.js:112
+#: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
 msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
-#: src/qml/HistoryPage/dateUtils.js:115
+#: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr ""
-
-#~ msgid "calling"
-#~ msgstr "ກໍາລັງໂທ"
