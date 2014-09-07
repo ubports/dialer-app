@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-02 17:23-0300\n"
-"PO-Revision-Date: 2014-08-26 16:53+0000\n"
+"PO-Revision-Date: 2014-09-07 04:44+0000\n"
 "Last-Translator: David Planella <david.planella@ubuntu.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:34+0000\n"
+"X-Launchpad-Export-Date: 2014-09-07 06:58+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - en retenció"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -53,7 +53,7 @@ msgstr[1] "%1 segons"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:207
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -115,7 +115,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr ""
+msgstr "Activa"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
@@ -124,11 +124,11 @@ msgstr "Tots"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:277
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Dispositiu Bluetooth"
 
 #: ../src/qml/dialer-app.qml:409
 msgid "Call Barring"
-msgstr ""
+msgstr "Restricció de trucada"
 
 #: ../src/qml/dialer-app.qml:420
 msgid "Call Forwarding"
@@ -136,21 +136,21 @@ msgstr "Desviació de trucades"
 
 #: ../src/qml/dialer-app.qml:431
 msgid "Call Waiting"
-msgstr ""
+msgstr "Trucada en espera"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "Call ended"
-msgstr ""
+msgstr "Ha finalitzat la trucada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:248
 msgid "Call failed"
-msgstr ""
+msgstr "Ha fallat la trucada"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:383
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr ""
+msgstr "S'està trucant"
 
 #: ../src/qml/dialer-app.qml:442
 msgid "Calling Line Presentation"
@@ -168,7 +168,7 @@ msgstr "Canceŀla"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Voleu canviar totes les associacions de trucades a %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
@@ -192,7 +192,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
-msgstr ""
+msgstr "Detalls del contacte"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:39
@@ -244,7 +244,7 @@ msgstr "GHI"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
@@ -296,7 +296,7 @@ msgstr "No s'ha seleccionat cap targeta SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:98
 msgid "No calls"
-msgstr ""
+msgstr "No hi ha trucades"
 
 #: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
 msgid "No network"
@@ -304,7 +304,7 @@ msgstr "Sense xarxa"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "En retenció"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
@@ -317,23 +317,23 @@ msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Trucades"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Altaveu del telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Aplicació del telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telèfon; marcador; trucades; truca; mòbil"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -384,11 +384,11 @@ msgstr "Paràmetres"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "Comparteix"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
-msgstr ""
+msgstr "Commuta entre trucades"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
@@ -413,11 +413,11 @@ msgstr "Avui"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:279
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Telèfon Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Unknown device"
-msgstr ""
+msgstr "Dispositiu desconegut"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:175
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-02 17:23-0300\n"
-"PO-Revision-Date: 2014-09-01 01:34+0000\n"
+"PO-Revision-Date: 2014-09-06 14:30+0000\n"
 "Last-Translator: samson <Unknown>\n"
 "Language-Team: Amharic <am@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:33+0000\n"
+"X-Launchpad-Export-Date: 2014-09-07 06:57+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -168,7 +168,7 @@ msgstr "መሰረዣ"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "ሁሉንም የተዛመዱ ጥሪዎች ልቀይር ወደ %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
@@ -317,11 +317,11 @@ msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "ስልክ"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "የ ስልክ መተግበሪያ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Phone Speaker"
@@ -329,11 +329,11 @@ msgstr "በ ስልኩ ስፒከር"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "የ ስልክ መተግበሪያ"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "ስልክ: መጥሪያ: ጥሪ: መደወያ:"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
