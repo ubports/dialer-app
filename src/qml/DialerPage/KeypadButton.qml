@@ -101,7 +101,6 @@ AbstractButton {
     // WORKAROUND: AbstractButton does not provide onPressed()
     MouseArea {
         id: mouseArea
-        objectName: "keypadButtonMouseArea"
         anchors.fill: parent
         onPressed: button.keyPressed()
         onPressAndHold: button.pressAndHold()

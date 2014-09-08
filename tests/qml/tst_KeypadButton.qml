@@ -56,39 +56,41 @@ Item {
             spyOnKeyPressed.clear()
         }
 
-        function test_clickMouseAreaMustScaleLabelsContainer() {
+        function test_clickButtonMustScaleLabelsContainer() {
             var labelsContainer = findChild(
                 keypadButton, 'keypadButtonLabelsContainer')
             compare(labelsContainer.scale, 1)
 
-            var mouseArea = findChild(keypadButton, 'keypadButtonMouseArea')
-            mousePress(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+            mousePress(
+                keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
             tryCompare(labelsContainer, 'scale', 0.9)
 
-            mouseRelease(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+            mouseRelease(
+                keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
             tryCompare(labelsContainer, 'scale', 1)
         }
 
-        function test_clickMouseAreaMustMakeUbuntuShapeVisible() {
+        function test_clickButtonMustMakeUbuntuShapeVisible() {
             var ubuntuShape = findChild(
                 keypadButton, 'keypadButtonUbuntuShape')
             compare(ubuntuShape.opacity, 0)
 
-            var mouseArea = findChild(keypadButton, 'keypadButtonMouseArea')
-            mousePress(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+            mousePress(
+                keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
             tryCompare(ubuntuShape, 'opacity', 1)
 
-            mouseRelease(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+            mouseRelease(
+                keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
             tryCompare(ubuntuShape, 'opacity', 0)
         }
 
-        function test_clickMouseAreaMustEmitKeyPressed() {
-            var mouseArea = findChild(keypadButton, 'keypadButtonMouseArea')
-            mouseClick(mouseArea, mouseArea.width / 2, mouseArea.height / 2)
+        function test_clickButtonMustEmitKeyPressed() {
+            mouseClick(
+                keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
             spyOnKeyPressed.wait()
             compare(
