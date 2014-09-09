@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-02 17:23-0300\n"
-"PO-Revision-Date: 2014-09-02 08:46+0000\n"
-"Last-Translator: Erik Simmesgård <Unknown>\n"
+"PO-Revision-Date: 2014-09-08 18:38+0000\n"
+"Last-Translator: Josef Andersson <Unknown>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:34+0000\n"
+"X-Launchpad-Export-Date: 2014-09-09 07:55+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 "Language: sv\n"
 
@@ -27,7 +27,7 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - väntande"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -54,7 +54,7 @@ msgstr[1] "%1 sek"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:207
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -116,7 +116,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
@@ -125,7 +125,7 @@ msgstr "Alla"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:277
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Bluetoooth-enhet"
 
 #: ../src/qml/dialer-app.qml:409
 msgid "Call Barring"
@@ -151,7 +151,7 @@ msgstr "Samtal misslyckades"
 #: ../src/qml/LiveCallPage/LiveCall.qml:383
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr ""
+msgstr "Ringer upp"
 
 #: ../src/qml/dialer-app.qml:442
 msgid "Calling Line Presentation"
@@ -169,7 +169,7 @@ msgstr "Avbryt"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Ändra alla uppringningassociationer till %1"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
@@ -193,7 +193,7 @@ msgstr "Dolt nummer"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
-msgstr ""
+msgstr "Kontaktuppgifter"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:39
@@ -305,7 +305,7 @@ msgstr "Inget nätverk"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "Väntar"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
@@ -318,23 +318,23 @@ msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telefon"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Telefonapp"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Telefonhögtalare"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Telefonprogram"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telefon;Uppringare;Ring;Knappsats"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -413,11 +413,11 @@ msgstr "Idag"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:279
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Ubuntu Phone"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Unknown device"
-msgstr ""
+msgstr "Okänd enhet"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:175
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
@@ -453,17 +453,14 @@ msgstr "Du måste välja ett SIM-kort"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:239
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
-
-#~ msgid "Change all Call associations to "
-#~ msgstr "Ändra alla ringassociationer till "
+msgstr "mm:ss"
