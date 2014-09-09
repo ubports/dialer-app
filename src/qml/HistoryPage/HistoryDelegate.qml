@@ -29,11 +29,15 @@ import "dateUtils.js" as DateUtils
 ListItemWithActions {
     id: historyDelegate
 
+    readonly property var participant: model.participants && model.participants[0] ? model.participants[0] : {}
     readonly property bool incoming: model.senderId !== "self"
-    readonly property bool unknownContact: contactWatcher.contactId === ""
-    readonly property alias phoneNumber: contactWatcher.phoneNumber
-    readonly property alias contactId: contactWatcher.contactId
-    readonly property alias interactive: contactWatcher.interactive
+    readonly property bool unknownContact: contactId === ""
+    readonly property string phoneNumber: participant.phoneNumber ? participant.phoneNumber : ""
+    readonly property string contactId: participant.contactId ? participant.contactId : ""
+    readonly property bool interactive: participant.phoneNumber &&
+                                        participant.phoneNumber !== "" &&
+                                        participant.phoneNumber !== "x-ofono-private" &&
+                                        participant.phoneNumber !== "x-ofono-unknown"
 
     property string phoneNumberSubTypeLabel: ""
     property bool isFirst: false
@@ -42,14 +46,14 @@ ListItemWithActions {
 
     function activate() {
         // ignore private and unknown numbers
-        if (model.participants[0] == "x-ofono-private" || model.participants[0] == "x-ofono-unknown") {
+        if (!interactive) {
             return;
         }
 
         if (fullView && mainView.account) {
-            mainView.call(model.participants[0], mainView.account.accountId);
+            mainView.call(participant.phoneNumber, mainView.account.accountId);
         } else {
-            mainView.populateDialpad(model.participants[0], mainView.account ? mainView.account.accountId : "");
+            mainView.populateDialpad(participant.phoneNumber, mainView.account ? mainView.account.accountId : "");
         }
     }
 
@@ -94,8 +98,8 @@ ListItemWithActions {
         id: helper
 
         function updateSubTypeLabel() {
-            var subLabel = contactWatcher.isUnknown
-            if (model.participants && model.participants[0]) {
+            var subLabel = "";
+            if (participant && participant.phoneNumber) {
                 var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
                 if (typeInfo) {
                     subLabel = typeInfo.label
@@ -106,19 +110,10 @@ ListItemWithActions {
 
         Component.onCompleted: updateSubTypeLabel()
 
-        ContactWatcher {
-            id: contactWatcher
-            // FIXME: handle conf calls
-            phoneNumber: model.participants[0]
-            onPhoneNumberContextsChanged: helper.updateSubTypeLabel()
-            onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
-            onIsUnknownChanged: helper.updateSubTypeLabel()
-        }
-
         PhoneNumber {
             id: phoneDetail
-            contexts: contactWatcher.phoneNumberContexts
-            subTypes: contactWatcher.phoneNumberSubTypes
+            contexts: participant.phoneContexts ? participant.phoneContexts : []
+            subTypes: participant.phoneSubTypes ? participant.phoneSubTypes : []
         }
 
         ContactDetailPhoneNumberTypeModel {
@@ -150,8 +145,8 @@ ListItemWithActions {
             bottom: parent.bottom
         }
         width: height
-        fallbackAvatarUrl: contactWatcher.avatar === "" ? "image://theme/stock_contact" : contactWatcher.avatar
-        fallbackDisplayName: contactWatcher.alias !== "" ? contactWatcher.alias : contactWatcher.phoneNumber
+        fallbackAvatarUrl: (participant.avatar  && participant.avatar !== "") ? participant.avatar : "image://theme/stock_contact"
+        fallbackDisplayName: (participant.alias && participant.alias !== "") ? participant.alias : phoneNumber
         showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
     }
 
@@ -169,14 +164,14 @@ ListItemWithActions {
         verticalAlignment: Text.AlignTop
         fontSize: "medium"
         text: {
-            if (contactWatcher.phoneNumber == "x-ofono-private") {
+            if (participant.phoneNumber == "x-ofono-private") {
                 return i18n.tr("Private number")
-            } else if (contactWatcher.phoneNumber == "x-ofono-unknown") {
+            } else if (participant.phoneNumber == "x-ofono-unknown") {
                 return i18n.tr("Unknown number")
-            } else if (contactWatcher.alias != "") {
-                return contactWatcher.alias
+            } else if (participant.alias && participant.alias !== "") {
+                return participant.alias
             }
-            return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+            return PhoneUtils.PhoneUtils.format(participant.phoneNumber)
         }
         elide: Text.ElideRight
         color: UbuntuColors.lightAubergine
@@ -220,7 +215,7 @@ ListItemWithActions {
         fontSize: "small"
         // FIXME: handle conference call
         text: phoneNumberSubTypeLabel
-        visible: interactive && !contactWatcher.isUnknown // non-interactive entries are calls from unknown or private numbers
+        visible: interactive && !unknownContact
     }
 
     // time and duration on the right side of the delegate

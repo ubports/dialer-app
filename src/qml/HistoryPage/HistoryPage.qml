@@ -152,6 +152,7 @@ Page {
             sortOrder: HistorySort.DescendingOrder
         }
         filter: emptyFilter
+        matchContacts: true
     }
 
     MultipleSelectionListView {
