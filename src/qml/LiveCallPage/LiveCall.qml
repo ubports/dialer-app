@@ -56,10 +56,6 @@ Page {
 
     property list<Action> regularActions: [
         Action {
-            objectName: "fakeBackButton"
-            visible: false
-        },
-        Action {
             id: newCallAction
             objectName: "newCallButton"
             iconName: "contact"
@@ -67,15 +63,18 @@ Page {
             onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         }
     ]
-    property list<Action> greeterModeActions: [
-        Action {
-            objectName: "fakeBackButton"
-            visible: false
-        }
-    ]
+
+    property Action backAction: Action {
+        id: backAction
+        objectName: "backButton"
+        iconName: "back"
+        visible: !greeter.greeterActive
+        onTriggered: pageStack.pop()
+    }
 
     title: caller
-    head.actions: greeter.greeterActive ? greeterModeActions : regularActions
+    head.actions: greeter.greeterActive ? [] : regularActions
+    head.backAction: backAction
     head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
 
@@ -124,7 +123,7 @@ Page {
                 ListItems.Header { text: "Switch audio source:" }
                 Repeater {
                     model: audioOutputs
-                    ListItems.Standard { 
+                    ListItems.Standard {
                         text: nameForAudioId(modelData.id)
                         showDivider: index != model.count-1
                         onClicked: {
