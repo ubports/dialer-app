@@ -103,7 +103,7 @@ Page {
         visible: false
         property variant model: Item {
             property string senderId: "dummy"
-            property variant participants: ["dummy"]
+            property variant participants: [ {phoneNumber:"dummy"} ]
         }
     }
 
