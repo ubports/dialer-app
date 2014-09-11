@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-02 17:23-0300\n"
-"PO-Revision-Date: 2014-05-20 05:05+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"PO-Revision-Date: 2014-09-10 14:41+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Akerbeltz\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:34+0000\n"
+"X-Launchpad-Export-Date: 2014-09-11 07:27+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 "Language: gd\n"
 
@@ -61,7 +61,7 @@ msgstr[3] "%1 diog"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:207
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -123,12 +123,12 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr ""
+msgstr "Gnìomhach"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "All"
-msgstr ""
+msgstr "Na h-uile"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:277
 msgid "Bluetooth device"
@@ -182,7 +182,7 @@ msgstr ""
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 #: ../src/qml/dialer-app.qml:303
 msgid "Close"
-msgstr ""
+msgstr "Dùin"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:47
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
@@ -200,7 +200,7 @@ msgstr "Bacadh de ghairmean ceangailte"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
-msgstr ""
+msgstr "Fiosrachadh conaltraidh"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:39
@@ -219,7 +219,7 @@ msgstr "Sguab às"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Details"
-msgstr ""
+msgstr "Mion-fhiosrachadh"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
 #: ../src/qml/dialer-app.qml:353
@@ -228,7 +228,7 @@ msgstr "Cuir air falbh"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "Na faighnich dhìom a-rithist"
 
 #: ../src/qml/DialerPage/DialerPage.qml:241
 msgid "Enter a number"
@@ -240,7 +240,7 @@ msgstr "Mearachd"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr ""
+msgstr "Annsachdan"
 
 #: ../src/qml/DialerPage/DialerPage.qml:60
 msgid "Flight mode"
@@ -252,12 +252,12 @@ msgstr "GHI"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
-msgstr ""
+msgstr "A-steach"
 
 #: ../src/qml/dialer-app.qml:337
 msgid "Invalid USSD code"
@@ -273,7 +273,7 @@ msgstr "Pada-iuchraichean"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "Às a dhèidh seo"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
@@ -291,12 +291,12 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:66
 msgid "New Call"
-msgstr ""
+msgstr "Gairm ùr"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "Chan eil"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
@@ -312,12 +312,12 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "'Ga chumail"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
-msgstr ""
+msgstr "A-mach"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
@@ -325,7 +325,7 @@ msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Fòn"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
@@ -359,19 +359,19 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:103
 #: ../src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Recent"
-msgstr ""
+msgstr "O chionn goirid"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr ""
+msgstr "Lorg"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr ""
+msgstr "Lorg..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:43
 msgid "Select"
-msgstr ""
+msgstr "Tagh"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
@@ -385,11 +385,11 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:44
 msgid "Settings"
-msgstr ""
+msgstr "Roghainnean"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "Co-roinn"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
@@ -440,7 +440,7 @@ msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Tha"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
@@ -458,14 +458,14 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:239
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm ap"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-02 17:23-0300\n"
-"PO-Revision-Date: 2014-09-09 11:57+0000\n"
+"PO-Revision-Date: 2014-09-10 12:27+0000\n"
 "Last-Translator: ivarela <ivarela@ubuntu.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-10 08:02+0000\n"
+"X-Launchpad-Export-Date: 2014-09-11 07:27+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:381
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1: n'espera"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -168,7 +168,7 @@ msgstr "Encaboxar"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "¿Camudar toles asociaciones de llamaes a %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
@@ -325,7 +325,7 @@ msgstr "Aplicación Teléfonu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Altavoz del teléfonu"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
@@ -333,7 +333,7 @@ msgstr "Aplicación Teléfonu"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Teléfonu;Marcador;Marcar;Tecláu"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -387,7 +387,7 @@ msgstr "Compartir"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:468
 msgid "Switch calls"
-msgstr ""
+msgstr "Intercambiar llamaes"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
