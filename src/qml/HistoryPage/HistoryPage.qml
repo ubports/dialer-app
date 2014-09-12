@@ -93,8 +93,9 @@ Page {
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
             historyPage.flickable = null
+        } else {
+            historyPage.flickable = historyList
         }
-
     }
 
     // Use this delegate just to calculate the height
@@ -104,17 +105,6 @@ Page {
         property variant model: Item {
             property string senderId: "dummy"
             property variant participants: ["dummy"]
-        }
-    }
-
-    // FIXME: this is a big hack to fix the placing of the listview items
-    // when dragging the bottom edge
-    flickable: null
-    Connections {
-        target: pageStack
-        onDepthChanged: {
-            if (pageStack.depth > 1)
-                flickable = historyList
         }
     }
 
