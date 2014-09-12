@@ -33,10 +33,11 @@ AbstractButton {
     property bool isCorner: false
     property int corner
     property alias pressed: mouseArea.pressed
- 
+
     signal keyPressed()
 
     UbuntuShape {
+        objectName: "keypadButtonUbuntuShape"
         anchors.fill: parent
         opacity: button.pressed ? 1 : 0
 
@@ -48,6 +49,7 @@ AbstractButton {
     }
 
     Item {
+        objectName: "keypadButtonLabelsContainer"
         height: childrenRect.height
         width: parent.width
         clip: true
