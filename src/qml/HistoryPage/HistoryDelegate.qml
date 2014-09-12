@@ -99,7 +99,7 @@ ListItemWithActions {
 
         function updateSubTypeLabel() {
             var subLabel = "";
-            if (participant && participant.phoneNumber) {
+            if (phoneNumber !== "") {
                 var typeInfo = phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail))
                 if (typeInfo) {
                     subLabel = typeInfo.label
