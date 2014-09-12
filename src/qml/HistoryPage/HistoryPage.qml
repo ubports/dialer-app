@@ -92,9 +92,6 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
-            historyPage.flickable = null
-        } else {
-            historyPage.flickable = historyList
         }
     }
 
