@@ -103,7 +103,7 @@ Page {
         visible: false
         property variant model: Item {
             property string senderId: "dummy"
-            property variant participants: ["dummy"]
+            property variant participants: [ {phoneNumber:"dummy"} ]
         }
     }
 
@@ -152,6 +152,7 @@ Page {
             sortOrder: HistorySort.DescendingOrder
         }
         filter: emptyFilter
+        matchContacts: true
     }
 
     MultipleSelectionListView {
@@ -322,7 +323,7 @@ Page {
                         text: i18n.tr("Details")
                         onTriggered: {
                             pageStack.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
-                                                          { phoneNumber: participants[0],
+                                                          { phoneNumber: participants[0].phoneNumber,
                                                             events: model.events,
                                                             eventModel: historyEventModel})
                         }

@@ -68,7 +68,7 @@ FocusScope {
         font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
         color: UbuntuColors.darkGrey
-        focus: true
+        focus: false
         cursorVisible: true
         clip: true
         defaultRegion: PhoneUtils.defaultRegion
