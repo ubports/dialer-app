@@ -69,7 +69,6 @@ ListItemWithActions {
 
     height: units.gu(8)
     color: Theme.palette.normal.background
-    triggerActionOnMouseRelease: true
 
     states: [
         State {
