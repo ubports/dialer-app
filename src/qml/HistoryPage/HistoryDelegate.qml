@@ -50,11 +50,8 @@ ListItemWithActions {
             return;
         }
 
-        if (fullView && mainView.account) {
-            mainView.call(participant.phoneNumber, mainView.account.accountId);
-        } else {
-            mainView.populateDialpad(participant.phoneNumber, mainView.account ? mainView.account.accountId : "");
-        }
+        // clicking an item only populates the dialpad view, it doesn't call directly
+        mainView.populateDialpad(participant.phoneNumber, mainView.account ? mainView.account.accountId : "");
     }
 
     function selectCallType()  {
