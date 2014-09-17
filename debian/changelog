@@ -1,3 +1,17 @@
+dialer-app (0.1+14.10.20140917-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Update pot file.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Increased the hit for backspace button and Add contact button. (LP:
+    #1368825)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Sep 2014 13:47:27 +0000
+
 dialer-app (0.1+14.10.20140912-0ubuntu1) utopic; urgency=low
 
   [ CI bot ]
