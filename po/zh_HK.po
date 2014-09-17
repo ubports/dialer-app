@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-02 17:23-0300\n"
+"POT-Creation-Date: 2014-09-16 16:28-0300\n"
 "PO-Revision-Date: 2014-09-03 12:26+0000\n"
 "Last-Translator: Daniel Cheung <daniel.2345@hotmail.com>\n"
 "Language-Team: Chinese (Hong Kong) <zh_HK@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-09-06 07:34+0000\n"
+"X-Launchpad-Export-Date: 2014-09-17 07:22+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:381
+#: ../src/qml/LiveCallPage/LiveCall.qml:380
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 等候接聽"
@@ -47,7 +47,7 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 秒"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:207
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -119,7 +119,7 @@ msgstr "使用中"
 msgid "All"
 msgstr "全部"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:277
+#: ../src/qml/LiveCallPage/LiveCall.qml:276
 msgid "Bluetooth device"
 msgstr "藍牙裝置"
 
@@ -135,16 +135,16 @@ msgstr "來電轉駁"
 msgid "Call Waiting"
 msgstr "來電待接"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "Call ended"
 msgstr "通話結束"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:248
+#: ../src/qml/LiveCallPage/LiveCall.qml:247
 msgid "Call failed"
 msgstr "通話失敗"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:383
+#: ../src/qml/LiveCallPage/LiveCall.qml:382
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "撥打中"
@@ -187,7 +187,7 @@ msgid "Connected Line Restriction"
 msgstr "連接號碼不顯示"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:332
+#: ../src/qml/HistoryPage/HistoryPage.qml:320
 msgid "Contact Details"
 msgstr "聯絡人詳細資料"
 
@@ -202,11 +202,11 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:298
 msgid "Delete"
 msgstr "刪除"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Details"
 msgstr "詳細資料"
 
@@ -243,7 +243,7 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:60
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr "來電"
@@ -268,17 +268,17 @@ msgstr "稍後"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:483
+#: ../src/qml/LiveCallPage/LiveCall.qml:482
 msgid "Merge calls"
 msgstr "合併通話"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:58
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Missed"
 msgstr "未接"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:66
+#: ../src/qml/LiveCallPage/LiveCall.qml:62
 msgid "New Call"
 msgstr "新通話"
 
@@ -291,7 +291,7 @@ msgstr "否"
 msgid "No SIM card selected"
 msgstr "沒有選擇任何SIM卡"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:98
+#: ../src/qml/LiveCallPage/LiveCall.qml:97
 msgid "No calls"
 msgstr "沒有通話"
 
@@ -303,7 +303,7 @@ msgstr "無網絡"
 msgid "On hold"
 msgstr "等候接聽"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr "撥打"
@@ -320,7 +320,7 @@ msgstr ""
 msgid "Phone App"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:281
+#: ../src/qml/LiveCallPage/LiveCall.qml:280
 msgid "Phone Speaker"
 msgstr "手機揚聲器"
 
@@ -340,7 +340,7 @@ msgstr "請稍候"
 msgid "Private"
 msgstr "私人"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:173
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "私人號碼"
@@ -369,7 +369,7 @@ msgid ""
 msgstr ""
 "為所有撥出電話選擇一個預設的 SIM 卡。您可以隨時在<a href=\"system_settings\">系統設置</a>改變你的選擇。"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:333
 msgid "Send message"
 msgstr "傳送訊息"
 
@@ -381,7 +381,7 @@ msgstr "設定"
 msgid "Share"
 msgstr "分享"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:468
+#: ../src/qml/LiveCallPage/LiveCall.qml:467
 msgid "Switch calls"
 msgstr "通話切換"
 
@@ -406,15 +406,15 @@ msgstr "目前沒有網絡。"
 msgid "Today"
 msgstr "今天"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:279
+#: ../src/qml/LiveCallPage/LiveCall.qml:278
 msgid "Ubuntu Phone"
 msgstr "Ubuntu 手機"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Unknown device"
 msgstr "未知裝置"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:175
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "不明號碼"
@@ -445,7 +445,7 @@ msgstr "你需要選擇一個 SIM 卡"
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:239
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr "hh:mm ap"

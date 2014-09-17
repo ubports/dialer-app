@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-02 17:23-0300\n"
+"POT-Creation-Date: 2014-09-16 16:28-0300\n"
 "PO-Revision-Date: 2014-09-07 15:19+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-08 06:58+0000\n"
+"X-Launchpad-Export-Date: 2014-09-17 07:21+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:381
+#: ../src/qml/LiveCallPage/LiveCall.qml:380
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - em espera"
@@ -50,7 +50,7 @@ msgstr[0] "%1 seg"
 msgstr[1] "%1 segs"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:207
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -122,7 +122,7 @@ msgstr "Ativo"
 msgid "All"
 msgstr "Todas"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:277
+#: ../src/qml/LiveCallPage/LiveCall.qml:276
 msgid "Bluetooth device"
 msgstr "Dispositivo Bluetooth"
 
@@ -138,16 +138,16 @@ msgstr "Reencaminhamento de Chamada"
 msgid "Call Waiting"
 msgstr "Chamada em Espera"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "Call ended"
 msgstr "Chamada terminada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:248
+#: ../src/qml/LiveCallPage/LiveCall.qml:247
 msgid "Call failed"
 msgstr "Chamada falhada"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:383
+#: ../src/qml/LiveCallPage/LiveCall.qml:382
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "A chamar"
@@ -190,7 +190,7 @@ msgid "Connected Line Restriction"
 msgstr "Restrição da Chamada Estabelecida"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:332
+#: ../src/qml/HistoryPage/HistoryPage.qml:320
 msgid "Contact Details"
 msgstr "Detalhes do Contacto"
 
@@ -205,11 +205,11 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:298
 msgid "Delete"
 msgstr "Eliminar"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Details"
 msgstr "Detalhes"
 
@@ -246,7 +246,7 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:60
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr "Recebidas"
@@ -271,17 +271,17 @@ msgstr "Mais tarde"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:483
+#: ../src/qml/LiveCallPage/LiveCall.qml:482
 msgid "Merge calls"
 msgstr "Juntar chamadas"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:58
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Missed"
 msgstr "Perdidas"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:66
+#: ../src/qml/LiveCallPage/LiveCall.qml:62
 msgid "New Call"
 msgstr "Nova Chamada"
 
@@ -294,7 +294,7 @@ msgstr "Não"
 msgid "No SIM card selected"
 msgstr "Nenhum cartão SIM seleccionado"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:98
+#: ../src/qml/LiveCallPage/LiveCall.qml:97
 msgid "No calls"
 msgstr "Sem chamadas"
 
@@ -306,7 +306,7 @@ msgstr "Sem rede"
 msgid "On hold"
 msgstr "Em espera"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr "Efectuadas"
@@ -323,7 +323,7 @@ msgstr "Telemóvel"
 msgid "Phone App"
 msgstr "App de telemóvel"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:281
+#: ../src/qml/LiveCallPage/LiveCall.qml:280
 msgid "Phone Speaker"
 msgstr "Altifalante"
 
@@ -333,7 +333,7 @@ msgstr "Aplicação de telemóvel"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telefone;Marcadorr;Marcar;Chamar;Teclado"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "Please wait"
@@ -343,7 +343,7 @@ msgstr "Por favor aguarde"
 msgid "Private"
 msgstr "Privado"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:173
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Número privado"
@@ -374,7 +374,7 @@ msgstr ""
 "sempre alterar a sua escolha em <a href=\"Configurações_Sistema\"> "
 "Configurações do Sistema</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:333
 msgid "Send message"
 msgstr "Enviar mensagem"
 
@@ -386,7 +386,7 @@ msgstr "Definições"
 msgid "Share"
 msgstr "Partilhar"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:468
+#: ../src/qml/LiveCallPage/LiveCall.qml:467
 msgid "Switch calls"
 msgstr "Trocar chamadas"
 
@@ -411,15 +411,15 @@ msgstr "Atualmente não existe nenhuma rede."
 msgid "Today"
 msgstr "Hoje"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:279
+#: ../src/qml/LiveCallPage/LiveCall.qml:278
 msgid "Ubuntu Phone"
 msgstr "Telemóvel Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Unknown device"
 msgstr "Dispositivo desconhecido"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:175
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Número desconhecido"
@@ -450,7 +450,7 @@ msgstr "Você necessita selecionar um cartão SIM"
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:239
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr "hh:mm ap"
@@ -464,6 +464,3 @@ msgstr "hh:mm:ss"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
-
-#~ msgid "Change all Call associations to "
-#~ msgstr "Alterar todas as associações de chamada para "

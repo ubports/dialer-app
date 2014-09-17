@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-02 17:23-0300\n"
+"POT-Creation-Date: 2014-09-16 16:28-0300\n"
 "PO-Revision-Date: 2014-09-10 07:06+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2014-09-11 07:27+0000\n"
+"X-Launchpad-Export-Date: 2014-09-17 07:21+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "Niv."
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:381
+#: ../src/qml/LiveCallPage/LiveCall.qml:380
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - en gortoz"
@@ -50,7 +50,7 @@ msgstr[0] "%1 eil"
 msgstr[1] "%1 eil"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:207
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -122,7 +122,7 @@ msgstr "Oberiant"
 msgid "All"
 msgstr "An holl anezho"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:277
+#: ../src/qml/LiveCallPage/LiveCall.qml:276
 msgid "Bluetooth device"
 msgstr "Benveg Bluetooth"
 
@@ -138,16 +138,16 @@ msgstr "Adkas ur bellgomzadenn"
 msgid "Call Waiting"
 msgstr "Pellgomzadenn en gortoz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "Call ended"
 msgstr "Pellgomzadenn echu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:248
+#: ../src/qml/LiveCallPage/LiveCall.qml:247
 msgid "Call failed"
 msgstr "Pellgozmadenn c'hwitet"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:383
+#: ../src/qml/LiveCallPage/LiveCall.qml:382
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "O pellgomz"
@@ -190,7 +190,7 @@ msgid "Connected Line Restriction"
 msgstr "Strishaat ar re a zo o pellgomz"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:332
+#: ../src/qml/HistoryPage/HistoryPage.qml:320
 msgid "Contact Details"
 msgstr "Munudoù an darempred"
 
@@ -205,11 +205,11 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:298
 msgid "Delete"
 msgstr "Diverkañ"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:310
 msgid "Details"
 msgstr "Munudoù"
 
@@ -246,7 +246,7 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:60
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
 msgid "Incoming"
 msgstr "O resev"
@@ -271,17 +271,17 @@ msgstr "Diwezhatoc'h"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:483
+#: ../src/qml/LiveCallPage/LiveCall.qml:482
 msgid "Merge calls"
 msgstr "Meskañ pellgomzadennoù"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:58
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Missed"
 msgstr "C'hwitet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:66
+#: ../src/qml/LiveCallPage/LiveCall.qml:62
 msgid "New Call"
 msgstr "Pellgomzadenn nevez"
 
@@ -294,7 +294,7 @@ msgstr "Ket"
 msgid "No SIM card selected"
 msgstr "N'eus bet diuzet kartenn SIM ebet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:98
+#: ../src/qml/LiveCallPage/LiveCall.qml:97
 msgid "No calls"
 msgstr "Pellgomzadenn ebet"
 
@@ -306,7 +306,7 @@ msgstr "N'eus ket a rouedad"
 msgid "On hold"
 msgstr "En gortoz"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
 msgid "Outgoing"
 msgstr "O vont er-maez"
@@ -323,7 +323,7 @@ msgstr "Pellgomz"
 msgid "Phone App"
 msgstr "Arload pellgomz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:281
+#: ../src/qml/LiveCallPage/LiveCall.qml:280
 msgid "Phone Speaker"
 msgstr "Uhelgomzer ar pellgomzer"
 
@@ -343,7 +343,7 @@ msgstr "Gortozit, mar plij"
 msgid "Private"
 msgstr "Prevez"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:173
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Niverenn brevez"
@@ -374,7 +374,7 @@ msgstr ""
 "Gallout a rit bepred cheñch ho tibab en <a "
 "href=\"system_settings\">Arventennoù ar reizhiad</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:333
 msgid "Send message"
 msgstr "Kas ur gemennadenn"
 
@@ -386,7 +386,7 @@ msgstr "Arventennoù"
 msgid "Share"
 msgstr "Rannañ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:468
+#: ../src/qml/LiveCallPage/LiveCall.qml:467
 msgid "Switch calls"
 msgstr "Eskemm ar pellgomzadennoù"
 
@@ -411,15 +411,15 @@ msgstr "N'eus rouedad ebet evit bremañ"
 msgid "Today"
 msgstr "Hiziv"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:279
+#: ../src/qml/LiveCallPage/LiveCall.qml:278
 msgid "Ubuntu Phone"
 msgstr "Pellgomzer Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Unknown device"
 msgstr "Benveg dianav"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:175
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Niverenn dianav"
@@ -450,7 +450,7 @@ msgstr "Ret eo deoc'h diuzañ ur gartenn SIM"
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:239
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
 msgid "hh:mm ap"
 msgstr "hh:mm ap"
