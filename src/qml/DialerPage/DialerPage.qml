@@ -52,7 +52,7 @@ PageWithBottomEdge {
         visible: greeter.greeterActive
         onTriggered: greeter.showGreeter()
     }
- 
+
     objectName: "dialerPage"
 
     title: {
@@ -92,7 +92,7 @@ PageWithBottomEdge {
                 target: addContact
                 visible: true
             }
- 
+
         }
     ]
 
@@ -197,7 +197,9 @@ PageWithBottomEdge {
             anchors {
                 top: parent.top
                 left: parent.left
+                leftMargin: units.gu(2)
                 right: parent.right
+                rightMargin: units.gu(2)
             }
             height: units.gu(10)
 
@@ -206,11 +208,10 @@ PageWithBottomEdge {
 
                 anchors {
                     left: parent.left
-                    leftMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: units.gu(3)
-                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? units.gu(3) : 0
+                width: units.gu(4)
+                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? parent.height : 0
                 icon: "contact-new"
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -248,11 +249,10 @@ PageWithBottomEdge {
                 objectName: "eraseButton"
                 anchors {
                     right: parent.right
-                    rightMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: units.gu(3)
-                height: input.text !== "" ? units.gu(3) : 0
+                width: units.gu(4)
+                height: input.text !== "" ? parent.height : 0
                 icon: "erase"
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
