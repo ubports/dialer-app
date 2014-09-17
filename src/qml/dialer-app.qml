@@ -32,6 +32,7 @@ MainView {
     property string ussdResponseText: ""
     property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
     property QtObject account: defaultAccount()
+    activeFocusOnPress: false
 
     function defaultAccount() {
         // we only use the default account property if we have more
