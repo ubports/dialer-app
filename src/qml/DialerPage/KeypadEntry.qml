@@ -121,9 +121,15 @@ FocusScope {
     Label {
         id: hint
         visible: input.text === ""
-        anchors.centerIn: parent
+        anchors {
+            left: parent.left
+            right: parent.right
+            verticalCenter: parent.verticalCenter
+        }
+
         text: ""
         font.pixelSize: input.maximumFontSize
+        fontSizeMode: Text.HorizontalFit
         color: UbuntuColors.darkGrey
         opacity: 0.9
     }
