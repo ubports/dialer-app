@@ -50,7 +50,7 @@ Page {
         } else if (contactWatcher.phoneNumber !== "") {
             return contactWatcher.phoneNumber;
         } else {
-            return "Calling..."
+            return " "
         }
     }
 
@@ -378,8 +378,10 @@ Page {
                 } else if (call && call.active) {
                     // TRANSLATORS: %1 is the call duration here.
                     return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
-                } else {
+                } else if (call && !call.incoming) {
                     return i18n.tr("Calling")
+                } else {
+                    return " "
                 }
             }
             fontSize: "x-large"
