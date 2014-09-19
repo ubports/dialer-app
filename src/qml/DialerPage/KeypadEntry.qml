@@ -132,5 +132,6 @@ FocusScope {
         fontSizeMode: Text.HorizontalFit
         color: UbuntuColors.darkGrey
         opacity: 0.9
+        horizontalAlignment: Text.AlignHCenter
     }
 }
