@@ -99,7 +99,8 @@ PageWithBottomEdge {
     // -------- Bottom Edge Setup -----
     bottomEdgeEnabled: !greeter.greeterActive
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
-    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
+    // NOTE: uncomment the next line to re-enable progressive bottom edge swiping.
+    //bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
     reloadBottomEdgePage: true
 
