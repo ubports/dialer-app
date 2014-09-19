@@ -1,3 +1,20 @@
+dialer-app (0.1+14.10.20140919.2-0ubuntu1) utopic; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Disable the progressive bottom edge gesture. (LP: #1368296)
+  * Do not call the phone numbers directly when clicking the items in
+    call log. Clicking them should only populate dialpad. (LP: #1368316)
+  * Do not show "Calling" after accepting an incoming call. (LP:
+    #1350006)
+  * Make sure the keypad entry hint is scaled if the text is too big
+    (the text translated into some languages might not fit). (LP:
+    #1348110)
+
+  [ Tiago Salem Herrmann ]
+  * Restore old focus behavior.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Sep 2014 18:11:40 +0000
+
 dialer-app (0.1+14.10.20140917-0ubuntu1) utopic; urgency=low
 
   [ CI bot ]
