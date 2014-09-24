@@ -68,8 +68,13 @@ Page {
         id: backAction
         objectName: "backButton"
         iconName: "back"
-        visible: !greeter.greeterActive
-        onTriggered: pageStack.pop()
+        onTriggered: {
+            if (greeter.greeterActive) {
+               greeter.showGreeter();
+            } else {
+                pageStack.pop();
+            }
+        }
     }
 
     title: caller
