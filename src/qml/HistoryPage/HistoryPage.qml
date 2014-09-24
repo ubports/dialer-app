@@ -318,6 +318,15 @@ Page {
                         }
                     },
                     Action {
+                        iconName: "message"
+                        text: i18n.tr("Send message")
+                        onTriggered: {
+                            mainView.sendMessage(phoneNumber)
+                        }
+                        visible: knownNumber
+                        enabled: knownNumber
+                    },
+                    Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
                         text: i18n.tr("Contact Details")
                         onTriggered: {
@@ -326,15 +335,6 @@ Page {
                             } else {
                                 mainView.viewContact(contactId)
                             }
-                        }
-                        visible: knownNumber
-                        enabled: knownNumber
-                    },
-                    Action {
-                        iconName: "message"
-                        text: i18n.tr("Send message")
-                        onTriggered: {
-                            mainView.sendMessage(phoneNumber)
                         }
                         visible: knownNumber
                         enabled: knownNumber
