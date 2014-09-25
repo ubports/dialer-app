@@ -202,13 +202,18 @@ MainView {
             return
         }
 
+        var account = telepathyHelper.accountForId(accountId);
+        if (account && account.simLocked) {
+            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView))
+            return
+        }
+
         if (!telepathyHelper.connected && !isEmergencyNumber((number))) {
             pendingNumberToDial = number;
             pendingAccountId = accountId;
             return;
         }
 
-        var account = telepathyHelper.accountForId(accountId);
         if (!account) {
             account = telepathyHelper.accounts[0];
         }
