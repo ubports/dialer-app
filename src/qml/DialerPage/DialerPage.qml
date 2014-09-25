@@ -383,7 +383,7 @@ PageWithBottomEdge {
                     return
                 }
 
-                if (mainView.account && mainView.account.simLocked) {
+                if (mainView.account && !greeter.greeterActive && !mainView.isEmergencyNumber(dialNumber) && mainView.account.simLocked) {
                     var properties = {}
                     properties["accountId"] = mainView.account.accountId
                     PopupUtils.open(Qt.createComponent("../Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
