@@ -203,7 +203,7 @@ MainView {
         }
 
         var account = telepathyHelper.accountForId(accountId);
-        if (account && account.simLocked) {
+        if (account && !greeter.greeterActive && !mainView.isEmergencyNumber(number) && account.simLocked) {
             PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView))
             return
         }
