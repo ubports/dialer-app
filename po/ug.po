@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-16 16:28-0300\n"
-"PO-Revision-Date: 2014-06-19 11:13+0000\n"
+"PO-Revision-Date: 2014-09-24 12:36+0000\n"
 "Last-Translator: Gheyret T.Kenji <Unknown>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-09-17 07:22+0000\n"
+"X-Launchpad-Export-Date: 2014-09-25 06:48+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:380
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - ساقلىتىقلىق"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -47,7 +47,7 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 سېكۇنت"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:199
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -56,7 +56,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/DialerPage.qml:345
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -64,7 +64,7 @@ msgstr "+"
 #. TRANSLATORS: this refers to a new contact
 #: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
-msgstr "+ يېڭىدىن ياسا"
+msgstr "+ يېڭىدىن قۇر"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
@@ -115,7 +115,7 @@ msgid "Active"
 msgstr "ئاكتىپ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
 msgstr "ھەممىسى"
 
@@ -123,39 +123,39 @@ msgstr "ھەممىسى"
 msgid "Bluetooth device"
 msgstr "كۆكچىش ئۈسكۈنىسى"
 
-#: ../src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:410
 msgid "Call Barring"
-msgstr ""
+msgstr "چاقىرىش چەكلىمىسى"
 
-#: ../src/qml/dialer-app.qml:420
+#: ../src/qml/dialer-app.qml:421
 msgid "Call Forwarding"
 msgstr "چاقىرىشنى يۆتكەۋاتىدۇ"
 
-#: ../src/qml/dialer-app.qml:431
+#: ../src/qml/dialer-app.qml:432
 msgid "Call Waiting"
 msgstr "چاقىرىۋاتىدۇ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "Call ended"
-msgstr ""
+msgstr "چاقىرىش تاماملاندى"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:247
 msgid "Call failed"
-msgstr ""
+msgstr "چاقىرىش مەغلۇپ بولدى"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:382
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr ""
+msgstr "چاقىرىۋاتىدۇ"
 
-#: ../src/qml/dialer-app.qml:442
+#: ../src/qml/dialer-app.qml:443
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "چاقىرغۇچىنىڭ تېلېفون نومۇرىنى كۆرسىتىش"
 
-#: ../src/qml/dialer-app.qml:454
+#: ../src/qml/dialer-app.qml:455
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "چاقىرغۇچىنىڭ تېلېفون نومۇرىنى كۆرسىتىش چەكلىمىسى"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
@@ -165,11 +165,11 @@ msgstr "ئەمەلدىن قالدۇر"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "بارلىق چاقىرىشنى %1 ئارقىلىق ئېلىپ بارسۇنمۇ؟"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:303
+#: ../src/qml/dialer-app.qml:304
 msgid "Close"
 msgstr "ياپ"
 
@@ -178,18 +178,18 @@ msgstr "ياپ"
 msgid "Conference"
 msgstr "يىغىن"
 
-#: ../src/qml/dialer-app.qml:448
+#: ../src/qml/dialer-app.qml:449
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "نىشان نومۇرىنى كۆرسىتىش"
 
-#: ../src/qml/dialer-app.qml:460
+#: ../src/qml/dialer-app.qml:461
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "نىشان نومۇرىنى كۆرسىتىش چەكلىمىسى"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:320
+#: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Contact Details"
-msgstr "ئالاقەداش تەپسىلاتلىرى"
+msgstr "خېرىدار تەپسىلاتلىرى"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:39
@@ -201,17 +201,17 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
+#: ../src/qml/HistoryPage/HistoryPage.qml:300
 msgid "Delete"
 msgstr "ئۆچۈر"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:312
 msgid "Details"
 msgstr "تەپسىلاتلار"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
-#: ../src/qml/dialer-app.qml:353
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:340
+#: ../src/qml/dialer-app.qml:354
 msgid "Dismiss"
 msgstr "تاشلىۋەت"
 
@@ -219,21 +219,21 @@ msgstr "تاشلىۋەت"
 msgid "Don't ask again"
 msgstr "قايتا سورىما"
 
-#: ../src/qml/DialerPage/DialerPage.qml:241
+#: ../src/qml/DialerPage/DialerPage.qml:243
 msgid "Enter a number"
 msgstr "نومۇر كىرگۈزۈڭ"
 
-#: ../src/qml/dialer-app.qml:336
+#: ../src/qml/dialer-app.qml:337
 msgid "Error"
 msgstr "خاتالىق"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr "ياقتۇرغانلىرىم"
+msgstr "يىغقۇچ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:60
 msgid "Flight mode"
-msgstr "ئايروپىلاندا"
+msgstr "ئايروپىلان ھالىتى"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -243,12 +243,12 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
 msgstr "كېلىۋاتىدۇ"
 
-#: ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:338
 msgid "Invalid USSD code"
 msgstr "ئىناۋەتسىز USSD كودى"
 
@@ -268,13 +268,13 @@ msgstr "كېيىن"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:482
+#: ../src/qml/LiveCallPage/LiveCall.qml:484
 msgid "Merge calls"
-msgstr ""
+msgstr "چاقىرىشنى بىرلەشتۈر"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "ئالمىغانلىرى"
 
@@ -289,22 +289,22 @@ msgstr "ياق"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
-msgstr ""
+msgstr "ھېچ بىر SIM كارتىسى تاللانمىغان"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:97
 msgid "No calls"
-msgstr ""
+msgstr "چاقىرىش يوق"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
+#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:299
 msgid "No network"
 msgstr "تور يوق"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "كۈتۈپ تۇر"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
 msgstr "چىقىۋاتىدۇ"
 
@@ -318,21 +318,21 @@ msgstr "تېلېفون"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "تېلېفون ئەپى"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:280
 msgid "Phone Speaker"
-msgstr ""
+msgstr "تېلېفون  ياڭراتقۇسى"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "تېلېفون  پروگراممىسى"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "تېلېفون ;Dialer;Dial;چاقىرىش;Keypad"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:318
 msgid "Please wait"
 msgstr "سەل ساقلاڭ"
 
@@ -340,13 +340,13 @@ msgstr "سەل ساقلاڭ"
 msgid "Private"
 msgstr "شەخسىي"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:165
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "شەخسىي نومۇر"
 
-#: ../src/qml/DialerPage/DialerPage.qml:103
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/DialerPage/DialerPage.qml:104
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "يېقىنقى"
 
@@ -358,7 +358,7 @@ msgstr "ئىزدە"
 msgid "Search..."
 msgstr "ئىزدە…"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
 msgstr "تاللا"
 
@@ -367,10 +367,12 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"بارلىق چاقىرىشتا ئىشلىتىلىدىغان كۆڭۈلدىكى SIM نى تاللايدۇ. بۇنى <a "
+"href=\"system_settings\">سىستېما تەڭشىكى</a> دە ھەرقاچان ئۆزگەرتكىلى بولىدۇ."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:333
+#: ../src/qml/HistoryPage/HistoryPage.qml:335
 msgid "Send message"
-msgstr ""
+msgstr "ئۇچۇر ئەۋەت"
 
 #: ../src/qml/DialerPage/DialerPage.qml:44
 msgid "Settings"
@@ -378,28 +380,28 @@ msgstr "تەڭشەكلەر"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr "ھەمبەھىرلە"
+msgstr "ھەمبەھىر"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:467
+#: ../src/qml/LiveCallPage/LiveCall.qml:469
 msgid "Switch calls"
-msgstr ""
+msgstr "چاقىرىشنى ئالماشتۇر"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "كۆڭۈلدىكى SIM غا ئالماشسۇن:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:299
+#: ../src/qml/dialer-app.qml:300
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "ھازىر %1 دا تور يوق"
 
-#: ../src/qml/dialer-app.qml:300
+#: ../src/qml/dialer-app.qml:301
 msgid "There is currently no network."
-msgstr ""
+msgstr "ھازىر تور يوق."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
@@ -407,16 +409,16 @@ msgstr "بۈگۈن"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:278
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "ئۇبۇنتۇ تېلېفونى"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Unknown device"
 msgstr "نامەلۇم ئۈسكۈنە"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr "نامەلۇم نومۇر"
+msgstr "ناتونۇش نومۇر"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
@@ -437,17 +439,17 @@ msgstr "تۈنۈگۈن"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "سىز SIM كارتىسىدىن بىرنى تاللىشىڭىز زۆرۈر"
 
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:231
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm ap"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
