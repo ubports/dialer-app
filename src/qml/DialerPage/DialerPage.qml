@@ -383,7 +383,7 @@ PageWithBottomEdge {
                     return
                 }
 
-                if (/*mainView.account && mainView.account.simLocked*/true) {
+                if (mainView.account && mainView.account.simLocked) {
                     var properties = {}
                     properties["accountId"] = mainView.account.accountId
                     PopupUtils.open(Qt.createComponent("../Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
