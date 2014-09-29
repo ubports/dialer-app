@@ -144,6 +144,10 @@ PageWithBottomEdge {
         return index;
     }
 
+    function triggerCallAnimation() {
+        callAnimation.start();
+    }
+
     Connections {
         target: mainView
         onPendingNumberToDialChanged: {
@@ -367,27 +371,7 @@ PageWithBottomEdge {
             }
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
-                // check if at least one account is selected
-                if (multipleAccounts && !mainView.account) {
-                    Qt.inputMethod.hide()
-                    PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
-                    return
-                }
-
-                if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
-                    var properties = {}
-                    properties["phoneNumber"] = dialNumber
-                    properties["accountId"] = mainView.account.accountId
-                    PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
-                    return
-                }
-
-                // avoid cleaning the keypadEntry in case there is no signal
-                if (!mainView.account.connected) {
-                    PopupUtils.open(noNetworkDialog)
-                    return
-                }
-                callAnimation.start()
+                mainView.call(keypadEntry.value);
             }
             enabled: {
                 if (dialNumber == "") {
@@ -428,7 +412,7 @@ PageWithBottomEdge {
         }
         ScriptAction {
             script: {
-                mainView.call(keypadEntry.value, mainView.account.accountId);
+                mainView.switchToLiveCall()
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0
