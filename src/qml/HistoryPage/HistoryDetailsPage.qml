@@ -226,11 +226,7 @@ Page {
                     anchors.centerIn: parent
                 }
                 onClicked: {
-                    if (mainView.account) {
-                        mainView.call(phoneNumber, mainView.account.accountId);
-                    } else {
-                        mainView.populateDialpad(phoneNumber, mainView.account ? mainView.account.accountId : "");
-                    }
+                    mainView.populateDialpad(phoneNumber, mainView.account ? mainView.account.accountId : "");
                 }
             }
         }

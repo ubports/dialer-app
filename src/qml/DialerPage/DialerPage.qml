@@ -52,7 +52,7 @@ PageWithBottomEdge {
         visible: greeter.greeterActive
         onTriggered: greeter.showGreeter()
     }
- 
+
     objectName: "dialerPage"
 
     title: {
@@ -92,14 +92,15 @@ PageWithBottomEdge {
                 target: addContact
                 visible: true
             }
- 
+
         }
     ]
 
     // -------- Bottom Edge Setup -----
     bottomEdgeEnabled: !greeter.greeterActive
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
-    bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
+    // NOTE: uncomment the next line to re-enable progressive bottom edge swiping.
+    //bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
     bottomEdgeTitle: i18n.tr("Recent")
     reloadBottomEdgePage: true
 
@@ -201,7 +202,9 @@ PageWithBottomEdge {
             anchors {
                 top: parent.top
                 left: parent.left
+                leftMargin: units.gu(2)
                 right: parent.right
+                rightMargin: units.gu(2)
             }
             height: units.gu(10)
 
@@ -210,11 +213,10 @@ PageWithBottomEdge {
 
                 anchors {
                     left: parent.left
-                    leftMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: units.gu(3)
-                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? units.gu(3) : 0
+                width: opacity > 0 ? units.gu(4) : 0
+                height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? parent.height : 0
                 icon: "contact-new"
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)
@@ -252,11 +254,10 @@ PageWithBottomEdge {
                 objectName: "eraseButton"
                 anchors {
                     right: parent.right
-                    rightMargin: units.gu(2)
                     verticalCenter: parent.verticalCenter
                 }
-                width: units.gu(3)
-                height: input.text !== "" ? units.gu(3) : 0
+                width: opacity > 0 ? units.gu(4) : 0
+                height: input.text !== "" ? parent.height : 0
                 icon: "erase"
                 iconWidth: units.gu(3)
                 iconHeight: units.gu(3)

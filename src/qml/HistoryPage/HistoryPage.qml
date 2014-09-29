@@ -30,12 +30,14 @@ Page {
 
     property string searchTerm
     property int delegateHeight: delegate.height
-    property bool fullView: currentIndex == -1
+    // NOTE: in case we need to re-enable progressive bottom edge gesture,
+    // set fullView to currentIndex == -1
+    property bool fullView: true
     property alias currentIndex: historyList.currentIndex
     property alias selectionMode: historyList.isInSelectionMode
 
     function activateCurrentIndex() {
-        if (historyList.currentItem) {
+        if (!fullView && historyList.currentItem) {
             historyList.currentItem.activate();
         }
     }
@@ -270,7 +272,7 @@ Page {
                 isFirst: model.index === 0
                 locked: historyList.isInSelectionMode
                 fullView: historyPage.fullView
-                active: ListView.isCurrentItem
+                active: !fullView && ListView.isCurrentItem
 
                 onItemPressAndHold: {
                     if (!historyList.isInSelectionMode) {
@@ -316,6 +318,15 @@ Page {
                         }
                     },
                     Action {
+                        iconName: "message"
+                        text: i18n.tr("Send message")
+                        onTriggered: {
+                            mainView.sendMessage(phoneNumber)
+                        }
+                        visible: knownNumber
+                        enabled: knownNumber
+                    },
+                    Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
                         text: i18n.tr("Contact Details")
                         onTriggered: {
@@ -324,15 +335,6 @@ Page {
                             } else {
                                 mainView.viewContact(contactId)
                             }
-                        }
-                        visible: knownNumber
-                        enabled: knownNumber
-                    },
-                    Action {
-                        iconName: "message"
-                        text: i18n.tr("Send message")
-                        onTriggered: {
-                            mainView.sendMessage(phoneNumber)
                         }
                         visible: knownNumber
                         enabled: knownNumber

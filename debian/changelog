@@ -1,3 +1,52 @@
+dialer-app (0.1+14.10.20140924-0ubuntu1) 14.09; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Go back to greeter when pressing back on the live call if running on
+    top of the lock screen. (LP: #1362404)
+
+  [ Renato Araujo Oliveira Filho ]
+  * Changed swipe list item to not activate on mouse release. Changed
+    actions order on history page. (LP: #1368337)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 24 Sep 2014 17:55:40 +0000
+
+dialer-app (0.1+14.10.20140919.2-0ubuntu1) utopic; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Disable the progressive bottom edge gesture. (LP: #1368296)
+  * Do not call the phone numbers directly when clicking the items in
+    call log. Clicking them should only populate dialpad. (LP: #1368316)
+  * Do not show "Calling" after accepting an incoming call. (LP:
+    #1350006)
+  * Make sure the keypad entry hint is scaled if the text is too big
+    (the text translated into some languages might not fit). (LP:
+    #1348110)
+
+  [ Tiago Salem Herrmann ]
+  * Restore old focus behavior.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 19 Sep 2014 18:11:40 +0000
+
+dialer-app (0.1+14.10.20140917-0ubuntu1) utopic; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Update pot file.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Increased the hit for backspace button and Add contact button. (LP:
+    #1368825)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 17 Sep 2014 13:47:27 +0000
+
 dialer-app (0.1+14.10.20140912-0ubuntu1) utopic; urgency=low
 
   [ CI bot ]
