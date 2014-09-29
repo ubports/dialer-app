@@ -190,6 +190,8 @@ MainView {
     }
 
     function callEmergency(number) {
+        animateLiveCall();
+
         // if we are in flight mode, we first need to disable it and wait for
         // the modems to update
         if (telepathyHelper.flightMode) {
@@ -217,8 +219,6 @@ MainView {
             pendingNumberToDial = number;
             return;
         }
-
-        animateLiveCall();
 
         if (!accountReady) {
             pendingNumberToDial = number;
