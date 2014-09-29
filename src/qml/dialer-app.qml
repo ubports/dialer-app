@@ -228,7 +228,7 @@ MainView {
         callManager.startCall(number, account.accountId);
     }
 
-    function call(number) {
+    function call(number, skipDefaultSimDialog) {
         // clear the values here so that the changed signals are fired when the new value is set
         pendingNumberToDial = "";
 
@@ -244,15 +244,15 @@ MainView {
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
-            PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
+            PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
             return
         }
 
-        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
+        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk && !skipDefaultSimDialog) {
             var properties = {}
             properties["phoneNumber"] = dialNumber
             properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
+            PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), footer, properties)
             return
         }
 
@@ -426,10 +426,9 @@ MainView {
             }
 
             if (pendingNumberToDial != "") {
-                callManager.startCall(pendingNumberToDial, pendingAccountId);
+                callManager.startCall(pendingNumberToDial, mainView.account.accountId);
             }
             pendingNumberToDial = "";
-            pendingAccountId = "";
         }
 
         onEmergencyCallsAvailableChanged: {
@@ -451,7 +450,12 @@ MainView {
                 return;
             }
 
-            // load the live call
+            // if we are animating the dialpad view, do not switch to livecall directly
+            if (pageStack.currentPage && pageStack.currentPage.callAnimationRunning) {
+                return;
+            }
+
+            // if not, just open the live call
             switchToLiveCall();
         }
     }

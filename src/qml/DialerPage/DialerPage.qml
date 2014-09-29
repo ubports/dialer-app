@@ -31,6 +31,7 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property alias callAnimationRunning: callAnimation.running
     property var mmiPlugins: []
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
