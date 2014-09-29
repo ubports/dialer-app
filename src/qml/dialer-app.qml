@@ -256,6 +256,13 @@ MainView {
             return
         }
 
+        if (mainView.account && !greeter.greeterActive && mainView.account.simLocked) {
+            var properties = {}
+            properties["accountId"] = mainView.account.accountId
+            PopupUtils.open(Qt.createComponent("../Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
+            return
+        }
+
         // avoid cleaning the keypadEntry in case there is no signal
         if (!mainView.account.connected) {
             PopupUtils.open(noNetworkDialog)
