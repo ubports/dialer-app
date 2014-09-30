@@ -252,14 +252,14 @@ MainView {
             var properties = {}
             properties["phoneNumber"] = dialNumber
             properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), footer, properties)
+            PopupUtils.open(Qt.createComponent("Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), mainView, properties)
             return
         }
 
         if (mainView.account && !greeter.greeterActive && mainView.account.simLocked) {
             var properties = {}
             properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
+            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
             return
         }
 
