@@ -244,7 +244,7 @@ MainView {
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
-            PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
+            PopupUtils.open(Qt.createComponent("Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
             return
         }
 
@@ -252,14 +252,14 @@ MainView {
             var properties = {}
             properties["phoneNumber"] = dialNumber
             properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), footer, properties)
+            PopupUtils.open(Qt.createComponent("Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), footer, properties)
             return
         }
 
         if (mainView.account && !greeter.greeterActive && mainView.account.simLocked) {
             var properties = {}
             properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("../Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
+            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
             return
         }
 
