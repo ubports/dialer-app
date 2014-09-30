@@ -57,8 +57,12 @@ PageWithBottomEdge {
     objectName: "dialerPage"
 
     title: {
-        if (telepathyHelper.flightMode) {
+        if (greeter.greeterActive) {
+            return i18n.tr("Emergency Calls")
+        } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")
+        } else if (mainView.account && mainView.account.simLocked) {
+            return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multipleAccounts && !mainView.account) {
