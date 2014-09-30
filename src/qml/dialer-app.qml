@@ -250,7 +250,7 @@ MainView {
 
         if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk && !skipDefaultSimDialog) {
             var properties = {}
-            properties["phoneNumber"] = dialNumber
+            properties["phoneNumber"] = number
             properties["accountId"] = mainView.account.accountId
             PopupUtils.open(Qt.createComponent("Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), mainView, properties)
             return
