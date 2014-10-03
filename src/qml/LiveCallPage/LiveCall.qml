@@ -239,6 +239,12 @@ Page {
 
     Component.onCompleted: {
         callManager.callIndicatorVisible = !active;
+
+        // if this view is visible in flight mode, it is very likely an emergency call
+        // so wait longer for the call to appear before giving up
+        if (telepathyHelper.flightMode) {
+            callWatcher.interval = 30000;
+        }
     }
 
     Timer {

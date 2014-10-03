@@ -82,6 +82,10 @@ PageWithBottomEdge {
                 target: addContact
                 visible: false
             }
+            PropertyChanges {
+                target: keypadEntry
+                value: ""
+            }
         },
         State {
             name: "normalMode"
