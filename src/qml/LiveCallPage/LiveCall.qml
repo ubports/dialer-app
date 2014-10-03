@@ -243,7 +243,7 @@ Page {
 
     Timer {
         id: callWatcher
-        interval: 7000
+        interval: 10000
         repeat: false
         running: true
         onTriggered: {
