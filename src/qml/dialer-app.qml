@@ -190,8 +190,6 @@ MainView {
     }
 
     function callEmergency(number) {
-        animateLiveCall();
-
         // if we are in flight mode, we first need to disable it and wait for
         // the modems to update
         if (telepathyHelper.flightMode) {
@@ -200,6 +198,8 @@ MainView {
             PopupUtils.open(flightModeProgressDialog)
             return;
         }
+
+        animateLiveCall();
 
         // now try to use one of the connected accounts
         var account = null;
@@ -391,7 +391,7 @@ MainView {
             // FIXME: workaround to give modems some time to become available
             Timer {
                 id: flightModeTimer
-                interval: 2000
+                interval: 10000
                 repeat: false
                 onTriggered: {
                     PopupUtils.close(flightModeProgressIndicator)
