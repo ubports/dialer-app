@@ -378,7 +378,7 @@ MainView {
         Dialog {
             id: flightModeProgressIndicator
             visible: false
-            title: return i18n.tr("Disabling flight mode")
+            title: i18n.tr("Disabling flight mode")
             ActivityIndicator {
                 running: parent.visible
             }
