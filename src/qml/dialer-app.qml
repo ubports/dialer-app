@@ -197,6 +197,7 @@ MainView {
         if (telepathyHelper.flightMode) {
             pendingNumberToDial = number;
             telepathyHelper.flightMode = false;
+            PopupUtils.open(flightModeProgressDialog)
             return;
         }
 
@@ -321,9 +322,13 @@ MainView {
         while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
             pageStack.pop();
         }
+        var properties = {}
+        if (isEmergencyNumber(pendingNumberToDial)) {
+            properties["defaultTimeout"] = 30000
+        }
 
         if (pageStack.depth === 1)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
         }
     }
 
@@ -363,6 +368,41 @@ MainView {
                 color: UbuntuColors.orange
                 onClicked: {
                     PopupUtils.close(dialogue)
+                }
+            }
+        }
+    }
+
+    Component {
+        id: flightModeProgressDialog
+        Dialog {
+            id: flightModeProgressIndicator
+            visible: false
+            title: return i18n.tr("Disabling flight mode")
+            ActivityIndicator {
+                running: parent.visible
+            }
+            Connections {
+                target: telepathyHelper
+                onEmergencyCallsAvailableChanged: {
+                    flightModeTimer.start()
+                }
+            }
+            // FIXME: workaround to give modems some time to become available
+            Timer {
+                id: flightModeTimer
+                interval: 2000
+                repeat: false
+                onTriggered: {
+                    PopupUtils.close(flightModeProgressIndicator)
+                    if (telepathyHelper.emergencyCallsAvailable && pendingNumberToDial !== "") {
+                        if (!isEmergencyNumber(pendingNumberToDial)) {
+                            return;
+                        }
+
+                        callEmergency(pendingNumberToDial);
+                        pendingNumberToDial = "";
+                    }
                 }
             }
         }
@@ -429,17 +469,6 @@ MainView {
                 callManager.startCall(pendingNumberToDial, mainView.account.accountId);
             }
             pendingNumberToDial = "";
-        }
-
-        onEmergencyCallsAvailableChanged: {
-            if (telepathyHelper.emergencyCallsAvailable && pendingNumberToDial !== "") {
-                if (!isEmergencyNumber(pendingNumberToDial)) {
-                    return;
-                }
-
-                callEmergency(pendingNumberToDial);
-                pendingNumberToDial = "";
-            }
         }
     }
 

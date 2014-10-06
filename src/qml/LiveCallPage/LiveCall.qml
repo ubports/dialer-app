@@ -42,6 +42,7 @@ Page {
     property string activeAudioOutput: call ? call.activeAudioOutput : ""
     property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
+    property int defaultTimeout: 10000
     property string caller: {
         if (call && call.isConference) {
             return i18n.tr("Conference");
@@ -239,17 +240,11 @@ Page {
 
     Component.onCompleted: {
         callManager.callIndicatorVisible = !active;
-
-        // if this view is visible in flight mode, it is very likely an emergency call
-        // so wait longer for the call to appear before giving up
-        if (telepathyHelper.flightMode) {
-            callWatcher.interval = 30000;
-        }
     }
 
     Timer {
         id: callWatcher
-        interval: 10000
+        interval: defaultTimeout
         repeat: false
         running: true
         onTriggered: {
