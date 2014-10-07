@@ -31,6 +31,7 @@ PageWithBottomEdge {
 
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
+    property alias callAnimationRunning: callAnimation.running
     property var mmiPlugins: []
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
@@ -56,8 +57,12 @@ PageWithBottomEdge {
     objectName: "dialerPage"
 
     title: {
-        if (telepathyHelper.flightMode) {
+        if (greeter.greeterActive) {
+            return i18n.tr("Emergency Calls")
+        } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")
+        } else if (mainView.account && mainView.account.simLocked) {
+            return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multipleAccounts && !mainView.account) {
@@ -143,6 +148,10 @@ PageWithBottomEdge {
             }
         }
         return index;
+    }
+
+    function triggerCallAnimation() {
+        callAnimation.start();
     }
 
     Connections {
@@ -368,34 +377,7 @@ PageWithBottomEdge {
             }
             onClicked: {
                 console.log("Starting a call to " + keypadEntry.value);
-                // check if at least one account is selected
-                if (multipleAccounts && !mainView.account) {
-                    Qt.inputMethod.hide()
-                    PopupUtils.open(Qt.createComponent("../Dialogs/NoSIMCardSelectedDialog.qml").createObject(page))
-                    return
-                }
-
-                if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk) {
-                    var properties = {}
-                    properties["phoneNumber"] = dialNumber
-                    properties["accountId"] = mainView.account.accountId
-                    PopupUtils.open(Qt.createComponent("../Dialogs/SetDefaultSIMCardDialog.qml").createObject(page), footer, properties)
-                    return
-                }
-
-                if (mainView.account && !greeter.greeterActive && !mainView.isEmergencyNumber(dialNumber) && mainView.account.simLocked) {
-                    var properties = {}
-                    properties["accountId"] = mainView.account.accountId
-                    PopupUtils.open(Qt.createComponent("../Dialogs/SimLockedDialog.qml").createObject(page), footer, properties)
-                    return
-                }
-
-                // avoid cleaning the keypadEntry in case there is no signal
-                if (!mainView.account.connected) {
-                    PopupUtils.open(noNetworkDialog)
-                    return
-                }
-                callAnimation.start()
+                mainView.call(keypadEntry.value);
             }
             enabled: {
                 if (dialNumber == "") {
@@ -436,7 +418,7 @@ PageWithBottomEdge {
         }
         ScriptAction {
             script: {
-                mainView.call(keypadEntry.value, mainView.account.accountId);
+                mainView.switchToLiveCall()
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0

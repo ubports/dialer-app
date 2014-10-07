@@ -130,8 +130,12 @@ class TestCalls(DialerAppTestCase):
         elapsed_time = self.main_view.live_call_page.get_elapsed_call_time()
         self.assertIn("00:0", elapsed_time)
 
+        # wait for the live call view to be gone
+        self.main_view.dialer_page.active.wait_for(True)
+
         # after remote hangs up, should switch to call log page and show call
         # to number
+        self.main_view.dialer_page.reveal_bottom_edge_page()
         self.assertThat(self.history_list.visible, Eventually(Equals(True)))
         self.assertThat(self.history_list.count, Eventually(Equals(1)))
         self.assertThat(self.get_history_for_number(number), NotEquals(None))
