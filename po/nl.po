@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-16 16:28-0300\n"
-"PO-Revision-Date: 2014-09-06 13:31+0000\n"
+"PO-Revision-Date: 2014-10-06 08:02+0000\n"
 "Last-Translator: rob <linuxned@gmail.com>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-17 07:21+0000\n"
+"X-Launchpad-Export-Date: 2014-10-07 06:59+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:380
+#: ../src/qml/LiveCallPage/LiveCall.qml:385
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - in de wacht"
@@ -50,7 +50,7 @@ msgstr[0] "%1 seconde"
 msgstr[1] "%1 seconden"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -59,7 +59,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/DialerPage.qml:345
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -118,45 +118,45 @@ msgid "Active"
 msgstr "Actief"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
 msgstr "Alle"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:276
+#: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Bluetooth device"
 msgstr "Bluetooth-apparaat"
 
-#: ../src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:410
 msgid "Call Barring"
 msgstr "Gespreksblokkeringen"
 
-#: ../src/qml/dialer-app.qml:420
+#: ../src/qml/dialer-app.qml:421
 msgid "Call Forwarding"
 msgstr "Gesprek doorschakelen"
 
-#: ../src/qml/dialer-app.qml:431
+#: ../src/qml/dialer-app.qml:432
 msgid "Call Waiting"
 msgstr "Gesprek in de wacht"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Call ended"
 msgstr "Gesprek beëindigd"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:247
+#: ../src/qml/LiveCallPage/LiveCall.qml:252
 msgid "Call failed"
 msgstr "Gesprek mislukt"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:382
+#: ../src/qml/LiveCallPage/LiveCall.qml:387
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Oproep"
 
-#: ../src/qml/dialer-app.qml:442
+#: ../src/qml/dialer-app.qml:443
 msgid "Calling Line Presentation"
 msgstr "Identificatie uitgaand gesprek inschakelen"
 
-#: ../src/qml/dialer-app.qml:454
+#: ../src/qml/dialer-app.qml:455
 msgid "Calling Line Restriction"
 msgstr "Identificatie uitgaand gesprek uitschakelen"
 
@@ -172,7 +172,7 @@ msgstr "Alle belassociaties overzetten naar %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:51
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:303
+#: ../src/qml/dialer-app.qml:304
 msgid "Close"
 msgstr "Sluiten"
 
@@ -181,16 +181,16 @@ msgstr "Sluiten"
 msgid "Conference"
 msgstr "Groepsgesprek"
 
-#: ../src/qml/dialer-app.qml:448
+#: ../src/qml/dialer-app.qml:449
 msgid "Connected Line Presentation"
 msgstr "Identificatie inkomend gesprek inschakelen"
 
-#: ../src/qml/dialer-app.qml:460
+#: ../src/qml/dialer-app.qml:461
 msgid "Connected Line Restriction"
 msgstr "Identificatie inkomend gesprek uitschakelen"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:320
+#: ../src/qml/HistoryPage/HistoryPage.qml:331
 msgid "Contact Details"
 msgstr "Contactdetails"
 
@@ -204,17 +204,17 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
+#: ../src/qml/HistoryPage/HistoryPage.qml:300
 msgid "Delete"
 msgstr "Verwijderen"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:312
 msgid "Details"
 msgstr "Details"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
-#: ../src/qml/dialer-app.qml:353
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:340
+#: ../src/qml/dialer-app.qml:354
 msgid "Dismiss"
 msgstr "Negeren"
 
@@ -222,11 +222,11 @@ msgstr "Negeren"
 msgid "Don't ask again"
 msgstr "Niet meer vragen"
 
-#: ../src/qml/DialerPage/DialerPage.qml:241
+#: ../src/qml/DialerPage/DialerPage.qml:243
 msgid "Enter a number"
 msgstr "Voer een nummer in"
 
-#: ../src/qml/dialer-app.qml:336
+#: ../src/qml/dialer-app.qml:337
 msgid "Error"
 msgstr "Fout"
 
@@ -246,12 +246,12 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
 msgstr "Inkomend"
 
-#: ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:338
 msgid "Invalid USSD code"
 msgstr "Onjuiste USSD-code"
 
@@ -271,13 +271,13 @@ msgstr "Later"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:482
+#: ../src/qml/LiveCallPage/LiveCall.qml:489
 msgid "Merge calls"
 msgstr "Gesprekken samenvoegen"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Gemist"
 
@@ -294,11 +294,11 @@ msgstr "Nee"
 msgid "No SIM card selected"
 msgstr "Geen simkaart geselecteerd"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:97
+#: ../src/qml/LiveCallPage/LiveCall.qml:102
 msgid "No calls"
 msgstr "Geen oproepen"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
+#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:299
 msgid "No network"
 msgstr "Geen netwerk"
 
@@ -306,8 +306,8 @@ msgstr "Geen netwerk"
 msgid "On hold"
 msgstr "In de wacht"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
 msgstr "Uitgaand"
 
@@ -323,7 +323,7 @@ msgstr "Telefoon"
 msgid "Phone App"
 msgstr "Telefoonapp"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:280
+#: ../src/qml/LiveCallPage/LiveCall.qml:285
 msgid "Phone Speaker"
 msgstr "Telefoonluidspreker"
 
@@ -335,7 +335,7 @@ msgstr "Telefoonapplicatie"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Phone;Dialer;Dial;Call;Keypad;Telefoon;Kiezen;Bellen;Toetsenblok"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:318
 msgid "Please wait"
 msgstr "Even geduld a.u.b."
 
@@ -343,13 +343,13 @@ msgstr "Even geduld a.u.b."
 msgid "Private"
 msgstr "Privé"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Privénummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:103
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/DialerPage/DialerPage.qml:104
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Recent"
 
@@ -361,7 +361,7 @@ msgstr "Zoeken"
 msgid "Search..."
 msgstr "Zoeken…"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
 msgstr "Selecteren"
 
@@ -374,7 +374,7 @@ msgstr ""
 "kunt deze keuze altijd wijzigen in de <a "
 "href=\"system_settings\">Systeeminstellingen</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:333
+#: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Send message"
 msgstr "Brericht versturen"
 
@@ -386,7 +386,7 @@ msgstr "Instellingen"
 msgid "Share"
 msgstr "Delen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:467
+#: ../src/qml/LiveCallPage/LiveCall.qml:474
 msgid "Switch calls"
 msgstr "Gesprek wisselen"
 
@@ -398,12 +398,12 @@ msgstr "Wissel naar de standaard simkaart:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:299
+#: ../src/qml/dialer-app.qml:300
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Er is momenteel geen netwerk op %1"
 
-#: ../src/qml/dialer-app.qml:300
+#: ../src/qml/dialer-app.qml:301
 msgid "There is currently no network."
 msgstr "Er is momenteel geen netwerk."
 
@@ -411,15 +411,15 @@ msgstr "Er is momenteel geen netwerk."
 msgid "Today"
 msgstr "Vandaag"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:278
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Ubuntu Phone"
 msgstr "Ubuntutelefoon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:282
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Unknown device"
 msgstr "Onbekend apparaat"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Onbekend nummer"
@@ -450,8 +450,8 @@ msgstr "U moet een simkaart selecteren"
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:230
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
 msgstr "uu:mm ap"
 
