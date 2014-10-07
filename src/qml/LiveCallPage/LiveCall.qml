@@ -126,7 +126,7 @@ Page {
                     top: parent.top
                     right: parent.right
                 }
-                ListItems.Header { text: "Switch audio source:" }
+                ListItems.Header { text: i18n.tr("Switch audio source:") }
                 Repeater {
                     model: audioOutputs
                     ListItems.Standard {
