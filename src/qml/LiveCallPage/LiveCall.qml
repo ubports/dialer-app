@@ -42,6 +42,7 @@ Page {
     property string activeAudioOutput: call ? call.activeAudioOutput : ""
     property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
+    property int defaultTimeout: 10000
     property string caller: {
         if (call && call.isConference) {
             return i18n.tr("Conference");
@@ -243,7 +244,7 @@ Page {
 
     Timer {
         id: callWatcher
-        interval: 7000
+        interval: defaultTimeout
         repeat: false
         running: true
         onTriggered: {
