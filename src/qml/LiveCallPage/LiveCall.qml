@@ -42,6 +42,7 @@ Page {
     property string activeAudioOutput: call ? call.activeAudioOutput : ""
     property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
+    property int defaultTimeout: 10000
     property string caller: {
         if (call && call.isConference) {
             return i18n.tr("Conference");
@@ -125,7 +126,7 @@ Page {
                     top: parent.top
                     right: parent.right
                 }
-                ListItems.Header { text: "Switch audio source:" }
+                ListItems.Header { text: i18n.tr("Switch audio source:") }
                 Repeater {
                     model: audioOutputs
                     ListItems.Standard {
@@ -243,7 +244,7 @@ Page {
 
     Timer {
         id: callWatcher
-        interval: 7000
+        interval: defaultTimeout
         repeat: false
         running: true
         onTriggered: {

@@ -54,7 +54,6 @@ MainView {
     signal closeUSSDProgressIndicator
 
     property string pendingNumberToDial: ""
-    property string pendingAccountId: ""
     property bool accountReady: false
 
     onApplicationActiveChanged: {
@@ -119,9 +118,12 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
-        for (var i in mainView.account.emergencyNumbers) {
-            if (phoneUtils.comparePhoneNumbers(number, mainView.account.emergencyNumbers[i])) {
-                return true;
+        for (var i in telepathyHelper.accounts) {
+            var account = telepathyHelper.accounts[i];
+            for (var j in account.emergencyNumbers) {
+                if (phoneUtils.comparePhoneNumbers(number, account.emergencyNumbers[j])) {
+                    return true;
+                }
             }
         }
         return false;
@@ -153,7 +155,7 @@ MainView {
         if (greeter.greeterActive) {
             return;
         }
-        call(mainView.account.voicemailNumber, mainView.account.accountId);
+        call(mainView.account.voicemailNumber);
     }
 
     function checkUSSD(number) {
@@ -187,33 +189,83 @@ MainView {
         return false
     }
 
-    function call(number, accountId) {
+    function callEmergency(number) {
+        // if we are in flight mode, we first need to disable it and wait for
+        // the modems to update
+        if (telepathyHelper.flightMode) {
+            pendingNumberToDial = number;
+            telepathyHelper.flightMode = false;
+            PopupUtils.open(flightModeProgressDialog)
+            return;
+        }
+
+        animateLiveCall();
+
+        // now try to use one of the connected accounts
+        var account = null;
+        if (telepathyHelper.activeAccounts.length > 0) {
+            account = telepathyHelper.activeAccounts[0];
+        } else {
+            // if no account is active, use any account that can make emergency calls
+            for (var i in telepathyHelper.accounts) {
+                if (telepathyHelper.accounts[i].emergencyCallsAvailable) {
+                    account = telepathyHelper.accounts[i];
+                    break;
+                }
+            }
+        }
+
+        // not sure what to do when no accounts can make emergency calls
+        if (account == null) {
+            pendingNumberToDial = number;
+            return;
+        }
+
+        if (!accountReady) {
+            pendingNumberToDial = number;
+            return;
+        }
+
+        callManager.startCall(number, account.accountId);
+    }
+
+    function call(number, skipDefaultSimDialog) {
         // clear the values here so that the changed signals are fired when the new value is set
         pendingNumberToDial = "";
-        pendingAccountId = "";
-
 
         if (number === "") {
             return
         }
 
+        if (isEmergencyNumber(number)) {
+            callEmergency(number);
+            return;
+        }
+
+        // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
+            Qt.inputMethod.hide()
             PopupUtils.open(Qt.createComponent("Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
             return
         }
 
-        if (!telepathyHelper.connected && !isEmergencyNumber((number))) {
-            pendingNumberToDial = number;
-            pendingAccountId = accountId;
-            return;
+        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk && !skipDefaultSimDialog) {
+            var properties = {}
+            properties["phoneNumber"] = number
+            properties["accountId"] = mainView.account.accountId
+            PopupUtils.open(Qt.createComponent("Dialogs/SetDefaultSIMCardDialog.qml").createObject(mainView), mainView, properties)
+            return
         }
 
-        var account = telepathyHelper.accountForId(accountId);
-        if (!account) {
-            account = telepathyHelper.accounts[0];
+        if (mainView.account && !greeter.greeterActive && mainView.account.simLocked) {
+            var properties = {}
+            properties["accountId"] = mainView.account.accountId
+            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
+            return
         }
 
-        if (!account.connected) {
+        // avoid cleaning the keypadEntry in case there is no signal
+        if (!mainView.account.connected) {
             PopupUtils.open(noNetworkDialog)
             return
         }
@@ -224,11 +276,10 @@ MainView {
             return
         }
 
-        switchToLiveCall();
+        animateLiveCall();
 
         if (!accountReady) {
             pendingNumberToDial = number;
-            pendingAccountId = accountId;
             return;
         }
 
@@ -257,15 +308,27 @@ MainView {
         }
     }
 
+    function animateLiveCall() {
+        if (pageStack.currentPage && pageStack.currentPage.triggerCallAnimation) {
+            pageStack.currentPage.triggerCallAnimation();
+        } else {
+            switchToLiveCall();
+        }
+    }
+
     function switchToLiveCall() {
         // pop the stack if the live call is not the visible view
         // FIXME: using the objectName here is not pretty, change by something less prone to errors
         while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
             pageStack.pop();
         }
+        var properties = {}
+        if (isEmergencyNumber(pendingNumberToDial)) {
+            properties["defaultTimeout"] = 30000
+        }
 
         if (pageStack.depth === 1)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"))
+            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
         }
     }
 
@@ -305,6 +368,41 @@ MainView {
                 color: UbuntuColors.orange
                 onClicked: {
                     PopupUtils.close(dialogue)
+                }
+            }
+        }
+    }
+
+    Component {
+        id: flightModeProgressDialog
+        Dialog {
+            id: flightModeProgressIndicator
+            visible: false
+            title: i18n.tr("Disabling flight mode")
+            ActivityIndicator {
+                running: parent.visible
+            }
+            Connections {
+                target: telepathyHelper
+                onEmergencyCallsAvailableChanged: {
+                    flightModeTimer.start()
+                }
+            }
+            // FIXME: workaround to give modems some time to become available
+            Timer {
+                id: flightModeTimer
+                interval: 10000
+                repeat: false
+                onTriggered: {
+                    PopupUtils.close(flightModeProgressIndicator)
+                    if (telepathyHelper.emergencyCallsAvailable && pendingNumberToDial !== "") {
+                        if (!isEmergencyNumber(pendingNumberToDial)) {
+                            return;
+                        }
+
+                        callEmergency(pendingNumberToDial);
+                        pendingNumberToDial = "";
+                    }
                 }
             }
         }
@@ -368,10 +466,9 @@ MainView {
             }
 
             if (pendingNumberToDial != "") {
-                callManager.startCall(pendingNumberToDial, pendingAccountId);
+                callManager.startCall(pendingNumberToDial, mainView.account.accountId);
             }
             pendingNumberToDial = "";
-            pendingAccountId = "";
         }
     }
 
@@ -382,7 +479,12 @@ MainView {
                 return;
             }
 
-            // load the live call
+            // if we are animating the dialpad view, do not switch to livecall directly
+            if (pageStack.currentPage && pageStack.currentPage.callAnimationRunning) {
+                return;
+            }
+
+            // if not, just open the live call
             switchToLiveCall();
         }
     }

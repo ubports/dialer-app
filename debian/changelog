@@ -1,3 +1,28 @@
+dialer-app (0.1+14.10.20141007.1-0ubuntu1) 14.09; urgency=low
+
+  [ Bill Filler ]
+  * use header in splash screen (LP: #1378379)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Display different labels when in emergency mode and when the sim
+    card is locked.
+  * Remove some code duplication and make sure emergency calling is
+    always available.
+  * Ship the dialer-app icon in the package. (LP: #1365408)
+
+  [ Tiago Salem Herrmann ]
+  * Add support for sim lock detection (LP: #1371661)
+  * Remove some code duplication and make sure emergency calling is
+    always available.
+
+  [ Albert Astals ]
+  * Add i18n.tr
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 07 Oct 2014 17:02:04 +0000
+
 dialer-app (0.1+14.10.20140924-0ubuntu1) 14.09; urgency=low
 
   [ CI bot ]
