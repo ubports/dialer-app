@@ -17,6 +17,7 @@ endmacro()
 
 if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("keypad_button" tst_KeypadButton.qml)
+    declare_qml_test("stopwatch" tst_StopWatch.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)
         message(WARNING "Qml tests disabled: qmltestrunner not found")
@@ -27,5 +28,6 @@ endif()
 
 set(QML_TST_FILES
     tst_KeypadButton.qml
+    tst_StopWatch.qml
 )
 add_custom_target(tst_QmlFiles ALL SOURCES ${QML_TST_FILES})

@@ -21,19 +21,22 @@ import Ubuntu.Components 1.1
 
 Item {
 
+    function pad(text, length) {
+        while (text.length < length) text = '0' + text;
+        return text;
+    }
+
     property int time: 0
     property string elapsed: {
         var hours = Math.floor(time / (60 * 60));
 
         var divisor_for_minutes = time % (60 * 60);
-        var minutes = Math.floor(divisor_for_minutes / 60);
+        var minutes = String(Math.floor(divisor_for_minutes / 60));
 
         var divisor_for_seconds = divisor_for_minutes % 60;
-        var seconds = Math.ceil(divisor_for_seconds);
+        var seconds = String(Math.ceil(divisor_for_seconds));
 
-        if (minutes < 10) minutes = "0" + minutes;
-        if (seconds < 10) seconds = "0" + seconds;
-
-        return (hours == 0 ? "" : hours + ":") + minutes + ":" + seconds;            
+        return hours == 0 ? "%1:%2".arg(pad(minutes, 2)).arg(pad(seconds, 2)) : 
+            "%1:%2:%3".arg(hours).arg(pad(minutes, 2)).arg(pad(seconds, 2))
     }
 }
