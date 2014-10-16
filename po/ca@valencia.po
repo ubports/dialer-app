@@ -1,4 +1,4 @@
-# Catalan (Valencian) translation for dialer-app
+# Catalan translation for dialer-app
 # Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
@@ -8,149 +8,149 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-09-16 16:28-0300\n"
-"PO-Revision-Date: 2014-10-15 05:58+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Catalan (Valencian) <ca@valencia@li.org>\n"
+"PO-Revision-Date: 2014-10-15 14:37+0000\n"
+"Last-Translator: David Planella <david.planella@ubuntu.com>\n"
+"Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-10-15 06:15+0000\n"
+"X-Launchpad-Export-Date: 2014-10-16 05:44+0000\n"
 "X-Generator: Launchpad (build 17196)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
 #: ../src/qml/LiveCallPage/LiveCall.qml:386
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - en retenció"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 hora"
+msgstr[1] "%1 hores"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minuts"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 segon"
+msgstr[1] "%1 segons"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #. TRANSLATORS: this refers to a new contact
 #: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
-msgstr ""
+msgstr "+ Contacte nou"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:49
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr ""
+msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr ""
+msgstr "Activa"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
-msgstr ""
+msgstr "Tots"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Dispositiu Bluetooth"
 
 #: ../src/qml/dialer-app.qml:512
 msgid "Call Barring"
-msgstr ""
+msgstr "Restricció de cridada"
 
 #: ../src/qml/dialer-app.qml:523
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Desviació de cridades"
 
 #: ../src/qml/dialer-app.qml:534
 msgid "Call Waiting"
-msgstr ""
+msgstr "Cridada en espera"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Call ended"
-msgstr ""
+msgstr "Ha finalitzat la cridada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:253
 msgid "Call failed"
-msgstr ""
+msgstr "Ha fallat la cridada"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:388
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr ""
+msgstr "S'està cridant"
 
 #: ../src/qml/dialer-app.qml:545
 msgid "Calling Line Presentation"
@@ -162,24 +162,24 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
-msgstr ""
+msgstr "Canceŀla"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Voleu canviar totes les associacions de cridades a %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 #: ../src/qml/dialer-app.qml:367
 msgid "Close"
-msgstr ""
+msgstr "Tanca"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
-msgstr ""
+msgstr "Conferència"
 
 #: ../src/qml/dialer-app.qml:551
 msgid "Connected Line Presentation"
@@ -192,255 +192,258 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:331
 msgid "Contact Details"
-msgstr ""
+msgstr "Detalls del contacte"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
-msgstr ""
+msgstr "Contactes"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
 #: ../src/qml/HistoryPage/HistoryPage.qml:300
 msgid "Delete"
-msgstr ""
+msgstr "Suprimeix"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:312
 msgid "Details"
-msgstr ""
+msgstr "Detalls"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
-msgstr ""
+msgstr "Descarta"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "No m'ho tornes a demanar"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
-msgstr ""
+msgstr "Introduïu un número"
 
 #: ../src/qml/dialer-app.qml:435
 msgid "Error"
-msgstr ""
+msgstr "Error"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr ""
+msgstr "Preferits"
 
 #: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Flight mode"
-msgstr ""
+msgstr "Mode d'avió"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
-msgstr ""
+msgstr "Entrant"
 
 #: ../src/qml/dialer-app.qml:436
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "El codi USSD no és vàlid"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Keypad"
-msgstr ""
+msgstr "Teclat numèric"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "Més avant"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 msgid "Merge calls"
-msgstr ""
+msgstr "Combina les cridades"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr ""
+msgstr "Perduda"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:63
 msgid "New Call"
-msgstr ""
+msgstr "Cridada nova"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
-msgstr ""
+msgstr "No s'ha seleccionat cap targeta SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
-msgstr ""
+msgstr "No hi ha cridades"
 
 #: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:362
 msgid "No network"
-msgstr ""
+msgstr "Sense xarxa"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "En retenció"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
-msgstr ""
+msgstr "Eixint"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Cridades"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:286
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Altaveu del telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Aplicació del telèfon"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telèfon; marcador; cridades; crida; mòbil"
 
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
-msgstr ""
+msgstr "Espereu"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
-msgstr ""
+msgstr "Privat"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr ""
+msgstr "Número privat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:113
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr ""
+msgstr "Recents"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr ""
+msgstr "Cerca..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr ""
+msgstr "Selecciona"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"Seleccioneu la targeta SIM predeterminada per a totes les cridades eixints. "
+"Sempre podeu canviar-la als <a href=\"system_settings\">paràmetres del "
+"sistema</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Send message"
-msgstr ""
+msgstr "Envia el missatge"
 
 #: ../src/qml/DialerPage/DialerPage.qml:45
 msgid "Settings"
-msgstr ""
+msgstr "Paràmetres"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "Comparteix"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
-msgstr ""
+msgstr "Commuta entre cridades"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "Canvia a la SIM predeterminada:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: ../src/qml/dialer-app.qml:363
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "No hi ha cap xarxa a %1"
 
 #: ../src/qml/dialer-app.qml:364
 msgid "There is currently no network."
-msgstr ""
+msgstr "No hi ha cap xarxa actualment."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr ""
+msgstr "Hui"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Telèfon Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:288
 msgid "Unknown device"
-msgstr ""
+msgstr "Dispositiu desconegut"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr ""
+msgstr "Número desconegut"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
-msgstr ""
+msgstr "Missatge de veu"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr ""
+msgstr "WYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr ""
+msgstr "Ahir"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "Cal que seleccioneu una targeta SIM"
 
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
@@ -450,14 +453,14 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:230
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
-msgstr ""
+msgstr "H.mm"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
