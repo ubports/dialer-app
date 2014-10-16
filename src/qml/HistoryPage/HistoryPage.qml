@@ -43,8 +43,8 @@ Page {
     }
 
     title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    anchors.fill: parent
     active: false
+    flickable: null
 
     head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
 
@@ -147,6 +147,7 @@ Page {
     MultipleSelectionListView {
         id: historyList
         objectName: "historyList"
+        clip: true
 
         property var _currentSwipedItem: null
 
