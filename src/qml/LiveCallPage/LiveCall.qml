@@ -288,6 +288,18 @@ Page {
         return i18n.tr("Unknown device")
     }
 
+    Image {
+        id: background
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        source: Qt.resolvedUrl("../assets/dialer_background_full.png")
+        asynchronous: true
+    }
+
     // FIXME: this invisible label is only used for
     // calculating the size of the screen and resizing
     // the dtmf string accordingly so it can fit the page header
