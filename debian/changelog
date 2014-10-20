@@ -1,3 +1,14 @@
+dialer-app (0.1+14.10.20141020~rtm-0ubuntu1) 14.09; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Keep the header of call history view fixed to prevent the header
+    from disappearing.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 20 Oct 2014 17:35:52 +0000
+
 dialer-app (0.1+14.10.20141007.1-0ubuntu1) 14.09; urgency=low
 
   [ Bill Filler ]
