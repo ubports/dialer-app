@@ -55,16 +55,6 @@ Page {
         }
     }
 
-    property list<Action> regularActions: [
-        Action {
-            id: newCallAction
-            objectName: "newCallButton"
-            iconName: "contact"
-            text: i18n.tr("New Call")
-            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-        }
-    ]
-
     property Action backAction: Action {
         id: backAction
         objectName: "backButton"
@@ -79,7 +69,7 @@ Page {
     }
 
     title: caller
-    head.actions: greeter.greeterActive ? [] : regularActions
+    head.actions: []
     head.backAction: backAction
     head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
@@ -92,7 +82,6 @@ Page {
         statusLabel.text = text;
         liveCall.call = callObject;
         liveCall.dtmfVisible = false;
-        newCallAction.visible = false;
         closeTimer.running = true;
     }
 
@@ -509,41 +498,6 @@ Page {
         width: childrenRect.width
 
         LiveCallKeypadButton {
-            objectName: "muteButton"
-            iconSource: selected ? "microphone-mute" : "microphone"
-            enabled: !isVoicemail
-            selected: liveCall.isMuted
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            onClicked: {
-                if (call) {
-                    call.muted = !call.muted
-                }
-            }
-        }
-
-        LiveCallKeypadButton {
-            objectName: "pauseStartButton"
-            iconSource: {
-                if (callManager.backgroundCall) {
-                    return "swap"
-                } else if (selected) {
-                    return "media-playback-start"
-                } else {
-                    return "media-playback-pause"
-                }
-            }
-            selected: liveCall.onHold
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            onClicked: {
-                if (call) {
-                    call.held = !call.held
-                }
-            }
-        }
-
-        LiveCallKeypadButton {
             id: speakerButton
             objectName: "speakerButton"
             iconSource: {
@@ -580,6 +534,51 @@ Page {
                     } else {
                         call.activeAudioOutput = "default"
                     }
+                }
+            }
+        }
+
+        LiveCallKeypadButton {
+            objectName: "muteButton"
+            iconSource: selected ? "microphone-mute" : "microphone"
+            enabled: !isVoicemail
+            selected: liveCall.isMuted
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    call.muted = !call.muted
+                }
+            }
+        }
+
+        LiveCallKeypadButton {
+            id: newCallButton
+            objectName: "newCallButton"
+            iconSource: "add"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            enabled: !greeter.greeterActive
+            onClicked: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+        }
+
+        LiveCallKeypadButton {
+            objectName: "pauseStartButton"
+            iconSource: {
+                if (callManager.backgroundCall) {
+                    return "swap"
+                } else if (selected) {
+                    return "media-playback-start"
+                } else {
+                    return "media-playback-pause"
+                }
+            }
+            selected: liveCall.onHold
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    call.held = !call.held
                 }
             }
         }
