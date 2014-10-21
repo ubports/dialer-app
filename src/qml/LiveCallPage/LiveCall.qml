@@ -32,6 +32,7 @@ Page {
     objectName: "pageLiveCall"
 
     property var call: callManager.foregroundCall
+    property var calls: callManager.calls
     property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
@@ -90,6 +91,7 @@ Page {
             return;
         }
         statusLabel.text = text;
+        callConnection.target = null;
         liveCall.call = callObject;
         liveCall.dtmfVisible = false;
         newCallAction.visible = false;
@@ -106,11 +108,21 @@ Page {
     }
 
     Connections {
+        id: callConnection
         target: call
         onCallEnded: {
             var callObject = {};
             callObject["elapsedTime"] = call.elapsedTime;
             callObject["active"] = true;
+            callObject["voicemail"] = call.voicemail;
+            callObject["account"] = call.account;
+            callObject["phoneNumber"] = call.phoneNumber;
+            callObject["held"] = call.held;
+            callObject["muted"] = call.muted;
+            callObject["activeAudioOutput"] = call.activeAudioOutput;
+            callObject["audioOutputs"] = call.audioOutputs;
+            callObject["isConference"] = call.isConference;
+
             reportStatus(callObject, i18n.tr("Call ended"));
         }
     }
@@ -456,7 +468,7 @@ Page {
         }
 
         width: childrenRect.width
-        height: childrenRect.height
+        height: swapButton.height
         opacity: multiCall && !dtmfVisible ? 1 : 0
         enabled : opacity > 0
         spacing: units.gu(3)
