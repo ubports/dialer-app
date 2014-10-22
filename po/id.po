@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-16 16:28-0300\n"
+"POT-Creation-Date: 2014-10-21 10:04-0400\n"
 "PO-Revision-Date: 2014-08-31 05:08+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Indonesian <id@li.org>\n"
@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-09-17 07:21+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:380
+#: ../src/qml/LiveCallPage/LiveCall.qml:386
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - ditahan"
@@ -47,7 +47,7 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 dtk"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -56,7 +56,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -115,45 +115,45 @@ msgid "Active"
 msgstr "Aktif"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
 msgstr "Semua"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:276
+#: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Bluetooth device"
 msgstr "Perangkat Bluetooth"
 
-#: ../src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:512
 msgid "Call Barring"
 msgstr "Pelarangan Panggilan"
 
-#: ../src/qml/dialer-app.qml:420
+#: ../src/qml/dialer-app.qml:523
 msgid "Call Forwarding"
 msgstr "Penerusan Panggilan"
 
-#: ../src/qml/dialer-app.qml:431
+#: ../src/qml/dialer-app.qml:534
 msgid "Call Waiting"
 msgstr "Penungguan Panggilan"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Call ended"
 msgstr "Panggilan diakhiri"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:247
+#: ../src/qml/LiveCallPage/LiveCall.qml:253
 msgid "Call failed"
 msgstr "Panggilan gagal"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:382
+#: ../src/qml/LiveCallPage/LiveCall.qml:388
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Memanggil"
 
-#: ../src/qml/dialer-app.qml:442
+#: ../src/qml/dialer-app.qml:545
 msgid "Calling Line Presentation"
 msgstr "Presentasi Jalur Panggilan"
 
-#: ../src/qml/dialer-app.qml:454
+#: ../src/qml/dialer-app.qml:557
 msgid "Calling Line Restriction"
 msgstr "Pembatasan Jalur Panggilan"
 
@@ -167,32 +167,32 @@ msgstr "Batal"
 msgid "Change all Call associations to %1?"
 msgstr "Ubah semua asosiasi panggilan ke %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:51
+#: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:303
+#: ../src/qml/dialer-app.qml:367
 msgid "Close"
 msgstr "Tutup"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:47
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Konferensi"
 
-#: ../src/qml/dialer-app.qml:448
+#: ../src/qml/dialer-app.qml:551
 msgid "Connected Line Presentation"
 msgstr "Presentasi Jalur Tersambung"
 
-#: ../src/qml/dialer-app.qml:460
+#: ../src/qml/dialer-app.qml:563
 msgid "Connected Line Restriction"
 msgstr "Pembatasan Jalur Tersambung"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:320
+#: ../src/qml/HistoryPage/HistoryPage.qml:331
 msgid "Contact Details"
 msgstr "Rincian Kontak"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:39
+#: ../src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
 msgstr "Kontak"
 
@@ -201,17 +201,21 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
+#: ../src/qml/HistoryPage/HistoryPage.qml:300
 msgid "Delete"
 msgstr "Hapus"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:312
 msgid "Details"
 msgstr "Rincian"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
-#: ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:381
+msgid "Disabling flight mode"
+msgstr ""
+
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
+#: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
 msgstr "Singkirkan"
 
@@ -219,11 +223,15 @@ msgstr "Singkirkan"
 msgid "Don't ask again"
 msgstr "Jangan tanya lagi"
 
-#: ../src/qml/DialerPage/DialerPage.qml:241
+#: ../src/qml/DialerPage/DialerPage.qml:61
+msgid "Emergency Calls"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
 msgstr "Masukan nomor"
 
-#: ../src/qml/dialer-app.qml:336
+#: ../src/qml/dialer-app.qml:435
 msgid "Error"
 msgstr "Galat"
 
@@ -231,7 +239,7 @@ msgstr "Galat"
 msgid "Favorites"
 msgstr "Favorit"
 
-#: ../src/qml/DialerPage/DialerPage.qml:60
+#: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Flight mode"
 msgstr "Mode pesawat terbang"
 
@@ -243,12 +251,12 @@ msgstr "GHI"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
 msgstr "Masuk"
 
-#: ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:436
 msgid "Invalid USSD code"
 msgstr "Kode USSD tak valid"
 
@@ -256,7 +264,7 @@ msgstr "Kode USSD tak valid"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:66
+#: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Keypad"
 msgstr "Keypad"
 
@@ -268,17 +276,17 @@ msgstr "Nanti"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:482
+#: ../src/qml/LiveCallPage/LiveCall.qml:490
 msgid "Merge calls"
 msgstr "Gabung panggilan"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Terlewat"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:62
+#: ../src/qml/LiveCallPage/LiveCall.qml:63
 msgid "New Call"
 msgstr "Panggilan Baru"
 
@@ -291,20 +299,24 @@ msgstr "Tidak"
 msgid "No SIM card selected"
 msgstr "Tak ada kartu SIM yang dipilih"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:97
+#: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
 msgstr "Tiada panggilan"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
+#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:362
 msgid "No network"
 msgstr "Tiada jaringan"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+msgid "Ok"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "Ditahan"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
 msgstr "Keluar"
 
@@ -320,7 +332,7 @@ msgstr "Telepon"
 msgid "Phone App"
 msgstr "Aplikasi Telepon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:280
+#: ../src/qml/LiveCallPage/LiveCall.qml:286
 msgid "Phone Speaker"
 msgstr "Speaker Telepon"
 
@@ -332,7 +344,14 @@ msgstr "Aplikasi telepon"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Telepon;Panggilan;Keypad"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+msgid ""
+"Please unlock your SIM card to call or send a message. You can unlock your "
+"SIM card from the Network Indicator at the top of the screen or by visiting "
+"<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
 msgstr "Mohon tunggu"
 
@@ -340,15 +359,23 @@ msgstr "Mohon tunggu"
 msgid "Private"
 msgstr "Pribadi"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Nomor pribadi"
 
-#: ../src/qml/DialerPage/DialerPage.qml:103
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/DialerPage/DialerPage.qml:113
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Baru-baru Ini"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+msgid "SIM Card is locked"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:65
+msgid "SIM Locked"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -358,7 +385,7 @@ msgstr "Cari"
 msgid "Search..."
 msgstr "Cari..."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
 msgstr "Pilih"
 
@@ -370,11 +397,11 @@ msgstr ""
 "Pilih suatu SIM baku bagi semua panggilan keluar. Anda selalu dapat mengubah "
 "pilihan Anda dalam <a href=\"system_settings\">Pengaturan Sistem</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:333
+#: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Send message"
 msgstr "Kirim pesan"
 
-#: ../src/qml/DialerPage/DialerPage.qml:44
+#: ../src/qml/DialerPage/DialerPage.qml:45
 msgid "Settings"
 msgstr "Pengaturan"
 
@@ -382,7 +409,11 @@ msgstr "Pengaturan"
 msgid "Share"
 msgstr "Berbagi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:467
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
+msgid "Switch audio source:"
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
 msgstr "Tukar panggilan"
 
@@ -394,12 +425,12 @@ msgstr "Berpindah ke SIM baku:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:299
+#: ../src/qml/dialer-app.qml:363
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Saat ini tak ada jaringan pada %1"
 
-#: ../src/qml/dialer-app.qml:300
+#: ../src/qml/dialer-app.qml:364
 msgid "There is currently no network."
 msgstr "Saat ini tak ada jaringan."
 
@@ -407,15 +438,15 @@ msgstr "Saat ini tak ada jaringan."
 msgid "Today"
 msgstr "Hari ini"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:278
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Ubuntu Phone"
 msgstr "Telepon Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:282
+#: ../src/qml/LiveCallPage/LiveCall.qml:288
 msgid "Unknown device"
 msgstr "Perangkat tak dikenal"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Nomor tak dikenal"
@@ -446,8 +477,8 @@ msgstr "Anda perlu memilih suatu kartu SIM"
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:230
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
 msgstr "hh:mm"
 
