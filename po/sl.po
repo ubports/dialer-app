@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-21 10:04-0400\n"
-"PO-Revision-Date: 2014-09-09 12:08+0000\n"
+"PO-Revision-Date: 2014-10-24 15:33+0000\n"
 "Last-Translator: Damir Jerovšek <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2014-10-22 06:18+0000\n"
+"X-Launchpad-Export-Date: 2014-10-25 06:02+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -222,7 +222,7 @@ msgstr "Podrobnosti"
 
 #: ../src/qml/dialer-app.qml:381
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Onemogočenje načina letenja"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
@@ -235,7 +235,7 @@ msgstr "Ne sprašuj več"
 
 #: ../src/qml/DialerPage/DialerPage.qml:61
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Klici v sili"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
@@ -319,7 +319,7 @@ msgstr "Ni omrežja"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "V redu"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
@@ -381,11 +381,11 @@ msgstr "Nedavno"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "Kartica SIM je zaklenjena"
 
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "SIM Locked"
-msgstr ""
+msgstr "SIM je zaklenjen"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -421,7 +421,7 @@ msgstr "Souporaba"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Preklopi zvočni vir:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
