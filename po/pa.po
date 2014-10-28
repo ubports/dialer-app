@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-16 16:28-0300\n"
+"POT-Creation-Date: 2014-10-21 10:04-0400\n"
 "PO-Revision-Date: 2014-10-19 14:05+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-10-20 07:07+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -213,6 +213,10 @@ msgstr "ਹਟਾਓ"
 msgid "Details"
 msgstr "ਵੇਰਵਾ"
 
+#: ../src/qml/dialer-app.qml:381
+msgid "Disabling flight mode"
+msgstr "ਫਲਾਈਟ ਮੋਡ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
+
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
@@ -221,6 +225,10 @@ msgstr "ਅਣਡਿੱਠਾ"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
 msgstr "ਫੇਰ ਨਾ ਪੁੱਛੋ"
+
+#: ../src/qml/DialerPage/DialerPage.qml:61
+msgid "Emergency Calls"
+msgstr "ਐਮਰਜੈਂਸੀ ਕਾਲਾਂ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
@@ -302,6 +310,10 @@ msgstr "ਕੋਈ ਕਾਲ ਨਹੀਂ"
 msgid "No network"
 msgstr "ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
+#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+msgid "Ok"
+msgstr "ਠੀਕ ਹੈ"
+
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "ਹੋਲਡ ਹੈ"
@@ -335,6 +347,13 @@ msgstr "ਫੋਨ ਐਪਲੀਕੇਸ਼ਨ"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "ਫੋਨ;ਡਾਇਲਰ;ਡਾਇਲ;ਕਾਲ;ਕੀਪੈਡ"
 
+#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+msgid ""
+"Please unlock your SIM card to call or send a message. You can unlock your "
+"SIM card from the Network Indicator at the top of the screen or by visiting "
+"<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
+msgstr ""
+
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
 msgstr "ਉਡੀਕੋ ਜੀ"
@@ -352,6 +371,14 @@ msgstr "ਪ੍ਰਾਈਵੇਟ ਨੰਬਰ"
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "ਤਾਜ਼ਾ"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+msgid "SIM Card is locked"
+msgstr "ਸਿਮ ਕਾਰਡ ਲਾਕ ਹੈ"
+
+#: ../src/qml/DialerPage/DialerPage.qml:65
+msgid "SIM Locked"
+msgstr "ਸਿਮ ਲਾਕ ਹੈ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -384,6 +411,10 @@ msgstr "ਸੈਟਿੰਗ"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
+msgid "Switch audio source:"
+msgstr "ਆਡੀਓ ਸਰੋਤ ਬਦਲੋ:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"

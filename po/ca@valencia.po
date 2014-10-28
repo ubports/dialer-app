@@ -7,16 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-16 16:28-0300\n"
-"PO-Revision-Date: 2014-10-15 14:37+0000\n"
+"POT-Creation-Date: 2014-10-21 10:04-0400\n"
+"PO-Revision-Date: 2014-10-26 12:54+0000\n"
 "Last-Translator: David Planella <david.planella@ubuntu.com>\n"
 "Language-Team: Catalan <ca@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-10-16 05:44+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-10-27 06:31+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -213,6 +213,10 @@ msgstr "Suprimeix"
 msgid "Details"
 msgstr "Detalls"
 
+#: ../src/qml/dialer-app.qml:381
+msgid "Disabling flight mode"
+msgstr "S'està inhabilitant el mode d'avió"
+
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
@@ -221,6 +225,10 @@ msgstr "Descarta"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
 msgstr "No m'ho tornes a demanar"
+
+#: ../src/qml/DialerPage/DialerPage.qml:61
+msgid "Emergency Calls"
+msgstr "Cridades d'emergència"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
@@ -302,6 +310,10 @@ msgstr "No hi ha cridades"
 msgid "No network"
 msgstr "Sense xarxa"
 
+#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+msgid "Ok"
+msgstr "D'acord"
+
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "En retenció"
@@ -335,6 +347,17 @@ msgstr "Aplicació del telèfon"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Telèfon; marcador; cridades; crida; mòbil"
 
+#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+msgid ""
+"Please unlock your SIM card to call or send a message. You can unlock your "
+"SIM card from the Network Indicator at the top of the screen or by visiting "
+"<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
+msgstr ""
+"Heu de desblocar la targeta SIM abans de poder cridar o enviar missatges de "
+"text. Podeu fer-ho des de l'indicador de xarxes a la part superior de la "
+"pantalla, o bé si aneu a <a href=\"system_settings\">Configuració del "
+"sistema &gt; Seguretat i privadesa</a>."
+
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
 msgstr "Espereu"
@@ -352,6 +375,14 @@ msgstr "Número privat"
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Recents"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+msgid "SIM Card is locked"
+msgstr "La targeta SIM està blocada"
+
+#: ../src/qml/DialerPage/DialerPage.qml:65
+msgid "SIM Locked"
+msgstr "SIM blocada"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -385,6 +416,10 @@ msgstr "Paràmetres"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "Comparteix"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
+msgid "Switch audio source:"
+msgstr "Commuta la font d'àudio"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"

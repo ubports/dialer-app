@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-09-16 16:28-0300\n"
+"POT-Creation-Date: 2014-10-21 10:04-0400\n"
 "PO-Revision-Date: 2014-05-15 21:09+0000\n"
 "Last-Translator: Yaron <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <he@li.org>\n"
@@ -15,18 +15,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-09-17 07:21+0000\n"
-"X-Generator: Launchpad (build 17196)\n"
+"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:380
+#: ../src/qml/LiveCallPage/LiveCall.qml:386
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - בהמתנה"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -50,16 +50,16 @@ msgstr[0] "שנייה %1"
 msgstr[1] "%1 שניות"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:202
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:344
+#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -67,7 +67,7 @@ msgstr "+"
 #. TRANSLATORS: this refers to a new contact
 #: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
-msgstr ""
+msgstr "+ יצירת חדש"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
@@ -115,48 +115,48 @@ msgstr "דהו"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr ""
+msgstr "פעיל"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:276
+#: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Bluetooth device"
-msgstr ""
+msgstr "התקן Bluetooth"
 
-#: ../src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:512
 msgid "Call Barring"
 msgstr "חסימת שיחות"
 
-#: ../src/qml/dialer-app.qml:420
+#: ../src/qml/dialer-app.qml:523
 msgid "Call Forwarding"
 msgstr "העברת שיחות"
 
-#: ../src/qml/dialer-app.qml:431
+#: ../src/qml/dialer-app.qml:534
 msgid "Call Waiting"
 msgstr "שיחה ממתינה"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Call ended"
-msgstr ""
+msgstr "השיחה הסתיימה"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:247
+#: ../src/qml/LiveCallPage/LiveCall.qml:253
 msgid "Call failed"
-msgstr ""
+msgstr "השיחה נכשלה"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:382
+#: ../src/qml/LiveCallPage/LiveCall.qml:388
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr ""
+msgstr "מתקשר"
 
-#: ../src/qml/dialer-app.qml:442
+#: ../src/qml/dialer-app.qml:545
 msgid "Calling Line Presentation"
 msgstr "ייצוג קו השיחה"
 
-#: ../src/qml/dialer-app.qml:454
+#: ../src/qml/dialer-app.qml:557
 msgid "Calling Line Restriction"
 msgstr "הגבלות קו השיחה"
 
@@ -168,34 +168,34 @@ msgstr "ביטול"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "האם לשנות את כל שיוכי השיחות אל %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:51
+#: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:303
+#: ../src/qml/dialer-app.qml:367
 msgid "Close"
-msgstr ""
+msgstr "סגירה"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:47
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "ועידה"
 
-#: ../src/qml/dialer-app.qml:448
+#: ../src/qml/dialer-app.qml:551
 msgid "Connected Line Presentation"
 msgstr "ייצוג הקו המחובר"
 
-#: ../src/qml/dialer-app.qml:460
+#: ../src/qml/dialer-app.qml:563
 msgid "Connected Line Restriction"
 msgstr "מגבלות הקו המחובר"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:320
+#: ../src/qml/HistoryPage/HistoryPage.qml:331
 msgid "Contact Details"
-msgstr ""
+msgstr "פרטי איש קשר"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:39
+#: ../src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
 msgstr "אנשי קשר"
 
@@ -204,39 +204,47 @@ msgid "DEF"
 msgstr "אבג"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:248
-#: ../src/qml/HistoryPage/HistoryPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
+#: ../src/qml/HistoryPage/HistoryPage.qml:300
 msgid "Delete"
 msgstr "מחיקה"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:310
+#: ../src/qml/HistoryPage/HistoryPage.qml:312
 msgid "Details"
-msgstr ""
+msgstr "פרטים"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:339
-#: ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:381
+msgid "Disabling flight mode"
+msgstr "נטרול מצב טיסה"
+
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
+#: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
 msgstr "התעלמות"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "לא לשאול שוב"
 
-#: ../src/qml/DialerPage/DialerPage.qml:241
+#: ../src/qml/DialerPage/DialerPage.qml:61
+msgid "Emergency Calls"
+msgstr "שיחות חירום"
+
+#: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
 msgstr "נא להזין מספר"
 
-#: ../src/qml/dialer-app.qml:336
+#: ../src/qml/dialer-app.qml:435
 msgid "Error"
 msgstr "שגיאה"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr ""
+msgstr "מועדפים"
 
-#: ../src/qml/DialerPage/DialerPage.qml:60
+#: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Flight mode"
-msgstr ""
+msgstr "מצב טיסה"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -244,14 +252,14 @@ msgstr "מםנן"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI (מס׳ ברזל)"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
-msgstr ""
+msgstr "נכנסת"
 
-#: ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:436
 msgid "Invalid USSD code"
 msgstr "קוד USSD שגוי"
 
@@ -259,57 +267,61 @@ msgstr "קוד USSD שגוי"
 msgid "JKL"
 msgstr "יכךל"
 
-#: ../src/qml/DialerPage/DialerPage.qml:66
+#: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Keypad"
 msgstr "לוח מקשים"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "מאוחר יותר"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
 msgstr "זחט"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:482
+#: ../src/qml/LiveCallPage/LiveCall.qml:490
 msgid "Merge calls"
 msgstr "מיזוג שיחות"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
-#: ../src/qml/HistoryPage/HistoryPage.qml:47
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr ""
+msgstr "לא נענו"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:62
+#: ../src/qml/LiveCallPage/LiveCall.qml:63
 msgid "New Call"
-msgstr ""
+msgstr "שיחה חדשה"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "לא"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
-msgstr ""
+msgstr "לא נבחר כרטיס SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:97
+#: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
-msgstr ""
+msgstr "אין שיחות"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68 ../src/qml/dialer-app.qml:298
+#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:362
 msgid "No network"
-msgstr ""
+msgstr "אין רשת"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+msgid "Ok"
+msgstr "בסדר"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr ""
+msgstr "בהמתנה"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:311
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
-msgstr ""
+msgstr "יוצאת"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
@@ -317,25 +329,32 @@ msgstr "רשת"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "טלפון"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "יישום טלפון"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:280
+#: ../src/qml/LiveCallPage/LiveCall.qml:286
 msgid "Phone Speaker"
-msgstr ""
+msgstr "הרמקול של הטלפון"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "יישום טלפון"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
+msgstr "טלפון;חייגן;חוגה;התקשרות;להתקשר;שיחה;לחצנים;לוח"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+msgid ""
+"Please unlock your SIM card to call or send a message. You can unlock your "
+"SIM card from the Network Indicator at the top of the screen or by visiting "
+"<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
 msgstr "נא להמתין"
 
@@ -343,27 +362,35 @@ msgstr "נא להמתין"
 msgid "Private"
 msgstr "פרטי"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr ""
+msgstr "מספר פרטי"
 
-#: ../src/qml/DialerPage/DialerPage.qml:103
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/DialerPage/DialerPage.qml:113
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr ""
+msgstr "אחרונים"
+
+#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+msgid "SIM Card is locked"
+msgstr "כרטיס ה־SIM נעול"
+
+#: ../src/qml/DialerPage/DialerPage.qml:65
+msgid "SIM Locked"
+msgstr "ה־SIM נעול"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr ""
+msgstr "חיפוש"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr ""
+msgstr "חיפוש..."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:43
+#: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr ""
+msgstr "בחירה"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
@@ -371,55 +398,59 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:333
+#: ../src/qml/HistoryPage/HistoryPage.qml:322
 msgid "Send message"
-msgstr ""
+msgstr "שליחת הודעה"
 
-#: ../src/qml/DialerPage/DialerPage.qml:44
+#: ../src/qml/DialerPage/DialerPage.qml:45
 msgid "Settings"
-msgstr ""
+msgstr "הגדרות"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "שיתוף"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:467
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
+msgid "Switch audio source:"
+msgstr "החלפת מקור השמע:"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
-msgstr ""
+msgstr "החלפת שיחות"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "החלפה ל־SIM בררת המחדל:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
 msgstr "צץק"
 
-#: ../src/qml/dialer-app.qml:299
+#: ../src/qml/dialer-app.qml:363
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "נכון לעכשיו, אין רשת עם %1"
 
-#: ../src/qml/dialer-app.qml:300
+#: ../src/qml/dialer-app.qml:364
 msgid "There is currently no network."
-msgstr ""
+msgstr "אין רשת נכון לעכשיו."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
 msgstr "היום"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:278
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "טלפון אובונטו"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:282
+#: ../src/qml/LiveCallPage/LiveCall.qml:288
 msgid "Unknown device"
-msgstr ""
+msgstr "התקן בלתי ידוע"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr ""
+msgstr "מספר לא ידוע"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
@@ -432,7 +463,7 @@ msgstr "סעפף"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "כן"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
@@ -440,24 +471,24 @@ msgstr "אתמול"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "עליך לבחור בכרטיס SIM"
 
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
 #. please change according to your language
 #. TRANSLATORS: HH:mm is the time format, translate it according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:234
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:265
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:230
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
-msgstr ""
+msgstr "hh:mm"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
