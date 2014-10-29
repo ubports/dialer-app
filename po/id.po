@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Launchpad-Export-Date: 2014-10-29 07:28+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -187,7 +187,7 @@ msgid "Connected Line Restriction"
 msgstr "Pembatasan Jalur Tersambung"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr "Rincian Kontak"
 
@@ -202,17 +202,17 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
-#: ../src/qml/HistoryPage/HistoryPage.qml:300
+#: ../src/qml/HistoryPage/HistoryPage.qml:301
 msgid "Delete"
 msgstr "Hapus"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:312
+#: ../src/qml/HistoryPage/HistoryPage.qml:313
 msgid "Details"
 msgstr "Rincian"
 
 #: ../src/qml/dialer-app.qml:381
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Menonaktifkan mode penerbangan"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
@@ -225,7 +225,7 @@ msgstr "Jangan tanya lagi"
 
 #: ../src/qml/DialerPage/DialerPage.qml:61
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Panggilan Darurat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
@@ -309,7 +309,7 @@ msgstr "Tiada jaringan"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
@@ -350,6 +350,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Harap buka kunci kartu SIM Anda untuk memanggil atau mengirim pesan. Anda "
+"dapat membuka kunci kartu SIM Anda dari Indikator Jaringan di puncak layar "
+"atau dengan mengunjungi <a href=\"system_settings\">Pengaturan Sistem &gt; "
+"Keamanan &amp; Privasi</a>."
 
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
@@ -371,11 +375,11 @@ msgstr "Baru-baru Ini"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "Kartu SIM terkunci"
 
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "SIM Locked"
-msgstr ""
+msgstr "SIM Terkunci"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -397,7 +401,7 @@ msgstr ""
 "Pilih suatu SIM baku bagi semua panggilan keluar. Anda selalu dapat mengubah "
 "pilihan Anda dalam <a href=\"system_settings\">Pengaturan Sistem</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:323
 msgid "Send message"
 msgstr "Kirim pesan"
 
@@ -411,7 +415,7 @@ msgstr "Berbagi"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Tukar sumber audio:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"

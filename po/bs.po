@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Launchpad-Export-Date: 2014-10-29 07:27+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -194,7 +194,7 @@ msgid "Connected Line Restriction"
 msgstr "Ograničenje konektovane linije"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr "Detalji o kontaktu"
 
@@ -209,17 +209,17 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
-#: ../src/qml/HistoryPage/HistoryPage.qml:300
+#: ../src/qml/HistoryPage/HistoryPage.qml:301
 msgid "Delete"
 msgstr "Obriši"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:312
+#: ../src/qml/HistoryPage/HistoryPage.qml:313
 msgid "Details"
 msgstr "Detalji"
 
 #: ../src/qml/dialer-app.qml:381
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Isključi avio mod"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
@@ -232,7 +232,7 @@ msgstr "Ne pitaj ponovo"
 
 #: ../src/qml/DialerPage/DialerPage.qml:61
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Hitni pozivi"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
@@ -308,7 +308,7 @@ msgstr "Nije odabrana SIM kartica"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
-msgstr ""
+msgstr "Nema poziva"
 
 #: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:362
 msgid "No network"
@@ -337,7 +337,7 @@ msgstr "Telefon"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Telefon"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:286
 msgid "Phone Speaker"
@@ -345,11 +345,11 @@ msgstr "Zvučnik telefona"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Telefonska aplikacija"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telefon;Birač;Biraj;Zovi;Tastatura"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -357,6 +357,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Molimo otključajte Vašu SIM karticu kako bi pravili pozive ili slali poruke. "
+"Možete otključati Vašu SIM karticu uz pomoć mrežnog indikatora na vrhu "
+"ekrana ili posjetom <a href=\"system_settings\">Postavki &gt; Sigurnosti "
+"&amp; Privatnosti</a>."
 
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
@@ -378,11 +382,11 @@ msgstr "Nedavno"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "SIM kartica je zaključana"
 
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "SIM Locked"
-msgstr ""
+msgstr "SIM zaključan"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
@@ -404,7 +408,7 @@ msgstr ""
 "Odaberi primarni SIM za odlazeće pozive. Možete kasnije promjeniti ovaj "
 "izbor u <a href=\"system_settings\">sistemskim postavkama</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:323
 msgid "Send message"
 msgstr "Pošalji poruku"
 
@@ -418,11 +422,11 @@ msgstr "Podijeli"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Prebaci audio izvor:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
-msgstr ""
+msgstr "Prebaci pozive"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"

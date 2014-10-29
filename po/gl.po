@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-21 10:04-0400\n"
-"PO-Revision-Date: 2014-09-24 16:48+0000\n"
+"PO-Revision-Date: 2014-10-28 14:14+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-10-22 06:17+0000\n"
+"X-Launchpad-Export-Date: 2014-10-29 07:28+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -150,7 +150,7 @@ msgstr "Chamada fallida"
 #: ../src/qml/LiveCallPage/LiveCall.qml:388
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr "Chamando"
+msgstr "Chamando a"
 
 #: ../src/qml/dialer-app.qml:545
 msgid "Calling Line Presentation"
@@ -190,7 +190,7 @@ msgid "Connected Line Restriction"
 msgstr "Restrición de información ao emisor"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr "Información do contacto"
 
@@ -205,11 +205,11 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
-#: ../src/qml/HistoryPage/HistoryPage.qml:300
+#: ../src/qml/HistoryPage/HistoryPage.qml:301
 msgid "Delete"
 msgstr "Eliminar"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:312
+#: ../src/qml/HistoryPage/HistoryPage.qml:313
 msgid "Details"
 msgstr "Detalles"
 
@@ -404,7 +404,7 @@ msgstr ""
 "Seleccione unha tarxeta SIM para as chamadas saíntes. Pode cambiar a "
 "elección nos <a href=\"system_settings\">Axustes do sistema</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:323
 msgid "Send message"
 msgstr "Enviar mensaxe"
 

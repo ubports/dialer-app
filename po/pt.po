@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-10-23 07:27+0000\n"
+"X-Launchpad-Export-Date: 2014-10-29 07:28+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -190,7 +190,7 @@ msgid "Connected Line Restriction"
 msgstr "Restrição da Chamada Estabelecida"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
 msgstr "Detalhes do Contacto"
 
@@ -205,11 +205,11 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
-#: ../src/qml/HistoryPage/HistoryPage.qml:300
+#: ../src/qml/HistoryPage/HistoryPage.qml:301
 msgid "Delete"
 msgstr "Eliminar"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:312
+#: ../src/qml/HistoryPage/HistoryPage.qml:313
 msgid "Details"
 msgstr "Detalhes"
 
@@ -405,7 +405,7 @@ msgstr ""
 "sempre alterar a sua escolha em <a href=\"Configurações_Sistema\"> "
 "Configurações do Sistema</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:322
+#: ../src/qml/HistoryPage/HistoryPage.qml:323
 msgid "Send message"
 msgstr "Enviar mensagem"
 
