@@ -60,7 +60,7 @@ static void installIconPath()
 
 
 DialerApplication::DialerApplication(int &argc, char **argv)
-    : QGuiApplication(argc, argv), m_view(0), m_applicationIsReady(false)
+    : QGuiApplication(argc, argv), m_view(0), m_applicationIsReady(false), m_fullScreen(false)
 {
     setApplicationName("DialerApp");
     setOrganizationName("com.ubuntu.dialer-app");
@@ -70,7 +70,6 @@ bool DialerApplication::setup()
 {
     installIconPath();
     static QList<QString> validSchemes;
-    bool fullScreen = false;
 
     if (validSchemes.isEmpty()) {
         validSchemes << "tel" << "dialer";
@@ -85,7 +84,7 @@ bool DialerApplication::setup()
 
     if (arguments.contains("--fullscreen")) {
         arguments.removeAll("--fullscreen");
-        fullScreen = true;
+        m_fullScreen = true;
     }
 
     // The testability driver is only loaded by QApplication but not by QGuiApplication.
@@ -150,13 +149,25 @@ bool DialerApplication::setup()
     }
 
     m_view->setSource(QUrl::fromLocalFile("dialer-app.qml"));
-    if (fullScreen) {
+    if (m_fullScreen) {
         m_view->showFullScreen();
     } else {
         m_view->show();
     }
 
     return true;
+}
+
+bool DialerApplication::fullScreen() const
+{
+    return m_fullScreen;
+}
+
+void DialerApplication::setFullScreen(bool value)
+{
+    m_fullScreen = value;
+    m_view->setWindowState(m_fullScreen ? Qt::WindowFullScreen : Qt::WindowNoState);
+    Q_EMIT fullScreenChanged();
 }
 
 DialerApplication::~DialerApplication()
