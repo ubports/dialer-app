@@ -1,3 +1,17 @@
+dialer-app (0.1+15.04.20141106-0ubuntu1) vivid; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Olivier Tilloy ]
+  * Also handle URLs of the form "tel:+1234567890", i.e. without slashes
+    (those are common on web pages). (LP: #1351222)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Nov 2014 10:01:01 +0000
+
 dialer-app (0.1+14.10.20141020~rtm-0ubuntu1) 14.09; urgency=low
 
   [ Ubuntu daily release ]
