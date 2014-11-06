@@ -39,9 +39,9 @@ static void printUsage(const QStringList& arguments)
 {
     qDebug() << "usage:"
              << arguments.at(0).toUtf8().constData()
-             << "[tel:///PHONE_NUMBER]"
-             << "[tel:///voicemail]"
-             << "[dialer:///?view=<view name>]"
+             << "[tel:[///]PHONE_NUMBER]"
+             << "[tel:[///]voicemail]"
+             << "[dialer:[///]?view=<view name>]"
              << "[--fullscreen]"
              << "[--help]"
              << "[-testability]";
@@ -190,8 +190,10 @@ void DialerApplication::parseArgument(const QString &arg)
 
     QUrl url(arg);
     QString scheme = url.scheme();
-    // Remove the first "/"
-    QString value = url.path().right(url.path().length() -1);
+    QString value = url.path();
+    if (value.startsWith("/")) {
+        value.remove(0, 1);
+    }
 
     QQuickItem *mainView = m_view->rootObject();
     if (!mainView) {
