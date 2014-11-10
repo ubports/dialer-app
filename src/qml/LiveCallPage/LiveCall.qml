@@ -101,6 +101,10 @@ Page {
         onHasCallsChanged: {
             if(!callManager.hasCalls) {
                 reportStatus({}, i18n.tr("No calls"));
+            } else {
+                closeTimer.running = false;
+                statusLabel.text = "";
+                liveCall.call = callManager.foregroundCall;
             }
         }
     }

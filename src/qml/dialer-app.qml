@@ -59,6 +59,9 @@ MainView {
     onApplicationActiveChanged: {
         if (applicationActive) {
             telepathyHelper.registerChannelObserver()
+            if (pageStack.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
+                pageStack.pop();
+            }
         } else {
             telepathyHelper.unregisterChannelObserver()
         }
