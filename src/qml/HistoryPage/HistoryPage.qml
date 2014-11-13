@@ -203,6 +203,14 @@ Page {
             }
         }
 
+        Label {
+            id: emptyLabel
+            fontSize: "large"
+            anchors.centerIn: parent
+            visible: historyList.count === 0
+            text: i18n.tr("No recent calls")
+        }
+
         Component {
             id: sectionComponent
             Label {
