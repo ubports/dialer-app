@@ -1,3 +1,29 @@
+dialer-app (0.1+15.04.20141113-0ubuntu1) vivid; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Add empty state in the history page. (LP: #1367325)
+  * Do some basic QSceneGraph rendering optimizations.
+  * Format timestamps according to the locale. (LP: #1375890)
+  * Hide the SIM selector when in emergency mode. (LP: #1379386)
+  * Fix a lot of warnings. (LP: #1368438)
+  * Change live call control buttons to follow design. (LP: #1378006)
+  * Make sure the livecall is always in a consistent state, even after
+    being sigstopped. (LP: #1391324)
+  * Switch dialer-app to fullscreen mode when running on top of the
+    greeter. (LP: #1388156)
+
+  [ Nick Dedekind ]
+  * Only set the CallManager.callIndicatorVisible flag when
+    CallManager.hasCalls. (LP: #1390098)
+
+  [ Renato Araujo Oliveira Filho ]
+  * Enable page to receive focus.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 13 Nov 2014 14:41:25 +0000
+
 dialer-app (0.1+15.04.20141106-0ubuntu1) vivid; urgency=low
 
   [ CI bot ]
