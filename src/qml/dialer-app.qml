@@ -39,9 +39,10 @@ MainView {
         // than one account, otherwise we use always the first one
         if (multipleAccounts) {
             return telepathyHelper.defaultCallAccount
-        } else {
+        } else if (telepathyHelper.activeAccounts.length > 0){
             return telepathyHelper.activeAccounts[0]
         }
+        return null;
     }
 
     automaticOrientation: false
