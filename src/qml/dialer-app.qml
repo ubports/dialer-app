@@ -102,6 +102,12 @@ MainView {
         id: phoneUtils
     }
 
+    Binding {
+        target: application
+        property: "fullScreen"
+        value: greeter.greeterActive
+    }
+
     states: [
         State {
             name: "greeterMode"
