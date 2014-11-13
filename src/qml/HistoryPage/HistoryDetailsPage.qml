@@ -253,7 +253,7 @@ Page {
                 id: timeLabel
                 // TRANSLATORS: HH:mm is the time format, translate it according to:
                 // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-                text: Qt.formatTime(modelData.timestamp, i18n.tr("hh:mm ap"))
+                text: Qt.formatTime(modelData.timestamp, Qt.DefaultLocaleShortDate)
                 anchors {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
