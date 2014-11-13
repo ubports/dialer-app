@@ -240,11 +240,11 @@ Page {
     }
 
     onActiveChanged: {
-        callManager.callIndicatorVisible = !active;
+        callManager.callIndicatorVisible = !active && callManager.hasCalls;
     }
 
     Component.onCompleted: {
-        callManager.callIndicatorVisible = !active;
+        callManager.callIndicatorVisible = !active && callManager.hasCalls;
     }
 
     Timer {
