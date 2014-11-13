@@ -32,7 +32,6 @@ MainView {
     property string ussdResponseText: ""
     property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
     property QtObject account: defaultAccount()
-    activeFocusOnPress: false
 
     function defaultAccount() {
         // we only use the default account property if we have more
@@ -68,7 +67,7 @@ MainView {
     Connections {
         target: telepathyHelper
         onSetupReady: {
-            if (multipleAccounts && !telepathyHelper.defaultCallAccount && 
+            if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
                 settings.mainViewDontAskCount < 3 && pageStack.depth === 1) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
