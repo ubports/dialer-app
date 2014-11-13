@@ -118,11 +118,6 @@ Page {
         }
     }
 
-    Rectangle {
-        anchors.fill: parent
-        color: Theme.palette.normal.background
-    }
-
     ListView {
         id: eventsView
         anchors.fill: parent

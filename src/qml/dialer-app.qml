@@ -343,18 +343,6 @@ MainView {
         }
     }
 
-    Image {
-        id: background
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        source: Qt.resolvedUrl("assets/dialer_background_full.png")
-        asynchronous: true
-    }
-
     Component {
         id: noNetworkDialog
         Dialog {
