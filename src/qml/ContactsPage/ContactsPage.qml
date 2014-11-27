@@ -69,7 +69,7 @@ Page {
             PropertyChanges {
                 target: contactsPage.head
                 actions: defaultState.actions
-                sections.model: [i18n.tr("All"), i18n.tr("Favorites")]
+                sections.model: [i18n.ctr("All Contacts", "All"), i18n.tr("Favorites")]
             }
             PropertyChanges {
                 target: searchField
