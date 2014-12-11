@@ -62,15 +62,15 @@ MainView {
             telepathyHelper.registerChannelObserver()
 
             // if on contacts page in a live call and no calls are found, pop it out
-            if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2 && !callManager.hasCalls) {
+            if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage" && !callManager.hasCalls) {
                 pageStackNormalMode.pop();
             }
  
             // pop live call views from both stacks if we have no calls.
-            if (pageStackNormalMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
+            if (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
                 pageStackNormalMode.pop();
             }
-            if (pageStackGreeterMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
+            if (pageStackGreeterMode.depth > 1 && pageStackGreeterMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
                 pageStackGreeterMode.pop();
             }
         } else {
@@ -342,11 +342,11 @@ MainView {
 
     function removeLiveCallView() {
         // if on contacts page in a live call and no calls are found, pop it out
-        if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2) {
+        if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             pageStackNormalMode.pop();
         }
 
-        if (pageStackNormalMode.currentPage.objectName == "pageLiveCall") {
+        if (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName == "pageLiveCall") {
             pageStackNormalMode.pop();
         }
 
@@ -376,7 +376,7 @@ MainView {
     function switchToLiveCall() {
         var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
 
-        if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2) {
+        if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             stack.pop();
         }

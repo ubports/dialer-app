@@ -268,7 +268,10 @@ Page {
         onTriggered: {
             if (!callManager.hasCalls) {
                 mainView.removeLiveCallView();
-                pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
+                // TODO: we can't be sure that the currentPage is a DialerPage instance
+                if (pageStackNormalMode.currentPage.dialNumber) {
+                    pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
+                }
                 if (mainView.greeterMode) {
                     greeter.showGreeter();
                 }
