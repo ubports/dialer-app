@@ -375,19 +375,22 @@ MainView {
 
     function switchToLiveCall() {
         var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
-        // pop the stack if the live call is not the visible view
-        // FIXME: using the objectName here is not pretty, change by something less prone to errors
-        while (stack.depth > 1 && stack.currentPage.objectName != "pageLiveCall") {
+
+        if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2) {
+            // pop contacts Page
             stack.pop();
         }
+
         var properties = {}
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }
 
-        if (stack.depth === 1)  {
-            stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
+        if (stack.currentPage.objectName == "pageLiveCall") {
+            return;
         }
+ 
+        stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
     }
 
     Component.onCompleted: {

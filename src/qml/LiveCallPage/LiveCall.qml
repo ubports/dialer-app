@@ -267,7 +267,7 @@ Page {
         running: false
         onTriggered: {
             if (!callManager.hasCalls) {
-                mainView.switchToKeypadView();
+                mainView.removeLiveCallView();
                 pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
                 if (mainView.greeterMode) {
                     greeter.showGreeter();
