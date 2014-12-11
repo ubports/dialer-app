@@ -76,7 +76,7 @@ Page {
                 for (var i in events) {
                     eventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type);
                 }
-                pageStack.pop();
+                pageStackNormalMode.pop();
             }
         }
 

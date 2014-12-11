@@ -61,16 +61,22 @@ Page {
         objectName: "backButton"
         iconName: "back"
         onTriggered: {
-            if (greeter.greeterActive) {
+            if (mainView.greeterMode) {
                greeter.showGreeter();
             } else {
-                pageStack.pop();
+                pageStackNormalMode.pop();
             }
         }
     }
 
     title: caller
-    head.actions: []
+    head.actions: [
+        Action {
+            iconName: "settings"
+            text: i18n.tr("Settings")
+            onTriggered: Qt.openUrlExternally("settings:///system/phone")
+        }
+    ]
     head.backAction: backAction
     head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
@@ -268,8 +274,8 @@ Page {
         onTriggered: {
             if (!callManager.hasCalls) {
                 mainView.switchToKeypadView();
-                pageStack.currentPage.dialNumber = pendingNumberToDial;
-                if (greeter.greeterActive) {
+                pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
+                if (mainView.greeterMode) {
                     greeter.showGreeter();
                 }
             }
@@ -586,8 +592,8 @@ Page {
             iconSource: "add"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
-            enabled: !greeter.greeterActive
-            onClicked: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            enabled: !mainView.greeterMode
+            onClicked: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         }
 
         LiveCallKeypadButton {

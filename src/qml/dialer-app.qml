@@ -32,6 +32,7 @@ MainView {
     property string ussdResponseText: ""
     property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
     property QtObject account: defaultAccount()
+    property bool greeterMode: (state == "greeterMode")
 
     function defaultAccount() {
         // we only use the default account property if we have more
@@ -59,8 +60,18 @@ MainView {
     onApplicationActiveChanged: {
         if (applicationActive) {
             telepathyHelper.registerChannelObserver()
-            if (pageStack.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
-                pageStack.pop();
+
+            // if on contacts page in a live call and no calls are found, pop it out
+            if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2 && !callManager.hasCalls) {
+                pageStackNormalMode.pop();
+            }
+ 
+            // pop live call views from both stacks if we have no calls.
+            if (pageStackNormalMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
+                pageStackNormalMode.pop();
+            }
+            if (pageStackGreeterMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
+                pageStackGreeterMode.pop();
             }
         } else {
             telepathyHelper.unregisterChannelObserver()
@@ -71,7 +82,7 @@ MainView {
         target: telepathyHelper
         onSetupReady: {
             if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
-                settings.mainViewDontAskCount < 3 && pageStack.depth === 1) {
+                settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
         }
@@ -105,13 +116,31 @@ MainView {
     Binding {
         target: application
         property: "fullScreen"
-        value: greeter.greeterActive
+        value: mainView.greeterMode
     }
 
+    state: greeter.greeterActive ? "greeterMode" : "normalMode"
     states: [
         State {
             name: "greeterMode"
-            when: greeter.greeterActive
+
+            StateChangeScript {
+                script: {
+                    // preload greeter stack if not done yet
+                    if (pageStackGreeterMode.depth == 0) {
+                        pageStackGreeterMode.push(Qt.resolvedUrl("DialerPage/DialerPage.qml"))
+                    }
+                    // make sure to reset the view so that the contacts page is not loaded
+                    if (callManager.hasCalls) {
+                        switchToLiveCall();
+                    } else {
+                        removeLiveCallView();
+                    }
+                }
+            }
+        },
+        State {
+            name: "normalMode"
 
             StateChangeScript {
                 script: {
@@ -119,7 +148,7 @@ MainView {
                     if (callManager.hasCalls) {
                         switchToLiveCall();
                     } else {
-                        switchToKeypadView();
+                        removeLiveCallView();
                     }
                 }
             }
@@ -161,7 +190,7 @@ MainView {
     }
 
     function callVoicemail() {
-        if (greeter.greeterActive) {
+        if (mainView.greeterMode) {
             return;
         }
         call(mainView.account.voicemailNumber);
@@ -266,7 +295,7 @@ MainView {
             return
         }
 
-        if (mainView.account && !greeter.greeterActive && mainView.account.simLocked) {
+        if (mainView.account && !mainView.greeterMode && mainView.account.simLocked) {
             var properties = {}
             properties["accountId"] = mainView.account.accountId
             PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
@@ -302,49 +331,69 @@ MainView {
         // FIXME: check what to do when not in the dialpad view
 
         // if not on the livecall view, go back to the dialpad
-        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
-            pageStack.pop();
+        while (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName != "pageLiveCall") {
+            pageStackNormalMode.pop();
         }
 
-        if (pageStack.currentPage && typeof(pageStack.currentPage.dialNumber) != 'undefined') {
-            pageStack.currentPage.dialNumber = number;
+        if (pageStackNormalMode.currentPage && typeof(pageStackNormalMode.currentPage.dialNumber) != 'undefined') {
+            pageStackNormalMode.currentPage.dialNumber = number;
+        }
+    }
+
+    function removeLiveCallView() {
+        // if on contacts page in a live call and no calls are found, pop it out
+        if (pageStackNormalMode.currentPage.objectName == "contactsPage" && pageStackNormalMode.depth > 2) {
+            pageStackNormalMode.pop();
+        }
+
+        if (pageStackNormalMode.currentPage.objectName == "pageLiveCall") {
+            pageStackNormalMode.pop();
+        }
+
+        while (pageStackGreeterMode.depth > 1) {
+            pageStackGreeterMode.pop();
         }
     }
 
     function switchToKeypadView() {
-        while (pageStack.depth > 1) {
-            pageStack.pop();
+        while (pageStackNormalMode.depth > 1) {
+            pageStackNormalMode.pop();
+        }
+        while (pageStackGreeterMode.depth > 1) {
+            pageStackGreeterMode.pop();
         }
     }
 
     function animateLiveCall() {
-        if (pageStack.currentPage && pageStack.currentPage.triggerCallAnimation) {
-            pageStack.currentPage.triggerCallAnimation();
+        var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
+        if (stack.currentPage && stack.currentPage.triggerCallAnimation) {
+            stack.currentPage.triggerCallAnimation();
         } else {
             switchToLiveCall();
         }
     }
 
     function switchToLiveCall() {
+        var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
         // pop the stack if the live call is not the visible view
         // FIXME: using the objectName here is not pretty, change by something less prone to errors
-        while (pageStack.depth > 1 && pageStack.currentPage.objectName != "pageLiveCall") {
-            pageStack.pop();
-        }
+        //while (stack.depth > 1 && stack.currentPage.objectName != "pageLiveCall") {
+        //    stack.pop();
+        //}
         var properties = {}
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }
 
-        if (pageStack.depth === 1)  {
-            pageStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
+        if (stack.depth === 1)  {
+            stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
         }
     }
 
     Component.onCompleted: {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
-        pageStack.push(Qt.createComponent("DialerPage/DialerPage.qml"))
+        pageStackNormalMode.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
@@ -476,8 +525,9 @@ MainView {
                 return;
             }
 
+            var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
             // if we are animating the dialpad view, do not switch to livecall directly
-            if (pageStack.currentPage && pageStack.currentPage.callAnimationRunning) {
+            if (stack.currentPage && stack.currentPage.callAnimationRunning) {
                 return;
             }
 
@@ -564,7 +614,16 @@ MainView {
     }
 
     PageStack {
-        id: pageStack
+        id: pageStackNormalMode
         anchors.fill: parent
+        active:  mainView.state == "normalMode"
+        visible: active
+    }
+
+    PageStack {
+        id: pageStackGreeterMode
+        anchors.fill: parent
+        active: mainView.state == "greeterMode"
+        visible: active
     }
 }
