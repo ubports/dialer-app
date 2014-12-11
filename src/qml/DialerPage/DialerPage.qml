@@ -53,7 +53,10 @@ PageWithBottomEdge {
         iconName: "back"
         text: i18n.tr("Close")
         visible: mainView.greeterMode
-        onTriggered: greeter.showGreeter()
+        onTriggered: {
+            greeter.showGreeter()
+            dialNumber = "";
+        }
     }
 
     objectName: "dialerPage"

@@ -377,9 +377,9 @@ MainView {
         var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
         // pop the stack if the live call is not the visible view
         // FIXME: using the objectName here is not pretty, change by something less prone to errors
-        //while (stack.depth > 1 && stack.currentPage.objectName != "pageLiveCall") {
-        //    stack.pop();
-        //}
+        while (stack.depth > 1 && stack.currentPage.objectName != "pageLiveCall") {
+            stack.pop();
+        }
         var properties = {}
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000

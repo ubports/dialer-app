@@ -70,13 +70,7 @@ Page {
     }
 
     title: caller
-    head.actions: [
-        Action {
-            iconName: "settings"
-            text: i18n.tr("Settings")
-            onTriggered: Qt.openUrlExternally("settings:///system/phone")
-        }
-    ]
+    head.actions: []
     head.backAction: backAction
     head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
