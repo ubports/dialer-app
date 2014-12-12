@@ -1,3 +1,14 @@
+dialer-app (0.1+15.04.20141212-0ubuntu1) vivid; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Tiago Salem Herrmann ]
+  * Consider "wired_headset" and "earpiece" as default audio outputs.
+    (LP: #1398525)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 12 Dec 2014 13:12:16 +0000
+
 dialer-app (0.1+15.04.20141113-0ubuntu1) vivid; urgency=low
 
   [ CI bot ]
