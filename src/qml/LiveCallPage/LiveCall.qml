@@ -87,6 +87,12 @@ Page {
         closeTimer.running = true;
     }
 
+    function isDefaultAudioOutput(id) {
+        return (id == "default" ||
+                id == "wired_headset" ||
+                id == "earpiece")
+    }
+
     Connections {
         target: callManager
         onHasCallsChanged: {
@@ -544,7 +550,7 @@ Page {
                     }
                 }
             }
-            selected: activeAudioOutput != "default"
+            selected: !isDefaultAudioOutput(activeAudioOutput)
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             onClicked: {
@@ -557,7 +563,7 @@ Page {
                         PopupUtils.open(audioOutputsPopover, speakerButton)
                         return
                     }
-                    if (call.activeAudioOutput == "default") {
+                    if (isDefaultAudioOutput(call.activeAudioOutput)) {
                         call.activeAudioOutput = "speaker"
                     } else {
                         call.activeAudioOutput = "default"
