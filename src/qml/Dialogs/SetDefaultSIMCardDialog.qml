@@ -41,7 +41,7 @@ Component {
                     color: UbuntuColors.orange
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        mainView.call(phoneNumber, accountId)
+                        mainView.call(phoneNumber, true)
                         Qt.inputMethod.hide()
                     }
                 }
@@ -52,7 +52,7 @@ Component {
                     onClicked: {
                         telepathyHelper.setDefaultAccount(TelepathyHelper.Call, mainView.account)
                         PopupUtils.close(dialogue)
-                        mainView.call(phoneNumber, accountId)
+                        mainView.call(phoneNumber, true)
                         Qt.inputMethod.hide()
                     }
                 }

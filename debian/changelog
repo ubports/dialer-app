@@ -1,3 +1,108 @@
+dialer-app (0.1+15.04.20141212-0ubuntu1) vivid; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Tiago Salem Herrmann ]
+  * Consider "wired_headset" and "earpiece" as default audio outputs.
+    (LP: #1398525)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Fri, 12 Dec 2014 13:12:16 +0000
+
+dialer-app (0.1+15.04.20141113-0ubuntu1) vivid; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Add empty state in the history page. (LP: #1367325)
+  * Do some basic QSceneGraph rendering optimizations.
+  * Format timestamps according to the locale. (LP: #1375890)
+  * Hide the SIM selector when in emergency mode. (LP: #1379386)
+  * Fix a lot of warnings. (LP: #1368438)
+  * Change live call control buttons to follow design. (LP: #1378006)
+  * Make sure the livecall is always in a consistent state, even after
+    being sigstopped. (LP: #1391324)
+  * Switch dialer-app to fullscreen mode when running on top of the
+    greeter. (LP: #1388156)
+
+  [ Nick Dedekind ]
+  * Only set the CallManager.callIndicatorVisible flag when
+    CallManager.hasCalls. (LP: #1390098)
+
+  [ Renato Araujo Oliveira Filho ]
+  * Enable page to receive focus.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 13 Nov 2014 14:41:25 +0000
+
+dialer-app (0.1+15.04.20141106-0ubuntu1) vivid; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Olivier Tilloy ]
+  * Also handle URLs of the form "tel:+1234567890", i.e. without slashes
+    (those are common on web pages). (LP: #1351222)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 06 Nov 2014 10:01:01 +0000
+
+dialer-app (0.1+14.10.20141020~rtm-0ubuntu1) 14.09; urgency=low
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Keep the header of call history view fixed to prevent the header
+    from disappearing.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Mon, 20 Oct 2014 17:35:52 +0000
+
+dialer-app (0.1+14.10.20141007.1-0ubuntu1) 14.09; urgency=low
+
+  [ Bill Filler ]
+  * use header in splash screen (LP: #1378379)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+  [ Gustavo Pichorim Boiko ]
+  * Display different labels when in emergency mode and when the sim
+    card is locked.
+  * Remove some code duplication and make sure emergency calling is
+    always available.
+  * Ship the dialer-app icon in the package. (LP: #1365408)
+
+  [ Tiago Salem Herrmann ]
+  * Add support for sim lock detection (LP: #1371661)
+  * Remove some code duplication and make sure emergency calling is
+    always available.
+
+  [ Albert Astals ]
+  * Add i18n.tr
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 07 Oct 2014 17:02:04 +0000
+
+dialer-app (0.1+14.10.20140924-0ubuntu1) 14.09; urgency=low
+
+  [ CI bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Go back to greeter when pressing back on the live call if running on
+    top of the lock screen. (LP: #1362404)
+
+  [ Renato Araujo Oliveira Filho ]
+  * Changed swipe list item to not activate on mouse release. Changed
+    actions order on history page. (LP: #1368337)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 24 Sep 2014 17:55:40 +0000
+
 dialer-app (0.1+14.10.20140919.2-0ubuntu1) utopic; urgency=low
 
   [ Gustavo Pichorim Boiko ]

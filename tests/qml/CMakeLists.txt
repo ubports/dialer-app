@@ -17,6 +17,7 @@ endmacro()
 
 if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("keypad_button" tst_KeypadButton.qml)
+    declare_qml_test("main_view" tst_MainView.qml)
     declare_qml_test("stopwatch" tst_StopWatch.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)

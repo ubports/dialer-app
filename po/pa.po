@@ -1,21 +1,20 @@
-# Slovenian translation for dialer-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Punjabi translation for dialer-app
+# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2014-10-21 10:04-0400\n"
-"PO-Revision-Date: 2014-10-28 14:45+0000\n"
-"Last-Translator: Damir Jerovšek <Unknown>\n"
-"Language-Team: Slovenian <sl@li.org>\n"
+"PO-Revision-Date: 2014-10-19 14:05+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
-"n%100==4 ? 3 : 0);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2014-10-29 07:28+0000\n"
 "X-Generator: Launchpad (build 17203)\n"
 
@@ -27,40 +26,34 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:386
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - na čakanju"
+msgstr "%1 - ਹੋਲਡ ਹੈ"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ur"
-msgstr[1] "%1 ura"
-msgstr[2] "%1 uri"
-msgstr[3] "%1 ure"
+msgstr[0] "%1 ਘੰਟਾ"
+msgstr[1] "%1 ਘੰਟੇ"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
-msgstr[2] "%1 minuti"
-msgstr[3] "%1 minute"
+msgstr[0] "%1 ਮਿੰਟ"
+msgstr[1] "%1 ਮਿੰਟ"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sekund"
-msgstr[1] "%1 sekunda"
-msgstr[2] "%1 sekundi"
-msgstr[3] "%1 sekunde"
+msgstr[0] "%1 ਸਕਿੰਟ"
+msgstr[1] "%1 ਸਕਿੰਟ"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
-msgstr "(%1)"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -74,7 +67,7 @@ msgstr "+"
 #. TRANSLATORS: this refers to a new contact
 #: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
-msgstr "+ Ustvari nov"
+msgstr "+ ਨਵਾਂ ਬਣਾਓ"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
@@ -122,89 +115,89 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
-msgstr "Dejavno"
+msgstr "ਸਰਗਰਮ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "All"
-msgstr "Vse"
+msgstr "ਸਭ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:282
 msgid "Bluetooth device"
-msgstr "Naprava Bluetooth"
+msgstr "ਬਲਿਊਟੁੱਥ ਜੰਤਰ"
 
 #: ../src/qml/dialer-app.qml:512
 msgid "Call Barring"
-msgstr "Zapora za klice"
+msgstr "ਕਾਲ ਰੋਕ"
 
 #: ../src/qml/dialer-app.qml:523
 msgid "Call Forwarding"
-msgstr "Posredovanje klicev"
+msgstr "ਕਾਲ ਅਗਾਂਹ ਭੇਜਣਾ"
 
 #: ../src/qml/dialer-app.qml:534
 msgid "Call Waiting"
-msgstr "Čakanje klica"
+msgstr "ਕਾਲ ਉਡੀਕ ਵਿੱਚ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Call ended"
-msgstr "Končan klic"
+msgstr "ਕਾਲ ਖਤਮ ਹੋਈ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:253
 msgid "Call failed"
-msgstr "Spodletel klic"
+msgstr "ਕਾਲ ਫੇਲ੍ਹ ਹੋਈ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:388
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
-msgstr "Klicanje"
+msgstr "ਕਾਲ ਜਾਰੀ"
 
 #: ../src/qml/dialer-app.qml:545
 msgid "Calling Line Presentation"
-msgstr "Predstavitev klicne linije"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:557
 msgid "Calling Line Restriction"
-msgstr "Omejitev klicne linije"
+msgstr "ਕਾਲ ਲਾਈਨ ਪਾਬੰਦੀ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
-msgstr "Prekliči"
+msgstr "ਰੱਦ ਕਰੋ"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Ali se naj spremenijo povezave s Klicanjem na %1?"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
 #: ../src/qml/dialer-app.qml:367
 msgid "Close"
-msgstr "Zapri"
+msgstr "ਬੰਦ ਕਰੋ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
-msgstr "Konferenca"
+msgstr "ਕਨਫਰੰਸ"
 
 #: ../src/qml/dialer-app.qml:551
 msgid "Connected Line Presentation"
-msgstr "Predstavitev povezane linije"
+msgstr "ਕੁਨੈਕਟ ਕੀਤੀ ਲਾਈਨ ਪਰਿਜੈਂਟਸ਼ਨ"
 
 #: ../src/qml/dialer-app.qml:563
 msgid "Connected Line Restriction"
-msgstr "Omejitev povezane linije"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:332
 msgid "Contact Details"
-msgstr "Podrobnosti stika"
+msgstr "ਸੰਪਰਕ ਵੇਰਵਾ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:40
 msgid "Contacts"
-msgstr "Stiki"
+msgstr "ਸੰਪਰਕ"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
@@ -214,44 +207,44 @@ msgstr "DEF"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
 #: ../src/qml/HistoryPage/HistoryPage.qml:301
 msgid "Delete"
-msgstr "Izbriši"
+msgstr "ਹਟਾਓ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:313
 msgid "Details"
-msgstr "Podrobnosti"
+msgstr "ਵੇਰਵਾ"
 
 #: ../src/qml/dialer-app.qml:381
 msgid "Disabling flight mode"
-msgstr "Onemogočenje načina letenja"
+msgstr "ਫਲਾਈਟ ਮੋਡ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
 #: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:438
 #: ../src/qml/dialer-app.qml:452
 msgid "Dismiss"
-msgstr "Opusti"
+msgstr "ਅਣਡਿੱਠਾ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Ne sprašuj več"
+msgstr "ਫੇਰ ਨਾ ਪੁੱਛੋ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:61
 msgid "Emergency Calls"
-msgstr "Klici v sili"
+msgstr "ਐਮਰਜੈਂਸੀ ਕਾਲਾਂ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
-msgstr "Vnesite številko"
+msgstr "ਨੰਬਰ ਦਿਓ"
 
 #: ../src/qml/dialer-app.qml:435
 msgid "Error"
-msgstr "Napaka"
+msgstr "ਗਲਤੀ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr "Priljubljeni"
+msgstr "ਮਨਪਸੰਦ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Flight mode"
-msgstr "Način letenja"
+msgstr "ਫਲਾਈਟ ਮੋਡ"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -264,11 +257,11 @@ msgstr "IMEI"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Incoming"
-msgstr "Dohodno"
+msgstr "ਆਉਣ ਵਾਲੀਆਂ"
 
 #: ../src/qml/dialer-app.qml:436
 msgid "Invalid USSD code"
-msgstr "Neveljavna koda USSD"
+msgstr "ਗਲਤ USSD ਕੋਡ"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
@@ -276,11 +269,11 @@ msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Keypad"
-msgstr "Tipkovnica"
+msgstr "ਕੀ-ਪੈਡ"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr "Kasneje"
+msgstr "ਬਾਅਦ ਵਿੱਚ"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
@@ -288,47 +281,47 @@ msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 msgid "Merge calls"
-msgstr "Združi klice"
+msgstr "ਕਾਲਾਂ ਮਿਲਾਓ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr "Zgrešen"
+msgstr "ਮਿਸ ਹੋਈਆਂ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:63
 msgid "New Call"
-msgstr "Nov klic"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "Zavrni"
+msgstr "ਨਹੀਂ"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
 msgid "No SIM card selected"
-msgstr "Ni izbrana SIM kartica"
+msgstr "ਕੋਈ ਸਿਮ ਕਾਰਡ ਨਹੀਂ ਚੁਣਿਆ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
-msgstr "Ni klicev"
+msgstr "ਕੋਈ ਕਾਲ ਨਹੀਂ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:362
 msgid "No network"
-msgstr "Ni omrežja"
+msgstr "ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr "V redu"
+msgstr "ਠੀਕ ਹੈ"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
-msgstr "Na čakanju"
+msgstr "ਹੋਲਡ ਹੈ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
 msgid "Outgoing"
-msgstr "Odhodno"
+msgstr "ਕੀਤੀਆਂ"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
@@ -336,23 +329,23 @@ msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "Telefon"
+msgstr "ਫੋਨ"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Mobilni program"
+msgstr "ਫੋਨ ਐਪ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:286
 msgid "Phone Speaker"
-msgstr "Zvočnik telefona"
+msgstr "ਫੋਨ ਸਪੀਕਰ"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Mobilni program"
+msgstr "ਫੋਨ ਐਪਲੀਕੇਸ਼ਨ"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefon;Klicalnik;Klic;Tipkovnica"
+msgstr "ਫੋਨ;ਡਾਇਲਰ;ਡਾਇਲ;ਕਾਲ;ਕੀਪੈਡ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -360,80 +353,76 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Odklenite svojo kartico SIM za klicanje in pošiljanje sporočil. Kartico SIM "
-"lahko odklenete iz kazalnika omrežja na vrhu zaslona ali z obiskom <a "
-"href=\"system_settings\">Sistemske nastavitve &gt; Varnost &amp; "
-"Zasebnost</a>."
 
 #: ../src/qml/dialer-app.qml:416
 msgid "Please wait"
-msgstr "Počakajte"
+msgstr "ਉਡੀਕੋ ਜੀ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
-msgstr "Zasebni"
+msgstr "ਪ੍ਰਾਈਵੇਟ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr "Zasebna številka"
+msgstr "ਪ੍ਰਾਈਵੇਟ ਨੰਬਰ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:113
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr "Nedavno"
+msgstr "ਤਾਜ਼ਾ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr "Kartica SIM je zaklenjena"
+msgstr "ਸਿਮ ਕਾਰਡ ਲਾਕ ਹੈ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "SIM Locked"
-msgstr "SIM je zaklenjen"
+msgstr "ਸਿਮ ਲਾਕ ਹੈ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr "Iskanje"
+msgstr "ਖੋਜ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr "Iskanje ..."
+msgstr "ਖੋਜ..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr "Izberi"
+msgstr "ਚੁਣੋ"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Izberite privzeto SIM za odhodne klice. Vedno lahko svojo izbiro spremenite "
-"v <a href=\"system_settings\">Sistemskih nastavitvah</a>."
+"ਸਭ ਕੀਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਕਾਲਾਂ ਲਈ ਮੂਲ ਸਿਮ ਚੁਣੋ। ਤੁਸੀਂ ਕਦੇ ਵੀ ਇਸ ਨੂੰ <a "
+"href=\"system_settings\">ਸਿਸਟਮ ਸੈਟਿੰਗ</a> ਵਿੱਚ ਜਾ ਕੇ ਬਦਲ ਸਕਦੇ ਹੋ।"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:323
 msgid "Send message"
-msgstr "Pošlji sporočilo"
+msgstr "ਸੁਨੇਹਾ ਭੇਜੋ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:45
 msgid "Settings"
-msgstr "Nastavitve"
+msgstr "ਸੈਟਿੰਗ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr "Souporaba"
+msgstr "ਸਾਂਝਾ ਕਰੋ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Switch audio source:"
-msgstr "Preklopi zvočni vir:"
+msgstr "ਆਡੀਓ ਸਰੋਤ ਬਦਲੋ:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:475
 msgid "Switch calls"
-msgstr "Preklopi med klici"
+msgstr "ਕਾਲਾਂ ਬਦਲੋ"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Preklopi na privzeto SIM:"
+msgstr "ਡਿਫਾਲਟ ਸਿਮ ਲਈ ਬਦਲੋ:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
@@ -442,33 +431,33 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:363
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Trenutno ni omrežja na %1"
+msgstr "ਇਸ ਸਮੇਂ %1 ਉੱਤੇ ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
 #: ../src/qml/dialer-app.qml:364
 msgid "There is currently no network."
-msgstr "Trenutno ni omrežja."
+msgstr "ਇਸ ਸਮੇਂ ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ।"
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr "Danes"
+msgstr "ਅੱਜ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Ubuntu Phone"
-msgstr "Telefon Ubuntu"
+msgstr "ਉਬੰਤੂ ਫੋਨ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:288
 msgid "Unknown device"
-msgstr "Neznana naprava"
+msgstr "ਅਣਜਾਣ ਯੰਤਰ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr "Neznana številka"
+msgstr "ਅਣਜਾਣ ਨੰਬਰ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
-msgstr "Glasovna pošta"
+msgstr "ਵਾਇਸਕਾਲ"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
@@ -476,15 +465,15 @@ msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "Sprejmi"
+msgstr "ਹਾਂ"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "Včeraj"
+msgstr "ਕੱਲ੍ਹ"
 
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
 msgid "You need to select a SIM card"
-msgstr "Izbrati morate kartico SIM"
+msgstr ""
 
 #. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
 #. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
@@ -494,7 +483,7 @@ msgstr "Izbrati morate kartico SIM"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:230
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
 msgid "hh:mm ap"
-msgstr "hh:mm"
+msgstr "hh:mm ap"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112

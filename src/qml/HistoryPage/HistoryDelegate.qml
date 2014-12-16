@@ -66,7 +66,6 @@ ListItemWithActions {
 
     height: units.gu(8)
     color: Theme.palette.normal.background
-    triggerActionOnMouseRelease: true
 
     states: [
         State {
@@ -228,7 +227,7 @@ ListItemWithActions {
         // TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
         // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
         // please change according to your language
-        text: Qt.formatTime(model.timestamp, i18n.tr("hh:mm ap"))
+        text: Qt.formatTime(model.timestamp, Qt.DefaultLocaleShortDate)
     }
 
     Label {

@@ -52,7 +52,6 @@ AbstractButton {
         objectName: "keypadButtonLabelsContainer"
         height: childrenRect.height
         width: parent.width
-        clip: true
         anchors.centerIn: parent
         scale: button.pressed ? 0.9 : 1
 

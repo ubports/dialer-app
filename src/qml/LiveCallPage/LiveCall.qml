@@ -32,6 +32,7 @@ Page {
     objectName: "pageLiveCall"
 
     property var call: callManager.foregroundCall
+    property var calls: callManager.calls
     property string dtmfEntry: ""
     property alias number: contactWatcher.phoneNumber
     property bool onHold: call ? call.held : false
@@ -42,6 +43,7 @@ Page {
     property string activeAudioOutput: call ? call.activeAudioOutput : ""
     property variant audioOutputs: call ? call.audioOutputs : null
     property string phoneNumberSubTypeLabel: ""
+    property int defaultTimeout: 10000
     property string caller: {
         if (call && call.isConference) {
             return i18n.tr("Conference");
@@ -54,26 +56,21 @@ Page {
         }
     }
 
-    property list<Action> regularActions: [
-        Action {
-            id: newCallAction
-            objectName: "newCallButton"
-            iconName: "contact"
-            text: i18n.tr("New Call")
-            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-        }
-    ]
-
     property Action backAction: Action {
         id: backAction
         objectName: "backButton"
         iconName: "back"
-        visible: !greeter.greeterActive
-        onTriggered: pageStack.pop()
+        onTriggered: {
+            if (greeter.greeterActive) {
+               greeter.showGreeter();
+            } else {
+                pageStack.pop();
+            }
+        }
     }
 
     title: caller
-    head.actions: greeter.greeterActive ? [] : regularActions
+    head.actions: []
     head.backAction: backAction
     head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
@@ -84,10 +81,16 @@ Page {
             return;
         }
         statusLabel.text = text;
+        callConnection.target = null;
         liveCall.call = callObject;
         liveCall.dtmfVisible = false;
-        newCallAction.visible = false;
         closeTimer.running = true;
+    }
+
+    function isDefaultAudioOutput(id) {
+        return (id == "default" ||
+                id == "wired_headset" ||
+                id == "earpiece")
     }
 
     Connections {
@@ -95,16 +98,30 @@ Page {
         onHasCallsChanged: {
             if(!callManager.hasCalls) {
                 reportStatus({}, i18n.tr("No calls"));
+            } else {
+                closeTimer.running = false;
+                statusLabel.text = "";
+                liveCall.call = callManager.foregroundCall;
             }
         }
     }
 
     Connections {
+        id: callConnection
         target: call
         onCallEnded: {
             var callObject = {};
             callObject["elapsedTime"] = call.elapsedTime;
             callObject["active"] = true;
+            callObject["voicemail"] = call.voicemail;
+            callObject["account"] = call.account;
+            callObject["phoneNumber"] = call.phoneNumber;
+            callObject["held"] = call.held;
+            callObject["muted"] = call.muted;
+            callObject["activeAudioOutput"] = call.activeAudioOutput;
+            callObject["audioOutputs"] = call.audioOutputs;
+            callObject["isConference"] = call.isConference;
+
             reportStatus(callObject, i18n.tr("Call ended"));
         }
     }
@@ -120,7 +137,7 @@ Page {
                     top: parent.top
                     right: parent.right
                 }
-                ListItems.Header { text: "Switch audio source:" }
+                ListItems.Header { text: i18n.tr("Switch audio source:") }
                 Repeater {
                     model: audioOutputs
                     ListItems.Standard {
@@ -229,16 +246,16 @@ Page {
     }
 
     onActiveChanged: {
-        callManager.callIndicatorVisible = !active;
+        callManager.callIndicatorVisible = !active && callManager.hasCalls;
     }
 
     Component.onCompleted: {
-        callManager.callIndicatorVisible = !active;
+        callManager.callIndicatorVisible = !active && callManager.hasCalls;
     }
 
     Timer {
         id: callWatcher
-        interval: 7000
+        interval: defaultTimeout
         repeat: false
         running: true
         onTriggered: {
@@ -280,6 +297,18 @@ Page {
             return i18n.tr("Phone Speaker")
         }
         return i18n.tr("Unknown device")
+    }
+
+    Image {
+        id: background
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+
+        source: Qt.resolvedUrl("../assets/dialer_background_full.png")
+        asynchronous: true
     }
 
     // FIXME: this invisible label is only used for
@@ -450,7 +479,7 @@ Page {
         }
 
         width: childrenRect.width
-        height: childrenRect.height
+        height: swapButton.height
         opacity: multiCall && !dtmfVisible ? 1 : 0
         enabled : opacity > 0
         spacing: units.gu(3)
@@ -503,6 +532,47 @@ Page {
         width: childrenRect.width
 
         LiveCallKeypadButton {
+            id: speakerButton
+            objectName: "speakerButton"
+            iconSource: {
+                if (audioOutputs && audioOutputs.length <= 2) {
+                    if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    }
+                    return "speaker-mute"
+                } else {
+                    if (activeAudioOutput == "bluetooth") {
+                        return "audio-speakers-bluetooth-symbolic"
+                    } else if (activeAudioOutput == "speaker") {
+                        return "speaker"
+                    } else {
+                        return "speaker-mute"
+                    }
+                }
+            }
+            selected: !isDefaultAudioOutput(activeAudioOutput)
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            onClicked: {
+                if (call) {
+                    // all phones have at least two outputs: speaker and default,
+                    // where default is either earpiece or wired headset
+                    // if we have more than 2, we have to show a popup so users
+                    // can select the active audio output
+                    if (audioOutputs.length > 2) {
+                        PopupUtils.open(audioOutputsPopover, speakerButton)
+                        return
+                    }
+                    if (isDefaultAudioOutput(call.activeAudioOutput)) {
+                        call.activeAudioOutput = "speaker"
+                    } else {
+                        call.activeAudioOutput = "default"
+                    }
+                }
+            }
+        }
+
+        LiveCallKeypadButton {
             objectName: "muteButton"
             iconSource: selected ? "microphone-mute" : "microphone"
             enabled: !isVoicemail
@@ -514,6 +584,16 @@ Page {
                     call.muted = !call.muted
                 }
             }
+        }
+
+        LiveCallKeypadButton {
+            id: newCallButton
+            objectName: "newCallButton"
+            iconSource: "add"
+            iconWidth: units.gu(3)
+            iconHeight: units.gu(3)
+            enabled: !greeter.greeterActive
+            onClicked: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         }
 
         LiveCallKeypadButton {
@@ -533,47 +613,6 @@ Page {
             onClicked: {
                 if (call) {
                     call.held = !call.held
-                }
-            }
-        }
-
-        LiveCallKeypadButton {
-            id: speakerButton
-            objectName: "speakerButton"
-            iconSource: {
-                if (audioOutputs && audioOutputs.length <= 2) {
-                    if (activeAudioOutput == "speaker") {
-                        return "speaker"
-                    }
-                    return "speaker-mute"
-                } else {
-                    if (activeAudioOutput == "bluetooth") {
-                        return "audio-speakers-bluetooth-symbolic"
-                    } else if (activeAudioOutput == "speaker") {
-                        return "speaker"
-                    } else {
-                        return "speaker-mute"
-                    }
-                }
-            }
-            selected: activeAudioOutput != "default"
-            iconWidth: units.gu(3)
-            iconHeight: units.gu(3)
-            onClicked: {
-                if (call) {
-                    // all phones have at least two outputs: speaker and default,
-                    // where default is either earpiece or wired headset
-                    // if we have more than 2, we have to show a popup so users
-                    // can select the active audio output
-                    if (audioOutputs.length > 2) {
-                        PopupUtils.open(audioOutputsPopover, speakerButton)
-                        return
-                    }
-                    if (call.activeAudioOutput == "default") {
-                        call.activeAudioOutput = "speaker"
-                    } else {
-                        call.activeAudioOutput = "default"
-                    }
                 }
             }
         }

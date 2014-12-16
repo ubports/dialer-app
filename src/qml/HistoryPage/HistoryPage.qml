@@ -43,8 +43,8 @@ Page {
     }
 
     title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    anchors.fill: parent
     active: false
+    flickable: null
 
     head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
 
@@ -147,6 +147,7 @@ Page {
     MultipleSelectionListView {
         id: historyList
         objectName: "historyList"
+        clip: true
 
         property var _currentSwipedItem: null
 
@@ -200,6 +201,14 @@ Page {
                 _currentSwipedItem.resetSwipe()
                 _currentSwipedItem = null
             }
+        }
+
+        Label {
+            id: emptyLabel
+            fontSize: "large"
+            anchors.centerIn: parent
+            visible: historyList.count === 0
+            text: i18n.tr("No recent calls")
         }
 
         Component {
@@ -318,6 +327,15 @@ Page {
                         }
                     },
                     Action {
+                        iconName: "message"
+                        text: i18n.tr("Send message")
+                        onTriggered: {
+                            mainView.sendMessage(phoneNumber)
+                        }
+                        visible: knownNumber
+                        enabled: knownNumber
+                    },
+                    Action {
                         iconName: unknownContact ? "contact-new" : "stock_contact"
                         text: i18n.tr("Contact Details")
                         onTriggered: {
@@ -326,15 +344,6 @@ Page {
                             } else {
                                 mainView.viewContact(contactId)
                             }
-                        }
-                        visible: knownNumber
-                        enabled: knownNumber
-                    },
-                    Action {
-                        iconName: "message"
-                        text: i18n.tr("Send message")
-                        onTriggered: {
-                            mainView.sendMessage(phoneNumber)
                         }
                         visible: knownNumber
                         enabled: knownNumber

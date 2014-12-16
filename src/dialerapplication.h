@@ -26,17 +26,23 @@
 class DialerApplication : public QGuiApplication
 {
     Q_OBJECT
+    Q_PROPERTY(bool fullScreen READ fullScreen WRITE setFullScreen NOTIFY fullScreenChanged)
 
 public:
     DialerApplication(int &argc, char **argv);
     virtual ~DialerApplication();
 
     bool setup();
+    bool fullScreen() const;
+    void setFullScreen(bool value);
 
 public Q_SLOTS:
     void activateWindow();
     void parseArgument(const QString &arg);
     QStringList mmiPluginList();
+
+Q_SIGNALS:
+    void fullScreenChanged();
 
 private Q_SLOTS:
     void onViewStatusChanged(QQuickView::Status status);
@@ -46,6 +52,7 @@ private:
     QQuickView *m_view;
     QString m_arg;
     bool m_applicationIsReady;
+    bool m_fullScreen;
 };
 
 #endif // DIALERAPPLICATION_H
