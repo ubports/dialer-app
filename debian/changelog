@@ -1,3 +1,13 @@
+dialer-app (0.1+15.04.20141216-0ubuntu1) vivid; urgency=low
+
+  [ Dennis O'Flaherty ]
+  * Show hours in the call duration - fixes #1372689 (LP: #1372689)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 16 Dec 2014 02:46:21 +0000
+
 dialer-app (0.1+15.04.20141212-0ubuntu1) vivid; urgency=low
 
   [ Ubuntu daily release ]
