@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-11-13 06:37+0000\n"
-"X-Generator: Launchpad (build 17241)\n"
+"X-Launchpad-Export-Date: 2014-12-20 06:37+0000\n"
+"X-Generator: Launchpad (build 17286)\n"
 "Language: is\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:390
+#: ../src/qml/LiveCallPage/LiveCall.qml:409
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - í bið"
@@ -62,7 +62,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -125,41 +125,41 @@ msgstr "Virkt"
 msgid "All"
 msgstr "Allt"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:286
+#: ../src/qml/LiveCallPage/LiveCall.qml:293
 msgid "Bluetooth device"
 msgstr "Bluetooth-tæki"
 
-#: ../src/qml/dialer-app.qml:521
+#: ../src/qml/dialer-app.qml:509
 msgid "Call Barring"
 msgstr "Útilokun símtala"
 
-#: ../src/qml/dialer-app.qml:532
+#: ../src/qml/dialer-app.qml:520
 msgid "Call Forwarding"
 msgstr "Áframsending símtala"
 
-#: ../src/qml/dialer-app.qml:543
+#: ../src/qml/dialer-app.qml:531
 msgid "Call Waiting"
 msgstr "Bið símtala"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:125
 msgid "Call ended"
 msgstr "Símtali lokið"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:257
+#: ../src/qml/LiveCallPage/LiveCall.qml:264
 msgid "Call failed"
 msgstr "Símtal mistókst"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:392
+#: ../src/qml/LiveCallPage/LiveCall.qml:411
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Hringi"
 
-#: ../src/qml/dialer-app.qml:554
+#: ../src/qml/dialer-app.qml:542
 msgid "Calling Line Presentation"
 msgstr "Kynning hringilínu"
 
-#: ../src/qml/dialer-app.qml:566
+#: ../src/qml/dialer-app.qml:554
 msgid "Calling Line Restriction"
 msgstr "Takmarkanir hringilínu"
 
@@ -175,25 +175,25 @@ msgstr "Skipta öllu símtalatengdu yfir á %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:376
+#: ../src/qml/dialer-app.qml:364
 msgid "Close"
 msgstr "Loka"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:49
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Ráðstefna"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:548
 msgid "Connected Line Presentation"
 msgstr "Kynning tengdrar línu"
 
-#: ../src/qml/dialer-app.qml:572
+#: ../src/qml/dialer-app.qml:560
 msgid "Connected Line Restriction"
 msgstr "Takmarkanir tengdrar línu"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:332
+#: ../src/qml/HistoryPage/HistoryPage.qml:340
 msgid "Contact Details"
 msgstr "Nánar um tengilið"
 
@@ -207,21 +207,21 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:244
-#: ../src/qml/HistoryPage/HistoryPage.qml:301
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:239
+#: ../src/qml/HistoryPage/HistoryPage.qml:309
 msgid "Delete"
 msgstr "Eyða"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:313
+#: ../src/qml/HistoryPage/HistoryPage.qml:321
 msgid "Details"
 msgstr "Nánar"
 
-#: ../src/qml/dialer-app.qml:390
+#: ../src/qml/dialer-app.qml:378
 msgid "Disabling flight mode"
 msgstr "Afvirkja flugham"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:447
-#: ../src/qml/dialer-app.qml:461
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:435
+#: ../src/qml/dialer-app.qml:449
 msgid "Dismiss"
 msgstr "Hafna"
 
@@ -233,11 +233,11 @@ msgstr "Ekki spyrja aftur"
 msgid "Emergency Calls"
 msgstr "Neyðarhringingar"
 
-#: ../src/qml/DialerPage/DialerPage.qml:256
+#: ../src/qml/DialerPage/DialerPage.qml:268
 msgid "Enter a number"
 msgstr "Sláðu inn tölu"
 
-#: ../src/qml/dialer-app.qml:444
+#: ../src/qml/dialer-app.qml:432
 msgid "Error"
 msgstr "Villa"
 
@@ -258,11 +258,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
 msgid "Incoming"
 msgstr "Að berast"
 
-#: ../src/qml/dialer-app.qml:445
+#: ../src/qml/dialer-app.qml:433
 msgid "Invalid USSD code"
 msgstr "Ógilur USSD-kóði"
 
@@ -282,12 +282,12 @@ msgstr "Síðar"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:494
+#: ../src/qml/LiveCallPage/LiveCall.qml:513
 msgid "Merge calls"
 msgstr "Sameina símtöl"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Misst af"
@@ -305,11 +305,11 @@ msgstr "Ekkert"
 msgid "No SIM card selected"
 msgstr "Ekkert SIM-kort valið"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:103
+#: ../src/qml/LiveCallPage/LiveCall.qml:100
 msgid "No calls"
 msgstr "Engin símtöl"
 
-#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:371
+#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:359
 msgid "No network"
 msgstr "Engin netkerfi"
 
@@ -322,7 +322,7 @@ msgid "On hold"
 msgstr "Í bið"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:307
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:302
 msgid "Outgoing"
 msgstr "Símtöl út"
 
@@ -338,7 +338,7 @@ msgstr "Sími"
 msgid "Phone App"
 msgstr "Símaforrit"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:290
+#: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Phone Speaker"
 msgstr "Símahátalari"
 
@@ -357,7 +357,7 @@ msgid ""
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:425
+#: ../src/qml/dialer-app.qml:413
 msgid "Please wait"
 msgstr "Bíddu aðeins"
 
@@ -403,7 +403,7 @@ msgstr ""
 "Veldu sjálfgefið SIM-kort fyrir símtöl sem þú hringir. YÞú getur alltaf "
 "breytt þessu vali í <a href=\"system_settings\">Kerfisstillingum</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:323
+#: ../src/qml/HistoryPage/HistoryPage.qml:331
 msgid "Send message"
 msgstr "Senda textaskilaboð"
 
@@ -415,11 +415,11 @@ msgstr "Stillingar"
 msgid "Share"
 msgstr "Deila"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:133
+#: ../src/qml/LiveCallPage/LiveCall.qml:140
 msgid "Switch audio source:"
 msgstr "Skipta um hljóðuppruna:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:479
+#: ../src/qml/LiveCallPage/LiveCall.qml:498
 msgid "Switch calls"
 msgstr "Skipta um símtal"
 
@@ -431,12 +431,12 @@ msgstr "Skipta á sjálfgefið SIM-kort:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/dialer-app.qml:360
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Engin nettenging er tiltæk á %1"
 
-#: ../src/qml/dialer-app.qml:373
+#: ../src/qml/dialer-app.qml:361
 msgid "There is currently no network."
 msgstr "Engin nettenging er tiltæk."
 
@@ -444,11 +444,11 @@ msgstr "Engin nettenging er tiltæk."
 msgid "Today"
 msgstr "Í dag"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:288
+#: ../src/qml/LiveCallPage/LiveCall.qml:295
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Sími"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:292
+#: ../src/qml/LiveCallPage/LiveCall.qml:299
 msgid "Unknown device"
 msgstr "Óþekkt tæki"
 
