@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2015 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -191,9 +191,13 @@ Page {
         listModel: historyEventModel
 
         onSelectionDone: {
+            var events = [];
             for (var i=0; i < items.count; i++) {
                 var event = items.get(i).model
-                historyEventModel.removeEvent(event.accountId, event.threadId, event.eventId, event.type)
+                events.push(event.properties);
+            }
+            if (events.length > 0) {
+                historyEventModel.removeEvents(events)
             }
         }
         onIsInSelectionModeChanged: {
@@ -308,10 +312,7 @@ Page {
                     iconName: "delete"
                     text: i18n.tr("Delete")
                     onTriggered:  {
-                        var events = model.events;
-                        for (var i in events) {
-                            historyEventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type)
-                        }
+                        historyEventModel.removeEvents(model.events)
                     }
                 }
                 property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
