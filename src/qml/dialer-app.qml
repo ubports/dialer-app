@@ -62,17 +62,19 @@ MainView {
         if (applicationActive) {
             telepathyHelper.registerChannelObserver()
 
-            // if on contacts page in a live call and no calls are found, pop it out
-            if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage" && !callManager.hasCalls) {
-                pageStackNormalMode.pop();
-            }
+            if (!callManager.hasCalls) {
+                // if on contacts page in a live call and no calls are found, pop it out
+                if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
+                    pageStackNormalMode.pop();
+                }
  
-            // pop live call views from both stacks if we have no calls.
-            if (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
-                pageStackNormalMode.pop();
-            }
-            if (pageStackGreeterMode.depth > 1 && pageStackGreeterMode.currentPage.objectName == "pageLiveCall" && !callManager.hasCalls) {
-                pageStackGreeterMode.pop();
+                // pop live call views from both stacks if we have no calls.
+                if (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName == "pageLiveCall") {
+                    pageStackNormalMode.pop();
+                }
+                if (pageStackGreeterMode.depth > 1 && pageStackGreeterMode.currentPage.objectName == "pageLiveCall") {
+                    pageStackGreeterMode.pop();
+                }
             }
         } else {
             telepathyHelper.unregisterChannelObserver()
@@ -83,7 +85,7 @@ MainView {
         target: telepathyHelper
         onSetupReady: {
             if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
-                settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && mainView.greeterMode) {
+                settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
         }
