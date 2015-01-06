@@ -33,6 +33,7 @@ MainView {
     property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
     property QtObject account: defaultAccount()
     property bool greeterMode: (state == "greeterMode")
+    property bool lastHasCalls: callManager.hasCalls
 
     function defaultAccount() {
         // we only use the default account property if we have more
@@ -331,7 +332,7 @@ MainView {
         // FIXME: check what to do when not in the dialpad view
 
         // if not on the livecall view, go back to the dialpad
-        while (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName != "pageLiveCall") {
+        while (pageStackNormalMode.depth > 1) {
             pageStackNormalMode.pop();
         }
 
@@ -525,17 +526,22 @@ MainView {
         target: callManager
         onHasCallsChanged: {
             if (!callManager.hasCalls) {
+                mainView.lastHasCalls = callManager.hasCalls
                 return;
             }
 
             var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
             // if we are animating the dialpad view, do not switch to livecall directly
             if (stack.currentPage && stack.currentPage.callAnimationRunning) {
+                mainView.lastHasCalls = callManager.hasCalls
                 return;
             }
 
             // if not, just open the live call
-            switchToLiveCall();
+            if (mainView.lastHasCalls != callManager.hasCalls) {
+                mainView.lastHasCalls = callManager.hasCalls
+                switchToLiveCall();
+            }
         }
     }
 
