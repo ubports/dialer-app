@@ -1,3 +1,11 @@
+dialer-app (0.1+15.04.20150107-0ubuntu1) vivid; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Remove multiple entries all at once instead of using multiple calls.
+    (LP: #1404286)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Wed, 07 Jan 2015 19:48:54 +0000
+
 dialer-app (0.1+15.04.20141216-0ubuntu1) vivid; urgency=low
 
   [ Dennis O'Flaherty ]
