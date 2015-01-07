@@ -193,8 +193,10 @@ Page {
         onSelectionDone: {
             var events = [];
             for (var i=0; i < items.count; i++) {
-                var eventGroup = items.get(i).model
-                events.push(eventGroup.events);
+                var eventGroup = items.get(i).model.events
+                for (var j in eventGroup) {
+                    events.push(eventGroup[j]);
+                }
             }
             if (events.length > 0) {
                 historyEventModel.removeEvents(events)
