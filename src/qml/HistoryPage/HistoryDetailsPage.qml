@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Canonical Ltd.
+ * Copyright 2014-2015 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -73,9 +73,7 @@ Page {
             iconName: "delete"
             text: i18n.tr("Delete")
             onTriggered: {
-                for (var i in events) {
-                    eventModel.removeEvent(events[i].accountId, events[i].threadId, events[i].eventId, events[i].type);
-                }
+                eventModel.removeEvents(events);
                 pageStackNormalMode.pop();
             }
         }
@@ -239,7 +237,7 @@ Page {
                 text: i18n.tr("Delete")
                 onTriggered:  {
                     // remove from the history service
-                    eventModel.removeEvent(modelData.accountId, modelData.threadId, modelData.eventId, modelData.type)
+                    eventModel.removeEvents([modelData]);
 
                     // as this page only displays an array of events, we need to update manually
                     // the list of displayed events

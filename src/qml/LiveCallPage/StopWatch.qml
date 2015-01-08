@@ -20,19 +20,12 @@ import QtQuick 2.0
 import Ubuntu.Components 1.1
 
 Item {
-    function pad(text, length) {
-        while (text.length < length) text = '0' + text;
-        return text;
-    }
 
     property int time: 0
     property string elapsed: {
-        var divisor_for_minutes = time % (60 * 60);
-        var minutes = String(Math.floor(divisor_for_minutes / 60));
+        var d = new Date(0, 0, 0, 0, 0, time);
 
-        var divisor_for_seconds = divisor_for_minutes % 60;
-        var seconds = String(Math.ceil(divisor_for_seconds));
-
-        return "%1:%2".arg(pad(minutes, 2)).arg(pad(seconds, 2));
+        return d.getHours() == 0 ? Qt.formatTime(d, "mm:ss") :
+            Qt.formatTime(d, "h:mm:ss");
     }
 }
