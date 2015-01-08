@@ -74,7 +74,7 @@ Page {
             text: i18n.tr("Delete")
             onTriggered: {
                 eventModel.removeEvents(events);
-                pageStack.pop();
+                pageStackNormalMode.pop();
             }
         }
 

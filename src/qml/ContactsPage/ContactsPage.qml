@@ -208,7 +208,7 @@ Page {
                 Qt.openUrlExternally("message:///" + encodeURIComponent(detail.number))
                 return
             }
-            pageStack.pop()
+            pageStackNormalMode.pop()
             if (callManager.hasCalls) {
                 mainView.call(detail.number, mainView.account.accountId);
             } else {

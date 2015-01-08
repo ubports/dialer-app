@@ -32,32 +32,37 @@ PageWithBottomEdge {
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property alias callAnimationRunning: callAnimation.running
+    property bool greeterMode: false
     property var mmiPlugins: []
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
             iconName: "contact"
             text: i18n.tr("Contacts")
-            onTriggered: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         },
         Action {
             iconName: "settings"
             text: i18n.tr("Settings")
             onTriggered: Qt.openUrlExternally("settings:///system/phone")
         }
+
     ]
-    head.actions: greeter.greeterActive ? actionsGreeter : actionsNormal
+    head.actions: mainView.greeterMode ? actionsGreeter : actionsNormal
     head.backAction: Action {
         iconName: "back"
         text: i18n.tr("Close")
-        visible: greeter.greeterActive
-        onTriggered: greeter.showGreeter()
+        visible: mainView.greeterMode
+        onTriggered: {
+            greeter.showGreeter()
+            dialNumber = "";
+        }
     }
 
     objectName: "dialerPage"
 
     title: {
-        if (greeter.greeterActive) {
+        if (mainView.greeterMode) {
             return i18n.tr("Emergency Calls")
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")
@@ -73,7 +78,7 @@ PageWithBottomEdge {
         return i18n.tr("No network")
     }
 
-    state: greeter.greeterActive ? "greeterMode" : "normalMode"
+    state: mainView.state
     // -------- Greeter mode ----------
     states: [
         State {
@@ -86,10 +91,6 @@ PageWithBottomEdge {
                 target: addContact
                 visible: false
             }
-            PropertyChanges {
-                target: keypadEntry
-                value: ""
-            }
         },
         State {
             name: "normalMode"
@@ -101,12 +102,11 @@ PageWithBottomEdge {
                 target: addContact
                 visible: true
             }
-
         }
     ]
 
     // -------- Bottom Edge Setup -----
-    bottomEdgeEnabled: !greeter.greeterActive
+    bottomEdgeEnabled: !mainView.greeterMode
     bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     // NOTE: uncomment the next line to re-enable progressive bottom edge swiping.
     //bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
@@ -181,7 +181,7 @@ PageWithBottomEdge {
 
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
-        if (!multipleAccounts || greeter.greeterActive) {
+        if (!multipleAccounts || mainView.greeterMode) {
             return undefined
         }
 
@@ -400,7 +400,7 @@ PageWithBottomEdge {
                     return false;
                 }
 
-                if (greeter.greeterActive) {
+                if (mainView.greeterMode) {
                     return mainView.isEmergencyNumber(dialNumber);
                 }
 

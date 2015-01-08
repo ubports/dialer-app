@@ -61,10 +61,10 @@ Page {
         objectName: "backButton"
         iconName: "back"
         onTriggered: {
-            if (greeter.greeterActive) {
+            if (mainView.greeterMode) {
                greeter.showGreeter();
             } else {
-                pageStack.pop();
+                pageStackNormalMode.pop();
             }
         }
     }
@@ -273,9 +273,12 @@ Page {
         running: false
         onTriggered: {
             if (!callManager.hasCalls) {
-                mainView.switchToKeypadView();
-                pageStack.currentPage.dialNumber = pendingNumberToDial;
-                if (greeter.greeterActive) {
+                mainView.removeLiveCallView();
+                // TODO: we can't be sure that the currentPage is a DialerPage instance
+                if (pageStackNormalMode.currentPage.dialNumber) {
+                    pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
+                }
+                if (mainView.greeterMode) {
                     greeter.showGreeter();
                 }
             }
@@ -592,8 +595,8 @@ Page {
             iconSource: "add"
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
-            enabled: !greeter.greeterActive
-            onClicked: pageStack.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            enabled: !mainView.greeterMode
+            onClicked: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
         }
 
         LiveCallKeypadButton {

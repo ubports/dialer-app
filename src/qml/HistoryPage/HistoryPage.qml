@@ -112,7 +112,7 @@ Page {
         onSelectedIndexChanged: {
             // NOTE: be careful on changing the way filters are assigned, if we create a
             // binding on head.sections, we might get weird results when the page moves to the bottom
-            if (pageStack.depth > 1) {
+            if (pageStackNormalMode.depth > 1) {
                 if (head.sections.selectedIndex == 0) {
                     historyEventModel.filter = emptyFilter;
                 } else {
@@ -323,7 +323,7 @@ Page {
                         iconName: "info"
                         text: i18n.tr("Details")
                         onTriggered: {
-                            pageStack.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
+                            pageStackNormalMode.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
                                                           { phoneNumber: participants[0].phoneNumber,
                                                             events: model.events,
                                                             eventModel: historyEventModel})
