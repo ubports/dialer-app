@@ -1,3 +1,11 @@
+dialer-app (0.1+15.04.20150108-0ubuntu1) vivid; urgency=low
+
+  [ Tiago Salem Herrmann ]
+  * Emergency mode refactor. Use two page stacks: one for normal mode
+    and another for emergency mode. (LP: #1404304, #1359337, #1400836)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 08 Jan 2015 21:30:49 +0000
+
 dialer-app (0.1+15.04.20150107-0ubuntu1) vivid; urgency=low
 
   [ Gustavo Pichorim Boiko ]
