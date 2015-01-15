@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2014-12-20 06:37+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-01-15 06:06+0000\n"
+"X-Generator: Launchpad (build 17303)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:409
+#: ../src/qml/LiveCallPage/LiveCall.qml:385
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - hívás várakoztatva"
@@ -59,7 +59,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
+#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -122,41 +122,41 @@ msgstr "Aktív"
 msgid "All"
 msgstr "Összes"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:293
+#: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Bluetooth device"
 msgstr "Bluetooth eszköz"
 
-#: ../src/qml/dialer-app.qml:509
+#: ../src/qml/dialer-app.qml:520
 msgid "Call Barring"
 msgstr "Híváskorlátozás"
 
-#: ../src/qml/dialer-app.qml:520
+#: ../src/qml/dialer-app.qml:531
 msgid "Call Forwarding"
 msgstr "Hívástovábbítás"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:542
 msgid "Call Waiting"
 msgstr "Hívásvárakoztatás"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:125
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Call ended"
 msgstr "Hívás befejezve"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:264
+#: ../src/qml/LiveCallPage/LiveCall.qml:252
 msgid "Call failed"
 msgstr "A hívás sikertelen"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:411
+#: ../src/qml/LiveCallPage/LiveCall.qml:387
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Hívás"
 
-#: ../src/qml/dialer-app.qml:542
+#: ../src/qml/dialer-app.qml:553
 msgid "Calling Line Presentation"
 msgstr "Hívószám megjelenése"
 
-#: ../src/qml/dialer-app.qml:554
+#: ../src/qml/dialer-app.qml:565
 msgid "Calling Line Restriction"
 msgstr "Hívószám korlátozása"
 
@@ -172,25 +172,25 @@ msgstr "Minden hívás hozzárendelése a következőhöz: %1"
 
 #: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:364
+#: ../src/qml/dialer-app.qml:375
 msgid "Close"
 msgstr "Bezárás"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Konferencia"
 
-#: ../src/qml/dialer-app.qml:548
+#: ../src/qml/dialer-app.qml:559
 msgid "Connected Line Presentation"
 msgstr "Hívás megjelenése"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:571
 msgid "Connected Line Restriction"
 msgstr "Hívás korlátozása"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:340
+#: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Névjegy részletei"
 
@@ -204,21 +204,21 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:239
-#: ../src/qml/HistoryPage/HistoryPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:242
+#: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Törlés"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:321
+#: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
 msgstr "Részletek"
 
-#: ../src/qml/dialer-app.qml:378
+#: ../src/qml/dialer-app.qml:389
 msgid "Disabling flight mode"
 msgstr "Repülőgépes mód tiltása"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:435
-#: ../src/qml/dialer-app.qml:449
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:446
+#: ../src/qml/dialer-app.qml:460
 msgid "Dismiss"
 msgstr "Elvetés"
 
@@ -230,11 +230,11 @@ msgstr "Ne kérdezze többször"
 msgid "Emergency Calls"
 msgstr "Vészhívások"
 
-#: ../src/qml/DialerPage/DialerPage.qml:268
+#: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
 msgstr "Szám megadása"
 
-#: ../src/qml/dialer-app.qml:432
+#: ../src/qml/dialer-app.qml:443
 msgid "Error"
 msgstr "Hiba"
 
@@ -255,11 +255,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
 msgid "Incoming"
 msgstr "Bejövő"
 
-#: ../src/qml/dialer-app.qml:433
+#: ../src/qml/dialer-app.qml:444
 msgid "Invalid USSD code"
 msgstr "Érvénytelen USSD kód"
 
@@ -279,12 +279,12 @@ msgstr "Később"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:513
+#: ../src/qml/LiveCallPage/LiveCall.qml:489
 msgid "Merge calls"
 msgstr "Hívások egyesítése"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:301
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Nem fogadott"
@@ -302,11 +302,11 @@ msgstr "Nem"
 msgid "No SIM card selected"
 msgstr "Nincs SIM kártya kiválasztva"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:100
+#: ../src/qml/LiveCallPage/LiveCall.qml:98
 msgid "No calls"
 msgstr "Nincs hívás"
 
-#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:359
+#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:370
 msgid "No network"
 msgstr "Nincs hálózat"
 
@@ -319,7 +319,7 @@ msgid "On hold"
 msgstr "Várakoztatás"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:302
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Outgoing"
 msgstr "Kimenő"
 
@@ -335,7 +335,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefon alkalmazás"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:297
+#: ../src/qml/LiveCallPage/LiveCall.qml:285
 msgid "Phone Speaker"
 msgstr "Telefon hangszóró"
 
@@ -358,7 +358,7 @@ msgstr ""
 "href=\"system_settings\">Rendszerbeállítások &gt; Biztonság és "
 "magánszféra</a> alá."
 
-#: ../src/qml/dialer-app.qml:413
+#: ../src/qml/dialer-app.qml:424
 msgid "Please wait"
 msgstr "Kérem várjon"
 
@@ -405,7 +405,7 @@ msgstr ""
 "bármikor megváltoztathatja a <a "
 "href=\"system_settings\">Rendszerbeállítások</a> alatt."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
 msgstr "Üzenet küldése"
 
@@ -417,11 +417,11 @@ msgstr "Beállítások"
 msgid "Share"
 msgstr "Megosztás"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:140
+#: ../src/qml/LiveCallPage/LiveCall.qml:128
 msgid "Switch audio source:"
 msgstr "Hangforrás váltása:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:498
+#: ../src/qml/LiveCallPage/LiveCall.qml:474
 msgid "Switch calls"
 msgstr "Váltás a hívások között"
 
@@ -433,12 +433,12 @@ msgstr "Alapértelmezett SIM kártya:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:371
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Jelenleg nincs hálózat ezen: %1"
 
-#: ../src/qml/dialer-app.qml:361
+#: ../src/qml/dialer-app.qml:372
 msgid "There is currently no network."
 msgstr "Jelenleg nincs hálózat"
 
@@ -446,11 +446,11 @@ msgstr "Jelenleg nincs hálózat"
 msgid "Today"
 msgstr "Ma"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:295
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Ubuntu Phone"
 msgstr "Ubuntu telefon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:299
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Unknown device"
 msgstr "Ismeretlen eszköz"
 

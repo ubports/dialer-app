@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2014-12-20 06:37+0000\n"
-"X-Generator: Launchpad (build 17286)\n"
+"X-Launchpad-Export-Date: 2015-01-15 06:06+0000\n"
+"X-Generator: Launchpad (build 17303)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:409
+#: ../src/qml/LiveCallPage/LiveCall.qml:385
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - រង់ចាំ"
@@ -56,7 +56,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
+#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -119,41 +119,41 @@ msgstr "សកម្ម"
 msgid "All"
 msgstr "ទាំងអស់"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:293
+#: ../src/qml/LiveCallPage/LiveCall.qml:281
 msgid "Bluetooth device"
 msgstr "ឧបករណ៍​​ប៊្លូធូស"
 
-#: ../src/qml/dialer-app.qml:509
+#: ../src/qml/dialer-app.qml:520
 msgid "Call Barring"
 msgstr "រារាំង​ការ​ហៅ"
 
-#: ../src/qml/dialer-app.qml:520
+#: ../src/qml/dialer-app.qml:531
 msgid "Call Forwarding"
 msgstr "បញ្ជូន​ការ​ហៅបន្ត"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:542
 msgid "Call Waiting"
 msgstr "រង់ចាំ​ការ​ហៅ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:125
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Call ended"
 msgstr "ការហៅ​បាន​បញ្ចប់"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:264
+#: ../src/qml/LiveCallPage/LiveCall.qml:252
 msgid "Call failed"
 msgstr "ការហៅបានបរាជ័យ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:411
+#: ../src/qml/LiveCallPage/LiveCall.qml:387
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "កំពុុងហៅ"
 
-#: ../src/qml/dialer-app.qml:542
+#: ../src/qml/dialer-app.qml:553
 msgid "Calling Line Presentation"
 msgstr "បង្ហាញ​ខ្សែ​ហៅ"
 
-#: ../src/qml/dialer-app.qml:554
+#: ../src/qml/dialer-app.qml:565
 msgid "Calling Line Restriction"
 msgstr "ដាក់​កម្រិត​ខ្សែ​ហៅ"
 
@@ -169,25 +169,25 @@ msgstr "ផ្លាស់ប្តូរសមាគមការហៅទាំ
 
 #: ../src/qml/DialerPage/DialerPage.qml:52
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:364
+#: ../src/qml/dialer-app.qml:375
 msgid "Close"
 msgstr "បិទ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "សន្និសីទ"
 
-#: ../src/qml/dialer-app.qml:548
+#: ../src/qml/dialer-app.qml:559
 msgid "Connected Line Presentation"
 msgstr "បង្ហាញ​ខ្សែ​បាន​ភ្ជាប់"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:571
 msgid "Connected Line Restriction"
 msgstr "ដាក់​កម្រិត​ខ្សែ​បាន​ភ្ជាប់"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:340
+#: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "ព័ត៌មាន​លម្អិត​ទំនាក់ទំនង"
 
@@ -201,21 +201,21 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:239
-#: ../src/qml/HistoryPage/HistoryPage.qml:309
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:242
+#: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "លុប"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:321
+#: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
 msgstr "ព័ត៌មាន​លម្អិត"
 
-#: ../src/qml/dialer-app.qml:378
+#: ../src/qml/dialer-app.qml:389
 msgid "Disabling flight mode"
 msgstr "បិទរបៀបការហោះហើរ"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:435
-#: ../src/qml/dialer-app.qml:449
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:446
+#: ../src/qml/dialer-app.qml:460
 msgid "Dismiss"
 msgstr "បណ្ដេញ"
 
@@ -227,11 +227,11 @@ msgstr "កុំ​សួរ​ម្ដងទៀត"
 msgid "Emergency Calls"
 msgstr "ការហៅបន្ទាន់"
 
-#: ../src/qml/DialerPage/DialerPage.qml:268
+#: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
 msgstr "បញ្ចូល​លេខ"
 
-#: ../src/qml/dialer-app.qml:432
+#: ../src/qml/dialer-app.qml:443
 msgid "Error"
 msgstr "កំហុស"
 
@@ -252,11 +252,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
 msgid "Incoming"
 msgstr "ចូល"
 
-#: ../src/qml/dialer-app.qml:433
+#: ../src/qml/dialer-app.qml:444
 msgid "Invalid USSD code"
 msgstr "កូដ USSD មិន​ត្រឹមត្រូវ"
 
@@ -276,12 +276,12 @@ msgstr "ពេលក្រោយ"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:513
+#: ../src/qml/LiveCallPage/LiveCall.qml:489
 msgid "Merge calls"
 msgstr "បញ្ចូល​ការ​ហៅ​ចូល​គ្នា"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:301
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "ខកខាន"
@@ -299,11 +299,11 @@ msgstr "ទេ"
 msgid "No SIM card selected"
 msgstr "មិន​បាន​ជ្រើស​ស៊ីម​កាត"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:100
+#: ../src/qml/LiveCallPage/LiveCall.qml:98
 msgid "No calls"
 msgstr "គ្មានការហៅ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:359
+#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:370
 msgid "No network"
 msgstr "មិន​មាន​សេវា"
 
@@ -316,7 +316,7 @@ msgid "On hold"
 msgstr "រង់ចាំ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:302
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Outgoing"
 msgstr "ចេញ"
 
@@ -332,7 +332,7 @@ msgstr "ទូរស័ព្ទ​"
 msgid "Phone App"
 msgstr "កម្មវិធី​ទូរស័ព្ទ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:297
+#: ../src/qml/LiveCallPage/LiveCall.qml:285
 msgid "Phone Speaker"
 msgstr "អូប៉ាល័រ​ទូរស័ព្ទ"
 
@@ -354,7 +354,7 @@ msgstr ""
 "បណ្តាញសូចនាករ នៅកំពូលនៃអេក្រង់ឬដោយទស្សនា <a "
 "href=\"system_settings\">ការកំណត់ប្រព័ន្ធ &gt; សន្តិសុខ &amp; ភាពឯកជន ។"
 
-#: ../src/qml/dialer-app.qml:413
+#: ../src/qml/dialer-app.qml:424
 msgid "Please wait"
 msgstr "សូមរង់​ចាំ"
 
@@ -401,7 +401,7 @@ msgstr ""
 "អ្នក​អាច​ប្ដូរ​ជម្រើស​បាន​នៅ​ក្នុង <a "
 "href=\"system_settings\">ការ​កំណត់​ប្រព័ន្ធ</a> ។"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:331
+#: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
 msgstr "ផ្ញើសារ"
 
@@ -413,11 +413,11 @@ msgstr "ការកំណត់"
 msgid "Share"
 msgstr "ចែករំលែក"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:140
+#: ../src/qml/LiveCallPage/LiveCall.qml:128
 msgid "Switch audio source:"
 msgstr "ផ្លាស់ប្តូរប្រភពអូឌីយ៉ូ ៖"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:498
+#: ../src/qml/LiveCallPage/LiveCall.qml:474
 msgid "Switch calls"
 msgstr "ប្តូរការហៅ"
 
@@ -429,12 +429,12 @@ msgstr "ប្ដូរ​ទៅ​ស៊ីម​លំនាំដើម៖"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:371
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា​នៅ​លើ %1"
 
-#: ../src/qml/dialer-app.qml:361
+#: ../src/qml/dialer-app.qml:372
 msgid "There is currently no network."
 msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា។"
 
@@ -442,11 +442,11 @@ msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា
 msgid "Today"
 msgstr "ថ្ងៃ​នេះ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:295
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Ubuntu Phone"
 msgstr "ទូរស័ព្ទ Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:299
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Unknown device"
 msgstr "មិន​ស្គាល់​ឧបករណ៍"
 
