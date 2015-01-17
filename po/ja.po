@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2014-10-21 10:04-0400\n"
+"POT-Creation-Date: 2015-01-16 15:21-0200\n"
 "PO-Revision-Date: 2014-09-18 12:19+0000\n"
 "Last-Translator: Kentaro Kazuhama <Unknown>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-01-15 06:06+0000\n"
-"X-Generator: Launchpad (build 17303)\n"
+"X-Launchpad-Export-Date: 2015-01-17 07:08+0000\n"
+"X-Generator: Launchpad (build 17304)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:385
+#: ../src/qml/LiveCallPage/LiveCall.qml:412
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 保留中"
@@ -56,7 +56,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -119,41 +119,41 @@ msgstr "通話中"
 msgid "All"
 msgstr "すべて"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:281
+#: ../src/qml/LiveCallPage/LiveCall.qml:296
 msgid "Bluetooth device"
 msgstr "Bluetooth デバイス"
 
-#: ../src/qml/dialer-app.qml:520
+#: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
 msgstr "発信規制"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:581
 msgid "Call Forwarding"
 msgstr "着信転送"
 
-#: ../src/qml/dialer-app.qml:542
+#: ../src/qml/dialer-app.qml:592
 msgid "Call Waiting"
 msgstr "通話中着信"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:125
 msgid "Call ended"
 msgstr "通話終了"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:252
+#: ../src/qml/LiveCallPage/LiveCall.qml:264
 msgid "Call failed"
 msgstr "通話失敗"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:387
+#: ../src/qml/LiveCallPage/LiveCall.qml:414
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "呼出中"
 
-#: ../src/qml/dialer-app.qml:553
+#: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
 msgstr "発信者番号通知"
 
-#: ../src/qml/dialer-app.qml:565
+#: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
 msgstr "発信者番号通知制限"
 
@@ -167,22 +167,22 @@ msgstr "キャンセル"
 msgid "Change all Call associations to %1?"
 msgstr "すべての発信を%1経由で行いますか？"
 
-#: ../src/qml/DialerPage/DialerPage.qml:52
+#: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:375
+#: ../src/qml/dialer-app.qml:419
 msgid "Close"
 msgstr "閉じる"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:49
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "電話会議"
 
-#: ../src/qml/dialer-app.qml:559
+#: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
 msgstr "接続先番号通知"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:621
 msgid "Connected Line Restriction"
 msgstr "接続先番号通知制限"
 
@@ -192,7 +192,7 @@ msgid "Contact Details"
 msgstr "連絡先の詳細"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:40
+#: ../src/qml/DialerPage/DialerPage.qml:41
 msgid "Contacts"
 msgstr "連絡先"
 
@@ -201,7 +201,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:242
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "削除"
@@ -210,12 +210,12 @@ msgstr "削除"
 msgid "Details"
 msgstr "詳細"
 
-#: ../src/qml/dialer-app.qml:389
+#: ../src/qml/dialer-app.qml:433
 msgid "Disabling flight mode"
 msgstr "機内モードの解除"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:446
-#: ../src/qml/dialer-app.qml:460
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:490
+#: ../src/qml/dialer-app.qml:504
 msgid "Dismiss"
 msgstr "無視"
 
@@ -223,15 +223,15 @@ msgstr "無視"
 msgid "Don't ask again"
 msgstr "再び表示しない"
 
-#: ../src/qml/DialerPage/DialerPage.qml:61
+#: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Emergency Calls"
 msgstr "緊急電話"
 
-#: ../src/qml/DialerPage/DialerPage.qml:256
+#: ../src/qml/DialerPage/DialerPage.qml:268
 msgid "Enter a number"
 msgstr "番号を入力"
 
-#: ../src/qml/dialer-app.qml:443
+#: ../src/qml/dialer-app.qml:487
 msgid "Error"
 msgstr "エラー"
 
@@ -239,7 +239,7 @@ msgstr "エラー"
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: ../src/qml/DialerPage/DialerPage.qml:63
+#: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Flight mode"
 msgstr "機内モード"
 
@@ -252,11 +252,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
 msgid "Incoming"
 msgstr "着信"
 
-#: ../src/qml/dialer-app.qml:444
+#: ../src/qml/dialer-app.qml:488
 msgid "Invalid USSD code"
 msgstr "無効なUSSDコードです"
 
@@ -264,7 +264,7 @@ msgstr "無効なUSSDコードです"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:71
+#: ../src/qml/DialerPage/DialerPage.qml:76
 msgid "Keypad"
 msgstr "キーパッド"
 
@@ -276,19 +276,15 @@ msgstr "後で"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:489
+#: ../src/qml/LiveCallPage/LiveCall.qml:516
 msgid "Merge calls"
 msgstr "通話を統合"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:301
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:296
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "不在着信"
-
-#: ../src/qml/LiveCallPage/LiveCall.qml:63
-msgid "New Call"
-msgstr "新しい通話"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -299,13 +295,17 @@ msgstr "いいえ"
 msgid "No SIM card selected"
 msgstr "SIMカードが選択されていません"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:98
+#: ../src/qml/LiveCallPage/LiveCall.qml:100
 msgid "No calls"
 msgstr "通話なし"
 
-#: ../src/qml/DialerPage/DialerPage.qml:73 ../src/qml/dialer-app.qml:370
+#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:414
 msgid "No network"
 msgstr "ネットワークなし"
+
+#: ../src/qml/HistoryPage/HistoryPage.qml:217
+msgid "No recent calls"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
@@ -316,7 +316,7 @@ msgid "On hold"
 msgstr "保留中"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
 msgid "Outgoing"
 msgstr "発信"
 
@@ -332,7 +332,7 @@ msgstr "電話"
 msgid "Phone App"
 msgstr "電話アプリ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:285
+#: ../src/qml/LiveCallPage/LiveCall.qml:300
 msgid "Phone Speaker"
 msgstr "スピーカー"
 
@@ -353,7 +353,7 @@ msgstr ""
 "電話したりメッセージを送信するにはSIMカードのロックを解除してください。画面上部にあるネットワークインジケーター、または <a "
 "href=\"system_settings\">システム設定 &gt; システム設定とプライバシー</a> からSIMカードのロックを解除できます。"
 
-#: ../src/qml/dialer-app.qml:424
+#: ../src/qml/dialer-app.qml:468
 msgid "Please wait"
 msgstr "お待ちください"
 
@@ -375,7 +375,7 @@ msgstr "最近"
 msgid "SIM Card is locked"
 msgstr "SIMカードはロックされています"
 
-#: ../src/qml/DialerPage/DialerPage.qml:65
+#: ../src/qml/DialerPage/DialerPage.qml:70
 msgid "SIM Locked"
 msgstr "SIMがロックされています"
 
@@ -402,7 +402,7 @@ msgstr ""
 msgid "Send message"
 msgstr "メッセージ送信"
 
-#: ../src/qml/DialerPage/DialerPage.qml:45
+#: ../src/qml/DialerPage/DialerPage.qml:46
 msgid "Settings"
 msgstr "設定"
 
@@ -410,11 +410,11 @@ msgstr "設定"
 msgid "Share"
 msgstr "共有"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:128
+#: ../src/qml/LiveCallPage/LiveCall.qml:140
 msgid "Switch audio source:"
 msgstr "オーディオソースの切り替え:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:474
+#: ../src/qml/LiveCallPage/LiveCall.qml:501
 msgid "Switch calls"
 msgstr "通話切り替え"
 
@@ -426,12 +426,12 @@ msgstr "デフォルトのSIMに切り替える:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:371
+#: ../src/qml/dialer-app.qml:415
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "%1には現在ネットワークがありません"
 
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/dialer-app.qml:416
 msgid "There is currently no network."
 msgstr "現在ネットワークがありません"
 
@@ -439,11 +439,11 @@ msgstr "現在ネットワークがありません"
 msgid "Today"
 msgstr "今日"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:298
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:287
+#: ../src/qml/LiveCallPage/LiveCall.qml:302
 msgid "Unknown device"
 msgstr "不明なデバイス"
 
@@ -473,16 +473,6 @@ msgstr "昨日"
 msgid "You need to select a SIM card"
 msgstr "SIMカードを選択する必要があります"
 
-#. TRANSLATORS: this string is the time a call has happenend. It represents the format to be used, according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#. please change according to your language
-#. TRANSLATORS: HH:mm is the time format, translate it according to:
-#. http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:230
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:261
-msgid "hh:mm ap"
-msgstr "APh時m分"
-
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
@@ -492,3 +482,9 @@ msgstr "hh:mm:ss"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
+
+#~ msgid "New Call"
+#~ msgstr "新しい通話"
+
+#~ msgid "hh:mm ap"
+#~ msgstr "APh時m分"
