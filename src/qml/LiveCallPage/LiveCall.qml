@@ -281,7 +281,7 @@ Page {
         running: false
         onTriggered: {
             if (!callManager.hasCalls) {
-                if (!mainView.greeterMode)
+                if (!mainView.greeterMode) {
                     mainView.removeLiveCallView();
                 }
                 // TODO: we can't be sure that the currentPage is a DialerPage instance
