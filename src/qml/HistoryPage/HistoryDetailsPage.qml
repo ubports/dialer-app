@@ -254,7 +254,6 @@ Page {
                 text: Qt.formatTime(modelData.timestamp, Qt.DefaultLocaleShortDate)
                 anchors {
                     left: parent.left
-                    leftMargin: units.gu(1)
                     verticalCenter: parent.verticalCenter
                 }
                 verticalAlignment: Qt.AlignVCenter
@@ -266,6 +265,7 @@ Page {
                 text: PhoneUtils.PhoneUtils.format(modelData.remoteParticipant)
                 anchors {
                     left: timeLabel.right
+                    leftMargin: units.gu(1)
                     verticalCenter: parent.verticalCenter
                 }
                 color: UbuntuColors.lightAubergine
