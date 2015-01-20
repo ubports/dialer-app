@@ -248,11 +248,24 @@ Page {
             }
 
             Label {
+                id: timeLabel
+                // TRANSLATORS: HH:mm is the time format, translate it according to:
+                // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
+                text: Qt.formatTime(modelData.timestamp, Qt.DefaultLocaleShortDate)
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(1)
+                    verticalCenter: parent.verticalCenter
+                }
+                verticalAlignment: Qt.AlignVCenter
+            }
+
+            Label {
                 id: remoteParticipantId
                 // FIXME: we need to check if the id is actually a phone number
                 text: PhoneUtils.PhoneUtils.format(modelData.remoteParticipant)
                 anchors {
-                    left: parent.left
+                    left: timeLabel.right
                     verticalCenter: parent.verticalCenter
                 }
                 color: UbuntuColors.lightAubergine
@@ -264,23 +277,9 @@ Page {
             }
 
             Label {
-                id: timeLabel
-                // TRANSLATORS: HH:mm is the time format, translate it according to:
-                // http://qt-project.org/doc/qt-5/qml-qtqml-qt.html#formatDate-method
-                text: Qt.formatTime(modelData.timestamp, Qt.DefaultLocaleShortDate)
-                anchors {
-                    left: remoteParticipantId.right
-                    leftMargin: units.gu(1)
-                    verticalCenter: parent.verticalCenter
-                }
-                color: UbuntuColors.lightAubergine
-                verticalAlignment: Qt.AlignVCenter
-            }
-
-            Label {
                 id: simLabel
                 anchors {
-                    left: timeLabel.right
+                    left: remoteParticipantId.right
                     leftMargin: units.gu(1)
                     verticalCenter: timeLabel.verticalCenter
                 }
