@@ -204,7 +204,7 @@ Page {
 
         State {
             name: "closing"
-            when: closeTimer.running
+            when: closeTimer.running || greeterAnimationTimer.running
 
             PropertyChanges {
                 target: buttonsArea
@@ -267,19 +267,30 @@ Page {
     }
 
     Timer {
+        id: greeterAnimationTimer
+        interval: 1000
+        repeat: false
+        running: false
+        onTriggered: mainView.removeLiveCallView()
+    }
+ 
+    Timer {
         id: closeTimer
-        interval: 3000
+        interval: mainView.greeterMode ? 2000 : 3000
         repeat: false
         running: false
         onTriggered: {
             if (!callManager.hasCalls) {
-                mainView.removeLiveCallView();
+                if (!mainView.greeterMode) {
+                    mainView.removeLiveCallView();
+                }
                 // TODO: we can't be sure that the currentPage is a DialerPage instance
                 if (pageStackNormalMode.currentPage.dialNumber) {
                     pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
                 }
                 if (mainView.greeterMode) {
                     greeter.showGreeter();
+                    greeterAnimationTimer.running = true
                 }
             }
         }
