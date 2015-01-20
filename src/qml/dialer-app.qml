@@ -540,7 +540,7 @@ MainView {
             }
 
             // if not, just open the live call
-            if (mainView.lastHasCalls != callManager.hasCalls) {
+            if (mainView.lastHasCalls != callManager.hasCalls || mainView.greeterMode) {
                 mainView.lastHasCalls = callManager.hasCalls
                 switchToLiveCall();
             }
