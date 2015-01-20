@@ -1,3 +1,15 @@
+dialer-app (0.1+15.04.20150120.1-0ubuntu1) vivid; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Update pot file.
+
+  [ Tiago Salem Herrmann ]
+  * Give some time to finish the greeter animation before removing the
+    LiveCall view. (LP: #1410961)
+  * Always show LiveCall view on greeter when hasCalls() is true.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 20 Jan 2015 13:05:21 +0000
+
 dialer-app (0.1+15.04.20150108-0ubuntu1) vivid; urgency=low
 
   [ Tiago Salem Herrmann ]
