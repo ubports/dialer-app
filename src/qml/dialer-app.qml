@@ -286,7 +286,7 @@ MainView {
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
-            PopupUtils.open(Qt.createComponent("Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
+            showNotification(i18n.tr("No SIM card selected"), i18n.tr("You need to select a SIM card"));
             return
         }
 
@@ -394,6 +394,10 @@ MainView {
         }
  
         stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
+    }
+
+    function showNotification(title, text) {
+        PopupUtils.open(Qt.resolvedUrl("Dialogs/NotificationDialog.qml"), mainView, {title: title, text: text});
     }
 
     Component.onCompleted: {
