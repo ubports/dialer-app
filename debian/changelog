@@ -1,3 +1,11 @@
+dialer-app (0.1+15.04.20150124-0ubuntu1) vivid; urgency=low
+
+  [ Gustavo Pichorim Boiko ]
+  * Notify error when trying to create conference calls and when
+    changing the call hold status. (LP: #1410365)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Sat, 24 Jan 2015 01:59:59 +0000
+
 dialer-app (0.1+15.04.20150120.1-0ubuntu1) vivid; urgency=low
 
   [ Gustavo Pichorim Boiko ]
