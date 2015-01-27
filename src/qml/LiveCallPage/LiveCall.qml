@@ -93,6 +93,11 @@ Page {
                 id == "earpiece")
     }
 
+    function changeCallHoldingStatus(call, held) {
+        callHoldingConnection.target = call;
+        call.held = held;
+    }
+
     Connections {
         target: callManager
         onHasCallsChanged: {
@@ -103,6 +108,11 @@ Page {
                 statusLabel.text = "";
                 liveCall.call = callManager.foregroundCall;
             }
+        }
+
+        onConferenceRequestFailed: {
+            mainView.showNotification(i18n.tr("Conference call failure"),
+                                      i18n.tr("Failed to create a conference call."));
         }
     }
 
@@ -123,6 +133,16 @@ Page {
             callObject["isConference"] = call.isConference;
 
             reportStatus(callObject, i18n.tr("Call ended"));
+        }
+    }
+
+    Connections {
+        id: callHoldingConnection
+        // the target will be set on the actions
+        onCallHoldingFailed: {
+            mainView.showNotification(i18n.tr("Call holding failure"),
+                                      target.held ? i18n.tr("Failed to activate the call.")
+                                                  : i18n.tr("Failed to place the active call on hold."));
         }
     }
 
@@ -204,7 +224,7 @@ Page {
 
         State {
             name: "closing"
-            when: closeTimer.running
+            when: closeTimer.running || greeterAnimationTimer.running
 
             PropertyChanges {
                 target: buttonsArea
@@ -267,19 +287,30 @@ Page {
     }
 
     Timer {
+        id: greeterAnimationTimer
+        interval: 1000
+        repeat: false
+        running: false
+        onTriggered: mainView.removeLiveCallView()
+    }
+ 
+    Timer {
         id: closeTimer
-        interval: 3000
+        interval: mainView.greeterMode ? 2000 : 3000
         repeat: false
         running: false
         onTriggered: {
             if (!callManager.hasCalls) {
-                mainView.removeLiveCallView();
+                if (!mainView.greeterMode) {
+                    mainView.removeLiveCallView();
+                }
                 // TODO: we can't be sure that the currentPage is a DialerPage instance
                 if (pageStackNormalMode.currentPage.dialNumber) {
                     pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
                 }
                 if (mainView.greeterMode) {
                     greeter.showGreeter();
+                    greeterAnimationTimer.running = true
                 }
             }
         }
@@ -502,7 +533,7 @@ Page {
             color: mainView.backgroundColor
             strokeColor: UbuntuColors.green
             onClicked: {
-                callManager.foregroundCall.held = true
+                changeCallHoldingStatus(callManager.foregroundCall, true)
             }
         }
 
@@ -615,7 +646,7 @@ Page {
             iconHeight: units.gu(3)
             onClicked: {
                 if (call) {
-                    call.held = !call.held
+                    changeCallHoldingStatus(call, !call.held)
                 }
             }
         }

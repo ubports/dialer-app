@@ -20,19 +20,17 @@ import QtQuick 2.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 
-Component {
-    Dialog {
-        id: dialogue
-        title: i18n.tr("No SIM card selected")
-        text: i18n.tr("You need to select a SIM card")
-        Button {
-            objectName: "closeNoSimCardSelectedDialog"
-            text: i18n.tr("Close")
-            color: UbuntuColors.orange
-            onClicked: {
-                PopupUtils.close(dialogue)
-                Qt.inputMethod.hide()
-            }
+Dialog {
+    id: dialogue
+    title: ""
+    text: ""
+    Button {
+        objectName: "closeDialog"
+        text: i18n.tr("Close")
+        color: UbuntuColors.orange
+        onClicked: {
+            PopupUtils.close(dialogue)
+            Qt.inputMethod.hide()
         }
     }
 }

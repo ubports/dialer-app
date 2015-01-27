@@ -286,7 +286,7 @@ MainView {
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
-            PopupUtils.open(Qt.createComponent("Dialogs/NoSIMCardSelectedDialog.qml").createObject(mainView))
+            showNotification(i18n.tr("No SIM card selected"), i18n.tr("You need to select a SIM card"));
             return
         }
 
@@ -307,7 +307,9 @@ MainView {
 
         // avoid cleaning the keypadEntry in case there is no signal
         if (!mainView.account.connected) {
-            PopupUtils.open(noNetworkDialog)
+            showNotification(i18n.tr("No network"),
+                             telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
+                                                                    : i18n.tr("There is currently no network."))
             return
         }
 
@@ -396,6 +398,10 @@ MainView {
         stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
     }
 
+    function showNotification(title, text) {
+        PopupUtils.open(Qt.resolvedUrl("Dialogs/NotificationDialog.qml"), mainView, {title: title, text: text});
+    }
+
     Component.onCompleted: {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
@@ -404,24 +410,6 @@ MainView {
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
             switchToLiveCall();
-        }
-    }
-
-    Component {
-        id: noNetworkDialog
-        Dialog {
-            id: dialogue
-            title: i18n.tr("No network")
-            text: telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
-                                                         : i18n.tr("There is currently no network.")
-            Button {
-                objectName: "closeNoNetworkDialog"
-                text: i18n.tr("Close")
-                color: UbuntuColors.orange
-                onClicked: {
-                    PopupUtils.close(dialogue)
-                }
-            }
         }
     }
 
@@ -540,7 +528,7 @@ MainView {
             }
 
             // if not, just open the live call
-            if (mainView.lastHasCalls != callManager.hasCalls) {
+            if (mainView.lastHasCalls != callManager.hasCalls || mainView.greeterMode) {
                 mainView.lastHasCalls = callManager.hasCalls
                 switchToLiveCall();
             }
