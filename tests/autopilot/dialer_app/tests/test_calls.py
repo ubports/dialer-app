@@ -170,3 +170,28 @@ class TestCalls(DialerAppTestCase):
         except MismatchError as e:
             print('Expected failure due to known Mir crash '
                   '(https://launchpad.net/bugs/1240400): %s' % e)
+
+    def test_last_called_number(self):
+        number = "1234567"
+        formattedNumber = "1 234-567"
+
+        number2 = "1231234567"
+        formattedNumber2 = "1 231-234-567"
+
+        self.main_view.dialer_page.call_number(number, formattedNumber)
+        time.sleep(1)
+        self.main_view.live_call_page.click_hangup_button()
+        self.main_view.dialer_page.active.wait_for(True)
+
+        self.main_view.dialer_page.call_number(number2, formattedNumber2)
+        time.sleep(1)
+        self.main_view.live_call_page.click_hangup_button()
+        self.main_view.dialer_page.active.wait_for(True)
+
+        self.main_view.dialer_page.reveal_bottom_edge_page()
+        self.assertThat(self.history_list.visible, Eventually(Equals(True)))
+        self.assertThat(self.history_list.count, Eventually(Equals(1)))
+        historyEntry = self.get_history_for_number(number)
+        self.main_view._click_button(historyEntry)
+        self.assertThat(
+            self.main_view.dialer_page.dialNumber, Eventually(Equals(formattedNumber2)))
