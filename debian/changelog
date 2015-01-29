@@ -1,3 +1,25 @@
+dialer-app (0.1+15.04.20150129-0ubuntu1) vivid; urgency=low
+
+  [ CI Train Bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure the labels on multi call screen don't overlap (LP:
+    #1414740)
+
+  [ Albert Astals Cid ]
+  * Use ctr instead of tr for "All"
+
+  [ Albert Astals ]
+  * Use ctr instead of tr for "All"
+
+  [ Tiago Salem Herrmann ]
+  * Change HistoryDetailsPage to display the exact phone number that was
+    used on each call and populate the Dialpad accordingly. (LP:
+    #1410500)
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 29 Jan 2015 14:43:50 +0000
+
 dialer-app (0.1+15.04.20150124-0ubuntu1) vivid; urgency=low
 
   [ Gustavo Pichorim Boiko ]
