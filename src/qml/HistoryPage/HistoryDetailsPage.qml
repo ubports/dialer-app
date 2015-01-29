@@ -256,14 +256,30 @@ Page {
                     left: parent.left
                     verticalCenter: parent.verticalCenter
                 }
+                verticalAlignment: Qt.AlignVCenter
+            }
+
+            Label {
+                id: remoteParticipantId
+                // FIXME: we need to check if the id is actually a phone number
+                text: PhoneUtils.PhoneUtils.format(modelData.remoteParticipant)
+                anchors {
+                    left: timeLabel.right
+                    leftMargin: units.gu(1)
+                    verticalCenter: parent.verticalCenter
+                }
                 color: UbuntuColors.lightAubergine
                 verticalAlignment: Qt.AlignVCenter
+                MouseArea {
+                    anchors.fill:parent
+                    onClicked: mainView.populateDialpad(modelData.remoteParticipant, mainView.account ? mainView.account.accountId : "");
+                }
             }
 
             Label {
                 id: simLabel
                 anchors {
-                    left: timeLabel.right
+                    left: remoteParticipantId.right
                     leftMargin: units.gu(1)
                     verticalCenter: timeLabel.verticalCenter
                 }
