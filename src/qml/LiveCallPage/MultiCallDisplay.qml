@@ -76,6 +76,8 @@ Column {
                     left: avatar.right
                     leftMargin: units.gu(1)
                     verticalCenter: avatar.verticalCenter
+                    right: callStatus.left
+                    rightMargin: units.gu(1)
                 }
                 text: {
                     if (callEntry.isConference) {
@@ -88,6 +90,7 @@ Column {
                         return contactWatcher.phoneNumber;
                     }
                 }
+                elide: Text.ElideRight
             }
 
             StopWatch {
