@@ -38,6 +38,7 @@ if(XGETTEXT_EXECUTABLE)
               COMMAND ${XGETTEXT_EXECUTABLE}
                       --c++ --qt --add-comments=TRANSLATORS
                       --keyword=tr --keyword=tr:1,2 --keyword=N_
+                      --keyword=ctr:1c,2
                       -s -p ${CMAKE_CURRENT_SOURCE_DIR}
                       -o ${POT_FILE} ${I18N_SRCS}
                       -D ${CMAKE_CURRENT_SOURCE_DIR} ${I18N_SRCS}

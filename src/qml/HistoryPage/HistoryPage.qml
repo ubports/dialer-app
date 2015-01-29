@@ -46,7 +46,7 @@ Page {
     active: false
     flickable: null
 
-    head.sections.model: [ i18n.tr("All"), i18n.tr("Missed") ]
+    head.sections.model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
 
     Rectangle {
         anchors.fill: parent
