@@ -1,3 +1,19 @@
+dialer-app (0.1+15.04.20150203.1-0ubuntu1) vivid; urgency=medium
+
+  [ Albert Astals Cid ]
+  * Update POT file
+
+  [ You-Sheng Yang ]
+  * DEB_HOST_GNU_TYPE and other variables may not be set when not using
+    tools like dpkg-buildpackage. Include
+    /usr/share/dpkg/architecture.mk as recommended in
+    https://wiki.debian.org/CrossBuildPackagingGuidelines .
+
+  [ Tiago Salem Herrmann ]
+  * Display IMEI of all available accounts.
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Tue, 03 Feb 2015 18:43:06 +0000
+
 dialer-app (0.1+15.04.20150129-0ubuntu1) vivid; urgency=low
 
   [ CI Train Bot ]
