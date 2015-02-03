@@ -6,6 +6,8 @@
 
 export DPKG_GENSYMBOLS_CHECK_LEVEL=4
 
+include /usr/share/dpkg/architecture.mk
+
 %:
 	dh $@ --parallel --fail-missing --with translations,python3
 
