@@ -39,7 +39,7 @@ Item {
                 for (var i in telepathyHelper.accounts) {
                     finalString += telepathyHelper.accounts[i].displayName
                     finalString += ":\n"
-                    finalString += ussdManager.serial(telepathyHelper.accounts[i].accountId)
+                    finalString += telepathyHelper.accounts[i].serial
                     finalString += "\n\n"
                 }
                 return finalString
