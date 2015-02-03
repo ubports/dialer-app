@@ -34,7 +34,16 @@ Item {
             id: imei
             visible: false
             title: i18n.tr("IMEI")
-            text: ussdManager.serial(mainView.account.accountId)
+            text: {
+                var finalString = ""
+                for (var i in telepathyHelper.accounts) {
+                    finalString += telepathyHelper.accounts[i].displayName
+                    finalString += ":\n"
+                    finalString += telepathyHelper.accounts[i].serial
+                    finalString += "\n\n"
+                }
+                return finalString
+            }
             Button {
                 text: i18n.tr("Dismiss")
                 onClicked: PopupUtils.close(imei)
