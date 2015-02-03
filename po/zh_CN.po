@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-01-16 15:21-0200\n"
+"POT-Creation-Date: 2015-02-02 09:26+0100\n"
 "PO-Revision-Date: 2014-05-27 16:33+0000\n"
 "Last-Translator: Anthony Wong <anthony.wong@ubuntu.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-01-17 07:08+0000\n"
-"X-Generator: Launchpad (build 17304)\n"
+"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
+"X-Generator: Launchpad (build 17330)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "＃"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:412
+#: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
 msgstr ""
@@ -110,50 +110,59 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr ""
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
+msgctxt "All Calls"
 msgid "All"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:296
+#: ../src/qml/ContactsPage/ContactsPage.qml:72
+msgctxt "All Contacts"
+msgid "All"
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:570
+#: ../src/qml/dialer-app.qml:558
 msgid "Call Barring"
 msgstr "呼叫限制"
 
-#: ../src/qml/dialer-app.qml:581
+#: ../src/qml/dialer-app.qml:569
 msgid "Call Forwarding"
 msgstr "呼叫转移"
 
-#: ../src/qml/dialer-app.qml:592
+#: ../src/qml/dialer-app.qml:580
 msgid "Call Waiting"
 msgstr "呼叫等待"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:125
+#: ../src/qml/LiveCallPage/LiveCall.qml:135
 msgid "Call ended"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:264
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
 msgstr ""
 
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
+msgid "Call holding failure"
+msgstr ""
+
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:414
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:591
 msgid "Calling Line Presentation"
 msgstr "来电显示"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Restriction"
 msgstr "限制显示身份"
 
@@ -168,21 +177,24 @@ msgid "Change all Call associations to %1?"
 msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:54
-#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:30
-#: ../src/qml/dialer-app.qml:419
+#: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Conference"
 msgstr "会议"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
+msgid "Conference call failure"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
 msgstr "通话时来电显示"
 
-#: ../src/qml/dialer-app.qml:621
+#: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Restriction"
 msgstr "通话时限制显示身份"
 
@@ -210,12 +222,12 @@ msgstr "删除"
 msgid "Details"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:433
+#: ../src/qml/dialer-app.qml:421
 msgid "Disabling flight mode"
 msgstr ""
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:490
-#: ../src/qml/dialer-app.qml:504
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "忽略"
 
@@ -231,9 +243,21 @@ msgstr ""
 msgid "Enter a number"
 msgstr "输入号码"
 
-#: ../src/qml/dialer-app.qml:487
+#: ../src/qml/dialer-app.qml:475
 msgid "Error"
 msgstr "错误"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
+msgid "Failed to activate the call."
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:115
+msgid "Failed to create a conference call."
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:145
+msgid "Failed to place the active call on hold."
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -252,11 +276,11 @@ msgid "IMEI"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
 msgid "Incoming"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:488
+#: ../src/qml/dialer-app.qml:476
 msgid "Invalid USSD code"
 msgstr "无效的 USSD 码"
 
@@ -276,12 +300,12 @@ msgstr ""
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:516
+#: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
 msgstr "合并通话"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:296
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr ""
@@ -291,15 +315,15 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:26
+#: ../src/qml/dialer-app.qml:289
 msgid "No SIM card selected"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:100
+#: ../src/qml/LiveCallPage/LiveCall.qml:105
 msgid "No calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:414
+#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:310
 msgid "No network"
 msgstr ""
 
@@ -311,12 +335,12 @@ msgstr ""
 msgid "Ok"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
 msgid "Outgoing"
 msgstr ""
 
@@ -332,7 +356,7 @@ msgstr ""
 msgid "Phone App"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:300
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Phone Speaker"
 msgstr ""
 
@@ -351,7 +375,7 @@ msgid ""
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:468
+#: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
 msgstr "请稍候"
 
@@ -407,11 +431,11 @@ msgstr ""
 msgid "Share"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:140
+#: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Switch audio source:"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:501
+#: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
 msgstr ""
 
@@ -423,12 +447,12 @@ msgstr ""
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:415
+#: ../src/qml/dialer-app.qml:311
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:416
+#: ../src/qml/dialer-app.qml:312
 msgid "There is currently no network."
 msgstr ""
 
@@ -436,11 +460,11 @@ msgstr ""
 msgid "Today"
 msgstr "今天"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:298
+#: ../src/qml/LiveCallPage/LiveCall.qml:329
 msgid "Ubuntu Phone"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:302
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Unknown device"
 msgstr ""
 
@@ -450,7 +474,7 @@ msgid "Unknown number"
 msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Voicemail"
 msgstr "语音信箱"
 
@@ -466,7 +490,7 @@ msgstr ""
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../src/qml/Dialogs/NoSIMCardSelectedDialog.qml:27
+#: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
 msgstr ""
 

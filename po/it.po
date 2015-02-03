@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-01-16 15:21-0200\n"
+"POT-Creation-Date: 2015-02-02 09:26+0100\n"
 "PO-Revision-Date: 2015-01-27 17:03+0000\n"
 "Last-Translator: Milo Casagrande <milo.casagrande@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-01-28 06:31+0000\n"
-"X-Generator: Launchpad (build 17306)\n"
+"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
+"X-Generator: Launchpad (build 17330)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -113,14 +113,19 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr "Attiva"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
+msgctxt "All Calls"
 msgid "All"
-msgstr "Tutto"
+msgstr "Tutte"
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:72
+msgctxt "All Contacts"
+msgid "All"
+msgstr "Tutti"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -146,9 +151,13 @@ msgstr "Chiamata terminata"
 msgid "Call failed"
 msgstr "Chiamata non riuscita"
 
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
+msgid "Call holding failure"
+msgstr ""
+
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr "In chiamata"
 
@@ -176,9 +185,13 @@ msgid "Close"
 msgstr "Chiudi"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Conference"
 msgstr "Conferenza"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
+msgid "Conference call failure"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -237,6 +250,18 @@ msgstr "Inserire un numero"
 msgid "Error"
 msgstr "Errore"
 
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
+msgid "Failed to activate the call."
+msgstr "Attivazione della chiamata non riuscita."
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:115
+msgid "Failed to create a conference call."
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:145
+msgid "Failed to place the active call on hold."
+msgstr ""
+
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
 msgstr "Preferiti"
@@ -254,7 +279,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:298
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
 msgid "Incoming"
 msgstr "In entrata"
 
@@ -283,7 +308,7 @@ msgid "Merge calls"
 msgstr "Unisci chiamate"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:296
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Perse"
@@ -313,12 +338,12 @@ msgstr "Nessuna chiamata recente"
 msgid "Ok"
 msgstr "OK"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr "In attesa"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:300
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
 msgid "Outgoing"
 msgstr "In uscita"
 
@@ -459,7 +484,7 @@ msgid "Unknown number"
 msgstr "Numero sconosciuto"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Voicemail"
 msgstr "Segreteria"
 
@@ -491,6 +516,9 @@ msgstr "mm:ss"
 
 #~ msgid "New Call"
 #~ msgstr "Nuova chiamata"
+
+#~ msgid "All"
+#~ msgstr "Tutto"
 
 #~ msgid "hh:mm ap"
 #~ msgstr "hh:mm ap"
