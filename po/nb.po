@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-09-06 15:55+0000\n"
+"PO-Revision-Date: 2015-02-03 09:02+0000\n"
 "Last-Translator: Åka Sikrom <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-04 07:14+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -120,12 +120,12 @@ msgstr "Aktiv"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,7 +153,7 @@ msgstr "Anrop mislyktes"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "Samtale venter-feil"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -191,7 +191,7 @@ msgstr "Konferanse"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Conference call failure"
-msgstr ""
+msgstr "Konferansesamtale-feil"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -252,15 +252,15 @@ msgstr "Feil"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Klarte ikke å aktivere samtalen."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:115
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Klarte ikke å sette opp en konferansesamtale."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Klarte ikke å sette gjeldende samtale på vent."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
