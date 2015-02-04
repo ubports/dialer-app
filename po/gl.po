@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-10-28 14:14+0000\n"
+"PO-Revision-Date: 2015-02-03 16:53+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-04 07:14+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -120,12 +120,12 @@ msgstr "Activa"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Todas"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,7 +153,7 @@ msgstr "Chamada fallida"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "A chamada en espera fallou"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -191,7 +191,7 @@ msgstr "Conferencia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Conference call failure"
-msgstr ""
+msgstr "A teleconferencia fallou"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -252,15 +252,15 @@ msgstr "Erro"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "A activación da chamada fallou."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:115
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Produciuse un fallo ao crear a teleconferencia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Produciuse un fallo ao manter en espera a chamada activa."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
