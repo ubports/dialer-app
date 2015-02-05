@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-02-04 07:14+0000\n"
+"X-Launchpad-Export-Date: 2015-02-05 07:41+0000\n"
 "X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -153,7 +153,7 @@ msgstr "Échec de l'appel"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "Échec de la mise en attente"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445

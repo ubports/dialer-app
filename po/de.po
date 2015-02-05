@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-09-11 06:43+0000\n"
-"Last-Translator: Martin Pitt <martin.pitt@ubuntu.com>\n"
+"PO-Revision-Date: 2015-02-04 22:07+0000\n"
+"Last-Translator: Niklas Wenzel <nikwen.developer@gmail.com>\n"
 "Language-Team: German <de@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-05 07:41+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -120,12 +120,12 @@ msgstr "Aktiv"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Alle"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,7 +153,7 @@ msgstr "Anruf fehlgeschlagen"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "Fehler beim Halten des Anrufs"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
