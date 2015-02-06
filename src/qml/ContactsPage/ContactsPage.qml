@@ -138,7 +138,7 @@ Page {
         }
 
         showAddNewButton: true
-        showImportOptions: (contactList.count === 0)
+        showImportOptions: (contactList.count === 0) && (filterTerm === "")
         onAddNewContactClicked: mainView.createNewContactForPhone(" ")
         onInfoRequested: mainView.viewContact(contact.contactId)
 
