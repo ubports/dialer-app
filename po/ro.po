@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2015-01-17 12:13+0000\n"
+"PO-Revision-Date: 2015-02-08 11:53+0000\n"
 "Last-Translator: Meriuță Cornel <meriutacornel@neacornel.eu>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-09 06:21+0000\n"
+"X-Generator: Launchpad (build 17331)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:419
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - în așteptare"
@@ -63,7 +63,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
+#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -117,59 +117,59 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
 msgstr "Activ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Toate"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Toate"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:315
 msgid "Bluetooth device"
 msgstr "Dispozitiv bluetooth"
 
-#: ../src/qml/dialer-app.qml:558
+#: ../src/qml/dialer-app.qml:569
 msgid "Call Barring"
 msgstr "Restricționare apel"
 
-#: ../src/qml/dialer-app.qml:569
+#: ../src/qml/dialer-app.qml:580
 msgid "Call Forwarding"
 msgstr "Redirecționare apel"
 
-#: ../src/qml/dialer-app.qml:580
+#: ../src/qml/dialer-app.qml:591
 msgid "Call Waiting"
 msgstr "Apel în așteptare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:123
 msgid "Call ended"
 msgstr "Apel terminat"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:272
 msgid "Call failed"
 msgstr "Eșec la apelare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Call holding failure"
-msgstr ""
+msgstr "Apelul în așteptare a eșuat"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/LiveCall.qml:421
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Se apelează"
 
-#: ../src/qml/dialer-app.qml:591
+#: ../src/qml/dialer-app.qml:602
 msgid "Calling Line Presentation"
 msgstr "Identitate apelant"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:614
 msgid "Calling Line Restriction"
 msgstr "Restricționare apelant"
 
@@ -188,20 +188,20 @@ msgstr "Modificați toate apelurile asociate pe %1?"
 msgid "Close"
 msgstr "Închide"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Conferință"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:112
 msgid "Conference call failure"
-msgstr ""
+msgstr "Apelul în conferință a eșuat"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:608
 msgid "Connected Line Presentation"
 msgstr "Identitate apelant"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:620
 msgid "Connected Line Restriction"
 msgstr "Restricționare apelant"
 
@@ -220,7 +220,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:242
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Șterge"
@@ -229,12 +229,12 @@ msgstr "Șterge"
 msgid "Details"
 msgstr "Detalii"
 
-#: ../src/qml/dialer-app.qml:421
+#: ../src/qml/dialer-app.qml:432
 msgid "Disabling flight mode"
 msgstr "Dezactivează modul avion"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
-#: ../src/qml/dialer-app.qml:492
+#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:489
+#: ../src/qml/dialer-app.qml:503
 msgid "Dismiss"
 msgstr "Renunță"
 
@@ -246,25 +246,25 @@ msgstr "Nu întreba din nou"
 msgid "Emergency Calls"
 msgstr "Apeluri de urgență"
 
-#: ../src/qml/DialerPage/DialerPage.qml:268
+#: ../src/qml/DialerPage/DialerPage.qml:256
 msgid "Enter a number"
 msgstr "Introduceți un număr"
 
-#: ../src/qml/dialer-app.qml:475
+#: ../src/qml/dialer-app.qml:486
 msgid "Error"
 msgstr "Eroare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Eșec la inițierea apelului."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Eșec la crearea unui apel în conferință."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:133
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Eșec la punerea apelului activ în așteptare."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -283,11 +283,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
 msgid "Incoming"
 msgstr "Primite"
 
-#: ../src/qml/dialer-app.qml:476
+#: ../src/qml/dialer-app.qml:487
 msgid "Invalid USSD code"
 msgstr "Cod USSD nevalid"
 
@@ -307,12 +307,12 @@ msgstr "Mai târziu"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:547
+#: ../src/qml/LiveCallPage/LiveCall.qml:523
 msgid "Merge calls"
 msgstr "Mod conferință"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:301
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Pierdute"
@@ -322,15 +322,15 @@ msgstr "Pierdute"
 msgid "No"
 msgstr "Nu"
 
-#: ../src/qml/dialer-app.qml:289
+#: ../src/qml/dialer-app.qml:288
 msgid "No SIM card selected"
 msgstr "Nu a fost selectat un card SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:103
 msgid "No calls"
 msgstr "Niciun apel"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:310
+#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:309
 msgid "No network"
 msgstr "Fără rețea"
 
@@ -342,12 +342,12 @@ msgstr "Nu sunt apeluri recente"
 msgid "Ok"
 msgstr "Ok"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "În așteptare"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
 msgid "Outgoing"
 msgstr "Efectuate"
 
@@ -363,7 +363,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Aplicație pentru telefonie"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:319
 msgid "Phone Speaker"
 msgstr "Difuzor"
 
@@ -386,7 +386,7 @@ msgstr ""
 "sau vizitând <a href=\"system_settings\">Configurări sistem &gt; Securitate "
 "&amp; Confidențialitate</a>."
 
-#: ../src/qml/dialer-app.qml:456
+#: ../src/qml/dialer-app.qml:467
 msgid "Please wait"
 msgstr "Așteptați"
 
@@ -445,11 +445,11 @@ msgstr "Configurări"
 msgid "Share"
 msgstr "Partajare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Switch audio source:"
 msgstr "Comută sursa audio"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:532
+#: ../src/qml/LiveCallPage/LiveCall.qml:508
 msgid "Switch calls"
 msgstr "Schimbă între apeluri"
 
@@ -461,12 +461,12 @@ msgstr "Schimbați la cardul SIM implicit:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:311
+#: ../src/qml/dialer-app.qml:310
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "În prezent nu există rețea pe %1"
 
-#: ../src/qml/dialer-app.qml:312
+#: ../src/qml/dialer-app.qml:311
 msgid "There is currently no network."
 msgstr "Nu există rețea."
 
@@ -474,11 +474,11 @@ msgstr "Nu există rețea."
 msgid "Today"
 msgstr "Astăzi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:317
 msgid "Ubuntu Phone"
 msgstr "Telefon Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:321
 msgid "Unknown device"
 msgstr "Dispozitiv necunoscut"
 
@@ -488,7 +488,7 @@ msgid "Unknown number"
 msgstr "Număr necunoscut"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "Mesagerie vocală"
 
@@ -504,7 +504,7 @@ msgstr "Da"
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../src/qml/dialer-app.qml:289
+#: ../src/qml/dialer-app.qml:288
 msgid "You need to select a SIM card"
 msgstr "Trebuie să selectați un card SIM"
 
