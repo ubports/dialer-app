@@ -22,7 +22,7 @@ class MainView(ubuntuuitoolkit.MainView):
 
     @property
     def dialer_page(self):
-        return self.wait_select_single(DialerPage)
+        return self.wait_select_single(DialerPage, greeterMode=False)
 
     @property
     def live_call_page(self):
