@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-10-29 12:11+0000\n"
+"PO-Revision-Date: 2015-02-11 21:18+0000\n"
 "Last-Translator: ivarela <ivarela@ubuntu.com>\n"
 "Language-Team: Asturian <ast@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:01+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-12 07:06+0000\n"
+"X-Generator: Launchpad (build 17336)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -113,19 +113,19 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
 msgstr "Activa"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Too"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Too"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,11 +153,11 @@ msgstr "Fallu de llamada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "Falló la llamada n'espera"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Llamando"
 
@@ -185,13 +185,13 @@ msgid "Close"
 msgstr "Zarrar"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Conferencia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Conference call failure"
-msgstr ""
+msgstr "Falló la conferencia"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -229,7 +229,7 @@ msgstr "Detalles"
 msgid "Disabling flight mode"
 msgstr "Deshabilitando'l mou avión"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Inorar"
@@ -252,15 +252,15 @@ msgstr "Fallu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Nun pudo activase la llamada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:115
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Nun pudo crease una llamada de conferencia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Nun pudo ponese la llamada activa n'espera."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -332,13 +332,13 @@ msgstr "Ensin rede"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:217
 msgid "No recent calls"
-msgstr ""
+msgstr "Nun hai llamaes recientes"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
 msgstr "Aceutar"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "N'espera"
 
@@ -483,7 +483,7 @@ msgid "Unknown number"
 msgstr "Númberu desconocíu"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "Buzón de voz"
 
