@@ -1,3 +1,21 @@
+dialer-app (0.1+15.04.20150212-0ubuntu1) vivid; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Replace the X button by the regular back button when multi-
+    selecting. (LP: #1373494)
+
+  [ Renato Araujo Oliveira Filho ]
+  * Added "sync with google account" button on empty contact list. (LP:
+    #1417341)
+
+  [ Ubuntu daily release ]
+  * New rebuild forced
+
+ -- Ubuntu daily release <ps-jenkins@lists.canonical.com>  Thu, 12 Feb 2015 00:56:11 +0000
+
 dialer-app (0.1+15.04.20150203.1-0ubuntu1) vivid; urgency=medium
 
   [ Albert Astals Cid ]
