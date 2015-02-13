@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-11-06 10:44+0000\n"
-"Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
+"PO-Revision-Date: 2015-02-13 00:26+0000\n"
+"Last-Translator: António Miranda <Unknown>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-13 06:54+0000\n"
+"X-Generator: Launchpad (build 17336)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -120,12 +120,12 @@ msgstr "Ativo"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Todas"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Todos"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,7 +153,7 @@ msgstr "Chamada falhada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "A chamada em espera falhou"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -191,7 +191,7 @@ msgstr "Conferência"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Conference call failure"
-msgstr ""
+msgstr "A chamada de conferência falhou"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -204,7 +204,7 @@ msgstr "Restrição da Chamada Estabelecida"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr "Detalhes do Contacto"
+msgstr "Detalhes do contacto"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:41
@@ -229,7 +229,7 @@ msgstr "Detalhes"
 msgid "Disabling flight mode"
 msgstr "Desativar o modo avião"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Dispensar"
@@ -252,15 +252,15 @@ msgstr "Erro"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Falha ao ativar a chamada."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:115
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Falha ao criar uma chamada de conferência."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Falha ao colocar a chamada ativa em espera."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"

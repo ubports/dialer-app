@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-12 07:06+0000\n"
+"X-Launchpad-Export-Date: 2015-02-13 06:54+0000\n"
 "X-Generator: Launchpad (build 17336)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -113,7 +113,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr "Activa"
 
@@ -157,7 +157,7 @@ msgstr "Falló la llamada n'espera"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr "Llamando"
 
@@ -185,7 +185,7 @@ msgid "Close"
 msgstr "Zarrar"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Conference"
 msgstr "Conferencia"
 
@@ -338,7 +338,7 @@ msgstr "Nun hai llamaes recientes"
 msgid "Ok"
 msgstr "Aceutar"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr "N'espera"
 
@@ -483,7 +483,7 @@ msgid "Unknown number"
 msgstr "Númberu desconocíu"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Voicemail"
 msgstr "Buzón de voz"
 

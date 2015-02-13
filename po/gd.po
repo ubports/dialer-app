@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2015-02-12 07:06+0000\n"
+"X-Launchpad-Export-Date: 2015-02-13 06:54+0000\n"
 "X-Generator: Launchpad (build 17336)\n"
 "Language: gd\n"
 
@@ -122,7 +122,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr "Gnìomhach"
 
@@ -166,7 +166,7 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr "'Ga ghairm"
 
@@ -194,7 +194,7 @@ msgid "Close"
 msgstr "Dùin"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Conference"
 msgstr "Gairm co-labhairt"
 
@@ -347,7 +347,7 @@ msgstr ""
 msgid "Ok"
 msgstr "Ceart ma-thà"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr "'Ga chumail"
 
@@ -493,7 +493,7 @@ msgid "Unknown number"
 msgstr "Àireamh nach aithne dhuinn"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Voicemail"
 msgstr "Post-gutha"
 
