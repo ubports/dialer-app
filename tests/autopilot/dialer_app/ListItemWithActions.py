@@ -23,7 +23,6 @@ class ListItemWithActions(_common.UbuntuUIToolkitCustomProxyObjectBase):
         self.pointing_device.drag(start_x, start_y, stop_x, stop_y)
 
 
-
 class HistoryDelegate(ListItemWithActions):
 
     """Autopilot helper for the History delegate."""
@@ -45,4 +44,3 @@ class HistoryDelegate(ListItemWithActions):
         self._show_actions()
         icon = self.select_single('Icon11', name='contact-new')
         self.pointing_device.click_object(icon)
-

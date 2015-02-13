@@ -194,4 +194,5 @@ class TestCalls(DialerAppTestCase):
         historyEntry = self.get_history_for_number(number)
         self.main_view._click_button(historyEntry)
         self.assertThat(
-            self.main_view.dialer_page.dialNumber, Eventually(Equals(formattedNumber2)))
+            self.main_view.dialer_page.dialNumber,
+            Eventually(Equals(formattedNumber2)))
