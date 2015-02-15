@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-10-19 14:05+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-02-15 05:57+0000\n"
+"Last-Translator: Gursharnjit_Singh <ubuntuser13@gmail.com>\n"
 "Language-Team: Punjabi <pa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-02-15 06:35+0000\n"
+"X-Generator: Launchpad (build 17341)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -53,7 +53,7 @@ msgstr[1] "%1 ਸਕਿੰਟ"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
@@ -120,12 +120,12 @@ msgstr "ਸਰਗਰਮ"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "ਸਾਰੇ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "ਸਾਰੇ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
@@ -153,7 +153,7 @@ msgstr "ਕਾਲ ਫੇਲ੍ਹ ਹੋਈ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Call holding failure"
-msgstr ""
+msgstr "ਕਾਲ ਰੱਖਣ ਵਿੱਚ ਅਸਫ਼ਲਤਾ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -163,7 +163,7 @@ msgstr "ਕਾਲ ਜਾਰੀ"
 
 #: ../src/qml/dialer-app.qml:591
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "ਕਾਲਿੰਗ ਲਾਈਨ ਪੇਸ਼ਕਾਰੀ"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Restriction"
@@ -177,7 +177,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "%1 ਨਾਲ ਸਾਰੇ ਕਾਲ ਸੰਬੰਧ ਬਦਲੋ?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -191,7 +191,7 @@ msgstr "ਕਨਫਰੰਸ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Conference call failure"
-msgstr ""
+msgstr "ਕਾਨਫ਼ਰੰਸ ਕਾਲ ਅਸਫ਼ਲਤਾ"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -199,7 +199,7 @@ msgstr "ਕੁਨੈਕਟ ਕੀਤੀ ਲਾਈਨ ਪਰਿਜੈਂਟਸ਼ਨ
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "ਕੁਨੇਕਟਿਡ ਲਾਈਨ ਪਾਬੰਦੀ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
@@ -229,7 +229,7 @@ msgstr "ਵੇਰਵਾ"
 msgid "Disabling flight mode"
 msgstr "ਫਲਾਈਟ ਮੋਡ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "ਅਣਡਿੱਠਾ"
@@ -252,15 +252,15 @@ msgstr "ਗਲਤੀ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "ਕਾਲ ਕਰਨ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ਹੋਇਆ।"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:115
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "ਕਾਨਫ਼ਰੰਸ ਕਾਲ ਲਗਾਉਣ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ਹੋਇਆ।"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "ਸਰਗਰਮ ਕਾਲ ਨੂੰ ਹੋਲਡ ਤੇ ਰੱਖਨ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ।"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -332,7 +332,7 @@ msgstr "ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:217
 msgid "No recent calls"
-msgstr ""
+msgstr "ਕੋਈ ਤਾਜ਼ੀਆਂ ਕਾਲਾਂ ਨਹੀਂ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
@@ -377,6 +377,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"ਕਿਰਪਾ ਕਰਕੇ ਕਾਲ ਕਰਨ ਜਾਂ ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਆਪਣੇ ਸਿਮ ਕਾਰਡ ਦਾ ਲਾੱਕ ਖੋਲ੍ਹੋ। ਤੁਸੀਂ "
+"ਸਕਰੀਨ ਦੇ ਉੱਤੇ ਦਿੱਤੇ ਨੈੱਟਵਰਕ ਸੂਚਕ ਜਾਂ <a href=\"system_settings\">ਸਿਸਟਮ "
+"ਸੈਟਿੰਗ &gt; ਸੁਰੱਖਿਆ &amp; ਪਰਦੇਦਾਰੀ</a> ਤੇ ਜਾ ਕੇ ਆਪਣੇ ਸਿਮ ਕਾਰਡ ਦਾ ਲਾੱਕ ਖੋਲ੍ਹ "
+"ਸਕਦੇ ਹੋ।"
 
 #: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
@@ -497,7 +501,7 @@ msgstr "ਕੱਲ੍ਹ"
 
 #: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "ਤੁਹਾਨੂੰ ਸਿਮ ਚੁਣਨ ਦੀ ਲੋੜ"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
