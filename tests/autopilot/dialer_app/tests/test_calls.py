@@ -179,12 +179,12 @@ class TestCalls(DialerAppTestCase):
         formattedNumber2 = "1 231-234-567"
 
         self.main_view.dialer_page.call_number(number, formattedNumber)
-        time.sleep(1)
+        time.sleep(3)
         self.main_view.live_call_page.click_hangup_button()
         self.main_view.dialer_page.active.wait_for(True)
 
         self.main_view.dialer_page.call_number(number2, formattedNumber2)
-        time.sleep(1)
+        time.sleep(3)
         self.main_view.live_call_page.click_hangup_button()
         self.main_view.dialer_page.active.wait_for(True)
 
