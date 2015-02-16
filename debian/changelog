@@ -1,3 +1,13 @@
+dialer-app (0.1+15.04.20150216.1-0ubuntu1) vivid; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk
+
+  [ Gustavo Pichorim Boiko ]
+  * Select the correct dialer page on autopilot tests.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 16 Feb 2015 20:00:05 +0000
+
 dialer-app (0.1+15.04.20150212-0ubuntu1) vivid; urgency=medium
 
   [ CI Train Bot ]
