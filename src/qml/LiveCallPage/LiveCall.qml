@@ -17,7 +17,6 @@
  */
 
 import QtQuick 2.0
-import QtGraphicalEffects 1.0
 import Ubuntu.Components 1.1
 import Ubuntu.Components.ListItems 0.1 as ListItems
 import Ubuntu.Components.Popups 0.1
@@ -129,7 +128,7 @@ Page {
             callObject["held"] = call.held;
             callObject["muted"] = call.muted;
             callObject["activeAudioOutput"] = call.activeAudioOutput;
-            callObject["audioOutputs"] = call.audioOutputs;
+            callObject["audioOutputs"] = [];
             callObject["isConference"] = call.isConference;
 
             reportStatus(callObject, i18n.tr("Call ended"));

@@ -11,6 +11,7 @@
 """Tests for the Dialer App"""
 
 import os
+import shutil
 import subprocess
 
 from autopilot.platform import model
@@ -35,6 +36,7 @@ class TestCallLogs(DialerAppTestCase):
     db_file = 'history.sqlite'
     local_db_dir = 'dialer_app/data/'
     system_db_dir = '/usr/lib/python3/dist-packages/dialer_app/data/'
+    temp_db_file = '/tmp/' + db_file
 
     def setUp(self):
         if os.path.exists('../../src/dialer-app'):
@@ -42,8 +44,13 @@ class TestCallLogs(DialerAppTestCase):
         else:
             database = self.system_db_dir + self.db_file
 
+        if os.path.exists(self.temp_db_file):
+            os.remove(self.temp_db_file)
+
+        shutil.copyfile(database, self.temp_db_file)
+
         subprocess.call(['pkill', 'history-daemon'])
-        os.environ['HISTORY_SQLITE_DBPATH'] = database
+        os.environ['HISTORY_SQLITE_DBPATH'] = self.temp_db_file
         with open(os.devnull, 'w') as devnull:
             subprocess.Popen(['history-daemon'], stderr=devnull)
 
