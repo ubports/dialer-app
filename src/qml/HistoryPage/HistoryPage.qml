@@ -94,6 +94,8 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
+        } else {
+            swipeItemDemo.enable()
         }
     }
 
@@ -359,5 +361,12 @@ Page {
     Scrollbar {
         flickableItem: historyList
         align: Qt.AlignTrailing
+    }
+
+    SwipeItemDemo {
+        id: swipeItemDemo
+
+        parent: QuickUtils.rootItem(this)
+        anchors.fill: parent
     }
 }
