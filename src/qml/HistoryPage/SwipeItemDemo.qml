@@ -59,15 +59,17 @@ Loader {
                 id: listItem
 
                 property int xPos: 0
+
                 animated: false
                 onXPosChanged: listItem.updatePosition(xPos)
 
                 anchors {
                     top: parent.top
-                    topMargin: units.gu(8)
+                    topMargin: units.gu(14)
                     left: parent.left
                     right: parent.right
                 }
+                height: units.gu(8)
 
                 color: Theme.palette.normal.background
                 leftSideAction: Action {
@@ -85,18 +87,138 @@ Loader {
                     }
                 ]
 
-                Label {
+                ContactAvatar {
+                    id: avatar
                     anchors {
-                        fill: parent
-                        leftMargin: units.gu(4)
-                        rightMargin: units.gu(4)
+                        left: parent.left
+                        top: parent.top
+                        bottom: parent.bottom
                     }
-                    text: listItem.swipeState === "LeftToRight" ?
-                              i18n.tr("Drag left to right to revel the delete action") :
-                              listItem.swipeState === "RightToLeft" ?
-                                  i18n.tr("Drag right to left to revel the extra actions") : ""
-                    verticalAlignment: Text.AlignVCenter
-                    horizontalAlignment: Text.AlignHCenter
+                    width: height
+                    fallbackAvatarUrl: "image://theme/stock_contact"
+                    fallbackDisplayName: "Ubuntu phone"
+                    showAvatarPicture: true
+                }
+
+                Label {
+                    id: titleLabel
+                    anchors {
+                        top: parent.top
+                        topMargin: units.gu(0.5)
+                        left: avatar.right
+                        leftMargin: units.gu(2)
+                        right: time.left
+                        rightMargin: units.gu(1) + (countLabel.visible ? countLabel.width : 0)
+                    }
+                    height: units.gu(2)
+                    verticalAlignment: Text.AlignTop
+                    fontSize: "medium"
+                    text: "(541) 754-3010"
+                    elide: Text.ElideRight
+                    color: UbuntuColors.lightAubergine
+                }
+
+                // this item has the width of the text above. It is used to be able to align
+                Item {
+                    id: titleLabelArea
+                    anchors {
+                        top: titleLabel.top
+                        left: titleLabel.left
+                        bottom: titleLabel.bottom
+                    }
+                    width: titleLabel.paintedWidth
+                }
+
+                Label {
+                    id: countLabel
+                    anchors {
+                        left: titleLabelArea.right
+                        leftMargin: units.gu(0.5)
+                        top: titleLabel.top
+                    }
+                    height: units.gu(2)
+                    fontSize: "medium"
+                    visible: model.eventCount > 1
+                    // TRANSLATORS: this is the count of events grouped into this single item
+                    text: i18n.tr("(%1)").arg(2)
+                }
+
+                Label {
+                    id: phoneLabel
+                    anchors {
+                        top: titleLabel.bottom
+                        topMargin: units.gu(1)
+                        left: avatar.right
+                        leftMargin: units.gu(2)
+                    }
+                    height: units.gu(2)
+                    verticalAlignment: Text.AlignTop
+                    fontSize: "small"
+                    text: i18n.tr("Mobile")
+                }
+
+                // time and duration on the right side of the delegate
+                Label {
+                    id: time
+                    anchors {
+                        right: parent.right
+                        bottom: titleLabel.bottom
+                    }
+                    height: units.gu(2)
+                    verticalAlignment: Text.AlignBottom
+                    fontSize: "small"
+                    text: Qt.formatTime( new Date(), Qt.DefaultLocaleShortDate)
+                }
+
+                Label {
+                    id: callType
+                    anchors {
+                        right: parent.right
+                        bottom: phoneLabel.bottom
+                    }
+                    height: units.gu(2)
+                    verticalAlignment: Text.AlignBottom
+                    fontSize: "small"
+                    text: i18n.tr("Incoming")
+                }
+            }
+
+            Label {
+                id: dragMessage
+
+                anchors {
+                    left: parent.left
+                    leftMargin: units.gu(2)
+                    right: parent.right
+                    rightMargin: units.gu(2)
+                    top: listItem.bottom
+                    topMargin: units.gu(2)
+                }
+
+                text: listItem.swipeState === "LeftToRight" ?
+                                             i18n.tr("Drag left to right to revel the delete action") :
+                                             listItem.swipeState === "RightToLeft" ?
+                                                 i18n.tr("Drag right to left to revel the extra actions") : ""
+                horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.Wrap
+                fontSize: "large"
+                color: "#ebebeb"
+                Behavior on text {
+                    SequentialAnimation {
+                        PropertyAnimation {
+                            target: dragMessage
+                            property: "opacity"
+                            from: 1
+                            to: 0
+                        }
+                        PropertyAction { target: dragMessage; property: "text" }
+                        PropertyAnimation {
+                            target: dragMessage
+                            property: "opacity"
+                            from: 0
+                            to: 1
+                        }
+                    }
                 }
             }
 
@@ -123,7 +245,7 @@ Loader {
                     bottomMargin: units.gu(5)
                 }
 
-                text: i18n.tr("You can drag the item to left or right to revel more actions")
+                text: i18n.tr("You can drag the item to left or right to reveal more actions")
                 horizontalAlignment: Text.AlignHCenter
                 wrapMode: Text.Wrap
                 fontSize: "x-large"
@@ -137,20 +259,6 @@ Loader {
                 running: root.enabled
 
                 PropertyAnimation {
-                    target: listItem
-                    property: "xPos"
-                    from: 0
-                    to: listItem.leftActionWidth
-                    duration: 1000
-                }
-
-                PauseAnimation {
-                    duration: 1000
-                }
-
-                PropertyAction { target: listItem; property: "xPos"; value: 0 }
-
-                PropertyAnimation {
                     target:  listItem
                     property: "xPos"
                     from: 0
@@ -162,7 +270,29 @@ Loader {
                     duration: 1000
                 }
 
-                PropertyAction { target: listItem; property: "xPos"; value: 0 }
+                PropertyAction {
+                    target: listItem
+                    property: "xPos"
+                     value: 0
+                }
+
+                PropertyAnimation {
+                    target: listItem
+                    property: "xPos"
+                    from: 0
+                    to: listItem.leftActionWidth
+                    duration: 1000
+                }
+
+                PauseAnimation {
+                    duration: 1000
+                }
+
+                PropertyAction {
+                    target: listItem
+                    property: "xPos"
+                    value: 0
+                }
 
             }
 

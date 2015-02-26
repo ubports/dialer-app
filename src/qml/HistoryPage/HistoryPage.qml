@@ -94,7 +94,7 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
-        } else {
+        } else if (historyList.count > 0){
             swipeItemDemo.enable()
         }
     }
