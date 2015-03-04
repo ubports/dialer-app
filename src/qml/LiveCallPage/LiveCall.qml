@@ -492,8 +492,8 @@ Page {
             }
             onKeyPressed: {
                 if (call) {
-                    dtmfEntry += label
-                    call.sendDTMF(label)
+                    dtmfEntry += keychar
+                    call.sendDTMF(keychar)
                 }
             }
 
