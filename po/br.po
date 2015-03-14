@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-10-22 06:18+0000\n"
+"PO-Revision-Date: 2015-03-13 12:49+0000\n"
 "Last-Translator: Fohanno Thierry <thierry.fohanno@ofis-bzh.org>\n"
 "Language-Team: Breton <br@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:01+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-03-14 05:32+0000\n"
+"X-Generator: Launchpad (build 17389)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "Niv."
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:442
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - en gortoz"
@@ -113,21 +113,21 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
 msgstr "Oberiant"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "An holl"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "An holl"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Benveg Bluetooth"
 
@@ -143,21 +143,21 @@ msgstr "Adkas ur bellgomzadenn"
 msgid "Call Waiting"
 msgstr "Pellgomzadenn en gortoz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Pellgomzadenn echu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Pellgozmadenn c'hwitet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr ""
+msgstr "C'hwitet eo al lakaat en gortoz"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "O pellgomz"
 
@@ -184,14 +184,14 @@ msgstr "Cheñch an holl gevreadurioù pellgomzadennoù da %1 ?"
 msgid "Close"
 msgstr "Serriñ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Kendiviz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
-msgstr ""
+msgstr "C'hwitet eo ar c'hendiviz dre bellgomz"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -229,7 +229,7 @@ msgstr "Munudoù"
 msgid "Disabling flight mode"
 msgstr "Diweredekaat ar mod nijerez"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Disteurel"
@@ -250,17 +250,17 @@ msgstr "Lakait un niverenn"
 msgid "Error"
 msgstr "Fazi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Ne c'haller ket gweredekaat ar bellgomzadenn."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Ne c'haller ket krouiñ ur c'hendiviz dre bellgomz."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Ne c'haller ket lakaat ar bellgomzadenn vremañ en gortoz."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -303,7 +303,7 @@ msgstr "Diwezhatoc'h"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:547
+#: ../src/qml/LiveCallPage/LiveCall.qml:546
 msgid "Merge calls"
 msgstr "Meskañ pellgomzadennoù"
 
@@ -322,7 +322,7 @@ msgstr "Ket"
 msgid "No SIM card selected"
 msgstr "N'eus bet diuzet kartenn SIM ebet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Pellgomzadenn ebet"
 
@@ -332,13 +332,13 @@ msgstr "N'eus ket a rouedad"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:217
 msgid "No recent calls"
-msgstr ""
+msgstr "Pellgomzadenn ebet nevez zo"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
 msgstr "Mat eo"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "En gortoz"
 
@@ -359,7 +359,7 @@ msgstr "Pellgomz"
 msgid "Phone App"
 msgstr "Arload pellgomz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "Uhelgomzer ar pellgomzer"
 
@@ -441,11 +441,11 @@ msgstr "Arventennoù"
 msgid "Share"
 msgstr "Rannañ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Cheñch mammenn kleved :"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:532
+#: ../src/qml/LiveCallPage/LiveCall.qml:531
 msgid "Switch calls"
 msgstr "Eskemm ar pellgomzadennoù"
 
@@ -470,11 +470,11 @@ msgstr "N'eus rouedad ebet evit bremañ"
 msgid "Today"
 msgstr "Hiziv"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "Pellgomzer Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Benveg dianav"
 
@@ -484,7 +484,7 @@ msgid "Unknown number"
 msgstr "Niverenn dianav"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "Boest komz"
 
