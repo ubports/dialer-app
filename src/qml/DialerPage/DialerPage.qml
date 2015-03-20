@@ -316,7 +316,9 @@ PageWithBottomEdge {
 
         ContactWatcher {
             id: contactWatcher
-            phoneNumber: keypadEntry.value
+            identifier: keypadEntry.value
+            // for this contact watcher we are only interested in matching phone numbers
+            addressableFields: ["tel"]
         }
 
         Label {
