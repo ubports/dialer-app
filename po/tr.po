@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-07-21 20:31+0000\n"
-"Last-Translator: Volkan Gezer <Unknown>\n"
+"PO-Revision-Date: 2015-03-22 15:39+0000\n"
+"Last-Translator: Yunus İşleyen <Dekamir@outlook.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-03-23 05:31+0000\n"
+"X-Generator: Launchpad (build 17405)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:442
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 -beklemede"
+msgstr "%1 - beklemede"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
@@ -113,21 +113,21 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
 msgid "Active"
 msgstr "Etkin"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Tümü"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Tümü"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Bluetooth aygıtı"
 
@@ -143,21 +143,21 @@ msgstr "Çağrı Yönlendirme"
 msgid "Call Waiting"
 msgstr "Çağrı Bekletme"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Çağrı sonlandırıldı."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Çağrı başarısız."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr ""
+msgstr "Arama bekletme başarısız"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
 msgid "Calling"
 msgstr "Aranıyor"
 
@@ -184,14 +184,14 @@ msgstr "Bütün Arama ilişkileri %1 ile değiştirilsin mi?"
 msgid "Close"
 msgstr "Kapat"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
 msgid "Conference"
 msgstr "Konferans"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
-msgstr ""
+msgstr "Konferans araması başarısız"
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
@@ -229,7 +229,7 @@ msgstr "Ayrıntılar"
 msgid "Disabling flight mode"
 msgstr "Uçuş Modunu Devre dışı bırakma"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Kapat"
@@ -250,17 +250,17 @@ msgstr "Bir numara girin"
 msgid "Error"
 msgstr "Hata"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Çağrıyı etkinleştirme başarısız."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Konferans araması oluşturma başarısız."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Etkin çağrıyı beklemeye alma başarısız."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -303,7 +303,7 @@ msgstr "Daha sonra"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:547
+#: ../src/qml/LiveCallPage/LiveCall.qml:546
 msgid "Merge calls"
 msgstr "Aramaları birleştir"
 
@@ -322,7 +322,7 @@ msgstr "Hayır"
 msgid "No SIM card selected"
 msgstr "SIM Kart seçili değil"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Çağrı yok"
 
@@ -332,13 +332,13 @@ msgstr "Şebeke Yok"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:217
 msgid "No recent calls"
-msgstr ""
+msgstr "Yakın zamanda arama yok"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
 msgstr "Tamam"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
 msgid "On hold"
 msgstr "Beklemede"
 
@@ -359,7 +359,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefon Uygulaması"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "telefon hoparlörü"
 
@@ -441,11 +441,11 @@ msgstr "Ayarlar"
 msgid "Share"
 msgstr "Paylaş"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Ses kaynağını değiştir:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:532
+#: ../src/qml/LiveCallPage/LiveCall.qml:531
 msgid "Switch calls"
 msgstr "Aramaları değiştir"
 
@@ -470,11 +470,11 @@ msgstr "Şu an şebeke yok."
 msgid "Today"
 msgstr "Bugün"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Telefonu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Bilinmeyen cihaz"
 
@@ -484,7 +484,7 @@ msgid "Unknown number"
 msgstr "Bilinmeyen numara"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
 msgid "Voicemail"
 msgstr "Telesekreter"
 
