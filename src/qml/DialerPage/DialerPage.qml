@@ -346,8 +346,8 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                callManager.playTone(label);
-                input.insert(input.cursorPosition, label)
+                callManager.playTone(keychar);
+                input.insert(input.cursorPosition, keychar)
                 if(checkMMI(dialNumber)) {
                     // check for custom strings
                     for (var i in mmiPlugins) {
@@ -367,7 +367,7 @@ PageWithBottomEdge {
                 } else if (keycode == Qt.Key_0) {
                     // replace 0 by +
                     dialNumber = dialNumber.substring(0, dialNumber.length - 1)
-                    dialNumber += i18n.tr("+")
+                    dialNumber += "+"
                 }
             }
         }
