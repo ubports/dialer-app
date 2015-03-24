@@ -1,3 +1,10 @@
+dialer-app (0.1+15.04.20150324-0ubuntu1) vivid; urgency=medium
+
+  [ You-Sheng Yang ]
+  * insert untranslated keychar to PhoneNumberInput (LP: #1403476)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 24 Mar 2015 18:14:20 +0000
+
 dialer-app (0.1+15.04.20150216.1-0ubuntu1) vivid; urgency=medium
 
   [ CI Train Bot ]
