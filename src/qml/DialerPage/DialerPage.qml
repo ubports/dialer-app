@@ -62,7 +62,9 @@ PageWithBottomEdge {
     objectName: "dialerPage"
 
     title: {
-        if (mainView.greeterMode) {
+        if (!mainView.applicationActive || !mainView.telepathyReady) {
+            return " "
+        } else if (mainView.greeterMode) {
             return i18n.tr("Emergency Calls")
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")

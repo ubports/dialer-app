@@ -34,6 +34,7 @@ MainView {
     property QtObject account: defaultAccount()
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
+    property bool telepathyReady: false
 
     function defaultAccount() {
         // we only use the default account property if we have more
@@ -84,6 +85,7 @@ MainView {
     Connections {
         target: telepathyHelper
         onSetupReady: {
+            telepathyReady = true
             if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
                 settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
