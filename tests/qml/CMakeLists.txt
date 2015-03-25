@@ -19,6 +19,7 @@ if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("keypad_button" tst_KeypadButton.qml)
     declare_qml_test("main_view" tst_MainView.qml)
     declare_qml_test("stopwatch" tst_StopWatch.qml)
+    declare_qml_test("dialer_page" tst_DialerPage.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)
         message(WARNING "Qml tests disabled: qmltestrunner not found")
@@ -30,5 +31,7 @@ endif()
 set(QML_TST_FILES
     tst_KeypadButton.qml
     tst_StopWatch.qml
+    tst_MainView.qml
+    tst_DialerPage.qml
 )
 add_custom_target(tst_QmlFiles ALL SOURCES ${QML_TST_FILES})
