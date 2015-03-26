@@ -54,6 +54,7 @@ Item {
         function test_dialerPageHeaderTitleWhenAppIsInBackground() {
             tryCompare(mainViewLoader.item, 'applicationActive', true)
             tryCompare(mainViewLoader.item.currentStack, 'depth', 1)
+            mainViewLoader.item.telepathyReady = true
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', i18n.tr('No network'))
             mainViewLoader.item.applicationActive = false
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', ' ')
