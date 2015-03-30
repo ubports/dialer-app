@@ -1,3 +1,10 @@
+dialer-app (0.1+15.04.20150330-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Update dialer-app to work with the changes in ContactWatcher.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 30 Mar 2015 14:04:15 +0000
+
 dialer-app (0.1+15.04.20150324-0ubuntu1) vivid; urgency=medium
 
   [ You-Sheng Yang ]
