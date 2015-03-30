@@ -11,7 +11,7 @@ find_program(XVFB_RUN_BIN
 macro(DECLARE_QML_TEST TST_NAME TST_QML_FILE)
     add_test(NAME ${TST_NAME}
         WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-        COMMAND dbus-test-runner --task /usr/bin/telephony-service-handler --ignore-return --task=${QMLTESTRUNNER_BIN} --parameter=-platform --parameter=offscreen --parameter=-import --parameter=${qml_BINARY_DIR} --parameter=-input --parameter=${CMAKE_CURRENT_SOURCE_DIR}/${TST_QML_FILE}
+        COMMAND ${XVFB_RUN_BIN} -a -s "-screen 0 1024x768x24" dbus-test-runner --task /usr/bin/telephony-service-handler --ignore-return --task=${QMLTESTRUNNER_BIN} --parameter=-import --parameter=${qml_BINARY_DIR} --parameter=-input --parameter=${CMAKE_CURRENT_SOURCE_DIR}/${TST_QML_FILE}
     )
     set_tests_properties(${TST_NAME} PROPERTIES ENVIRONMENT "QT_QPA_FONTDIR=${CMAKE_BINARY_DIR}")
 endmacro()
