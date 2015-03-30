@@ -33,6 +33,11 @@ Item {
         }
     }
 
+    Item {
+        id: greeter
+        property bool greeterActive: false
+    }
+
     Loader {
         id: mainViewLoader
         property string i18nDirectory: ""
@@ -54,12 +59,21 @@ Item {
         function test_dialerPageHeaderTitleWhenAppIsInBackground() {
             tryCompare(mainViewLoader.item, 'applicationActive', true)
             tryCompare(mainViewLoader.item.currentStack, 'depth', 1)
+
             mainViewLoader.item.telepathyReady = true
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', i18n.tr('No network'))
+
+            // we should still display the title on regular states
+            mainViewLoader.item.applicationActive = false
+            tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', i18n.tr('No network'))
+
+            // app must always display "emergency calls" when the greeter is active and app is in foreground
+            mainViewLoader.item.applicationActive = true
+            greeter.greeterActive = true
+            tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', i18n.tr('Emergency Calls'))
+
             mainViewLoader.item.applicationActive = false
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', ' ')
-            mainViewLoader.item.applicationActive = true
-            tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', i18n.tr('No network'))
         }
     }
 }
