@@ -62,7 +62,13 @@ PageWithBottomEdge {
     objectName: "dialerPage"
 
     title: {
-        if (!mainView.applicationActive || !mainView.telepathyReady) {
+        // avoid clearing the title when app is inactive
+        // under some states
+        if ((!mainView.applicationActive &&
+            (mainView.greeterMode ||
+             telepathyHelper.flightMode ||
+             (mainView.account && mainView.account.simLocked))) ||
+             !mainView.telepathyReady) {
             return " "
         } else if (mainView.greeterMode) {
             return i18n.tr("Emergency Calls")
