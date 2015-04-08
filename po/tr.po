@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-03-23 05:31+0000\n"
-"X-Generator: Launchpad (build 17405)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:442
+#: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - beklemede"
@@ -59,7 +59,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -113,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Etkin"
 
@@ -155,9 +154,9 @@ msgstr "Çağrı başarısız."
 msgid "Call holding failure"
 msgstr "Arama bekletme başarısız"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:444
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Aranıyor"
 
@@ -185,7 +184,7 @@ msgid "Close"
 msgstr "Kapat"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Konferans"
 
@@ -216,7 +215,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Sil"
@@ -279,7 +278,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Gelen Aramalar"
 
@@ -303,12 +302,12 @@ msgstr "Daha sonra"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:546
+#: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
 msgstr "Aramaları birleştir"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Cevapsız Aramalar"
@@ -338,12 +337,12 @@ msgstr "Yakın zamanda arama yok"
 msgid "Ok"
 msgstr "Tamam"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "Beklemede"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Yapılan Aramalar"
 
@@ -386,7 +385,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "Lütfen bekleyin"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Özel"
 
@@ -445,7 +444,7 @@ msgstr "Paylaş"
 msgid "Switch audio source:"
 msgstr "Ses kaynağını değiştir:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:531
+#: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
 msgstr "Aramaları değiştir"
 
@@ -483,8 +482,8 @@ msgstr "Bilinmeyen cihaz"
 msgid "Unknown number"
 msgstr "Bilinmeyen numara"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Telesekreter"
 

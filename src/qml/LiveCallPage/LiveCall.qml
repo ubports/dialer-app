@@ -33,7 +33,7 @@ Page {
     property var call: callManager.foregroundCall
     property var calls: callManager.calls
     property string dtmfEntry: ""
-    property alias number: contactWatcher.phoneNumber
+    property alias number: contactWatcher.identifier
     property bool onHold: call ? call.held : false
     property bool isMuted: call ? call.muted : false
     property bool dtmfVisible: call ? call.voicemail : false
@@ -48,8 +48,8 @@ Page {
             return i18n.tr("Conference");
         } else if (contactWatcher.alias !== "") {
             return contactWatcher.alias;
-        } else if (contactWatcher.phoneNumber !== "") {
-            return contactWatcher.phoneNumber;
+        } else if (contactWatcher.identifier !== "") {
+            return contactWatcher.identifier;
         } else {
             return " "
         }
@@ -374,17 +374,18 @@ Page {
         ContactWatcher {
             id: contactWatcher
             // FIXME: handle conf calls
-            phoneNumber: call ? call.phoneNumber : ""
-            onPhoneNumberContextsChanged: helper.updateSubTypeLabel()
-            onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
+            identifier: call ? call.phoneNumber : ""
+            onDetailPropertiesChanged: helper.updateSubTypeLabel()
             onIsUnknownChanged: helper.updateSubTypeLabel()
+            // FIXME: if we implement VOIP, get the addressable fields from the account itself
+            addressableFields: ["tel"]
         }
 
 
         PhoneNumber {
             id: phoneDetail
-            contexts: contactWatcher.phoneNumberContexts
-            subTypes: contactWatcher.phoneNumberSubTypes
+            contexts: contactWatcher.detailProperties.phoneNumberContexts
+            subTypes: contactWatcher.detailProperties.phoneNumberSubTypes
         }
 
         ContactDetailPhoneNumberTypeModel {
@@ -492,8 +493,8 @@ Page {
             }
             onKeyPressed: {
                 if (call) {
-                    dtmfEntry += label
-                    call.sendDTMF(label)
+                    dtmfEntry += keychar
+                    call.sendDTMF(keychar)
                 }
             }
 

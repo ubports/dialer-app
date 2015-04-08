@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-03-22 05:30+0000\n"
-"X-Generator: Launchpad (build 17405)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 "Language: pt_BR\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -24,7 +24,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:442
+#: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - em espera"
@@ -60,7 +60,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -114,7 +113,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Ativa"
 
@@ -156,9 +155,9 @@ msgstr "Falha na chamada"
 msgid "Call holding failure"
 msgstr "Falha na chamada em espera"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:444
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Chamando"
 
@@ -186,7 +185,7 @@ msgid "Close"
 msgstr "Fechar"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Conferência"
 
@@ -217,7 +216,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Excluir"
@@ -280,7 +279,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Recebidas"
 
@@ -304,12 +303,12 @@ msgstr "Mais tarde"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:546
+#: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
 msgstr "Combinar chamadas"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Não atendida"
@@ -339,12 +338,12 @@ msgstr "Sem chamadas recentes"
 msgid "Ok"
 msgstr "Ok"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "Em espera"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Enviando"
 
@@ -388,7 +387,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "Por favor, aguarde"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Privado"
 
@@ -447,7 +446,7 @@ msgstr "Compartilhar"
 msgid "Switch audio source:"
 msgstr "Alternar fonte de áudio:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:531
+#: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
 msgstr "Alternar chamadas"
 
@@ -485,8 +484,8 @@ msgstr "Dispositivo desconhecido"
 msgid "Unknown number"
 msgstr "Número desconhecido"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Correio de voz"
 

@@ -28,7 +28,7 @@ import "dateUtils.js" as DateUtils
 Page {
     id: historyDetailsPage
 
-    property alias phoneNumber: contactWatcher.phoneNumber
+    property alias phoneNumber: contactWatcher.identifier
     property string phoneNumberSubTypeLabel
     property variant events: null
     property QtObject eventModel: null
@@ -38,14 +38,14 @@ Page {
     objectName: "historyDetailsPage"
     anchors.fill: parent
     title: {
-        if (contactWatcher.phoneNumber == "x-ofono-private") {
+        if (phoneNumber == "x-ofono-private") {
             return i18n.tr("Private number")
-        } else if (contactWatcher.phoneNumber == "x-ofono-unknown") {
+        } else if (phoneNumber == "x-ofono-unknown") {
             return i18n.tr("Unknown number")
         } else if (contactWatcher.alias != "") {
             return contactWatcher.alias
         }
-        return PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+        return PhoneUtils.PhoneUtils.format(phoneNumber)
     }
 
     head.actions: [
@@ -99,15 +99,16 @@ Page {
         ContactWatcher {
             id: contactWatcher
             // FIXME: handle conf calls
-            onPhoneNumberContextsChanged: helper.updateSubTypeLabel()
-            onPhoneNumberSubTypesChanged: helper.updateSubTypeLabel()
+            onDetailPropertiesChanged: helper.updateSubTypeLabel()
             onIsUnknownChanged: helper.updateSubTypeLabel()
+            // FIXME: if we add support for VOIP, use the account
+            addressableFields: ["tel"]
         }
 
         PhoneNumber {
             id: phoneDetail
-            contexts: contactWatcher.phoneNumberContexts
-            subTypes: contactWatcher.phoneNumberSubTypes
+            contexts: contactWatcher.detailProperties.phoneNumberContexts
+            subTypes: contactWatcher.detailProperties.phoneNumberSubTypes
         }
 
         ContactDetailPhoneNumberTypeModel {
@@ -137,7 +138,7 @@ Page {
                 }
                 verticalAlignment: Text.AlignTop
                 fontSize: "medium"
-                text: PhoneUtils.PhoneUtils.format(contactWatcher.phoneNumber)
+                text: PhoneUtils.PhoneUtils.format(phoneNumber)
                 elide: Text.ElideRight
                 color: UbuntuColors.lightAubergine
                 height: units.gu(2)

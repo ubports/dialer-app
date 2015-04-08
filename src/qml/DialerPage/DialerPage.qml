@@ -324,7 +324,9 @@ PageWithBottomEdge {
 
         ContactWatcher {
             id: contactWatcher
-            phoneNumber: keypadEntry.value
+            identifier: keypadEntry.value
+            // for this contact watcher we are only interested in matching phone numbers
+            addressableFields: ["tel"]
         }
 
         Label {
@@ -354,8 +356,8 @@ PageWithBottomEdge {
             }
 
             onKeyPressed: {
-                callManager.playTone(label);
-                input.insert(input.cursorPosition, label)
+                callManager.playTone(keychar);
+                input.insert(input.cursorPosition, keychar)
                 if(checkMMI(dialNumber)) {
                     // check for custom strings
                     for (var i in mmiPlugins) {
@@ -375,7 +377,7 @@ PageWithBottomEdge {
                 } else if (keycode == Qt.Key_0) {
                     // replace 0 by +
                     dialNumber = dialNumber.substring(0, dialNumber.length - 1)
-                    dialNumber += i18n.tr("+")
+                    dialNumber += "+"
                 }
             }
         }

@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -59,7 +59,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -113,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Activar"
 
@@ -127,7 +126,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Periferic Bluetooth"
 
@@ -143,21 +142,21 @@ msgstr "Transferiment de sonada"
 msgid "Call Waiting"
 msgstr "Sonada en espèra"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Sonada acabada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Fracàs de la sonada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Sonada"
 
@@ -184,12 +183,12 @@ msgstr "Cambiar totas las associacions de sonada cap a %1 ?"
 msgid "Close"
 msgstr "Tampar"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Conferéncia"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
 msgstr ""
 
@@ -216,7 +215,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Suprimir"
@@ -229,7 +228,7 @@ msgstr "Detalhs"
 msgid "Disabling flight mode"
 msgstr "Desactivacion del mòde avion"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Regetar"
@@ -240,7 +239,7 @@ msgstr "Demandar pas tornarmai"
 
 #: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Emergency Calls"
-msgstr "Apèls d'urgéncia"
+msgstr "Sonadas d'urgéncia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:268
 msgid "Enter a number"
@@ -250,15 +249,15 @@ msgstr "Compausar un numèro"
 msgid "Error"
 msgstr "Error"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
 msgstr ""
 
@@ -279,7 +278,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Recepcion"
 
@@ -308,7 +307,7 @@ msgid "Merge calls"
 msgstr "Fusionar las sonadas"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Mancada"
@@ -322,7 +321,7 @@ msgstr "Non"
 msgid "No SIM card selected"
 msgstr "Cap de carta SIM pas seleccionada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Pas de sonadas"
 
@@ -338,12 +337,12 @@ msgstr ""
 msgid "Ok"
 msgstr "D'acòrdi"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "En espèra"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Sortent"
 
@@ -359,7 +358,7 @@ msgstr "Telefòn"
 msgid "Phone App"
 msgstr "Aplicacion de telefonia"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "Naut-parlaire telefonic"
 
@@ -377,12 +376,16 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Desvarrolhatz vòstra carta SIM per telefonar o mandar un messatge. Podètz "
+"desvarrolhar vòstra carta SIM a partir de l'indicador de ret en naut de "
+"l'ecran o en anant dins <a href=\"system_settings\">Paramètres sistèma &gt; "
+"Seguretat e vida privada</a>"
 
 #: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
 msgstr "Se vos plai, esperatz"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Privat"
 
@@ -421,6 +424,9 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"Seleccionatz una carta SIM per defaut per totas las sonadas sortentas. "
+"Podètz totjorn modificar vòstra causida ulteriorament dins los <a "
+"href=\"system_settings\">Paramètres sistèma</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
@@ -434,17 +440,17 @@ msgstr "Reglatges"
 msgid "Share"
 msgstr "Partejar"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Cambiar la font àudio :"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
-msgstr ""
+msgstr "Permutar las sonadas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "Bascuolar sus la carta SIM per defaut :"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
@@ -453,21 +459,21 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:311
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "Actualament, i a pas cap de ret sus %1"
 
 #: ../src/qml/dialer-app.qml:312
 msgid "There is currently no network."
-msgstr ""
+msgstr "Actualament, i a pas cap de ret."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
 msgstr "Uèi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Telefòn Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Periferic desconegut"
 
@@ -476,8 +482,8 @@ msgstr "Periferic desconegut"
 msgid "Unknown number"
 msgstr "Numèro desconegut"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Messatjariá Vocala"
 
@@ -495,20 +501,23 @@ msgstr "Ièr"
 
 #: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "Vos cal seleccionar una carta SIM"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
 
 #~ msgid "All"
 #~ msgstr "Totes"
 
 #~ msgid "New Call"
 #~ msgstr "Sonada novèla"
+
+#~ msgid "hh:mm ap"
+#~ msgstr "hh:mm ap"
