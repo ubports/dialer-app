@@ -64,14 +64,14 @@ PageWithBottomEdge {
     title: {
         // avoid clearing the title when app is inactive
         // under some states
-        if ((!mainView.applicationActive &&
-            (mainView.greeterMode ||
-             telepathyHelper.flightMode ||
-             (mainView.account && mainView.account.simLocked))) ||
-             !mainView.telepathyReady) {
+        if (!mainView.telepathyReady) {
             return " "
-        } else if (mainView.greeterMode) {
-            return i18n.tr("Emergency Calls")
+        } else if (greeter.greeterActive) {
+            if (mainView.applicationActive) {
+                return i18n.tr("Emergency Calls")
+            } else {
+                return " "
+            }
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")
         } else if (mainView.account && mainView.account.simLocked) {

@@ -122,7 +122,9 @@ MainView {
     Binding {
         target: application
         property: "fullScreen"
-        value: mainView.greeterMode
+        // the applicationActive avoids the flickering when we unlock
+        // the screen and the app is in foreground
+        value: mainView.greeterMode && mainView.applicationActive
     }
 
     state: greeter.greeterActive ? "greeterMode" : "normalMode"
@@ -383,7 +385,7 @@ MainView {
     function switchToLiveCall() {
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
-            currentStack.pop();
+            pageStackNormalMode.pop();
         }
 
         var properties = {}
