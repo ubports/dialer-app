@@ -1,3 +1,11 @@
+dialer-app (0.1+15.04.20150409.1-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Sync with the latest changes in history-service to support matching
+    other contact fields.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 09 Apr 2015 19:58:50 +0000
+
 dialer-app (0.1+15.04.20150408-0ubuntu1) vivid; urgency=medium
 
   [ CI Train Bot ]
