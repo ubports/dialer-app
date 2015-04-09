@@ -62,8 +62,16 @@ PageWithBottomEdge {
     objectName: "dialerPage"
 
     title: {
-        if (mainView.greeterMode) {
-            return i18n.tr("Emergency Calls")
+        // avoid clearing the title when app is inactive
+        // under some states
+        if (!mainView.telepathyReady) {
+            return " "
+        } else if (greeter.greeterActive) {
+            if (mainView.applicationActive) {
+                return i18n.tr("Emergency Calls")
+            } else {
+                return " "
+            }
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight mode")
         } else if (mainView.account && mainView.account.simLocked) {
@@ -316,7 +324,9 @@ PageWithBottomEdge {
 
         ContactWatcher {
             id: contactWatcher
-            phoneNumber: keypadEntry.value
+            identifier: keypadEntry.value
+            // for this contact watcher we are only interested in matching phone numbers
+            addressableFields: ["tel"]
         }
 
         Label {

@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-13 06:54+0000\n"
-"X-Generator: Launchpad (build 17336)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -59,7 +59,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -113,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Activa"
 
@@ -127,7 +126,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Too"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Preséu Bluetooth"
 
@@ -143,21 +142,21 @@ msgstr "Esvíu de llamaes"
 msgid "Call Waiting"
 msgstr "Llamada n'espera"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Llamada finada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Fallu de llamada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
 msgstr "Falló la llamada n'espera"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Llamando"
 
@@ -184,12 +183,12 @@ msgstr "¿Camudar toles asociaciones de llamaes a %1?"
 msgid "Close"
 msgstr "Zarrar"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Conferencia"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
 msgstr "Falló la conferencia"
 
@@ -216,7 +215,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Desaniciar"
@@ -250,15 +249,15 @@ msgstr "Escribi un númberu"
 msgid "Error"
 msgstr "Fallu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
 msgstr "Nun pudo activase la llamada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
 msgstr "Nun pudo crease una llamada de conferencia."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
 msgstr "Nun pudo ponese la llamada activa n'espera."
 
@@ -279,7 +278,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Entrantes"
 
@@ -308,7 +307,7 @@ msgid "Merge calls"
 msgstr "Combinar llamaes"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Perdíes"
@@ -322,7 +321,7 @@ msgstr "Non"
 msgid "No SIM card selected"
 msgstr "Nun s'esbilló nenguna tarxeta SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Nun hai llamaes"
 
@@ -338,12 +337,12 @@ msgstr "Nun hai llamaes recientes"
 msgid "Ok"
 msgstr "Aceutar"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "N'espera"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Salientes"
 
@@ -359,7 +358,7 @@ msgstr "Teléfonu"
 msgid "Phone App"
 msgstr "Aplicación Teléfonu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "Altavoz del teléfonu"
 
@@ -386,7 +385,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "Por favor, aguarda"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Priváu"
 
@@ -440,7 +439,7 @@ msgstr "Axustes"
 msgid "Share"
 msgstr "Compartir"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Cambiar fonte d'audiu:"
 
@@ -469,11 +468,11 @@ msgstr "Agora mesmo nun hai rede"
 msgid "Today"
 msgstr "Güei"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Preséu desconocíu"
 
@@ -482,8 +481,8 @@ msgstr "Preséu desconocíu"
 msgid "Unknown number"
 msgstr "Númberu desconocíu"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Buzón de voz"
 

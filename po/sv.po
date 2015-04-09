@@ -2,21 +2,21 @@
 # Copyright © 2014 Rosetta Contributors and Canonical Ltd 2014
 # This file is distributed under the same license as the dialer-app package.
 # Josef Andersson <josef.andersson@fripost.org>, 2014.
-#
+# clone <josef.andersson@fripost.org>, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2014-09-08 18:38+0000\n"
+"PO-Revision-Date: 2015-04-03 05:35+0000\n"
 "Last-Translator: Josef Andersson <Unknown>\n"
-"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
+"Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-03 08:02+0000\n"
-"X-Generator: Launchpad (build 17330)\n"
+"X-Launchpad-Export-Date: 2015-04-04 05:46+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 "Language: sv\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -60,7 +60,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -114,7 +113,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Aktiv"
 
@@ -128,7 +127,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Alla"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Bluetoooth-enhet"
 
@@ -144,21 +143,21 @@ msgstr "Samtal vidarekopplas"
 msgid "Call Waiting"
 msgstr "Samtal väntar"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Samtal avslutades"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Samtal misslyckades"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
 msgstr "Samtal väntar misslyckades"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Ringer upp"
 
@@ -178,19 +177,19 @@ msgstr "Avbryt"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Ändra alla uppringningassociationer till %1"
+msgstr "Ändra alla uppringningassociationer till %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Stäng"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Konferens"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
 msgstr "Telefonkonferenssamtalet misslyckades"
 
@@ -217,7 +216,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Ta bort"
@@ -230,7 +229,7 @@ msgstr "Detaljer"
 msgid "Disabling flight mode"
 msgstr "Stänger av flygsäkert läge"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:478
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Avfärda"
@@ -251,17 +250,17 @@ msgstr "Ange nummer"
 msgid "Error"
 msgstr "Fel"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
 msgstr "Kunde inte aktivera samtalet."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr "Misslyckades med att skapa ett konferenssamtal"
+msgstr "Misslyckades med att skapa ett konferenssamtal."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr "Misslyckades med att placera det aktiva samtalet i kö"
+msgstr "Misslyckades med att placera det aktiva samtalet i kö."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
@@ -280,7 +279,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Inkommande"
 
@@ -309,10 +308,10 @@ msgid "Merge calls"
 msgstr "Koppla ihop samtal"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr "Missat"
+msgstr "Missade"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -323,7 +322,7 @@ msgstr "Nej"
 msgid "No SIM card selected"
 msgstr "Inget SIM-kort valt"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Inga samtal"
 
@@ -337,14 +336,14 @@ msgstr "Inga tidigare samtal"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "Väntar"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Utgående"
 
@@ -360,7 +359,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefonapp"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "Telefonhögtalare"
 
@@ -387,7 +386,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "Var god vänta"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Privat"
 
@@ -441,7 +440,7 @@ msgstr "Inställningar"
 msgid "Share"
 msgstr "Dela"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Byt ljudkälla:"
 
@@ -470,11 +469,11 @@ msgstr "Just nu finns inget nätverk."
 msgid "Today"
 msgstr "Idag"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Okänd enhet"
 
@@ -483,8 +482,8 @@ msgstr "Okänd enhet"
 msgid "Unknown number"
 msgstr "Okänt nummer"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Röstbrevlåda"
 

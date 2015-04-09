@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-07 07:31+0000\n"
-"X-Generator: Launchpad (build 17331)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:419
+#: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - pidossa"
@@ -59,7 +59,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:358
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -113,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:123
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "Aktiivinen"
 
@@ -127,45 +126,45 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Kaikki"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:315
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "Bluetooth-laite"
 
-#: ../src/qml/dialer-app.qml:569
+#: ../src/qml/dialer-app.qml:558
 msgid "Call Barring"
 msgstr "Puhelurajoitus"
 
-#: ../src/qml/dialer-app.qml:580
+#: ../src/qml/dialer-app.qml:569
 msgid "Call Forwarding"
 msgstr "Puhelunohjaus"
 
-#: ../src/qml/dialer-app.qml:591
+#: ../src/qml/dialer-app.qml:580
 msgid "Call Waiting"
 msgstr "Koputus"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:123
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "Puhelu päättyi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:272
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "Puhelu epäonnistui"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:131
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
 msgstr "Puhelin pitoon laittamisen virhe"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:421
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:100
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "Soittaa"
 
-#: ../src/qml/dialer-app.qml:602
+#: ../src/qml/dialer-app.qml:591
 msgid "Calling Line Presentation"
 msgstr "Soittavan linjan näyttö"
 
-#: ../src/qml/dialer-app.qml:614
+#: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Restriction"
 msgstr "Soittavan linjan rajoitus"
 
@@ -185,19 +184,19 @@ msgid "Close"
 msgstr "Sulje"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:82
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "Ryhmäpuhelu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:112
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
 msgstr "Ryhmäpuheluvirhe"
 
-#: ../src/qml/dialer-app.qml:608
+#: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
 msgstr "Yhdistetyn linjan näyttö"
 
-#: ../src/qml/dialer-app.qml:620
+#: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Restriction"
 msgstr "Yhdistetyn linjan rajoitus"
 
@@ -216,7 +215,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:242
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Poista"
@@ -225,12 +224,12 @@ msgstr "Poista"
 msgid "Details"
 msgstr "Tiedot"
 
-#: ../src/qml/dialer-app.qml:432
+#: ../src/qml/dialer-app.qml:421
 msgid "Disabling flight mode"
 msgstr "Poistetaan lentotila käytöstä"
 
-#: ../src/qml/MMI/IMEI.qml:39 ../src/qml/dialer-app.qml:489
-#: ../src/qml/dialer-app.qml:503
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
+#: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
 msgstr "Hylkää"
 
@@ -242,23 +241,23 @@ msgstr "Älä kysy uudestaan"
 msgid "Emergency Calls"
 msgstr "Hätäpuhelut"
 
-#: ../src/qml/DialerPage/DialerPage.qml:256
+#: ../src/qml/DialerPage/DialerPage.qml:268
 msgid "Enter a number"
 msgstr "Anna numero"
 
-#: ../src/qml/dialer-app.qml:486
+#: ../src/qml/dialer-app.qml:475
 msgid "Error"
 msgstr "Virhe"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:132
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
 msgstr "Puhelun aktivointi epäonnistui."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
 msgstr "Ryhmäpuhelun luominen epäonnistui."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:133
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
 msgstr "Aktiivisen puhelun laittaminen pitoon epäonnistui."
 
@@ -279,11 +278,11 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:303
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "Saapuva"
 
-#: ../src/qml/dialer-app.qml:487
+#: ../src/qml/dialer-app.qml:476
 msgid "Invalid USSD code"
 msgstr "Virheellinen USSD-koodi"
 
@@ -303,12 +302,12 @@ msgstr "Myöhemmin"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:523
+#: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
 msgstr "Yhdistä puhelut"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:301
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Vastaamaton"
@@ -318,15 +317,15 @@ msgstr "Vastaamaton"
 msgid "No"
 msgstr "Ei"
 
-#: ../src/qml/dialer-app.qml:288
+#: ../src/qml/dialer-app.qml:289
 msgid "No SIM card selected"
 msgstr "SIM-korttia ei havaittu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:103
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "Ei puheluja"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:309
+#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:310
 msgid "No network"
 msgstr "Ei verkkoa"
 
@@ -338,12 +337,12 @@ msgstr "Ei viimeaikaisia puheluita"
 msgid "Ok"
 msgstr "OK"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:121
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "Pidossa"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:305
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Lähtevä"
 
@@ -359,7 +358,7 @@ msgstr "Puhelin"
 msgid "Phone App"
 msgstr "Puhelinsovellus"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:319
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "Puhelimen kaiutin"
 
@@ -384,11 +383,11 @@ msgstr ""
 "href=\"system_settings\">Järjestelmän asetukset &gt; Turvallisuus ja "
 "yksityisyys</a>."
 
-#: ../src/qml/dialer-app.qml:467
+#: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
 msgstr "Odota hetki"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Yksityinen"
 
@@ -442,11 +441,11 @@ msgstr "Asetukset"
 msgid "Share"
 msgstr "Jaa"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Vaihda äänilähdettä:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:508
+#: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
 msgstr "Vaihda puheluja"
 
@@ -458,12 +457,12 @@ msgstr "Vaihda oletus-SIM-korttiin:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:310
+#: ../src/qml/dialer-app.qml:311
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Ei verkkoa juuri nyt - %1"
 
-#: ../src/qml/dialer-app.qml:311
+#: ../src/qml/dialer-app.qml:312
 msgid "There is currently no network."
 msgstr "Ei verkkoa juuri nyt."
 
@@ -471,11 +470,11 @@ msgstr "Ei verkkoa juuri nyt."
 msgid "Today"
 msgstr "Tänään"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:317
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:321
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "Tuntematon laite"
 
@@ -484,8 +483,8 @@ msgstr "Tuntematon laite"
 msgid "Unknown number"
 msgstr "Tuntematon numero"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "Vastaaja"
 
@@ -501,7 +500,7 @@ msgstr "Kyllä"
 msgid "Yesterday"
 msgstr "Eilen"
 
-#: ../src/qml/dialer-app.qml:288
+#: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
 msgstr "Valitse SIM-kortti"
 

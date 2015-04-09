@@ -51,7 +51,9 @@ Column {
 
             ContactWatcher {
                 id: contactWatcher
-                phoneNumber: callEntry.phoneNumber
+                identifier: callEntry.phoneNumber
+                // FIXME: if we add VOIP support, set the addressableFields with the account fields
+                addressableFields: ["tel"]
             }
 
             ContactAvatar {
@@ -87,7 +89,7 @@ Column {
                     } else if (contactWatcher.alias != "") {
                         return contactWatcher.alias;
                     } else {
-                        return contactWatcher.phoneNumber;
+                        return contactWatcher.identifier;
                     }
                 }
                 elide: Text.ElideRight
