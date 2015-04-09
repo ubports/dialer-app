@@ -107,8 +107,8 @@ Page {
 
         PhoneNumber {
             id: phoneDetail
-            contexts: contactWatcher.detailProperties.phoneNumberContexts
-            subTypes: contactWatcher.detailProperties.phoneNumberSubTypes
+            contexts: contactWatcher.detailProperties.phoneNumberContexts ? contactWatcher.detailProperties.phoneNumberContexts : []
+            subTypes: contactWatcher.detailProperties.phoneNumberSubTypes ? contactWatcher.detailProperties.phoneNumberSubTypes : []
         }
 
         ContactDetailPhoneNumberTypeModel {
