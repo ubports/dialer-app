@@ -108,8 +108,8 @@ ListItemWithActions {
 
         PhoneNumber {
             id: phoneDetail
-            contexts: participant.detailProperties.phoneContexts ? participant.detailProperties.phoneContexts : []
-            subTypes: participant.detailProperties.phoneSubTypes ? participant.detailProperties.phoneSubTypes : []
+            contexts: participant.detailProperties && participant.detailProperties.phoneContexts ? participant.detailProperties.phoneContexts : []
+            subTypes: participant.detailProperties && participant.detailProperties.phoneSubTypes ? participant.detailProperties.phoneSubTypes : []
         }
 
         ContactDetailPhoneNumberTypeModel {
