@@ -10,11 +10,10 @@
 
 """Multiple calls tests for the Dialer App using ofono-phonesim"""
 
-import subprocess
 import time
 
 from autopilot.matchers import Eventually
-from testtools.matchers import Equals, NotEquals, MismatchError
+from testtools.matchers import Equals
 from testtools import skipUnless
 
 from dialer_app.tests import DialerAppTestCase

@@ -10,7 +10,6 @@
 
 """Tests for the Dialer App using ofono-phonesim"""
 
-import subprocess
 import os
 import time
 

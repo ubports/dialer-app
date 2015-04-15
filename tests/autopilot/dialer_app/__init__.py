@@ -63,16 +63,10 @@ class LiveCall(MainView):
         """Return the multi call display panel"""
         return self.wait_select_single(objectName='multiCallDisplay')
 
-    def _get_multi_call_items(self):
-        """Return the items created for the calls"""
-        return self.get_multi_call_display().callItems
-
     def get_multi_call_item_for_number(self, number):
         """Return the multi call display item for the given number"""
-        for item in self._get_multi_call_items():
-            if item.callEntry.phoneNumber == number:
-                return item
-            return None
+        return self.wait_select_single(objectName='callDelegate',
+                                       phoneNumber=number)
 
     def click_hangup_button(self):
         """Click and return the hangup page"""
