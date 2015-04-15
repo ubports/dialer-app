@@ -19,6 +19,8 @@
 
 import fixtures
 import subprocess
+import os
+import shutil
 
 
 class TestabilityEnvironment(fixtures.Fixture):
@@ -48,3 +50,84 @@ class TestabilityEnvironment(fixtures.Fixture):
                 'QT_LOAD_TESTABILITY'
             ]
         )
+
+
+class FillCustomHistory(fixtures.Fixture):
+
+    history_db = "history.sqlite"
+    data_sys = "/usr/lib/python3/dist-packages/dialer_app/data/"
+    data_local = "dialer_app/data/"
+    database_path = '/tmp/' + history_db
+
+    prefilled_history_local = os.path.join(data_local, history_db)
+    prefilled_history_system = os.path.join(data_sys, history_db)
+
+    def setUp(self):
+        super(FillCustomHistory, self).setUp()
+        self.addCleanup(self._clear_test_data)
+        self.addCleanup(self._kill_service_to_respawn)
+        self._clear_test_data()
+        self._prepare_history_data()
+        self._kill_service_to_respawn()
+        self._start_service_with_custom_data()
+
+    def _prepare_history_data(self):
+        if os.path.exists(self.prefilled_history_local):
+            shutil.copy(self.prefilled_history_local, self.database_path)
+        else:
+            shutil.copy(self.prefilled_history_system, self.database_path)
+
+    def _clear_test_data(self):
+        if os.path.exists(self.database_path):
+            os.remove(self.database_path)
+
+    def _kill_service_to_respawn(self):
+        subprocess.call(['pkill', 'history-daemon'])
+
+    def _start_service_with_custom_data(self):
+        os.environ['HISTORY_SQLITE_DBPATH'] = self.database_path
+        with open(os.devnull, 'w') as devnull:
+            subprocess.Popen(['history-daemon'], stderr=devnull)
+
+
+class UseEmptyHistory(FillCustomHistory):
+    database_path = ':memory:'
+
+    def setUp(self):
+        super(UseEmptyHistory, self).setUp()
+
+    def _prepare_history_data(self):
+        # just avoid doing anything
+        self.database_path = ':memory:'
+
+    def _clear_test_data(self):
+        # don't do anything
+        self.database_path = ''
+
+
+class UsePhonesimModem(fixtures.Fixture):
+
+    def setUp(self):
+        super().setUp()
+
+        # configure the cleanups
+        self.addCleanup(self._hangupLeftoverCalls)
+        self.addCleanup(self._restoreModems)
+
+        self._switchToPhonesim()
+
+    def _switchToPhonesim(self):
+        # make sure the modem is running on phonesim
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/phonesim'])
+        subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
+
+    def _hangupLeftoverCalls(self):
+        # ensure that there are no leftover calls in case of failed tests
+        subprocess.call(["/usr/share/ofono/scripts/hangup-all", "/phonesim"])
+
+    def _restoreModems(self):
+        # set the modem objpath in telepathy-ofono to the real modem
+        subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
+                         'string:modem-objpath=/ril_0'])
+        subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])

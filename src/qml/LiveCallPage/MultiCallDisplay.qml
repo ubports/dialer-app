@@ -40,8 +40,11 @@ Column {
 
         Item {
             id: callDelegate
+            objectName: "callDelegate"
             property QtObject callEntry: modelData
             property bool isLast: index == (multiCallRepeater.count - 1)
+            property bool active: !callEntry.held
+            property string phoneNumber: callEntry.phoneNumber
 
             height: units.gu(10) + conferenceArea.height
             anchors {
