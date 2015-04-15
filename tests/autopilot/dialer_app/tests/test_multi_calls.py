@@ -1,6 +1,6 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 # Copyright 2015 Canonical
-# Author: Martin Pitt <martin.pitt@ubuntu.com>
+# Author: Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>
 #
 # This file is part of dialer-app.
 #
