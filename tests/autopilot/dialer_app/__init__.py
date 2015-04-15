@@ -35,6 +35,7 @@ class MainView(ubuntuuitoolkit.MainView):
 
     def _click_button(self, button):
         """Generic way to click a button"""
+        self.visible.wait_for(True)
         button.visible.wait_for(True)
         self.pointing_device.click_object(button)
         return button
@@ -50,10 +51,40 @@ class LiveCall(MainView):
         """Return the hangup button"""
         return self.wait_select_single(objectName='hangupButton')
 
+    def _get_call_hold_button(self):
+        """Return the call holding button"""
+        return self.wait_select_single(objectName='callHoldButton')
+
+    def _get_swap_calls_button(self):
+        """Return the swap calls button"""
+        return self._get_call_hold_button()
+
+    def get_multi_call_display(self):
+        """Return the multi call display panel"""
+        return self.wait_select_single(objectName='multiCallDisplay')
+
+    def _get_multi_call_items(self):
+        """Return the items created for the calls"""
+        return self.get_multi_call_display().callItems
+
+    def get_multi_call_item_for_number(self, number):
+        """Return the multi call display item for the given number"""
+        for item in self._get_multi_call_items():
+            if item.callEntry.phoneNumber == number:
+                return item
+            return None
+
     def click_hangup_button(self):
         """Click and return the hangup page"""
-        self.visible.wait_for(True)
         return self._click_button(self._get_hangup_button())
+
+    def click_call_hold_button(self):
+        """Click the call holding button"""
+        return self._click_button(self._get_call_hold_button())
+
+    def click_swap_calls_button(self):
+        """Click the swap calls button"""
+        return self._click_button(self._get_swap_calls_button())
 
 
 class PageWithBottomEdge(MainView):

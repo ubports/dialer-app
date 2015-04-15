@@ -10,10 +10,6 @@
 
 """Tests for the Dialer App"""
 
-import os
-import shutil
-import subprocess
-
 from autopilot.platform import model
 from autopilot.matchers import Eventually
 from testtools import skipIf
@@ -33,32 +29,13 @@ from dialer_app import ListItemWithActions
 class TestCallLogs(DialerAppTestCase):
     """Tests for the call log panel."""
 
-    db_file = 'history.sqlite'
-    local_db_dir = 'dialer_app/data/'
-    system_db_dir = '/usr/lib/python3/dist-packages/dialer_app/data/'
-    temp_db_file = '/tmp/' + db_file
-
     def setUp(self):
-        if os.path.exists('../../src/dialer-app'):
-            database = self.local_db_dir + self.db_file
-        else:
-            database = self.system_db_dir + self.db_file
-
-        if os.path.exists(self.temp_db_file):
-            os.remove(self.temp_db_file)
-
-        shutil.copyfile(database, self.temp_db_file)
-
-        subprocess.call(['pkill', 'history-daemon'])
-        os.environ['HISTORY_SQLITE_DBPATH'] = self.temp_db_file
-        with open(os.devnull, 'w') as devnull:
-            subprocess.Popen(['history-daemon'], stderr=devnull)
-
         super().setUp()
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
+        fill_history = fixture_setup.FillCustomHistory()
+        self.useFixture(fill_history)
         self.main_view.dialer_page.reveal_bottom_edge_page()
-        self.addCleanup(subprocess.call, ['pkill', '-f', 'history-daemon'])
         self.fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
         self.useFixture(self.fake_url_dispatcher)
 

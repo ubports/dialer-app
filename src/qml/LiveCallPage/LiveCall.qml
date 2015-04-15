@@ -465,6 +465,7 @@ Page {
 
         MultiCallDisplay {
             id: multiCallArea
+            objectName: "multiCallDisplay"
             calls: callManager.calls
             opacity: 0
             anchors {
@@ -631,7 +632,7 @@ Page {
         }
 
         LiveCallKeypadButton {
-            objectName: "pauseStartButton"
+            objectName: "callHoldButton"
             iconSource: {
                 if (callManager.backgroundCall) {
                     return "swap"
