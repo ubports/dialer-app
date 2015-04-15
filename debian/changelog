@@ -1,3 +1,12 @@
+dialer-app (0.1+15.04.20150415.2-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure the correct call is finished when pressing the hangup
+    button on a multi-call scenario. Also add autopilot tests to avoid
+    this happening in the future. (LP: #1443971)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 15 Apr 2015 18:28:36 +0000
+
 dialer-app (0.1+15.04.20150409.1-0ubuntu1) vivid; urgency=medium
 
   [ Gustavo Pichorim Boiko ]
