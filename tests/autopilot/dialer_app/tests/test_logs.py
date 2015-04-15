@@ -30,14 +30,17 @@ class TestCallLogs(DialerAppTestCase):
     """Tests for the call log panel."""
 
     def setUp(self):
-        super().setUp()
+        # set the fixtures before launching the app
         testability_environment = fixture_setup.TestabilityEnvironment()
         self.useFixture(testability_environment)
         fill_history = fixture_setup.FillCustomHistory()
         self.useFixture(fill_history)
-        self.main_view.dialer_page.reveal_bottom_edge_page()
         self.fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
         self.useFixture(self.fake_url_dispatcher)
+
+        # now launch the app
+        super().setUp()
+        self.main_view.dialer_page.reveal_bottom_edge_page()
 
     def _get_main_view(self, proxy_object):
         return proxy_object.wait_select_single('QQuickView')
