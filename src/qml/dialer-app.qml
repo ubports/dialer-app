@@ -551,7 +551,7 @@ MainView {
         model: telepathyHelper.phoneAccounts
         Item {
             Connections {
-                target: ussdManager
+                target: modelData.ussdManager
                 onInitiateFailed: {
                     mainView.closeUSSDProgressIndicator()
                     PopupUtils.open(ussdErrorDialog)
