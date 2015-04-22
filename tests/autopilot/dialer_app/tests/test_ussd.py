@@ -31,7 +31,9 @@ class TestUSSD(DialerAppTestCase):
 
     def setUp(self):
         phonesim_modem = fixture_setup.UsePhonesimModem()
+        notification_cleanup = fixture_setup.RestartNotificationSystem()
         self.useFixture(phonesim_modem)
+        self.useFixture(notification_cleanup)
         super().setUp()
 
     def tearDown(self):
