@@ -32,12 +32,12 @@ ListItemWithActions {
     readonly property var participant: model.participants && model.participants[0] ? model.participants[0] : {}
     readonly property bool incoming: model.senderId !== "self"
     readonly property bool unknownContact: contactId === ""
-    readonly property string phoneNumber: participant.phoneNumber ? participant.phoneNumber : ""
+    readonly property string phoneNumber: participant.identifier ? participant.identifier : ""
     readonly property string contactId: participant.contactId ? participant.contactId : ""
-    readonly property bool interactive: participant.phoneNumber &&
-                                        participant.phoneNumber !== "" &&
-                                        participant.phoneNumber !== "x-ofono-private" &&
-                                        participant.phoneNumber !== "x-ofono-unknown"
+    readonly property bool interactive: phoneNumber &&
+                                        phoneNumber !== "" &&
+                                        phoneNumber !== "x-ofono-private" &&
+                                        phoneNumber !== "x-ofono-unknown"
 
     property string phoneNumberSubTypeLabel: ""
     property bool isFirst: false
@@ -108,8 +108,8 @@ ListItemWithActions {
 
         PhoneNumber {
             id: phoneDetail
-            contexts: participant.phoneContexts ? participant.phoneContexts : []
-            subTypes: participant.phoneSubTypes ? participant.phoneSubTypes : []
+            contexts: participant.detailProperties && participant.detailProperties.phoneContexts ? participant.detailProperties.phoneContexts : []
+            subTypes: participant.detailProperties && participant.detailProperties.phoneSubTypes ? participant.detailProperties.phoneSubTypes : []
         }
 
         ContactDetailPhoneNumberTypeModel {
@@ -160,14 +160,14 @@ ListItemWithActions {
         verticalAlignment: Text.AlignTop
         fontSize: "medium"
         text: {
-            if (participant.phoneNumber == "x-ofono-private") {
+            if (phoneNumber == "x-ofono-private") {
                 return i18n.tr("Private number")
-            } else if (participant.phoneNumber == "x-ofono-unknown") {
+            } else if (phoneNumber == "x-ofono-unknown") {
                 return i18n.tr("Unknown number")
             } else if (participant.alias && participant.alias !== "") {
                 return participant.alias
             }
-            return PhoneUtils.PhoneUtils.format(participant.phoneNumber)
+            return PhoneUtils.PhoneUtils.format(phoneNumber)
         }
         elide: Text.ElideRight
         color: UbuntuColors.lightAubergine

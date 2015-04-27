@@ -40,8 +40,11 @@ Column {
 
         Item {
             id: callDelegate
+            objectName: "callDelegate"
             property QtObject callEntry: modelData
             property bool isLast: index == (multiCallRepeater.count - 1)
+            property bool active: !callEntry.held
+            property string phoneNumber: callEntry.phoneNumber
 
             height: units.gu(10) + conferenceArea.height
             anchors {
@@ -51,7 +54,9 @@ Column {
 
             ContactWatcher {
                 id: contactWatcher
-                phoneNumber: callEntry.phoneNumber
+                identifier: callEntry.phoneNumber
+                // FIXME: if we add VOIP support, set the addressableFields with the account fields
+                addressableFields: ["tel"]
             }
 
             ContactAvatar {
@@ -87,7 +92,7 @@ Column {
                     } else if (contactWatcher.alias != "") {
                         return contactWatcher.alias;
                     } else {
-                        return contactWatcher.phoneNumber;
+                        return contactWatcher.identifier;
                     }
                 }
                 elide: Text.ElideRight

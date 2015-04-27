@@ -1,371 +1,374 @@
-# Persian translation for dialer-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# Tajik translation for dialer-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2015-02-04 01:23+0000\n"
-"Last-Translator: Danial Behzadi <dani.behzi@gmail.com>\n"
-"Language-Team: Persian <fa@li.org>\n"
+"PO-Revision-Date: 2015-03-10 04:50+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Tajik <tg@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
 "X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
-msgstr "شماره"
+msgstr ""
 
 #. TRANSLATORS: %1 is the call duration here.
 #: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - در انتظار"
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ساعت"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 دقیقه"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 ثانیه"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
 #, qt-format
 msgid "(%1)"
-msgstr "(%1)"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
-msgstr "*"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #. TRANSLATORS: this refers to a new contact
 #: ../src/qml/ContactsPage/ContactsPage.qml:189
 msgid "+ Create New"
-msgstr "+ افزودن جدید"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
-msgstr "۰"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:49
 msgid "1"
-msgstr "۱"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr "۲"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr "۳"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr "۴"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr "۵"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr "۶"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr "۷"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr "۸"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr "۹"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr "ABC"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
-msgstr "فعّال"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr "همه"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr "همه"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
-msgstr "دستگاه بلوتوث"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:558
 msgid "Call Barring"
-msgstr "مسدود نمودن تماس"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:569
 msgid "Call Forwarding"
-msgstr "انتقال تماس"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:580
 msgid "Call Waiting"
-msgstr "انتظار تماس"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
-msgstr "تماس پایان یافت"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
-msgstr "تماس شکست خورد"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr "شکست انتظار تماس"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
-msgstr "در حال تماس"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:591
 msgid "Calling Line Presentation"
-msgstr "ارائه خط تلفن"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Restriction"
-msgstr "تماس با محدودیت خط"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
-msgstr "لغو"
+msgstr ""
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "تغییر تمامی انجمن‌های تماس به %1؟"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "بستن"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
-msgstr "کنفرانس"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
-msgstr "شکست تماس کنفرانس"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:597
 msgid "Connected Line Presentation"
-msgstr "ارائه خط وصل شده"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Restriction"
-msgstr "محدودیت خط متصل"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr "جزئیات مخاطب"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:41
 msgid "Contacts"
-msgstr "مخاطبین"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
-msgstr "حذف"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr "جزئیات ‌"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:421
 msgid "Disabling flight mode"
-msgstr "در حال  غیرفعّال کردن حالت پرواز"
+msgstr ""
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
-msgstr "رد کردن"
+msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "دیگر پرسیده نشود"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Emergency Calls"
-msgstr "تماس‌های اضطراری"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:268
 msgid "Enter a number"
-msgstr "شماره‌ای را وارد کنید"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:475
 msgid "Error"
-msgstr "خطا"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
-msgstr "فعّال‌سازی تماس شکست خورد."
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr "ایجاد تماس کنفرانس شکست خورد."
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr "قرار دادن تماس فعّال در حالت انتظار شکست خورد."
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr "برگزیده‌ها"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Flight mode"
-msgstr "حالت پرواز"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr "IMEI"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
-msgstr "دریافتی"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:476
 msgid "Invalid USSD code"
-msgstr "کد USSD نامعتبر است"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:76
 msgid "Keypad"
-msgstr "صفحه کلید"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr "بعداً"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
-msgstr "ادغام تماس ها"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr "بی‌پاسخ"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "خیر"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:289
 msgid "No SIM card selected"
-msgstr "سیم‌کارتی انتخاب نشده است"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
-msgstr "بدون تماس"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:310
 msgid "No network"
-msgstr "شبکه‌ای موجود نیست"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:217
 msgid "No recent calls"
-msgstr "هیچ تماس اخیری موجود نیست"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr "تائید"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
-msgstr "در انتظار"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
-msgstr "خروجی"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "تلفن"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "اپ تلفن"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
-msgstr "بلندگوی تلفن"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "برنامه‌ی تلفن"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "تلفن;شماره‌گیر;شماره;تماس;صفحه‌کلید"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -373,147 +376,132 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"لطفاً برای تماس و فرستادن پیام، قفل سیم کارتتان را باز کنید. می‌توانید این "
-"کار را از طریق نشانگر شبکه در بالای صفحه یا با مراجعه به <a "
-"href=\"system_settings\">تنظیمات سامانه &gt; امنیت &amp; محرمانگی</a> انجام "
-"دهید."
 
 #: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
-msgstr "لطفاً صبر کنید"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
-msgstr "خصوصی"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr "شماره‌ی خصوصی"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:113
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr "اخیر"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr "سیم کارت قفل شده است"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 msgid "SIM Locked"
-msgstr "سیم‌کارت قفل شده"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr "جست‌وجو"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr "جست‌وجو…"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr "گزینش"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"برای تماس‌های خروجی یک سیم‌کارت پیش‌گزیده انتخاب کنید. شما همواره می‌توانید "
-"انتخابتان را در <a href=\"system_settings\">تنظیمات سامانه</a> تغییر دهید."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
-msgstr "ارسال پیام"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:46
 msgid "Settings"
-msgstr "تنظیمات‌"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr "به‌اشتراک گذاری"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
-msgstr "تعویض منبع صدا:"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:532
 msgid "Switch calls"
-msgstr "تعویض تماس‌ها"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "عوض کردن به سیم‌کارت پیش‌گزیده:"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:311
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "در حال حاضر شبکه‌ای روی %1 نیست"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:312
 msgid "There is currently no network."
-msgstr "در حال حاضر شبکه‌ای موجود نیست."
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr "امروز"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
-msgstr "تلفن اوبونتویی"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
-msgstr "دستگاه ناشناس"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:166
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr "شماره‌ی ناشناس"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
-msgstr "پست صوتی"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "بله"
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "دیروز"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
-msgstr "باید یک سیم‌کارت برگزینید"
+msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "hh:mm:ss"
+msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr "mm:ss"
-
-#~ msgid "New Call"
-#~ msgstr "تماس جدید"
-
-#~ msgid "All"
-#~ msgstr "همه"
-
-#~ msgid "hh:mm ap"
-#~ msgstr "hh:mm ap"
+msgstr ""

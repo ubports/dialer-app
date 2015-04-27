@@ -1,3 +1,45 @@
+dialer-app (0.1+15.04.20150415.2-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Make sure the correct call is finished when pressing the hangup
+    button on a multi-call scenario. Also add autopilot tests to avoid
+    this happening in the future. (LP: #1443971)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 15 Apr 2015 18:28:36 +0000
+
+dialer-app (0.1+15.04.20150409.1-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Sync with the latest changes in history-service to support matching
+    other contact fields.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 09 Apr 2015 19:58:50 +0000
+
+dialer-app (0.1+15.04.20150408-0ubuntu1) vivid; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+  * Resync trunk.
+
+  [ Tiago Salem Herrmann ]
+  * Remove header title when app goes to background. (LP: #1415057)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Wed, 08 Apr 2015 23:14:42 +0000
+
+dialer-app (0.1+15.04.20150330-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Update dialer-app to work with the changes in ContactWatcher.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 30 Mar 2015 14:04:15 +0000
+
+dialer-app (0.1+15.04.20150324-0ubuntu1) vivid; urgency=medium
+
+  [ You-Sheng Yang ]
+  * insert untranslated keychar to PhoneNumberInput (LP: #1403476)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Tue, 24 Mar 2015 18:14:20 +0000
+
 dialer-app (0.1+15.04.20150216.1-0ubuntu1) vivid; urgency=medium
 
   [ CI Train Bot ]

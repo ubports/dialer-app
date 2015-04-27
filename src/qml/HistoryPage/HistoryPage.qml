@@ -326,7 +326,7 @@ Page {
                         text: i18n.tr("Details")
                         onTriggered: {
                             pageStackNormalMode.push(Qt.resolvedUrl("HistoryDetailsPage.qml"),
-                                                          { phoneNumber: participants[0].phoneNumber,
+                                                          { phoneNumber: participants[0].identifier,
                                                             events: model.events,
                                                             eventModel: historyEventModel})
                         }

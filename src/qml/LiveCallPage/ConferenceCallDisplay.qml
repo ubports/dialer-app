@@ -53,7 +53,10 @@ Column {
 
             ContactWatcher {
                 id: contactWatcher
-                phoneNumber: callEntry.phoneNumber
+                identifier: callEntry.phoneNumber
+                // FIXME: if we want to support VOIP, change the addressableFields
+                // according to what the account supports
+                addressableFields: ["tel"]
             }
 
             Label {
@@ -70,7 +73,7 @@ Column {
                     } else if (contactWatcher.alias != "") {
                         return contactWatcher.alias;
                     } else {
-                        return contactWatcher.phoneNumber;
+                        return contactWatcher.identifier;
                     }
                 }
             }

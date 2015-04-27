@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-02-16 06:52+0000\n"
-"X-Generator: Launchpad (build 17341)\n"
+"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
+"X-Generator: Launchpad (build 17413)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -59,7 +59,6 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -113,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
 msgid "Active"
 msgstr "ਸਰਗਰਮ"
 
@@ -127,7 +126,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "ਸਾਰੇ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
 msgstr "ਬਲਿਊਟੁੱਥ ਜੰਤਰ"
 
@@ -143,21 +142,21 @@ msgstr "ਕਾਲ ਅਗਾਂਹ ਭੇਜਣਾ"
 msgid "Call Waiting"
 msgstr "ਕਾਲ ਉਡੀਕ ਵਿੱਚ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:135
+#: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
 msgstr "ਕਾਲ ਖਤਮ ਹੋਈ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
 msgstr "ਕਾਲ ਫੇਲ੍ਹ ਹੋਈ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
 msgstr "ਕਾਲ ਰੱਖਣ ਵਿੱਚ ਅਸਫ਼ਲਤਾ"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
 msgid "Calling"
 msgstr "ਕਾਲ ਜਾਰੀ"
 
@@ -184,12 +183,12 @@ msgstr "%1 ਨਾਲ ਸਾਰੇ ਕਾਲ ਸੰਬੰਧ ਬਦਲੋ?"
 msgid "Close"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:49
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:84
+#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
 msgid "Conference"
 msgstr "ਕਨਫਰੰਸ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
 msgstr "ਕਾਨਫ਼ਰੰਸ ਕਾਲ ਅਸਫ਼ਲਤਾ"
 
@@ -216,7 +215,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "ਹਟਾਓ"
@@ -250,15 +249,15 @@ msgstr "ਨੰਬਰ ਦਿਓ"
 msgid "Error"
 msgstr "ਗਲਤੀ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
 msgstr "ਕਾਲ ਕਰਨ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ਹੋਇਆ।"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:115
+#: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
 msgstr "ਕਾਨਫ਼ਰੰਸ ਕਾਲ ਲਗਾਉਣ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ਹੋਇਆ।"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
 msgstr "ਸਰਗਰਮ ਕਾਲ ਨੂੰ ਹੋਲਡ ਤੇ ਰੱਖਨ ਵਿੱਚ ਫ਼ੇਲ੍ਹ ।"
 
@@ -279,7 +278,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 msgid "Incoming"
 msgstr "ਆਉਣ ਵਾਲੀਆਂ"
 
@@ -308,7 +307,7 @@ msgid "Merge calls"
 msgstr "ਕਾਲਾਂ ਮਿਲਾਓ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "ਮਿਸ ਹੋਈਆਂ"
@@ -322,7 +321,7 @@ msgstr "ਨਹੀਂ"
 msgid "No SIM card selected"
 msgstr "ਕੋਈ ਸਿਮ ਕਾਰਡ ਨਹੀਂ ਚੁਣਿਆ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:105
+#: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
 msgstr "ਕੋਈ ਕਾਲ ਨਹੀਂ"
 
@@ -338,12 +337,12 @@ msgstr "ਕੋਈ ਤਾਜ਼ੀਆਂ ਕਾਲਾਂ ਨਹੀਂ"
 msgid "Ok"
 msgstr "ਠੀਕ ਹੈ"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "On hold"
 msgstr "ਹੋਲਡ ਹੈ"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "ਕੀਤੀਆਂ"
 
@@ -359,7 +358,7 @@ msgstr "ਫੋਨ"
 msgid "Phone App"
 msgstr "ਫੋਨ ਐਪ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
 msgstr "ਫੋਨ ਸਪੀਕਰ"
 
@@ -386,7 +385,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "ਉਡੀਕੋ ਜੀ"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "ਪ੍ਰਾਈਵੇਟ"
 
@@ -440,7 +439,7 @@ msgstr "ਸੈਟਿੰਗ"
 msgid "Share"
 msgstr "ਸਾਂਝਾ ਕਰੋ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "ਆਡੀਓ ਸਰੋਤ ਬਦਲੋ:"
 
@@ -469,11 +468,11 @@ msgstr "ਇਸ ਸਮੇਂ ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ�
 msgid "Today"
 msgstr "ਅੱਜ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Ubuntu Phone"
 msgstr "ਉਬੰਤੂ ਫੋਨ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Unknown device"
 msgstr "ਅਣਜਾਣ ਯੰਤਰ"
 
@@ -482,8 +481,8 @@ msgstr "ਅਣਜਾਣ ਯੰਤਰ"
 msgid "Unknown number"
 msgstr "ਅਣਜਾਣ ਨੰਬਰ"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
 msgid "Voicemail"
 msgstr "ਵਾਇਸਕਾਲ"
 

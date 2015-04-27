@@ -34,6 +34,8 @@ MainView {
     property QtObject account: defaultAccount()
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
+    property bool telepathyReady: false
+    property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
 
     function defaultAccount() {
         // we only use the default account property if we have more
@@ -84,6 +86,7 @@ MainView {
     Connections {
         target: telepathyHelper
         onSetupReady: {
+            telepathyReady = true
             if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
                 settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
@@ -119,7 +122,9 @@ MainView {
     Binding {
         target: application
         property: "fullScreen"
-        value: mainView.greeterMode
+        // the applicationActive avoids the flickering when we unlock
+        // the screen and the app is in foreground
+        value: mainView.greeterMode && mainView.applicationActive
     }
 
     state: greeter.greeterActive ? "greeterMode" : "normalMode"
@@ -370,20 +375,17 @@ MainView {
     }
 
     function animateLiveCall() {
-        var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
-        if (stack.currentPage && stack.currentPage.triggerCallAnimation) {
-            stack.currentPage.triggerCallAnimation();
+        if (currentStack.currentPage && currentStack.currentPage.triggerCallAnimation) {
+            currentStack.currentPage.triggerCallAnimation();
         } else {
             switchToLiveCall();
         }
     }
 
     function switchToLiveCall() {
-        var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
-
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
-            stack.pop();
+            pageStackNormalMode.pop();
         }
 
         var properties = {}
@@ -391,11 +393,11 @@ MainView {
             properties["defaultTimeout"] = 30000
         }
 
-        if (stack.currentPage.objectName == "pageLiveCall") {
+        if (currentStack.currentPage.objectName == "pageLiveCall") {
             return;
         }
  
-        stack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
+        currentStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
     }
 
     function showNotification(title, text) {
@@ -520,9 +522,8 @@ MainView {
                 return;
             }
 
-            var stack = mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
             // if we are animating the dialpad view, do not switch to livecall directly
-            if (stack.currentPage && stack.currentPage.callAnimationRunning) {
+            if (currentStack.currentPage && currentStack.currentPage.callAnimationRunning) {
                 mainView.lastHasCalls = callManager.hasCalls
                 return;
             }

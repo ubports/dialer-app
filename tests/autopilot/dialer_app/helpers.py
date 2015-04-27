@@ -1,8 +1,8 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
 #
-# Copyright 2014 Canonical Ltd.
-# Author: Omer Akram <omer.akram@canonical.com>
-#
+# Copyright 2014-2015 Canonical Ltd.
+# Authors: Omer Akram <omer.akram@canonical.com>
+#          Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License version 3, as published
 # by the Free Software Foundation.
@@ -21,6 +21,9 @@ import subprocess
 import sys
 import time
 import dbus
+import tempfile
+import os
+import shutil
 
 
 def wait_for_incoming_call():
@@ -32,7 +35,7 @@ def wait_for_incoming_call():
             ['/usr/share/ofono/scripts/list-calls'],
             stderr=subprocess.PIPE,
             universal_newlines=True)
-        if 'State = incoming' in out:
+        if 'State = incoming' in out or 'State = waiting' in out:
             break
         timeout -= 1
         time.sleep(0.5)
@@ -44,17 +47,38 @@ def wait_for_incoming_call():
         subprocess.call(['pkill', '-f', 'notify-osd'])
 
 
-def invoke_incoming_call():
-    """Invoke an incoming call for test purpose."""
-    # magic number 199 will cause a callback from 1234567; dialing 199
-    # itself will fail, so quiesce the error
-    bus = dbus.SystemBus()
-    vcm = dbus.Interface(bus.get_object('org.ofono', '/phonesim'),
-                         'org.ofono.VoiceCallManager')
-    try:
-        vcm.Dial('199', 'default')
-    except dbus.DBusException:
-        pass
+def invoke_incoming_call(caller):
+    """Receive an incoming call from the given caller
+
+    :parameter caller: the phone number calling
+    """
+
+    # prepare and send a Qt GUI script to phonesim, over its private D-BUS
+    # set up by ofono-phonesim-autostart
+    script_dir = tempfile.mkdtemp(prefix="phonesim_script")
+    os.chmod(script_dir, 0o755)
+    with open(os.path.join(script_dir, "call.js"), "w") as f:
+        f.write("""tabCall.gbIncomingCall.leCaller.text = "%s";
+tabCall.gbIncomingCall.pbIncomingCall.click();
+""" % (caller))
+
+    with open("/run/lock/ofono-phonesim-dbus.address") as f:
+        phonesim_bus = f.read().strip()
+    bus = dbus.bus.BusConnection(phonesim_bus)
+    script_proxy = bus.get_object("org.ofono.phonesim", "/")
+    script_proxy.SetPath(script_dir)
+    script_proxy.Run("call.js")
+    shutil.rmtree(script_dir)
+
+
+def accept_incoming_call():
+    """Accept an existing incoming call"""
+    subprocess.check_call(
+        [
+            "dbus-send", "--session", "--print-reply",
+            "--dest=com.canonical.Approver", "/com/canonical/Approver",
+            "com.canonical.TelephonyServiceApprover.AcceptCall"
+        ], stdout=subprocess.PIPE)
 
 
 def get_phonesim():
