@@ -48,14 +48,15 @@ class MainView(ubuntuuitoolkit.MainView):
         except:
             # it is ok to fail in this case
             return False
-        
+
         return dialog.visible
 
     def check_ussd_progress_indicator_visible(self):
         """Check if ussd progress indicator is visible"""
         dialog = None
         try:
-            dialog = self.wait_select_single(objectName="ussdProgressIndicator")
+            dialog = self.wait_select_single(
+                objectName="ussdProgressIndicator")
         except:
             # it is ok to fail in this case
             return False

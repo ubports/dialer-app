@@ -21,6 +21,7 @@ import fixtures
 import subprocess
 import os
 import shutil
+import dbusmock
 
 
 class TestabilityEnvironment(fixtures.Fixture):
@@ -133,12 +134,21 @@ class UsePhonesimModem(fixtures.Fixture):
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
 
 
-class RestartNotificationSystem(fixtures.Fixture):
+class MockNotificationSystem(fixtures.Fixture):
 
     def setUp(self):
         super().setUp()
-        self.addCleanup(self._reset_notification_system)
+        self.addCleanup(self._stop_mock)
+        self._kill_notification_service()
 
-    def _reset_notification_system(self):
-        """Remove any pending notification."""
+        # start the mock service
+        (self.process, self.obj) = dbusmock.DBusTestCase.spawn_server_template(
+            'notification_daemon')
+
+    def _stop_mock(self):
+        self.process.terminate()
+        self.process.wait()
+
+    def _kill_notification_service(self):
+        """Kill the notification daemon."""
         subprocess.call(['pkill', '-f', 'notify-osd'])
