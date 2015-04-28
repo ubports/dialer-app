@@ -17,6 +17,7 @@
  */
 
 import QtQuick 2.0
+import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
 import Ubuntu.Components 1.1
 import Ubuntu.Contacts 0.1
@@ -52,7 +53,7 @@ Loader {
 
         Rectangle {
             color: "black"
-            opacity: 0.8
+            opacity: 0.85
             anchors.fill: parent
 
             ListItemWithActions {
@@ -183,87 +184,91 @@ Loader {
                 }
             }
 
-            Label {
-                id: dragMessage
+            RowLayout {
+                id: dragTitle
 
                 anchors {
                     left: parent.left
-                    leftMargin: units.gu(2)
                     right: parent.right
-                    rightMargin: units.gu(2)
                     top: listItem.bottom
-                    topMargin: units.gu(2)
+                    margins: units.gu(2)
+                    topMargin: 0
                 }
+                height: units.gu(3)
+                spacing: units.gu(2)
 
-                text: listItem.swipeState === "LeftToRight" ?
-                                             i18n.tr("Drag left to right to revel the delete action") :
-                                             listItem.swipeState === "RightToLeft" ?
-                                                 i18n.tr("Drag right to left to revel the extra actions") : ""
-                horizontalAlignment: Text.AlignHCenter
-                wrapMode: Text.Wrap
-                fontSize: "large"
-                color: "#ebebeb"
-                Behavior on text {
-                    SequentialAnimation {
-                        PropertyAnimation {
-                            target: dragMessage
-                            property: "opacity"
-                            from: 1
-                            to: 0
-                        }
-                        PropertyAction { target: dragMessage; property: "text" }
-                        PropertyAnimation {
-                            target: dragMessage
-                            property: "opacity"
-                            from: 0
-                            to: 1
-                        }
+                Image {
+                    visible: listItem.swipeState === "RightToLeft"
+                    source: Qt.resolvedUrl("../assets/swipe_arrow.png")
+                    rotation: 180
+                    Layout.preferredWidth: sourceSize.width
+                    height: parent.height
+                    sourceSize {
+                        width: units.gu(6)
+                        height: units.gu(3)
                     }
                 }
-            }
 
-            Image {
-                id: swipeGetstureImage
+                Label {
+                    id: dragMessage
 
-                anchors {
-                    horizontalCenter: parent.horizontalCenter
-                    bottom: infoMessage.top
-                    bottomMargin: units.gu(5)
-                }
-                source: "../assets/swipe_gesture.png"
-            }
-
-            Label {
-                id: infoMessage
-
-                anchors {
-                    left: parent.left
-                    leftMargin: units.gu(2)
-                    right: parent.right
-                    rightMargin: units.gu(2)
-                    bottom: parent.bottom
-                    bottomMargin: units.gu(5)
+                    Layout.fillWidth: true
+                    height: parent.height
+                    text: listItem.swipeState === "LeftToRight" ?
+                                                 i18n.tr("Swipe to delete") : i18n.tr("Swipe to reveal more actions")
+                    horizontalAlignment: Text.AlignRight
+                    wrapMode: Text.Wrap
+                    font.pointSize: 60
+                    color: "#ffffff"
                 }
 
-                text: i18n.tr("You can drag the item to left or right to reveal more actions")
-                horizontalAlignment: Text.AlignHCenter
-                wrapMode: Text.Wrap
-                fontSize: "x-large"
-                color: "#ebebeb"
+                Image {
+                    visible: listItem.swipeState === "LeftToRight"
+                    source: Qt.resolvedUrl("../assets/swipe_arrow.png")
+                    Layout.preferredWidth: sourceSize.width
+                    sourceSize {
+                        width: units.gu(6)
+                        height: units.gu(3)
+                    }
+                }
             }
 
             SequentialAnimation {
                 id: slideAnimation
 
+                readonly property real leftToRightXpos: (-3 * (listItem.actionWidth + units.gu(2)))
+                readonly property real rightToLeftXpos: listItem.leftActionWidth
+
                 loops: Animation.Infinite
                 running: root.enabled
 
-                PropertyAnimation {
-                    target:  listItem
-                    property: "xPos"
-                    from: 0
-                    to: (-3 * (listItem.actionWidth + units.gu(2)))
-                    duration: 2000
+                PropertyAction {
+                    target: dragMessage
+                    property: "text"
+                    value: i18n.tr("Swipe to delete")
+                }
+
+                PropertyAction {
+                    target: dragMessage
+                    property: "horizontalAlignment"
+                    value: Text.AlignLeft
+                }
+
+                ParallelAnimation {
+                    PropertyAnimation {
+                        target:  listItem
+                        property: "xPos"
+                        from: 0
+                        to: slideAnimation.leftToRightXpos
+                        duration: 2000
+                    }
+                    PropertyAnimation {
+                        target: dragTitle
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        duration: 1000
+                    }
                 }
 
                 PauseAnimation {
@@ -271,29 +276,65 @@ Loader {
                 }
 
                 PropertyAction {
-                    target: listItem
-                    property: "xPos"
-                     value: 0
-                }
-
-                PropertyAnimation {
-                    target: listItem
-                    property: "xPos"
-                    from: 0
-                    to: listItem.leftActionWidth
-                    duration: 1000
-                }
-
-                PauseAnimation {
-                    duration: 1000
-                }
-
-                PropertyAction {
-                    target: listItem
-                    property: "xPos"
+                    target: dragTitle
+                    property: "opacity"
                     value: 0
                 }
 
+                PropertyAnimation {
+                    target: listItem
+                    property: "xPos"
+                    from: slideAnimation.leftToRightXpos
+                    to: 0
+                    duration: 1000
+                }
+
+                PropertyAction {
+                    target: dragMessage
+                    property: "text"
+                    value: i18n.tr("Swipe to reveal more actions")
+                }
+
+                PropertyAction {
+                    target: dragMessage
+                    property: "horizontalAlignment"
+                    value: Text.AlignRight
+                }
+
+                ParallelAnimation {
+                    PropertyAnimation {
+                        target: listItem
+                        property: "xPos"
+                        from: 0
+                        to: slideAnimation.rightToLeftXpos
+                        duration: 1000
+                    }
+                    PropertyAnimation {
+                        target: dragTitle
+                        property: "opacity"
+                        from: 0
+                        to: 1
+                        duration: 500
+                    }
+                }
+
+                PauseAnimation {
+                    duration: 1000
+                }
+
+                PropertyAction {
+                    target: dragTitle
+                    property: "opacity"
+                    value: 0
+                }
+
+                PropertyAnimation {
+                    target: listItem
+                    property: "xPos"
+                    from: slideAnimation.rightToLeftXpos
+                    to: 0
+                    duration: 1000
+                }
             }
 
             MouseArea {
