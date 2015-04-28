@@ -139,7 +139,6 @@ Loader {
                     }
                     height: units.gu(2)
                     fontSize: "medium"
-                    visible: model.eventCount > 1
                     // TRANSLATORS: this is the count of events grouped into this single item
                     text: i18n.tr("(%1)").arg(2)
                 }
@@ -191,21 +190,23 @@ Loader {
                     left: parent.left
                     right: parent.right
                     top: listItem.bottom
-                    margins: units.gu(2)
-                    topMargin: 0
+                    margins: units.gu(1)
+                    //topMargin: units.gu(1)
                 }
                 height: units.gu(3)
                 spacing: units.gu(2)
 
                 Image {
                     visible: listItem.swipeState === "RightToLeft"
-                    source: Qt.resolvedUrl("../assets/swipe_arrow.png")
+                    source: Qt.resolvedUrl("../assets/swipe_arrow.svg")
                     rotation: 180
                     Layout.preferredWidth: sourceSize.width
                     height: parent.height
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.Pad
                     sourceSize {
-                        width: units.gu(6)
-                        height: units.gu(3)
+                        width: units.gu(7)
+                        height: units.gu(2)
                     }
                 }
 
@@ -214,21 +215,22 @@ Loader {
 
                     Layout.fillWidth: true
                     height: parent.height
-                    text: listItem.swipeState === "LeftToRight" ?
-                                                 i18n.tr("Swipe to delete") : i18n.tr("Swipe to reveal more actions")
-                    horizontalAlignment: Text.AlignRight
+                    verticalAlignment: Image.AlignVCenter
                     wrapMode: Text.Wrap
-                    font.pointSize: 60
+                    fontSize: "large"
                     color: "#ffffff"
                 }
 
                 Image {
                     visible: listItem.swipeState === "LeftToRight"
-                    source: Qt.resolvedUrl("../assets/swipe_arrow.png")
+                    source: Qt.resolvedUrl("../assets/swipe_arrow.svg")
                     Layout.preferredWidth: sourceSize.width
+                    height: parent.height
+                    verticalAlignment: Image.AlignVCenter
+                    fillMode: Image.Pad
                     sourceSize {
-                        width: units.gu(6)
-                        height: units.gu(3)
+                        width: units.gu(7)
+                        height: units.gu(2)
                     }
                 }
             }
@@ -245,7 +247,7 @@ Loader {
                 PropertyAction {
                     target: dragMessage
                     property: "text"
-                    value: i18n.tr("Swipe to delete")
+                    value: i18n.tr("Swipe to reveal more actions")
                 }
 
                 PropertyAction {
@@ -292,7 +294,7 @@ Loader {
                 PropertyAction {
                     target: dragMessage
                     property: "text"
-                    value: i18n.tr("Swipe to reveal more actions")
+                    value: i18n.tr("Swipe to delete")
                 }
 
                 PropertyAction {
@@ -337,9 +339,16 @@ Loader {
                 }
             }
 
-            MouseArea {
-                anchors.fill: parent
-                onPressed: root.disable()
+            Button {
+                anchors {
+                    bottom: parent.bottom
+                    horizontalCenter: parent.horizontalCenter
+                    bottomMargin: units.gu(9)
+                }
+                width: units.gu(17)
+                strokeColor: UbuntuColors.green
+                text: i18n.tr("Got it")
+                onClicked: root.disable()
             }
         }
     }
