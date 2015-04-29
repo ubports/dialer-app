@@ -339,6 +339,8 @@ Loader {
             }
 
             Button {
+                objectName: "gotItButton"
+
                 anchors {
                     bottom: parent.bottom
                     horizontalCenter: parent.horizontalCenter

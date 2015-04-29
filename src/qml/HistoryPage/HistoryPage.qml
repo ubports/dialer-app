@@ -365,6 +365,7 @@ Page {
 
     SwipeItemDemo {
         id: swipeItemDemo
+        objectName: "swipeItemDemo"
 
         parent: QuickUtils.rootItem(this)
         anchors.fill: parent
