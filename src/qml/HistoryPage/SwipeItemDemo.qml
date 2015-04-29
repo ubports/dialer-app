@@ -19,9 +19,9 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import Qt.labs.settings 1.0
+
 import Ubuntu.Components 1.1
 import Ubuntu.Contacts 0.1
-
 
 Loader {
     id: root
@@ -43,7 +43,6 @@ Loader {
 
     sourceComponent: necessary && enabled ? listItemDemoComponent : null
 
-    // Display the hint only once after taking the very first photo
     Settings {
         property alias hintNecessary: root.necessary
     }
@@ -349,6 +348,10 @@ Loader {
                 strokeColor: UbuntuColors.green
                 text: i18n.tr("Got it")
                 onClicked: root.disable()
+                InverseMouseArea {
+                    anchors.fill: parent
+                    topmostItem: true
+                }
             }
         }
     }
