@@ -22,6 +22,8 @@ import subprocess
 import os
 import shutil
 import dbusmock
+from autopilot.platform import model
+import dbus
 
 
 class TestabilityEnvironment(fixtures.Fixture):
@@ -138,12 +140,18 @@ class MockNotificationSystem(fixtures.Fixture):
 
     def setUp(self):
         super().setUp()
-        self.addCleanup(self._stop_mock)
-        self._kill_notification_service()
 
-        # start the mock service
-        (self.process, self.obj) = dbusmock.DBusTestCase.spawn_server_template(
-            'notification_daemon')
+        # only mock the notification system on desktop, on ubuntu touch the
+        # notification dbus service is embedded into unity
+        if model() == 'Desktop':
+            self.addCleanup(self._stop_mock)
+            self._kill_notification_service()
+            # start the mock service
+            (self.process, self.obj) = \
+                dbusmock.DBusTestCase.spawn_server_template(
+                    'notification_daemon')
+        else:
+            self.addCleanup(self._clear_existing_notifications)
 
     def _stop_mock(self):
         self.process.terminate()
@@ -152,3 +160,10 @@ class MockNotificationSystem(fixtures.Fixture):
     def _kill_notification_service(self):
         """Kill the notification daemon."""
         subprocess.call(['pkill', '-f', 'notify-osd'])
+
+    def _clear_existing_notifications(self):
+        """Kill processes that might be displaying notifications"""
+        bus = dbus.SessionBus()
+        indicator = bus.get_object('com.canonical.TelephonyServiceIndicator',
+                                   '/com/canonical/TelephonyServiceIndicator')
+        indicator.ClearNotifications()
