@@ -11,7 +11,6 @@
 """Tests for the Dialer App using ofono-phonesim"""
 
 import os
-import time
 
 from autopilot.matchers import Eventually
 from testtools.matchers import Equals
@@ -31,9 +30,9 @@ class TestUSSD(DialerAppTestCase):
 
     def setUp(self):
         phonesim_modem = fixture_setup.UsePhonesimModem()
-        notification_cleanup = fixture_setup.RestartNotificationSystem()
         self.useFixture(phonesim_modem)
-        self.useFixture(notification_cleanup)
+        notification_mock = fixture_setup.MockNotificationSystem()
+        self.useFixture(notification_mock)
         super().setUp()
 
     def tearDown(self):
@@ -45,7 +44,8 @@ class TestUSSD(DialerAppTestCase):
         formattedNumber = "*123#"
         self.main_view.dialer_page.dial_number(number, formattedNumber)
         self.main_view.dialer_page.click_call_button()
-        self.assertThat(self.main_view.check_ussd_error_dialog_visible(), Eventually(Equals(True)))
+        self.assertThat(self.main_view.check_ussd_error_dialog_visible(),
+                        Eventually(Equals(True)))
 
     def test_ussd_valid_code(self):
         """Test if invalid codes are properly notified"""
@@ -54,5 +54,7 @@ class TestUSSD(DialerAppTestCase):
         self.main_view.dialer_page.dial_number(number, formattedNumber)
         self.main_view.dialer_page.click_call_button()
 
-        self.assertThat(self.main_view.check_ussd_error_dialog_visible(), Equals(False))
-        self.assertThat(self.main_view.check_ussd_progress_indicator_visible(), Equals(False))
+        self.assertThat(self.main_view.check_ussd_error_dialog_visible(),
+                        Equals(False))
+        self.assertThat(self.main_view.check_ussd_progress_indicator_visible(),
+                        Equals(False))
