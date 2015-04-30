@@ -131,3 +131,14 @@ class UsePhonesimModem(fixtures.Fixture):
         subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
                          'string:modem-objpath=/ril_0'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
+
+
+class RestartNotificationSystem(fixtures.Fixture):
+
+    def setUp(self):
+        super().setUp()
+        self.addCleanup(self._reset_notification_system)
+
+    def _reset_notification_system(self):
+        """Remove any pending notification."""
+        subprocess.call(['pkill', '-f', 'notify-osd'])
