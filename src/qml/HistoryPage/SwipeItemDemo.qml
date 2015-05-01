@@ -51,9 +51,17 @@ Loader {
         id: listItemDemoComponent
 
         Rectangle {
+            id: rectangleContents
+
             color: "black"
-            opacity: 0.85
+            opacity: 0
             anchors.fill: parent
+
+            Behavior on opacity {
+                UbuntuNumberAnimation {
+                    duration:  UbuntuAnimation.SlowDuration
+                }
+            }
 
             ListItemWithActions {
                 id: listItem
@@ -349,11 +357,37 @@ Loader {
                 width: units.gu(17)
                 strokeColor: UbuntuColors.green
                 text: i18n.tr("Got it")
-                onClicked: root.disable()
+                onClicked: {
+                    enabled = false
+                    dismissAnimation.start()
+                }
                 InverseMouseArea {
                     anchors.fill: parent
                     topmostItem: true
                 }
+            }
+
+            SequentialAnimation {
+                id: dismissAnimation
+
+                alwaysRunToEnd: true
+                running: false
+
+                UbuntuNumberAnimation {
+                    target: rectangleContents
+                    property: "opacity"
+                    to: 0.0
+                    duration:  UbuntuAnimation.SlowDuration
+                }
+                PropertyAction {
+                    target: root
+                    property: "enabled"
+                    value: false
+                }
+            }
+
+            Component.onCompleted: {
+                opacity = 0.85
             }
         }
     }
