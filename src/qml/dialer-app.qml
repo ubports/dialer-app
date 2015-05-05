@@ -288,6 +288,11 @@ MainView {
             return;
         }
 
+        if (telepathyHelper.flightMode) {
+            showNotification(i18n.tr("Flight Mode"), i18n.tr("You need to disable flight mode in order to make calls"));
+            return
+        }
+
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
