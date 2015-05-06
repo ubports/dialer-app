@@ -356,6 +356,12 @@ Page {
                 ]
             }
         }
+
+        onCountChanged: {
+            if (historyPage.active && (historyList.count > 0)) {
+                swipeItemDemo.enable()
+            }
+        }
     }
 
     Scrollbar {

@@ -242,6 +242,27 @@ Loader {
                 }
             }
 
+            Button {
+                objectName: "gotItButton"
+
+                anchors {
+                    bottom: parent.bottom
+                    horizontalCenter: parent.horizontalCenter
+                    bottomMargin: units.gu(9)
+                }
+                width: units.gu(17)
+                strokeColor: UbuntuColors.green
+                text: i18n.tr("Got it")
+                onClicked: {
+                    enabled = false
+                    dismissAnimation.start()
+                }
+                InverseMouseArea {
+                    anchors.fill: parent
+                    topmostItem: true
+                }
+            }
+
             SequentialAnimation {
                 id: slideAnimation
 
@@ -349,27 +370,6 @@ Loader {
                         to: 0
                         duration: UbuntuAnimation.SleepyDuration
                     }
-                }
-            }
-
-            Button {
-                objectName: "gotItButton"
-
-                anchors {
-                    bottom: parent.bottom
-                    horizontalCenter: parent.horizontalCenter
-                    bottomMargin: units.gu(9)
-                }
-                width: units.gu(17)
-                strokeColor: UbuntuColors.green
-                text: i18n.tr("Got it")
-                onClicked: {
-                    enabled = false
-                    dismissAnimation.start()
-                }
-                InverseMouseArea {
-                    anchors.fill: parent
-                    topmostItem: true
                 }
             }
 
