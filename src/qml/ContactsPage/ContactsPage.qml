@@ -160,7 +160,7 @@ Page {
         showAddNewButton: true
         showImportOptions: (contactList.count === 0) &&
                            (filterTerm === "") &&
-                           (contactsPage.newPhoneToAdd === "")
+                           (contactsPage.phoneToAdd === "")
         onAddNewContactClicked: {
             var newContact = ContactsJS.createEmptyContact(contactsPage.phoneToAdd, contactsPage)
             pageStack.push(Qt.resolvedUrl("../ContactEditorPage/DialerContactEditorPage.qml"),
