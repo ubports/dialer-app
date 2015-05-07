@@ -183,9 +183,10 @@ MainView {
                                  {"phoneToAdd": phoneNumber})
     }
 
-    function viewContact(contactId) {
+    function viewContact(contactId, contactListPage) {
         pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
-                                 {"contactId": contactId})
+                                 {"contactId": contactId,
+                                  "contactListPage": contactListPage})
     }
 
     function addPhoneToContact(contactId, phoneNumber, contactListPage) {

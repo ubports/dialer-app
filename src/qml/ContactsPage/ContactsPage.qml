@@ -170,29 +170,15 @@ Page {
                              contactListPage: contactsPage
                            })
         }
-        onInfoRequested: mainView.viewContact(contact.contactId)
-
-        filterTerm: searchField.text
-        detailToPick: (contactsPage.phoneToAdd != "") ? -1 : ContactDetail.PhoneNumber
-        onDetailClicked: {
-            if (action === "message") {
-                Qt.openUrlExternally("message:///" + encodeURIComponent(detail.number))
-                return
-            }
-
+        onContactClicked: {
             if (contactsPage.phoneToAdd != "") {
                 mainView.addPhoneToContact(contact.contactId, contactsPage.phoneToAdd, contactsPage)
-                return
-            }
-
-            pageStackNormalMode.pop()
-            if (callManager.hasCalls) {
-                mainView.call(detail.number, mainView.account.accountId);
             } else {
-                mainView.populateDialpad(detail.number)
+                mainView.viewContact(contact.contactId, contactsPage)
             }
         }
-        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId, " ", contactsPage)
+
+        filterTerm: searchField.text
     }
 
     KeyboardRectagle {
