@@ -253,10 +253,8 @@ Loader {
                 width: units.gu(17)
                 strokeColor: UbuntuColors.green
                 text: i18n.tr("Got it")
-                onClicked: {
-                    enabled = false
-                    dismissAnimation.start()
-                }
+                enabled: !dismissAnimation.running
+                onClicked: dismissAnimation.start()
                 InverseMouseArea {
                     anchors.fill: parent
                     topmostItem: true
@@ -385,10 +383,9 @@ Loader {
                     to: 0.0
                     duration:  UbuntuAnimation.SlowDuration
                 }
-                PropertyAction {
-                    target: root
-                    property: "enabled"
-                    value: false
+
+                ScriptAction {
+                    script: root.disable()
                 }
             }
 
