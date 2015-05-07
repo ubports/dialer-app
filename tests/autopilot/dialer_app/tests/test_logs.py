@@ -74,8 +74,10 @@ class TestCallLogs(DialerAppTestCase):
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.add_contact()
 
+        contactViewPage = self.main_view.wait_select_single(
+            'ContactsPage', objectName='contactsPage')
+
         self.assertThat(
-            self.get_last_dispatch_url_call_parameter,
-            Eventually(Equals(
-                'addressbook:///addnewphone?callback=dialer-app.desktop&'
-                'phone=800')))
+            contactViewPage.phoneToAdd, Eventually(Equals('800')))
+
+        # TODO - implement full add contact test
