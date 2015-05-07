@@ -15,8 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-from autopilot.platform import model
-
 import subprocess
 import sys
 import time
@@ -41,10 +39,6 @@ def wait_for_incoming_call():
         time.sleep(0.5)
     else:
         raise RuntimeError('timed out waiting for incoming phonesim call')
-
-    # on desktop, notify-osd generates a persistent popup, clean this up
-    if model() == 'Desktop':
-        subprocess.call(['pkill', '-f', 'notify-osd'])
 
 
 def invoke_incoming_call(caller):

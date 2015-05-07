@@ -58,6 +58,7 @@ Depends: ${misc:Depends},
          ofono-scripts,
          ofono-phonesim-autostart,
          python3-autopilot,
+         python3-dbusmock,
          ubuntu-ui-toolkit-autopilot,
          url-dispatcher-testability,
 Description: autopilot tests for dialer-app
