@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
-"X-Generator: Launchpad (build 17413)\n"
+"X-Launchpad-Export-Date: 2015-05-08 05:31+0000\n"
+"X-Generator: Launchpad (build 17474)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:442
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - na čakanju"
@@ -66,6 +66,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
+#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -119,7 +120,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr "Dejavno"
 
@@ -161,9 +162,9 @@ msgstr "Spodletel klic"
 msgid "Call holding failure"
 msgstr "Zmožnost zadržanja klica"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr "Klicanje"
 
@@ -191,7 +192,7 @@ msgid "Close"
 msgstr "Zapri"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:85
 msgid "Conference"
 msgstr "Konferenca"
 
@@ -222,7 +223,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Izbriši"
@@ -285,7 +286,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
 msgid "Incoming"
 msgstr "Dohodno"
 
@@ -314,7 +315,7 @@ msgid "Merge calls"
 msgstr "Združi klice"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Zgrešen"
@@ -344,12 +345,12 @@ msgstr "Ni nedavnih klicev"
 msgid "Ok"
 msgstr "V redu"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr "Na čakanju"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
 msgid "Outgoing"
 msgstr "Odhodno"
 
@@ -392,7 +393,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "Počakajte"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
 msgstr "Zasebni"
 
@@ -488,8 +489,8 @@ msgstr "Neznana naprava"
 msgid "Unknown number"
 msgstr "Neznana številka"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:87
 msgid "Voicemail"
 msgstr "Glasovna pošta"
 

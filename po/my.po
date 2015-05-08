@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
-"X-Generator: Launchpad (build 17413)\n"
+"X-Launchpad-Export-Date: 2015-05-08 05:31+0000\n"
+"X-Generator: Launchpad (build 17474)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:442
 #, qt-format
 msgid "%1 - on hold"
 msgstr ""
@@ -59,6 +59,7 @@ msgstr ""
 msgid "*"
 msgstr "*"
 
+#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -112,23 +113,23 @@ msgstr "၉"
 msgid "ABC"
 msgstr "ကခဂ"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
-msgstr ""
+msgstr "သက်ရောက်သော"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "အားလုံး"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "အားလုံး"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Bluetooth ကိရိယာ"
 
 #: ../src/qml/dialer-app.qml:558
 msgid "Call Barring"
@@ -154,9 +155,9 @@ msgstr ""
 msgid "Call holding failure"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr ""
 
@@ -170,7 +171,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:86
 msgid "Cancel"
-msgstr ""
+msgstr "ပယ်ဖျက်မည်"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -181,10 +182,10 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "ပိတ်ရန်"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:85
 msgid "Conference"
 msgstr ""
 
@@ -203,7 +204,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr ""
+msgstr "အဆက်အသွယ်၏အချက်အလက်များ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:32
 #: ../src/qml/DialerPage/DialerPage.qml:41
@@ -215,14 +216,14 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "ဖျက်မည်"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr ""
+msgstr "အသေးစိတ်အချက်အလက်များ"
 
 #: ../src/qml/dialer-app.qml:421
 msgid "Disabling flight mode"
@@ -231,11 +232,11 @@ msgstr ""
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
 #: ../src/qml/dialer-app.qml:492
 msgid "Dismiss"
-msgstr ""
+msgstr "ထုတ်ပစ်ရန်"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "နောက်ထပ်မမေးပါနှင့်"
 
 #: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Emergency Calls"
@@ -247,7 +248,7 @@ msgstr "နံပါတ်ရိုက်ထည့်ပါ"
 
 #: ../src/qml/dialer-app.qml:475
 msgid "Error"
-msgstr ""
+msgstr "ချို့ယွင်းချက်"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
@@ -263,7 +264,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
-msgstr ""
+msgstr "အကြိုက်နှစ်သက်ဆုံးများ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Flight mode"
@@ -271,14 +272,14 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
 msgid "Incoming"
 msgstr ""
 
@@ -288,7 +289,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:76
 msgid "Keypad"
@@ -296,18 +297,18 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "နောက်မှ"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:547
 msgid "Merge calls"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr ""
@@ -315,7 +316,7 @@ msgstr ""
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "မဟုတ်ပါ"
 
 #: ../src/qml/dialer-app.qml:289
 msgid "No SIM card selected"
@@ -335,28 +336,28 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "အိုကေ"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
 msgid "Outgoing"
 msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "ဖုန်း"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "ဖုန်း app"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Phone Speaker"
@@ -364,7 +365,7 @@ msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "ဖုန်း application"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
@@ -379,21 +380,21 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:456
 msgid "Please wait"
-msgstr ""
+msgstr "ခတ္တစောင့်ပါ။"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
-msgstr ""
+msgstr "သီးသန့်"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr ""
+msgstr "လျှို့ဝှက်နံပါတ်"
 
 #: ../src/qml/DialerPage/DialerPage.qml:113
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr ""
+msgstr "မကြာသေးခင်က"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
@@ -405,11 +406,11 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr ""
+msgstr "ရှာဖွေရန်"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr ""
+msgstr "ရှာမည်။"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
@@ -475,8 +476,8 @@ msgstr ""
 msgid "Unknown number"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:87
 msgid "Voicemail"
 msgstr "အသံmail"
 

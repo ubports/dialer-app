@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-04-03 05:47+0000\n"
-"X-Generator: Launchpad (build 17413)\n"
+"X-Launchpad-Export-Date: 2015-05-08 05:31+0000\n"
+"X-Generator: Launchpad (build 17474)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:442
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 保留中"
@@ -56,6 +56,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
+#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -109,7 +110,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:128
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
 msgid "Active"
 msgstr "通話中"
 
@@ -151,9 +152,9 @@ msgstr "通話失敗"
 msgid "Call holding failure"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:105
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
 msgid "Calling"
 msgstr "呼出中"
 
@@ -181,7 +182,7 @@ msgid "Close"
 msgstr "閉じる"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:86
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:85
 msgid "Conference"
 msgstr "電話会議"
 
@@ -212,7 +213,7 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "削除"
@@ -275,7 +276,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
 msgid "Incoming"
 msgstr "着信"
 
@@ -304,7 +305,7 @@ msgid "Merge calls"
 msgstr "通話を統合"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "不在着信"
@@ -334,12 +335,12 @@ msgstr ""
 msgid "Ok"
 msgstr "OK"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
 msgid "On hold"
 msgstr "保留中"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
 msgid "Outgoing"
 msgstr "発信"
 
@@ -380,7 +381,7 @@ msgstr ""
 msgid "Please wait"
 msgstr "お待ちください"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
 msgid "Private"
 msgstr "プライベート"
 
@@ -475,8 +476,8 @@ msgstr "不明なデバイス"
 msgid "Unknown number"
 msgstr "不明な番号"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:88
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:87
 msgid "Voicemail"
 msgstr "ボイスメール"
 
