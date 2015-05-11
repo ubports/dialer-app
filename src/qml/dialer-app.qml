@@ -325,7 +325,7 @@ MainView {
 
         if (checkUSSD(number)) {
             PopupUtils.open(ussdProgressDialog)
-            ussdManager.initiate(number, account.accountId)
+            account.ussdManager.initiate(number)
             return
         }
 
@@ -459,6 +459,7 @@ MainView {
         id: ussdProgressDialog
         Dialog {
             id: ussdProgressIndicator
+            objectName: "ussdProgressIndicator"
             visible: false
             title: i18n.tr("Please wait")
             ActivityIndicator {
@@ -478,6 +479,7 @@ MainView {
         id: ussdErrorDialog
         Dialog {
             id: ussdError
+            objectName: "ussdErrorDialog"
             visible: false
             title: i18n.tr("Error")
             text: i18n.tr("Invalid USSD code")
@@ -550,71 +552,76 @@ MainView {
        }
     }
 
-    Connections {
-        target: ussdManager
-        onInitiateFailed: {
-            mainView.closeUSSDProgressIndicator()
-            PopupUtils.open(ussdErrorDialog)
-        }
-        onInitiateUSSDComplete: {
-            mainView.closeUSSDProgressIndicator()
-        }
-        onBarringComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Call Barring") + " - " + cbService + "\n" + ssOp)
-            mainView.ussdResponseText = ""
-            for (var prop in cbMap) {
-                if (cbMap[prop] !== "") {
-                    mainView.ussdResponseText += String(prop + ": " + cbMap[prop] + "\n")
+    Repeater {
+        model: telepathyHelper.phoneAccounts
+        Item {
+            Connections {
+                target: modelData.ussdManager
+                onInitiateFailed: {
+                    mainView.closeUSSDProgressIndicator()
+                    PopupUtils.open(ussdErrorDialog)
+                }
+                onInitiateUSSDComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                }
+                onBarringComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Call Barring") + " - " + cbService + "\n" + ssOp)
+                    mainView.ussdResponseText = ""
+                    for (var prop in cbMap) {
+                        if (cbMap[prop] !== "") {
+                            mainView.ussdResponseText += String(prop + ": " + cbMap[prop] + "\n")
+                        }
+                    }
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onForwardingComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Call Forwarding") + " - " + cfService + "\n" + ssOp)
+                    mainView.ussdResponseText = ""
+                    for (var prop in cfMap) {
+                        if (cfMap[prop] !== "") {
+                            mainView.ussdResponseText += String(prop + ": " + cfMap[prop] + "\n")
+                        }
+                    }
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onWaitingComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Call Waiting") + " - " + ssOp)
+                    mainView.ussdResponseText = ""
+                    for (var prop in cwMap) {
+                        if (cwMap[prop] !== "") {
+                            mainView.ussdResponseText += String(prop + ": " + cwMap[prop] + "\n")
+                        }
+                    }
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onCallingLinePresentationComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Calling Line Presentation") + " - " + ssOp)
+                    mainView.ussdResponseText = status
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onConnectedLinePresentationComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Connected Line Presentation") + " - " + ssOp)
+                    mainView.ussdResponseText = status
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onCallingLineRestrictionComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Calling Line Restriction") + " - " + ssOp)
+                    mainView.ussdResponseText = status
+                    PopupUtils.open(ussdResponseDialog)
+                }
+                onConnectedLineRestrictionComplete: {
+                    mainView.closeUSSDProgressIndicator()
+                    mainView.ussdResponseTitle = String(i18n.tr("Connected Line Restriction") + " - " + ssOp)
+                    mainView.ussdResponseText = status
+                    PopupUtils.open(ussdResponseDialog)
                 }
             }
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onForwardingComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Call Forwarding") + " - " + cfService + "\n" + ssOp)
-            mainView.ussdResponseText = ""
-            for (var prop in cfMap) {
-                if (cfMap[prop] !== "") {
-                    mainView.ussdResponseText += String(prop + ": " + cfMap[prop] + "\n")
-                }
-            }
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onWaitingComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Call Waiting") + " - " + ssOp)
-            mainView.ussdResponseText = ""
-            for (var prop in cwMap) {
-                if (cwMap[prop] !== "") {
-                    mainView.ussdResponseText += String(prop + ": " + cwMap[prop] + "\n")
-                }
-            }
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onCallingLinePresentationComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Calling Line Presentation") + " - " + ssOp)
-            mainView.ussdResponseText = status
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onConnectedLinePresentationComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Connected Line Presentation") + " - " + ssOp)
-            mainView.ussdResponseText = status
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onCallingLineRestrictionComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Calling Line Restriction") + " - " + ssOp)
-            mainView.ussdResponseText = status
-            PopupUtils.open(ussdResponseDialog)
-        }
-        onConnectedLineRestrictionComplete: {
-            mainView.closeUSSDProgressIndicator()
-            mainView.ussdResponseTitle = String(i18n.tr("Connected Line Restriction") + " - " + ssOp)
-            mainView.ussdResponseText = status
-            PopupUtils.open(ussdResponseDialog)
         }
     }
 

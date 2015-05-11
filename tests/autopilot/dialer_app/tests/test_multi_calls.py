@@ -31,6 +31,8 @@ class TestMultiCalls(DialerAppTestCase):
         self.useFixture(empty_history)
         phonesim_modem = fixture_setup.UsePhonesimModem()
         self.useFixture(phonesim_modem)
+        notification_mock = fixture_setup.MockNotificationSystem()
+        self.useFixture(notification_mock)
         super().setUp()
 
     def tearDown(self):

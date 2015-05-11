@@ -1,3 +1,14 @@
+dialer-app (0.1+15.04.20150430.1-0ubuntu1) vivid; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Mock the notification daemon to prevent dialogs of getting in the
+    way of tests.
+
+  [ Tiago Salem Herrmann ]
+  * Update dialer-app to work with latest telephony-service changes.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 30 Apr 2015 18:28:03 +0000
+
 dialer-app (0.1+15.04.20150415.2-0ubuntu1) vivid; urgency=medium
 
   [ Gustavo Pichorim Boiko ]
