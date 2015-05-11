@@ -60,8 +60,6 @@ ContactViewPage {
     ]
 
     model: ContactModel {
-        id: sourceModel
-
         manager: (typeof(QTCONTACTS_MANAGER_OVERRIDE) !== "undefined") &&
                   (QTCONTACTS_MANAGER_OVERRIDE != "") ? QTCONTACTS_MANAGER_OVERRIDE : "galera"
         autoUpdate: false
@@ -107,6 +105,8 @@ ContactViewPage {
                                  newDetails: [newDetail],
                                  contactListPage: root.contactListPage })
                 root.addPhoneToContact = ""
+            } else {
+                console.warn("Fail to create phone number detail")
             }
         }
     }

@@ -170,7 +170,7 @@ Page {
                              contactListPage: contactsPage
                            })
         }
-        onInfoRequested: mainView.viewContact(contact.contactId)
+        onInfoRequested: mainView.viewContact(contact.contactId, contactList.listModel)
 
         filterTerm: searchField.text
         detailToPick: (contactsPage.phoneToAdd != "") ? -1 : ContactDetail.PhoneNumber
