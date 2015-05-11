@@ -289,7 +289,7 @@ MainView {
         }
 
         if (telepathyHelper.flightMode) {
-            showNotification(i18n.tr("Flight Mode"), i18n.tr("You need to disable flight mode in order to make calls"));
+            PopupUtils.open(Qt.createComponent("Dialogs/DisableFlightModeDialog.qml").createObject(mainView), mainView, {})
             return
         }
 
