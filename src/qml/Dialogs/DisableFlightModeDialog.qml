@@ -47,8 +47,9 @@ Component {
                     text: i18n.tr("Disable")
                     color: UbuntuColors.orange
                     onClicked: {
-                        PopupUtils.close(dialogue)
                         telepathyHelper.flightMode = false
+                        PopupUtils.open(flightModeProgressDialog, mainView, {})
+                        PopupUtils.close(dialogue)
                         Qt.inputMethod.hide()
                     }
                 }
