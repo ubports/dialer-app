@@ -105,10 +105,8 @@ ContactViewPage {
     }
 
     onContactFetched: {
-        console.debug("Contact fetched")
         root.contact = contact
         if (root.active && root.addPhoneToContact != "") {
-            console.debug("Add phone to contact on fetched")
             root.addPhoneToContactImpl(contact, root.addPhoneToContact)
             root.addPhoneToContact = ""
         }
