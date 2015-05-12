@@ -37,6 +37,7 @@ PageWithBottomEdge {
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
+            objectName: "contacts"
             iconName: "contact"
             text: i18n.tr("Contacts")
             onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))

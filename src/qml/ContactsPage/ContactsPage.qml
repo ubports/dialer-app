@@ -172,13 +172,22 @@ Page {
         }
         onContactClicked: {
             if (contactsPage.phoneToAdd != "") {
-                mainView.addPhoneToContact(contact.contactId, contactsPage.phoneToAdd, contactsPage)
+                mainView.addPhoneToContact(contact.contactId,
+                                           contactsPage.phoneToAdd,
+                                           contactsPage,
+                                           contactList.listModel)
             } else {
                 mainView.viewContact(contact.contactId, contactsPage)
             }
         }
 
         filterTerm: searchField.text
+    }
+
+    Component.onCompleted: {
+        if (QTCONTACTS_PRELOAD_VCARD !== "") {
+            contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
+        }
     }
 
     KeyboardRectagle {

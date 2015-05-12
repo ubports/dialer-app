@@ -1,3 +1,11 @@
+dialer-app (0.1+15.04.20150507.1-0ubuntu1) vivid; urgency=medium
+
+  [ Renato Araujo Oliveira Filho ]
+  * Create a swipe item demo. To demonstrate how to swipe items to revel
+    actions. (LP: #1417359)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 07 May 2015 14:26:07 +0000
+
 dialer-app (0.1+15.04.20150430.1-0ubuntu1) vivid; urgency=medium
 
   [ Gustavo Pichorim Boiko ]

@@ -183,17 +183,19 @@ MainView {
                                  {"phoneToAdd": phoneNumber})
     }
 
-    function viewContact(contactId, contactListPage) {
+    function viewContact(contactId, contactListPage, model) {
+        var initialPropers = {"contactId": contactId, "model": model}
         pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
-                                 {"contactId": contactId,
-                                  "contactListPage": contactListPage})
+                                 initialPropers)
     }
 
-    function addPhoneToContact(contactId, phoneNumber, contactListPage) {
+    function addPhoneToContact(contactId, phoneNumber, contactListPage, model) {
+        var initialPropers =  {"contactId": contactId,
+                               "addPhoneToContact": phoneNumber,
+                               "contactListPage": contactListPage,
+                               "model": model }
         pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
-                                 {"contactId": contactId,
-                                  "addPhoneToContact": phoneNumber,
-                                  "contactListPage": contactListPage})
+                                 initialPropers)
     }
 
     function sendMessage(phoneNumber) {

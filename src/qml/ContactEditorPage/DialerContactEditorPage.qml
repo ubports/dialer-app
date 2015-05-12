@@ -25,6 +25,7 @@ import Ubuntu.AddressBook.ContactEditor 0.1
 
 ContactEditorPage {
     id: root
+    objectName: "contactEditorPage"
 
     property var contactListPage: null
 
