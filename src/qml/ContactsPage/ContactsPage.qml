@@ -180,8 +180,12 @@ Page {
                 return
             }
 
+            console.debug("PHONTE TO ADD:" + contactsPage.phoneToAdd)
             if (contactsPage.phoneToAdd != "") {
-                mainView.addPhoneToContact(contact.contactId, contactsPage.phoneToAdd, contactsPage)
+                mainView.addPhoneToContact(contact.contactId,
+                                           contactsPage.phoneToAdd,
+                                           contactsPage,
+                                           contactList.listModel)
                 return
             }
 
@@ -192,7 +196,16 @@ Page {
                 mainView.populateDialpad(detail.number)
             }
         }
-        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId, " ", contactsPage)
+        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId,
+                                                       " ",
+                                                       contactsPage,
+                                                       contactList.listModel)
+    }
+
+    Component.onCompleted: {
+        if (QTCONTACTS_PRELOAD_VCARD !== "") {
+            contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
+        }
     }
 
     KeyboardRectagle {

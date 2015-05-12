@@ -151,6 +151,26 @@ class UseMemoryContactBackend(fixtures.Fixture):
         )
 
 
+class PreloadVcards(fixtures.Fixture):
+    VCARD_PATH_BIN = "/usr/share/dialer-app/vcards/vcard.vcf"
+    VCARD_PATH_DEV = os.path.abspath("../data/vcard.vcf")
+
+    def setUp(self):
+        super().setUp()
+        vcard_full_path = PreloadVcards.VCARD_PATH_BIN
+        if os.path.isfile(PreloadVcards.VCARD_PATH_DEV):
+            vcard_full_path = PreloadVcards.VCARD_PATH_DEV
+
+        print("Loading contacts from: %s" % vcard_full_path)
+        self.useFixture(
+            fixtures.EnvironmentVariable(
+                'QTCONTACTS_PRELOAD_VCARD', newvalue=vcard_full_path)
+        )
+        self.useFixture(
+            fixture_setup.InitctlEnvironmentVariable(
+                QTCONTACTS_PRELOAD_VCARD=vcard_full_path)
+        )
+
 class MockNotificationSystem(fixtures.Fixture):
 
     def setUp(self):
