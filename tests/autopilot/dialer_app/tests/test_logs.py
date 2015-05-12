@@ -153,3 +153,36 @@ class TestCallLogs(DialerAppTestCase):
             "Label",
             objectName="label_phoneNumber_1.0")
         self.assertThat(phone_label_1.text, Eventually(Equals('800')))
+
+
+class TestSwipeItemTutorial(DialerAppTestCase):
+    """Tests for swipe item tutorial."""
+
+    def setUp(self):
+        # set the fixtures before launching the app
+        testability_environment = fixture_setup.TestabilityEnvironment()
+        self.useFixture(testability_environment)
+        fill_history = fixture_setup.FillCustomHistory()
+        self.useFixture(fill_history)
+
+        # now launch the app
+        super().setUp(firstLaunch=True)
+        self.main_view.dialer_page.reveal_bottom_edge_page()
+
+    def _get_main_view(self, proxy_object):
+        return proxy_object.wait_select_single('QQuickView')
+
+    def test_swipe_item_tutorial_appears(self):
+        """Ensure that the swipe item tutorial appears on first launch"""
+        swipe_item_demo = self.main_view.wait_select_single(
+            'SwipeItemDemo', objectName='swipeItemDemo')
+
+        self.assertThat(swipe_item_demo.enabled, Eventually(Equals(True)))
+        self.assertThat(swipe_item_demo.necessary, Eventually(Equals(True)))
+        got_it_button = swipe_item_demo.select_single(
+            'Button',
+            objectName='gotItButton')
+        self.main_view._click_button(got_it_button)
+        self.assertThat(swipe_item_demo.enabled, Eventually(Equals(False)))
+        self.assertThat(swipe_item_demo.necessary, Eventually(Equals(False)))
+
