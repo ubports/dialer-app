@@ -177,7 +177,7 @@ Page {
                                            contactsPage,
                                            contactList.listModel)
             } else {
-                mainView.viewContact(contact.contactId, contactsPage)
+                mainView.viewContact(contact.contactId, contactsPage, contactList.listModel)
             }
         }
 
