@@ -180,9 +180,8 @@ Page {
                 return
             }
 
-            console.debug("PHONTE TO ADD:" + contactsPage.phoneToAdd)
             if (contactsPage.phoneToAdd != "") {
-                mainView.addPhoneToContact(contact.contactId,
+                mainView.addPhoneToContact(contact,
                                            contactsPage.phoneToAdd,
                                            contactsPage,
                                            contactList.listModel)

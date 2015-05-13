@@ -126,16 +126,13 @@ ContactViewPage {
 
     onActiveChanged: {
         if (active && root.contact && root.addPhoneToContact != "") {
-            console.debug("Add phone to contact on active")
             root.addPhoneToContactImpl(contact, root.addPhoneToContact)
             root.addPhoneToContact = ""
         }
     }
 
     Component.onCompleted: {
-        console.debug("Component view completed")
         if (!root.model) {
-            console.debug("Using new model")
             root.model = contactModelComponent.createObject(root)
         }
     }
