@@ -161,6 +161,8 @@ Page {
         showImportOptions: (contactList.count === 0) &&
                            (filterTerm === "") &&
                            (contactsPage.phoneToAdd === "")
+        filterTerm: searchField.text
+
         onAddNewContactClicked: {
             var newContact = ContactsJS.createEmptyContact(contactsPage.phoneToAdd, contactsPage)
             pageStack.push(Qt.resolvedUrl("../ContactEditorPage/DialerContactEditorPage.qml"),
@@ -172,7 +174,7 @@ Page {
         }
         onContactClicked: {
             if (contactsPage.phoneToAdd != "") {
-                mainView.addPhoneToContact(contact.contactId,
+                mainView.addPhoneToContact(contact,
                                            contactsPage.phoneToAdd,
                                            contactsPage,
                                            contactList.listModel)
@@ -180,8 +182,6 @@ Page {
                 mainView.viewContact(contact.contactId, contactsPage, contactList.listModel)
             }
         }
-
-        filterTerm: searchField.text
     }
 
     Component.onCompleted: {
