@@ -248,7 +248,8 @@ class DialerContactEditorPage(address_book.ContactEditorPage):
         """
         Press the 'Save' button
         """
-        self.get_header(main_window_name='MainView').click_action_button('save')
+        header = self.get_header(main_window_name='MainView')
+        header.click_action_button('save')
 
 
 class ContactsPage(_common.PageWithHeader):
@@ -291,4 +292,3 @@ class ContactsPage(_common.PageWithHeader):
         contact_delegates = self.select_many('ContactDelegate', visible=True)
         return sorted(
             contact_delegates, key=lambda delegate: delegate.globalRect.y)
-
