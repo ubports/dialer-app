@@ -5,6 +5,6 @@ set(AUTOPILOT_DATA
 )
 
 install(FILES ${AUTOPILOT_DATA}
-    DESTINATION ${DIALER_APP_DIR}/vcards
+    DESTINATION ${PYTHON_PACKAGE_DIR}/dialer_app/testdata/
 )
 

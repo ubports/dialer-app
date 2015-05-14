@@ -23,9 +23,6 @@ from address_book_app.address_book import data
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
 from dialer_app import ListItemWithActions
-from dialer_app import ContactsPage
-from dialer_app import DialerContactEditorPage
-from dialer_app import DialerContactViewPage
 
 
 class TestCallLogs(DialerAppTestCase):
@@ -185,4 +182,3 @@ class TestSwipeItemTutorial(DialerAppTestCase):
         self.main_view._click_button(got_it_button)
         self.assertThat(swipe_item_demo.enabled, Eventually(Equals(False)))
         self.assertThat(swipe_item_demo.necessary, Eventually(Equals(False)))
-

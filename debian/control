@@ -50,6 +50,7 @@ Architecture: all
 Section: debug
 Depends: ${misc:Depends},
          ${python3:Depends},
+         address-book-app-autopilot,
          autopilot-qt5,
          dbus,
          libqt5test5,

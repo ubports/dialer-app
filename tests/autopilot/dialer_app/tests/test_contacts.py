@@ -1,6 +1,6 @@
 # -*- Mode: Python; coding: utf-8; indent-tabs-mode: nil; tab-width: 4 -*-
-# Copyright 2014 Canonical
-# Author: Omer Akram <omer.akram@canonical.com>
+# Copyright 2015 Canonical
+# Author: Renato Araujo Oliveira Filho <renato.filho@canonical.com>
 #
 # This file is part of dialer-app.
 #
