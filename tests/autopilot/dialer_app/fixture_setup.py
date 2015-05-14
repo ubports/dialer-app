@@ -152,7 +152,7 @@ class UseMemoryContactBackend(fixtures.Fixture):
 
 
 class PreloadVcards(fixtures.Fixture):
-    VCARD_PATH_BIN = "/usr/share/dialer-app/vcards/vcard.vcf"
+    VCARD_PATH_BIN = "/usr/lib/python3/dist-packages/dialer_app/testdata/vcard.vcf"
     VCARD_PATH_DEV = os.path.abspath("../data/vcard.vcf")
 
     def setUp(self):
