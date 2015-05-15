@@ -183,8 +183,14 @@ MainView {
                                  {"phoneToAdd": phoneNumber})
     }
 
-    function viewContact(contactId, contactListPage, model) {
-        var initialPropers = {"contactId": contactId, "model": model}
+    function viewContact(contact, contactListPage, model) {
+        var initialPropers = {"model": model}
+
+        if (typeof(contact) == 'string') {
+            initialPropers["contactId"] = contact
+        } else {
+            initialPropers["contact"] = contact
+        }
         pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
                                  initialPropers)
     }

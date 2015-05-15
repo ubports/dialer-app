@@ -179,7 +179,9 @@ Page {
                                            contactsPage,
                                            contactList.listModel)
             } else {
-                mainView.viewContact(contact.contactId, contactsPage, contactList.listModel)
+                mainView.viewContact(contact,
+                                     contactsPage,
+                                     contactList.listModel)
             }
         }
     }
