@@ -88,14 +88,14 @@ ContactViewPage {
 
     onContactRemoved: pageStack.pop()
     onActionTrigerred: {
-        if (action == "tel") {
+        if ((action == "tel") || (action == "default")) {
             if (callManager.hasCalls) {
                 mainView.call(detail.number, mainView.account.accountId);
             } else {
                 mainView.populateDialpad(detail.number)
             }
         } else {
-            Qt.openUrlExternally(("%1:///%2").arg(action).arg(detail.value(0)))
+            Qt.openUrlExternally(("%1:%2").arg(action).arg(detail.value(0)))
         }
     }
 
