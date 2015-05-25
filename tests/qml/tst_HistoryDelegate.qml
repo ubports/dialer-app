@@ -56,5 +56,4 @@ Item {
             compare(clearNotificationSpy.count, 1, 'clear notification not called')
         }
     }
-
-    }
+}
