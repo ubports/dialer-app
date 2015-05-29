@@ -229,16 +229,14 @@ Page {
                     rightMargin: units.gu(2)
                 }
                 text: DateUtils.friendlyDay(section)
-                height: units.gu(5)
-                fontSize: "medium"
-                font.weight: Font.DemiBold
+                height: units.gu(3)
+                fontSize: "small"
                 verticalAlignment: Text.AlignVCenter
                 ListItem.ThinDivider {
                     anchors {
                         left: parent.left
                         right: parent.right
                         bottom: parent.bottom
-                        bottomMargin: units.gu(0.5)
                     }
                 }
             }
