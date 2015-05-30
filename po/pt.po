@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-02-02 09:26+0100\n"
-"PO-Revision-Date: 2015-05-18 07:47+0000\n"
+"PO-Revision-Date: 2015-05-29 20:05+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-05-19 05:44+0000\n"
-"X-Generator: Launchpad (build 17508)\n"
+"X-Launchpad-Export-Date: 2015-05-30 05:33+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -320,7 +320,7 @@ msgstr "Não"
 
 #: ../src/qml/dialer-app.qml:289
 msgid "No SIM card selected"
-msgstr "Nenhum cartão SIM seleccionado"
+msgstr "Nenhum cartão SIM selecionado"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
@@ -369,7 +369,7 @@ msgstr "Aplicação de telemóvel"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefone;Marcadorr;Marcar;Chamar;Teclado"
+msgstr "Telemóvel;Marcador;Marcar;Chamar;Teclado"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -410,7 +410,7 @@ msgstr "Cartão SIM bloqueado"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:60
 msgid "Search"
-msgstr "Pesquisar"
+msgstr "Procurar"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
@@ -426,8 +426,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Selecione um cartão SIM padrão para todas as chamadas efetuadas. Pode sempre "
-"alterar a sua escolha em <a href=\"Configurações_Sistema\"> Configurações do "
-"Sistema</a>."
+"alterar a sua escolha em <a href=\"Definições\"> Definições</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
@@ -502,7 +501,7 @@ msgstr "Ontem"
 
 #: ../src/qml/dialer-app.qml:289
 msgid "You need to select a SIM card"
-msgstr "Você necessita selecionar um cartão SIM"
+msgstr "Necessita de selecionar um cartão SIM"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
