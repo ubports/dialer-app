@@ -161,6 +161,8 @@ Page {
         showImportOptions: (contactList.count === 0) &&
                            (filterTerm === "") &&
                            (contactsPage.phoneToAdd === "")
+        filterTerm: searchField.text
+
         onAddNewContactClicked: {
             var newContact = ContactsJS.createEmptyContact(contactsPage.phoneToAdd, contactsPage)
             pageStack.push(Qt.resolvedUrl("../ContactEditorPage/DialerContactEditorPage.qml"),
@@ -170,35 +172,18 @@ Page {
                              contactListPage: contactsPage
                            })
         }
-        onInfoRequested: mainView.viewContact(contact.contactId, contactList.listModel)
-
-        filterTerm: searchField.text
-        detailToPick: (contactsPage.phoneToAdd != "") ? -1 : ContactDetail.PhoneNumber
-        onDetailClicked: {
-            if (action === "message") {
-                Qt.openUrlExternally("message:///" + encodeURIComponent(detail.number))
-                return
-            }
-
+        onContactClicked: {
             if (contactsPage.phoneToAdd != "") {
                 mainView.addPhoneToContact(contact,
                                            contactsPage.phoneToAdd,
                                            contactsPage,
                                            contactList.listModel)
-                return
-            }
-
-            pageStackNormalMode.pop()
-            if (callManager.hasCalls) {
-                mainView.call(detail.number, mainView.account.accountId);
             } else {
-                mainView.populateDialpad(detail.number)
+                mainView.viewContact(contact,
+                                     contactsPage,
+                                     contactList.listModel)
             }
         }
-        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId,
-                                                       " ",
-                                                       contactsPage,
-                                                       contactList.listModel)
     }
 
     Component.onCompleted: {
