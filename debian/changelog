@@ -1,3 +1,21 @@
+dialer-app (0.1+15.10.20150601.1-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gustavo Pichorim Boiko ]
+  * Fix contact share.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Implement support for no-expandable contacts list (LP: #1368671)
+  * Make use of the new address book components instead of launch the
+    address-book-app. (LP: #1456782)
+
+  [ Sebastien Bacher ]
+  * Update the translations template so new strings can be translated
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 01 Jun 2015 20:14:38 +0000
+
 dialer-app (0.1+15.04.20150507.1-0ubuntu1) vivid; urgency=medium
 
   [ Renato Araujo Oliveira Filho ]
