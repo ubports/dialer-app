@@ -347,7 +347,7 @@ Page {
                             if (unknownContact) {
                                 mainView.addNewPhone(phoneNumber)
                             } else {
-                                mainView.viewContact(contactId)
+                                mainView.viewContact(contactId, null)
                             }
                         }
                         visible: knownNumber

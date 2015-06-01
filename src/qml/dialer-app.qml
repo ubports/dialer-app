@@ -18,9 +18,11 @@
 
 import QtQuick 2.0
 import Qt.labs.settings 1.0
+
 import Ubuntu.Components 1.1
 import Ubuntu.Components.Popups 0.1
 import Ubuntu.Telephony 0.1
+import Ubuntu.Contacts 0.1
 
 MainView {
     id: mainView
@@ -69,7 +71,7 @@ MainView {
                 if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
                     pageStackNormalMode.pop();
                 }
- 
+
                 // pop live call views from both stacks if we have no calls.
                 if (pageStackNormalMode.depth > 1 && pageStackNormalMode.currentPage.objectName == "pageLiveCall") {
                     pageStackNormalMode.pop();
@@ -175,22 +177,38 @@ MainView {
         return false;
     }
 
-    function createNewContactForPhone(phoneNumber)
+    function addNewPhone(phoneNumber)
     {
-        Qt.openUrlExternally("addressbook:///create?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
+        pageStackNormalMode.push(Qt.resolvedUrl("ContactsPage/ContactsPage.qml"),
+                                 {"phoneToAdd": phoneNumber})
     }
 
-    function viewContact(contactId) {
-        Qt.openUrlExternally("addressbook:///contact?callback=dialer-app.desktop&id=" + encodeURIComponent(contactId))
+    function viewContact(contactId, model) {
+        var initialPropers = {}
+        if (model) {
+            initialPropers = {"contactId": contactId, "model": model}
+        } else {
+            initialPropers = {"contactId": contactId}
+        }
+        pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
+                                 initialPropers)
     }
 
-    function addNewPhone(phoneNumber) {
-        Qt.openUrlExternally("addressbook:///addnewphone?callback=dialer-app.desktop&phone=" + encodeURIComponent(phoneNumber))
-    }
+    function addPhoneToContact(contact, phoneNumber, contactListPage, model) {
+        var initialPropers =  {"addPhoneToContact": phoneNumber,
+                               "contactListPage": contactListPage}
 
-    function addPhoneToContact(contactId, phoneNumber) {
-        Qt.openUrlExternally("addressbook:///addphone?callback=dialer-app.desktop&id=%1&phone=%2".arg(encodeURIComponent(contactId))
-                             .arg(encodeURIComponent(phoneNumber)))
+        if (model) {
+            initialPropers["model"] = model
+        }
+        if (typeof(contact) == 'string') {
+            initialPropers["contactId"] = contact
+        } else {
+            initialPropers["contact"] = contact
+        }
+
+        pageStackNormalMode.push(Qt.resolvedUrl("ContactViewPage/DialerContactViewPage.qml"),
+                                 initialPropers)
     }
 
     function sendMessage(phoneNumber) {
@@ -396,7 +414,7 @@ MainView {
         if (currentStack.currentPage.objectName == "pageLiveCall") {
             return;
         }
- 
+
         currentStack.push(Qt.resolvedUrl("LiveCallPage/LiveCall.qml"), properties)
     }
 

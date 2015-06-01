@@ -19,13 +19,12 @@ from url_dispatcher_testability import (
     fixture_setup as url_dispatcher_fixtures
 )
 
+from address_book_app.address_book import data
 from dialer_app.tests import DialerAppTestCase
 from dialer_app import fixture_setup
 from dialer_app import ListItemWithActions
 
 
-@skipIf(model() == 'Desktop',
-        'only run on Ubuntu touch platforms')
 class TestCallLogs(DialerAppTestCase):
     """Tests for the call log panel."""
 
@@ -37,6 +36,10 @@ class TestCallLogs(DialerAppTestCase):
         self.useFixture(fill_history)
         self.fake_url_dispatcher = url_dispatcher_fixtures.FakeURLDispatcher()
         self.useFixture(self.fake_url_dispatcher)
+        memory_backend = fixture_setup.UseMemoryContactBackend()
+        self.useFixture(memory_backend)
+        preload_data = fixture_setup.PreloadVcards()
+        self.useFixture(preload_data)
 
         # now launch the app
         super().setUp()
@@ -52,6 +55,7 @@ class TestCallLogs(DialerAppTestCase):
         except fake_dispatcher.FakeDispatcherException:
             return None
 
+    @skipIf(model() == 'Desktop', 'only run on Ubuntu touch platforms')
     def test_call_log_item_opens_messaging(self):
         """Ensure tapping on 'send text message' item of a call log opens
         the messaging app.
@@ -74,11 +78,78 @@ class TestCallLogs(DialerAppTestCase):
             ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
         delegate.add_contact()
 
+        contacts_page = self.main_view.contacts_page
         self.assertThat(
-            self.get_last_dispatch_url_call_parameter,
-            Eventually(Equals(
-                'addressbook:///addnewphone?callback=dialer-app.desktop&'
-                'phone=800')))
+            contacts_page.phoneToAdd, Eventually(Equals('800')))
+
+        # click add new button
+        contacts_page.click_add_new()
+
+        # wait page be ready for edit
+        contact_editor_page = self.main_view.contact_editor_page
+        self.main_view.contact_editor_page.wait_get_focus('phones')
+
+        # fill contact name
+        test_contact = data.Contact('FirstName', 'LastName')
+        test_contact.professional_details = []
+        contact_editor_page.fill_form(test_contact)
+
+        # save contact
+        contact_editor_page.save()
+
+        # contact view will appear with the new contact data
+        contact_view_page = contacts_page.open_contact(3)
+        self.assertThat(contact_view_page.visible, Eventually(Equals(True)))
+
+        # check if contact contains the new phone number
+        phone_group = contact_view_page.select_single(
+            'ContactDetailGroupWithTypeView',
+            objectName='phones')
+        self.assertThat(phone_group.detailsCount, Eventually(Equals(1)))
+
+        # check if the new value is correct
+        phone_label_1 = contact_view_page.select_single(
+            "Label",
+            objectName="label_phoneNumber_0.0")
+        self.assertThat(phone_label_1.text, Eventually(Equals('800')))
+
+    def test_add_number_into_old_contact_from_log(self):
+        """Ensure tapping on 'add new contact' item of a call log opens
+        the address-book app to allow add the numbe into a contact
+
+        """
+        delegate = self.main_view.wait_select_single(
+            ListItemWithActions.HistoryDelegate, objectName='historyDelegate0')
+        delegate.add_contact()
+
+        contacts_page = self.main_view.contacts_page
+        self.assertThat(
+            contacts_page.phoneToAdd, Eventually(Equals('800')))
+
+        # click on first contact to add number
+        contacts_page.click_contact(0)
+
+        # wait page be ready for edit
+        contact_editor_page = self.main_view.contact_editor_page
+        contact_editor_page.wait_get_focus('phones')
+
+        # save contact
+        contact_editor_page.save()
+
+        # contact view will appear with the new contact data
+        contact_view_page = self.main_view.contact_view_page
+
+        # check if contact contains the new phone number
+        phone_group = contact_view_page.select_single(
+            'ContactDetailGroupWithTypeView',
+            objectName='phones')
+        self.assertThat(phone_group.detailsCount, Eventually(Equals(2)))
+
+        # check if the new value is correct
+        phone_label_1 = contact_view_page.select_single(
+            "Label",
+            objectName="label_phoneNumber_1.0")
+        self.assertThat(phone_label_1.text, Eventually(Equals('800')))
 
 
 class TestSwipeItemTutorial(DialerAppTestCase):

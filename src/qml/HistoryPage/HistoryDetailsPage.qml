@@ -57,7 +57,7 @@ Page {
                 if (unknownContact) {
                     mainView.addNewPhone(phoneNumber)
                 } else {
-                    mainView.viewContact(contactWatcher.contactId)
+                    mainView.viewContact(contactWatcher.contactId, null)
                 }
             }
         },
