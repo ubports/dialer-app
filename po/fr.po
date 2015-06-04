@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-06-02 18:41+0000\n"
-"Last-Translator: Sebastien Bacher <seb128@ubuntu.com>\n"
+"PO-Revision-Date: 2015-06-03 18:10+0000\n"
+"Last-Translator: Jean-Marc <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-06-03 05:50+0000\n"
-"X-Generator: Launchpad (build 17532)\n"
+"X-Launchpad-Export-Date: 2015-06-04 05:34+0000\n"
+"X-Generator: Launchpad (build 17540)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -315,7 +315,7 @@ msgstr "Manqué"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Téléphone mobile"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -447,11 +447,11 @@ msgstr "Partager"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Faites glisser pour supprimer"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Faites glisser pour dévoiler des actions"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
