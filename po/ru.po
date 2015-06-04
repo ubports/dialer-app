@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-02-02 09:26+0100\n"
+"POT-Creation-Date: 2015-06-01 18:44+0200\n"
 "PO-Revision-Date: 2014-10-22 14:44+0000\n"
 "Last-Translator: dr&mx <dronmax@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-05-13 05:31+0000\n"
-"X-Generator: Launchpad (build 17493)\n"
+"X-Launchpad-Export-Date: 2015-06-02 05:36+0000\n"
+"X-Generator: Launchpad (build 17532)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:442
+#: ../src/qml/LiveCallPage/LiveCall.qml:443
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - удерживается"
@@ -55,6 +55,7 @@ msgstr[2] "%1 секунд"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
 msgstr "(%1)"
@@ -63,15 +64,9 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerPage.qml:370
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
-
-#. TRANSLATORS: this refers to a new contact
-#: ../src/qml/ContactsPage/ContactsPage.qml:189
-msgid "+ Create New"
-msgstr "+ Создать новый"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
@@ -117,7 +112,7 @@ msgstr "9"
 msgid "ABC"
 msgstr "ABC"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:126
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
 msgstr "Активен"
 
@@ -135,15 +130,15 @@ msgstr "Все"
 msgid "Bluetooth device"
 msgstr "Bluetooth-устройство"
 
-#: ../src/qml/dialer-app.qml:558
+#: ../src/qml/dialer-app.qml:564
 msgid "Call Barring"
 msgstr "Запрет вызова"
 
-#: ../src/qml/dialer-app.qml:569
+#: ../src/qml/dialer-app.qml:575
 msgid "Call Forwarding"
 msgstr "Переадресация вызовов"
 
-#: ../src/qml/dialer-app.qml:580
+#: ../src/qml/dialer-app.qml:586
 msgid "Call Waiting"
 msgstr "Ожидание вызова"
 
@@ -159,17 +154,17 @@ msgstr "Сбой вызова"
 msgid "Call holding failure"
 msgstr "Сбой удержания звонка"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:107
-#: ../src/qml/LiveCallPage/LiveCall.qml:444
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:103
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Идёт вызов"
 
-#: ../src/qml/dialer-app.qml:591
+#: ../src/qml/dialer-app.qml:597
 msgid "Calling Line Presentation"
 msgstr "Индикация вызывающей линии"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:609
 msgid "Calling Line Restriction"
 msgstr "Запрет вызывающей линии"
 
@@ -189,7 +184,7 @@ msgid "Close"
 msgstr "Закрыть"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:85
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "Конференция"
 
@@ -197,16 +192,16 @@ msgstr "Конференция"
 msgid "Conference call failure"
 msgstr "Сбой конференц-связи"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:603
 msgid "Connected Line Presentation"
 msgstr "Индикация подключенной линии"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:615
 msgid "Connected Line Restriction"
 msgstr "Ограничение подключенной линии"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:343
+#: ../src/qml/HistoryPage/HistoryPage.qml:345
 msgid "Contact Details"
 msgstr "Сведения об абоненте"
 
@@ -220,21 +215,21 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:237
-#: ../src/qml/HistoryPage/HistoryPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryPage.qml:317
 msgid "Delete"
 msgstr "Удалить"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:324
+#: ../src/qml/HistoryPage/HistoryPage.qml:326
 msgid "Details"
 msgstr "Сведения"
 
-#: ../src/qml/dialer-app.qml:421
+#: ../src/qml/dialer-app.qml:423
 msgid "Disabling flight mode"
 msgstr "Выключается самолётный режим"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:478
-#: ../src/qml/dialer-app.qml:492
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
+#: ../src/qml/dialer-app.qml:496
 msgid "Dismiss"
 msgstr "Отменить"
 
@@ -242,15 +237,15 @@ msgstr "Отменить"
 msgid "Don't ask again"
 msgstr "Больше не спрашивать"
 
-#: ../src/qml/DialerPage/DialerPage.qml:66
+#: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Emergency Calls"
 msgstr "Экстренные вызовы"
 
-#: ../src/qml/DialerPage/DialerPage.qml:268
+#: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
 msgstr "Введите номер"
 
-#: ../src/qml/dialer-app.qml:475
+#: ../src/qml/dialer-app.qml:479
 msgid "Error"
 msgstr "Ошибка"
 
@@ -270,7 +265,7 @@ msgstr "Не удалось поставить вызов на удержани�
 msgid "Favorites"
 msgstr "Избранное"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68
+#: ../src/qml/DialerPage/DialerPage.qml:76
 msgid "Flight mode"
 msgstr "Автономный режим"
 
@@ -278,16 +273,21 @@ msgstr "Автономный режим"
 msgid "GHI"
 msgstr "GHI"
 
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
+msgid "Got it"
+msgstr ""
+
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:314
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Входящие"
 
-#: ../src/qml/dialer-app.qml:476
+#: ../src/qml/dialer-app.qml:480
 msgid "Invalid USSD code"
 msgstr "Неверный USSD код"
 
@@ -295,7 +295,7 @@ msgstr "Неверный USSD код"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:84
 msgid "Keypad"
 msgstr "Номеронабиратель"
 
@@ -307,22 +307,26 @@ msgstr "Не сейчас"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:547
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "Объединение вызовов"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:59
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:312
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Пропущенные"
+
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
+msgid "Mobile"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr "Нет"
 
-#: ../src/qml/dialer-app.qml:289
+#: ../src/qml/dialer-app.qml:294
 msgid "No SIM card selected"
 msgstr "SIM-карта не выбрана"
 
@@ -330,11 +334,11 @@ msgstr "SIM-карта не выбрана"
 msgid "No calls"
 msgstr "Вызовы отсутствуют"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78 ../src/qml/dialer-app.qml:310
+#: ../src/qml/DialerPage/DialerPage.qml:86 ../src/qml/dialer-app.qml:315
 msgid "No network"
 msgstr "Сеть не найдена"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:217
+#: ../src/qml/HistoryPage/HistoryPage.qml:219
 msgid "No recent calls"
 msgstr "Недавние вызовы отсутствуют"
 
@@ -342,12 +346,12 @@ msgstr "Недавние вызовы отсутствуют"
 msgid "Ok"
 msgstr "ОК"
 
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:124
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
 msgstr "Удержание"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:316
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Исходящие"
 
@@ -385,11 +389,11 @@ msgstr ""
 "сообщений. Вы можете её разблокировать через иконку сети вверху экрана или в "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 
-#: ../src/qml/dialer-app.qml:456
+#: ../src/qml/dialer-app.qml:459
 msgid "Please wait"
 msgstr "Подождите"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:135
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
 msgstr "Личное"
 
@@ -398,7 +402,7 @@ msgstr "Личное"
 msgid "Private number"
 msgstr "Скрытый номер"
 
-#: ../src/qml/DialerPage/DialerPage.qml:113
+#: ../src/qml/DialerPage/DialerPage.qml:121
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Недавние"
@@ -407,7 +411,7 @@ msgstr "Недавние"
 msgid "SIM Card is locked"
 msgstr "SIM-карта заблокирована"
 
-#: ../src/qml/DialerPage/DialerPage.qml:70
+#: ../src/qml/DialerPage/DialerPage.qml:78
 msgid "SIM Locked"
 msgstr "SIM-карта заблокирована"
 
@@ -431,7 +435,7 @@ msgstr ""
 "Выбрать SIM-карту по умолчанию для всех исходящих вызовов. Данную настройку "
 "можно изменить, перейдя в <a href=\"system_settings\">Настройки</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:334
+#: ../src/qml/HistoryPage/HistoryPage.qml:336
 msgid "Send message"
 msgstr "Отправить сообщение"
 
@@ -443,11 +447,19 @@ msgstr "Настройки"
 msgid "Share"
 msgstr "Поделиться"
 
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
+msgid "Swipe to delete"
+msgstr ""
+
+#: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
+msgid "Swipe to reveal actions"
+msgstr ""
+
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
 msgstr "Переключить источник звука на:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:532
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "Переключить вызов"
 
@@ -459,12 +471,12 @@ msgstr "Переключиться на SIM-карту по умолчанию:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:311
+#: ../src/qml/dialer-app.qml:316
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "В настоящий момент отсутствует доступ к сети %1"
 
-#: ../src/qml/dialer-app.qml:312
+#: ../src/qml/dialer-app.qml:317
 msgid "There is currently no network."
 msgstr "В настоящий момент сеть недоступна."
 
@@ -485,8 +497,8 @@ msgstr "Неизвестное устройство"
 msgid "Unknown number"
 msgstr "Неизвестный номер"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:69
-#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:87
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
 msgstr "Голосовая почта"
 
@@ -502,7 +514,7 @@ msgstr "Да"
 msgid "Yesterday"
 msgstr "Вчера"
 
-#: ../src/qml/dialer-app.qml:289
+#: ../src/qml/dialer-app.qml:294
 msgid "You need to select a SIM card"
 msgstr "Необходимо выбрать SIM-карту"
 
@@ -521,6 +533,9 @@ msgstr "mm:ss"
 
 #~ msgid "All"
 #~ msgstr "Все"
+
+#~ msgid "+ Create New"
+#~ msgstr "+ Создать новый"
 
 #~ msgid "hh:mm ap"
 #~ msgstr "hh:mm ap"
