@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-06-02 05:36+0000\n"
-"X-Generator: Launchpad (build 17532)\n"
+"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
+"X-Generator: Launchpad (build 17540)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -112,12 +112,12 @@ msgstr "Aktif"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Semua"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Semua"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
@@ -145,7 +145,7 @@ msgstr "Panggilan gagal"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr ""
+msgstr "Kegagalan menahan panggilan"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -183,7 +183,7 @@ msgstr "Konferensi"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
-msgstr ""
+msgstr "Kegagalan panggilan konferensi"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Connected Line Presentation"
@@ -244,15 +244,15 @@ msgstr "Galat"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Gagal mengaktifkan panggilan."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Gagal membuat panggilan konferensi."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Gagal menahan panggilan aktif."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgid "Favorites"
