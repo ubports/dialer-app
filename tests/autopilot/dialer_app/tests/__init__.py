@@ -82,7 +82,8 @@ class DialerAppTestCase(AutopilotTestCase):
 
     def create_config_file(self, firstLaunch=False):
         self.user_config_dir = tempfile.mkdtemp(suffix='', prefix='dialer-app')
-        self.app_config_dir = (self.user_config_dir + '/com.ubuntu.dialer-app/')
+        self.app_config_dir = (self.user_config_dir +
+                               '/com.ubuntu.dialer-app/')
         os.makedirs(self.app_config_dir)
         config_file_path = (self.app_config_dir + '/DialerApp.conf')
 
@@ -91,13 +92,16 @@ class DialerAppTestCase(AutopilotTestCase):
         else:
             first_launch_flag = 'false'
         with open(config_file_path, 'w') as config_file:
-            config_file.write('[General]\nhintNecessary=%s\n' % (first_launch_flag))
+            config_file.write(
+                '[General]\nhintNecessary=%s\n' % (first_launch_flag))
 
         self.useFixture(
-            fixtures.EnvironmentVariable('XDG_CONFIG_HOME', newvalue=self.user_config_dir)
+            fixtures.EnvironmentVariable('XDG_CONFIG_HOME',
+                                         newvalue=self.user_config_dir)
         )
         self.useFixture(
-            fixture_setup.InitctlEnvironmentVariable(XDG_CONFIG_HOME=self.user_config_dir)
+            fixture_setup.InitctlEnvironmentVariable(
+                XDG_CONFIG_HOME=self.user_config_dir)
         )
 
     @property

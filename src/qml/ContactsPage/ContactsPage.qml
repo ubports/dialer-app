@@ -27,10 +27,30 @@ Page {
     id: contactsPage
     objectName: "contactsPage"
 
-    property QtObject contact
+    property string phoneToAdd: ""
+    property QtObject contactIndex: null
+
+    function moveListToContact(contact)
+    {
+        if (active) {
+            contactsPage.contactIndex = null
+            contactList.positionViewAtContact(contact)
+        } else {
+            contactsPage.contactIndex = contact
+        }
+    }
+
+    Connections {
+        target: contactList.listModel
+        onContactsChanged: {
+            if (contactsPage.contactIndex) {
+                contactList.positionViewAtContact(contactsPage.contactIndex)
+                contactsPage.contactIndex = null
+            }
+        }
+    }
 
     title: i18n.tr("Contacts")
-
     TextField {
         id: searchField
 
@@ -138,25 +158,38 @@ Page {
         }
 
         showAddNewButton: true
-        showImportOptions: (contactList.count === 0) && (filterTerm === "")
-        onAddNewContactClicked: mainView.createNewContactForPhone(" ")
-        onInfoRequested: mainView.viewContact(contact.contactId)
-
+        showImportOptions: (contactList.count === 0) &&
+                           (filterTerm === "") &&
+                           (contactsPage.phoneToAdd === "")
         filterTerm: searchField.text
-        detailToPick: ContactDetail.PhoneNumber
-        onDetailClicked: {
-            if (action === "message") {
-                Qt.openUrlExternally("message:///" + encodeURIComponent(detail.number))
-                return
-            }
-            pageStackNormalMode.pop()
-            if (callManager.hasCalls) {
-                mainView.call(detail.number, mainView.account.accountId);
+
+        onAddNewContactClicked: {
+            var newContact = ContactsJS.createEmptyContact(contactsPage.phoneToAdd, contactsPage)
+            pageStack.push(Qt.resolvedUrl("../ContactEditorPage/DialerContactEditorPage.qml"),
+                           { model: contactList.listModel,
+                             contact: newContact,
+                             initialFocusSection: (contactsPage.phoneToAdd != "" ? "phones" : "name"),
+                             contactListPage: contactsPage
+                           })
+        }
+        onContactClicked: {
+            if (contactsPage.phoneToAdd != "") {
+                mainView.addPhoneToContact(contact,
+                                           contactsPage.phoneToAdd,
+                                           contactsPage,
+                                           contactList.listModel)
             } else {
-                mainView.populateDialpad(detail.number)
+                mainView.viewContact(contact,
+                                     contactsPage,
+                                     contactList.listModel)
             }
         }
-        onAddDetailClicked: mainView.addPhoneToContact(contact.contactId, " ")
+    }
+
+    Component.onCompleted: {
+        if (QTCONTACTS_PRELOAD_VCARD !== "") {
+            contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
+        }
     }
 
     KeyboardRectagle {

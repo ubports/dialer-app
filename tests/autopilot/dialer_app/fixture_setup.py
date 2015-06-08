@@ -24,6 +24,7 @@ import shutil
 import dbusmock
 from autopilot.platform import model
 import dbus
+from ubuntuuitoolkit import fixture_setup
 
 
 class TestabilityEnvironment(fixtures.Fixture):
@@ -134,6 +135,42 @@ class UsePhonesimModem(fixtures.Fixture):
         subprocess.call(['mc-tool', 'update', 'ofono/ofono/account0',
                          'string:modem-objpath=/ril_0'])
         subprocess.call(['mc-tool', 'reconnect', 'ofono/ofono/account0'])
+
+
+class UseMemoryContactBackend(fixtures.Fixture):
+
+    def setUp(self):
+        super().setUp()
+        self.useFixture(
+            fixtures.EnvironmentVariable(
+                'QTCONTACTS_MANAGER_OVERRIDE', newvalue='memory')
+        )
+        self.useFixture(
+            fixture_setup.InitctlEnvironmentVariable(
+                QTCONTACTS_MANAGER_OVERRIDE='memory')
+        )
+
+
+class PreloadVcards(fixtures.Fixture):
+    AUTOPILOT_DIR = "/usr/lib/python3/dist-packages/dialer_app/"
+    VCARD_PATH_BIN = ("%s/testdata/vcard.vcf" % AUTOPILOT_DIR)
+    VCARD_PATH_DEV = os.path.abspath("../data/vcard.vcf")
+
+    def setUp(self):
+        super().setUp()
+        vcard_full_path = PreloadVcards.VCARD_PATH_BIN
+        if os.path.isfile(PreloadVcards.VCARD_PATH_DEV):
+            vcard_full_path = PreloadVcards.VCARD_PATH_DEV
+
+        print("Loading contacts from: %s" % vcard_full_path)
+        self.useFixture(
+            fixtures.EnvironmentVariable(
+                'QTCONTACTS_PRELOAD_VCARD', newvalue=vcard_full_path)
+        )
+        self.useFixture(
+            fixture_setup.InitctlEnvironmentVariable(
+                QTCONTACTS_PRELOAD_VCARD=vcard_full_path)
+        )
 
 
 class MockNotificationSystem(fixtures.Fixture):
