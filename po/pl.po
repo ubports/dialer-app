@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-04-20 19:31+0000\n"
-"Last-Translator: Bartosz Kosiorek <Unknown>\n"
+"PO-Revision-Date: 2015-06-08 12:37+0000\n"
+"Last-Translator: Seweryn Opyd <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-09 05:42+0000\n"
+"X-Generator: Launchpad (build 17549)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -33,9 +33,9 @@ msgstr "%1 - wstrzymane"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 godzina"
-msgstr[1] "%1 godziny"
-msgstr[2] "%1 godzin"
+msgstr[0] "%1 godz."
+msgstr[1] "%1 godz."
+msgstr[2] "%1 godz."
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
@@ -49,9 +49,9 @@ msgstr[2] "%1 min"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sek"
-msgstr[1] "%1 sek"
-msgstr[2] "%1 sek"
+msgstr[0] "%1 sek."
+msgstr[1] "%1 sek."
+msgstr[2] "%1 sek."
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:198
@@ -128,7 +128,7 @@ msgstr "Wszystkie"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"
-msgstr "Urządzenie Bluetooth"
+msgstr "Urządzenie bluetooth"
 
 #: ../src/qml/dialer-app.qml:564
 msgid "Call Barring"
