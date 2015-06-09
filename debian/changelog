@@ -1,3 +1,43 @@
+dialer-app (0.1+15.10.20150608-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gustavo Pichorim Boiko ]
+  * Ask telephony-service-indicator to remove call notifications when
+    the respective call log entry is activated. (LP: #1455408)
+
+  [ Michael Zanetti ]
+  * Lock it to portrait, it breaks in landscape
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 08 Jun 2015 17:44:43 +0000
+
+dialer-app (0.1+15.10.20150601.1-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gustavo Pichorim Boiko ]
+  * Fix contact share.
+
+  [ Renato Araujo Oliveira Filho ]
+  * Implement support for no-expandable contacts list (LP: #1368671)
+  * Make use of the new address book components instead of launch the
+    address-book-app. (LP: #1456782)
+
+  [ Sebastien Bacher ]
+  * Update the translations template so new strings can be translated
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 01 Jun 2015 20:14:38 +0000
+
+dialer-app (0.1+15.04.20150507.1-0ubuntu1) vivid; urgency=medium
+
+  [ Renato Araujo Oliveira Filho ]
+  * Create a swipe item demo. To demonstrate how to swipe items to revel
+    actions. (LP: #1417359)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 07 May 2015 14:26:07 +0000
+
 dialer-app (0.1+15.04.20150430.1-0ubuntu1) vivid; urgency=medium
 
   [ Gustavo Pichorim Boiko ]

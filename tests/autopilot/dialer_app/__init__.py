@@ -12,6 +12,9 @@
 import logging
 
 import ubuntuuitoolkit
+
+from address_book_app.address_book import _common
+from address_book_app import address_book
 from autopilot import exceptions as autopilot_exceptions
 
 
@@ -29,6 +32,18 @@ class MainView(ubuntuuitoolkit.MainView):
         # wait until we actually have the calls before returning the live call
         self.hasCalls.wait_for(True)
         return self.wait_select_single(LiveCall, active=True)
+
+    @property
+    def contacts_page(self):
+        return self._get_page(ContactsPage, 'contactsPage')
+
+    @property
+    def contact_editor_page(self):
+        return self._get_page(DialerContactEditorPage, 'contactEditorPage')
+
+    @property
+    def contact_view_page(self):
+        return self._get_page(DialerContactViewPage, 'contactViewPage')
 
     def get_first_log(self):
         return self.wait_select_single(objectName="historyDelegate0")
@@ -62,6 +77,11 @@ class MainView(ubuntuuitoolkit.MainView):
             return False
 
         return dialog.visible
+
+    def _get_page(self, page_type, page_name):
+        page = self.wait_select_single(
+            page_type, objectName=page_name, active=True)
+        return page
 
 
 class LiveCall(MainView):
@@ -197,3 +217,73 @@ class DialerPage(PageWithBottomEdge):
         self.dial_number(number, formattedNumber)
         self.click_call_button()
         return self.get_root_instance().wait_select_single(LiveCall)
+
+    def get_header(self):
+        """Return the Header custom proxy object of the Page."""
+        return self.get_root_instance().select_single(
+            'MainView').get_header()
+
+    def click_contacts_button(self):
+        self.get_header().click_action_button('contacts')
+
+
+class DialerContactViewPage(address_book.ContactViewPage):
+    """Autopilot custom proxy object for DialerContactViewPage components."""
+
+    def call_phone(self, index):
+        phone_group = self.select_single(
+            'ContactDetailGroupWithTypeView',
+            objectName='phones')
+
+        call_buttons = phone_group.select_many(
+            "ActionButton",
+            objectName="tel-contact")
+        self.pointing_device.click_object(call_buttons[index])
+
+
+class DialerContactEditorPage(address_book.ContactEditorPage):
+    """Autopilot custom proxy object for DialerContactEditorPage components."""
+
+    def save(self):
+        """
+        Press the 'Save' button
+        """
+        header = self.get_header(main_window_name='MainView')
+        header.click_action_button('save')
+
+
+class ContactsPage(_common.PageWithHeader):
+    """Autopilot custom proxy object for ContactsPage components."""
+
+    def _click_button(self, button):
+        """Generic way to click a button"""
+        self.visible.wait_for(True)
+        button.visible.wait_for(True)
+        self.pointing_device.click_object(button)
+        return button
+
+    def _get_add_new_button(self):
+        """Return the add-new button"""
+        return self.wait_select_single('ContactListButtonDelegate',
+                                       objectName='addNewButton')
+
+    def click_add_new(self):
+        self._click_button(self._get_add_new_button())
+
+    def click_contact(self, index):
+        contact_delegate = self._get_contact_delegate(index)
+        self.pointing_device.click_object(contact_delegate)
+
+    def open_contact(self, index):
+        self.click_contact(index)
+        return self.get_root_instance().select_single(
+            DialerContactViewPage, objectName='contactViewPage')
+
+    def _get_contact_delegate(self, index):
+        contact_delegates = self._get_sorted_contact_delegates()
+        return contact_delegates[index]
+
+    def _get_sorted_contact_delegates(self):
+        contact_delegates = self.select_many('ContactDelegate', visible=True)
+        return sorted(
+            contact_delegates, key=lambda delegate: delegate.globalRect.y)

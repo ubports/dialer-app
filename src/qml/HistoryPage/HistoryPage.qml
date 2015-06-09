@@ -94,6 +94,8 @@ Page {
             }
             historyList.resetSwipe()
             historyList.positionViewAtBeginning()
+        } else if (historyList.count > 0){
+            swipeItemDemo.enable()
         }
     }
 
@@ -345,7 +347,7 @@ Page {
                             if (unknownContact) {
                                 mainView.addNewPhone(phoneNumber)
                             } else {
-                                mainView.viewContact(contactId)
+                                mainView.viewContact(contactId, null, null)
                             }
                         }
                         visible: knownNumber
@@ -354,10 +356,24 @@ Page {
                 ]
             }
         }
+
+        onCountChanged: {
+            if (historyPage.active && (historyList.count > 0)) {
+                swipeItemDemo.enable()
+            }
+        }
     }
 
     Scrollbar {
         flickableItem: historyList
         align: Qt.AlignTrailing
+    }
+
+    SwipeItemDemo {
+        id: swipeItemDemo
+        objectName: "swipeItemDemo"
+
+        parent: QuickUtils.rootItem(this)
+        anchors.fill: parent
     }
 }

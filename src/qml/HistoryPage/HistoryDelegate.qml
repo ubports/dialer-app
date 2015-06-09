@@ -45,6 +45,9 @@ ListItemWithActions {
     property bool active: false
 
     function activate() {
+        // clear any notification related to this call
+        callNotification.clearCallNotification(model.remoteParticipant, model.accountId)
+
         // ignore private and unknown numbers
         if (!interactive) {
             return;

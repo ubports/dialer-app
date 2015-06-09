@@ -27,6 +27,7 @@ if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("keypad_button" tst_KeypadButton.qml)
     declare_qml_test("main_view" tst_MainView.qml)
     declare_qml_test("stopwatch" tst_StopWatch.qml)
+    declare_qml_test("historydelegate" tst_HistoryDelegate.qml)
 # FIXME currently disabled. There is a bug when registering the telepathy observer
 #    declare_qml_dbus_test("dialer_page" tst_DialerPage.qml)
 else()
