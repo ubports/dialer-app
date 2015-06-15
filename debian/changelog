@@ -1,3 +1,14 @@
+dialer-app (0.1+15.10.20150615-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+  * Resync trunk.
+
+  [ Renato Araujo Oliveira Filho ]
+  * New screenshot image New application icon (LP: #1457424, #1430004)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 15 Jun 2015 15:36:21 +0000
+
 dialer-app (0.1+15.10.20150610-0ubuntu1) wily; urgency=medium
 
   * 
