@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-06-04 12:12+0000\n"
+"PO-Revision-Date: 2015-06-15 09:44+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-16 11:20+0000\n"
+"X-Generator: Launchpad (build 17557)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -231,7 +231,7 @@ msgstr "Dispensar"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Não perguntar novamente"
+msgstr "Não voltar a perguntar"
 
 #: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Emergency Calls"
@@ -251,7 +251,7 @@ msgstr "Falha ao ativar a chamada."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr "Falha ao criar uma chamada de conferência."
+msgstr "Falha ao criar a chamada de conferência."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
@@ -388,7 +388,7 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:459
 msgid "Please wait"
-msgstr "Por favor aguarde"
+msgstr "Por favor, aguarde"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
@@ -418,7 +418,7 @@ msgstr "Procurar"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:48
 msgid "Search..."
-msgstr "Procurar ..."
+msgstr "Procurar..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
