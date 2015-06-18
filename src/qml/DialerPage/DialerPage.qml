@@ -377,8 +377,8 @@ PageWithBottomEdge {
                     mainView.callVoicemail()
                 } else if (keycode == Qt.Key_0) {
                     // replace 0 by +
-                    dialNumber = dialNumber.substring(0, dialNumber.length - 1)
-                    dialNumber += "+"
+                    input.remove(input.cursorPosition - 1, input.cursorPosition)
+                    input.insert(input.cursorPosition, "+")
                 }
             }
         }
