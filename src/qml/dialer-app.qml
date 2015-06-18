@@ -258,7 +258,7 @@ MainView {
         if (telepathyHelper.flightMode) {
             pendingNumberToDial = number;
             telepathyHelper.flightMode = false;
-            PopupUtils.open(flightModeProgressDialog)
+            PopupUtils.open(flightModeProgressDialog, mainView, {"emergencyMode": true})
             return;
         }
 
@@ -305,6 +305,11 @@ MainView {
             return;
         }
 
+        if (telepathyHelper.flightMode) {
+            PopupUtils.open(Qt.createComponent("Dialogs/DisableFlightModeDialog.qml").createObject(mainView), mainView, {})
+            return
+        }
+
         // check if at least one account is selected
         if (multipleAccounts && !mainView.account) {
             Qt.inputMethod.hide()
@@ -328,6 +333,11 @@ MainView {
         }
 
         // avoid cleaning the keypadEntry in case there is no signal
+        if (!mainView.account) {
+            showNotification(i18n.tr("No network"), i18n.tr("There is currently no network."))
+            return
+        }
+
         if (!mainView.account.connected) {
             showNotification(i18n.tr("No network"),
                              telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
@@ -436,6 +446,7 @@ MainView {
         id: flightModeProgressDialog
         Dialog {
             id: flightModeProgressIndicator
+            property bool emergencyMode: false
             visible: false
             title: i18n.tr("Disabling flight mode")
             ActivityIndicator {
@@ -444,6 +455,10 @@ MainView {
             Connections {
                 target: telepathyHelper
                 onEmergencyCallsAvailableChanged: {
+                    if (!emergencyMode) {
+                        PopupUtils.close(flightModeProgressIndicator)
+                        return
+                    }
                     flightModeTimer.start()
                 }
             }
