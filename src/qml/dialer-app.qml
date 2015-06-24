@@ -518,11 +518,11 @@ MainView {
 
     Connections {
         target: telepathyHelper
-        onAccountReady: {
+        onSetupReady: {
             accountReady = true;
             mainView.applicationReady()
 
-            if (!telepathyHelper.connected) {
+            if (!telepathyHelper.ready) {
                 return;
             }
 
