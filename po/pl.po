@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-06-10 15:13+0000\n"
-"Last-Translator: GTriderXC <gtriderxc@yahoo.com>\n"
+"PO-Revision-Date: 2015-06-25 09:33+0000\n"
+"Last-Translator: Bartosz Kosiorek <Unknown>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-06-19 05:02+0000\n"
-"X-Generator: Launchpad (build 17570)\n"
+"X-Launchpad-Export-Date: 2015-06-26 05:01+0000\n"
+"X-Generator: Launchpad (build 17578)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -114,7 +114,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Aktywny"
+msgstr "Aktywne"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
@@ -152,7 +152,7 @@ msgstr "Połączenie nieudane"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr "Zawieszenie połączenia nie powiodło się."
+msgstr "Zawieszenie połączenia nie powiodło się"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
 #: ../src/qml/LiveCallPage/LiveCall.qml:445
@@ -176,7 +176,7 @@ msgstr "Anuluj"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Wykonywać wszystkie połączenia z %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:54
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -226,7 +226,7 @@ msgstr "Szczegóły"
 
 #: ../src/qml/dialer-app.qml:423
 msgid "Disabling flight mode"
-msgstr "Wyłączanie trybu samolotowego."
+msgstr "Wyłączanie trybu samolotowego"
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
 #: ../src/qml/dialer-app.qml:496
@@ -235,7 +235,7 @@ msgstr "Odrzuć"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Pomijanie tego pytania w przyszłości"
+msgstr "Pomijaj to pytanie w przyszłości"
 
 #: ../src/qml/DialerPage/DialerPage.qml:71
 msgid "Emergency Calls"
@@ -319,12 +319,12 @@ msgstr "Nieodebrane"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Telefon komórkowy"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "Brak"
+msgstr "Nie"
 
 #: ../src/qml/dialer-app.qml:294
 msgid "No SIM card selected"
@@ -377,7 +377,7 @@ msgstr "Aplikacja telefonu"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefon;Dzwonić"
+msgstr "Telefon;Komórka;Dzwonić"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -396,7 +396,7 @@ msgstr "Proszę czekać"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
-msgstr "Prywatny"
+msgstr "Prywatne"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:164
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
@@ -433,9 +433,8 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Proszę wybrać domyślną kartę SIM dla wszystkich połączeń wychodzących. Wybór "
-"można zawsze zmienić w <a href=\"system_settings\">ustawieniach "
-"systemowych</a>."
+"Proszę wybrać domyślną kartę SIM dla połączeń wychodzących. Wybór można "
+"zmienić w <a href=\"system_settings\">Ustawienia systemowe</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:336
 msgid "Send message"
@@ -451,23 +450,23 @@ msgstr "Udostępnij"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Przesuń aby skasować"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Przesuń aby wyświetlić dostępne opcje"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
-msgstr "Przełącz źródło dźwięku:"
+msgstr "Zmień źródło dźwięku:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
-msgstr "Przełącz połączenia"
+msgstr "Zmień połączenia"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Przełącz na domyślną kartę SIM"
+msgstr "Przełącz na domyślną kartę SIM:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
@@ -480,7 +479,7 @@ msgstr "Brak zasięgu sieci dla %1"
 
 #: ../src/qml/dialer-app.qml:317
 msgid "There is currently no network."
-msgstr "Brak połączenia z siecią"
+msgstr "Brak połączenia z siecią."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
