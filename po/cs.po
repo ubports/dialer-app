@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-05-11 18:05+0000\n"
-"Last-Translator: Matiseli <sisolpes@seznam.cz>\n"
+"PO-Revision-Date: 2015-07-07 10:24+0000\n"
+"Last-Translator: Vojtěch Daněk <vdanek@outlook.com>\n"
 "Language-Team: Czech <cs@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-06-19 05:01+0000\n"
-"X-Generator: Launchpad (build 17570)\n"
+"X-Launchpad-Export-Date: 2015-07-08 05:47+0000\n"
+"X-Generator: Launchpad (build 17608)\n"
 "Language: cs\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -275,7 +275,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Hotovo"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -319,7 +319,7 @@ msgstr "Zmeškané"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobilní"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -450,11 +450,11 @@ msgstr "Sdílet"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Smazat přetáhnutím"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Přetáhněte k zjištění akce"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
