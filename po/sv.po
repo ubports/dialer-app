@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-04-03 05:35+0000\n"
-"Last-Translator: Josef Andersson <Unknown>\n"
+"PO-Revision-Date: 2015-07-12 22:20+0000\n"
+"Last-Translator: Arve Eriksson <Unknown>\n"
 "Language-Team: Swedish\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-19 05:02+0000\n"
-"X-Generator: Launchpad (build 17570)\n"
+"X-Launchpad-Export-Date: 2015-07-13 05:36+0000\n"
+"X-Generator: Launchpad (build 17620)\n"
 "Language: sv\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -51,7 +51,7 @@ msgstr[0] "%1 sek"
 msgstr[1] "%1 sek"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -118,7 +118,7 @@ msgctxt "All Calls"
 msgid "All"
 msgstr "Alla"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Alla"
@@ -127,15 +127,15 @@ msgstr "Alla"
 msgid "Bluetooth device"
 msgstr "Bluetoooth-enhet"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:581
 msgid "Call Barring"
 msgstr "Annat samtal blockerar"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/dialer-app.qml:592
 msgid "Call Forwarding"
 msgstr "Samtal vidarekopplas"
 
-#: ../src/qml/dialer-app.qml:586
+#: ../src/qml/dialer-app.qml:603
 msgid "Call Waiting"
 msgstr "Samtal väntar"
 
@@ -157,15 +157,16 @@ msgstr "Samtal väntar misslyckades"
 msgid "Calling"
 msgstr "Ringer upp"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:614
 msgid "Calling Line Presentation"
 msgstr "Visa nummer"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:626
 msgid "Calling Line Restriction"
 msgstr "Dolt nummer"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:86
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
+#: ../src/qml/ContactsPage/ContactsPage.qml:106
 msgid "Cancel"
 msgstr "Avbryt"
 
@@ -175,7 +176,7 @@ msgstr "Avbryt"
 msgid "Change all Call associations to %1?"
 msgstr "Ändra alla uppringningassociationer till %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:54
+#: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Stäng"
@@ -189,11 +190,11 @@ msgstr "Konferens"
 msgid "Conference call failure"
 msgstr "Telefonkonferenssamtalet misslyckades"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:620
 msgid "Connected Line Presentation"
 msgstr "Visa nummer"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:632
 msgid "Connected Line Restriction"
 msgstr "Dolt nummer"
 
@@ -202,8 +203,8 @@ msgstr "Dolt nummer"
 msgid "Contact Details"
 msgstr "Kontaktuppgifter"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:41
+#: ../src/qml/ContactsPage/ContactsPage.qml:53
+#: ../src/qml/DialerPage/DialerPage.qml:42
 msgid "Contacts"
 msgstr "Kontakter"
 
@@ -221,12 +222,12 @@ msgstr "Ta bort"
 msgid "Details"
 msgstr "Detaljer"
 
-#: ../src/qml/dialer-app.qml:423
+#: ../src/qml/dialer-app.qml:440
 msgid "Disabling flight mode"
 msgstr "Stänger av flygsäkert läge"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
-#: ../src/qml/dialer-app.qml:496
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:499
+#: ../src/qml/dialer-app.qml:513
 msgid "Dismiss"
 msgstr "Avfärda"
 
@@ -234,15 +235,15 @@ msgstr "Avfärda"
 msgid "Don't ask again"
 msgstr "Fråga inte igen"
 
-#: ../src/qml/DialerPage/DialerPage.qml:71
+#: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
 msgstr "Nödsamtal"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:277
 msgid "Enter a number"
 msgstr "Ange nummer"
 
-#: ../src/qml/dialer-app.qml:479
+#: ../src/qml/dialer-app.qml:496
 msgid "Error"
 msgstr "Fel"
 
@@ -258,11 +259,11 @@ msgstr "Misslyckades med att skapa ett konferenssamtal."
 msgid "Failed to place the active call on hold."
 msgstr "Misslyckades med att placera det aktiva samtalet i kö."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
 msgstr "Favoriter"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
 msgstr "Flygplansläge"
 
@@ -272,19 +273,19 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Uppfattat"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Inkommande"
 
-#: ../src/qml/dialer-app.qml:480
+#: ../src/qml/dialer-app.qml:497
 msgid "Invalid USSD code"
 msgstr "Ogiltig USSD-kod"
 
@@ -292,7 +293,7 @@ msgstr "Ogiltig USSD-kod"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:84
+#: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
 msgstr "Knappsats"
 
@@ -308,7 +309,7 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "Koppla ihop samtal"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
@@ -316,14 +317,14 @@ msgstr "Missade"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr "Nej"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/dialer-app.qml:311
 msgid "No SIM card selected"
 msgstr "Inget SIM-kort valt"
 
@@ -331,7 +332,7 @@ msgstr "Inget SIM-kort valt"
 msgid "No calls"
 msgstr "Inga samtal"
 
-#: ../src/qml/DialerPage/DialerPage.qml:86 ../src/qml/dialer-app.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:332
 msgid "No network"
 msgstr "Inget nätverk"
 
@@ -347,7 +348,7 @@ msgstr "OK"
 msgid "On hold"
 msgstr "Väntar"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Utgående"
@@ -387,7 +388,7 @@ msgstr ""
 "href=\"system_settings\">Systeminställningar &gt; Säkerhet &amp; "
 "sekretess</a>."
 
-#: ../src/qml/dialer-app.qml:459
+#: ../src/qml/dialer-app.qml:476
 msgid "Please wait"
 msgstr "Var god vänta"
 
@@ -395,12 +396,12 @@ msgstr "Var god vänta"
 msgid "Private"
 msgstr "Privat"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Dolt nummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:121
+#: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Senast"
@@ -409,15 +410,15 @@ msgstr "Senast"
 msgid "SIM Card is locked"
 msgstr "SIM-kortet är låst"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78
+#: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
 msgstr "SIM-kort låst"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:60
+#: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
 msgstr "Sök"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:48
+#: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
 msgstr "Sök..."
 
@@ -437,21 +438,22 @@ msgstr ""
 msgid "Send message"
 msgstr "Skicka meddelande"
 
-#: ../src/qml/DialerPage/DialerPage.qml:46
+#: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
 msgstr "Inställningar"
 
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "Dela"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Svep för att ta bort"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Svep för att visa åtgärder"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
@@ -469,12 +471,12 @@ msgstr "Byt till standard-SIM:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:333
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Just nu finns inget nätverk på %1"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:334
 msgid "There is currently no network."
 msgstr "Just nu finns inget nätverk."
 
@@ -490,7 +492,7 @@ msgstr "Ubuntu Phone"
 msgid "Unknown device"
 msgstr "Okänd enhet"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Okänt nummer"
@@ -512,7 +514,7 @@ msgstr "Ja"
 msgid "Yesterday"
 msgstr "Igår"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/dialer-app.qml:311
 msgid "You need to select a SIM card"
 msgstr "Du måste välja ett SIM-kort"
 
