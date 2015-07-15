@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-02-08 11:53+0000\n"
+"PO-Revision-Date: 2015-06-23 16:59+0000\n"
 "Last-Translator: Meriuță Cornel <meriutacornel@neacornel.eu>\n"
 "Language-Team: Romanian <ro@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-24 05:35+0000\n"
+"X-Generator: Launchpad (build 17572)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -275,7 +275,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Am înțeles"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -319,7 +319,7 @@ msgstr "Pierdute"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -451,11 +451,11 @@ msgstr "Partajare"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Glisați pentru a șterge"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Glisați pentru a descoperi acțiuni"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"

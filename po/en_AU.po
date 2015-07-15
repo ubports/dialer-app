@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-02-04 10:06+0000\n"
+"PO-Revision-Date: 2015-06-26 22:53+0000\n"
 "Last-Translator: Jared Norris <jarednorris@ubuntu.com>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:59+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-27 05:37+0000\n"
+"X-Generator: Launchpad (build 17578)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -271,7 +271,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Got it"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -315,7 +315,7 @@ msgstr "Missed"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobile"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -445,11 +445,11 @@ msgstr "Share"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Swipe to delete"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Swipe to reveal actions"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"

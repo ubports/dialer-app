@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-19 05:02+0000\n"
+"X-Generator: Launchpad (build 17570)\n"
 "Language: is\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -118,12 +118,12 @@ msgstr "Virkt"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Allt"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:72
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Allir"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:326
 msgid "Bluetooth device"

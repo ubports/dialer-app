@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the dialer-app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
 # Michael Bauer <fios@akerbeltz.org>, 2014.
-# GunChleoc <fios@foramnagaidhlig.net>, 2014.
+# GunChleoc <fios@foramnagaidhlig.net>, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-06-01 18:44+0200\n"
-"PO-Revision-Date: 2015-02-27 00:41+0000\n"
-"Last-Translator: Akerbeltz <fios@akerbeltz.org>\n"
+"PO-Revision-Date: 2015-06-19 14:42+0000\n"
+"Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2015-06-05 05:58+0000\n"
-"X-Generator: Launchpad (build 17540)\n"
+"X-Launchpad-Export-Date: 2015-06-20 05:33+0000\n"
+"X-Generator: Launchpad (build 17572)\n"
 "Language: gd\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -280,7 +280,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Tha mi agaibh"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -324,7 +324,7 @@ msgstr "Air a call"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Inneal-làimhe"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -456,11 +456,11 @@ msgstr "Co-roinn"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Grad-shlaighd airson a sguabadh às"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Grad-shlaighd gus na gnìomhan a shealltainn"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
