@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-06-01 18:44+0200\n"
+"POT-Creation-Date: 2015-07-15 10:53-0300\n"
 "PO-Revision-Date: 2015-06-08 11:06+0000\n"
 "Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-06-19 05:02+0000\n"
-"X-Generator: Launchpad (build 17570)\n"
+"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -54,7 +54,7 @@ msgstr[1] "%1 секунди"
 msgstr[2] "%1 секунд"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -121,7 +121,7 @@ msgctxt "All Calls"
 msgid "All"
 msgstr "Усі"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Усі"
@@ -130,15 +130,15 @@ msgstr "Усі"
 msgid "Bluetooth device"
 msgstr "Пристрій Bluetooth"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:596
 msgid "Call Barring"
 msgstr "Заборона викликів"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/dialer-app.qml:607
 msgid "Call Forwarding"
 msgstr "Переадресація викликів"
 
-#: ../src/qml/dialer-app.qml:586
+#: ../src/qml/dialer-app.qml:618
 msgid "Call Waiting"
 msgstr "Очікування викликів"
 
@@ -160,15 +160,17 @@ msgstr "Не вдалося утримати дзвінок"
 msgid "Calling"
 msgstr "Дзвонимо"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:629
 msgid "Calling Line Presentation"
 msgstr "Представлення лінії викликів"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:641
 msgid "Calling Line Restriction"
 msgstr "Обмеження лінії викликів"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:86
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
+#: ../src/qml/ContactsPage/ContactsPage.qml:106
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
 msgstr "Скасувати"
 
@@ -178,7 +180,7 @@ msgstr "Скасувати"
 msgid "Change all Call associations to %1?"
 msgstr "Пов’язати усі дзвінки з %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:54
+#: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Закрити"
@@ -192,21 +194,21 @@ msgstr "Конференція"
 msgid "Conference call failure"
 msgstr "Не вдалося організувати конференцію"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:635
 msgid "Connected Line Presentation"
 msgstr "Представлення з’єднаної лінії"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:647
 msgid "Connected Line Restriction"
 msgstr "Обмеження з’єднаної лінії"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Подробиці щодо запису контакту"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:41
+#: ../src/qml/ContactsPage/ContactsPage.qml:53
+#: ../src/qml/DialerPage/DialerPage.qml:42
 msgid "Contacts"
 msgstr "Контакти"
 
@@ -216,20 +218,24 @@ msgstr "ДЕЄЖЗ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
-#: ../src/qml/HistoryPage/HistoryPage.qml:317
+#: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Вилучити"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:326
+#: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
 msgstr "Подробиці"
 
-#: ../src/qml/dialer-app.qml:423
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
+msgid "Disable"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
 msgstr "Вимикаємо режим польоту"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
-#: ../src/qml/dialer-app.qml:496
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
+#: ../src/qml/dialer-app.qml:528
 msgid "Dismiss"
 msgstr "Відкинути"
 
@@ -237,15 +243,19 @@ msgstr "Відкинути"
 msgid "Don't ask again"
 msgstr "Більше не питати"
 
-#: ../src/qml/DialerPage/DialerPage.qml:71
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+msgid "Edit"
+msgstr "Змінити"
+
+#: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
 msgstr "Екстрені виклики"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:277
 msgid "Enter a number"
 msgstr "Введіть номер"
 
-#: ../src/qml/dialer-app.qml:479
+#: ../src/qml/dialer-app.qml:511
 msgid "Error"
 msgstr "Помилка"
 
@@ -261,11 +271,15 @@ msgstr "Не вдалося створити дзвінок-конференці
 msgid "Failed to place the active call on hold."
 msgstr "Не вдалося поставити поточний дзвінок на паузу."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
 msgstr "Улюблені"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
+msgid "Flight Mode"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
 msgstr "Автономний режим"
 
@@ -281,13 +295,13 @@ msgstr "Виконано"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Вхідні"
 
-#: ../src/qml/dialer-app.qml:480
+#: ../src/qml/dialer-app.qml:512
 msgid "Invalid USSD code"
 msgstr "Некоректний код USSD"
 
@@ -295,7 +309,7 @@ msgstr "Некоректний код USSD"
 msgid "JKL"
 msgstr "МНОП"
 
-#: ../src/qml/DialerPage/DialerPage.qml:84
+#: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
 msgstr "Цифрова клавіатура"
 
@@ -311,7 +325,7 @@ msgstr "РСТУ"
 msgid "Merge calls"
 msgstr "Об’єднати виклики"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
@@ -326,7 +340,7 @@ msgstr "Мобільний"
 msgid "No"
 msgstr "Ні"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/dialer-app.qml:316
 msgid "No SIM card selected"
 msgstr "Не вибрано SIM-картки"
 
@@ -334,7 +348,8 @@ msgstr "Не вибрано SIM-картки"
 msgid "No calls"
 msgstr "Немає дзвінків"
 
-#: ../src/qml/DialerPage/DialerPage.qml:86 ../src/qml/dialer-app.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "Немає мережі"
 
@@ -350,7 +365,7 @@ msgstr "Гаразд"
 msgid "On hold"
 msgstr "Очікування"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "Вихідні"
@@ -392,7 +407,7 @@ msgstr ""
 "href=\"system_settings\">Системні параметра &gt; Безпека &amp; "
 "Конфіденційність</a>."
 
-#: ../src/qml/dialer-app.qml:459
+#: ../src/qml/dialer-app.qml:491
 msgid "Please wait"
 msgstr "Будь ласка, зачекайте"
 
@@ -400,12 +415,12 @@ msgstr "Будь ласка, зачекайте"
 msgid "Private"
 msgstr "Конфіденційне"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Особистий номер"
 
-#: ../src/qml/DialerPage/DialerPage.qml:121
+#: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Нещодавні"
@@ -414,15 +429,19 @@ msgstr "Нещодавні"
 msgid "SIM Card is locked"
 msgstr "SIM-картку заблоковано"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78
+#: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
 msgstr "SIM-картку заблоковано"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:60
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
+msgid "Save"
+msgstr "Зберегти"
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
 msgstr "Шукати"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:48
+#: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
 msgstr "Шукати…"
 
@@ -439,14 +458,15 @@ msgstr ""
 "можна будь-коли за допомогою <a href=\"system_settings\">Системних "
 "параметрів</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:336
+#: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
 msgstr "Надіслати повідомлення"
 
-#: ../src/qml/DialerPage/DialerPage.qml:46
+#: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
 msgstr "Параметри"
 
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "Поділитися"
@@ -475,12 +495,12 @@ msgstr "Перемкнутися на типову SIM-картку:"
 msgid "TUV"
 msgstr "ШЩ"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:343
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Зараз на %1 немає доступу до мережі"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
 msgid "There is currently no network."
 msgstr "Зараз немає доступу до мережі."
 
@@ -496,7 +516,7 @@ msgstr "Ubuntu Phone"
 msgid "Unknown device"
 msgstr "Невідомий пристрій"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Невідомий номер"
@@ -518,7 +538,11 @@ msgstr "Так"
 msgid "Yesterday"
 msgstr "Вчора"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
+msgid "You have to disable flight mode in order to make calls"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
 msgstr "Вам слід вибрати SIM-картку"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-06-01 18:44+0200\n"
+"POT-Creation-Date: 2015-07-15 10:53-0300\n"
 "PO-Revision-Date: 2015-06-29 04:53+0000\n"
 "Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-06-30 05:51+0000\n"
-"X-Generator: Launchpad (build 17578)\n"
+"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -47,7 +47,7 @@ msgid_plural "%1 secs"
 msgstr[0] "%1 秒"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -114,7 +114,7 @@ msgctxt "All Calls"
 msgid "All"
 msgstr "全部"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
 msgstr "全部"
@@ -123,15 +123,15 @@ msgstr "全部"
 msgid "Bluetooth device"
 msgstr "蓝牙设备"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:596
 msgid "Call Barring"
 msgstr "呼叫限制"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/dialer-app.qml:607
 msgid "Call Forwarding"
 msgstr "呼叫转移"
 
-#: ../src/qml/dialer-app.qml:586
+#: ../src/qml/dialer-app.qml:618
 msgid "Call Waiting"
 msgstr "呼叫等待"
 
@@ -153,15 +153,17 @@ msgstr "通话保持失败"
 msgid "Calling"
 msgstr "正在呼叫"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:629
 msgid "Calling Line Presentation"
 msgstr "来电显示"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:641
 msgid "Calling Line Restriction"
 msgstr "限制显示身份"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:86
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
+#: ../src/qml/ContactsPage/ContactsPage.qml:106
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
 msgstr "取消"
 
@@ -171,7 +173,7 @@ msgstr "取消"
 msgid "Change all Call associations to %1?"
 msgstr "是否关联所有呼叫到 %1 ？"
 
-#: ../src/qml/DialerPage/DialerPage.qml:54
+#: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "关闭"
@@ -185,21 +187,21 @@ msgstr "会议"
 msgid "Conference call failure"
 msgstr "多方通话失败"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:635
 msgid "Connected Line Presentation"
 msgstr "通话时来电显示"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:647
 msgid "Connected Line Restriction"
 msgstr "通话时限制显示身份"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "联系人详情"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:41
+#: ../src/qml/ContactsPage/ContactsPage.qml:53
+#: ../src/qml/DialerPage/DialerPage.qml:42
 msgid "Contacts"
 msgstr "联系人"
 
@@ -209,20 +211,24 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
-#: ../src/qml/HistoryPage/HistoryPage.qml:317
+#: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "删除"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:326
+#: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
 msgstr "详细信息"
 
-#: ../src/qml/dialer-app.qml:423
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
+msgid "Disable"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
 msgstr "禁用飞行模式"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
-#: ../src/qml/dialer-app.qml:496
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
+#: ../src/qml/dialer-app.qml:528
 msgid "Dismiss"
 msgstr "忽略"
 
@@ -230,15 +236,19 @@ msgstr "忽略"
 msgid "Don't ask again"
 msgstr "不再询问"
 
-#: ../src/qml/DialerPage/DialerPage.qml:71
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+msgid "Edit"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
 msgstr "紧急呼叫"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:277
 msgid "Enter a number"
 msgstr "输入号码"
 
-#: ../src/qml/dialer-app.qml:479
+#: ../src/qml/dialer-app.qml:511
 msgid "Error"
 msgstr "错误"
 
@@ -254,11 +264,15 @@ msgstr "创建多方通话失败。"
 msgid "Failed to place the active call on hold."
 msgstr "无法将活动通话置入等待。"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
 msgstr "常用"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
+msgid "Flight Mode"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
 msgstr "飞行模式"
 
@@ -274,13 +288,13 @@ msgstr "知道了"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "来电"
 
-#: ../src/qml/dialer-app.qml:480
+#: ../src/qml/dialer-app.qml:512
 msgid "Invalid USSD code"
 msgstr "无效的 USSD 码"
 
@@ -288,7 +302,7 @@ msgstr "无效的 USSD 码"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:84
+#: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
 msgstr "拨号键盘"
 
@@ -304,7 +318,7 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "合并通话"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
@@ -319,7 +333,7 @@ msgstr "移动电话"
 msgid "No"
 msgstr "否"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/dialer-app.qml:316
 msgid "No SIM card selected"
 msgstr "未选择SIM卡"
 
@@ -327,7 +341,8 @@ msgstr "未选择SIM卡"
 msgid "No calls"
 msgstr "无呼叫"
 
-#: ../src/qml/DialerPage/DialerPage.qml:86 ../src/qml/dialer-app.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "无网络"
 
@@ -343,7 +358,7 @@ msgstr "确定"
 msgid "On hold"
 msgstr "等待"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "呼出"
@@ -381,7 +396,7 @@ msgstr ""
 "请解锁您的 SIM 卡以收发信息。您可以在顶部的网络指示器，或通过<a href=\"system_settings\">系统设置 &gt; "
 "安全和隐私</a> 页面来解锁您的 SIM 卡。"
 
-#: ../src/qml/dialer-app.qml:459
+#: ../src/qml/dialer-app.qml:491
 msgid "Please wait"
 msgstr "请稍候"
 
@@ -389,12 +404,12 @@ msgstr "请稍候"
 msgid "Private"
 msgstr "私人"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "私密号码"
 
-#: ../src/qml/DialerPage/DialerPage.qml:121
+#: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "最近"
@@ -403,15 +418,19 @@ msgstr "最近"
 msgid "SIM Card is locked"
 msgstr "SIM 卡被锁定"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78
+#: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
 msgstr "SIM 卡被锁定"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:60
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
+msgid "Save"
+msgstr ""
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
 msgstr "搜索"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:48
+#: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
 msgstr "搜索..."
 
@@ -425,14 +444,15 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr "选择默认拨打电话的 SIM 卡。您可以随时在<a href=\"system_settings\">系统设置</a>中修改。"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:336
+#: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
 msgstr "发送信息"
 
-#: ../src/qml/DialerPage/DialerPage.qml:46
+#: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
 msgstr "设置"
 
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "分享"
@@ -461,12 +481,12 @@ msgstr "切换到默认 SIM 卡："
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:343
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "%1 目前无网络"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
 msgid "There is currently no network."
 msgstr "目前无网络。"
 
@@ -482,7 +502,7 @@ msgstr "Ubuntu 手机"
 msgid "Unknown device"
 msgstr "未知设备"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "未知号码"
@@ -504,7 +524,11 @@ msgstr "是"
 msgid "Yesterday"
 msgstr "昨天"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
+msgid "You have to disable flight mode in order to make calls"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
 msgstr "您需要选择SIM卡"
 
