@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-06-08 10:52+0000\n"
+"PO-Revision-Date: 2015-07-16 09:21+0000\n"
 "Last-Translator: Simos Xenitellis <Unknown>\n"
 "Language-Team: Greek <el@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"X-Launchpad-Export-Date: 2015-07-17 05:37+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -224,7 +224,7 @@ msgstr "Λεπτομέρειες"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Απενεργοποίηση"
 
 #: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
@@ -241,7 +241,7 @@ msgstr "Να μην ερωτηθώ ξανά"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Επεξεργασία"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -273,7 +273,7 @@ msgstr "Αγαπημένα"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Λειτουργία πτήσης"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -430,7 +430,7 @@ msgstr "Κλειδωμένη SIM"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -536,6 +536,7 @@ msgstr "Χθες"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
+"Πρέπει να απενεργοποιήσετε τη λειτουργία πτήσης για να κάνετε κλήσεις"
 
 #: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
