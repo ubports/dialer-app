@@ -1,3 +1,20 @@
+dialer-app (0.1+15.10.20150720-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gustavo Pichorim Boiko ]
+  * Always force dialer-app to go back to the dialpad view when all
+    calls end. (LP: #1471306)
+  * Update pot file.
+
+  [ Sebastien Bacher ]
+  * Use "Phone" rather than "Keypad" for the default title, as
+    recommended by design. Change "Flight Mode" to use proper casing
+    (LP: #1396615)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 20 Jul 2015 15:04:16 +0000
+
 dialer-app (0.1+15.10.20150618-0ubuntu1) wily; urgency=medium
 
   [ CI Train Bot ]
