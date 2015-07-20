@@ -102,6 +102,9 @@ class LiveCall(MainView):
         """Return the swap calls button"""
         return self._get_call_hold_button()
 
+    def _get_new_call_button(self):
+        return self.wait_select_single(objectName='newCallButton')
+
     def get_multi_call_display(self):
         """Return the multi call display panel"""
         return self.wait_select_single(objectName='multiCallDisplay')
@@ -122,6 +125,10 @@ class LiveCall(MainView):
     def click_swap_calls_button(self):
         """Click the swap calls button"""
         return self._click_button(self._get_swap_calls_button())
+
+    def click_new_call_button(self):
+        """Click the new call button"""
+        return self._click_button(self._get_new_call_button())
 
 
 class PageWithBottomEdge(MainView):
