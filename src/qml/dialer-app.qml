@@ -166,10 +166,6 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
-        // check for global emergency numbers first
-        if (phoneUtils.isEmergencyNumber(number)) {
-            return true;
-        }
         // then check for specific account emergency numbers
         for (var i in telepathyHelper.accounts) {
             var account = telepathyHelper.accounts[i];
@@ -178,7 +174,10 @@ MainView {
                     return true;
                 }
             }
-
+            // check for global emergency numbers first
+            if (phoneUtils.isEmergencyNumber(number, account.countryCode)) {
+                return true;
+            }
         }
         return false;
     }
