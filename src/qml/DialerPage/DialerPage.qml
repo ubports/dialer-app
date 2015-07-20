@@ -74,15 +74,13 @@ PageWithBottomEdge {
                 return " "
             }
         } else if (telepathyHelper.flightMode) {
-            return i18n.tr("Flight mode")
+            return i18n.tr("Flight Mode")
         } else if (mainView.account && mainView.account.simLocked) {
             return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multipleAccounts && !mainView.account) {
-            // TODO: check what should be displayed when there are multiple accounts
-            // but no default selected
-            return i18n.tr("Keypad")
+            return i18n.tr("Phone")
         }
         return i18n.tr("No network")
     }
