@@ -166,7 +166,10 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
-        // then check for specific account emergency numbers
+        // TODO should we only check for emergency numbers
+        // in the selected account?
+
+        // check for specific account emergency numbers
         for (var i in telepathyHelper.accounts) {
             var account = telepathyHelper.accounts[i];
             for (var j in account.emergencyNumbers) {
@@ -174,7 +177,7 @@ MainView {
                     return true;
                 }
             }
-            // check for global emergency numbers first
+            // then check using libphonenumber
             if (phoneUtils.isEmergencyNumber(number, account.countryCode)) {
                 return true;
             }
