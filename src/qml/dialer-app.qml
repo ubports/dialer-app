@@ -272,9 +272,12 @@ MainView {
 
         animateLiveCall();
 
-        // now try to use one of the connected accounts
         var account = null;
-        if (telepathyHelper.activeAccounts.length > 0) {
+        // check if the selected account is active and can make emergency calls
+        if (mainView.account && mainView.account.active && mainView.account.emergencyCallsAvailable) {
+            account = mainView.account
+        } else if (telepathyHelper.activeAccounts.length > 0) {
+            // now try to use one of the connected accounts
             account = telepathyHelper.activeAccounts[0];
         } else {
             // if no account is active, use any account that can make emergency calls
