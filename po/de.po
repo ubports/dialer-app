@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-21 05:35+0000\n"
+"X-Launchpad-Export-Date: 2015-07-22 05:37+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - Wartend"
@@ -122,7 +122,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Alle"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
 msgstr "Bluetooth-Gerät"
 
@@ -151,7 +151,7 @@ msgid "Call holding failure"
 msgstr "Fehler beim Halten des Anrufs"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:446
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Rufaufbau zu"
@@ -247,7 +247,7 @@ msgstr "Bearbeiten"
 msgid "Emergency Calls"
 msgstr "Notrufe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:275
 msgid "Enter a number"
 msgstr "Nummer eingeben"
 
@@ -271,6 +271,7 @@ msgstr "Halten des Anrufs fehlgeschlagen."
 msgid "Favorites"
 msgstr "Favoriten"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Flugzeugmodus"
@@ -317,7 +318,7 @@ msgstr "Später"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:549
 msgid "Merge calls"
 msgstr "Anrufe zusammenführen"
 
@@ -344,7 +345,7 @@ msgstr "Keine SIM-Karte ausgewählt"
 msgid "No calls"
 msgstr "Keine Anrufe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:337
 #: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "Kein Netz"
@@ -370,7 +371,7 @@ msgstr "Ausgehend"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -378,7 +379,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefonanwendung"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Phone Speaker"
 msgstr "Lautsprecher"
 
@@ -415,7 +416,7 @@ msgstr "Privat"
 msgid "Private number"
 msgstr "Private Nummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Kürzlich"
@@ -477,7 +478,7 @@ msgstr "Wischen um Aktionen zu zeigen"
 msgid "Switch audio source:"
 msgstr "Tonquelle wechseln:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:534
 msgid "Switch calls"
 msgstr "Anrufe wechseln"
 
@@ -502,11 +503,11 @@ msgstr "Es ist zurzeit kein Netz verfügbar."
 msgid "Today"
 msgstr "Heute"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:329
 msgid "Ubuntu Phone"
 msgstr "Ubuntu-Telefon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Unknown device"
 msgstr "Unbekanntes Gerät"
 
