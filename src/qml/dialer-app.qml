@@ -173,7 +173,7 @@ MainView {
         for (var i in telepathyHelper.accounts) {
             var account = telepathyHelper.accounts[i];
             for (var j in account.emergencyNumbers) {
-                if (phoneUtils.comparePhoneNumbers(number, account.emergencyNumbers[j])) {
+                if (number == account.emergencyNumbers[j]) {
                     return true;
                 }
             }
