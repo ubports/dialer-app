@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-07-16 06:17+0000\n"
-"Last-Translator: Cheng Lu <chenglu1990@gmail.com>\n"
+"PO-Revision-Date: 2015-07-23 03:31+0000\n"
+"Last-Translator: Ian Li <Unknown>\n"
 "Language-Team: Chinese (Simplified) <zh_CN@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-07-17 05:37+0000\n"
+"X-Launchpad-Export-Date: 2015-07-23 05:44+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,7 +23,7 @@ msgid "#"
 msgstr "＃"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 通话保持"
@@ -119,7 +119,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "全部"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
 msgstr "蓝牙设备"
 
@@ -148,7 +148,7 @@ msgid "Call holding failure"
 msgstr "通话保持失败"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:446
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "正在呼叫"
@@ -244,7 +244,7 @@ msgstr "编辑"
 msgid "Emergency Calls"
 msgstr "紧急呼叫"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:275
 msgid "Enter a number"
 msgstr "输入号码"
 
@@ -268,6 +268,7 @@ msgstr "无法将活动通话置入等待。"
 msgid "Favorites"
 msgstr "常用"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "飞行模式"
@@ -314,7 +315,7 @@ msgstr "稍后"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:549
 msgid "Merge calls"
 msgstr "合并通话"
 
@@ -341,7 +342,7 @@ msgstr "未选择SIM卡"
 msgid "No calls"
 msgstr "无呼叫"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:337
 #: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "无网络"
@@ -367,7 +368,7 @@ msgstr "呼出"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "电话"
 
@@ -375,7 +376,7 @@ msgstr "电话"
 msgid "Phone App"
 msgstr "电话应用"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Phone Speaker"
 msgstr "扬声器"
 
@@ -409,7 +410,7 @@ msgstr "私人"
 msgid "Private number"
 msgstr "私密号码"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "最近"
@@ -469,7 +470,7 @@ msgstr "滑动显示操作"
 msgid "Switch audio source:"
 msgstr "切换声音源："
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:534
 msgid "Switch calls"
 msgstr "切换呼叫"
 
@@ -494,11 +495,11 @@ msgstr "目前无网络。"
 msgid "Today"
 msgstr "今天"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:329
 msgid "Ubuntu Phone"
 msgstr "Ubuntu 手机"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Unknown device"
 msgstr "未知设备"
 
@@ -535,9 +536,9 @@ msgstr "您需要选择SIM卡"
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
