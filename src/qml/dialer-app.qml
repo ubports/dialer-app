@@ -90,7 +90,7 @@ MainView {
         onSetupReady: {
             telepathyReady = true
             if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
-                settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
+                dualSimSettings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
         }
@@ -111,10 +111,15 @@ MainView {
     }
 
     Settings {
-        id: settings
+        id: dualSimSettings
         category: "DualSim"
         property bool dialPadDontAsk: false
         property int mainViewDontAskCount: 0
+    }
+
+    Settings {
+        id: generalSettings
+        property string lastCalledPhoneNumber: ""
     }
 
     PhoneUtils {
@@ -328,7 +333,7 @@ MainView {
             return
         }
 
-        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk && !skipDefaultSimDialog) {
+        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !dualSimSettings.dialPadDontAsk && !skipDefaultSimDialog) {
             var properties = {}
             properties["phoneNumber"] = number
             properties["accountId"] = mainView.account.accountId
@@ -370,6 +375,7 @@ MainView {
         }
 
         if (account && account.connected) {
+            generalSettings.lastCalledPhoneNumber = number
             callManager.startCall(number, account.accountId);
         }
     }

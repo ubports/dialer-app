@@ -403,19 +403,21 @@ PageWithBottomEdge {
                 horizontalCenter: parent.horizontalCenter
             }
             onClicked: {
+                if (dialNumber == "") {
+                    if (mainView.greeterMode) {
+                        return;
+                    }
+                    keypadEntry.value = generalSettings.lastCalledPhoneNumber
+                    return;
+                }
+
+                if (mainView.greeterMode && !mainView.isEmergencyNumber(dialNumber)) {
+                    keypadEntry.value = "";
+                    return;
+                }
+
                 console.log("Starting a call to " + keypadEntry.value);
                 mainView.call(keypadEntry.value);
-            }
-            enabled: {
-                if (dialNumber == "") {
-                    return false;
-                }
-
-                if (mainView.greeterMode) {
-                    return mainView.isEmergencyNumber(dialNumber);
-                }
-
-                return true;
             }
         }
     }
