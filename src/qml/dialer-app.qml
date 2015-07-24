@@ -426,13 +426,15 @@ MainView {
         }
     }
 
-    function switchToLiveCall() {
+    function switchToLiveCall(initialStatus, initialNumber) {
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             pageStackNormalMode.pop();
         }
 
         var properties = {}
+        properties["initialStatus"] = initialStatus
+        properties["initialNumber"] = initialNumber
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }

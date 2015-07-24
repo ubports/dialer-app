@@ -440,7 +440,6 @@ PageWithBottomEdge {
                     // this is a special case, we need to call using callEmergency() directly to avoid
                     // all network and dual sim checks we have in mainView.call()
                     mainView.callEmergency(keypadEntry.value)
-                    keypadEntry.value = ""
                     return;
                 }
 
@@ -475,7 +474,7 @@ PageWithBottomEdge {
         }
         ScriptAction {
             script: {
-                mainView.switchToLiveCall()
+                mainView.switchToLiveCall(i18n.tr("Calling"), keypadEntry.value)
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0
