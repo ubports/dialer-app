@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-07-04 23:14+0000\n"
+"PO-Revision-Date: 2015-07-23 22:27+0000\n"
 "Last-Translator: GTriderXC <gtriderxc@yahoo.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"X-Launchpad-Export-Date: 2015-07-24 05:42+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -24,7 +24,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - wstrzymane"
@@ -126,7 +126,7 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Wszystkie"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
 msgstr "Urządzenie bluetooth"
 
@@ -155,7 +155,7 @@ msgid "Call holding failure"
 msgstr "Zawieszenie połączenia nie powiodło się"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:446
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Wykonywanie połączenia"
@@ -228,7 +228,7 @@ msgstr "Szczegóły"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Wyłącz"
 
 #: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
@@ -245,13 +245,13 @@ msgstr "Nie pytaj ponownie"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Edytuj"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
 msgstr "Połączenia alarmowe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:275
 msgid "Enter a number"
 msgstr "Wprowadź numer"
 
@@ -275,9 +275,10 @@ msgstr "Wstrzymanie aktywnego połączenia nie powiodło się."
 msgid "Favorites"
 msgstr "Ulubione"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Tryb samolotu"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -321,7 +322,7 @@ msgstr "Później"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:549
 msgid "Merge calls"
 msgstr "Połącz rozmowy"
 
@@ -348,7 +349,7 @@ msgstr "Nie wybrano karty SIM"
 msgid "No calls"
 msgstr "Brak połączeń"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:337
 #: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "Brak sieci"
@@ -374,7 +375,7 @@ msgstr "Wychodzące"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -382,7 +383,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Aplikacja telefonu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Phone Speaker"
 msgstr "Głośnik telefonu"
 
@@ -418,7 +419,7 @@ msgstr "Prywatne"
 msgid "Private number"
 msgstr "Numer zastrzeżony"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Ostatnie"
@@ -433,7 +434,7 @@ msgstr "Karta SIM zablokowana"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Zapisz"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -480,7 +481,7 @@ msgstr "Przesuń aby wyświetlić dostępne opcje"
 msgid "Switch audio source:"
 msgstr "Zmień źródło dźwięku:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:534
 msgid "Switch calls"
 msgstr "Zmień połączenia"
 
@@ -505,11 +506,11 @@ msgstr "Brak połączenia z siecią."
 msgid "Today"
 msgstr "Dzisiaj"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:329
 msgid "Ubuntu Phone"
 msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Unknown device"
 msgstr "Nieznane urządzenie"
 
@@ -537,7 +538,7 @@ msgstr "Wczoraj"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Aby móc dzwonić, wyłącz tryb samolotu"
 
 #: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
