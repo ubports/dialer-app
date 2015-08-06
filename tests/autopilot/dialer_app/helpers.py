@@ -41,28 +41,39 @@ def wait_for_incoming_call():
         raise RuntimeError('timed out waiting for incoming phonesim call')
 
 
-def invoke_incoming_call(caller):
-    """Receive an incoming call from the given caller
-
-    :parameter caller: the phone number calling
-    """
-
+def run_script(script):
     # prepare and send a Qt GUI script to phonesim, over its private D-BUS
     # set up by ofono-phonesim-autostart
     script_dir = tempfile.mkdtemp(prefix="phonesim_script")
     os.chmod(script_dir, 0o755)
-    with open(os.path.join(script_dir, "call.js"), "w") as f:
-        f.write("""tabCall.gbIncomingCall.leCaller.text = "%s";
-tabCall.gbIncomingCall.pbIncomingCall.click();
-""" % (caller))
+    with open(os.path.join(script_dir, "script.js"), "w") as f:
+        f.write(script)
 
     with open("/run/lock/ofono-phonesim-dbus.address") as f:
         phonesim_bus = f.read().strip()
     bus = dbus.bus.BusConnection(phonesim_bus)
     script_proxy = bus.get_object("org.ofono.phonesim", "/")
     script_proxy.SetPath(script_dir)
-    script_proxy.Run("call.js")
+    script_proxy.Run("script.js")
     shutil.rmtree(script_dir)
+
+
+def invoke_incoming_call(caller):
+    """Receive an incoming call from the given caller
+
+    :parameter caller: the phone number calling
+    """
+
+    run_script("""tabCall.gbIncomingCall.leCaller.text = "%s";
+tabCall.gbIncomingCall.pbIncomingCall.click();
+""" % (caller))
+
+
+def hangup_call():
+    """Hangup an existing call. This only works when there is only one call"""
+
+    run_script("""tabCall.twCallMgt.selectColumn(0);
+tabCall.pbHangup.click();""")
 
 
 def accept_incoming_call():

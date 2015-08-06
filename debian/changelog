@@ -1,3 +1,43 @@
+dialer-app (0.1+15.10.20150720-0ubuntu2~gcc5.1) wily; urgency=medium
+
+  * No-change test rebuild for g++5 ABI transition
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 22 Jul 2015 23:18:09 +0000
+
+dialer-app (0.1+15.10.20150720-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gustavo Pichorim Boiko ]
+  * Always force dialer-app to go back to the dialpad view when all
+    calls end. (LP: #1471306)
+  * Update pot file.
+
+  [ Sebastien Bacher ]
+  * Use "Phone" rather than "Keypad" for the default title, as
+    recommended by design. Change "Flight Mode" to use proper casing
+    (LP: #1396615)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 20 Jul 2015 15:04:16 +0000
+
+dialer-app (0.1+15.10.20150618-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+  * Resync trunk.
+
+  [ Sebastien Bacher ]
+  * Insert '+' where the cursor is located (LP: #1459676)
+  * Tweak history-view section headers to be similar to the messaging
+    ones, use less spacing below the separator and smaller and non bold
+    font for the labels (LP: #1375848)
+
+  [ Tiago Salem Herrmann ]
+  * Ask users to disable flight mode before making calls. (LP: #1452372)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 18 Jun 2015 20:01:23 +0000
+
 dialer-app (0.1+15.10.20150615-0ubuntu1) wily; urgency=medium
 
   [ CI Train Bot ]

@@ -90,15 +90,13 @@ PageWithBottomEdge {
                 return " "
             }
         } else if (telepathyHelper.flightMode) {
-            return i18n.tr("Flight mode")
+            return i18n.tr("Flight Mode")
         } else if (mainView.account && mainView.account.simLocked) {
             return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multiplePhoneAccounts && !mainView.account) {
-            // TODO: check what should be displayed when there are multiple accounts
-            // but no default selected
-            return i18n.tr("Keypad")
+            return i18n.tr("Phone")
         }
         return i18n.tr("No network")
     }
@@ -388,8 +386,8 @@ PageWithBottomEdge {
                     mainView.callVoicemail()
                 } else if (keycode == Qt.Key_0) {
                     // replace 0 by +
-                    dialNumber = dialNumber.substring(0, dialNumber.length - 1)
-                    dialNumber += "+"
+                    input.remove(input.cursorPosition - 1, input.cursorPosition)
+                    input.insert(input.cursorPosition, "+")
                 }
             }
         }

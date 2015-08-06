@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-06-01 18:44+0200\n"
+"POT-Creation-Date: 2015-07-15 10:53-0300\n"
 "PO-Revision-Date: 2015-06-08 11:31+0000\n"
 "Last-Translator: Timucin <beskent@gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-06-19 05:02+0000\n"
-"X-Generator: Launchpad (build 17570)\n"
+"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -50,7 +50,7 @@ msgstr[0] "%1 secondo"
 msgstr[1] "%1 secondi"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:198
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -117,7 +117,7 @@ msgctxt "All Calls"
 msgid "All"
 msgstr "Tutte"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Tutti"
@@ -126,15 +126,15 @@ msgstr "Tutti"
 msgid "Bluetooth device"
 msgstr "Dispositivo Bluetooth"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:596
 msgid "Call Barring"
 msgstr "Blocco chiamate"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/dialer-app.qml:607
 msgid "Call Forwarding"
 msgstr "Inoltro chiamata"
 
-#: ../src/qml/dialer-app.qml:586
+#: ../src/qml/dialer-app.qml:618
 msgid "Call Waiting"
 msgstr "Chiamata in attesa"
 
@@ -156,15 +156,17 @@ msgstr "Impossibile mettere in attesa la chiamata"
 msgid "Calling"
 msgstr "In chiamata"
 
-#: ../src/qml/dialer-app.qml:597
+#: ../src/qml/dialer-app.qml:629
 msgid "Calling Line Presentation"
 msgstr "Mostra ID chiamante"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:641
 msgid "Calling Line Restriction"
 msgstr "Nascondi ID chiamante"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:86
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
+#: ../src/qml/ContactsPage/ContactsPage.qml:106
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
 msgstr "Annulla"
 
@@ -174,7 +176,7 @@ msgstr "Annulla"
 msgid "Change all Call associations to %1?"
 msgstr "Cambiare tutte le associazioni di chiamata a %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:54
+#: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Chiudi"
@@ -188,21 +190,21 @@ msgstr "Conferenza"
 msgid "Conference call failure"
 msgstr "Impossibile creare una chiamata in conferenza"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:635
 msgid "Connected Line Presentation"
 msgstr "Mostra numero chiamato"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:647
 msgid "Connected Line Restriction"
 msgstr "Nascondi numero chiamato"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
-#: ../src/qml/HistoryPage/HistoryPage.qml:345
+#: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Dettagli contatto"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:32
-#: ../src/qml/DialerPage/DialerPage.qml:41
+#: ../src/qml/ContactsPage/ContactsPage.qml:53
+#: ../src/qml/DialerPage/DialerPage.qml:42
 msgid "Contacts"
 msgstr "Contatti"
 
@@ -212,20 +214,24 @@ msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
-#: ../src/qml/HistoryPage/HistoryPage.qml:317
+#: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Elimina"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:326
+#: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
 msgstr "Dettagli"
 
-#: ../src/qml/dialer-app.qml:423
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
+msgid "Disable"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
 msgstr "Disabilitazione modalità aereo"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:482
-#: ../src/qml/dialer-app.qml:496
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
+#: ../src/qml/dialer-app.qml:528
 msgid "Dismiss"
 msgstr "Scarta"
 
@@ -233,15 +239,19 @@ msgstr "Scarta"
 msgid "Don't ask again"
 msgstr "Non chiedere di nuovo"
 
-#: ../src/qml/DialerPage/DialerPage.qml:71
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+msgid "Edit"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
 msgstr "Chiamate di emergenza"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:277
 msgid "Enter a number"
 msgstr "Inserire un numero"
 
-#: ../src/qml/dialer-app.qml:479
+#: ../src/qml/dialer-app.qml:511
 msgid "Error"
 msgstr "Errore"
 
@@ -257,11 +267,15 @@ msgstr "Impossibile creare una chiamata in conferenza."
 msgid "Failed to place the active call on hold."
 msgstr "Impossibile mettere in attesa la chiamata attiva."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:72
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
 msgstr "Preferiti"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
+msgid "Flight Mode"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
 msgstr "Modalità aereo"
 
@@ -277,13 +291,13 @@ msgstr "Fatto"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:61
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "In entrata"
 
-#: ../src/qml/dialer-app.qml:480
+#: ../src/qml/dialer-app.qml:512
 msgid "Invalid USSD code"
 msgstr "Codice USSD non valido"
 
@@ -291,7 +305,7 @@ msgstr "Codice USSD non valido"
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:84
+#: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
 msgstr "Tastierino"
 
@@ -307,7 +321,7 @@ msgstr "MNO"
 msgid "Merge calls"
 msgstr "Unisci chiamate"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:59
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
@@ -322,7 +336,7 @@ msgstr "Cellulare"
 msgid "No"
 msgstr "No"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/dialer-app.qml:316
 msgid "No SIM card selected"
 msgstr "Nessuna SIM selezionata"
 
@@ -330,7 +344,8 @@ msgstr "Nessuna SIM selezionata"
 msgid "No calls"
 msgstr "Nessuna chiamata"
 
-#: ../src/qml/DialerPage/DialerPage.qml:86 ../src/qml/dialer-app.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/dialer-app.qml:342
 msgid "No network"
 msgstr "Nessuna rete"
 
@@ -346,7 +361,7 @@ msgstr "OK"
 msgid "On hold"
 msgstr "In attesa"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
 msgstr "In uscita"
@@ -386,7 +401,7 @@ msgstr ""
 "dello schermo o visitando <a href=\"system_settings\">Impostazioni &gt; "
 "Sicurezza e privacy</a>."
 
-#: ../src/qml/dialer-app.qml:459
+#: ../src/qml/dialer-app.qml:491
 msgid "Please wait"
 msgstr "Attendere"
 
@@ -394,12 +409,12 @@ msgstr "Attendere"
 msgid "Private"
 msgstr "Privato"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:164
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
 msgstr "Numero privato"
 
-#: ../src/qml/DialerPage/DialerPage.qml:121
+#: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Recenti"
@@ -408,15 +423,19 @@ msgstr "Recenti"
 msgid "SIM Card is locked"
 msgstr "Scheda SIM bloccata"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78
+#: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
 msgstr "SIM bloccata"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:60
+#: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
+msgid "Save"
+msgstr ""
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
 msgstr "Cerca"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:48
+#: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
 msgstr "Cerca..."
 
@@ -433,14 +452,15 @@ msgstr ""
 "possibile modificare la propria scelta nelle <a "
 "href=\"system_settings\">Impostazioni</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:336
+#: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
 msgstr "Invia messaggio"
 
-#: ../src/qml/DialerPage/DialerPage.qml:46
+#: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
 msgstr "Impostazioni"
 
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
 msgstr "Condividi"
@@ -469,12 +489,12 @@ msgstr "Passa alla SIM predefinita:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:343
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Attualmente non è disponibile alcuna rete per %1"
 
-#: ../src/qml/dialer-app.qml:317
+#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
 msgid "There is currently no network."
 msgstr "Attualmente non è disponibile alcuna rete."
 
@@ -490,7 +510,7 @@ msgstr "Telefono Ubuntu"
 msgid "Unknown device"
 msgstr "Dispositivo sconosciuto"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:166
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
 msgstr "Numero sconosciuto"
@@ -512,7 +532,11 @@ msgstr "Sì"
 msgid "Yesterday"
 msgstr "Ieri"
 
-#: ../src/qml/dialer-app.qml:294
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
+msgid "You have to disable flight mode in order to make calls"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
 msgstr "È necessario selezionare una scheda SIM"
 

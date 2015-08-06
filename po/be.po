@@ -1,21 +1,22 @@
-# Korean translation for dialer-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Belarusian translation for dialer-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-07-16 05:18+0000\n"
-"Last-Translator: Bundo <bundo@bundo.biz>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2015-07-24 14:58+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Belarusian <be@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Launchpad-Export-Date: 2015-07-25 05:39+0000\n"
 "X-Generator: Launchpad (build 17628)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -23,28 +24,34 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:444
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - 대기 중"
+msgstr "%1 - чаканне"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1시간"
+msgstr[0] "%1 гадзіна"
+msgstr[1] "%1 гадзіны"
+msgstr[2] "%1 гадзінаў"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1분"
+msgstr[0] "%1 хв"
+msgstr[1] "%1 хв"
+msgstr[2] "%1 хв"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1초"
+msgstr[0] "%1 сэкунда"
+msgstr[1] "%1 сэкунды"
+msgstr[2] "%1 сэкундаў"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:201
@@ -103,121 +110,121 @@ msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr "ABC"
+msgstr "АБВГ"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "통화 중"
+msgstr "Актыўны"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr "모두"
+msgstr "Усе"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr "모두"
+msgstr "Усе"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:327
 msgid "Bluetooth device"
-msgstr "블루투스 장치"
+msgstr "Прылада Bluetooth"
 
 #: ../src/qml/dialer-app.qml:596
 msgid "Call Barring"
-msgstr "통화 제한"
+msgstr "Забарона выклікаў"
 
 #: ../src/qml/dialer-app.qml:607
 msgid "Call Forwarding"
-msgstr "호출 전달"
+msgstr "Пераадрасацыя выклікаў"
 
 #: ../src/qml/dialer-app.qml:618
 msgid "Call Waiting"
-msgstr "통화 대기"
+msgstr "Чаканне выклікаў"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:134
 msgid "Call ended"
-msgstr "통화 종료"
+msgstr "Званок завершаны"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:283
 msgid "Call failed"
-msgstr "통화 실패"
+msgstr "Не атрымалася звязацца"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:142
 msgid "Call holding failure"
-msgstr "통화 대기 실패"
+msgstr "Не ўдалося ўтрымаць званок"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:446
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "통화 중"
+msgstr "Тэлефануем"
 
 #: ../src/qml/dialer-app.qml:629
 msgid "Calling Line Presentation"
-msgstr "발신 번호 표시"
+msgstr "Прадстаўленне лініі выклікаў"
 
 #: ../src/qml/dialer-app.qml:641
 msgid "Calling Line Restriction"
-msgstr "발신 번호 제한"
+msgstr "Абмежаванне лініі выклікаў"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:106
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr "취소"
+msgstr "Скасаваць"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "%1와(과) 연관된 모든 통화를 바꿉니까?"
+msgstr "Звязаць усе званкі з %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "닫기"
+msgstr "Закрыць"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:48
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr "회의"
+msgstr "Канферэнцыя"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:113
 msgid "Conference call failure"
-msgstr "전화 회의 실패"
+msgstr "Не атрымалася арганізаваць канферэнцыю"
 
 #: ../src/qml/dialer-app.qml:635
 msgid "Connected Line Presentation"
-msgstr "발표 라인 연결"
+msgstr "Прадстаўленне злучанай лініі"
 
 #: ../src/qml/dialer-app.qml:647
 msgid "Connected Line Restriction"
-msgstr "발표 라인 제한"
+msgstr "Абмежаванні злучанай лініі"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr "연락처 자세히"
+msgstr "Падрабязнасці аб запісу кантакта"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
 #: ../src/qml/DialerPage/DialerPage.qml:42
 msgid "Contacts"
-msgstr "연락처"
+msgstr "Кантакты"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr "DEF"
+msgstr "ДЕЖЗ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
-msgstr "삭제"
+msgstr "Выдаліць"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr "자세한 내용"
+msgstr "Падрабязнасці"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -225,16 +232,16 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:451
 msgid "Disabling flight mode"
-msgstr "비행기 모드 사용 안 함"
+msgstr "Выключаем рэжым палёту"
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
 #: ../src/qml/dialer-app.qml:528
 msgid "Dismiss"
-msgstr "버리기"
+msgstr "Адкінуць"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "다시 묻지 않기"
+msgstr "Больш не пытацца"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
@@ -242,43 +249,44 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
-msgstr "응급 통화"
+msgstr "Экстраныя выклікі"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:275
 msgid "Enter a number"
-msgstr "숫자를 입력"
+msgstr "Увядзіце нумар"
 
 #: ../src/qml/dialer-app.qml:511
 msgid "Error"
-msgstr "오류"
+msgstr "Памылка"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:143
 msgid "Failed to activate the call."
-msgstr "대기 중인 통화를 시작할 수 없습니다."
+msgstr "Не атрымалася актываваць званок."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:114
 msgid "Failed to create a conference call."
-msgstr "전화 회의를 만들 수 없습니다."
+msgstr "Не атрымалася стварыць званок-канферэнцыю."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Failed to place the active call on hold."
-msgstr "대기 중인 통화를 시작할 수 없습니다."
+msgstr "Не атрымалася паставіць бягучы званок на паўзу."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
-msgstr "즐겨찾기"
+msgstr "Улюбёнае"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr "비행기 모드"
+msgstr "Аўтаномны рэжым"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr "GHI"
+msgstr "ІЙКЛ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
@@ -286,43 +294,43 @@ msgstr ""
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr "국제 휴대장비 인증(IMEI)"
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr "걸려온 전화"
+msgstr "Уваходныя"
 
 #: ../src/qml/dialer-app.qml:512
 msgid "Invalid USSD code"
-msgstr "잘못된 USSD 코드"
+msgstr "Некарэктны код USSD"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr "JKL"
+msgstr "МНОП"
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
-msgstr "키패드"
+msgstr "Лічбавая клавіятура"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr "나중에"
+msgstr "Пазней"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr "MNO"
+msgstr "РСТУЎ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:549
 msgid "Merge calls"
-msgstr "통화 합치기"
+msgstr "Аб'яднаць выклікі"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr "부재 중 전화"
+msgstr "Прапушчаныя"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
@@ -331,61 +339,62 @@ msgstr ""
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "아니요"
+msgstr "Не"
 
 #: ../src/qml/dialer-app.qml:316
 msgid "No SIM card selected"
-msgstr "선택한 심 카드가 없습니다."
+msgstr "Не выбраная SIM-картка"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:104
 msgid "No calls"
-msgstr "통화 없음"
+msgstr "Няма званкоў"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:337
 #: ../src/qml/dialer-app.qml:342
 msgid "No network"
-msgstr "네트워크 없음"
+msgstr "Няма сеткі"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:219
 msgid "No recent calls"
-msgstr "최근 통화 없음"
+msgstr "Няма нядаўніх званкоў"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr "확인"
+msgstr "Добра"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr "통화 대기"
+msgstr "Чаканне"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
 msgid "Outgoing"
-msgstr "건 전화"
+msgstr "Выходныя"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr "PQRS"
+msgstr "ФХЦЧ"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "전화"
+msgstr "Тэлефон"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "전화 프로그램"
+msgstr "Праграма-тэлефон"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Phone Speaker"
-msgstr "전화 스피커"
+msgstr "Гучнамоўца тэлефона"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "전화 프로그램"
+msgstr "Праграма-тэлефон"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Phone;전화;Dialer;Dial;다이얼;Call;통화;Keypad;키패드"
+msgstr ""
+"Phone;Dialer;Dial;Call;Keypad;тэлефон;набор,нумар;званок,выклік;кнопкі"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -393,34 +402,37 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"통화를 하거나 메시지를 보내려면 심 카드의 잠금 상태를 해제해주십시오. 심 카드의 잠긴 상태는 상단의 네트워크를 표시나 <a "
-"href=\"system_settings\">시스템 설정 &gt; 보안 &amp; 사생활</a>에서 해제할 수 있습니다."
+"Калі ласка, разблакуйце вашую SIM-картку, каб мець магчымасць тэлефанаваць "
+"ці адпраўляць паведамленні. Разблакаваць картку можна з дапамогай індыкатара "
+"сеткі ў верхняй частцы экрана або з дапамогай старонкі <a "
+"href=\"system_settings\">Сістэмныя параметры &gt; Бяспека &amp; "
+"Прыватнасць</a>."
 
 #: ../src/qml/dialer-app.qml:491
 msgid "Please wait"
-msgstr "기다려주십시오"
+msgstr "Калі ласка, пачакайце"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
-msgstr "개인 전용"
+msgstr "Прыватнае"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
 msgid "Private number"
-msgstr "개인 전용 번호"
+msgstr "Асабісты нумар"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr "최근 통화 목록"
+msgstr "Нядаўнія"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr "심 카드가 잠져있습니다."
+msgstr "SIM-картка заблакаваная"
 
 #: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
-msgstr "심 카드 잠김"
+msgstr "SIM-картка заблакаваная"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -428,36 +440,36 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
-msgstr "검색"
+msgstr "Шукаць"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
-msgstr "검색..."
+msgstr "Шукаць..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr "선택"
+msgstr "Выбраць"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"전화를 걸 때 쓸 기본 심 카드를 선택해주십시오. 심 카드는 언제나 <a href=\"system_settings\">시스템 "
-"설정</a>에서 바꿀 수 있습니다."
+"Выберыце тыповую SIM-картку для ўсіх выходных выклікаў. Змяніць ваш выбар у "
+"любы час з дапамогай <a href=\"system_settings\">Сістэмных параметраў</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
-msgstr "메시지 보내기"
+msgstr "Адправіць паведамленне"
 
 #: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
-msgstr "설정"
+msgstr "Параметры"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr "공유"
+msgstr "Падзяліцца"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -469,62 +481,62 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Switch audio source:"
-msgstr "오디오 소스 전환"
+msgstr "Пераключыць крыніцу гуку:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:534
 msgid "Switch calls"
-msgstr "통화 전환"
+msgstr "Пераключыць званкі"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "기본 심 카드로 전환:"
+msgstr "Пераключыцца на тыповую SIM-картку:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr "TUV"
+msgstr "ШЫ"
 
 #: ../src/qml/dialer-app.qml:343
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "현재 %1에 네트워크가 없습니다."
+msgstr "Зараз на %1 няма доступу да сеткі"
 
 #: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
 msgid "There is currently no network."
-msgstr "현재 네트워크가 없습니다."
+msgstr "Зараз няма доступу да сеткі."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr "오늘"
+msgstr "Сёння"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:329
 msgid "Ubuntu Phone"
-msgstr "우분투 폰"
+msgstr "Ubuntu Phone"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Unknown device"
-msgstr "알 수 없는 장치"
+msgstr "Невядомая прылада"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
 msgid "Unknown number"
-msgstr "알 수 없는 번호"
+msgstr "Невядомы нумар"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr "음성 메일"
+msgstr "Галасавая пошта"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr "ЬЭЮЯ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "예"
+msgstr "Так"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "어제"
+msgstr "Учора"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
@@ -532,7 +544,7 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:316
 msgid "You need to select a SIM card"
-msgstr "심 카드를 선택해야 합니다."
+msgstr "Вам варта абраць SIM-картку"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
@@ -543,15 +555,3 @@ msgstr "hh:mm:ss"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
-
-#~ msgid "New Call"
-#~ msgstr "새 전화"
-
-#~ msgid "All"
-#~ msgstr "모두"
-
-#~ msgid "+ Create New"
-#~ msgstr "+ 새 연락처"
-
-#~ msgid "hh:mm ap"
-#~ msgstr "ap hh:mm"

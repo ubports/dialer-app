@@ -290,7 +290,7 @@ Page {
         interval: 1000
         repeat: false
         running: false
-        onTriggered: mainView.removeLiveCallView()
+        onTriggered: mainView.switchToKeypadView()
     }
  
     Timer {
@@ -301,8 +301,9 @@ Page {
         onTriggered: {
             if (!callManager.hasCalls) {
                 if (!mainView.greeterMode) {
-                    mainView.removeLiveCallView();
+                    mainView.switchToKeypadView();
                 }
+
                 // TODO: we can't be sure that the currentPage is a DialerPage instance
                 if (pageStackNormalMode.currentPage.dialNumber) {
                     pageStackNormalMode.currentPage.dialNumber = pendingNumberToDial;
