@@ -71,7 +71,7 @@ Page {
     title: caller
     head.actions: []
     head.backAction: backAction
-    head.sections.model: multipleAccounts ? [call.account.displayName] : undefined
+    head.sections.model: multiplePhoneAccounts ? [call.account.displayName] : undefined
     x: header ? header.height : 0
 
     function reportStatus(callObject, text) {

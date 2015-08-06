@@ -34,6 +34,22 @@ PageWithBottomEdge {
     property alias callAnimationRunning: callAnimation.running
     property bool greeterMode: false
     property var mmiPlugins: []
+    property var accountsModel: {
+        var model = []
+        // do not show dual sim switch if there is only one sim
+        if (!multiplePhoneAccounts || mainView.greeterMode) {
+            return undefined
+        }
+
+        var accountNames = []
+        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
+            var account = telepathyHelper.activeAccounts[i]
+            if (account.type == AccountEntry.PhoneAccount) {
+                model.push(account)
+            }
+        }
+        return model
+    }
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
@@ -79,7 +95,7 @@ PageWithBottomEdge {
             return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
-        } else if (multipleAccounts && !mainView.account) {
+        } else if (multiplePhoneAccounts && !mainView.account) {
             // TODO: check what should be displayed when there are multiple accounts
             // but no default selected
             return i18n.tr("Keypad")
@@ -154,8 +170,8 @@ PageWithBottomEdge {
 
     function accountIndex(account) {
         var index = -1;
-        for (var i in telepathyHelper.accounts) {
-            if (telepathyHelper.accounts[i] == account) {
+        for (var i in page.accountsModel) {
+            if (page.accountsModel[i] == account) {
                 index = i;
                 break;
             }
@@ -189,22 +205,17 @@ PageWithBottomEdge {
     }
 
     head.sections.model: {
-        // does not show dual sim switch if there is only one sim
-        if (!multipleAccounts || mainView.greeterMode) {
-            return undefined
-        }
-
         var accountNames = []
-        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
-            accountNames.push(telepathyHelper.activeAccounts[i].displayName)
+        for (var i in page.accountsModel) {
+            accountNames.push(page.accountsModel[i].displayName)
         }
-        return accountNames
+        return accountNames.length > 0 ? accountNames : undefined
     }
 
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.account = telepathyHelper.activeAccounts[page.head.sections.selectedIndex]
+            mainView.account = page.accountsModel[page.head.sections.selectedIndex]
         }
     }
 
