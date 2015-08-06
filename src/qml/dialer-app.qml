@@ -52,7 +52,7 @@ MainView {
         // we only use the default account property if we have more
         // than one account, otherwise we use always the first one
         if (multiplePhoneAccounts) {
-            return telepathyHelper.defaultMessagingAccount
+            return telepathyHelper.defaultCallAccount
         } else {
             for (var i in telepathyHelper.activeAccounts) {
                 var tmpAccount = telepathyHelper.activeAccounts[i]

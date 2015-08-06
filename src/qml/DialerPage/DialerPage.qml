@@ -36,17 +36,22 @@ PageWithBottomEdge {
     property var mmiPlugins: []
     property var accountsModel: {
         var model = []
-        // do not show dual sim switch if there is only one sim
-        if (!multiplePhoneAccounts || mainView.greeterMode) {
+
+        // do not show any accounts in greeter mode
+        if (mainView.greeterMode) {
             return undefined
         }
 
-        var accountNames = []
-        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
+        // populate model with all active phone accounts
+        for (var i in telepathyHelper.activeAccounts) {
             var account = telepathyHelper.activeAccounts[i]
             if (account.type == AccountEntry.PhoneAccount) {
                 model.push(account)
             }
+        }
+        // do not show dual sim switch if there is only one sim
+        if (model.length == 1 && model[0].type == AccountEntry.PhoneAccount) {
+            return undefined
         }
         return model
     }
@@ -189,11 +194,9 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
 
     Component.onCompleted: {
-        head.sections.selectedIndex = accountIndex(mainView.account)
         // load MMI plugins
         var plugins = application.mmiPluginList()
         for (var i in plugins) {
@@ -209,6 +212,8 @@ PageWithBottomEdge {
         }
         return accountNames.length > 0 ? accountNames : undefined
     }
+
+    head.sections.selectedIndex: accountIndex(mainView.account)
 
     Connections {
         target: page.head.sections
