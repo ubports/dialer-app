@@ -265,6 +265,7 @@ PageWithBottomEdge {
 
             KeypadEntry {
                 id: keypadEntry
+                objectName: "keypadEntry"
 
                 anchors {
                     top: parent.top
