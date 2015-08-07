@@ -52,7 +52,7 @@ Page {
             return contactWatcher.alias;
         } else if (contactWatcher.identifier !== "") {
             return contactWatcher.identifier;
-        } else if (!call && initialNumber) {
+        } else if (!call && initialNumber != "") {
             return initialNumber
         } else {
             return " "
@@ -447,7 +447,7 @@ Page {
                     return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
                 } else if (call && !call.incoming) {
                     return i18n.tr("Calling")
-                } else if (!call && initialStatus) {
+                } else if (!call && initialStatus !== "") {
                     return initialStatus
                 } else {
                     return " "
