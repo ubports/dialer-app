@@ -227,7 +227,7 @@ void DialerApplication::parseArgument(const QString &arg)
         QUrlQuery query(url);
         QString viewName = query.queryItemValue("view");
         if (viewName == "liveCall") {
-            QMetaObject::invokeMethod(mainView, "switchToLiveCall");
+            QMetaObject::invokeMethod(mainView, "switchToLiveCall", Q_ARG(QVariant, QVariant()), Q_ARG(QVariant, QVariant()));
         }
 
     }

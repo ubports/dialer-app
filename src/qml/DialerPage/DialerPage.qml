@@ -263,6 +263,7 @@ PageWithBottomEdge {
 
             KeypadEntry {
                 id: keypadEntry
+                objectName: "keypadEntry"
 
                 anchors {
                     top: parent.top
@@ -401,19 +402,48 @@ PageWithBottomEdge {
                 horizontalCenter: parent.horizontalCenter
             }
             onClicked: {
+                if (dialNumber == "") {
+                    if (mainView.greeterMode) {
+                        return;
+                    }
+                    keypadEntry.value = generalSettings.lastCalledPhoneNumber
+                    return;
+                }
+
+                if (mainView.greeterMode && !mainView.isEmergencyNumber(dialNumber)) {
+                    // we only allow users to call any number in greeter mode if there are 
+                    // no sim cards present. The operator will block the number if it thinks
+                    // it's necessary.
+                    // for phone accounts, active means the the status is not offline:
+                    // "nomodem", "nosim" or "flightmode"
+
+                    var denyEmergencyCall = false
+                    // while in flight mode we can't detect if sims are present in some devices
+                    if (telepathyHelper.flightMode) {
+                        denyEmergencyCall = true
+                    } else {
+                        for (var i in telepathyHelper.activeAccounts) {
+                            var account = telepathyHelper.activeAccounts[i]
+                            if (account.type == AccountEntry.PhoneAccount) {
+                                denyEmergencyCall = true;
+                            }
+                        }
+                    }
+                    if (denyEmergencyCall) {
+                        // if there is at least one sim card present, just ignore the call
+                        showNotification(i18n.tr("Emergency call"), i18n.tr("This is not an emergency number."))
+                        keypadEntry.value = "";
+                        return;
+                    }
+
+                    // this is a special case, we need to call using callEmergency() directly to avoid
+                    // all network and dual sim checks we have in mainView.call()
+                    mainView.callEmergency(keypadEntry.value)
+                    return;
+                }
+
                 console.log("Starting a call to " + keypadEntry.value);
                 mainView.call(keypadEntry.value);
-            }
-            enabled: {
-                if (dialNumber == "") {
-                    return false;
-                }
-
-                if (mainView.greeterMode) {
-                    return mainView.isEmergencyNumber(dialNumber);
-                }
-
-                return true;
             }
         }
     }
@@ -443,7 +473,7 @@ PageWithBottomEdge {
         }
         ScriptAction {
             script: {
-                mainView.switchToLiveCall()
+                mainView.switchToLiveCall(i18n.tr("Calling"), keypadEntry.value)
                 keypadEntry.value = ""
                 callButton.iconRotation = 0.0
                 keypadContainer.opacity = 1.0
