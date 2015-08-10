@@ -1,3 +1,14 @@
+dialer-app (0.1+15.10.20150810-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Tiago Salem Herrmann ]
+  * Improve emergency number validation with libphonenumber. (LP:
+    #1444883, #1334860, #1308365)
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Mon, 10 Aug 2015 21:06:08 +0000
+
 dialer-app (0.1+15.10.20150720-0ubuntu2~gcc5.1) wily; urgency=medium
 
   * No-change test rebuild for g++5 ABI transition
