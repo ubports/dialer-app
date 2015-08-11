@@ -15,21 +15,12 @@ macro(DECLARE_QML_TEST TST_NAME TST_QML_FILE)
     )
 endmacro()
 
-macro(DECLARE_QML_DBUS_TEST TST_NAME TST_QML_FILE)
-    add_test(NAME ${TST_NAME}
-        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-        COMMAND ${XVFB_RUN_BIN} -a -s "-screen 0 1024x768x24" dbus-test-runner --task /usr/bin/history-daemon --ignore-return --task /usr/bin/telephony-service-handler --ignore-return --task=${QMLTESTRUNNER_BIN} --parameter=-v1 --parameter=-o --parameter=-,txt --parameter=-o --parameter=${CMAKE_BINARY_DIR}/test_${TST_NAME}.xml,xunitxml --parameter=-import --parameter=${qml_BINARY_DIR} --parameter=-input --parameter=${CMAKE_CURRENT_SOURCE_DIR}/${TST_QML_FILE}
-    )
-    set_tests_properties(${TST_NAME} PROPERTIES ENVIRONMENT "QT_QPA_FONTDIR=${CMAKE_BINARY_DIR}")
-endmacro()
-
 if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("keypad_button" tst_KeypadButton.qml)
     declare_qml_test("main_view" tst_MainView.qml)
     declare_qml_test("stopwatch" tst_StopWatch.qml)
     declare_qml_test("historydelegate" tst_HistoryDelegate.qml)
-# FIXME currently disabled. There is a bug when registering the telepathy observer
-#    declare_qml_dbus_test("dialer_page" tst_DialerPage.qml)
+    declare_qml_test("dialer_page" tst_DialerPage.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)
         message(WARNING "Qml tests disabled: qmltestrunner not found")

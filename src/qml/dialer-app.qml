@@ -104,7 +104,7 @@ MainView {
         onSetupReady: {
             telepathyReady = true
             if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount &&
-                settings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
+                dualSimSettings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
         }
@@ -125,10 +125,15 @@ MainView {
     }
 
     Settings {
-        id: settings
+        id: dualSimSettings
         category: "DualSim"
         property bool dialPadDontAsk: false
         property int mainViewDontAskCount: 0
+    }
+
+    Settings {
+        id: generalSettings
+        property string lastCalledPhoneNumber: ""
     }
 
     PhoneUtils {
@@ -180,12 +185,20 @@ MainView {
     ]
 
     function isEmergencyNumber(number) {
+        // TODO should we only check for emergency numbers
+        // in the selected account?
+
+        // check for specific account emergency numbers
         for (var i in telepathyHelper.accounts) {
             var account = telepathyHelper.accounts[i];
             for (var j in account.emergencyNumbers) {
-                if (phoneUtils.comparePhoneNumbers(number, account.emergencyNumbers[j])) {
+                if (number == account.emergencyNumbers[j]) {
                     return true;
                 }
+            }
+            // then check using libphonenumber
+            if (phoneUtils.isEmergencyNumber(number, account.countryCode)) {
+                return true;
             }
         }
         return false;
@@ -278,9 +291,12 @@ MainView {
 
         animateLiveCall();
 
-        // now try to use one of the connected accounts
         var account = null;
-        if (telepathyHelper.activeAccounts.length > 0) {
+        // check if the selected account is active and can make emergency calls
+        if (mainView.account && mainView.account.active && mainView.account.emergencyCallsAvailable) {
+            account = mainView.account
+        } else if (telepathyHelper.activeAccounts.length > 0) {
+            // now try to use one of the connected accounts
             account = telepathyHelper.activeAccounts[0];
         } else {
             // if no account is active, use any account that can make emergency calls
@@ -331,7 +347,7 @@ MainView {
             return
         }
 
-        if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount && !settings.dialPadDontAsk && !skipDefaultSimDialog) {
+        if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount && !dualSimSettings.dialPadDontAsk && !skipDefaultSimDialog) {
             var properties = {}
             properties["phoneNumber"] = number
             properties["accountId"] = mainView.account.accountId
@@ -373,6 +389,7 @@ MainView {
         }
 
         if (account && account.connected) {
+            generalSettings.lastCalledPhoneNumber = number
             callManager.startCall(number, account.accountId);
         }
     }
@@ -423,13 +440,15 @@ MainView {
         }
     }
 
-    function switchToLiveCall() {
+    function switchToLiveCall(initialStatus, initialNumber) {
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             pageStackNormalMode.pop();
         }
 
         var properties = {}
+        properties["initialStatus"] = initialStatus
+        properties["initialNumber"] = initialNumber
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }

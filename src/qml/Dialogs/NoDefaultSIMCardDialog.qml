@@ -70,7 +70,7 @@ Component {
                     text: i18n.tr("No")
                     color: UbuntuColors.orange
                     onClicked: {
-                        settings.mainViewDontAskCount = 3
+                        dualSimSettings.mainViewDontAskCount = 3
                         PopupUtils.close(dialogue)
                         Qt.inputMethod.hide()
                     }
@@ -81,7 +81,7 @@ Component {
                     color: UbuntuColors.orange
                     onClicked: {
                         PopupUtils.close(dialogue)
-                        settings.mainViewDontAskCount++
+                        dualSimSettings.mainViewDontAskCount++
                         Qt.inputMethod.hide()
                     }
                 }
