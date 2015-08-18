@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-29 05:55+0000\n"
-"X-Generator: Launchpad (build 17646)\n"
+"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:444
+#: ../src/qml/LiveCallPage/LiveCall.qml:448
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - en retenció"
@@ -122,45 +122,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Tots"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:327
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
 msgstr "Dispositiu Bluetooth"
 
-#: ../src/qml/dialer-app.qml:596
+#: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
 msgstr "Restricció de trucada"
 
-#: ../src/qml/dialer-app.qml:607
+#: ../src/qml/dialer-app.qml:626
 msgid "Call Forwarding"
 msgstr "Desviació de trucades"
 
-#: ../src/qml/dialer-app.qml:618
+#: ../src/qml/dialer-app.qml:637
 msgid "Call Waiting"
 msgstr "Trucada en espera"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:134
+#: ../src/qml/LiveCallPage/LiveCall.qml:138
 msgid "Call ended"
 msgstr "Ha finalitzat la trucada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Call failed"
 msgstr "Ha fallat la trucada"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:142
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Call holding failure"
 msgstr "Ha fallat la trucada en espera"
 
+#: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:446
+#: ../src/qml/LiveCallPage/LiveCall.qml:450
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "S'està trucant"
 
-#: ../src/qml/dialer-app.qml:629
+#: ../src/qml/dialer-app.qml:648
 msgid "Calling Line Presentation"
 msgstr "Presentació de la línia de trucada"
 
-#: ../src/qml/dialer-app.qml:641
+#: ../src/qml/dialer-app.qml:660
 msgid "Calling Line Restriction"
 msgstr "Restricció de la línia de trucada"
 
@@ -181,20 +182,20 @@ msgstr "Voleu canviar totes les associacions de trucades a %1?"
 msgid "Close"
 msgstr "Tanca"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "Conferència"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:117
 msgid "Conference call failure"
 msgstr "Ha fallat la conferència"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:654
 msgid "Connected Line Presentation"
 msgstr "Presentació de la línia connectada"
 
-#: ../src/qml/dialer-app.qml:647
+#: ../src/qml/dialer-app.qml:666
 msgid "Connected Line Restriction"
 msgstr "Restricció de la línia connectada"
 
@@ -226,12 +227,12 @@ msgstr "Detalls"
 msgid "Disable"
 msgstr "Inhabilita'l"
 
-#: ../src/qml/dialer-app.qml:451
+#: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
 msgstr "S'està inhabilitant el mode d'avió"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
-#: ../src/qml/dialer-app.qml:528
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
+#: ../src/qml/dialer-app.qml:547
 msgid "Dismiss"
 msgstr "Descarta"
 
@@ -247,23 +248,23 @@ msgstr "Edita"
 msgid "Emergency Calls"
 msgstr "Trucades d'emergència"
 
-#: ../src/qml/DialerPage/DialerPage.qml:275
+#: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
 msgstr "Introduïu un número"
 
-#: ../src/qml/dialer-app.qml:511
+#: ../src/qml/dialer-app.qml:530
 msgid "Error"
 msgstr "Error"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Failed to activate the call."
 msgstr "No s'ha pogut activar la trucada."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Failed to create a conference call."
 msgstr "No s'ha pogut crear una trucada en conferència."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to place the active call on hold."
 msgstr "No s'ha pogut posar en espera  la trucada activa."
 
@@ -298,7 +299,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Entrant"
 
-#: ../src/qml/dialer-app.qml:512
+#: ../src/qml/dialer-app.qml:531
 msgid "Invalid USSD code"
 msgstr "El codi USSD no és vàlid"
 
@@ -318,7 +319,7 @@ msgstr "Més endavant"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:549
+#: ../src/qml/LiveCallPage/LiveCall.qml:555
 msgid "Merge calls"
 msgstr "Combina les trucades"
 
@@ -337,16 +338,16 @@ msgstr "Mòbil"
 msgid "No"
 msgstr "No"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
 msgstr "No s'ha seleccionat cap targeta SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:104
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "No calls"
 msgstr "No hi ha trucades"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:337
-#: ../src/qml/dialer-app.qml:342
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:358
 msgid "No network"
 msgstr "Sense xarxa"
 
@@ -379,7 +380,7 @@ msgstr "Telèfon"
 msgid "Phone App"
 msgstr "Trucades"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
 msgstr "Altaveu del telèfon"
 
@@ -402,7 +403,7 @@ msgstr ""
 "pantalla, o bé si aneu a <a href=\"system_settings\">Configuració del "
 "sistema &gt; Seguretat i privadesa</a>."
 
-#: ../src/qml/dialer-app.qml:491
+#: ../src/qml/dialer-app.qml:510
 msgid "Please wait"
 msgstr "Espereu"
 
@@ -474,11 +475,11 @@ msgstr "Llisqueu el dit per suprimir"
 msgid "Swipe to reveal actions"
 msgstr "Llisqueu el dit per mostrar accions"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:159
+#: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
 msgstr "Commuta la font d'àudio"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:534
+#: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
 msgstr "Commuta entre trucades"
 
@@ -490,12 +491,12 @@ msgstr "Canvia a la SIM predeterminada:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:359
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "No hi ha cap xarxa a %1"
 
-#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
+#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
 msgid "There is currently no network."
 msgstr "No hi ha cap xarxa actualment."
 
@@ -503,11 +504,11 @@ msgstr "No hi ha cap xarxa actualment."
 msgid "Today"
 msgstr "Avui"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:329
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Ubuntu Phone"
 msgstr "Telèfon Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:337
 msgid "Unknown device"
 msgstr "Dispositiu desconegut"
 
@@ -537,7 +538,7 @@ msgstr "Ahir"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Heu d'inhabilitar el mode d'avió per poder fer trucades"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
 msgstr "Cal que seleccioneu una targeta SIM"
 

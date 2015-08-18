@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:448
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - በ መጠበቅ ላይ"
@@ -122,45 +122,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "ሁሉንም"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
 msgstr "የ ብሉቱዝ አካል"
 
-#: ../src/qml/dialer-app.qml:596
+#: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
 msgstr "ጥሪ ማገጃ"
 
-#: ../src/qml/dialer-app.qml:607
+#: ../src/qml/dialer-app.qml:626
 msgid "Call Forwarding"
 msgstr "ጥሪ ወደፊት ማስተላለፊያ"
 
-#: ../src/qml/dialer-app.qml:618
+#: ../src/qml/dialer-app.qml:637
 msgid "Call Waiting"
 msgstr "ጥሪ ማቆያ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:134
+#: ../src/qml/LiveCallPage/LiveCall.qml:138
 msgid "Call ended"
 msgstr "ጥሪው ጨርሷል"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Call failed"
 msgstr "ጥሪው አልተሳካም"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:142
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Call holding failure"
 msgstr "ጥሪ ማቆያ ወድቋል"
 
+#: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:450
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "በ መጥራት ላይ"
 
-#: ../src/qml/dialer-app.qml:629
+#: ../src/qml/dialer-app.qml:648
 msgid "Calling Line Presentation"
 msgstr "የ ጥሪ መስመር ማቅረቢያ"
 
-#: ../src/qml/dialer-app.qml:641
+#: ../src/qml/dialer-app.qml:660
 msgid "Calling Line Restriction"
 msgstr "የ ጥሪ መስመር መከልከያ"
 
@@ -181,20 +182,20 @@ msgstr "ሁሉንም የተዛመዱ ጥሪዎች ልቀይር ወደ %1?"
 msgid "Close"
 msgstr "መዝጊያ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "ስብሰባ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:117
 msgid "Conference call failure"
 msgstr "የ ስብሰባ ጥሪ ወድቋል"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:654
 msgid "Connected Line Presentation"
 msgstr "የ ተገናኘ መስመር ማቅረቢያ"
 
-#: ../src/qml/dialer-app.qml:647
+#: ../src/qml/dialer-app.qml:666
 msgid "Connected Line Restriction"
 msgstr "የ ተገናኘ መስመር መከልከያ"
 
@@ -226,12 +227,12 @@ msgstr "ዝርዝሮች"
 msgid "Disable"
 msgstr "ማሰናከያ"
 
-#: ../src/qml/dialer-app.qml:451
+#: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
 msgstr "የ በረራ ዘዴን ማሰናከያ"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
-#: ../src/qml/dialer-app.qml:528
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
+#: ../src/qml/dialer-app.qml:547
 msgid "Dismiss"
 msgstr "መደምሰሻ"
 
@@ -247,23 +248,23 @@ msgstr "ማረሚያ"
 msgid "Emergency Calls"
 msgstr "የ ድንገተኛ ጥሪዎች"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
 msgstr "ቁጥር ያስገቡ"
 
-#: ../src/qml/dialer-app.qml:511
+#: ../src/qml/dialer-app.qml:530
 msgid "Error"
 msgstr "ስህተት"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Failed to activate the call."
 msgstr "ጥሪውን ማስጀመር አልተቻለም"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Failed to create a conference call."
 msgstr "የ ስብሰባ ጥሪ መፍጠር አልተቻለም"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to place the active call on hold."
 msgstr "ንቁውን ጥሩ ማቆየት አልተቻለም"
 
@@ -271,6 +272,7 @@ msgstr "ንቁውን ጥሩ ማቆየት አልተቻለም"
 msgid "Favorites"
 msgstr "የምወዳቸው"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "በ በረራ ዘዴ"
@@ -297,7 +299,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "ወደ ውስጥ የሚመጣ"
 
-#: ../src/qml/dialer-app.qml:512
+#: ../src/qml/dialer-app.qml:531
 msgid "Invalid USSD code"
 msgstr "ዋጋ የሌለው የ USSD code"
 
@@ -317,7 +319,7 @@ msgstr "በኋላ"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:555
 msgid "Merge calls"
 msgstr "ጥሪ ማዋሀጃ"
 
@@ -336,16 +338,16 @@ msgstr "ተንቀሳቃሽ"
 msgid "No"
 msgstr "አይ"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
 msgstr "ምንም የ ሲም ካርድ አልተመረጠም"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:104
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "No calls"
 msgstr "ጥሪ የለም"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
-#: ../src/qml/dialer-app.qml:342
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:358
 msgid "No network"
 msgstr "ኔትዎርክ አልተገኘም"
 
@@ -370,7 +372,7 @@ msgstr "ወደ ውጭ የሚላክ"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "ስልክ"
 
@@ -378,7 +380,7 @@ msgstr "ስልክ"
 msgid "Phone App"
 msgstr "የ ስልክ መተግበሪያ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
 msgstr "በ ስልኩ ስፒከር"
 
@@ -400,7 +402,7 @@ msgstr ""
 "መጠቆሚያ በ መመልከቻው ከ ላይ በኩል ወይንም በመጎብ ኘት <a href=\"system_settings\">ስርአት ማሰናጃዎች "
 "&gt; Security &amp; Privacy</a>."
 
-#: ../src/qml/dialer-app.qml:491
+#: ../src/qml/dialer-app.qml:510
 msgid "Please wait"
 msgstr "እባክዎን ይቆዩ"
 
@@ -413,7 +415,7 @@ msgstr "የ ግል"
 msgid "Private number"
 msgstr "የ ግል ቁጥር"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "የቅርብ ጊዜ"
@@ -471,11 +473,11 @@ msgstr "ለማጥፋት ይጥረጉ"
 msgid "Swipe to reveal actions"
 msgstr "ተግባሮቹን ለማየት ይጥረጉ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:159
+#: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
 msgstr "የ ድምፅ ምንጭ መቀየሪያ:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
 msgstr "ጥሪዎች መቀየሪያ"
 
@@ -487,12 +489,12 @@ msgstr "መቀየሪያ ወደ ነባር ሲም:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:359
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "አሁን ምንም ኔትዎርክ አልተገኘም በ %1"
 
-#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
+#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
 msgid "There is currently no network."
 msgstr "አሁን ምንም ኔትዎርክ አልተገኘም"
 
@@ -500,11 +502,11 @@ msgstr "አሁን ምንም ኔትዎርክ አልተገኘም"
 msgid "Today"
 msgstr "ዛሬ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Ubuntu Phone"
 msgstr "የ ኡቡንቱ ስልክ"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:337
 msgid "Unknown device"
 msgstr "ያልታወቀ አካል"
 
@@ -534,7 +536,7 @@ msgstr "ትናንትና"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "የ በረራ ዘዴን ማሰናከል አለብዎት የ ስልክ ጥሪ ለማድረግ"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
 msgstr "የ ሲም ካርድ መምረጥ አለብዎት"
 

@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-07-17 05:37+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:448
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - zain"
@@ -122,45 +122,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Denak"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
 msgstr "Bluetooth gailua"
 
-#: ../src/qml/dialer-app.qml:596
+#: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
 msgstr "Dei-murrizketa"
 
-#: ../src/qml/dialer-app.qml:607
+#: ../src/qml/dialer-app.qml:626
 msgid "Call Forwarding"
 msgstr "Dei-birbidaltzea"
 
-#: ../src/qml/dialer-app.qml:618
+#: ../src/qml/dialer-app.qml:637
 msgid "Call Waiting"
 msgstr "Dei-itxarotea"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:134
+#: ../src/qml/LiveCallPage/LiveCall.qml:138
 msgid "Call ended"
 msgstr "Deia amaitu da"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Call failed"
 msgstr "Deiak huts egin du"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:142
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Call holding failure"
 msgstr ""
 
+#: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:450
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Deitzen"
 
-#: ../src/qml/dialer-app.qml:629
+#: ../src/qml/dialer-app.qml:648
 msgid "Calling Line Presentation"
 msgstr "Erakutsi dei-linea"
 
-#: ../src/qml/dialer-app.qml:641
+#: ../src/qml/dialer-app.qml:660
 msgid "Calling Line Restriction"
 msgstr "Murriztu dei-linea"
 
@@ -181,20 +182,20 @@ msgstr "Deien asoziazio guztiak %1(e)ra aldatu?"
 msgid "Close"
 msgstr "Itxi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "Konferentzia"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:117
 msgid "Conference call failure"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:654
 msgid "Connected Line Presentation"
 msgstr "Erakutsi konektatutako linea"
 
-#: ../src/qml/dialer-app.qml:647
+#: ../src/qml/dialer-app.qml:666
 msgid "Connected Line Restriction"
 msgstr "Murriztu konektatutako linea"
 
@@ -226,12 +227,12 @@ msgstr "Xehetasunak"
 msgid "Disable"
 msgstr "Desgaitu"
 
-#: ../src/qml/dialer-app.qml:451
+#: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
 msgstr "Hegaldi modua desgaitzea"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
-#: ../src/qml/dialer-app.qml:528
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
+#: ../src/qml/dialer-app.qml:547
 msgid "Dismiss"
 msgstr "Baztertu"
 
@@ -247,23 +248,23 @@ msgstr "Editatu"
 msgid "Emergency Calls"
 msgstr "Larrialdi-deiak"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
 msgstr "Sartu zenbakia"
 
-#: ../src/qml/dialer-app.qml:511
+#: ../src/qml/dialer-app.qml:530
 msgid "Error"
 msgstr "Errorea"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Failed to activate the call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Failed to create a conference call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to place the active call on hold."
 msgstr ""
 
@@ -271,6 +272,7 @@ msgstr ""
 msgid "Favorites"
 msgstr "Gogokoak"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Hegaldi modua"
@@ -297,7 +299,7 @@ msgstr "IMEIa"
 msgid "Incoming"
 msgstr "Sarrerakoa"
 
-#: ../src/qml/dialer-app.qml:512
+#: ../src/qml/dialer-app.qml:531
 msgid "Invalid USSD code"
 msgstr "USSD kode baliogabea"
 
@@ -317,7 +319,7 @@ msgstr "Geroago"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:555
 msgid "Merge calls"
 msgstr "Batu deiak"
 
@@ -336,16 +338,16 @@ msgstr "Mugikorra"
 msgid "No"
 msgstr "Ez"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
 msgstr "Ez da SIM txartelik hautatu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:104
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "No calls"
 msgstr "Ez dago deirik"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
-#: ../src/qml/dialer-app.qml:342
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:358
 msgid "No network"
 msgstr "Sarerik ez"
 
@@ -370,7 +372,7 @@ msgstr "Irteerakoa"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefonoa"
 
@@ -378,7 +380,7 @@ msgstr "Telefonoa"
 msgid "Phone App"
 msgstr "Telefonoa aplikazioa"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
 msgstr "Telefonoaren bozgorailua"
 
@@ -401,7 +403,7 @@ msgstr ""
 "bestela <a href=\"system_settings\">Sistemaren ezarpenak &gt; Segurtasuna "
 "&amp; Pribatutasuna</a> bisitatu."
 
-#: ../src/qml/dialer-app.qml:491
+#: ../src/qml/dialer-app.qml:510
 msgid "Please wait"
 msgstr "Itxaron"
 
@@ -414,7 +416,7 @@ msgstr "Pribatua"
 msgid "Private number"
 msgstr "Zenbaki pribatua"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Oraintsukoa"
@@ -472,11 +474,11 @@ msgstr "Pasa hatza ezabatzeko"
 msgid "Swipe to reveal actions"
 msgstr "Pasa hatza ekintzak erakusteko"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:159
+#: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
 msgstr "Aldatu audio-iturburua:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
 msgstr "Aldatu deiak"
 
@@ -488,12 +490,12 @@ msgstr "Aldatu SIM lehenetsira:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:359
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Une honetan ez dago sarerik %1(e)n"
 
-#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
+#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
 msgid "There is currently no network."
 msgstr "Une honetan ez dago sarerik."
 
@@ -501,11 +503,11 @@ msgstr "Une honetan ez dago sarerik."
 msgid "Today"
 msgstr "Gaur"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Ubuntu Phone"
 msgstr "Ubuntu telefonoa"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:337
 msgid "Unknown device"
 msgstr "Gailu ezezaguna"
 
@@ -535,7 +537,7 @@ msgstr "Atzo"
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
 msgstr "SIM txartel bat hautatu behar duzu"
 

@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-07-16 05:45+0000\n"
-"X-Generator: Launchpad (build 17628)\n"
+"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
+"X-Generator: Launchpad (build 17690)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:443
+#: ../src/qml/LiveCallPage/LiveCall.qml:448
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 — на чекању"
@@ -126,45 +126,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Све"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:326
+#: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
 msgstr "Блутут уређај"
 
-#: ../src/qml/dialer-app.qml:596
+#: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
 msgstr "Ограничавање позива"
 
-#: ../src/qml/dialer-app.qml:607
+#: ../src/qml/dialer-app.qml:626
 msgid "Call Forwarding"
 msgstr "Преусмеравање позива"
 
-#: ../src/qml/dialer-app.qml:618
+#: ../src/qml/dialer-app.qml:637
 msgid "Call Waiting"
 msgstr "Позив на чекању"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:134
+#: ../src/qml/LiveCallPage/LiveCall.qml:138
 msgid "Call ended"
 msgstr "Завршен позив"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:283
+#: ../src/qml/LiveCallPage/LiveCall.qml:287
 msgid "Call failed"
 msgstr "Неуспешан позив"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:142
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Call holding failure"
 msgstr "Грешка у задржавању позива"
 
+#: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:450
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Позива"
 
-#: ../src/qml/dialer-app.qml:629
+#: ../src/qml/dialer-app.qml:648
 msgid "Calling Line Presentation"
 msgstr "Изглед линије за позиве"
 
-#: ../src/qml/dialer-app.qml:641
+#: ../src/qml/dialer-app.qml:660
 msgid "Calling Line Restriction"
 msgstr "Ограничавање линије за позиве"
 
@@ -185,20 +186,20 @@ msgstr "Променити све везе Телефона на %1?"
 msgid "Close"
 msgstr "Затвори"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:48
+#: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "Конференција"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:113
+#: ../src/qml/LiveCallPage/LiveCall.qml:117
 msgid "Conference call failure"
 msgstr "Грешка у вишестраном позиву"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:654
 msgid "Connected Line Presentation"
 msgstr "Изглед линије за повезаност"
 
-#: ../src/qml/dialer-app.qml:647
+#: ../src/qml/dialer-app.qml:666
 msgid "Connected Line Restriction"
 msgstr "Ограничење линије за повезаност"
 
@@ -230,12 +231,12 @@ msgstr "Појединости"
 msgid "Disable"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:451
+#: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
 msgstr "Искључујем режим лета"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:514
-#: ../src/qml/dialer-app.qml:528
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
+#: ../src/qml/dialer-app.qml:547
 msgid "Dismiss"
 msgstr "Одбаци"
 
@@ -251,23 +252,23 @@ msgstr ""
 msgid "Emergency Calls"
 msgstr "Хитни позиви"
 
-#: ../src/qml/DialerPage/DialerPage.qml:277
+#: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
 msgstr "Унесите број"
 
-#: ../src/qml/dialer-app.qml:511
+#: ../src/qml/dialer-app.qml:530
 msgid "Error"
 msgstr "Грешка"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:143
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Failed to activate the call."
 msgstr "Неуспешно успостављање позива."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:114
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Failed to create a conference call."
 msgstr "Неуспешно покретање позива ка више учесника."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:144
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to place the active call on hold."
 msgstr "Неуспешно пребацивање текућег позива на чекање."
 
@@ -275,6 +276,7 @@ msgstr "Неуспешно пребацивање текућег позива н
 msgid "Favorites"
 msgstr "Омиљени"
 
+#: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr ""
@@ -301,7 +303,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Долазни"
 
-#: ../src/qml/dialer-app.qml:512
+#: ../src/qml/dialer-app.qml:531
 msgid "Invalid USSD code"
 msgstr "Неисправан USSD код"
 
@@ -321,7 +323,7 @@ msgstr "Касније"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:555
 msgid "Merge calls"
 msgstr "Споји позиве"
 
@@ -340,16 +342,16 @@ msgstr ""
 msgid "No"
 msgstr "Не"
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
 msgstr "Није изабрана СИМ картица"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:104
+#: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "No calls"
 msgstr "Без позива"
 
-#: ../src/qml/DialerPage/DialerPage.qml:87 ../src/qml/dialer-app.qml:337
-#: ../src/qml/dialer-app.qml:342
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
+#: ../src/qml/dialer-app.qml:358
 msgid "No network"
 msgstr "Без мреже"
 
@@ -374,7 +376,7 @@ msgstr "Одлазно"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Телефон"
 
@@ -382,7 +384,7 @@ msgstr "Телефон"
 msgid "Phone App"
 msgstr "Програм за телефонирање"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
 msgstr "Звучник телефона"
 
@@ -405,7 +407,7 @@ msgstr ""
 "изборника <a href=\"system_settings\">Подешавања система &gt; Безбедност "
 "&amp; Приватност</a>."
 
-#: ../src/qml/dialer-app.qml:491
+#: ../src/qml/dialer-app.qml:510
 msgid "Please wait"
 msgstr "Сачекајте"
 
@@ -418,7 +420,7 @@ msgstr "Приватно"
 msgid "Private number"
 msgstr "Сакривени број"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:120
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Скорашњи"
@@ -476,11 +478,11 @@ msgstr ""
 msgid "Swipe to reveal actions"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:159
+#: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
 msgstr "Промени извор звука:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
 msgstr "Замени позиве"
 
@@ -492,12 +494,12 @@ msgstr "Пређи на подразумевану СИМ картицу:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:359
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Тренутно нема мреже на %1"
 
-#: ../src/qml/dialer-app.qml:337 ../src/qml/dialer-app.qml:344
+#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
 msgid "There is currently no network."
 msgstr "Тренутно нема мреже."
 
@@ -505,11 +507,11 @@ msgstr "Тренутно нема мреже."
 msgid "Today"
 msgstr "Данас"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Ubuntu Phone"
 msgstr "Убунту телефон"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:337
 msgid "Unknown device"
 msgstr "Непознат уређај"
 
@@ -539,7 +541,7 @@ msgstr "Јуче"
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:316
+#: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
 msgstr "Морате изабрати СИМ картицу"
 
