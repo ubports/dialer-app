@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-06-19 14:42+0000\n"
+"PO-Revision-Date: 2015-09-03 13:22+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
 "MIME-Version: 1.0\n"
@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-04 05:35+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 "Language: gd\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -234,7 +234,7 @@ msgstr "Mion-fhiosrachadh"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Cuir à comas"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -251,7 +251,7 @@ msgstr "Na faighnich dhìom a-rithist"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Deasaich"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -284,7 +284,7 @@ msgstr "Annsachdan"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Am modh itealain"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -440,7 +440,7 @@ msgstr "SIM glaiste"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Sàbhail"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -546,6 +546,7 @@ msgstr "An-dè"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
+"Feumaidh tu am modh itealain a chur dheth mus urrainn dhut fòn a chur"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
