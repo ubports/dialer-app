@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-04-13 15:24+0000\n"
-"Last-Translator: Данило Шеган <Unknown>\n"
+"PO-Revision-Date: 2015-09-06 14:00+0000\n"
+"Last-Translator: Bojan Bogdanović <Unknown>\n"
 "Language-Team: Serbian <sr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-07 05:59+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -124,7 +124,7 @@ msgstr "Сви"
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr "Све"
+msgstr "Сви"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
@@ -179,7 +179,7 @@ msgstr "Откажи"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Променити све везе Телефона на %1?"
+msgstr "Пребаците све позиве телефона на %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -193,7 +193,7 @@ msgstr "Конференција"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:117
 msgid "Conference call failure"
-msgstr "Грешка у вишестраном позиву"
+msgstr "Грешка у конференцијском позиву"
 
 #: ../src/qml/dialer-app.qml:654
 msgid "Connected Line Presentation"
@@ -206,7 +206,7 @@ msgstr "Ограничење линије за повезаност"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr "Детаљи о особи"
+msgstr "Детаљи контакта"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
 #: ../src/qml/DialerPage/DialerPage.qml:42
@@ -229,7 +229,7 @@ msgstr "Појединости"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Онемогући"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -246,7 +246,7 @@ msgstr "Не питај поново"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Уреди"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -266,7 +266,7 @@ msgstr "Неуспешно успостављање позива."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Failed to create a conference call."
-msgstr "Неуспешно покретање позива ка више учесника."
+msgstr "Неуспешно покретање конференцијског позива."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to place the active call on hold."
@@ -279,7 +279,7 @@ msgstr "Омиљени"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Режим за летове"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -291,7 +291,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Важи"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -331,11 +331,11 @@ msgstr "Споји позиве"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr "Пропуштен"
+msgstr "Пропуштени"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Мобилни"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -394,7 +394,7 @@ msgstr "Програм за телефонирање"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Телефон;Бирање;Звање;Позови"
+msgstr "Телефон;Бирање;Звање;Позови;Тастатура"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -409,7 +409,7 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:510
 msgid "Please wait"
-msgstr "Сачекајте"
+msgstr "Молимо, сачекајте"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
 msgid "Private"
@@ -431,11 +431,11 @@ msgstr "СИМ картица је закључана"
 
 #: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
-msgstr "СИМ је закључана"
+msgstr "СИМ картица је закључана"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Сачувај"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -472,11 +472,11 @@ msgstr "Подели"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Превуците да обришете"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Превуците да видите акције"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
@@ -539,7 +539,7 @@ msgstr "Јуче"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Морате искључити режим лета да направите позив"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
