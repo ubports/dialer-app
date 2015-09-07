@@ -374,7 +374,6 @@ MainView {
         }
 
         if (account && account.connected) {
-            console.log("startCall")
             generalSettings.lastCalledPhoneNumber = number
             callManager.startCall(number, account.accountId);
         }
