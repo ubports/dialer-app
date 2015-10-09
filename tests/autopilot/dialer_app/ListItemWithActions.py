@@ -29,7 +29,7 @@ class HistoryDelegate(ListItemWithActions):
 
     def send_message(self):
         self._show_actions()
-        icon = self.select_single('Icon11', name='message')
+        icon = self.select_single('Icon', name='message')
         self.pointing_device.click_object(icon)
 
     def _show_actions(self):
@@ -42,5 +42,5 @@ class HistoryDelegate(ListItemWithActions):
 
     def add_contact(self):
         self._show_actions()
-        icon = self.select_single('Icon11', name='contact-new')
+        icon = self.select_single('Icon', name='contact-new')
         self.pointing_device.click_object(icon)
