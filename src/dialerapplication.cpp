@@ -69,10 +69,9 @@ DialerApplication::DialerApplication(int &argc, char **argv)
 bool DialerApplication::setup()
 {
     installIconPath();
-    static QList<QString> validSchemes;
 
-    if (validSchemes.isEmpty()) {
-        validSchemes << "tel" << "dialer";
+    if (mValidSchemes.isEmpty()) {
+        mValidSchemes << "tel" << "dialer";
     }
 
     QStringList arguments = this->arguments();
@@ -122,7 +121,7 @@ bool DialerApplication::setup()
 
     if (arguments.size() == 2) {
         QUrl uri(arguments.at(1));
-        if (validSchemes.contains(uri.scheme())) {
+        if (mValidSchemes.contains(uri.scheme())) {
             m_arg = arguments.at(1);
         }
     }
@@ -205,9 +204,16 @@ void DialerApplication::parseArgument(const QString &arg)
 
     QUrl url(arg);
     QString scheme = url.scheme();
-    QString value = url.path();
-    if (value.startsWith("/")) {
-        value.remove(0, 1);
+    // we can't fill value with url.path() as it might contain the # character and QUrl will drop it.
+    QString value;
+    if (!mValidSchemes.contains(url.scheme())) {
+        qWarning() << "Url scheme not valid for dialer-app";
+        return;
+    } else if (url.scheme() == "tel") {
+        // remove the initial tel:, it doesn't matter if it contains /// or //, as we
+        // now use libphonenumber and it will remove these invalid characters when in the beginning
+        // of the number
+        value = QUrl::fromPercentEncoding(arg.mid(4).toLatin1());
     }
 
     QQuickItem *mainView = m_view->rootObject();
