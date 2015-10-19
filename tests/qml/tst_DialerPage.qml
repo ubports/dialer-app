@@ -116,6 +116,7 @@ Item {
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', ' ')
         }
 
+        /*
         function test_dialerPageEmergencyNumbers() {
             tryCompare(mainViewLoader.item, 'applicationActive', true)
             tryCompare(mainViewLoader.item.currentStack, 'depth', 1)
@@ -198,5 +199,6 @@ Item {
             callSpy.clear()
             mainViewLoader.item.switchToKeypadView()
         }
+        */
     }
 }
