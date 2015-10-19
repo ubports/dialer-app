@@ -213,7 +213,8 @@ void DialerApplication::parseArgument(const QString &arg)
         // remove the initial tel:, it doesn't matter if it contains /// or //, as we
         // now use libphonenumber and it will remove these invalid characters when in the beginning
         // of the number
-        value = QUrl::fromPercentEncoding(arg.mid(4).toLatin1());
+        value = arg;
+        value = QUrl::fromPercentEncoding(value.remove("tel:").toLatin1());
     }
 
     QQuickItem *mainView = m_view->rootObject();
