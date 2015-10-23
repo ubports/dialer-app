@@ -146,7 +146,7 @@ ListItemWithActions {
         width: height
         fallbackAvatarUrl: (participant.avatar  && participant.avatar !== "") ? participant.avatar : "image://theme/stock_contact"
         fallbackDisplayName: (participant.alias && participant.alias !== "") ? participant.alias : phoneNumber
-        showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
+        showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0) || !interactive
     }
 
     Label {

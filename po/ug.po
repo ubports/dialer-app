@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-09-24 12:36+0000\n"
-"Last-Translator: Gheyret T.Kenji <Unknown>\n"
+"PO-Revision-Date: 2015-10-17 06:39+0000\n"
+"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-18 05:36+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -222,7 +222,7 @@ msgstr "تەپسىلاتلار"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "چەكلە"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -239,7 +239,7 @@ msgstr "قايتا سورىما"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "تەھرىرلەش"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -272,7 +272,7 @@ msgstr "يىغقۇچ"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "ئايروپىلان ھالىتى"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -284,7 +284,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "بىلدىم"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -328,7 +328,7 @@ msgstr "ئالمىغانلىرى"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "يانفون"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -428,7 +428,7 @@ msgstr "SIM قۇلۇپلانغان"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "ساقلا"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -465,7 +465,7 @@ msgstr "ھەمبەھىر"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "پاكىز ئۈچۈرۋىتىش"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"

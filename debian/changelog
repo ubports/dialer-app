@@ -1,3 +1,21 @@
+dialer-app (0.1+15.10.20151015-0ubuntu1) wily; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Adapt dialer to the latest changes in history-service and telephony-
+    service.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 15 Oct 2015 14:02:25 +0000
+
+dialer-app (0.1+15.10.20150923-0ubuntu1) wily; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+
+  [ Tiago Salem Herrmann ]
+  * Fix autopilot test replacing Icon11 by Icon
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Wed, 23 Sep 2015 15:33:19 +0000
+
 dialer-app (0.1+15.10.20150810-0ubuntu1) wily; urgency=medium
 
   [ CI Train Bot ]

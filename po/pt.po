@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-07-17 18:58+0000\n"
+"PO-Revision-Date: 2015-09-08 09:03+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-09 05:43+0000\n"
+"X-Generator: Launchpad (build 17706)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -124,7 +124,7 @@ msgstr "Todos"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
-msgstr "Dispositivo Bluetooth"
+msgstr "Dispositivo bluetooth"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
@@ -275,7 +275,7 @@ msgstr "Favoritos"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "Modo de avião"
+msgstr "Modo avião"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -340,7 +340,7 @@ msgstr "Não"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
-msgstr "Nenhum cartão SIM selecionado"
+msgstr "Sem cartão SIM selecionado"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:108
 msgid "No calls"
@@ -378,7 +378,7 @@ msgstr "Telemóvel"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "App de telemóvel"
+msgstr "App telemóvel"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
@@ -386,7 +386,7 @@ msgstr "Altifalante"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Aplicação de telemóvel"
+msgstr "App telemóvel"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
@@ -451,7 +451,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Selecione um cartão SIM padrão para todas as chamadas efetuadas. Pode sempre "
-"alterar a sua escolha em <a href=\"Definições\"> Definições</a>."
+"alterar a sua escolha em <a href=\"system_settings\"> Definições</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
@@ -476,7 +476,7 @@ msgstr "Deslize para revelar ações"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
-msgstr "Modificar a fonte de audio:"
+msgstr "Modificar a fonte de áudio:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
@@ -497,7 +497,7 @@ msgstr "Atualmente não existe nenhuma rede em %1"
 
 #: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
 msgid "There is currently no network."
-msgstr "Atualmente não existe nenhuma rede."
+msgstr "Sem rede."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
@@ -535,7 +535,7 @@ msgstr "Ontem"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Tem de desativar o modo de avião para fazer chamadas"
+msgstr "Tem de desativar o modo avião para fazer chamadas"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"

@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-06-26 22:53+0000\n"
+"PO-Revision-Date: 2015-09-20 00:58+0000\n"
 "Last-Translator: Jared Norris <jarednorris@ubuntu.com>\n"
 "Language-Team: English (Australia) <en_AU@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-09-21 05:37+0000\n"
+"X-Generator: Launchpad (build 17746)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -225,7 +225,7 @@ msgstr "Details"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Disable"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -242,7 +242,7 @@ msgstr "Don't ask again"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Edit"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -275,7 +275,7 @@ msgstr "Favourites"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Flight Mode"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -430,7 +430,7 @@ msgstr "SIM Locked"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -534,7 +534,7 @@ msgstr "Yesterday"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "You have to disable flight mode in order to make calls"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
