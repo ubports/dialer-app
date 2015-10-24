@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-24 05:59+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -110,21 +110,21 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Të Gjitha"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Të Gjitha"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Pajisja Bluetooth"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Call Barring"
@@ -202,7 +202,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr ""
+msgstr "Detajet e Kontaktuesit"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
 #: ../src/qml/DialerPage/DialerPage.qml:42
@@ -270,7 +270,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
-msgstr ""
+msgstr "Të Parapëlqyerat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -279,7 +279,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr ""
+msgstr "Mënyrë fluturimi"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -357,7 +357,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -374,11 +374,11 @@ msgstr "PQRS"
 
 #: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telefoni"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Program Telefoni"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:335
 msgid "Phone Speaker"
@@ -386,7 +386,7 @@ msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Program telefoni"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
@@ -423,7 +423,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:79
 msgid "SIM Locked"
-msgstr ""
+msgstr "Karta e Bllokuar"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -431,11 +431,11 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
-msgstr ""
+msgstr "Kërko"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
-msgstr ""
+msgstr "Kërko..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
@@ -453,12 +453,12 @@ msgstr "Dërgo mesazhin"
 
 #: ../src/qml/DialerPage/DialerPage.qml:47
 msgid "Settings"
-msgstr ""
+msgstr "Parametrat"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 msgid "Share"
-msgstr ""
+msgstr "Shpërndaje"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -470,7 +470,7 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Ndërro burimin e audios:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:540
 msgid "Switch calls"
@@ -499,11 +499,11 @@ msgstr "Sot"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:333
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Telefon ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:337
 msgid "Unknown device"
-msgstr ""
+msgstr "Pajisje e panjohur"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
@@ -521,7 +521,7 @@ msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Po"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
@@ -538,12 +538,12 @@ msgstr ""
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "oo:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
 
 #~ msgid "New Call"
 #~ msgstr "Thirrje e Re"

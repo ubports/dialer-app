@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-24 05:59+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -112,12 +112,12 @@ msgstr "通話中"
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "すべて"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "すべて"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:331
 msgid "Bluetooth device"
@@ -222,7 +222,7 @@ msgstr "詳細"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "無効"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -239,11 +239,11 @@ msgstr "再び表示しない"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "編集"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
-msgstr "緊急電話"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
@@ -272,7 +272,7 @@ msgstr "お気に入り"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "機内モード"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -426,7 +426,7 @@ msgstr "SIMがロックされています"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "保存"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"

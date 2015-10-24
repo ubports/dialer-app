@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-24 06:00+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -247,7 +247,7 @@ msgstr "응급 통화"
 
 #: ../src/qml/DialerPage/DialerPage.qml:276
 msgid "Enter a number"
-msgstr "숫자를 입력"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:530
 msgid "Error"

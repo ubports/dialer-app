@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Launchpad-Export-Date: 2015-08-18 06:00+0000\n"
-"X-Generator: Launchpad (build 17690)\n"
+"X-Launchpad-Export-Date: 2015-10-24 05:59+0000\n"
+"X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -229,7 +229,7 @@ msgstr "Падрабязнасці"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Адключыць"
 
 #: ../src/qml/dialer-app.qml:470
 msgid "Disabling flight mode"
@@ -246,7 +246,7 @@ msgstr "Больш не пытацца"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Рэдагаваць"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -279,7 +279,7 @@ msgstr "Улюбёнае"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Рэжым палёту"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -291,7 +291,7 @@ msgstr "ІЙКЛ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Выканана"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -335,7 +335,7 @@ msgstr "Прапушчаныя"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Мабільны"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -437,7 +437,7 @@ msgstr "SIM-картка заблакаваная"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Захаваць"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -474,11 +474,11 @@ msgstr "Падзяліцца"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Правядзіце для выдалення"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Правядзіце, каб убачыць пункты дзеянняў"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:163
 msgid "Switch audio source:"
@@ -542,6 +542,7 @@ msgstr "Учора"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
+"Вам варта выключыць рэжым палёту, каб мець магчымасць ажыццяўляць званкі"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"

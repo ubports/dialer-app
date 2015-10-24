@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-10-18 05:36+0000\n"
+"X-Launchpad-Export-Date: 2015-10-24 06:00+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -532,7 +532,7 @@ msgstr "تۈنۈگۈن"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "سىز ئايرۇپىلان ھالەتنى بىكار قىلغاندىن كېيىن تىلفۇن ئۇرالايسىز"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
