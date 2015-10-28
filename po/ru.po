@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-06-08 10:58+0000\n"
+"PO-Revision-Date: 2015-10-26 10:13+0000\n"
 "Last-Translator: ☠Jay ZDLin☠ <Unknown>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-24 06:00+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-10-28 05:39+0000\n"
+"X-Generator: Launchpad (build 17833)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -130,15 +130,15 @@ msgstr "Все"
 msgid "Bluetooth device"
 msgstr "Bluetooth-устройство"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:614
 msgid "Call Barring"
 msgstr "Запрет вызова"
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/dialer-app.qml:625
 msgid "Call Forwarding"
 msgstr "Переадресация вызовов"
 
-#: ../src/qml/dialer-app.qml:637
+#: ../src/qml/dialer-app.qml:636
 msgid "Call Waiting"
 msgstr "Ожидание вызова"
 
@@ -161,11 +161,11 @@ msgstr "Сбой удержания звонка"
 msgid "Calling"
 msgstr "Идёт вызов"
 
-#: ../src/qml/dialer-app.qml:648
+#: ../src/qml/dialer-app.qml:647
 msgid "Calling Line Presentation"
 msgstr "Индикация вызывающей линии"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:659
 msgid "Calling Line Restriction"
 msgstr "Запрет вызывающей линии"
 
@@ -195,11 +195,11 @@ msgstr "Конференция"
 msgid "Conference call failure"
 msgstr "Сбой конференц-связи"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:653
 msgid "Connected Line Presentation"
 msgstr "Индикация подключенной линии"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:665
 msgid "Connected Line Restriction"
 msgstr "Ограничение подключенной линии"
 
@@ -229,14 +229,14 @@ msgstr "Сведения"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Отключить"
 
-#: ../src/qml/dialer-app.qml:470
+#: ../src/qml/dialer-app.qml:469
 msgid "Disabling flight mode"
 msgstr "Выключается самолётный режим"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
-#: ../src/qml/dialer-app.qml:547
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:532
+#: ../src/qml/dialer-app.qml:546
 msgid "Dismiss"
 msgstr "Отменить"
 
@@ -256,7 +256,7 @@ msgstr "Экстренные вызовы"
 msgid "Enter a number"
 msgstr "Введите номер"
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:529
 msgid "Error"
 msgstr "Ошибка"
 
@@ -303,7 +303,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Входящие"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:530
 msgid "Invalid USSD code"
 msgstr "Неверный USSD код"
 
@@ -342,7 +342,7 @@ msgstr "Мобильный"
 msgid "No"
 msgstr "Нет"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:331
 msgid "No SIM card selected"
 msgstr "SIM-карта не выбрана"
 
@@ -350,8 +350,8 @@ msgstr "SIM-карта не выбрана"
 msgid "No calls"
 msgstr "Вызовы отсутствуют"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
-#: ../src/qml/dialer-app.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:352
+#: ../src/qml/dialer-app.qml:357
 msgid "No network"
 msgstr "Сеть не найдена"
 
@@ -406,7 +406,7 @@ msgstr ""
 "сообщений. Вы можете её разблокировать через иконку сети вверху экрана или в "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 
-#: ../src/qml/dialer-app.qml:510
+#: ../src/qml/dialer-app.qml:509
 msgid "Please wait"
 msgstr "Подождите"
 
@@ -493,12 +493,12 @@ msgstr "Переключиться на SIM-карту по умолчанию:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:359
+#: ../src/qml/dialer-app.qml:358
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "В настоящий момент отсутствует доступ к сети %1"
 
-#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:352 ../src/qml/dialer-app.qml:359
 msgid "There is currently no network."
 msgstr "В настоящий момент сеть недоступна."
 
@@ -538,9 +538,9 @@ msgstr "Вчера"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Для выполнения звонков необходимо отключить режим полета"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:331
 msgid "You need to select a SIM card"
 msgstr "Необходимо выбрать SIM-карту"
 
