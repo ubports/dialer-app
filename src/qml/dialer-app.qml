@@ -53,6 +53,7 @@ MainView {
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
+
     property bool hasCalls: callManager.hasCalls
 
     signal applicationReady
@@ -453,6 +454,12 @@ MainView {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
         pageStackNormalMode.push(Qt.createComponent("DialerPage/DialerPage.qml"))
+
+        // when running in windowed mode, do not allow resizing
+        view.minimumWidth  = width * 0.9
+        view.maximumWidth = width * 1.1
+        view.minimumHeight = height * 0.9
+        view.maximumHeight = height * 1.1
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
