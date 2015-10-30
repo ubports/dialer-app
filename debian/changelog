@@ -1,3 +1,9 @@
+dialer-app (0.1+16.04.20151030-0ubuntu1) xenial; urgency=medium
+
+  * Restrict the window resizing in desktop mode. (LP: #1488852)
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Fri, 30 Oct 2015 12:25:10 +0000
+
 dialer-app (0.1+16.04.20151026-0ubuntu1) xenial; urgency=medium
 
   [ CI Train Bot ]
