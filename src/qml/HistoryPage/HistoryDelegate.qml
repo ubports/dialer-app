@@ -17,9 +17,9 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 0.1 as ListItem
-import Ubuntu.Components.Popups 0.1
+import Ubuntu.Components 1.3
+import Ubuntu.Components.ListItems 1.3 as ListItem
+import Ubuntu.Components.Popups 1.3
 import Ubuntu.Telephony 0.1
 import Ubuntu.Telephony.PhoneNumber 0.1 as PhoneUtils
 import Ubuntu.Contacts 0.1
@@ -146,7 +146,7 @@ ListItemWithActions {
         width: height
         fallbackAvatarUrl: (participant.avatar  && participant.avatar !== "") ? participant.avatar : "image://theme/stock_contact"
         fallbackDisplayName: (participant.alias && participant.alias !== "") ? participant.alias : phoneNumber
-        showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0)
+        showAvatarPicture: (fallbackAvatarUrl != "image://theme/stock_contact") || (initials.length === 0) || !interactive
     }
 
     Label {

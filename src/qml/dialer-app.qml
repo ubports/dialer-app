@@ -19,8 +19,8 @@
 import QtQuick 2.0
 import Qt.labs.settings 1.0
 
-import Ubuntu.Components 1.1
-import Ubuntu.Components.Popups 0.1
+import Ubuntu.Components 1.3
+import Ubuntu.Components.Popups 1.3
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
 
@@ -67,7 +67,7 @@ MainView {
     automaticOrientation: false
     width: units.gu(40)
     height: units.gu(71)
-    useDeprecatedToolbar: false
+
     property bool hasCalls: callManager.hasCalls
 
     signal applicationReady
@@ -468,6 +468,12 @@ MainView {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
         pageStackNormalMode.push(Qt.createComponent("DialerPage/DialerPage.qml"))
+
+        // when running in windowed mode, do not allow resizing
+        view.minimumWidth  = width * 0.9
+        view.maximumWidth = width * 1.1
+        view.minimumHeight = height * 0.9
+        view.maximumHeight = height * 1.1
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {

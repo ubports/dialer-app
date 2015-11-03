@@ -1,3 +1,28 @@
+dialer-app (0.1+16.04.20151030-0ubuntu1) xenial; urgency=medium
+
+  * Restrict the window resizing in desktop mode. (LP: #1488852)
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Fri, 30 Oct 2015 12:25:10 +0000
+
+dialer-app (0.1+16.04.20151026-0ubuntu1) xenial; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+  * Resync trunk. added: po/vi.po
+
+  [ Tiago Salem Herrmann ]
+  * Port dialer-app to ui-toolkit 1.3
+
+ -- Bill Filler <ci-train-bot@canonical.com>  Mon, 26 Oct 2015 15:06:05 +0000
+
+dialer-app (0.1+15.10.20151015-0ubuntu1) wily; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Adapt dialer to the latest changes in history-service and telephony-
+    service.
+
+ -- CI Train Bot <ci-train-bot@canonical.com>  Thu, 15 Oct 2015 14:02:25 +0000
+
 dialer-app (0.1+15.10.20150923-0ubuntu1) wily; urgency=medium
 
   [ CI Train Bot ]

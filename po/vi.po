@@ -1,26 +1,26 @@
-# Marathi translation for dialer-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Vietnamese translation for dialer-app
+# Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-09-29 09:48+0000\n"
+"PO-Revision-Date: 2015-10-18 14:04+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Marathi <mr@li.org>\n"
+"Language-Team: Vietnamese <vi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2015-10-24 06:00+0000\n"
 "X-Generator: Launchpad (build 17812)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
-msgstr "#"
+msgstr ""
 
 #. TRANSLATORS: %1 is the call duration here.
 #: ../src/qml/LiveCallPage/LiveCall.qml:448
@@ -32,81 +32,81 @@ msgstr ""
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 तास"
-msgstr[1] "%1 तास"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 मिनिट"
-msgstr[1] "%1 मिनिटे"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 सेकंद"
-msgstr[1] "%1 सेकंद"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:201
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
-msgstr "(%1)"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
-msgstr "*"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
-msgstr "+"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
-msgstr "०"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:49
 msgid "1"
-msgstr "१"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr "२"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr "३"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr "४"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr "५"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr "६"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr "७"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr "८"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr "९"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr "ABC"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
@@ -169,7 +169,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:106
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr "रद्द"
+msgstr ""
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -211,7 +211,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
@@ -283,7 +283,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
@@ -291,7 +291,7 @@ msgstr ""
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr "IMEI"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
@@ -305,7 +305,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
@@ -317,7 +317,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:555
 msgid "Merge calls"
@@ -336,7 +336,7 @@ msgstr ""
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "नाही"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:332
 msgid "No SIM card selected"
@@ -370,7 +370,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
@@ -482,7 +482,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:359
 #, qt-format
@@ -517,15 +517,15 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "हो"
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "काल"
+msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
@@ -538,15 +538,9 @@ msgstr ""
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "hh:mm:ss"
+msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr "mm:ss"
-
-#~ msgid "+ Create New"
-#~ msgstr "नवीन तयार"
-
-#~ msgid "hh:mm ap"
-#~ msgstr "hh:mm ap"
+msgstr ""

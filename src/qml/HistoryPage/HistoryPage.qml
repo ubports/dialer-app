@@ -17,8 +17,8 @@
  */
 
 import QtQuick 2.0
-import Ubuntu.Components 1.1
-import Ubuntu.Components.ListItems 0.1 as ListItem
+import Ubuntu.Components 1.3
+import Ubuntu.Components.ListItems 1.3 as ListItem
 import Ubuntu.History 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
@@ -105,7 +105,7 @@ Page {
         visible: false
         property variant model: Item {
             property string senderId: "dummy"
-            property variant participants: [ {phoneNumber:"dummy"} ]
+            property variant participants: [ {identifier:"dummy"} ]
         }
     }
 
@@ -317,7 +317,7 @@ Page {
                         historyEventModel.removeEvents(model.events)
                     }
                 }
-                property bool knownNumber: participants[0] != "x-ofono-private" && participants[0] != "x-ofono-unknown"
+                property bool knownNumber: participants[0].identifier != "x-ofono-private" && participants[0].identifier != "x-ofono-unknown"
                 rightSideActions: [
                     Action {
                         iconName: "info"
