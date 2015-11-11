@@ -1,3 +1,16 @@
+dialer-app (0.1+16.04.20151111-0ubuntu1) xenial; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * We really just want to get the index of the account in the active
+    accounts list.
+
+  [ Tiago Salem Herrmann ]
+  * Avoid removing # and other characters from tel: uri's (LP: #1496845)
+  * Fallback to original phone number when format() returns a blank
+    string
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Wed, 11 Nov 2015 15:17:07 +0000
+
 dialer-app (0.1+16.04.20151030-0ubuntu1) xenial; urgency=medium
 
   * Restrict the window resizing in desktop mode. (LP: #1488852)
