@@ -152,8 +152,8 @@ PageWithBottomEdge {
 
     function accountIndex(account) {
         var index = -1;
-        for (var i in telepathyHelper.accounts) {
-            if (telepathyHelper.accounts[i] == account) {
+        for (var i in telepathyHelper.activeAccounts) {
+            if (telepathyHelper.activeAccounts[i] == account) {
                 index = i;
                 break;
             }
