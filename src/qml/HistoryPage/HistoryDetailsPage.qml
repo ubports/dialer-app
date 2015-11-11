@@ -37,7 +37,8 @@ Page {
 
     objectName: "historyDetailsPage"
     anchors.fill: parent
-    title: {
+
+    function getFormattedPhoneLabel(phoneNumber) {
         if (phoneNumber == "x-ofono-private") {
             return i18n.tr("Private number")
         } else if (phoneNumber == "x-ofono-unknown") {
@@ -45,8 +46,14 @@ Page {
         } else if (contactWatcher.alias != "") {
             return contactWatcher.alias
         }
-        return PhoneUtils.PhoneUtils.format(phoneNumber)
+        var formattedPhoneNumber = PhoneUtils.PhoneUtils.format(phoneNumber)
+        if (formattedPhoneNumber !== "") {
+            return formattedPhoneNumber
+        }
+        return phoneNumber
     }
+
+    title: getFormattedPhoneLabel(phoneNumber)
 
     head.actions: [
         Action {
@@ -138,7 +145,7 @@ Page {
                 }
                 verticalAlignment: Text.AlignTop
                 fontSize: "medium"
-                text: PhoneUtils.PhoneUtils.format(phoneNumber)
+                text: getFormattedPhoneLabel(phoneNumber)
                 elide: Text.ElideRight
                 color: UbuntuColors.lightAubergine
                 height: units.gu(2)
@@ -263,7 +270,7 @@ Page {
             Label {
                 id: remoteParticipantId
                 // FIXME: we need to check if the id is actually a phone number
-                text: PhoneUtils.PhoneUtils.format(modelData.remoteParticipant)
+                text: getFormattedPhoneLabel(modelData.remoteParticipant)
                 anchors {
                     left: timeLabel.right
                     leftMargin: units.gu(1)
