@@ -1,3 +1,10 @@
+dialer-app (0.1+16.04.20151111.1-0ubuntu1) xenial; urgency=medium
+
+  * Make sure the account label is selected on the live call. (LP:
+    #1515012)
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Wed, 11 Nov 2015 20:25:42 +0000
+
 dialer-app (0.1+16.04.20151111-0ubuntu1) xenial; urgency=medium
 
   [ Gustavo Pichorim Boiko ]
