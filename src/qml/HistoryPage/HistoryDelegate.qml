@@ -170,7 +170,11 @@ ListItemWithActions {
             } else if (participant.alias && participant.alias !== "") {
                 return participant.alias
             }
-            return PhoneUtils.PhoneUtils.format(phoneNumber)
+            var formattedPhoneNumber = PhoneUtils.PhoneUtils.format(phoneNumber)
+            if (formattedPhoneNumber !== "") {
+                return formattedPhoneNumber
+            }
+            return phoneNumber
         }
         elide: Text.ElideRight
         color: UbuntuColors.lightAubergine

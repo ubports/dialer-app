@@ -53,6 +53,7 @@ private:
     QString m_arg;
     bool m_applicationIsReady;
     bool m_fullScreen;
+    QList<QString> mValidSchemes;
 };
 
 #endif // DIALERAPPLICATION_H
