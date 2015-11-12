@@ -1,3 +1,12 @@
+dialer-app (0.1+16.04.20151112.1-0ubuntu1) xenial; urgency=medium
+
+  * Make sure we have enough space for the DTMF buttons and also keep
+    the header text untouched. (LP: #1515675)
+  * Set the header section models to [] instead of undefined. (LP:
+    #1515734)
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Thu, 12 Nov 2015 19:34:55 +0000
+
 dialer-app (0.1+16.04.20151111.1-0ubuntu1) xenial; urgency=medium
 
   * Make sure the account label is selected on the live call. (LP:
