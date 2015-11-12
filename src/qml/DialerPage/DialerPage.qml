@@ -189,7 +189,7 @@ PageWithBottomEdge {
     head.sections.model: {
         // does not show dual sim switch if there is only one sim
         if (!multipleAccounts || mainView.greeterMode) {
-            return undefined
+            return []
         }
 
         var accountNames = []
