@@ -39,7 +39,7 @@ PageWithBottomEdge {
 
         // do not show any accounts in greeter mode
         if (mainView.greeterMode) {
-            return undefined
+            return []
         }
 
         // populate model with all active phone accounts
@@ -51,7 +51,7 @@ PageWithBottomEdge {
         }
         // do not show dual sim switch if there is only one sim
         if (model.length == 1 && model[0].type == AccountEntry.PhoneAccount) {
-            return undefined
+            return []
         }
         return model
     }
@@ -210,7 +210,7 @@ PageWithBottomEdge {
         for (var i in page.accountsModel) {
             accountNames.push(page.accountsModel[i].displayName)
         }
-        return accountNames.length > 0 ? accountNames : undefined
+        return accountNames
     }
 
     head.sections.selectedIndex: accountIndex(mainView.account)

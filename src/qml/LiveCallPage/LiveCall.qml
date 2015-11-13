@@ -75,7 +75,7 @@ Page {
     title: caller
     head.actions: []
     head.backAction: backAction
-    head.sections.model: multiplePhoneAccounts ? [call.account.displayName] : undefined
+    head.sections.model: multiplePhoneAccounts ? [call.account.displayName] : []
     head.sections.selectedIndex: 0
     x: header ? header.height : 0
 
@@ -184,7 +184,7 @@ Page {
 
             PropertyChanges {
                 target: durationLabel
-                anchors.topMargin: units.gu(3)
+                anchors.topMargin: units.gu(2)
             }
 
             PropertyChanges {
@@ -195,10 +195,6 @@ Page {
             PropertyChanges {
                 target: keypad
                 opacity: 1.0
-            }
-            PropertyChanges {
-                target: liveCall
-                title: ""
             }
             PropertyChanges {
                 target: dtmfButton
@@ -509,6 +505,8 @@ Page {
 
             visible: opacity > 0.0
             opacity: 0.0
+            keysWidth: units.gu(11)
+            keysHeight: units.gu(7)
         }
     }
 
