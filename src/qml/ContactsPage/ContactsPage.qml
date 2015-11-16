@@ -192,6 +192,12 @@ Page {
         }
     }
 
+    onActiveChanged: {
+        if (active && (state === "searching")) {
+            searchField.forceActiveFocus()
+        }
+    }
+
     KeyboardRectagle {
         id: keyboardRect
     }
