@@ -1,3 +1,14 @@
+dialer-app (0.1+16.04.20151119.2-0ubuntu1) xenial; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Fix the overlap between the contact label and the "private" button
+    on conf calls.
+
+  [ Tiago Salem Herrmann ]
+  * Use new method/signal names.
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Thu, 19 Nov 2015 18:08:10 +0000
+
 dialer-app (0.1+16.04.20151112.1-0ubuntu1) xenial; urgency=medium
 
   * Make sure we have enough space for the DTMF buttons and also keep
