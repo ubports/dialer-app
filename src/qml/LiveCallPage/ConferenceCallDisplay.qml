@@ -65,6 +65,7 @@ Column {
                 anchors {
                     left: parent.left
                     leftMargin: units.gu(1)
+                    right: splitButton.left
                     verticalCenter: parent.verticalCenter
                 }
                 text: {
@@ -76,6 +77,7 @@ Column {
                         return contactWatcher.identifier;
                     }
                 }
+                elide: Text.ElideRight
             }
 
             backgroundIndicator: Rectangle {
@@ -123,7 +125,7 @@ Column {
                     bottom: parent.bottom
                     right: durationLabel.left
                 }
-                width: callStatus.width + units.gu(2)
+                width: visible ? callStatus.width + units.gu(2) : 0
 
                 visible: !callManager.backgroundCall
                 onClicked: callEntry.splitCall()
