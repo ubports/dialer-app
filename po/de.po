@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-10-24 05:59+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:448
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - Wartend"
@@ -50,7 +50,7 @@ msgstr[0] "%1 s"
 msgstr[1] "%1 s"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -122,46 +122,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Alle"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Bluetooth device"
 msgstr "Bluetooth-Gerät"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:621
 msgid "Call Barring"
 msgstr "Anrufsperre"
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/dialer-app.qml:632
 msgid "Call Forwarding"
 msgstr "Anrufweiterleitung"
 
-#: ../src/qml/dialer-app.qml:637
+#: ../src/qml/dialer-app.qml:643
 msgid "Call Waiting"
 msgstr "Anklopfen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:138
+#: ../src/qml/LiveCallPage/LiveCall.qml:139
 msgid "Call ended"
 msgstr "Anruf beendet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:287
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
 msgstr "Anruf fehlgeschlagen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:146
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Call holding failure"
 msgstr "Fehler beim Halten des Anrufs"
 
 #: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:450
+#: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Rufaufbau zu"
 
-#: ../src/qml/dialer-app.qml:648
+#: ../src/qml/dialer-app.qml:654
 msgid "Calling Line Presentation"
 msgstr "Rufnummernübermittlung des Anrufers"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:666
 msgid "Calling Line Restriction"
 msgstr "Rufnummernunterdrückung des Anrufers"
 
@@ -187,19 +187,19 @@ msgstr "Schließen"
 msgid "Conference"
 msgstr "Konferenz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:117
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Conference call failure"
 msgstr "Konferenzanruf fehlgeschlagen"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:660
 msgid "Connected Line Presentation"
 msgstr "Rufnummernanzeige des Angerufenen"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:672
 msgid "Connected Line Restriction"
 msgstr "Rufnummernunterdrückung des Angerufenen"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Kontaktdetails"
@@ -213,8 +213,8 @@ msgstr "Kontakte"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Löschen"
@@ -227,12 +227,12 @@ msgstr "Details"
 msgid "Disable"
 msgstr "Deaktivieren"
 
-#: ../src/qml/dialer-app.qml:470
+#: ../src/qml/dialer-app.qml:476
 msgid "Disabling flight mode"
 msgstr "Flugzeugmodus ausschalten"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
-#: ../src/qml/dialer-app.qml:547
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:553
 msgid "Dismiss"
 msgstr "Ablehnen"
 
@@ -252,19 +252,19 @@ msgstr "Notrufe"
 msgid "Enter a number"
 msgstr "Nummer eingeben"
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:536
 msgid "Error"
 msgstr "Fehler"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
 msgstr "Aktivierung des Anrufs fehlgeschlagen."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
 msgstr "Erstellen einer Telefonkonferenz fehlgeschlagen."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
 msgstr "Halten des Anrufs fehlgeschlagen."
 
@@ -294,12 +294,12 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Eingehend"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:537
 msgid "Invalid USSD code"
 msgstr "Ungültiger USSD-Code"
 
@@ -319,12 +319,12 @@ msgstr "Später"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:555
+#: ../src/qml/LiveCallPage/LiveCall.qml:554
 msgid "Merge calls"
 msgstr "Anrufe zusammenführen"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Entgangen"
@@ -342,7 +342,7 @@ msgstr "Nein"
 msgid "No SIM card selected"
 msgstr "Keine SIM-Karte ausgewählt"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
 msgstr "Keine Anrufe"
 
@@ -364,7 +364,7 @@ msgid "On hold"
 msgstr "Wartend"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
 msgstr "Ausgehend"
 
@@ -380,7 +380,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefonanwendung"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:335
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
 msgstr "Lautsprecher"
 
@@ -404,7 +404,7 @@ msgstr ""
 "href=\"system_settings\">Systemeinstellungen &gt; Sicherheit &amp; "
 "Datenschutz</a> entsperren."
 
-#: ../src/qml/dialer-app.qml:510
+#: ../src/qml/dialer-app.qml:516
 msgid "Please wait"
 msgstr "Bitte warten"
 
@@ -413,7 +413,7 @@ msgid "Private"
 msgstr "Privat"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr "Private Nummer"
 
@@ -463,7 +463,7 @@ msgid "Settings"
 msgstr "Einstellungen"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Freigeben"
 
@@ -475,11 +475,11 @@ msgstr "Wischen zum Löschen"
 msgid "Swipe to reveal actions"
 msgstr "Wischen um Aktionen zu zeigen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:163
+#: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
 msgstr "Tonquelle wechseln:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:540
+#: ../src/qml/LiveCallPage/LiveCall.qml:539
 msgid "Switch calls"
 msgstr "Anrufe wechseln"
 
@@ -504,16 +504,16 @@ msgstr "Es ist zurzeit kein Netz verfügbar."
 msgid "Today"
 msgstr "Heute"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
 msgstr "Ubuntu-Telefon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:337
+#: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
 msgstr "Unbekanntes Gerät"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr "Unbekannte Nummer"
 

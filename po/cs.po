@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-10-24 05:59+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 "Language: cs\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -24,7 +24,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:448
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - pozastavené"
@@ -54,7 +54,7 @@ msgstr[1] "%1 vteřiny"
 msgstr[2] "%1 vteřin"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -126,46 +126,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Všechny [ Všechny kontakty]"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Bluetooth device"
 msgstr "Zařízení Bluetooth"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:621
 msgid "Call Barring"
 msgstr "Blokace hovorů"
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/dialer-app.qml:632
 msgid "Call Forwarding"
 msgstr "Přesměrování hovorů"
 
-#: ../src/qml/dialer-app.qml:637
+#: ../src/qml/dialer-app.qml:643
 msgid "Call Waiting"
 msgstr "Čekající hovory"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:138
+#: ../src/qml/LiveCallPage/LiveCall.qml:139
 msgid "Call ended"
 msgstr "Ukončené hovory"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:287
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
 msgstr "Nezdařené hovory"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:146
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Call holding failure"
 msgstr "Selhání držených hovorů"
 
 #: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:450
+#: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Volání"
 
-#: ../src/qml/dialer-app.qml:648
+#: ../src/qml/dialer-app.qml:654
 msgid "Calling Line Presentation"
 msgstr "Volání linky prezentace"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:666
 msgid "Calling Line Restriction"
 msgstr "Volání linky omezení"
 
@@ -191,19 +191,19 @@ msgstr "Zavřít"
 msgid "Conference"
 msgstr "Konferenční hovor"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:117
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Conference call failure"
 msgstr "Konferenční hovor selhal"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:660
 msgid "Connected Line Presentation"
 msgstr "Připojená linka prezentace"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:672
 msgid "Connected Line Restriction"
 msgstr "Připojená linka omezení"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Podrobnosti kontaktu"
@@ -217,8 +217,8 @@ msgstr "Kontakty"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Vymazat"
@@ -231,12 +231,12 @@ msgstr "Podrobnosti"
 msgid "Disable"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:470
+#: ../src/qml/dialer-app.qml:476
 msgid "Disabling flight mode"
 msgstr "Rušení režimu letadla"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
-#: ../src/qml/dialer-app.qml:547
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:553
 msgid "Dismiss"
 msgstr "Zamítnout"
 
@@ -256,19 +256,19 @@ msgstr "Tísňová volání"
 msgid "Enter a number"
 msgstr "Zadejte číslo"
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:536
 msgid "Error"
 msgstr "Chyba"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
 msgstr "Chyba při aktivaci hovoru."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
 msgstr "Chyba při vytváření konferenčního hovoru."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
 msgstr "Nepodařilo se pozastavit aktivní hovor."
 
@@ -298,12 +298,12 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Přicházející"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:537
 msgid "Invalid USSD code"
 msgstr "Neplatná USSD kód"
 
@@ -323,12 +323,12 @@ msgstr "Později"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:555
+#: ../src/qml/LiveCallPage/LiveCall.qml:554
 msgid "Merge calls"
 msgstr "Sloučit hovory"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Zmeškané"
@@ -346,7 +346,7 @@ msgstr "Ne"
 msgid "No SIM card selected"
 msgstr "Nebyla zvolena SIM karta"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
 msgstr "Žádné hovory"
 
@@ -368,7 +368,7 @@ msgid "On hold"
 msgstr "Pozastavené"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
 msgstr "Odchozí"
 
@@ -384,7 +384,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefonní aplikace"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:335
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
 msgstr "Telefonní reproduktor"
 
@@ -407,7 +407,7 @@ msgstr ""
 "ploše displeje, či navštivte <a href=\"system_settings\">System Settings "
 "&gt; Security &amp; Privacy</a>."
 
-#: ../src/qml/dialer-app.qml:510
+#: ../src/qml/dialer-app.qml:516
 msgid "Please wait"
 msgstr "Čekejte, prosím"
 
@@ -416,7 +416,7 @@ msgid "Private"
 msgstr "Soukromé"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr "Soukromé číslo"
 
@@ -466,7 +466,7 @@ msgid "Settings"
 msgstr "Nastavení"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Sdílet"
 
@@ -478,11 +478,11 @@ msgstr "Smazat přetáhnutím"
 msgid "Swipe to reveal actions"
 msgstr "Přetáhněte k zjištění akce"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:163
+#: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
 msgstr "Přepnout zdroj zvuku:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:540
+#: ../src/qml/LiveCallPage/LiveCall.qml:539
 msgid "Switch calls"
 msgstr "Přepnout hovory"
 
@@ -507,16 +507,16 @@ msgstr "V současné době není dostupná síť."
 msgid "Today"
 msgstr "Dnes"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
 msgstr "Ubuntu telefon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:337
+#: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
 msgstr "Neznámé zařízení"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr "Neznámé číslo"
 
