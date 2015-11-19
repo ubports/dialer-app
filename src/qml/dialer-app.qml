@@ -32,22 +32,36 @@ MainView {
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
-    property bool multipleAccounts: telepathyHelper.activeAccounts.length > 1
-    property QtObject account: defaultAccount()
+    property bool multiplePhoneAccounts: {
+        var numAccounts = 0
+        for (var i in telepathyHelper.activeAccounts) {
+            if (telepathyHelper.activeAccounts[i].type == AccountEntry.PhoneAccount) {
+                numAccounts++
+            }
+        }
+        return numAccounts > 1
+    }
+ 
+    property QtObject account: defaultPhoneAccount()
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
     property bool telepathyReady: false
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
 
-    function defaultAccount() {
+    function defaultPhoneAccount() {
         // we only use the default account property if we have more
         // than one account, otherwise we use always the first one
-        if (multipleAccounts) {
+        if (multiplePhoneAccounts) {
             return telepathyHelper.defaultCallAccount
-        } else if (telepathyHelper.activeAccounts.length > 0){
-            return telepathyHelper.activeAccounts[0]
+        } else {
+            for (var i in telepathyHelper.activeAccounts) {
+                var tmpAccount = telepathyHelper.activeAccounts[i]
+                if (tmpAccount.type == AccountEntry.PhoneAccount) {
+                    return tmpAccount
+                }
+            }
         }
-        return null;
+        return null
     }
 
     automaticOrientation: false
@@ -89,7 +103,7 @@ MainView {
         target: telepathyHelper
         onSetupReady: {
             telepathyReady = true
-            if (multipleAccounts && !telepathyHelper.defaultCallAccount &&
+            if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount &&
                 dualSimSettings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
@@ -105,9 +119,9 @@ MainView {
                     return;
                 }
             }
-            account = Qt.binding(defaultAccount)
+            account = Qt.binding(defaultPhoneAccount)
         }
-        onDefaultCallAccountChanged: account = Qt.binding(defaultAccount)
+        onDefaultCallAccountChanged: account = Qt.binding(defaultPhoneAccount)
     }
 
     Settings {
@@ -327,13 +341,13 @@ MainView {
         }
 
         // check if at least one account is selected
-        if (multipleAccounts && !mainView.account) {
+        if (multiplePhoneAccounts && !mainView.account) {
             Qt.inputMethod.hide()
             showNotification(i18n.tr("No SIM card selected"), i18n.tr("You need to select a SIM card"));
             return
         }
 
-        if (multipleAccounts && !telepathyHelper.defaultCallAccount && !dualSimSettings.dialPadDontAsk && !skipDefaultSimDialog) {
+        if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount && !dualSimSettings.dialPadDontAsk && !skipDefaultSimDialog) {
             var properties = {}
             properties["phoneNumber"] = number
             properties["accountId"] = mainView.account.accountId
@@ -558,11 +572,11 @@ MainView {
 
     Connections {
         target: telepathyHelper
-        onAccountReady: {
+        onSetupReady: {
             accountReady = true;
             mainView.applicationReady()
 
-            if (!telepathyHelper.connected) {
+            if (!telepathyHelper.ready) {
                 return;
             }
 
