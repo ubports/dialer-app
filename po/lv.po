@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-03-01 23:54+0000\n"
+"PO-Revision-Date: 2015-11-22 08:03+0000\n"
 "Last-Translator: Rūdolfs Mazurs <Unknown>\n"
 "Language-Team: Latvian <lv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
+"X-Launchpad-Export-Date: 2015-11-23 05:29+0000\n"
 "X-Generator: Launchpad (build 17850)\n"
 "Language: lv\n"
 
@@ -230,7 +230,7 @@ msgstr "Vairāk"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Izslēgt"
 
 #: ../src/qml/dialer-app.qml:476
 msgid "Disabling flight mode"
@@ -247,7 +247,7 @@ msgstr "Vairs nejautāt"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Rediģēt"
 
 #: ../src/qml/DialerPage/DialerPage.qml:72
 msgid "Emergency Calls"
@@ -280,7 +280,7 @@ msgstr "Izlase"
 #: ../src/qml/DialerPage/DialerPage.qml:77
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Lidmašīnas režīms"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -292,7 +292,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Sapratu"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -336,7 +336,7 @@ msgstr "Nokavēts"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobilais tālrunis"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -436,7 +436,7 @@ msgstr "SIM bloķēta"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Saglabāt"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -473,11 +473,11 @@ msgstr "Dalīties"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Velciet, lai dzēstu"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Velciet, lai atklātu darbības"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
@@ -540,7 +540,7 @@ msgstr "Vakar"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Jūs izslēdzāt lidmašīnas režīmu, lai piezvanītu"
 
 #: ../src/qml/dialer-app.qml:332
 msgid "You need to select a SIM card"
