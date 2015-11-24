@@ -34,6 +34,27 @@ PageWithBottomEdge {
     property alias callAnimationRunning: callAnimation.running
     property bool greeterMode: false
     property var mmiPlugins: []
+    property var accountsModel: {
+        var model = []
+
+        // do not show any accounts in greeter mode
+        if (mainView.greeterMode) {
+            return []
+        }
+
+        // populate model with all active phone accounts
+        for (var i in telepathyHelper.activeAccounts) {
+            var account = telepathyHelper.activeAccounts[i]
+            if (account.type == AccountEntry.PhoneAccount) {
+                model.push(account)
+            }
+        }
+        // do not show dual sim switch if there is only one sim
+        if (model.length == 1 && model[0].type == AccountEntry.PhoneAccount) {
+            return []
+        }
+        return model
+    }
     property list<Action> actionsGreeter
     property list<Action> actionsNormal: [
         Action {
@@ -79,7 +100,7 @@ PageWithBottomEdge {
             return i18n.tr("SIM Locked")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
-        } else if (multipleAccounts && !mainView.account) {
+        } else if (multiplePhoneAccounts && !mainView.account) {
             return i18n.tr("Phone")
         }
         return i18n.tr("No network")
@@ -152,8 +173,8 @@ PageWithBottomEdge {
 
     function accountIndex(account) {
         var index = -1;
-        for (var i in telepathyHelper.activeAccounts) {
-            if (telepathyHelper.activeAccounts[i] == account) {
+        for (var i in page.accountsModel) {
+            if (page.accountsModel[i] == account) {
                 index = i;
                 break;
             }
@@ -173,11 +194,9 @@ PageWithBottomEdge {
                 mainView.switchToKeypadView();
             }
         }
-        onAccountChanged: head.sections.selectedIndex = accountIndex(mainView.account)
     }
 
     Component.onCompleted: {
-        head.sections.selectedIndex = accountIndex(mainView.account)
         // load MMI plugins
         var plugins = application.mmiPluginList()
         for (var i in plugins) {
@@ -187,22 +206,19 @@ PageWithBottomEdge {
     }
 
     head.sections.model: {
-        // does not show dual sim switch if there is only one sim
-        if (!multipleAccounts || mainView.greeterMode) {
-            return []
-        }
-
         var accountNames = []
-        for(var i=0; i < telepathyHelper.activeAccounts.length; i++) {
-            accountNames.push(telepathyHelper.activeAccounts[i].displayName)
+        for (var i in page.accountsModel) {
+            accountNames.push(page.accountsModel[i].displayName)
         }
         return accountNames
     }
 
+    head.sections.selectedIndex: accountIndex(mainView.account)
+
     Connections {
         target: page.head.sections
         onSelectedIndexChanged: {
-            mainView.account = telepathyHelper.activeAccounts[page.head.sections.selectedIndex]
+            mainView.account = page.accountsModel[page.head.sections.selectedIndex]
         }
     }
 

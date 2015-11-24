@@ -109,7 +109,7 @@ class TestCallLogs(DialerAppTestCase):
 
         # check if the new value is correct
         phone_label_1 = contact_view_page.select_single(
-            "Label",
+            "UCLabel",
             objectName="label_phoneNumber_0.0")
         self.assertThat(phone_label_1.text, Eventually(Equals('800')))
 
@@ -147,7 +147,7 @@ class TestCallLogs(DialerAppTestCase):
 
         # check if the new value is correct
         phone_label_1 = contact_view_page.select_single(
-            "Label",
+            "UCLabel",
             objectName="label_phoneNumber_1.0")
         self.assertThat(phone_label_1.text, Eventually(Equals('800')))
 

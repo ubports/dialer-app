@@ -75,7 +75,7 @@ Page {
     title: caller
     head.actions: []
     head.backAction: backAction
-    head.sections.model: multipleAccounts ? [call.account.displayName] : []
+    head.sections.model: multiplePhoneAccounts ? [call.account.displayName] : []
     head.sections.selectedIndex: 0
     x: header ? header.height : 0
 

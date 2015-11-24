@@ -15,42 +15,42 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-06 05:38+0000\n"
-"X-Generator: Launchpad (build 17838)\n"
+"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:448
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - होल्ड मा"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 घण्टा"
+msgstr[1] "%1 घण्टा"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 मिनेट"
+msgstr[1] "%1 मिनेट"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1  सेकेन्ड"
+msgstr[1] "%1 सेकेन्ड"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -74,35 +74,35 @@ msgstr "१"
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr ""
+msgstr "२"
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr ""
+msgstr "३"
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr ""
+msgstr "४"
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr ""
+msgstr "५"
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr ""
+msgstr "६"
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr ""
+msgstr "८"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr ""
+msgstr "९"
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
@@ -110,52 +110,52 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "सकृय"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "सबै"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "सबै"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Bluetooth device"
 msgstr ""
 
 #: ../src/qml/dialer-app.qml:621
 msgid "Call Barring"
-msgstr ""
+msgstr "वर्जित कल"
 
 #: ../src/qml/dialer-app.qml:632
 msgid "Call Forwarding"
-msgstr ""
+msgstr "कल फरवार्ड"
 
 #: ../src/qml/dialer-app.qml:643
 msgid "Call Waiting"
-msgstr ""
+msgstr "प्रतीक्षा कल"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:138
+#: ../src/qml/LiveCallPage/LiveCall.qml:139
 msgid "Call ended"
-msgstr ""
+msgstr "कल समाप्त"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:287
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
-msgstr ""
+msgstr "कल विफल"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:146
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Call holding failure"
-msgstr ""
+msgstr "कल रोक्न​ विफलता"
 
 #: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:450
+#: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr ""
+msgstr "कलिंग"
 
 #: ../src/qml/dialer-app.qml:654
 msgid "Calling Line Presentation"
@@ -169,7 +169,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:106
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr ""
+msgstr "रद्द गर्नुहोस्"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -180,14 +180,14 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:55
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "बन्द गर्नुहोस्"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:117
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Conference call failure"
 msgstr ""
 
@@ -199,7 +199,7 @@ msgstr ""
 msgid "Connected Line Restriction"
 msgstr ""
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr ""
@@ -213,15 +213,15 @@ msgstr ""
 msgid "DEF"
 msgstr ""
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
-msgstr ""
+msgstr "मेट्नुहोस्"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr ""
+msgstr "विस्तृत विवरणहरू"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -256,15 +256,15 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
 msgstr ""
 
@@ -294,7 +294,7 @@ msgid "IMEI"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr ""
@@ -319,12 +319,12 @@ msgstr ""
 msgid "MNO"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:555
+#: ../src/qml/LiveCallPage/LiveCall.qml:554
 msgid "Merge calls"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr ""
@@ -342,7 +342,7 @@ msgstr ""
 msgid "No SIM card selected"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
 msgstr ""
 
@@ -364,7 +364,7 @@ msgid "On hold"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
 msgstr ""
 
@@ -380,7 +380,7 @@ msgstr ""
 msgid "Phone App"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:335
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
 msgstr ""
 
@@ -408,7 +408,7 @@ msgid "Private"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr ""
 
@@ -456,7 +456,7 @@ msgid "Settings"
 msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr ""
 
@@ -468,11 +468,11 @@ msgstr ""
 msgid "Swipe to reveal actions"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:163
+#: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:540
+#: ../src/qml/LiveCallPage/LiveCall.qml:539
 msgid "Switch calls"
 msgstr ""
 
@@ -497,16 +497,16 @@ msgstr ""
 msgid "Today"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
 msgstr ""
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:337
+#: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
 msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr ""
 

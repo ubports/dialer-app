@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2015-10-24 06:00+0000\n"
-"X-Generator: Launchpad (build 17812)\n"
+"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
+"X-Generator: Launchpad (build 17850)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:448
+#: ../src/qml/LiveCallPage/LiveCall.qml:445
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - în așteptare"
@@ -54,7 +54,7 @@ msgstr[1] "%1 secunde"
 msgstr[2] "%1 de secunde"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:201
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -126,46 +126,46 @@ msgctxt "All Contacts"
 msgid "All"
 msgstr "Toate"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:331
+#: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Bluetooth device"
 msgstr "Dispozitiv bluetooth"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:621
 msgid "Call Barring"
 msgstr "Restricționare apel"
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/dialer-app.qml:632
 msgid "Call Forwarding"
 msgstr "Redirecționare apel"
 
-#: ../src/qml/dialer-app.qml:637
+#: ../src/qml/dialer-app.qml:643
 msgid "Call Waiting"
 msgstr "Apel în așteptare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:138
+#: ../src/qml/LiveCallPage/LiveCall.qml:139
 msgid "Call ended"
 msgstr "Apel terminat"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:287
+#: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
 msgstr "Eșec la apelare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:146
+#: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Call holding failure"
 msgstr "Apelul în așteptare a eșuat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:476
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
-#: ../src/qml/LiveCallPage/LiveCall.qml:450
+#: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Se apelează"
 
-#: ../src/qml/dialer-app.qml:648
+#: ../src/qml/dialer-app.qml:654
 msgid "Calling Line Presentation"
 msgstr "Identitate apelant"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:666
 msgid "Calling Line Restriction"
 msgstr "Restricționare apelant"
 
@@ -191,19 +191,19 @@ msgstr "Închide"
 msgid "Conference"
 msgstr "Conferință"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:117
+#: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Conference call failure"
 msgstr "Apelul în conferință a eșuat"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:660
 msgid "Connected Line Presentation"
 msgstr "Identitate apelant"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:672
 msgid "Connected Line Restriction"
 msgstr "Restricționare apelant"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:54
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
 msgstr "Detalii despre contact"
@@ -217,8 +217,8 @@ msgstr "Contacte"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:74
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:238
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
 msgstr "Șterge"
@@ -231,12 +231,12 @@ msgstr "Detalii"
 msgid "Disable"
 msgstr "Dezactivare"
 
-#: ../src/qml/dialer-app.qml:470
+#: ../src/qml/dialer-app.qml:476
 msgid "Disabling flight mode"
 msgstr "Dezactivează modul avion"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:533
-#: ../src/qml/dialer-app.qml:547
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:553
 msgid "Dismiss"
 msgstr "Renunță"
 
@@ -256,19 +256,19 @@ msgstr "Apeluri de urgență"
 msgid "Enter a number"
 msgstr "Introduceți un număr"
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:536
 msgid "Error"
 msgstr "Eroare"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
 msgstr "Eșec la inițierea apelului."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
 msgstr "Eșec la crearea unui apel în conferință."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
 msgstr "Eșec la punerea apelului activ în așteptare."
 
@@ -298,12 +298,12 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Primite"
 
-#: ../src/qml/dialer-app.qml:531
+#: ../src/qml/dialer-app.qml:537
 msgid "Invalid USSD code"
 msgstr "Cod USSD nevalid"
 
@@ -323,12 +323,12 @@ msgstr "Mai târziu"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:555
+#: ../src/qml/LiveCallPage/LiveCall.qml:554
 msgid "Merge calls"
 msgstr "Mod conferință"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:313
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
 msgstr "Pierdute"
@@ -346,7 +346,7 @@ msgstr "Nu"
 msgid "No SIM card selected"
 msgstr "Nu a fost selectat un card SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:108
+#: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
 msgstr "Niciun apel"
 
@@ -368,7 +368,7 @@ msgid "On hold"
 msgstr "În așteptare"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:317
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
 msgstr "Efectuate"
 
@@ -384,7 +384,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Aplicație pentru telefonie"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:335
+#: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
 msgstr "Difuzor"
 
@@ -407,7 +407,7 @@ msgstr ""
 "sau vizitând <a href=\"system_settings\">Configurări sistem &gt; Securitate "
 "&amp; Confidențialitate</a>."
 
-#: ../src/qml/dialer-app.qml:510
+#: ../src/qml/dialer-app.qml:516
 msgid "Please wait"
 msgstr "Așteptați"
 
@@ -416,7 +416,7 @@ msgid "Private"
 msgstr "Privat"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:42
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr "Număr privat"
 
@@ -467,7 +467,7 @@ msgid "Settings"
 msgstr "Configurări"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Partajare"
 
@@ -479,11 +479,11 @@ msgstr "Glisați pentru a șterge"
 msgid "Swipe to reveal actions"
 msgstr "Glisați pentru a descoperi acțiuni"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:163
+#: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
 msgstr "Comută sursa audio"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:540
+#: ../src/qml/LiveCallPage/LiveCall.qml:539
 msgid "Switch calls"
 msgstr "Schimbă între apeluri"
 
@@ -508,16 +508,16 @@ msgstr "Nu există rețea."
 msgid "Today"
 msgstr "Astăzi"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:333
+#: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
 msgstr "Telefon Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:337
+#: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
 msgstr "Dispozitiv necunoscut"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:44
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr "Număr necunoscut"
 
