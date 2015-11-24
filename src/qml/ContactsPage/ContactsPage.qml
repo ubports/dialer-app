@@ -102,7 +102,7 @@ Page {
 
             name: "searching"
             backAction: Action {
-                iconName: "close"
+                iconName: "back"
                 text: i18n.tr("Cancel")
                 onTriggered: {
                     contactList.forceActiveFocus()
@@ -189,6 +189,12 @@ Page {
     Component.onCompleted: {
         if (QTCONTACTS_PRELOAD_VCARD !== "") {
             contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
+        }
+    }
+
+    onActiveChanged: {
+        if (active && (state === "searching")) {
+            searchField.forceActiveFocus()
         }
     }
 
