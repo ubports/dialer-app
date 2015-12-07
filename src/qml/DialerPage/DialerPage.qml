@@ -87,7 +87,7 @@ PageWithBottomEdge {
         // avoid clearing the title when app is inactive
         // under some states
         if (!mainView.telepathyReady) {
-            return " "
+            return i18n.tr("Initializing...")
         } else if (greeter.greeterActive) {
             if (mainView.applicationActive) {
                 return i18n.tr("Emergency Calls")
@@ -412,6 +412,7 @@ PageWithBottomEdge {
         CallButton {
             id: callButton
             objectName: "callButton"
+            enabled: mainView.telepathyReady
             anchors {
                 bottom: footer.bottom
                 bottomMargin: units.gu(5)
