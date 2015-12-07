@@ -1,3 +1,14 @@
+dialer-app (0.1+16.04.20151207-0ubuntu1) xenial; urgency=medium
+
+  [ CI Train Bot ]
+  * New rebuild forced.
+  * Resync trunk.
+
+  [ Tiago Salem Herrmann ]
+  * Disable call button while telepathy is not ready. (LP: #1512851)
+
+ -- Tiago Salem Herrmann <tiago.herrmann@canonical.com>  Mon, 07 Dec 2015 17:54:37 +0000
+
 dialer-app (0.1+16.04.20151124-0ubuntu1) xenial; urgency=medium
 
   [ CI Train Bot ]
