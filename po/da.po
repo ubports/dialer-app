@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -127,15 +127,15 @@ msgstr "Alle"
 msgid "Bluetooth device"
 msgstr "Bluetooth-enhed"
 
-#: ../src/qml/dialer-app.qml:621
+#: ../src/qml/dialer-app.qml:635
 msgid "Call Barring"
 msgstr "Opkaldsblokering"
 
-#: ../src/qml/dialer-app.qml:632
+#: ../src/qml/dialer-app.qml:646
 msgid "Call Forwarding"
 msgstr "Omstilling"
 
-#: ../src/qml/dialer-app.qml:643
+#: ../src/qml/dialer-app.qml:657
 msgid "Call Waiting"
 msgstr "Opkaldsventetid"
 
@@ -151,20 +151,20 @@ msgstr "Opkald mislykkedes"
 msgid "Call holding failure"
 msgstr "Forsøg på at sætte kald på hold fejlede"
 
-#: ../src/qml/DialerPage/DialerPage.qml:476
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Ringer op"
 
 # ??
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:668
 msgid "Calling Line Presentation"
 msgstr "Præsentation af opkaldslinje"
 
 # ??
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:680
 msgid "Calling Line Restriction"
 msgstr "Restriktion af opkaldslinje"
 
@@ -180,7 +180,7 @@ msgstr "Annullér"
 msgid "Change all Call associations to %1?"
 msgstr "Udskift alle opkaldstilknytninger til %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:55
+#: ../src/qml/DialerPage/DialerPage.qml:76
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Luk"
@@ -195,12 +195,12 @@ msgid "Conference call failure"
 msgstr "Konferenceopkald fejlede"
 
 # ??
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:674
 msgid "Connected Line Presentation"
 msgstr "Præsentation af forbundne linje"
 
 # ??
-#: ../src/qml/dialer-app.qml:672
+#: ../src/qml/dialer-app.qml:686
 msgid "Connected Line Restriction"
 msgstr "Restriktion af forbundne linje"
 
@@ -210,7 +210,7 @@ msgid "Contact Details"
 msgstr "Detaljer om kontakt"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
-#: ../src/qml/DialerPage/DialerPage.qml:42
+#: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Contacts"
 msgstr "Kontakter"
 
@@ -232,12 +232,12 @@ msgstr "Detaljer"
 msgid "Disable"
 msgstr "Slå fra"
 
-#: ../src/qml/dialer-app.qml:476
+#: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
 msgstr "Slår flytilstand fra"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
-#: ../src/qml/dialer-app.qml:553
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
+#: ../src/qml/dialer-app.qml:567
 msgid "Dismiss"
 msgstr "Afvis"
 
@@ -249,15 +249,15 @@ msgstr "Spørg ikke igen"
 msgid "Edit"
 msgstr "Redigér"
 
-#: ../src/qml/DialerPage/DialerPage.qml:72
+#: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
 msgstr "Nødopkald"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:292
 msgid "Enter a number"
 msgstr "Indtast et nummer"
 
-#: ../src/qml/dialer-app.qml:536
+#: ../src/qml/dialer-app.qml:550
 msgid "Error"
 msgstr "Fejl"
 
@@ -277,7 +277,7 @@ msgstr "Mislykkedes med at sætte det aktive opkald på hold."
 msgid "Favorites"
 msgstr "Foretrukne"
 
-#: ../src/qml/DialerPage/DialerPage.qml:77
+#: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Flytilstand"
@@ -304,7 +304,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Indgående"
 
-#: ../src/qml/dialer-app.qml:537
+#: ../src/qml/dialer-app.qml:551
 msgid "Invalid USSD code"
 msgstr "Ugyldig USSD-kode"
 
@@ -343,7 +343,7 @@ msgstr "Mobil"
 msgid "No"
 msgstr "Nej"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "No SIM card selected"
 msgstr "Der er ikke valgt sim-kort"
 
@@ -351,8 +351,8 @@ msgstr "Der er ikke valgt sim-kort"
 msgid "No calls"
 msgstr "Ingen opkald"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
-#: ../src/qml/dialer-app.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
+#: ../src/qml/dialer-app.qml:372
 msgid "No network"
 msgstr "Intet netværk"
 
@@ -377,7 +377,8 @@ msgstr "Udgående"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -408,11 +409,11 @@ msgstr ""
 "at gå til <a href=\"system_settings\">Systemindstillinger &gt; Sikkerhed "
 "&amp; Privatliv</a>."
 
-#: ../src/qml/dialer-app.qml:516
+#: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
 msgstr "Vent venligst"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
 msgid "Private"
 msgstr "Privat"
 
@@ -421,7 +422,7 @@ msgstr "Privat"
 msgid "Private number"
 msgstr "Privat nummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:120
+#: ../src/qml/DialerPage/DialerPage.qml:141
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Nylige"
@@ -430,7 +431,7 @@ msgstr "Nylige"
 msgid "SIM Card is locked"
 msgstr "SIM-kortet er låst"
 
-#: ../src/qml/DialerPage/DialerPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:100
 msgid "SIM Locked"
 msgstr "SIM er låst"
 
@@ -462,7 +463,7 @@ msgstr ""
 msgid "Send message"
 msgstr "Send besked"
 
-#: ../src/qml/DialerPage/DialerPage.qml:47
+#: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Settings"
 msgstr "Indstillinger"
 
@@ -495,12 +496,12 @@ msgstr "Skift til standard-simkort:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:359
+#: ../src/qml/dialer-app.qml:373
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Der er i øjeblikket intet netværk på %1"
 
-#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
 msgid "There is currently no network."
 msgstr "Der er i øjeblikket intet netværk."
 
@@ -521,7 +522,7 @@ msgstr "Ukendt enhed"
 msgid "Unknown number"
 msgstr "Ukendt nummer"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
 msgstr "Telefonsvarer"
@@ -542,7 +543,7 @@ msgstr "I går"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Du skal slå flytilstand fra for at foretage opkald"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"
 msgstr "Du skal foretage et valg af simkort"
 

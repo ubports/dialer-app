@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -123,15 +123,15 @@ msgstr "모두"
 msgid "Bluetooth device"
 msgstr "블루투스 장치"
 
-#: ../src/qml/dialer-app.qml:621
+#: ../src/qml/dialer-app.qml:635
 msgid "Call Barring"
 msgstr "통화 제한"
 
-#: ../src/qml/dialer-app.qml:632
+#: ../src/qml/dialer-app.qml:646
 msgid "Call Forwarding"
 msgstr "호출 전달"
 
-#: ../src/qml/dialer-app.qml:643
+#: ../src/qml/dialer-app.qml:657
 msgid "Call Waiting"
 msgstr "통화 대기"
 
@@ -147,18 +147,18 @@ msgstr "통화 실패"
 msgid "Call holding failure"
 msgstr "통화 대기 실패"
 
-#: ../src/qml/DialerPage/DialerPage.qml:476
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "통화 중"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:668
 msgid "Calling Line Presentation"
 msgstr "발신 번호 표시"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:680
 msgid "Calling Line Restriction"
 msgstr "발신 번호 제한"
 
@@ -174,7 +174,7 @@ msgstr "취소"
 msgid "Change all Call associations to %1?"
 msgstr "%1와(과) 연관된 모든 통화를 바꿉니까?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:55
+#: ../src/qml/DialerPage/DialerPage.qml:76
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "닫기"
@@ -188,11 +188,11 @@ msgstr "회의"
 msgid "Conference call failure"
 msgstr "전화 회의 실패"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:674
 msgid "Connected Line Presentation"
 msgstr "발표 라인 연결"
 
-#: ../src/qml/dialer-app.qml:672
+#: ../src/qml/dialer-app.qml:686
 msgid "Connected Line Restriction"
 msgstr "발표 라인 제한"
 
@@ -202,7 +202,7 @@ msgid "Contact Details"
 msgstr "연락처 자세히"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
-#: ../src/qml/DialerPage/DialerPage.qml:42
+#: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Contacts"
 msgstr "연락처"
 
@@ -224,12 +224,12 @@ msgstr "자세한 내용"
 msgid "Disable"
 msgstr "사용 안 함"
 
-#: ../src/qml/dialer-app.qml:476
+#: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
 msgstr "비행기 모드 사용 안 함"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
-#: ../src/qml/dialer-app.qml:553
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
+#: ../src/qml/dialer-app.qml:567
 msgid "Dismiss"
 msgstr "버리기"
 
@@ -241,15 +241,15 @@ msgstr "다시 묻지 않기"
 msgid "Edit"
 msgstr "편집"
 
-#: ../src/qml/DialerPage/DialerPage.qml:72
+#: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
 msgstr "응급 통화"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:292
 msgid "Enter a number"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:536
+#: ../src/qml/dialer-app.qml:550
 msgid "Error"
 msgstr "오류"
 
@@ -269,7 +269,7 @@ msgstr "대기 중인 통화를 시작할 수 없습니다."
 msgid "Favorites"
 msgstr "즐겨찾기"
 
-#: ../src/qml/DialerPage/DialerPage.qml:77
+#: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "비행기 모드"
@@ -296,7 +296,7 @@ msgstr "국제 휴대장비 인증(IMEI)"
 msgid "Incoming"
 msgstr "걸려온 전화"
 
-#: ../src/qml/dialer-app.qml:537
+#: ../src/qml/dialer-app.qml:551
 msgid "Invalid USSD code"
 msgstr "잘못된 USSD 코드"
 
@@ -335,7 +335,7 @@ msgstr "휴대 전화"
 msgid "No"
 msgstr "아니요"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "No SIM card selected"
 msgstr "선택한 심 카드가 없습니다."
 
@@ -343,8 +343,8 @@ msgstr "선택한 심 카드가 없습니다."
 msgid "No calls"
 msgstr "통화 없음"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
-#: ../src/qml/dialer-app.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
+#: ../src/qml/dialer-app.qml:372
 msgid "No network"
 msgstr "네트워크 없음"
 
@@ -369,7 +369,8 @@ msgstr "건 전화"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "전화"
 
@@ -398,11 +399,11 @@ msgstr ""
 "통화를 하거나 메시지를 보내려면 심 카드의 잠금 상태를 해제해주십시오. 심 카드의 잠긴 상태는 상단의 네트워크를 표시나 <a "
 "href=\"system_settings\">시스템 설정 &gt; 보안 &amp; 사생활</a>에서 해제할 수 있습니다."
 
-#: ../src/qml/dialer-app.qml:516
+#: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
 msgstr "기다려주십시오"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
 msgid "Private"
 msgstr "개인 전용"
 
@@ -411,7 +412,7 @@ msgstr "개인 전용"
 msgid "Private number"
 msgstr "개인 전용 번호"
 
-#: ../src/qml/DialerPage/DialerPage.qml:120
+#: ../src/qml/DialerPage/DialerPage.qml:141
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "최근 통화 목록"
@@ -420,7 +421,7 @@ msgstr "최근 통화 목록"
 msgid "SIM Card is locked"
 msgstr "심 카드가 잠져있습니다."
 
-#: ../src/qml/DialerPage/DialerPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:100
 msgid "SIM Locked"
 msgstr "심 카드 잠김"
 
@@ -452,7 +453,7 @@ msgstr ""
 msgid "Send message"
 msgstr "메시지 보내기"
 
-#: ../src/qml/DialerPage/DialerPage.qml:47
+#: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Settings"
 msgstr "설정"
 
@@ -485,12 +486,12 @@ msgstr "기본 심 카드로 전환:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:359
+#: ../src/qml/dialer-app.qml:373
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "현재 %1에 네트워크가 없습니다."
 
-#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
 msgid "There is currently no network."
 msgstr "현재 네트워크가 없습니다."
 
@@ -511,7 +512,7 @@ msgstr "알 수 없는 장치"
 msgid "Unknown number"
 msgstr "알 수 없는 번호"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
 msgstr "음성 메일"
@@ -532,7 +533,7 @@ msgstr "어제"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "전화를 하려면 비행기 모드를 사용하지 않아야 합니다."
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"
 msgstr "심 카드를 선택해야 합니다."
 

@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-11-25 05:34+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 "Language: lv\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -155,7 +155,7 @@ msgstr "Neizdevās piezvanīt"
 msgid "Call holding failure"
 msgstr "Neizdevās aizturēt zvanu"
 
-#: ../src/qml/DialerPage/DialerPage.qml:492
+#: ../src/qml/DialerPage/DialerPage.qml:493
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108

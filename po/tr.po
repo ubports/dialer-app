@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2015-11-19 05:33+0000\n"
-"X-Generator: Launchpad (build 17850)\n"
+"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -126,15 +126,15 @@ msgstr "Tümü"
 msgid "Bluetooth device"
 msgstr "Bluetooth aygıtı"
 
-#: ../src/qml/dialer-app.qml:621
+#: ../src/qml/dialer-app.qml:635
 msgid "Call Barring"
 msgstr "Çağrı Engelleme"
 
-#: ../src/qml/dialer-app.qml:632
+#: ../src/qml/dialer-app.qml:646
 msgid "Call Forwarding"
 msgstr "Çağrı Yönlendirme"
 
-#: ../src/qml/dialer-app.qml:643
+#: ../src/qml/dialer-app.qml:657
 msgid "Call Waiting"
 msgstr "Çağrı Bekletme"
 
@@ -150,18 +150,18 @@ msgstr "Çağrı başarısız."
 msgid "Call holding failure"
 msgstr "Arama bekletme başarısız"
 
-#: ../src/qml/DialerPage/DialerPage.qml:476
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:110
+#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Aranıyor"
 
-#: ../src/qml/dialer-app.qml:654
+#: ../src/qml/dialer-app.qml:668
 msgid "Calling Line Presentation"
 msgstr "Arama Hattı Sunumu"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:680
 msgid "Calling Line Restriction"
 msgstr "Arama Hattı Kısıtlaması"
 
@@ -177,7 +177,7 @@ msgstr "İptal"
 msgid "Change all Call associations to %1?"
 msgstr "Bütün Arama ilişkileri %1 ile değiştirilsin mi?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:55
+#: ../src/qml/DialerPage/DialerPage.qml:76
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Kapat"
@@ -191,11 +191,11 @@ msgstr "Konferans"
 msgid "Conference call failure"
 msgstr "Konferans araması başarısız"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:674
 msgid "Connected Line Presentation"
 msgstr "Bağlı Hat Sunumu"
 
-#: ../src/qml/dialer-app.qml:672
+#: ../src/qml/dialer-app.qml:686
 msgid "Connected Line Restriction"
 msgstr "Bağlı Hat Kısıtlaması"
 
@@ -205,7 +205,7 @@ msgid "Contact Details"
 msgstr "Kişi Ayrıntıları"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
-#: ../src/qml/DialerPage/DialerPage.qml:42
+#: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Contacts"
 msgstr "Kişiler"
 
@@ -227,12 +227,12 @@ msgstr "Ayrıntılar"
 msgid "Disable"
 msgstr "Devre dışı bırak"
 
-#: ../src/qml/dialer-app.qml:476
+#: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
 msgstr "Uçuş Modunu Devre dışı bırakma"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:539
-#: ../src/qml/dialer-app.qml:553
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
+#: ../src/qml/dialer-app.qml:567
 msgid "Dismiss"
 msgstr "Kapat"
 
@@ -244,15 +244,15 @@ msgstr "Bir daha sorma"
 msgid "Edit"
 msgstr "Düzenle"
 
-#: ../src/qml/DialerPage/DialerPage.qml:72
+#: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
 msgstr "Acil Durum Aramaları"
 
-#: ../src/qml/DialerPage/DialerPage.qml:276
+#: ../src/qml/DialerPage/DialerPage.qml:292
 msgid "Enter a number"
 msgstr "Bir numara girin"
 
-#: ../src/qml/dialer-app.qml:536
+#: ../src/qml/dialer-app.qml:550
 msgid "Error"
 msgstr "Hata"
 
@@ -272,7 +272,7 @@ msgstr "Etkin çağrıyı beklemeye alma başarısız."
 msgid "Favorites"
 msgstr "Sık Kullanılanlar"
 
-#: ../src/qml/DialerPage/DialerPage.qml:77
+#: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Uçuş Modu"
@@ -299,7 +299,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Gelen Aramalar"
 
-#: ../src/qml/dialer-app.qml:537
+#: ../src/qml/dialer-app.qml:551
 msgid "Invalid USSD code"
 msgstr "Geçersiz USSD kodu"
 
@@ -338,7 +338,7 @@ msgstr "Cep Telefonu"
 msgid "No"
 msgstr "Hayır"
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "No SIM card selected"
 msgstr "SIM Kart seçili değil"
 
@@ -346,8 +346,8 @@ msgstr "SIM Kart seçili değil"
 msgid "No calls"
 msgstr "Çağrı yok"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85 ../src/qml/dialer-app.qml:353
-#: ../src/qml/dialer-app.qml:358
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
+#: ../src/qml/dialer-app.qml:372
 msgid "No network"
 msgstr "Şebeke Yok"
 
@@ -372,7 +372,8 @@ msgstr "Yapılan Aramalar"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:83 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -403,11 +404,11 @@ msgstr ""
 "href=\"system_settings\">Sistem Ayarları &gt; Güvenlik &amp; Gizlilik</a> 'i "
 "ziyaret ederek açabilirsiniz."
 
-#: ../src/qml/dialer-app.qml:516
+#: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
 msgstr "Lütfen bekleyin"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:138
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
 msgid "Private"
 msgstr "Özel"
 
@@ -416,7 +417,7 @@ msgstr "Özel"
 msgid "Private number"
 msgstr "Özel numara"
 
-#: ../src/qml/DialerPage/DialerPage.qml:120
+#: ../src/qml/DialerPage/DialerPage.qml:141
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "En son"
@@ -425,7 +426,7 @@ msgstr "En son"
 msgid "SIM Card is locked"
 msgstr "SIM Kart kilitli"
 
-#: ../src/qml/DialerPage/DialerPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:100
 msgid "SIM Locked"
 msgstr "SIM Kilitli"
 
@@ -458,7 +459,7 @@ msgstr ""
 msgid "Send message"
 msgstr "İleti gönder"
 
-#: ../src/qml/DialerPage/DialerPage.qml:47
+#: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Settings"
 msgstr "Ayarlar"
 
@@ -473,7 +474,7 @@ msgstr "Silmek için kaydırın"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Eylemleri açmak için kaydırın"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
@@ -491,12 +492,12 @@ msgstr "Varsayılan SIM'e geçiş yap:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:359
+#: ../src/qml/dialer-app.qml:373
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "%1 operatöründe şu an şebeke yok"
 
-#: ../src/qml/dialer-app.qml:353 ../src/qml/dialer-app.qml:360
+#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
 msgid "There is currently no network."
 msgstr "Şu an şebeke yok."
 
@@ -517,7 +518,7 @@ msgstr "Bilinmeyen cihaz"
 msgid "Unknown number"
 msgstr "Bilinmeyen numara"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:72
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
 msgstr "Telesekreter"
@@ -538,7 +539,7 @@ msgstr "Dün"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Arama yapabilmek için uçuş modunu devre dışı bırakmanız gerekir."
 
-#: ../src/qml/dialer-app.qml:332
+#: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"
 msgstr "Bir SIM kart seçmeniz gerekiyor"
 
