@@ -213,6 +213,14 @@ PageWithBottomEdge {
         return accountNames
     }
 
+    Connections {
+        target: mainView
+        onAccountChanged: {
+            // FIXME: the selectedIndex binding is being broken by the sdk. this is just a workaround.
+            head.sections.selectedIndex = accountIndex(mainView.account) 
+        }
+    }
+
     head.sections.selectedIndex: accountIndex(mainView.account)
 
     Connections {
