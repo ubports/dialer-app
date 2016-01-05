@@ -1,3 +1,12 @@
+dialer-app (0.1+16.04.20160105.1-0ubuntu1) xenial; urgency=medium
+
+  [ Tiago Salem Herrmann ]
+  * Fix broken binding on head.sections.selectedIndex.
+  * Fix broken binding. Qt.binding() must receive a function as
+    argument.
+
+ -- Bill Filler <ci-train-bot@canonical.com>  Tue, 05 Jan 2016 16:25:51 +0000
+
 dialer-app (0.1+16.04.20151207-0ubuntu1) xenial; urgency=medium
 
   [ CI Train Bot ]
