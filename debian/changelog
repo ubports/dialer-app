@@ -1,3 +1,9 @@
+dialer-app (0.1+16.04.20160107.1-0ubuntu1) xenial; urgency=medium
+
+  * Use the new Addressbook header.
+
+ -- Renato Araujo Oliveira Filho <renato.filho@canonical.com>  Thu, 07 Jan 2016 18:16:40 +0000
+
 dialer-app (0.1+16.04.20160105.1-0ubuntu1) xenial; urgency=medium
 
   [ Tiago Salem Herrmann ]
