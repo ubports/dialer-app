@@ -251,12 +251,21 @@ class DialerContactViewPage(address_book.ContactViewPage):
 class DialerContactEditorPage(address_book.ContactEditorPage):
     """Autopilot custom proxy object for DialerContactEditorPage components."""
 
+    def click_action_button(self, action_name):
+        actions = self.select_many(objectName='%s_button'%action_name)
+        for action in actions:
+           if action.enabled:
+               self.pointing_device.click_object(action)
+               return
+
+        raise exceptions.StateNotFoundError(action_name)
+
+
     def save(self):
         """
         Press the 'Save' button
         """
-        header = self.get_header(main_window_name='MainView')
-        header.click_action_button('save')
+        self.click_action_button('save')
 
 
 class ContactsPage(_common.PageWithHeader):
