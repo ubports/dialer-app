@@ -110,7 +110,7 @@ Page {
             } else {
                 closeTimer.running = false;
                 statusLabel.text = "";
-                liveCall.call = Qt.binding(callManager.foregroundCall);
+                liveCall.call = Qt.binding(function() { return callManager.foregroundCall; });
             }
         }
 
