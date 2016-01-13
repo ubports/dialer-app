@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -150,7 +150,7 @@ msgstr "Fracàs de la sonada"
 msgid "Call holding failure"
 msgstr "Fracàs de la mesa en espèra"
 
-#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/DialerPage/DialerPage.qml:501
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -248,7 +248,7 @@ msgstr "Modificar"
 msgid "Emergency Calls"
 msgstr "Sonadas d'urgéncia"
 
-#: ../src/qml/DialerPage/DialerPage.qml:292
+#: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
 msgstr "Compausar un numèro"
 
@@ -287,7 +287,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Ai comprés"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -372,8 +372,7 @@ msgstr "Sortent"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefòn"
 
@@ -470,11 +469,11 @@ msgstr "Partejar"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Fasètz lisar per suprimir"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Fasètz lisar per desvelar d'accions"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
@@ -537,7 +536,7 @@ msgstr "Ièr"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Vos cal desactivar lo mòde avion per fin de poder passar d'apèls"
 
 #: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"

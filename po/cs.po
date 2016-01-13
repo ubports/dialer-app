@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 "Language: cs\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -154,7 +154,7 @@ msgstr "Nezdařené hovory"
 msgid "Call holding failure"
 msgstr "Selhání držených hovorů"
 
-#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/DialerPage/DialerPage.qml:501
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -229,7 +229,7 @@ msgstr "Podrobnosti"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Vypnout"
 
 #: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
@@ -246,13 +246,13 @@ msgstr "Neptat se znovu"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Upravit"
 
 #: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
 msgstr "Tísňová volání"
 
-#: ../src/qml/DialerPage/DialerPage.qml:292
+#: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
 msgstr "Zadejte číslo"
 
@@ -279,7 +279,7 @@ msgstr "Oblíbené."
 #: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Režim letadlo"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -376,8 +376,7 @@ msgstr "Odchozí"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -436,7 +435,7 @@ msgstr "SIM karta zamčená"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Uložit"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -540,7 +539,7 @@ msgstr "Včera"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Telefonovat bude možné až po opuštění režimu letadlo."
 
 #: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"

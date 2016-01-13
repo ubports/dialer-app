@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -157,7 +157,7 @@ msgstr "Spodletel klic"
 msgid "Call holding failure"
 msgstr "Zmožnost zadržanja klica"
 
-#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/DialerPage/DialerPage.qml:501
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -255,7 +255,7 @@ msgstr "Uredi"
 msgid "Emergency Calls"
 msgstr "Klici v sili"
 
-#: ../src/qml/DialerPage/DialerPage.qml:292
+#: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
 msgstr "Vnesite številko"
 
@@ -379,8 +379,7 @@ msgstr "Odhodno"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 

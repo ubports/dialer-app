@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -147,7 +147,7 @@ msgstr "چاقىرىش مەغلۇپ بولدى"
 msgid "Call holding failure"
 msgstr "سۆزلىشىشنى ساقلىتىپ قويۇش مەغلۇپ بولدى"
 
-#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/DialerPage/DialerPage.qml:501
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -245,7 +245,7 @@ msgstr "تەھرىرلەش"
 msgid "Emergency Calls"
 msgstr "جىددىي تېلېفونلار"
 
-#: ../src/qml/DialerPage/DialerPage.qml:292
+#: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
 msgstr "نومۇر كىرگۈزۈڭ"
 
@@ -369,8 +369,7 @@ msgstr "چىقىۋاتىدۇ"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "تېلېفون"
 

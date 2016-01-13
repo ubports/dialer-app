@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2015-12-15 05:37+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
+"X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -150,7 +150,7 @@ msgstr "Échec lors de l'appel"
 msgid "Call holding failure"
 msgstr "Échec de la mise en attente"
 
-#: ../src/qml/DialerPage/DialerPage.qml:493
+#: ../src/qml/DialerPage/DialerPage.qml:501
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:447
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -225,7 +225,7 @@ msgstr "Détails"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Désactiver"
 
 #: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
@@ -242,13 +242,13 @@ msgstr "Ne plus demander"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Modifier"
 
 #: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
 msgstr "Appels d'urgence"
 
-#: ../src/qml/DialerPage/DialerPage.qml:292
+#: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
 msgstr "Saisir un numéro"
 
@@ -275,7 +275,7 @@ msgstr "Favoris"
 #: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Mode avion"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -287,7 +287,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "D'accord"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -331,7 +331,7 @@ msgstr "Manqué"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Cellulaire"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -372,8 +372,7 @@ msgstr "Sortant"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Téléphone"
 
@@ -433,7 +432,7 @@ msgstr "SIM verrouillée"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Enregistrer"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -471,11 +470,11 @@ msgstr "Partager"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Faire glisser pour supprimer"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Faire glisser pour présenter les actions"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
@@ -539,6 +538,7 @@ msgstr "Hier"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
+"Vous devez désactiver le mode avion afin de pouvoir passer des appels"
 
 #: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"
