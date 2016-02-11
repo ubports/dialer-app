@@ -334,16 +334,10 @@ Page {
         return i18n.tr("Unknown device")
     }
 
-    Image {
-        id: background
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        source: Qt.resolvedUrl("../assets/dialer_background_full.png")
-        asynchronous: true
+    // background
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.normal.background
     }
 
     // FIXME: this invisible label is only used for

@@ -230,16 +230,10 @@ PageWithBottomEdge {
         }
     }
 
-    Image {
-        id: background
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-
-        source: Qt.resolvedUrl("../assets/dialer_background_full.png")
-        asynchronous: true
+    // background
+    Rectangle {
+        anchors.fill: parent
+        color: Theme.palette.normal.background
     }
 
     FocusScope {
