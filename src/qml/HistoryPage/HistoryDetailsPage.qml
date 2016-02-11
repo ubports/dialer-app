@@ -147,7 +147,7 @@ Page {
                 fontSize: "medium"
                 text: getFormattedPhoneLabel(phoneNumber)
                 elide: Text.ElideRight
-                color: UbuntuColors.lightAubergine
+                color: UbuntuColors.darkGrey
                 height: units.gu(2)
             }
 
@@ -276,7 +276,7 @@ Page {
                     leftMargin: units.gu(1)
                     verticalCenter: parent.verticalCenter
                 }
-                color: UbuntuColors.lightAubergine
+                color: UbuntuColors.darkGrey
                 verticalAlignment: Qt.AlignVCenter
                 MouseArea {
                     anchors.fill:parent
