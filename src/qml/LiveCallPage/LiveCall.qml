@@ -458,7 +458,7 @@ Page {
             }
             text: caller
             fontSize: "large"
-            color: UbuntuColors.lightAubergine
+            color: UbuntuColors.darkGrey
         }
 
         MultiCallDisplay {

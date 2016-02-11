@@ -355,7 +355,7 @@ PageWithBottomEdge {
                 bottomMargin: units.gu(1)
             }
             text: contactWatcher.isUnknown ? "" : contactWatcher.alias
-            color: UbuntuColors.lightAubergine
+            color: UbuntuColors.darkGrey
             opacity: text != "" ? 1 : 0
             fontSize: "small"
             Behavior on opacity {

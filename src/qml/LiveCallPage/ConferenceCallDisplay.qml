@@ -136,7 +136,7 @@ Column {
                     anchors {
                         centerIn: parent
                     }
-                    color: UbuntuColors.lightAubergine
+                    color: UbuntuColors.darkGrey
                     text: i18n.tr("Private")
                     font.weight: Font.DemiBold
                     verticalAlignment: Text.AlignVCenter
