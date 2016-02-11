@@ -1,3 +1,11 @@
+dialer-app (0.1+16.04.20160211-0ubuntu1) xenial; urgency=medium
+
+  * Replace background image by default background color Change
+    UbuntuColors.lightAubergine to UbuntuColors.darkGrey removed:
+    src/qml/assets/dialer_background_full@27.png
+
+ -- Tiago Salem Herrmann <tiago.herrmann@canonical.com>  Thu, 11 Feb 2016 18:07:00 +0000
+
 dialer-app (0.1+16.04.20160107.1-0ubuntu1) xenial; urgency=medium
 
   * Use the new Addressbook header.
