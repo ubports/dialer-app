@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2016-02-02 21:52+0000\n"
+"PO-Revision-Date: 2016-02-14 23:25+0000\n"
 "Last-Translator: Charif AYFARAH <ayfarah@ymail.com>\n"
 "Language-Team: Afar <aa@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-02-03 05:58+0000\n"
-"X-Generator: Launchpad (build 17908)\n"
+"X-Launchpad-Export-Date: 2016-02-15 05:35+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -207,29 +207,29 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
 #: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Contacts"
-msgstr ""
+msgstr "Axxoowitte"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
-msgstr ""
+msgstr "Dug"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr ""
+msgstr "Addaffakootu"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Aymis"
 
 #: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Haad gurra aymisah"
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
 #: ../src/qml/dialer-app.qml:567
@@ -246,11 +246,11 @@ msgstr "Faku"
 
 #: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Sissikâ seeco"
 
 #: ../src/qml/DialerPage/DialerPage.qml:300
 msgid "Enter a number"
-msgstr ""
+msgstr "Loowo culus"
 
 #: ../src/qml/dialer-app.qml:550
 msgid "Error"
@@ -258,127 +258,127 @@ msgstr "Soka"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Seeco taafisaanam makkinna."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Kobox seecoh cino makkina."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Taafit le seeco sugusaanam makinna"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
-msgstr ""
+msgstr "Assakoot"
 
 #: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Haad Gurra"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr ""
+msgstr "Haad murra"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Geeh"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr ""
+msgstr "Tamaate"
 
 #: ../src/qml/dialer-app.qml:551
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Nihir sinni USSD mudenta"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
-msgstr ""
+msgstr "Maftah-galleefa"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "Sarra"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:554
 msgid "Merge calls"
-msgstr ""
+msgstr "Seeco itta fan gacis"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr ""
+msgstr "Elle hoxxeh"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Gabaytu"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "Maleey"
 
 #: ../src/qml/dialer-app.qml:346
 msgid "No SIM card selected"
-msgstr ""
+msgstr "Dooren SIM karti mayan"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
-msgstr ""
+msgstr "Seeco matan"
 
 #: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
 #: ../src/qml/dialer-app.qml:372
 msgid "No network"
-msgstr ""
+msgstr "Retta matan"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:219
 msgid "No recent calls"
-msgstr ""
+msgstr "Qusubih tekke seeco matan"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "Hayya"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr ""
+msgstr "Sugus"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
-msgstr ""
+msgstr "Tawqem"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telefoonu"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Telefoon Abnisso"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
@@ -386,7 +386,7 @@ msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Telefoon Abnisso"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
@@ -401,21 +401,21 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
-msgstr ""
+msgstr "Maganak qambal"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
 msgid "Private"
-msgstr ""
+msgstr "Caglan"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
-msgstr ""
+msgstr "Caglan loowo"
 
 #: ../src/qml/DialerPage/DialerPage.qml:141
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr ""
+msgstr "Qusubih"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
@@ -427,19 +427,19 @@ msgstr ""
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Taagis"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
-msgstr ""
+msgstr "Goranto"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
-msgstr ""
+msgstr "Gorris..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr ""
+msgstr "Meex"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
@@ -453,16 +453,16 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Settings"
-msgstr ""
+msgstr "Massosu"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
-msgstr ""
+msgstr "Kurut"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Dugtuh uysuttuc"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
@@ -495,20 +495,20 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr ""
+msgstr "Asaaku"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Ubuntu Telefoonu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
-msgstr ""
+msgstr "Igmon aalata"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
-msgstr ""
+msgstr "Igmon loowo"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
@@ -517,15 +517,15 @@ msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Yeey"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr ""
+msgstr "Kimaala"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
@@ -538,9 +538,9 @@ msgstr ""
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
