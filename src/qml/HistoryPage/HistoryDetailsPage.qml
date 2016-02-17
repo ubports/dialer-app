@@ -55,7 +55,11 @@ Page {
 
     title: getFormattedPhoneLabel(phoneNumber)
 
-    head.actions: [
+    header: PageHeader {
+        id: pageHeader
+
+        trailingActionBar {
+            actions: [
         Action {
             iconName: unknownContact ? "contact-new" : "stock_contact"
             text: i18n.tr("Contact Details")

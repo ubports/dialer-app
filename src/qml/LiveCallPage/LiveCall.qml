@@ -73,11 +73,22 @@ Page {
     }
 
     title: caller
-    head.actions: []
-    head.backAction: backAction
-    head.sections.model: multiplePhoneAccounts ? [call.account.displayName] : []
-    head.sections.selectedIndex: 0
-    x: header ? header.height : 0
+    header: PageHeader {
+        id: pageHeader
+        title: liveCall.title
+        leadingActionBar {
+            actions: [ backAction ]
+        }
+        Sections {
+            id: headerSections
+            model: [call.account.displayName]
+            selectedIndex: 0
+            anchors.left: parent.left
+            anchors.bottom: parent.bottom
+            visible: multiplePhoneAccounts
+        }
+        extension: multiplePhoneAccounts ? headerSections : null
+    }
 
     function reportStatus(callObject, text) {
         // if a previous status was already set, do not overwrite it
@@ -406,6 +417,7 @@ Page {
         id: centralArea
         anchors {
             top: parent.top
+            topMargin: pageHeader.height
             left: parent.left
             right: parent.right
             bottom: buttonsArea.top

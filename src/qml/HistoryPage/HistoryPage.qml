@@ -46,7 +46,27 @@ Page {
     active: false
     flickable: null
 
-    head.sections.model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
+    header: PageHeader {
+        id: pageHeader
+
+        property alias leadingActions: leadingBar.actions
+        property alias trailingActions: trailingBar.actions
+
+        title: historyPage.title
+
+        leadingActionBar {
+            id: leadingBar
+        }
+
+        trailingActionBar {
+            id: trailingBar
+        }
+
+        extension: Sections {
+            id: headerSections
+            model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
+        }
+    }
 
     Rectangle {
         anchors.fill: parent
@@ -54,18 +74,20 @@ Page {
     }
 
     states: [
-        PageHeadState {
+        State {
+            id: selectState
             name: "select"
             when: selectionMode
-            head: historyPage.head
 
-            backAction: Action {
-                objectName: "selectionModeCancelAction"
-                iconName: "back"
-                onTriggered: historyList.cancelSelection()
-            }
+            property list<QtObject> leadingActions: [
+                Action {
+                    objectName: "selectionModeCancelAction"
+                    iconName: "back"
+                    onTriggered: historyList.cancelSelection()
+                }
+            ]
 
-            actions: [
+            property list<QtObject> trailingActions: [
                 Action {
                     objectName: "selectionModeSelectAllAction"
                     iconName: "select"
@@ -84,6 +106,12 @@ Page {
                     onTriggered: historyList.endSelection()
                 }
             ]
+
+            PropertyChanges {
+                target: pageHeader
+                leadingActions: selectState.leadingActions
+                trailingActions: selectState.trailingActions
+            }
         }
     ]
 
@@ -110,12 +138,12 @@ Page {
     }
 
     Connections {
-        target: head.sections
+        target: headerSections
         onSelectedIndexChanged: {
             // NOTE: be careful on changing the way filters are assigned, if we create a
-            // binding on head.sections, we might get weird results when the page moves to the bottom
+            // binding on headerSections, we might get weird results when the page moves to the bottom
             if (pageStackNormalMode.depth > 1) {
-                if (head.sections.selectedIndex == 0) {
+                if (headerSections.selectedIndex == 0) {
                     historyEventModel.filter = emptyFilter;
                 } else {
                     historyEventModel.filter = missedFilter;

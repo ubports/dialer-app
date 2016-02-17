@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -25,8 +25,9 @@ import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 1.3 as ListItems
 
 import "../"
+import "../HistoryPage"
 
-PageWithBottomEdge {
+Page {
     id: page
 
     property alias dialNumber: keypadEntry.value
@@ -55,30 +56,57 @@ PageWithBottomEdge {
         }
         return model
     }
-    property list<Action> actionsGreeter
-    property list<Action> actionsNormal: [
-        Action {
-            objectName: "contacts"
-            iconName: "contact"
-            text: i18n.tr("Contacts")
-            onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-        },
-        Action {
-            iconName: "settings"
-            text: i18n.tr("Settings")
-            onTriggered: Qt.openUrlExternally("settings:///system/phone")
+
+    header: PageHeader {
+        id: pageHeader
+
+        property list<Action> actionsGreeter
+        property list<Action> actionsNormal: [
+            Action {
+                objectName: "contacts"
+                iconName: "contact"
+                text: i18n.tr("Contacts")
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            },
+            Action {
+                iconName: "settings"
+                text: i18n.tr("Settings")
+                onTriggered: Qt.openUrlExternally("settings:///system/phone")
+            }
+
+        ]
+        title: page.title
+        trailingActionBar {
+            actions: mainView.greeterMode ? actionsGreeter : actionsNormal
         }
 
-    ]
-    head.actions: mainView.greeterMode ? actionsGreeter : actionsNormal
-    head.backAction: Action {
-        iconName: "back"
-        text: i18n.tr("Close")
-        visible: mainView.greeterMode
-        onTriggered: {
-            greeter.showGreeter()
-            dialNumber = "";
+        leadingActionBar {
+            actions: [
+                Action {
+                    iconName: "back"
+                    text: i18n.tr("Close")
+                    visible: mainView.greeterMode
+                    onTriggered: {
+                        greeter.showGreeter()
+                        dialNumber = "";
+                    }
+                }
+            ]
         }
+
+        Sections {
+            id: headerSections
+            model: {
+                var accountNames = []
+                for (var i in page.accountsModel) {
+                    accountNames.push(page.accountsModel[i].displayName)
+                }
+                return accountNames
+            }
+            selectedIndex: accountIndex(mainView.account)
+        }
+
+        extension: headerSections.model.length > 1 ? headerSections : null
     }
 
     objectName: "dialerPage"
@@ -133,44 +161,6 @@ PageWithBottomEdge {
         }
     ]
 
-    // -------- Bottom Edge Setup -----
-    bottomEdgeEnabled: !mainView.greeterMode
-    bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
-    // NOTE: uncomment the next line to re-enable progressive bottom edge swiping.
-    //bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
-    bottomEdgeTitle: i18n.tr("Recent")
-    reloadBottomEdgePage: true
-
-    property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
-
-    onBottomEdgeExposedAreaChanged: {
-        if (!bottomEdgePage)  {
-            return
-        }
-
-        var index =  Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
-        if (index < 3) {
-            bottomEdgePage.currentIndex = index
-        } else {
-            bottomEdgePage.currentIndex = -1
-        }
-    }
-
-    onBottomEdgeReleased: {
-        if (bottomEdgePage.currentIndex < 3) {
-            bottomEdgePage.activateCurrentIndex()
-        } else {
-            bottomEdgePage.currentIndex = -1
-        }
-    }
-
-    onIsCollapsedChanged: {
-        if (isCollapsed && bottomEdgePage) {
-            // reset the history page to the "All" view
-            bottomEdgePage.head.sections.selectedIndex = 0;
-        }
-    }
-
     function accountIndex(account) {
         var index = -1;
         for (var i in page.accountsModel) {
@@ -197,6 +187,7 @@ PageWithBottomEdge {
     }
 
     Component.onCompleted: {
+        QuickUtils.mouseAttached = true
         // load MMI plugins
         var plugins = application.mmiPluginList()
         for (var i in plugins) {
@@ -205,28 +196,10 @@ PageWithBottomEdge {
         }
     }
 
-    head.sections.model: {
-        var accountNames = []
-        for (var i in page.accountsModel) {
-            accountNames.push(page.accountsModel[i].displayName)
-        }
-        return accountNames
-    }
-
     Connections {
-        target: mainView
-        onAccountChanged: {
-            // FIXME: the selectedIndex binding is being broken by the sdk. this is just a workaround.
-            head.sections.selectedIndex = Qt.binding(function() { return accountIndex(mainView.account) })
-        }
-    }
-
-    head.sections.selectedIndex: accountIndex(mainView.account)
-
-    Connections {
-        target: page.head.sections
+        target: headerSections
         onSelectedIndexChanged: {
-            mainView.account = page.accountsModel[page.head.sections.selectedIndex]
+            mainView.account = page.accountsModel[headerSections.selectedIndex]
         }
     }
 
@@ -245,7 +218,10 @@ PageWithBottomEdge {
     FocusScope {
         id: keypadContainer
 
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: pageHeader.height
+        }
         focus: true
 
         Item {
@@ -505,5 +481,23 @@ PageWithBottomEdge {
                 callButton.color = callButton.defaultColor
             }
         }
+    }
+
+    Component {
+        id: historyPageComponent
+
+        HistoryPage {
+            id: historyPage
+            width: bottomEdge.width
+            height: bottomEdge.height
+        }
+    }
+
+    BottomEdge {
+        id: bottomEdge
+        enabled: !mainView.greeterMode
+        contentComponent: historyPageComponent
+        height: page.height
+        hint.text: i18n.tr("Recent")
     }
 }
