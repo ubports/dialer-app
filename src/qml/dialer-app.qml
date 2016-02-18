@@ -65,8 +65,8 @@ MainView {
     }
 
     automaticOrientation: false
-    width: units.gu(40)
-    height: units.gu(71)
+    implicitWidth: units.gu(40)
+    implicitHeight: units.gu(71)
 
     property bool hasCalls: callManager.hasCalls
 
