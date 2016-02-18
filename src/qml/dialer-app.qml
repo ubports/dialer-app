@@ -470,10 +470,10 @@ MainView {
         pageStackNormalMode.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // when running in windowed mode, do not allow resizing
-        view.minimumWidth  = width * 0.9
-        view.maximumWidth = width * 1.1
-        view.minimumHeight = height * 0.9
-        view.maximumHeight = height * 1.1
+        view.minimumWidth  = Qt.binding( function() { return implicitWidth * 0.9; } )
+        view.maximumWidth = Qt.binding( function() { return implicitWidth * 1.1; } )
+        view.minimumHeight = Qt.binding( function() { return implicitHeight * 0.9; } )
+        view.maximumHeight = Qt.binding( function() { return implicitHeight * 1.1; } )
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {
