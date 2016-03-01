@@ -8,389 +8,392 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-11-19 10:54+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-02-29 17:16+0000\n"
+"Last-Translator: P_E_T_O <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-01 05:51+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
-msgstr ""
+msgstr "%1 - podržané"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 hodín"
+msgstr[1] "%1 hodina"
+msgstr[2] "%1 hodiny"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 min"
+msgstr[1] "%1 min"
+msgstr[2] "%1 min"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 s"
+msgstr[1] "%1 s"
+msgstr[2] "%1 s"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:205
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:150
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: ../src/qml/DialerPage/Keypad.qml:160
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:49
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr ""
+msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "Aktívne"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Všetky"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Všetky"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:328
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Zariadenie Bluetooth"
 
 #: ../src/qml/dialer-app.qml:635
 msgid "Call Barring"
-msgstr ""
+msgstr "Blokovanie hovorov"
 
 #: ../src/qml/dialer-app.qml:646
 msgid "Call Forwarding"
-msgstr ""
+msgstr "Presmerovanie hovoru"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Call Waiting"
-msgstr ""
+msgstr "Čakajúci hovor"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:139
 msgid "Call ended"
-msgstr ""
+msgstr "Hovor ukončený"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:284
 msgid "Call failed"
-msgstr ""
+msgstr "Hovor zlyhal"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:147
 msgid "Call holding failure"
-msgstr ""
+msgstr "Chyba podržania hovoru"
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr ""
+msgstr "Volanie"
 
 #: ../src/qml/dialer-app.qml:668
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "CLIP"
 
 #: ../src/qml/dialer-app.qml:680
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "CLIR"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:106
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušiť"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Zmeniť priradenie všetkých volaní na %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:76
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "Zatvoriť"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr ""
+msgstr "Konferenčný hovor"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:118
 msgid "Conference call failure"
-msgstr ""
+msgstr "Zlyhanie konferenčného hovoru"
 
 #: ../src/qml/dialer-app.qml:674
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "Zobrazenie čísla pripojenej linky"
 
 #: ../src/qml/dialer-app.qml:686
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "Skrytie čísla pripojenej linky"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
 #: ../src/qml/HistoryPage/HistoryPage.qml:343
 msgid "Contact Details"
-msgstr ""
+msgstr "Podrobnosti o kontakte"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:53
 #: ../src/qml/DialerPage/DialerPage.qml:63
 msgid "Contacts"
-msgstr ""
+msgstr "Kontakty"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr ""
+msgstr "DEF"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
 #: ../src/qml/HistoryPage/HistoryPage.qml:315
 msgid "Delete"
-msgstr ""
+msgstr "Zmazať"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:324
 msgid "Details"
-msgstr ""
+msgstr "Podrobnosti"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Vypnúť"
 
 #: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Deaktivácia režimu „v lietadle“"
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
 #: ../src/qml/dialer-app.qml:567
 msgid "Dismiss"
-msgstr ""
+msgstr "Zatvoriť"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "Túto otázku už nezobrazovať"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
 msgid "Edit"
-msgstr ""
+msgstr "Upraviť"
 
 #: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Núdzové hovory"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
-msgstr ""
+msgstr "Zadajte číslo"
 
 #: ../src/qml/dialer-app.qml:550
 msgid "Error"
-msgstr ""
+msgstr "Chyba"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:148
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Zlyhalo vytvorenie hovoru."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:119
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Zlyhanie vytvorenie konferenčného hovoru."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:149
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Zlyhalo podržanie aktívneho hovoru."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Favorites"
-msgstr ""
+msgstr "Obľúbené"
 
 #: ../src/qml/DialerPage/DialerPage.qml:98
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Režim Lietadlo"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr ""
+msgstr "Režim Lietadlo"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr ""
+msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Mám to"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:64
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr ""
+msgstr "Prichádzajúce"
 
 #: ../src/qml/dialer-app.qml:551
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Neplatný kód USSD"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr ""
+msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
-msgstr ""
+msgstr "Numerická klávesnica"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "Neskôr"
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr ""
+msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
-msgstr ""
+msgstr "Zlúčiť hovory"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:62
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
 #: ../src/qml/HistoryPage/HistoryPage.qml:49
 msgid "Missed"
-msgstr ""
+msgstr "Zmeškané"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobil"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "Žiadne"
 
 #: ../src/qml/dialer-app.qml:346
 msgid "No SIM card selected"
-msgstr ""
+msgstr "Nie je zvolená SIM karta"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:109
 msgid "No calls"
-msgstr ""
+msgstr "Žiadne hovory"
 
 #: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
 #: ../src/qml/dialer-app.qml:372
 msgid "No network"
-msgstr ""
+msgstr "Sieť nedostupná"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:219
 msgid "No recent calls"
-msgstr ""
+msgstr "Žiadne nové hovory"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:49
 msgid "Ok"
-msgstr ""
+msgstr "OK"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr ""
+msgstr "Pozdržané"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
-msgstr ""
+msgstr "Odchádzajúce"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr ""
+msgstr "PQRS"
 
 #: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telefón"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Aplikácia Telefón"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:332
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Reproduktor telefónu"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr ""
+msgstr "Aplikácia Telefón"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telefón;Dialer;Vytočiť;Volanie;Numerická klávesnica"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:37
 msgid ""
@@ -398,149 +401,156 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Prosím, odomknite svoju SIM kartu, aby ste mohli volať alebo posielať SMS. "
+"Vašu SIM kartu môžete odomknúť v indikátore siete v hornej časti obrazovky "
+"alebo navštívením <a href=\"system_settings\">Nastavenia systému &gt; "
+"Bezpečnosť a súkromie</a>."
 
 #: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
-msgstr ""
+msgstr "Prosím, čakajte"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
 msgid "Private"
-msgstr ""
+msgstr "Súkromné"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:167
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
-msgstr ""
+msgstr "Súkromné číslo"
 
 #: ../src/qml/DialerPage/DialerPage.qml:141
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
-msgstr ""
+msgstr "Nedávne"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:26
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "SIM karta je uzamknutá"
 
 #: ../src/qml/DialerPage/DialerPage.qml:100
 msgid "SIM Locked"
-msgstr ""
+msgstr "Uzamknutá SIM"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Uložiť"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
-msgstr ""
+msgstr "Hľadať"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:68
 msgid "Search..."
-msgstr ""
+msgstr "Hľadať..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Select"
-msgstr ""
+msgstr "Vybrať"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"Zvoľte predvolenú SIM kartu pre všetky odchádzajúce hovory. Svoju voľbu "
+"môžte kedykoľvek zmeniť v <a href=\"system_settings\">Nastaveniach "
+"systému</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
-msgstr ""
+msgstr "Poslať správu"
 
 #: ../src/qml/DialerPage/DialerPage.qml:68
 msgid "Settings"
-msgstr ""
+msgstr "Nastavenia"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
-msgstr ""
+msgstr "Zdieľať"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Potiahnuť pre vymazanie"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Potiahnuť pre ukázanie akcie"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Prepnúť zdroj zvuku:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
-msgstr ""
+msgstr "Prepnúť hovory"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "Prepnúť na predvolenú SIM:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr ""
+msgstr "TUV"
 
 #: ../src/qml/dialer-app.qml:373
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "Momentálne nie je dostupná sieť na %1"
 
 #: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
 msgid "There is currently no network."
-msgstr ""
+msgstr "Momentálne nie je dostupná sieť."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr ""
+msgstr "Dnes"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:330
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Telefón Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:334
 msgid "Unknown device"
-msgstr ""
+msgstr "Neznáme zariadenie"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:169
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
-msgstr ""
+msgstr "Neznáme číslo"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr ""
+msgstr "Hlasová schránka"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr ""
+msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Áno"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr ""
+msgstr "Včera"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Aby ste mohli volať, musíte vypnúť režim Lietadlo"
 
 #: ../src/qml/dialer-app.qml:346
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "Musíte zvoliť SIM kartu"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
