@@ -31,6 +31,8 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
+    // We can't trigger the TextInputPopover directly, so we need to 
+    // create a copy here and trigger when needed
     Component {
         id: popoverComponent
         TextInputPopover {
@@ -40,6 +42,8 @@ FocusScope {
                 anchors.fill: parent
                 onPressed: PopupUtils.close(popover)
             }
+            // this is necessary otherwise the popover will close itself
+            // once the user tap "select all"
             Connections {
                 target: input
                 onSelectedTextChanged: {
