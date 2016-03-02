@@ -19,7 +19,9 @@
 import QtQuick 2.0
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItems
+import Ubuntu.Components.Themes.Ambiance 1.3
 import Ubuntu.Telephony.PhoneNumber 0.1
+import Ubuntu.Components.Popups 1.3
 
 FocusScope {
     id: keypadEntry
@@ -29,13 +31,38 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
+    Component {
+        id: popoverComponent
+        TextInputPopover {
+            id: popover
+            target: input
+            InverseMouseArea {
+                anchors.fill: parent
+                onPressed: PopupUtils.close(popover)
+            }
+            Connections {
+                target: input
+                onSelectedTextChanged: {
+                    if (input.selectedText != input.text) {
+                        PopupUtils.close(popover)
+                    }
+                }
+            }
+        }
+    }
 
-    PhoneNumberInput {
+    PhoneNumberField {
         id: input
 
         property bool __adjusting: false
         readonly property double maximumFontSize: units.dp(30)
         readonly property double minimumFontSize: FontUtils.sizeToPixels("large")
+
+
+        style: TextFieldStyle {
+            background: null
+            frameSpacing: 0
+        }
 
         function adjustTextSize()
         {
@@ -97,24 +124,17 @@ FocusScope {
 
     MouseArea {
         anchors.fill: input
-        property bool held: false
+        propagateComposedEvents: true
         onClicked: {
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
         }
         onPressAndHold: {
-            if (input.text !== "") {
-                held = true
-                input.selectAll()
-                input.copy()
-            } else {
+            if (input.text == "") {
                 input.paste()
+                return
             }
-        }
-        onReleased: {
-            if(held) {
-                input.deselect()
-                held = false
-            }
+            input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
+            PopupUtils.open(popoverComponent, input)
         }
     }
 
