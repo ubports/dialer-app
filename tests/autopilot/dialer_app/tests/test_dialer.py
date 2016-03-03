@@ -52,3 +52,26 @@ class TestDialer(DialerAppTestCase):
         dialer_page = self.main_view.dialer_page
 
         self.assertThat(dialer_page.visible, Eventually(Equals(True)))
+
+    def test_dialer_copy_and_paste(self):
+        keypad_entry = self.main_view.dialer_page._get_keypad_entry()
+        keypad_keys = self.main_view.dialer_page._get_keypad_keys()
+        for key in keypad_keys:
+            self.main_view.dialer_page.click_keypad_button(key)
+
+        value = keypad_entry.value
+        self.main_view.dialer_page.trigger_copy_and_paste()
+        self.main_view.dialer_page.trigger_select_all()
+        self.main_view.dialer_page.trigger_cut()
+
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals(""))
+        )
+
+        self.main_view.dialer_page.trigger_copy_and_paste()
+
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals(value))
+        )

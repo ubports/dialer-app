@@ -12,6 +12,7 @@
 import logging
 
 import ubuntuuitoolkit
+import time
 
 from address_book_app.address_book import _common
 from address_book_app import address_book
@@ -54,6 +55,18 @@ class MainView(ubuntuuitoolkit.MainView):
         button.visible.wait_for(True)
         self.pointing_device.click_object(button)
         return button
+
+    def _long_press(self, obj):
+        """long press on object because press_duration is not honored on touch
+        see bug #1268782
+
+        :parameter obj: the object to long press on
+        """
+
+        self.pointing_device.move_to_object(obj)
+        self.pointing_device.press()
+        time.sleep(3)
+        self.pointing_device.release()
 
     def check_ussd_error_dialog_visible(self):
         """Check if ussd error dialog is visible"""
@@ -206,6 +219,38 @@ class DialerPage(PageWithBottomEdge):
         """
         self._click_button(keypad_button)
 
+    def trigger_copy_and_paste(self):
+        """Invoke the copy and paste popup"""
+        self._long_press(self._get_keypad_entry())
+
+    def trigger_select_all(self):
+        """Trigger select all"""
+        button = self.get_root_instance().wait_select_single(
+                        'UCAbstractButton',
+                        objectName="select_all_button")
+        self._click_button(button)
+
+    def trigger_copy(self):
+        """Trigger copy"""
+        button = self.get_root_instance().wait_select_single(
+                         'UCAbstractButton',
+                         objectName="copy_button")
+        self._click_button(button)
+
+    def trigger_paste(self):
+        """Trigger paste"""
+        button = self.get_root_instance().wait_select_single(
+                          'UCAbstractButton',
+                          objectName="paste_button")
+        self._click_button(button)
+
+    def trigger_cut(self):
+        """Trigger cut"""
+        button = self.get_root_instance().wait_select_single(
+                          'UCAbstractButton',
+                          objectName="cut_button")
+        self._click_button(button)
+
     def dial_number(self, number, formattedNumber):
         """Dial given number (string) on the keypad and return keypad entry
 
@@ -252,14 +297,13 @@ class DialerContactEditorPage(address_book.ContactEditorPage):
     """Autopilot custom proxy object for DialerContactEditorPage components."""
 
     def click_action_button(self, action_name):
-        actions = self.select_many(objectName='%s_button'%action_name)
+        actions = self.select_many(objectName='%s_button' % action_name)
         for action in actions:
-           if action.enabled:
-               self.pointing_device.click_object(action)
-               return
+            if action.enabled:
+                self.pointing_device.click_object(action)
+                return
 
-        raise exceptions.StateNotFoundError(action_name)
-
+        raise autopilot_exceptions.StateNotFoundError(action_name)
 
     def save(self):
         """

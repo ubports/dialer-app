@@ -26,6 +26,7 @@ Popover {
     property bool password: target && target.hasOwnProperty('echoMode') && target.echoMode == TextInput.Password
     property list<Action> actions: [
         Action {
+            name: "select_all"
             text: i18n.dtr('ubuntu-ui-toolkit', "Select All")
             iconName: "edit-select-all"
             enabled: target && target.text !== "" && target.selectedText === ""
@@ -33,6 +34,7 @@ Popover {
             onTriggered: target.selectAll()
         },
         Action {
+            name: "cut"
             text: i18n.dtr('ubuntu-ui-toolkit', "Cut")
             iconName: "edit-cut"
             // If paste/editing is not possible, then disable also "Cut" operation
@@ -45,6 +47,7 @@ Popover {
             }
         },
         Action {
+            name: "copy"
             text: i18n.dtr('ubuntu-ui-toolkit', "Copy")
             iconName: "edit-copy"
             visible: popover.canCopy
@@ -54,6 +57,7 @@ Popover {
             }
         },
         Action {
+            name: "paste"
             text: i18n.dtr('ubuntu-ui-toolkit', "Paste")
             iconName: "edit-paste"
             enabled: target && target.canPaste
@@ -89,6 +93,7 @@ Popover {
             model: actions.length
             AbstractButton {
                 id: button
+                objectName: actions[modelData].name+"_button"
                 width: Math.max(units.gu(5), implicitWidth) + units.gu(2)
                 height: units.gu(6)
                 action: actions[modelData]
