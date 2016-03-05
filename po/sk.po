@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2016-02-29 17:16+0000\n"
+"PO-Revision-Date: 2016-03-04 10:09+0000\n"
 "Last-Translator: P_E_T_O <Unknown>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2016-03-01 05:51+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-05 06:19+0000\n"
+"X-Generator: Launchpad (build 17936)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -232,7 +232,7 @@ msgstr "Vypnúť"
 
 #: ../src/qml/dialer-app.qml:490
 msgid "Disabling flight mode"
-msgstr "Deaktivácia režimu „v lietadle“"
+msgstr "Deaktivácia režimu Lietadlo"
 
 #: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
 #: ../src/qml/dialer-app.qml:567
@@ -249,7 +249,7 @@ msgstr "Upraviť"
 
 #: ../src/qml/DialerPage/DialerPage.qml:93
 msgid "Emergency Calls"
-msgstr "Núdzové hovory"
+msgstr "Tiesňové hovory"
 
 #: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
