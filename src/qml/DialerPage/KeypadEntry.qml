@@ -31,6 +31,8 @@ FocusScope {
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
 
+    onValueChanged: input.deselect()
+
     // We can't trigger the TextInputPopover directly, so we need to 
     // create a copy here and trigger when needed
     Component {
