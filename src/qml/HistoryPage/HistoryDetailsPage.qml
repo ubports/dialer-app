@@ -58,38 +58,40 @@ Page {
     header: PageHeader {
         id: pageHeader
 
+        title: historyDetailsPage.title
         trailingActionBar {
             actions: [
-            Action {
-                iconName: unknownContact ? "contact-new" : "stock_contact"
-                text: i18n.tr("Contact Details")
-                visible: knownNumber
-                onTriggered: {
-                    if (unknownContact) {
-                        mainView.addNewPhone(phoneNumber)
-                    } else {
-                        mainView.viewContact(contactWatcher.contactId, null, null)
+                Action {
+                    iconName: unknownContact ? "contact-new" : "stock_contact"
+                    text: i18n.tr("Contact Details")
+                    visible: knownNumber
+                    onTriggered: {
+                        if (unknownContact) {
+                            mainView.addNewPhone(phoneNumber)
+                        } else {
+                            mainView.viewContact(contactWatcher.contactId, null, null)
+                        }
+                    }
+                },
+                Action {
+                    iconName: "share"
+                    text: i18n.tr("Share")
+                    onTriggered: {
+                        // FIXME: implement
+                    }
+                    visible: false
+                },
+                Action {
+                    iconName: "delete"
+                    text: i18n.tr("Delete")
+                    onTriggered: {
+                        eventModel.removeEvents(events);
+                        pageStackNormalMode.pop();
                     }
                 }
-            },
-            Action {
-                iconName: "share"
-                text: i18n.tr("Share")
-                onTriggered: {
-                    // FIXME: implement
-                }
-                visible: false
-            },
-            Action {
-                iconName: "delete"
-                text: i18n.tr("Delete")
-                onTriggered: {
-                    eventModel.removeEvents(events);
-                    pageStackNormalMode.pop();
-                }
-            }
-        ]
+            ]
         }
+    }
 
     Item {
         id: helper
