@@ -30,6 +30,8 @@ FocusScope {
     property alias input: input
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
+    // this is used by tests. do not remove it
+    property alias selectedText: input.selectedText
 
     onValueChanged: input.deselect()
 
