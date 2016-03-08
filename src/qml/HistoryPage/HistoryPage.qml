@@ -217,7 +217,10 @@ Page {
         }
 
         currentIndex: -1
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: pageHeader.height
+        }
         listModel: historyEventModel
 
         onSelectionDone: {
