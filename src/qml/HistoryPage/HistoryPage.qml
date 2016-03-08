@@ -65,6 +65,7 @@ Page {
         extension: Sections {
             id: headerSections
             model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
+            selectedIndex: 0
         }
     }
 
@@ -140,14 +141,10 @@ Page {
     Connections {
         target: headerSections
         onSelectedIndexChanged: {
-            // NOTE: be careful on changing the way filters are assigned, if we create a
-            // binding on headerSections, we might get weird results when the page moves to the bottom
-            if (pageStackNormalMode.depth > 1) {
-                if (headerSections.selectedIndex == 0) {
-                    historyEventModel.filter = emptyFilter;
-                } else {
-                    historyEventModel.filter = missedFilter;
-                }
+            if (headerSections.selectedIndex == 0) {
+                historyEventModel.filter = emptyFilter;
+            } else {
+                historyEventModel.filter = missedFilter;
             }
         }
     }
