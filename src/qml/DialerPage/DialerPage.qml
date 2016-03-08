@@ -25,7 +25,6 @@ import Ubuntu.Contacts 0.1
 import Ubuntu.Components.ListItems 1.3 as ListItems
 
 import "../"
-import "../HistoryPage"
 
 Page {
     id: page
@@ -476,20 +475,9 @@ Page {
         }
     }
 
-    Component {
-        id: historyPageComponent
-
-        HistoryPage {
-            id: historyPage
-            width: bottomEdge.width
-            height: bottomEdge.height
-        }
-    }
-
-    BottomEdge {
+    DialerBottomEdge {
         id: bottomEdge
         enabled: !mainView.greeterMode
-        contentComponent: historyPageComponent
         height: page.height
         hint.text: i18n.tr("Recent")
     }

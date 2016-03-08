@@ -48,6 +48,7 @@ MainView {
     property bool telepathyReady: false
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
+    property var bottomEdge: null
 
     function defaultPhoneAccount() {
         // we only use the default account property if we have more
