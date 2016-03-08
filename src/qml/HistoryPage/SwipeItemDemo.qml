@@ -123,7 +123,7 @@ Loader {
                     fontSize: "medium"
                     text: "(541) 754-3010"
                     elide: Text.ElideRight
-                    color: UbuntuColors.lightAubergine
+                    color: UbuntuColors.darkGrey
                 }
 
                 // this item has the width of the text above. It is used to be able to align
