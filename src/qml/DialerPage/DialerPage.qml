@@ -187,7 +187,6 @@ Page {
     }
 
     Component.onCompleted: {
-        QuickUtils.mouseAttached = true
         // load MMI plugins
         var plugins = application.mmiPluginList()
         for (var i in plugins) {
