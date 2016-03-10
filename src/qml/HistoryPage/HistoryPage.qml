@@ -28,6 +28,7 @@ Page {
     id: historyPage
     objectName: "historyPage"
 
+    property bool bottomEdgeCommitted: false
     property string searchTerm
     property int delegateHeight: delegate.height
     // NOTE: in case we need to re-enable progressive bottom edge gesture,
@@ -43,7 +44,6 @@ Page {
     }
 
     title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    active: false
     flickable: null
 
     header: PageHeader {
@@ -141,14 +141,11 @@ Page {
         }
     ]
 
-    onActiveChanged: {
-        if (!active) {
-            if (selectionMode) {
-                historyList.cancelSelection();
-            }
-            historyList.resetSwipe()
-            historyList.positionViewAtBeginning()
-        } else if (historyList.count > 0){
+    onBottomEdgeCommittedChanged: {
+        if (!bottomEdgeCommitted) {
+            return
+        }
+        if (historyList.count > 0) {
             swipeItemDemo.enable()
         }
     }
@@ -409,7 +406,7 @@ Page {
         }
 
         onCountChanged: {
-            if (historyPage.active && (historyList.count > 0)) {
+            if (bottomEdgeCommitted && historyList.count > 0) {
                 swipeItemDemo.enable()
             }
         }

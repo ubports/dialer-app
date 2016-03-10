@@ -131,32 +131,25 @@ class LiveCall(MainView):
         return self._click_button(self._get_new_call_button())
 
 
-class PageWithBottomEdge(MainView):
-
-    """Autopilot custom proxy object for PageWithBottomEdge components."""
+class DialerPage(MainView):
 
     def reveal_bottom_edge_page(self):
         """Bring the bottom edge page to the screen"""
-        self.bottomEdgePageLoaded.wait_for(True)
         try:
-            action_item = self.wait_select_single(objectName='bottomEdgeTip')
             start_x = (
-                action_item.globalRect.x +
-                (action_item.globalRect.width * 0.5))
+                self.globalRect.x +
+                (self.globalRect.width * 0.5))
             # Start swiping from the top of the component because after some
             # seconds it gets almost fully hidden. The center will be out of
             # view.
-            start_y = action_item.globalRect.y + (action_item.height * 0.2)
+            start_y = self.globalRect.y + self.height
             stop_y = start_y - (self.height * 0.7)
             self.pointing_device.drag(start_x, start_y, start_x, stop_y,
                                       rate=2)
-            self.isReady.wait_for(True)
+            self.bottomEdgeCommitted.wait_for(True)
         except autopilot_exceptions.StateNotFoundError:
             self.logger.error('BottomEdge element not found.')
             raise
-
-
-class DialerPage(PageWithBottomEdge):
 
     def _get_keypad_entry(self):
         return self.wait_select_single("KeypadEntry")
@@ -225,13 +218,13 @@ class DialerPage(PageWithBottomEdge):
         self.click_call_button()
         return self.get_root_instance().wait_select_single(LiveCall)
 
-    def get_header(self):
-        """Return the Header custom proxy object of the Page."""
-        return self.get_root_instance().select_single(
-            'MainView').get_header()
+    def click_header_action(self, action):
+        """Click the action 'action' on the header"""
+        action = self.wait_select_single(objectName='%s_button' % action)
+        self.pointing_device.click_object(action)
 
     def click_contacts_button(self):
-        self.get_header().click_action_button('contacts')
+        self.click_header_action('contacts')
 
 
 class DialerContactViewPage(address_book.ContactViewPage):

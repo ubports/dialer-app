@@ -61,6 +61,7 @@ BottomEdge {
 
         HistoryPage {
             id: historyPage
+            bottomEdgeCommitted: bottomEdge.status === BottomEdge.Committed
             width: bottomEdge.width
             height: bottomEdge.height
         }

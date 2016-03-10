@@ -29,6 +29,7 @@ import "../"
 Page {
     id: page
 
+    property bool bottomEdgeCommitted: bottomEdge.status === BottomEdge.Committed
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property alias callAnimationRunning: callAnimation.running
