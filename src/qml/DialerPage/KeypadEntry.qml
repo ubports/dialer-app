@@ -137,10 +137,6 @@ FocusScope {
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
         }
         onPressAndHold: {
-            if (input.text == "") {
-                input.paste()
-                return
-            }
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
             PopupUtils.open(popoverComponent, input)
         }

@@ -74,6 +74,7 @@ class TestDialer(DialerAppTestCase):
 
         # trigger paste
         self.main_view.dialer_page.trigger_copy_and_paste()
+        self.main_view.dialer_page.trigger_paste()
 
         self.assertThat(
             keypad_entry.value,
