@@ -52,3 +52,45 @@ class TestDialer(DialerAppTestCase):
         dialer_page = self.main_view.dialer_page
 
         self.assertThat(dialer_page.visible, Eventually(Equals(True)))
+
+    def test_dialer_copy_and_paste(self):
+        keypad_entry = self.main_view.dialer_page._get_keypad_entry()
+        keypad_keys = self.main_view.dialer_page._get_keypad_keys()
+        tmpKey = None
+        for key in keypad_keys:
+            self.main_view.dialer_page.click_keypad_button(key)
+            # to be used later
+            tmpKey = key
+
+        value = keypad_entry.value
+        self.main_view.dialer_page.trigger_copy_and_paste()
+        self.main_view.dialer_page.trigger_select_all()
+        self.main_view.dialer_page.trigger_cut()
+
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals(""))
+        )
+
+        # trigger paste
+        self.main_view.dialer_page.trigger_copy_and_paste()
+        self.main_view.dialer_page.trigger_paste()
+
+        self.assertThat(
+            keypad_entry.value,
+            Eventually(Equals(value))
+        )
+
+        # select all text
+        self.main_view.dialer_page.trigger_copy_and_paste()
+
+        # first tap ouside just closes the copy and paste dialog
+        self.main_view.dialer_page.click_keypad_button(tmpKey)
+
+        # now change the text
+        self.main_view.dialer_page.click_keypad_button(tmpKey)
+
+        # check if selection is gone
+        self.assertThat(keypad_entry.selectedText,
+            Eventually(Equals(""))
+        )
