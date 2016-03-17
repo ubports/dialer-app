@@ -54,6 +54,7 @@ ContactViewPage {
         }
     }
 
+    model: null
     headerActions: [
         Action {
             objectName: "share"
