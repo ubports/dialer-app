@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-09-08 09:03+0000\n"
+"PO-Revision-Date: 2016-03-18 00:11+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-18 06:08+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - em espera"
@@ -150,9 +150,9 @@ msgstr "Chamada falhada"
 msgid "Call holding failure"
 msgstr "A chamada em espera falhou"
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "A chamar"
@@ -248,7 +248,7 @@ msgstr "Editar"
 msgid "Emergency Calls"
 msgstr "Chamadas de emergência"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
 msgstr "Introduza um número"
 
@@ -319,7 +319,7 @@ msgstr "Mais tarde"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "Juntar chamadas"
 
@@ -398,10 +398,9 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Por favor, desbloqueie o seu cartão SIM para realizar chamadas ou enviar "
-"mensagens. Pode fazê-lo no Indicador de Rede no topo do ecrã ou nas<a "
-"href=\"system_settings\">Definições do Sistema &gt; Segurança &amp; "
-"Privacidade</a>."
+"Por favor, desbloqueie o seu cartão SIM para fazer chamadas ou enviar "
+"mensagens. Pode fazê-lo no indicador de rede no topo do ecrã ou nas <a "
+"href=\"system_settings\">Definições egt; Segurança eamp; privacidade</a>."
 
 #: ../src/qml/dialer-app.qml:530
 msgid "Please wait"
@@ -451,7 +450,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Selecione um cartão SIM padrão para todas as chamadas efetuadas. Pode sempre "
-"alterar a sua escolha em <a href=\"system_settings\"> Definições</a>."
+"alterar a sua escolha nas <a href=\"system_settings\"> Definições</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
@@ -478,7 +477,7 @@ msgstr "Deslize para revelar ações"
 msgid "Switch audio source:"
 msgstr "Modificar a fonte de áudio:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "Trocar chamadas"
 
@@ -493,7 +492,7 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:373
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Atualmente não existe nenhuma rede em %1"
+msgstr "Sem rede em %1"
 
 #: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
 msgid "There is currently no network."
@@ -519,7 +518,7 @@ msgstr "Número desconhecido"
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr "Correio de voz"
+msgstr "Voicemail"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
