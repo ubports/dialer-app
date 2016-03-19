@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Language: is\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -26,7 +26,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - í bið"
@@ -129,15 +129,15 @@ msgstr "Allir"
 msgid "Bluetooth device"
 msgstr "Bluetooth-tæki"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:644
 msgid "Call Barring"
 msgstr "Útilokun símtala"
 
-#: ../src/qml/dialer-app.qml:646
+#: ../src/qml/dialer-app.qml:655
 msgid "Call Forwarding"
 msgstr "Áframsending símtala"
 
-#: ../src/qml/dialer-app.qml:657
+#: ../src/qml/dialer-app.qml:666
 msgid "Call Waiting"
 msgstr "Bið símtala"
 
@@ -153,18 +153,18 @@ msgstr "Símtal mistókst"
 msgid "Call holding failure"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Hringi"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:677
 msgid "Calling Line Presentation"
 msgstr "Kynning hringilínu"
 
-#: ../src/qml/dialer-app.qml:680
+#: ../src/qml/dialer-app.qml:689
 msgid "Calling Line Restriction"
 msgstr "Takmarkanir hringilínu"
 
@@ -194,11 +194,11 @@ msgstr "Ráðstefna"
 msgid "Conference call failure"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:674
+#: ../src/qml/dialer-app.qml:683
 msgid "Connected Line Presentation"
 msgstr "Kynning tengdrar línu"
 
-#: ../src/qml/dialer-app.qml:686
+#: ../src/qml/dialer-app.qml:695
 msgid "Connected Line Restriction"
 msgstr "Takmarkanir tengdrar línu"
 
@@ -230,12 +230,12 @@ msgstr "Nánar"
 msgid "Disable"
 msgstr "Gera óvirkt"
 
-#: ../src/qml/dialer-app.qml:490
+#: ../src/qml/dialer-app.qml:499
 msgid "Disabling flight mode"
 msgstr "Afvirkja flugham"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
-#: ../src/qml/dialer-app.qml:567
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
+#: ../src/qml/dialer-app.qml:576
 msgid "Dismiss"
 msgstr "Hafna"
 
@@ -243,7 +243,7 @@ msgstr "Hafna"
 msgid "Don't ask again"
 msgstr "Ekki spyrja aftur"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
 msgstr "Breyta"
 
@@ -251,11 +251,11 @@ msgstr "Breyta"
 msgid "Emergency Calls"
 msgstr "Neyðarhringingar"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
 msgstr "Sláðu inn tölu"
 
-#: ../src/qml/dialer-app.qml:550
+#: ../src/qml/dialer-app.qml:559
 msgid "Error"
 msgstr "Villa"
 
@@ -302,7 +302,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Að berast"
 
-#: ../src/qml/dialer-app.qml:551
+#: ../src/qml/dialer-app.qml:560
 msgid "Invalid USSD code"
 msgstr "Ógilur USSD-kóði"
 
@@ -322,7 +322,7 @@ msgstr "Síðar"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "Sameina símtöl"
 
@@ -341,7 +341,7 @@ msgstr "Farsími"
 msgid "No"
 msgstr "Ekkert"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Ekkert SIM-kort valið"
 
@@ -349,8 +349,8 @@ msgstr "Ekkert SIM-kort valið"
 msgid "No calls"
 msgstr "Engin símtöl"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
+#: ../src/qml/dialer-app.qml:381
 msgid "No network"
 msgstr "Engin netkerfi"
 
@@ -402,7 +402,7 @@ msgid ""
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:539
 msgid "Please wait"
 msgstr "Bíddu aðeins"
 
@@ -460,7 +460,7 @@ msgstr "Senda textaskilaboð"
 msgid "Settings"
 msgstr "Stillingar"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Deila"
@@ -477,7 +477,7 @@ msgstr ""
 msgid "Switch audio source:"
 msgstr "Skipta um hljóðuppruna:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "Skipta um símtal"
 
@@ -489,12 +489,12 @@ msgstr "Skipta á sjálfgefið SIM-kort:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:373
+#: ../src/qml/dialer-app.qml:382
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Engin nettenging er tiltæk á %1"
 
-#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
 msgid "There is currently no network."
 msgstr "Engin nettenging er tiltæk."
 
@@ -536,7 +536,7 @@ msgstr "Í gær"
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "Þú verður að velja SIM-kort"
 

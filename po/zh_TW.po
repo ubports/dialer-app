@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Language: zh_TW\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -24,7 +24,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 等候"
@@ -124,15 +124,15 @@ msgstr "全部"
 msgid "Bluetooth device"
 msgstr "藍牙裝置"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:644
 msgid "Call Barring"
 msgstr "來電限制"
 
-#: ../src/qml/dialer-app.qml:646
+#: ../src/qml/dialer-app.qml:655
 msgid "Call Forwarding"
 msgstr "來電轉接"
 
-#: ../src/qml/dialer-app.qml:657
+#: ../src/qml/dialer-app.qml:666
 msgid "Call Waiting"
 msgstr "來電等待"
 
@@ -148,18 +148,18 @@ msgstr "未能通話"
 msgid "Call holding failure"
 msgstr "通話等候失敗"
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "正在撥接"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:677
 msgid "Calling Line Presentation"
 msgstr "發話號碼顯示"
 
-#: ../src/qml/dialer-app.qml:680
+#: ../src/qml/dialer-app.qml:689
 msgid "Calling Line Restriction"
 msgstr "發話號碼不顯示"
 
@@ -189,11 +189,11 @@ msgstr "會議"
 msgid "Conference call failure"
 msgstr "會議通話失敗"
 
-#: ../src/qml/dialer-app.qml:674
+#: ../src/qml/dialer-app.qml:683
 msgid "Connected Line Presentation"
 msgstr "連線號碼顯示"
 
-#: ../src/qml/dialer-app.qml:686
+#: ../src/qml/dialer-app.qml:695
 msgid "Connected Line Restriction"
 msgstr "連線號碼不顯示"
 
@@ -225,12 +225,12 @@ msgstr "詳情"
 msgid "Disable"
 msgstr "停用"
 
-#: ../src/qml/dialer-app.qml:490
+#: ../src/qml/dialer-app.qml:499
 msgid "Disabling flight mode"
 msgstr "停用飛航模式"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
-#: ../src/qml/dialer-app.qml:567
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
+#: ../src/qml/dialer-app.qml:576
 msgid "Dismiss"
 msgstr "拒接"
 
@@ -238,7 +238,7 @@ msgstr "拒接"
 msgid "Don't ask again"
 msgstr "不要再問"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
 msgstr "編輯"
 
@@ -246,11 +246,11 @@ msgstr "編輯"
 msgid "Emergency Calls"
 msgstr "緊急求救電話"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
 msgstr "輸入號碼"
 
-#: ../src/qml/dialer-app.qml:550
+#: ../src/qml/dialer-app.qml:559
 msgid "Error"
 msgstr "錯誤"
 
@@ -297,7 +297,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "撥入"
 
-#: ../src/qml/dialer-app.qml:551
+#: ../src/qml/dialer-app.qml:560
 msgid "Invalid USSD code"
 msgstr "無效的 USSD 碼"
 
@@ -317,7 +317,7 @@ msgstr "稍後"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "合併通話"
 
@@ -336,7 +336,7 @@ msgstr "手機"
 msgid "No"
 msgstr "沒有"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "沒有選取 SIM 卡"
 
@@ -344,8 +344,8 @@ msgstr "沒有選取 SIM 卡"
 msgid "No calls"
 msgstr "沒有通話"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
+#: ../src/qml/dialer-app.qml:381
 msgid "No network"
 msgstr "沒有網路"
 
@@ -399,7 +399,7 @@ msgstr ""
 "請解鎖您的 SIM 卡以撥打電話或傳送簡訊。您可以從螢幕頂端的「網路指示器」，或是前往 <a href=\"system_settings\">系統設定 "
 "&gt; 安全與隱私</a> 解鎖 SIM 卡。"
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:539
 msgid "Please wait"
 msgstr "請稍候"
 
@@ -455,7 +455,7 @@ msgstr "傳送訊息"
 msgid "Settings"
 msgstr "設定"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "分享"
@@ -472,7 +472,7 @@ msgstr "左滑顯示功能"
 msgid "Switch audio source:"
 msgstr "切換音訊來源："
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "切換通話"
 
@@ -484,12 +484,12 @@ msgstr "切換到預設 SIM 卡："
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:373
+#: ../src/qml/dialer-app.qml:382
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "%1 目前沒有網路"
 
-#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
 msgid "There is currently no network."
 msgstr "目前沒有網路"
 
@@ -531,7 +531,7 @@ msgstr "昨日"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "要先停用飛航模式才能撥號"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "您需要選取 SIM 卡"
 
