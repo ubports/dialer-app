@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - wstrzymane"
@@ -130,15 +130,15 @@ msgstr "Wszystkie"
 msgid "Bluetooth device"
 msgstr "Urządzenie bluetooth"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:644
 msgid "Call Barring"
 msgstr "Blokady połączeń"
 
-#: ../src/qml/dialer-app.qml:646
+#: ../src/qml/dialer-app.qml:655
 msgid "Call Forwarding"
 msgstr "Przekazywanie połączeń"
 
-#: ../src/qml/dialer-app.qml:657
+#: ../src/qml/dialer-app.qml:666
 msgid "Call Waiting"
 msgstr "Połączenie oczekujące"
 
@@ -154,18 +154,18 @@ msgstr "Połączenie nieudane"
 msgid "Call holding failure"
 msgstr "Zawieszenie połączenia nie powiodło się"
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Wykonywanie połączenia"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:677
 msgid "Calling Line Presentation"
 msgstr "Prezentacja aktywnej linii"
 
-#: ../src/qml/dialer-app.qml:680
+#: ../src/qml/dialer-app.qml:689
 msgid "Calling Line Restriction"
 msgstr "Ograniczenia aktywnej linii"
 
@@ -195,11 +195,11 @@ msgstr "Konferencja"
 msgid "Conference call failure"
 msgstr "Połączenie konferencyjne nie powiodło się"
 
-#: ../src/qml/dialer-app.qml:674
+#: ../src/qml/dialer-app.qml:683
 msgid "Connected Line Presentation"
 msgstr "Prezentacja aktywnej linii"
 
-#: ../src/qml/dialer-app.qml:686
+#: ../src/qml/dialer-app.qml:695
 msgid "Connected Line Restriction"
 msgstr "Ograniczenia aktywnej linii"
 
@@ -231,12 +231,12 @@ msgstr "Szczegóły"
 msgid "Disable"
 msgstr "Wyłącz"
 
-#: ../src/qml/dialer-app.qml:490
+#: ../src/qml/dialer-app.qml:499
 msgid "Disabling flight mode"
 msgstr "Wyłączanie trybu samolotowego"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
-#: ../src/qml/dialer-app.qml:567
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
+#: ../src/qml/dialer-app.qml:576
 msgid "Dismiss"
 msgstr "Odrzuć"
 
@@ -244,7 +244,7 @@ msgstr "Odrzuć"
 msgid "Don't ask again"
 msgstr "Nie pytaj ponownie"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
 msgstr "Edytuj"
 
@@ -252,11 +252,11 @@ msgstr "Edytuj"
 msgid "Emergency Calls"
 msgstr "Połączenia alarmowe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
 msgstr "Wprowadź numer"
 
-#: ../src/qml/dialer-app.qml:550
+#: ../src/qml/dialer-app.qml:559
 msgid "Error"
 msgstr "Błąd"
 
@@ -303,7 +303,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Przychodzące"
 
-#: ../src/qml/dialer-app.qml:551
+#: ../src/qml/dialer-app.qml:560
 msgid "Invalid USSD code"
 msgstr "Nieprawidłowy kod USSD"
 
@@ -323,7 +323,7 @@ msgstr "Później"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "Połącz rozmowy"
 
@@ -342,7 +342,7 @@ msgstr "Telefon komórkowy"
 msgid "No"
 msgstr "Nie"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Nie wybrano karty SIM"
 
@@ -350,8 +350,8 @@ msgstr "Nie wybrano karty SIM"
 msgid "No calls"
 msgstr "Brak połączeń"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
+#: ../src/qml/dialer-app.qml:381
 msgid "No network"
 msgstr "Brak sieci"
 
@@ -407,7 +407,7 @@ msgstr ""
 "href=\"system_settings\">Ustawienia systemowe &gt; Zabezpieczenia &amp; "
 "Prywatność</a>."
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:539
 msgid "Please wait"
 msgstr "Proszę czekać"
 
@@ -465,7 +465,7 @@ msgstr "Wyślij wiadomość"
 msgid "Settings"
 msgstr "Ustawienia"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Udostępnij"
@@ -482,7 +482,7 @@ msgstr "Przesuń aby wyświetlić dostępne opcje"
 msgid "Switch audio source:"
 msgstr "Zmień źródło dźwięku:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "Zmień połączenia"
 
@@ -494,12 +494,12 @@ msgstr "Przełącz na domyślną kartę SIM:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:373
+#: ../src/qml/dialer-app.qml:382
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Brak zasięgu sieci dla %1"
 
-#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
 msgid "There is currently no network."
 msgstr "Brak połączenia z siecią."
 
@@ -541,7 +541,7 @@ msgstr "Wczoraj"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Aby móc dzwonić, wyłącz tryb samolotu"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "Należy wybrać kartę SIM"
 

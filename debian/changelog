@@ -1,3 +1,9 @@
+dialer-app (0.1+16.04.20160317-0ubuntu1) xenial; urgency=medium
+
+  * Do not pass null as value for any initial value. (LP: #1558780)
+
+ -- Renato Araujo Oliveira Filho <renato.filho@canonical.com>  Thu, 17 Mar 2016 22:06:59 +0000
+
 dialer-app (0.1+16.04.20160311-0ubuntu1) xenial; urgency=medium
 
   [ CI Train Bot ]

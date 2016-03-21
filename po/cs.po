@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:51+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
+"X-Generator: Launchpad (build 17947)\n"
 "Language: cs\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -24,7 +24,7 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:445
+#: ../src/qml/LiveCallPage/LiveCall.qml:439
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - pozastavené"
@@ -130,15 +130,15 @@ msgstr "Všechny [ Všechny kontakty]"
 msgid "Bluetooth device"
 msgstr "Zařízení Bluetooth"
 
-#: ../src/qml/dialer-app.qml:635
+#: ../src/qml/dialer-app.qml:644
 msgid "Call Barring"
 msgstr "Blokace hovorů"
 
-#: ../src/qml/dialer-app.qml:646
+#: ../src/qml/dialer-app.qml:655
 msgid "Call Forwarding"
 msgstr "Přesměrování hovorů"
 
-#: ../src/qml/dialer-app.qml:657
+#: ../src/qml/dialer-app.qml:666
 msgid "Call Waiting"
 msgstr "Čekající hovory"
 
@@ -154,18 +154,18 @@ msgstr "Nezdařené hovory"
 msgid "Call holding failure"
 msgstr "Selhání držených hovorů"
 
-#: ../src/qml/DialerPage/DialerPage.qml:501
+#: ../src/qml/DialerPage/DialerPage.qml:495
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:447
+#: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Volání"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:677
 msgid "Calling Line Presentation"
 msgstr "Volání linky prezentace"
 
-#: ../src/qml/dialer-app.qml:680
+#: ../src/qml/dialer-app.qml:689
 msgid "Calling Line Restriction"
 msgstr "Volání linky omezení"
 
@@ -195,11 +195,11 @@ msgstr "Konferenční hovor"
 msgid "Conference call failure"
 msgstr "Konferenční hovor selhal"
 
-#: ../src/qml/dialer-app.qml:674
+#: ../src/qml/dialer-app.qml:683
 msgid "Connected Line Presentation"
 msgstr "Připojená linka prezentace"
 
-#: ../src/qml/dialer-app.qml:686
+#: ../src/qml/dialer-app.qml:695
 msgid "Connected Line Restriction"
 msgstr "Připojená linka omezení"
 
@@ -231,12 +231,12 @@ msgstr "Podrobnosti"
 msgid "Disable"
 msgstr "Vypnout"
 
-#: ../src/qml/dialer-app.qml:490
+#: ../src/qml/dialer-app.qml:499
 msgid "Disabling flight mode"
 msgstr "Rušení režimu letadla"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:553
-#: ../src/qml/dialer-app.qml:567
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
+#: ../src/qml/dialer-app.qml:576
 msgid "Dismiss"
 msgstr "Zamítnout"
 
@@ -244,7 +244,7 @@ msgstr "Zamítnout"
 msgid "Don't ask again"
 msgstr "Neptat se znovu"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:69
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
 msgstr "Upravit"
 
@@ -252,11 +252,11 @@ msgstr "Upravit"
 msgid "Emergency Calls"
 msgstr "Tísňová volání"
 
-#: ../src/qml/DialerPage/DialerPage.qml:300
+#: ../src/qml/DialerPage/DialerPage.qml:294
 msgid "Enter a number"
 msgstr "Zadejte číslo"
 
-#: ../src/qml/dialer-app.qml:550
+#: ../src/qml/dialer-app.qml:559
 msgid "Error"
 msgstr "Chyba"
 
@@ -303,7 +303,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Přicházející"
 
-#: ../src/qml/dialer-app.qml:551
+#: ../src/qml/dialer-app.qml:560
 msgid "Invalid USSD code"
 msgstr "Neplatná USSD kód"
 
@@ -323,7 +323,7 @@ msgstr "Později"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:554
+#: ../src/qml/LiveCallPage/LiveCall.qml:548
 msgid "Merge calls"
 msgstr "Sloučit hovory"
 
@@ -342,7 +342,7 @@ msgstr "Mobilní"
 msgid "No"
 msgstr "Ne"
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Nebyla zvolena SIM karta"
 
@@ -350,8 +350,8 @@ msgstr "Nebyla zvolena SIM karta"
 msgid "No calls"
 msgstr "Žádné hovory"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:367
-#: ../src/qml/dialer-app.qml:372
+#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
+#: ../src/qml/dialer-app.qml:381
 msgid "No network"
 msgstr "Žádná síť"
 
@@ -407,7 +407,7 @@ msgstr ""
 "ploše displeje, či navštivte <a href=\"system_settings\">System Settings "
 "&gt; Security &amp; Privacy</a>."
 
-#: ../src/qml/dialer-app.qml:530
+#: ../src/qml/dialer-app.qml:539
 msgid "Please wait"
 msgstr "Čekejte, prosím"
 
@@ -465,7 +465,7 @@ msgstr "Odeslat zprávu"
 msgid "Settings"
 msgstr "Nastavení"
 
-#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:60
+#: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
 msgid "Share"
 msgstr "Sdílet"
@@ -482,7 +482,7 @@ msgstr "Přetáhněte k zjištění akce"
 msgid "Switch audio source:"
 msgstr "Přepnout zdroj zvuku:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:539
+#: ../src/qml/LiveCallPage/LiveCall.qml:533
 msgid "Switch calls"
 msgstr "Přepnout hovory"
 
@@ -494,12 +494,12 @@ msgstr "Přepnout na výchozí SIM:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:373
+#: ../src/qml/dialer-app.qml:382
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "V současné době není dostupná síť na  %1"
 
-#: ../src/qml/dialer-app.qml:367 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
 msgid "There is currently no network."
 msgstr "V současné době není dostupná síť."
 
@@ -541,7 +541,7 @@ msgstr "Včera"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Telefonovat bude možné až po opuštění režimu letadlo."
 
-#: ../src/qml/dialer-app.qml:346
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "Není zapotřebí zvolit SIM kartu"
 
@@ -557,3 +557,6 @@ msgstr "mm:ss"
 
 #~ msgid "+ Create New"
 #~ msgstr "+ Vytvořit nový"
+
+#~ msgid "All"
+#~ msgstr "Vše"

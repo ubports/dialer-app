@@ -41,7 +41,7 @@ MainView {
         }
         return numAccounts > 1
     }
- 
+
     property QtObject account: defaultPhoneAccount()
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
@@ -217,7 +217,9 @@ MainView {
     }
 
     function viewContact(contact, contactListPage, model) {
-        var initialPropers = {"model": model}
+        var initialPropers = {}
+        if (model)
+            initialPropers["model"]  = model
 
         if (typeof(contact) == 'string') {
             initialPropers["contactId"] = contact
@@ -229,9 +231,16 @@ MainView {
     }
 
     function addPhoneToContact(contact, phoneNumber, contactListPage, model) {
-        var initialPropers =  {"addPhoneToContact": phoneNumber,
-                               "contactListPage": contactListPage,
-                               "model": model }
+        var initialPropers =  {}
+
+        if (phoneNumber)
+            initialPropers["addPhoneToContact"] = phoneNumber
+
+        if (contactListPage)
+            initialPropers["contactListPage"] = contactListPage
+
+        if (model)
+            initialPropers["model"] = model
 
         if (typeof(contact) == 'string') {
             initialPropers["contactId"] = contact
