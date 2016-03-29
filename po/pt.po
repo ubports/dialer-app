@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2016-03-18 00:11+0000\n"
+"PO-Revision-Date: 2016-03-28 20:30+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <pt@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-03-29 05:41+0000\n"
+"X-Generator: Launchpad (build 17967)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -398,6 +398,9 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Por favor, desbloqueie o seu cartão SIM para fazer chamadas ou enviar "
+"mensagens. Pode fazê-lo no indicador de rede no topo do ecrã ou nas <a "
+"href=\"system_settings\">Definições egt; Segurança eamp; privacidade</a>."
 
 #: ../src/qml/dialer-app.qml:539
 msgid "Please wait"
@@ -446,6 +449,8 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"Selecione um cartão SIM padrão para todas as chamadas efetuadas. Pode sempre "
+"alterar a sua escolha nas <a href=\"system_settings\"> Definições</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:334
 msgid "Send message"
@@ -487,7 +492,7 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:382
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr ""
+msgstr "Sem rede em %1"
 
 #: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
 msgid "There is currently no network."
@@ -513,7 +518,7 @@ msgstr "Número desconhecido"
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr ""
+msgstr "Voicemail"
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
