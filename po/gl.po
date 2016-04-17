@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2016-03-20 06:58+0000\n"
+"PO-Revision-Date: 2016-04-16 19:38+0000\n"
 "Last-Translator: Marcos Lans <Unknown>\n"
 "Language-Team: Galician <gl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-21 06:03+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-04-17 05:57+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -297,7 +297,7 @@ msgstr "IMEI"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr "Entrante"
+msgstr "Entrantes"
 
 #: ../src/qml/dialer-app.qml:560
 msgid "Invalid USSD code"
@@ -366,7 +366,7 @@ msgstr "En espera"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:66
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
 msgid "Outgoing"
-msgstr "Saínte"
+msgstr "Saíntes"
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
