@@ -93,6 +93,10 @@ FocusScope {
         }
 
         onContentWidthChanged: adjustTextSize()
+        Connections {
+            target: units
+            onGridUnitChanged: input.adjustTextSize()
+        }
     }
 
     MouseArea {
