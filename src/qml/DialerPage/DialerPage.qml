@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -71,14 +71,33 @@ PageWithBottomEdge {
 
     ]
     head.actions: mainView.greeterMode ? actionsGreeter : actionsNormal
-    head.backAction: Action {
+
+    Action {
+        id: backAction
+        objectName: "backAction"
         iconName: "back"
         text: i18n.tr("Close")
-        visible: mainView.greeterMode
         onTriggered: {
             greeter.showGreeter()
             dialNumber = "";
         }
+    }
+    Action {
+        id: simLockedAction
+        objectName: "simLockedAction"
+        iconName: "simcard-locked"
+        onTriggered: {
+            mainView.showSimLockedDialog()
+        }
+    }
+
+    head.backAction: {
+        if (mainView.greeterMode) {
+            return backAction
+        } else if (mainView.simLocked) {
+            return simLockedAction
+        }
+        return null
     }
 
     objectName: "dialerPage"
@@ -97,7 +116,10 @@ PageWithBottomEdge {
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight Mode")
         } else if (mainView.account && mainView.account.simLocked) {
-            return i18n.tr("SIM Locked")
+            // just in case we need it back in the future somewhere, keep the original string
+            var oldTitle = i18n.tr("SIM Locked")
+            // show Emergency Calls for sim locked too. There is going to be an icon indicating it is locked
+            return i18n.tr("Emergency Calls")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multiplePhoneAccounts && !mainView.account) {

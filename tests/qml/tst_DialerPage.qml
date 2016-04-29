@@ -114,6 +114,28 @@ Item {
 
             mainViewLoader.item.applicationActive = false
             tryCompare(mainViewLoader.item.currentStack.currentPage, 'title', ' ')
+            mainViewLoader.item.applicationActive = true
+        }
+
+        function test_dialerPageWhenSimLocked() {
+            mainViewLoader.item.switchToKeypadView()
+            tryCompare(mainViewLoader.item, 'applicationActive', true)
+            tryCompare(mainViewLoader.item.currentStack, 'depth', 1)
+
+            mainViewLoader.item.telepathyReady = true
+            greeter.greeterActive = false
+            testAccount.simLocked = true
+
+            var dialerPage = mainViewLoader.item.currentStack.currentPage
+            tryCompare(dialerPage, 'title', i18n.tr('Emergency Calls'))
+            tryCompare(dialerPage.head.backAction, 'objectName', 'simLockedAction')
+
+            // click the action to see if the dialog is shown
+            dialerPage.head.backAction.trigger()
+            var simLockedDialog = findChild(root, 'simLockedDialog')
+            tryCompare(simLockedDialog, 'visible', true)
+            var okButton = findChild(simLockedDialog, 'okSimLockedDialog')
+            mouseClick(okButton)
         }
 
         /*
