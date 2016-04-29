@@ -1,3 +1,14 @@
+dialer-app (0.1+16.04.20160429-0ubuntu1) xenial; urgency=medium
+
+  [ CI Train Bot ]
+  * Resync trunk.
+
+  [ Gerry Boland, Nick Dedekind ]
+  * Fixes for dynamic grid units support: set implicit sizes on
+    MainView, and have min/max window size update on GU change
+
+ -- Bill Filler <ci-train-bot@canonical.com>  Fri, 29 Apr 2016 21:10:52 +0000
+
 dialer-app (0.1+16.04.20160317-0ubuntu1) xenial; urgency=medium
 
   * Do not pass null as value for any initial value. (LP: #1558780)
