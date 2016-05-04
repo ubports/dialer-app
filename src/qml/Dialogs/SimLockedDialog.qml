@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -23,6 +23,7 @@ import Ubuntu.Components.Popups 1.3
 Component {
     Dialog {
         id: dialogue
+        objectName: "simLockedDialog"
         title: i18n.tr("SIM Card is locked")
         Column {
             anchors.left: parent.left

@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -43,6 +43,7 @@ MainView {
     }
 
     property QtObject account: defaultPhoneAccount()
+    property bool simLocked: account && account.simLocked
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
     property bool telepathyReady: false
@@ -365,9 +366,7 @@ MainView {
         }
 
         if (mainView.account && !mainView.greeterMode && mainView.account.simLocked) {
-            var properties = {}
-            properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
+            showSimLockedDialog();
             return
         }
 
@@ -471,6 +470,12 @@ MainView {
 
     function showNotification(title, text) {
         PopupUtils.open(Qt.resolvedUrl("Dialogs/NotificationDialog.qml"), mainView, {title: title, text: text});
+    }
+
+    function showSimLockedDialog() {
+        var properties = {}
+        properties["accountId"] = mainView.account.accountId
+        PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
     }
 
     Component.onCompleted: {
