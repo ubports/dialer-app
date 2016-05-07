@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-05-07 05:01+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -126,15 +126,15 @@ msgstr "Alle"
 msgid "Bluetooth device"
 msgstr "Blåtann-enhet"
 
-#: ../src/qml/dialer-app.qml:644
+#: ../src/qml/dialer-app.qml:649
 msgid "Call Barring"
 msgstr "Anropsbegrensning"
 
-#: ../src/qml/dialer-app.qml:655
+#: ../src/qml/dialer-app.qml:660
 msgid "Call Forwarding"
 msgstr "Videresending av anrop"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:671
 msgid "Call Waiting"
 msgstr "Anropsventing"
 
@@ -150,18 +150,18 @@ msgstr "Anrop mislyktes"
 msgid "Call holding failure"
 msgstr "Samtale venter-feil"
 
-#: ../src/qml/DialerPage/DialerPage.qml:495
+#: ../src/qml/DialerPage/DialerPage.qml:517
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Ringer"
 
-#: ../src/qml/dialer-app.qml:677
+#: ../src/qml/dialer-app.qml:682
 msgid "Calling Line Presentation"
 msgstr "Presentasjon av anropslinje"
 
-#: ../src/qml/dialer-app.qml:689
+#: ../src/qml/dialer-app.qml:694
 msgid "Calling Line Restriction"
 msgstr "Restriksjon av anropslinje"
 
@@ -177,7 +177,7 @@ msgstr "Avbryt"
 msgid "Change all Call associations to %1?"
 msgstr "Vil du endre standard SIM-kort for telefonanrop til %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:79
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Lukk"
@@ -191,11 +191,11 @@ msgstr "Konferanse"
 msgid "Conference call failure"
 msgstr "Konferansesamtale-feil"
 
-#: ../src/qml/dialer-app.qml:683
+#: ../src/qml/dialer-app.qml:688
 msgid "Connected Line Presentation"
 msgstr "Presentasjon av aktivt anrop"
 
-#: ../src/qml/dialer-app.qml:695
+#: ../src/qml/dialer-app.qml:700
 msgid "Connected Line Restriction"
 msgstr "Restriksjon av aktivt anrop"
 
@@ -227,12 +227,12 @@ msgstr "Detaljer"
 msgid "Disable"
 msgstr "Slå av"
 
-#: ../src/qml/dialer-app.qml:499
+#: ../src/qml/dialer-app.qml:504
 msgid "Disabling flight mode"
 msgstr "Slår av flymodus"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
-#: ../src/qml/dialer-app.qml:576
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
+#: ../src/qml/dialer-app.qml:581
 msgid "Dismiss"
 msgstr "Avvis"
 
@@ -244,15 +244,16 @@ msgstr "Ikke spør igjen"
 msgid "Edit"
 msgstr "Rediger"
 
-#: ../src/qml/DialerPage/DialerPage.qml:93
+#: ../src/qml/DialerPage/DialerPage.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:122
 msgid "Emergency Calls"
 msgstr "Nødanrop"
 
-#: ../src/qml/DialerPage/DialerPage.qml:294
+#: ../src/qml/DialerPage/DialerPage.qml:316
 msgid "Enter a number"
 msgstr "Tast et nummer"
 
-#: ../src/qml/dialer-app.qml:559
+#: ../src/qml/dialer-app.qml:564
 msgid "Error"
 msgstr "Feil"
 
@@ -272,7 +273,7 @@ msgstr "Klarte ikke å sette gjeldende samtale på vent."
 msgid "Favorites"
 msgstr "Favoritter"
 
-#: ../src/qml/DialerPage/DialerPage.qml:98
+#: ../src/qml/DialerPage/DialerPage.qml:117
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Flymodus"
@@ -299,7 +300,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Inngående"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:565
 msgid "Invalid USSD code"
 msgstr "Ugyldig USSD-kode"
 
@@ -338,7 +339,7 @@ msgstr "Mobil"
 msgid "No"
 msgstr "Nei"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "No SIM card selected"
 msgstr "Intet SIM-kort er valgt"
 
@@ -346,8 +347,8 @@ msgstr "Intet SIM-kort er valgt"
 msgid "No calls"
 msgstr "Ingen anrop"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
+#: ../src/qml/dialer-app.qml:380
 msgid "No network"
 msgstr "Intet nettverk"
 
@@ -355,7 +356,7 @@ msgstr "Intet nettverk"
 msgid "No recent calls"
 msgstr "Ingen nylige anrop"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+#: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
 msgstr "OK"
 
@@ -372,7 +373,8 @@ msgstr "Utgående"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -392,7 +394,7 @@ msgstr "Telefonprogram"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Telefon;Ringefunksjon;Ring;Samtale;Tastatur"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+#: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
 "Please unlock your SIM card to call or send a message. You can unlock your "
 "SIM card from the Network Indicator at the top of the screen or by visiting "
@@ -403,7 +405,7 @@ msgstr ""
 "href=\"system_settings\">Systeminnstillinger &gt; Personvern og "
 "sikkerhet</a>."
 
-#: ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:544
 msgid "Please wait"
 msgstr "Vent litt"
 
@@ -416,16 +418,16 @@ msgstr "Privat"
 msgid "Private number"
 msgstr "Skjult nummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:141
+#: ../src/qml/DialerPage/DialerPage.qml:163
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Nylig"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+#: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
 msgstr "SIM-kortet er låst"
 
-#: ../src/qml/DialerPage/DialerPage.qml:100
+#: ../src/qml/DialerPage/DialerPage.qml:120
 msgid "SIM Locked"
 msgstr "SIM-kortet er låst"
 
@@ -490,12 +492,12 @@ msgstr "Bytt til standard SIM-kort:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Telefonnettet på %1 er utilgjengelig"
 
-#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
+#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
 msgid "There is currently no network."
 msgstr "Telefonnettet er utilgjengelig."
 
@@ -537,7 +539,7 @@ msgstr "I går"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Du må slå av flymodus for å kunne ringe"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "You need to select a SIM card"
 msgstr "Du må velge et SIM-kort"
 

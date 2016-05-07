@@ -17,8 +17,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 || n==11) ? 0 : (n==2 || n==12) ? 1 : "
 "(n > 2 && n < 20) ? 2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-05-07 05:01+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 "Language: gd\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -135,15 +135,15 @@ msgstr "Na h-uile"
 msgid "Bluetooth device"
 msgstr "Uidheam bluetooth"
 
-#: ../src/qml/dialer-app.qml:644
+#: ../src/qml/dialer-app.qml:649
 msgid "Call Barring"
 msgstr "Bacadh ghairmean"
 
-#: ../src/qml/dialer-app.qml:655
+#: ../src/qml/dialer-app.qml:660
 msgid "Call Forwarding"
 msgstr "Sìneadh air adhart ghairmean"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:671
 msgid "Call Waiting"
 msgstr "Tha gairm a' feitheamh"
 
@@ -159,18 +159,18 @@ msgstr "Dh'fhàillig leis a' ghairm"
 msgid "Call holding failure"
 msgstr "Dh'fhàillig cumail na gairm"
 
-#: ../src/qml/DialerPage/DialerPage.qml:495
+#: ../src/qml/DialerPage/DialerPage.qml:517
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "'Ga ghairm"
 
-#: ../src/qml/dialer-app.qml:677
+#: ../src/qml/dialer-app.qml:682
 msgid "Calling Line Presentation"
 msgstr "Taisbeanadh de ghairmean a thig a-steach"
 
-#: ../src/qml/dialer-app.qml:689
+#: ../src/qml/dialer-app.qml:694
 msgid "Calling Line Restriction"
 msgstr "Bacadh de ghairmean a thig a-steach"
 
@@ -186,7 +186,7 @@ msgstr "Sguir dheth"
 msgid "Change all Call associations to %1?"
 msgstr "A bheil thu airson gach co-cheangal gairme atharrachadh gu %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:79
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Dùin"
@@ -200,11 +200,11 @@ msgstr "Gairm co-labhairt"
 msgid "Conference call failure"
 msgstr "Dh'fhàillig a' ghairm co-labhairt"
 
-#: ../src/qml/dialer-app.qml:683
+#: ../src/qml/dialer-app.qml:688
 msgid "Connected Line Presentation"
 msgstr "Taisbeanadh de ghairmean ceangailte"
 
-#: ../src/qml/dialer-app.qml:695
+#: ../src/qml/dialer-app.qml:700
 msgid "Connected Line Restriction"
 msgstr "Bacadh de ghairmean ceangailte"
 
@@ -236,12 +236,12 @@ msgstr "Mion-fhiosrachadh"
 msgid "Disable"
 msgstr "Cuir à comas"
 
-#: ../src/qml/dialer-app.qml:499
+#: ../src/qml/dialer-app.qml:504
 msgid "Disabling flight mode"
 msgstr "A' cur à comas am modh itealain"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
-#: ../src/qml/dialer-app.qml:576
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
+#: ../src/qml/dialer-app.qml:581
 msgid "Dismiss"
 msgstr "Cuir air falbh"
 
@@ -253,15 +253,16 @@ msgstr "Na faighnich dhìom a-rithist"
 msgid "Edit"
 msgstr "Deasaich"
 
-#: ../src/qml/DialerPage/DialerPage.qml:93
+#: ../src/qml/DialerPage/DialerPage.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:122
 msgid "Emergency Calls"
 msgstr "Gairmean-èiginn"
 
-#: ../src/qml/DialerPage/DialerPage.qml:294
+#: ../src/qml/DialerPage/DialerPage.qml:316
 msgid "Enter a number"
 msgstr "Cuir a-steach àireamh"
 
-#: ../src/qml/dialer-app.qml:559
+#: ../src/qml/dialer-app.qml:564
 msgid "Error"
 msgstr "Mearachd"
 
@@ -281,7 +282,7 @@ msgstr "Cha b' urrainn dhuinn a' ghairm ghnìomhach a chumail."
 msgid "Favorites"
 msgstr "Annsachdan"
 
-#: ../src/qml/DialerPage/DialerPage.qml:98
+#: ../src/qml/DialerPage/DialerPage.qml:117
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Am modh itealain"
@@ -308,7 +309,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "A-steach"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:565
 msgid "Invalid USSD code"
 msgstr "Còd USSD mì-dhligheach"
 
@@ -347,7 +348,7 @@ msgstr "Inneal-làimhe"
 msgid "No"
 msgstr "Chan eil"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "No SIM card selected"
 msgstr "Cha deach cairt SIM a thaghadh"
 
@@ -355,8 +356,8 @@ msgstr "Cha deach cairt SIM a thaghadh"
 msgid "No calls"
 msgstr "Chan eil gairm ann"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
+#: ../src/qml/dialer-app.qml:380
 msgid "No network"
 msgstr "Chan eil lìonra ann"
 
@@ -364,7 +365,7 @@ msgstr "Chan eil lìonra ann"
 msgid "No recent calls"
 msgstr "Cha robh gairm ann o chionn goirid"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+#: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
 msgstr "Ceart ma-thà"
 
@@ -381,7 +382,8 @@ msgstr "A-mach"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Fòn"
 
@@ -401,7 +403,7 @@ msgstr "Aplacaid an fhòn"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Phone;Dialer;Dial;Call;Keypad;Fòn;Daitheal;Gairm;Iuchraichean"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+#: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
 "Please unlock your SIM card to call or send a message. You can unlock your "
 "SIM card from the Network Indicator at the top of the screen or by visiting "
@@ -412,7 +414,7 @@ msgstr ""
 "aig barr na sgrìn no le bhith a' tadhal air <a "
 "href=\"system_settings\">Roghainnean an t-siostaim ⁊ prìobhaideachd</a>."
 
-#: ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:544
 msgid "Please wait"
 msgstr "Fuirich ort"
 
@@ -425,16 +427,16 @@ msgstr "Prìobhaideach"
 msgid "Private number"
 msgstr "Àireamh phrìobhaideach"
 
-#: ../src/qml/DialerPage/DialerPage.qml:141
+#: ../src/qml/DialerPage/DialerPage.qml:163
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "O chionn goirid"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+#: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
 msgstr "Tha a' chairt SIM glaiste"
 
-#: ../src/qml/DialerPage/DialerPage.qml:100
+#: ../src/qml/DialerPage/DialerPage.qml:120
 msgid "SIM Locked"
 msgstr "SIM glaiste"
 
@@ -500,12 +502,12 @@ msgstr "Gearr leum gun SIM tùsail:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Chan eil lìonra air %1 an-dràsta"
 
-#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
+#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
 msgid "There is currently no network."
 msgstr "Chan eil lìonra ann an-dràsta."
 
@@ -548,7 +550,7 @@ msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 "Feumaidh tu am modh itealain a chur dheth mus urrainn dhut fòn a chur"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "You need to select a SIM card"
 msgstr "Feumaidh tu cairt SIM a thaghadh"
 

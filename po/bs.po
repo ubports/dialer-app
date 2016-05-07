@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-05-07 05:01+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -130,15 +130,15 @@ msgstr "Sve"
 msgid "Bluetooth device"
 msgstr "Bluetooth uređaj"
 
-#: ../src/qml/dialer-app.qml:644
+#: ../src/qml/dialer-app.qml:649
 msgid "Call Barring"
 msgstr "Zabrana poziva"
 
-#: ../src/qml/dialer-app.qml:655
+#: ../src/qml/dialer-app.qml:660
 msgid "Call Forwarding"
 msgstr "Preusmjeravanje poziva"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:671
 msgid "Call Waiting"
 msgstr "Poziv na čekanju"
 
@@ -154,18 +154,18 @@ msgstr "Poziv neuspješan"
 msgid "Call holding failure"
 msgstr "Neuspjelo zadržavanje pozova"
 
-#: ../src/qml/DialerPage/DialerPage.qml:495
+#: ../src/qml/DialerPage/DialerPage.qml:517
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Poziva se"
 
-#: ../src/qml/dialer-app.qml:677
+#: ../src/qml/dialer-app.qml:682
 msgid "Calling Line Presentation"
 msgstr "Prezentacija linije poziva"
 
-#: ../src/qml/dialer-app.qml:689
+#: ../src/qml/dialer-app.qml:694
 msgid "Calling Line Restriction"
 msgstr "Ograničenje linije poziva"
 
@@ -181,7 +181,7 @@ msgstr "Odustani"
 msgid "Change all Call associations to %1?"
 msgstr "Promjeniti sva udruženja poziva na %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:79
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Zatvori"
@@ -195,11 +195,11 @@ msgstr "Konferencija"
 msgid "Conference call failure"
 msgstr "Neuspio konferencijski poziv"
 
-#: ../src/qml/dialer-app.qml:683
+#: ../src/qml/dialer-app.qml:688
 msgid "Connected Line Presentation"
 msgstr "Prezentacija konektovane linije"
 
-#: ../src/qml/dialer-app.qml:695
+#: ../src/qml/dialer-app.qml:700
 msgid "Connected Line Restriction"
 msgstr "Ograničenje konektovane linije"
 
@@ -229,14 +229,14 @@ msgstr "Detalji"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Isključi preglede"
 
-#: ../src/qml/dialer-app.qml:499
+#: ../src/qml/dialer-app.qml:504
 msgid "Disabling flight mode"
 msgstr "Isključi avio mod"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
-#: ../src/qml/dialer-app.qml:576
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
+#: ../src/qml/dialer-app.qml:581
 msgid "Dismiss"
 msgstr "Odbaci"
 
@@ -246,17 +246,18 @@ msgstr "Ne pitaj ponovo"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "Izmijeni"
 
-#: ../src/qml/DialerPage/DialerPage.qml:93
+#: ../src/qml/DialerPage/DialerPage.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:122
 msgid "Emergency Calls"
 msgstr "Hitni pozivi"
 
-#: ../src/qml/DialerPage/DialerPage.qml:294
+#: ../src/qml/DialerPage/DialerPage.qml:316
 msgid "Enter a number"
 msgstr "Unesi broj"
 
-#: ../src/qml/dialer-app.qml:559
+#: ../src/qml/dialer-app.qml:564
 msgid "Error"
 msgstr "Greška"
 
@@ -276,10 +277,10 @@ msgstr "Neuspjelo postavljanje aktivnog poziva na čekanje."
 msgid "Favorites"
 msgstr "Omiljeno"
 
-#: ../src/qml/DialerPage/DialerPage.qml:98
+#: ../src/qml/DialerPage/DialerPage.qml:117
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Način rada za zrakoplov"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -291,7 +292,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Primljeno"
 
 #: ../src/qml/MMI/IMEI.qml:36
 msgid "IMEI"
@@ -303,7 +304,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "Dolazni"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:565
 msgid "Invalid USSD code"
 msgstr "Nevažeći USSD kod"
 
@@ -335,14 +336,14 @@ msgstr "Propušten"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobilni"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr "Ne"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "No SIM card selected"
 msgstr "Nije odabrana SIM kartica"
 
@@ -350,8 +351,8 @@ msgstr "Nije odabrana SIM kartica"
 msgid "No calls"
 msgstr "Nema poziva"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
+#: ../src/qml/dialer-app.qml:380
 msgid "No network"
 msgstr "Nema mreže"
 
@@ -359,7 +360,7 @@ msgstr "Nema mreže"
 msgid "No recent calls"
 msgstr "Nema nedavnih poziva"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+#: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
 msgstr "U redu"
 
@@ -376,7 +377,8 @@ msgstr "Odlazno"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -396,7 +398,7 @@ msgstr "Telefonska aplikacija"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Telefon;Birač;Biraj;Zovi;Tastatura"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+#: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
 "Please unlock your SIM card to call or send a message. You can unlock your "
 "SIM card from the Network Indicator at the top of the screen or by visiting "
@@ -407,7 +409,7 @@ msgstr ""
 "ekrana ili posjetom <a href=\"system_settings\">Postavki &gt; Sigurnosti "
 "&amp; Privatnosti</a>."
 
-#: ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:544
 msgid "Please wait"
 msgstr "Molim sačekajte"
 
@@ -420,22 +422,22 @@ msgstr "Privatno"
 msgid "Private number"
 msgstr "Skriven broj"
 
-#: ../src/qml/DialerPage/DialerPage.qml:141
+#: ../src/qml/DialerPage/DialerPage.qml:163
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "Nedavno"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+#: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
 msgstr "SIM kartica je zaključana"
 
-#: ../src/qml/DialerPage/DialerPage.qml:100
+#: ../src/qml/DialerPage/DialerPage.qml:120
 msgid "SIM Locked"
 msgstr "SIM zaključan"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Snimi"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:80
 msgid "Search"
@@ -472,11 +474,11 @@ msgstr "Podijeli"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Pređite prstom za brisanje"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Pređite prstom za prikaz mogućnosti"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:164
 msgid "Switch audio source:"
@@ -494,12 +496,12 @@ msgstr "Premaci na primarni SIM:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Trenutno nema mreže na %1"
 
-#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
+#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
 msgid "There is currently no network."
 msgstr "Trenutno nema mreže."
 
@@ -540,8 +542,9 @@ msgstr "Jučer"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
+"Morate isključiti način rada za zrakoplave, da biste mogli praviti pozive"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "You need to select a SIM card"
 msgstr "Morate odabrati SIM karticu"
 
