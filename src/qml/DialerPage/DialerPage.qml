@@ -218,12 +218,37 @@ PageWithBottomEdge {
         }
     }
 
+    function createObjectAsynchronously(componentFile, callback) {
+        var component = Qt.createComponent(componentFile, Component.Asynchronous);
+
+        function componentCreated() {
+            if (component.status == Component.Ready) {
+                var incubator = component.incubateObject(page, {}, Qt.Asynchronous);
+
+                function objectCreated(status) {
+                    if (status == Component.Ready) {
+                        callback(incubator.object);
+                    }
+                }
+                incubator.onStatusChanged = objectCreated;
+
+            } else if (component.status == Component.Error) {
+                console.log("Error loading component:", component.errorString());
+            }
+        }
+
+        component.statusChanged.connect(componentCreated);
+    }
+
+    function pushMmiPlugin(plugin) {
+        mmiPlugins.push(plugin);
+    }
+
     Component.onCompleted: {
         // load MMI plugins
         var plugins = application.mmiPluginList()
         for (var i in plugins) {
-            var component = Qt.createComponent(plugins[i]);
-            mmiPlugins.push(component.createObject(page))
+            createObjectAsynchronously(plugins[i], pushMmiPlugin);
         }
     }
 
