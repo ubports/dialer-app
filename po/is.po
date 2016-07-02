@@ -17,8 +17,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-05-07 05:01+0000\n"
-"X-Generator: Launchpad (build 18025)\n"
+"X-Launchpad-Export-Date: 2016-07-02 05:59+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 "Language: is\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -153,7 +153,7 @@ msgstr "Símtal mistókst"
 msgid "Call holding failure"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:517
+#: ../src/qml/DialerPage/DialerPage.qml:542
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -252,7 +252,7 @@ msgstr "Breyta"
 msgid "Emergency Calls"
 msgstr "Neyðarhringingar"
 
-#: ../src/qml/DialerPage/DialerPage.qml:316
+#: ../src/qml/DialerPage/DialerPage.qml:341
 msgid "Enter a number"
 msgstr "Sláðu inn tölu"
 
