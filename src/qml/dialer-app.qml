@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -43,6 +43,7 @@ MainView {
     }
 
     property QtObject account: defaultPhoneAccount()
+    property bool simLocked: account && account.simLocked
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
     property bool telepathyReady: false
@@ -67,8 +68,8 @@ MainView {
     }
 
     automaticOrientation: false
-    width: units.gu(40)
-    height: units.gu(71)
+    implicitWidth: units.gu(40)
+    implicitHeight: units.gu(71)
 
     property bool hasCalls: callManager.hasCalls
 
@@ -371,9 +372,7 @@ MainView {
         }
 
         if (mainView.account && !mainView.greeterMode && mainView.account.simLocked) {
-            var properties = {}
-            properties["accountId"] = mainView.account.accountId
-            PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
+            showSimLockedDialog();
             return
         }
 
@@ -479,16 +478,22 @@ MainView {
         PopupUtils.open(Qt.resolvedUrl("Dialogs/NotificationDialog.qml"), mainView, {title: title, text: text});
     }
 
+    function showSimLockedDialog() {
+        var properties = {}
+        properties["accountId"] = mainView.account.accountId
+        PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
+    }
+
     Component.onCompleted: {
         i18n.domain = "dialer-app"
         i18n.bindtextdomain("dialer-app", i18nDirectory)
         pageStackNormalMode.push(Qt.createComponent("DialerPage/DialerPage.qml"))
 
         // when running in windowed mode, do not allow resizing
-        view.minimumWidth  = width * 0.9
-        view.maximumWidth = width * 1.1
-        view.minimumHeight = height * 0.9
-        view.maximumHeight = height * 1.1
+        view.minimumWidth  = Qt.binding( function() { return implicitWidth * 0.9; } )
+        view.maximumWidth = Qt.binding( function() { return implicitWidth * 1.1; } )
+        view.minimumHeight = Qt.binding( function() { return implicitHeight * 0.9; } )
+        view.maximumHeight = Qt.binding( function() { return implicitHeight * 1.1; } )
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {

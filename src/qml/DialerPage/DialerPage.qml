@@ -81,7 +81,7 @@ Page {
         }
 
         leadingActionBar {
-            actions: [
+            property list<QtObject> backActionList: [
                 Action {
                     iconName: "back"
                     text: i18n.tr("Close")
@@ -92,6 +92,23 @@ Page {
                     }
                 }
             ]
+            property list<QtObject> simLockedActionList: [
+                Action {
+                    id: simLockedAction
+                    objectName: "simLockedAction"
+                    iconName: "simcard-locked"
+                    onTriggered: {
+                        mainView.showSimLockedDialog()
+                    }
+                }
+            ]
+            actions: {
+                if (mainView.simLocked) {
+                    return simLockedActionList
+                } else {
+                    return backActionList
+                }
+            }
         }
 
         Sections {
@@ -125,7 +142,10 @@ Page {
         } else if (telepathyHelper.flightMode) {
             return i18n.tr("Flight Mode")
         } else if (mainView.account && mainView.account.simLocked) {
-            return i18n.tr("SIM Locked")
+            // just in case we need it back in the future somewhere, keep the original string
+            var oldTitle = i18n.tr("SIM Locked")
+            // show Emergency Calls for sim locked too. There is going to be an icon indicating it is locked
+            return i18n.tr("Emergency Calls")
         } else if (mainView.account && mainView.account.networkName != "") {
             return mainView.account.networkName
         } else if (multiplePhoneAccounts && !mainView.account) {
