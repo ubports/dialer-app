@@ -128,10 +128,14 @@ Item {
 
             var dialerPage = mainViewLoader.item.currentStack.currentPage
             tryCompare(dialerPage, 'title', i18n.tr('Emergency Calls'))
-            tryCompare(dialerPage.head.backAction, 'objectName', 'simLockedAction')
+            var header = dialerPage.header
+            tryCompare(header.leadingActionBar.actions, 'length', 1)
+
+            var backAction = header.leadingActionBar.actions[0]
+            tryCompare(backAction, 'objectName', 'simLockedAction')
 
             // click the action to see if the dialog is shown
-            dialerPage.head.backAction.trigger()
+            backAction.trigger()
             var simLockedDialog = findChild(root, 'simLockedDialog')
             tryCompare(simLockedDialog, 'visible', true)
             var okButton = findChild(simLockedDialog, 'okSimLockedDialog')
