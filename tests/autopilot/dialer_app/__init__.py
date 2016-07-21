@@ -155,7 +155,7 @@ class DialerPage(MainView):
             # Start swiping from the top of the component because after some
             # seconds it gets almost fully hidden. The center will be out of
             # view.
-            start_y = self.globalRect.y + self.height
+            start_y = self.globalRect.y + self.height - 3
             stop_y = start_y - (self.height * 0.7)
             self.pointing_device.drag(start_x, start_y, start_x, stop_y,
                                       rate=2)
