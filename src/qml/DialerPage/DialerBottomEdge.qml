@@ -23,38 +23,10 @@ import "../HistoryPage"
 BottomEdge {
     id: bottomEdge
 
-    function commitWithProperties(properties) {
-        _realPage.destroy()
-        _realPage = historyPageComponent.createObject(null, properties)
-        commit()
-    }
-
-    property bool showingConversation: _realPage && _realPage.state !== "newMessage"
-
-    property var _realPage: null
-
     height: parent ? parent.height : 0
     hint.text: i18n.tr("+")
-    contentComponent: Item {
-        id: pageContent
-        implicitWidth: bottomEdge.width
-        implicitHeight: bottomEdge.height
-        children: bottomEdge._realPage
-    }
-
-    Component.onCompleted: {
-        mainView.bottomEdge = bottomEdge
-        _realPage = historyPageComponent.createObject(null)
-    }
-
-    Component.onDestruction: {
-        _realPage.destroy()
-    }
-
-    onCollapseCompleted: {
-        _realPage.destroy()
-        _realPage = historyPageComponent.createObject(null)
-    }
+    contentComponent: historyPageComponent
+    preloadContent: true
 
     Component {
         id: historyPageComponent

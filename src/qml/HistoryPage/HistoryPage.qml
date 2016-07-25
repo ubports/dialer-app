@@ -76,31 +76,6 @@ Page {
 
     states: [
         State {
-            id: defaultState
-            name: "defaultState"
-            when: !selectionMode
-
-            property list<QtObject> leadingActions: [
-                Action {
-                    id: backAction
-
-                    objectName: "cancel"
-                    name: "cancel"
-                    text: i18n.tr("Cancel")
-                    iconName: "down"
-                    shortcut: "Esc"
-                    onTriggered: {
-                        mainView.bottomEdge.collapse()
-                    }
-                }
-            ]
-
-            PropertyChanges {
-                target: pageHeader
-                leadingActions: defaultState.leadingActions
-            }
-        },
-        State {
             id: selectState
             name: "select"
             when: selectionMode
