@@ -29,6 +29,7 @@ Page {
     objectName: "historyPage"
 
     property bool bottomEdgeCommitted: false
+    property QtObject bottomEdgeItem: null
     property string searchTerm
     property int delegateHeight: delegate.height
     // NOTE: in case we need to re-enable progressive bottom edge gesture,
