@@ -33,6 +33,7 @@ set(QML_TST_FILES
     tst_KeypadButton.qml
     tst_StopWatch.qml
     tst_MainView.qml
+    tst_HistoryDelegate.qml
     tst_DialerPage.qml
 )
 add_custom_target(tst_QmlFiles ALL SOURCES ${QML_TST_FILES})
