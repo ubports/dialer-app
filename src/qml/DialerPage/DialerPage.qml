@@ -499,8 +499,9 @@ Page {
 
     DialerBottomEdge {
         id: bottomEdge
-        enabled: !page.greeterMode
+        enabled: !mainView.greeterMode
         height: page.height
         hint.text: i18n.tr("Recent")
+        hint.visible: enabled
     }
 }
