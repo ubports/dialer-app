@@ -419,6 +419,10 @@ MainView {
 
         if (pageStackNormalMode.currentPage && typeof(pageStackNormalMode.currentPage.dialNumber) != 'undefined') {
             pageStackNormalMode.currentPage.dialNumber = number;
+
+            if (pageStackNormalMode.currentPage.bottomEdgeItem) {
+                pageStackNormalMode.currentPage.bottomEdgeItem.collapse()
+            }
         }
     }
 
