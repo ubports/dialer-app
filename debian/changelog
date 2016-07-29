@@ -1,3 +1,14 @@
+dialer-app (0.1+16.10.20160624.1-0ubuntu1) yakkety; urgency=medium
+
+  [ Florian Boucault ]
+  * Compile and instantiate MMI plugins asynchronously. Saves around
+    300ms of startup time.
+
+  [ Gustavo Pichorim Boiko ]
+  * Disable tests in arm64.
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Fri, 24 Jun 2016 15:52:34 +0000
+
 dialer-app (0.1+16.04.20160504-0ubuntu1) xenial; urgency=medium
 
   * In order to make it clear that emergency calls are possible in a sim

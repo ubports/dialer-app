@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-03-19 05:57+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-07-02 05:59+0000\n"
+"X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -123,15 +123,15 @@ msgstr "ទាំងអស់"
 msgid "Bluetooth device"
 msgstr "ឧបករណ៍​​ប៊្លូធូស"
 
-#: ../src/qml/dialer-app.qml:644
+#: ../src/qml/dialer-app.qml:649
 msgid "Call Barring"
 msgstr "រារាំង​ការ​ហៅ"
 
-#: ../src/qml/dialer-app.qml:655
+#: ../src/qml/dialer-app.qml:660
 msgid "Call Forwarding"
 msgstr "បញ្ជូន​ការ​ហៅបន្ត"
 
-#: ../src/qml/dialer-app.qml:666
+#: ../src/qml/dialer-app.qml:671
 msgid "Call Waiting"
 msgstr "រង់ចាំ​ការ​ហៅ"
 
@@ -147,18 +147,18 @@ msgstr "ការហៅបានបរាជ័យ"
 msgid "Call holding failure"
 msgstr "ភាពបរាជ័យក្នុងការហៅកាន់"
 
-#: ../src/qml/DialerPage/DialerPage.qml:495
+#: ../src/qml/DialerPage/DialerPage.qml:542
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
 #: ../src/qml/LiveCallPage/LiveCall.qml:441
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "កំពុុងហៅ"
 
-#: ../src/qml/dialer-app.qml:677
+#: ../src/qml/dialer-app.qml:682
 msgid "Calling Line Presentation"
 msgstr "បង្ហាញ​ខ្សែ​ហៅ"
 
-#: ../src/qml/dialer-app.qml:689
+#: ../src/qml/dialer-app.qml:694
 msgid "Calling Line Restriction"
 msgstr "ដាក់​កម្រិត​ខ្សែ​ហៅ"
 
@@ -174,7 +174,7 @@ msgstr "បោះ​បង់"
 msgid "Change all Call associations to %1?"
 msgstr "ផ្លាស់ប្តូរសមាគមការហៅទាំងអស់ទៅ %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:76
+#: ../src/qml/DialerPage/DialerPage.qml:79
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "បិទ"
@@ -188,11 +188,11 @@ msgstr "សន្និសីទ"
 msgid "Conference call failure"
 msgstr "ភាពបរាជ័យក្នុងការហៅសន្និសិទ"
 
-#: ../src/qml/dialer-app.qml:683
+#: ../src/qml/dialer-app.qml:688
 msgid "Connected Line Presentation"
 msgstr "បង្ហាញ​ខ្សែ​បាន​ភ្ជាប់"
 
-#: ../src/qml/dialer-app.qml:695
+#: ../src/qml/dialer-app.qml:700
 msgid "Connected Line Restriction"
 msgstr "ដាក់​កម្រិត​ខ្សែ​បាន​ភ្ជាប់"
 
@@ -224,12 +224,12 @@ msgstr "ព័ត៌មាន​លម្អិត"
 msgid "Disable"
 msgstr "បិទ"
 
-#: ../src/qml/dialer-app.qml:499
+#: ../src/qml/dialer-app.qml:504
 msgid "Disabling flight mode"
 msgstr "បិទរបៀបការហោះហើរ"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:562
-#: ../src/qml/dialer-app.qml:576
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
+#: ../src/qml/dialer-app.qml:581
 msgid "Dismiss"
 msgstr "បណ្ដេញ"
 
@@ -241,15 +241,16 @@ msgstr "កុំ​សួរ​ម្ដងទៀត"
 msgid "Edit"
 msgstr "កែសម្រួល"
 
-#: ../src/qml/DialerPage/DialerPage.qml:93
+#: ../src/qml/DialerPage/DialerPage.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:122
 msgid "Emergency Calls"
 msgstr "ការហៅបន្ទាន់"
 
-#: ../src/qml/DialerPage/DialerPage.qml:294
+#: ../src/qml/DialerPage/DialerPage.qml:341
 msgid "Enter a number"
 msgstr "បញ្ចូល​លេខ"
 
-#: ../src/qml/dialer-app.qml:559
+#: ../src/qml/dialer-app.qml:564
 msgid "Error"
 msgstr "កំហុស"
 
@@ -269,7 +270,7 @@ msgstr "បរាជ័យក្នុងការកន្លែងរង់ច
 msgid "Favorites"
 msgstr "និយម"
 
-#: ../src/qml/DialerPage/DialerPage.qml:98
+#: ../src/qml/DialerPage/DialerPage.qml:117
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "របៀប​ជិះ​យន្តហោះ"
@@ -296,7 +297,7 @@ msgstr "IMEI"
 msgid "Incoming"
 msgstr "ចូល"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:565
 msgid "Invalid USSD code"
 msgstr "កូដ USSD មិន​ត្រឹមត្រូវ"
 
@@ -335,7 +336,7 @@ msgstr "ទូរស័ព្ទ​ចល័ត"
 msgid "No"
 msgstr "ទេ"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "No SIM card selected"
 msgstr "មិន​បាន​ជ្រើស​ស៊ីម​កាត"
 
@@ -343,8 +344,8 @@ msgstr "មិន​បាន​ជ្រើស​ស៊ីម​កាត"
 msgid "No calls"
 msgstr "គ្មានការហៅ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:106 ../src/qml/dialer-app.qml:376
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
+#: ../src/qml/dialer-app.qml:380
 msgid "No network"
 msgstr "មិន​មាន​សេវា"
 
@@ -352,7 +353,7 @@ msgstr "មិន​មាន​សេវា"
 msgid "No recent calls"
 msgstr "មិនមានការហៅថ្មី"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:49
+#: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
 msgstr "យល់ព្រម"
 
@@ -369,7 +370,8 @@ msgstr "ចេញ"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:104 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "ទូរស័ព្ទ​"
 
@@ -389,7 +391,7 @@ msgstr "កម្មវិធី​ទូរស័ព្ទ"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "ទូរស័ព្ទ;បន្ទះលេខ;ចុច;ហៅ;បន្ទះ"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:37
+#: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
 "Please unlock your SIM card to call or send a message. You can unlock your "
 "SIM card from the Network Indicator at the top of the screen or by visiting "
@@ -399,7 +401,7 @@ msgstr ""
 "បណ្តាញសូចនាករ នៅកំពូលនៃអេក្រង់ឬដោយទស្សនា <a "
 "href=\"system_settings\">ការកំណត់ប្រព័ន្ធ &gt; សន្តិសុខ &amp; ភាពឯកជន ។"
 
-#: ../src/qml/dialer-app.qml:539
+#: ../src/qml/dialer-app.qml:544
 msgid "Please wait"
 msgstr "សូមរង់​ចាំ"
 
@@ -412,16 +414,16 @@ msgstr "ឯកជន"
 msgid "Private number"
 msgstr "លេខ​ឯកជន"
 
-#: ../src/qml/DialerPage/DialerPage.qml:141
+#: ../src/qml/DialerPage/DialerPage.qml:163
 #: ../src/qml/HistoryPage/HistoryPage.qml:45
 msgid "Recent"
 msgstr "បច្ចុប្បន្ន"
 
-#: ../src/qml/Dialogs/SimLockedDialog.qml:26
+#: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
 msgstr "ស៊ី​ម​កាត​ត្រូវ​បាន​ចាក់សោ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:100
+#: ../src/qml/DialerPage/DialerPage.qml:120
 msgid "SIM Locked"
 msgstr "ស៊ីម​បាន​ចាក់សោ"
 
@@ -487,12 +489,12 @@ msgstr "ប្ដូរ​ទៅ​ស៊ីម​លំនាំដើម៖"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា​នៅ​លើ %1"
 
-#: ../src/qml/dialer-app.qml:376 ../src/qml/dialer-app.qml:383
+#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
 msgid "There is currently no network."
 msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា។"
 
@@ -534,7 +536,7 @@ msgstr "ម្សិល​មិញ"
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:356
 msgid "You need to select a SIM card"
 msgstr "អ្នក​ត្រូវ​ជ្រើស​ស៊ីម​កាត"
 
