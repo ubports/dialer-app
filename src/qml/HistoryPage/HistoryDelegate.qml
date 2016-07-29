@@ -55,6 +55,7 @@ ListItemWithActions {
 
         // clicking an item only populates the dialpad view, it doesn't call directly
         mainView.populateDialpad(model.remoteParticipant, mainView.account ? mainView.account.accountId : "");
+        historyPage.bottomEdgeItem.collapse()
     }
 
     function selectCallType()  {

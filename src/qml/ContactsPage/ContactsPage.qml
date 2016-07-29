@@ -50,7 +50,6 @@ Page {
         }
     }
 
-    title: i18n.tr("Contacts")
     TextField {
         id: searchField
 
@@ -69,13 +68,53 @@ Page {
         visible: false
     }
 
+    header: PageHeader {
+        id: pageHeader
+
+        property alias leadingActions: leadingBar.actions
+        property alias trailingActions: trailingBar.actions
+
+        title: i18n.tr("Contacts")
+        flickable: contactList.view
+
+        leadingActionBar {
+            id: leadingBar
+        }
+        trailingActionBar {
+            id: trailingBar
+        }
+
+        extension: Sections {
+            id: pageHeaderSections
+            objectName: "headerSections"
+            anchors {
+                left: parent ? parent.left : undefined
+                leftMargin: units.gu(2)
+                bottom: parent ? parent.bottom : undefined
+            }
+            model:  [i18n.ctr("All Contacts", "All"), i18n.tr("Favorites")]
+            onSelectedIndexChanged: {
+                switch (selectedIndex) {
+                case 0:
+                    contactList.showAllContacts()
+                    break;
+                case 1:
+                    contactList.showFavoritesContacts()
+                    break;
+                default:
+                    break;
+                }
+            }
+        }
+    }
+
     state: "default"
     states: [
-        PageHeadState {
+        State {
             id: defaultState
 
             name: "default"
-            actions: [
+            property list<QtObject> trailingActions: [
                 Action {
                     text: i18n.tr("Search")
                     iconName: "search"
@@ -87,9 +126,8 @@ Page {
                 }
             ]
             PropertyChanges {
-                target: contactsPage.head
-                actions: defaultState.actions
-                sections.model: [i18n.ctr("All Contacts", "All"), i18n.tr("Favorites")]
+                target: pageHeader
+                trailingActions: defaultState.trailingActions
             }
             PropertyChanges {
                 target: searchField
@@ -101,20 +139,23 @@ Page {
             id: searchingState
 
             name: "searching"
-            backAction: Action {
-                iconName: "back"
-                text: i18n.tr("Cancel")
-                onTriggered: {
-                    contactList.forceActiveFocus()
-                    contactsPage.state = "default"
-                    contactsPage.head.sections.selectedIndex = 0
+            property list<QtObject> leadingActions: [
+                Action {
+                    iconName: "back"
+                    text: i18n.tr("Cancel")
+                    onTriggered: {
+                        contactList.forceActiveFocus()
+                        contactsPage.state = "default"
+                        contactsPage.head.sections.selectedIndex = 0
+                    }
                 }
-            }
+            ]
 
             PropertyChanges {
-                target: contactsPage.head
-                backAction: searchingState.backAction
+                target: pageHeader
+                leadingActions: searchingState.leadingActions
                 contents: searchField
+                extension: null
             }
 
             PropertyChanges {
@@ -124,22 +165,6 @@ Page {
             }
         }
     ]
-
-    Connections {
-        target: contactsPage.head.sections
-        onSelectedIndexChanged: {
-            switch (contactsPage.head.sections.selectedIndex) {
-            case 0:
-                contactList.showAllContacts()
-                break;
-            case 1:
-                contactList.showFavoritesContacts()
-                break;
-            default:
-                break;
-            }
-        }
-    }
 
     // background
     Rectangle {

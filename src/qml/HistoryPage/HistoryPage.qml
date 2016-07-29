@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2015 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -28,6 +28,8 @@ Page {
     id: historyPage
     objectName: "historyPage"
 
+    property bool bottomEdgeCommitted: false
+    property QtObject bottomEdgeItem: null
     property string searchTerm
     property int delegateHeight: delegate.height
     // NOTE: in case we need to re-enable progressive bottom edge gesture,
@@ -43,10 +45,30 @@ Page {
     }
 
     title: selectionMode ? i18n.tr("Select") : i18n.tr("Recent")
-    active: false
     flickable: null
 
-    head.sections.model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
+    header: PageHeader {
+        id: pageHeader
+
+        property alias leadingActions: leadingBar.actions
+        property alias trailingActions: trailingBar.actions
+
+        title: historyPage.title
+
+        leadingActionBar {
+            id: leadingBar
+        }
+
+        trailingActionBar {
+            id: trailingBar
+        }
+
+        extension: Sections {
+            id: headerSections
+            model: [ i18n.ctr("All Calls", "All"), i18n.tr("Missed") ]
+            selectedIndex: 0
+        }
+    }
 
     Rectangle {
         anchors.fill: parent
@@ -54,18 +76,20 @@ Page {
     }
 
     states: [
-        PageHeadState {
+        State {
+            id: selectState
             name: "select"
             when: selectionMode
-            head: historyPage.head
 
-            backAction: Action {
-                objectName: "selectionModeCancelAction"
-                iconName: "back"
-                onTriggered: historyList.cancelSelection()
-            }
+            property list<QtObject> leadingActions: [
+                Action {
+                    objectName: "selectionModeCancelAction"
+                    iconName: "back"
+                    onTriggered: historyList.cancelSelection()
+                }
+            ]
 
-            actions: [
+            property list<QtObject> trailingActions: [
                 Action {
                     objectName: "selectionModeSelectAllAction"
                     iconName: "select"
@@ -84,17 +108,20 @@ Page {
                     onTriggered: historyList.endSelection()
                 }
             ]
+
+            PropertyChanges {
+                target: pageHeader
+                leadingActions: selectState.leadingActions
+                trailingActions: selectState.trailingActions
+            }
         }
     ]
 
-    onActiveChanged: {
-        if (!active) {
-            if (selectionMode) {
-                historyList.cancelSelection();
-            }
-            historyList.resetSwipe()
-            historyList.positionViewAtBeginning()
-        } else if (historyList.count > 0){
+    onBottomEdgeCommittedChanged: {
+        if (!bottomEdgeCommitted) {
+            return
+        }
+        if (historyList.count > 0) {
             swipeItemDemo.enable()
         }
     }
@@ -110,16 +137,12 @@ Page {
     }
 
     Connections {
-        target: head.sections
+        target: headerSections
         onSelectedIndexChanged: {
-            // NOTE: be careful on changing the way filters are assigned, if we create a
-            // binding on head.sections, we might get weird results when the page moves to the bottom
-            if (pageStackNormalMode.depth > 1) {
-                if (head.sections.selectedIndex == 0) {
-                    historyEventModel.filter = emptyFilter;
-                } else {
-                    historyEventModel.filter = missedFilter;
-                }
+            if (headerSections.selectedIndex == 0) {
+                historyEventModel.filter = emptyFilter;
+            } else {
+                historyEventModel.filter = missedFilter;
             }
         }
     }
@@ -189,7 +212,10 @@ Page {
         }
 
         currentIndex: -1
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: pageHeader.height
+        }
         listModel: historyEventModel
 
         onSelectionDone: {
@@ -356,7 +382,7 @@ Page {
         }
 
         onCountChanged: {
-            if (historyPage.active && (historyList.count > 0)) {
+            if (bottomEdgeCommitted && historyList.count > 0) {
                 swipeItemDemo.enable()
             }
         }

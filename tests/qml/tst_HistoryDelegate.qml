@@ -55,6 +55,19 @@ Item {
         property variant timestamp: 0
     }
 
+    Item {
+        id: historyPage
+        property alias bottomEdgeItem: bottomEdge
+
+        Item {
+            id: bottomEdge
+
+            function collapse() {
+                // do nothing
+            }
+        }
+    }
+
     HistoryDelegate {
         id: delegate
     }

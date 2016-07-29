@@ -26,9 +26,11 @@ import Ubuntu.Components.ListItems 1.3 as ListItems
 
 import "../"
 
-PageWithBottomEdge {
+Page {
     id: page
 
+    property bool bottomEdgeCommitted: bottomEdge.status === BottomEdge.Committed
+    property alias bottomEdgeItem: bottomEdge
     property alias dialNumber: keypadEntry.value
     property alias input: keypadEntry.input
     property alias callAnimationRunning: callAnimation.running
@@ -55,49 +57,74 @@ PageWithBottomEdge {
         }
         return model
     }
-    property list<Action> actionsGreeter
-    property list<Action> actionsNormal: [
-        Action {
-            objectName: "contacts"
-            iconName: "contact"
-            text: i18n.tr("Contacts")
-            onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
-        },
-        Action {
-            iconName: "settings"
-            text: i18n.tr("Settings")
-            onTriggered: Qt.openUrlExternally("settings:///system/phone")
+
+    header: PageHeader {
+        id: pageHeader
+
+        property list<Action> actionsGreeter
+        property list<Action> actionsNormal: [
+            Action {
+                objectName: "contacts"
+                iconName: "contact"
+                text: i18n.tr("Contacts")
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            },
+            Action {
+                iconName: "settings"
+                text: i18n.tr("Settings")
+                onTriggered: Qt.openUrlExternally("settings:///system/phone")
+            }
+
+        ]
+        title: page.title
+        trailingActionBar {
+            actions: mainView.greeterMode ? actionsGreeter : actionsNormal
         }
 
-    ]
-    head.actions: mainView.greeterMode ? actionsGreeter : actionsNormal
+        leadingActionBar {
+            property list<QtObject> backActionList: [
+                Action {
+                    iconName: "back"
+                    text: i18n.tr("Close")
+                    visible: mainView.greeterMode
+                    onTriggered: {
+                        greeter.showGreeter()
+                        dialNumber = "";
+                    }
+                }
+            ]
+            property list<QtObject> simLockedActionList: [
+                Action {
+                    id: simLockedAction
+                    objectName: "simLockedAction"
+                    iconName: "simcard-locked"
+                    onTriggered: {
+                        mainView.showSimLockedDialog()
+                    }
+                }
+            ]
+            actions: {
+                if (mainView.simLocked) {
+                    return simLockedActionList
+                } else {
+                    return backActionList
+                }
+            }
+        }
 
-    Action {
-        id: backAction
-        objectName: "backAction"
-        iconName: "back"
-        text: i18n.tr("Close")
-        onTriggered: {
-            greeter.showGreeter()
-            dialNumber = "";
+        Sections {
+            id: headerSections
+            model: {
+                var accountNames = []
+                for (var i in page.accountsModel) {
+                    accountNames.push(page.accountsModel[i].displayName)
+                }
+                return accountNames
+            }
+            selectedIndex: accountIndex(mainView.account)
         }
-    }
-    Action {
-        id: simLockedAction
-        objectName: "simLockedAction"
-        iconName: "simcard-locked"
-        onTriggered: {
-            mainView.showSimLockedDialog()
-        }
-    }
 
-    head.backAction: {
-        if (mainView.greeterMode) {
-            return backAction
-        } else if (mainView.simLocked) {
-            return simLockedAction
-        }
-        return null
+        extension: headerSections.model.length > 1 ? headerSections : null
     }
 
     objectName: "dialerPage"
@@ -154,44 +181,6 @@ PageWithBottomEdge {
             }
         }
     ]
-
-    // -------- Bottom Edge Setup -----
-    bottomEdgeEnabled: !mainView.greeterMode
-    bottomEdgePageSource: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
-    // NOTE: uncomment the next line to re-enable progressive bottom edge swiping.
-    //bottomEdgeExpandThreshold: bottomEdgePage ? bottomEdgePage.delegateHeight * 3 : 0
-    bottomEdgeTitle: i18n.tr("Recent")
-    reloadBottomEdgePage: true
-
-    property int historyDelegateHeight: bottomEdgePage ? bottomEdgePage.delegateHeight : 1
-
-    onBottomEdgeExposedAreaChanged: {
-        if (!bottomEdgePage)  {
-            return
-        }
-
-        var index =  Math.floor(bottomEdgeExposedArea / historyDelegateHeight)
-        if (index < 3) {
-            bottomEdgePage.currentIndex = index
-        } else {
-            bottomEdgePage.currentIndex = -1
-        }
-    }
-
-    onBottomEdgeReleased: {
-        if (bottomEdgePage.currentIndex < 3) {
-            bottomEdgePage.activateCurrentIndex()
-        } else {
-            bottomEdgePage.currentIndex = -1
-        }
-    }
-
-    onIsCollapsedChanged: {
-        if (isCollapsed && bottomEdgePage) {
-            // reset the history page to the "All" view
-            bottomEdgePage.head.sections.selectedIndex = 0;
-        }
-    }
 
     function accountIndex(account) {
         var index = -1;
@@ -252,28 +241,10 @@ PageWithBottomEdge {
         }
     }
 
-    head.sections.model: {
-        var accountNames = []
-        for (var i in page.accountsModel) {
-            accountNames.push(page.accountsModel[i].displayName)
-        }
-        return accountNames
-    }
-
     Connections {
-        target: mainView
-        onAccountChanged: {
-            // FIXME: the selectedIndex binding is being broken by the sdk. this is just a workaround.
-            head.sections.selectedIndex = Qt.binding(function() { return accountIndex(mainView.account) })
-        }
-    }
-
-    head.sections.selectedIndex: accountIndex(mainView.account)
-
-    Connections {
-        target: page.head.sections
+        target: headerSections
         onSelectedIndexChanged: {
-            mainView.account = page.accountsModel[page.head.sections.selectedIndex]
+            mainView.account = page.accountsModel[headerSections.selectedIndex]
         }
     }
 
@@ -286,7 +257,10 @@ PageWithBottomEdge {
     FocusScope {
         id: keypadContainer
 
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            topMargin: pageHeader.height
+        }
         focus: true
 
         Item {
@@ -546,5 +520,13 @@ PageWithBottomEdge {
                 callButton.color = callButton.defaultColor
             }
         }
+    }
+
+    DialerBottomEdge {
+        id: bottomEdge
+        enabled: !mainView.greeterMode
+        height: page.height
+        hint.text: i18n.tr("Recent")
+        hint.visible: enabled
     }
 }

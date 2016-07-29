@@ -48,6 +48,8 @@ MainView {
     property bool lastHasCalls: callManager.hasCalls
     property bool telepathyReady: false
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
+    property alias inputInfo: inputInfoObject
+    property var bottomEdge: null
 
     function defaultPhoneAccount() {
         // we only use the default account property if we have more
@@ -123,6 +125,10 @@ MainView {
             account = Qt.binding(defaultPhoneAccount)
         }
         onDefaultCallAccountChanged: account = Qt.binding(defaultPhoneAccount)
+    }
+
+    InputInfo {
+        id: inputInfoObject
     }
 
     Settings {
@@ -413,6 +419,10 @@ MainView {
 
         if (pageStackNormalMode.currentPage && typeof(pageStackNormalMode.currentPage.dialNumber) != 'undefined') {
             pageStackNormalMode.currentPage.dialNumber = number;
+
+            if (pageStackNormalMode.currentPage.bottomEdgeItem) {
+                pageStackNormalMode.currentPage.bottomEdgeItem.collapse()
+            }
         }
     }
 
@@ -582,6 +592,15 @@ MainView {
                 onClicked: PopupUtils.close(ussdResponse)
             }
         }
+    }
+
+    // WORKAROUND: Due the missing feature on SDK, they can not detect if
+    // there is a mouse attached to device or not. And this will cause the
+    // bootom edge component to not work correct on desktop.
+    Binding {
+        target:  QuickUtils
+        property: "mouseAttached"
+        value: inputInfo.hasMouse
     }
 
     Connections {
