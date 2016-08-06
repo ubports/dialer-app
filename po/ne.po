@@ -15,15 +15,15 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-07-02 05:59+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:44+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:439
+#: ../src/qml/LiveCallPage/LiveCall.qml:451
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - होल्ड मा"
@@ -50,7 +50,7 @@ msgstr[0] "%1  सेकेन्ड"
 msgstr[1] "%1 सेकेन्ड"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:206
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -60,6 +60,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
+#: ../src/qml/DialerPage/DialerBottomEdge.qml:27
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -112,61 +113,61 @@ msgstr "ABC"
 msgid "Active"
 msgstr "सकृय"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:49
+#: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
 msgstr "सबै"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:92
+#: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgctxt "All Contacts"
 msgid "All"
 msgstr "सबै"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:339
 msgid "Bluetooth device"
 msgstr "ब्लुटुथ यन्त्र"
 
-#: ../src/qml/dialer-app.qml:649
+#: ../src/qml/dialer-app.qml:668
 msgid "Call Barring"
 msgstr "वर्जित कल"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:679
 msgid "Call Forwarding"
 msgstr "कल फरवार्ड"
 
-#: ../src/qml/dialer-app.qml:671
+#: ../src/qml/dialer-app.qml:690
 msgid "Call Waiting"
 msgstr "प्रतीक्षा कल"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:139
+#: ../src/qml/LiveCallPage/LiveCall.qml:150
 msgid "Call ended"
 msgstr "कल समाप्त"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:295
 msgid "Call failed"
 msgstr "कल विफल"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:158
 msgid "Call holding failure"
 msgstr "कल रोक्न​ विफलता"
 
-#: ../src/qml/DialerPage/DialerPage.qml:542
+#: ../src/qml/DialerPage/DialerPage.qml:516
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:441
+#: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "कलिंग"
 
-#: ../src/qml/dialer-app.qml:682
+#: ../src/qml/dialer-app.qml:701
 msgid "Calling Line Presentation"
 msgstr "कल लाइन प्रस्तुति"
 
-#: ../src/qml/dialer-app.qml:694
+#: ../src/qml/dialer-app.qml:713
 msgid "Calling Line Restriction"
 msgstr "कल लाइन बन्देज"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
-#: ../src/qml/ContactsPage/ContactsPage.qml:106
+#: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
 msgstr "रद्द गर्नुहोस्"
@@ -177,7 +178,7 @@ msgstr "रद्द गर्नुहोस्"
 msgid "Change all Call associations to %1?"
 msgstr "%1 मा सबै कल संस्थाहरू परिवर्तन गर्ने?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:88
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "बन्द गर्नुहोस्"
@@ -187,25 +188,25 @@ msgstr "बन्द गर्नुहोस्"
 msgid "Conference"
 msgstr "सम्मेलन"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Conference call failure"
 msgstr "सम्मेलन कल विफल"
 
-#: ../src/qml/dialer-app.qml:688
+#: ../src/qml/dialer-app.qml:707
 msgid "Connected Line Presentation"
 msgstr "प्रस्तुति"
 
-#: ../src/qml/dialer-app.qml:700
+#: ../src/qml/dialer-app.qml:719
 msgid "Connected Line Restriction"
 msgstr "जडित लाइन बन्देज"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
-#: ../src/qml/HistoryPage/HistoryPage.qml:343
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
 msgstr "सम्पर्क विवरण"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:53
-#: ../src/qml/DialerPage/DialerPage.qml:63
+#: ../src/qml/ContactsPage/ContactsPage.qml:77
+#: ../src/qml/DialerPage/DialerPage.qml:69
 msgid "Contacts"
 msgstr "सम्पर्कहरू"
 
@@ -213,13 +214,13 @@ msgstr "सम्पर्कहरू"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
-#: ../src/qml/HistoryPage/HistoryPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:251
+#: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
 msgstr "मेट्नुहोस्"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:324
+#: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
 msgstr "विस्तृत विवरणहरू"
 
@@ -227,12 +228,12 @@ msgstr "विस्तृत विवरणहरू"
 msgid "Disable"
 msgstr "निश्क्रिय गर्नुहोस्"
 
-#: ../src/qml/dialer-app.qml:504
+#: ../src/qml/dialer-app.qml:514
 msgid "Disabling flight mode"
 msgstr "उडान मोड निश्क्रिय गरिदैँ"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
-#: ../src/qml/dialer-app.qml:581
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:577
+#: ../src/qml/dialer-app.qml:591
 msgid "Dismiss"
 msgstr "खारेज"
 
@@ -244,36 +245,36 @@ msgstr "फेरि नसोध्ने"
 msgid "Edit"
 msgstr "सम्पादन गर्नुहोस्"
 
-#: ../src/qml/DialerPage/DialerPage.qml:112
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:139
+#: ../src/qml/DialerPage/DialerPage.qml:149
 msgid "Emergency Calls"
 msgstr "आपतकालीन कलहरू"
 
-#: ../src/qml/DialerPage/DialerPage.qml:341
+#: ../src/qml/DialerPage/DialerPage.qml:315
 msgid "Enter a number"
 msgstr "नम्बर थिच्नुहोस्"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:574
 msgid "Error"
 msgstr "त्रुटि"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
 msgstr "कल सक्रिय गर्न असफल भयो।"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:119
+#: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "Failed to create a conference call."
 msgstr "सम्मेलन कल सिर्जना गर्न असफल भयो।"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:149
+#: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Failed to place the active call on hold."
 msgstr "सक्रिय कल होल्ड राख्न असफल भयो।"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:92
+#: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
 msgstr "मनपर्ने"
 
-#: ../src/qml/DialerPage/DialerPage.qml:117
+#: ../src/qml/DialerPage/DialerPage.qml:144
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "उडान मोड"
@@ -294,13 +295,13 @@ msgstr "बुझे"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:65
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "आगमन"
 
-#: ../src/qml/dialer-app.qml:565
+#: ../src/qml/dialer-app.qml:575
 msgid "Invalid USSD code"
 msgstr "अमान्य USSD कोड"
 
@@ -320,13 +321,13 @@ msgstr "पछि"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:560
 msgid "Merge calls"
 msgstr "कलहरू मर्ज गर्नुहोस्"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
-#: ../src/qml/HistoryPage/HistoryPage.qml:49
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:326
+#: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "छुटेका"
 
@@ -339,20 +340,20 @@ msgstr "मोबाइल"
 msgid "No"
 msgstr "होइन"
 
-#: ../src/qml/dialer-app.qml:356
+#: ../src/qml/dialer-app.qml:362
 msgid "No SIM card selected"
 msgstr "कुनै सिम कार्ड चयन गरिएन"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:120
 msgid "No calls"
 msgstr "कलहरू छैनन्"
 
-#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
-#: ../src/qml/dialer-app.qml:380
+#: ../src/qml/DialerPage/DialerPage.qml:155 ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:386
 msgid "No network"
 msgstr "नेटवर्क छैन"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:219
+#: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
 msgstr "हालको कुनै कलहरू छैनन्"
 
@@ -364,8 +365,8 @@ msgstr "ठिक छ"
 msgid "On hold"
 msgstr "होल्डमा"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:67
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 msgid "Outgoing"
 msgstr "बहिर्गमन"
 
@@ -373,7 +374,7 @@ msgstr "बहिर्गमन"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/qml/DialerPage/DialerPage.qml:153
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "फोन"
@@ -382,7 +383,7 @@ msgstr "फोन"
 msgid "Phone App"
 msgstr "फोन अनुप्रयोग"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Phone Speaker"
 msgstr "फोन स्पिकर"
 
@@ -404,7 +405,7 @@ msgstr ""
 "मा या <a href=\"system settings\"> सिस्टम् सेटिङ &gt; Security &amp; "
 "गोपनीयता </a>।"
 
-#: ../src/qml/dialer-app.qml:544
+#: ../src/qml/dialer-app.qml:554
 msgid "Please wait"
 msgstr "कृपया पर्खनुहोस्"
 
@@ -412,13 +413,13 @@ msgstr "कृपया पर्खनुहोस्"
 msgid "Private"
 msgstr "निजी"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr "निजी नम्बर"
 
-#: ../src/qml/DialerPage/DialerPage.qml:163
-#: ../src/qml/HistoryPage/HistoryPage.qml:45
+#: ../src/qml/DialerPage/DialerPage.qml:529
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "हालको"
 
@@ -426,7 +427,7 @@ msgstr "हालको"
 msgid "SIM Card is locked"
 msgstr "सिम कार्ड लक भएको छ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:120
+#: ../src/qml/DialerPage/DialerPage.qml:147
 msgid "SIM Locked"
 msgstr "सिम लक भयो"
 
@@ -434,15 +435,15 @@ msgstr "सिम लक भयो"
 msgid "Save"
 msgstr "सङ्ग्रह गर्नुहोस्"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:80
+#: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
 msgstr "खोज्नुहोस्"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:68
+#: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
 msgstr "खोज..."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:45
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
 msgstr "चयन गर्नुहोस्"
 
@@ -454,16 +455,16 @@ msgstr ""
 "सबै बहिर्गमन कलको लागि पूर्वनिर्धारित सिम छान्नुहोस। तपाईं सधैं <a "
 "href=\"system_settings\">  सिस्टम सेटिङ </a> मा आफ्नो विकल्प बदल गर्न सक्छन्।"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:334
+#: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
 msgstr "सन्देश पठाउनुहोस्"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68
+#: ../src/qml/DialerPage/DialerPage.qml:74
 msgid "Settings"
 msgstr "सेटिङहरू"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
 msgstr "साझा गर्नुहोस्"
 
@@ -475,11 +476,11 @@ msgstr "मेटाउन स्वाइप गर्नुहोस्"
 msgid "Swipe to reveal actions"
 msgstr "कार्यहरू प्रकट गर्न स्वाइप गर्नुहोस्"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:164
+#: ../src/qml/LiveCallPage/LiveCall.qml:175
 msgid "Switch audio source:"
 msgstr "अडियो स्रोत स्विच गर्नुहोस्:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:545
 msgid "Switch calls"
 msgstr "कलहरू स्विच हर्नुहोस्"
 
@@ -491,12 +492,12 @@ msgstr "पूर्वनिर्धारित सिम स्विच ग
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:387
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "%1 मा हाल कुनै नेटवर्क छैन"
 
-#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381 ../src/qml/dialer-app.qml:388
 msgid "There is currently no network."
 msgstr "हाल कुनै नेटवर्क छैन।"
 
@@ -504,15 +505,15 @@ msgstr "हाल कुनै नेटवर्क छैन।"
 msgid "Today"
 msgstr "आज"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Ubuntu Phone"
 msgstr "उबुन्टु फोन"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:334
+#: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Unknown device"
 msgstr "अज्ञात उपकरण"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr "अज्ञात नम्बर"
@@ -538,7 +539,7 @@ msgstr "हिजो"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "तपाईँले कल गर्न उडान मोड निश्क्रिय गर्नुपर्छ।"
 
-#: ../src/qml/dialer-app.qml:356
+#: ../src/qml/dialer-app.qml:362
 msgid "You need to select a SIM card"
 msgstr "तपाईँले सिम कार्ड चयन गर्नु आवश्यक छ"
 

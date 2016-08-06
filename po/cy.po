@@ -16,15 +16,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 0 : n==2 ? 1 : (n != 8 && n != 11) ? "
 "2 : 3;\n"
-"X-Launchpad-Export-Date: 2016-07-02 05:59+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:44+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:439
+#: ../src/qml/LiveCallPage/LiveCall.qml:451
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - yn aros"
@@ -57,7 +57,7 @@ msgstr[2] "%1 eil"
 msgstr[3] "%1 eil"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:205
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:206
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
@@ -67,6 +67,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
+#: ../src/qml/DialerPage/DialerBottomEdge.qml:27
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -119,61 +120,61 @@ msgstr "ABC"
 msgid "Active"
 msgstr "Gweithredol"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:49
+#: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
 msgstr "Y cyfan"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:92
+#: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Pob un"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:328
+#: ../src/qml/LiveCallPage/LiveCall.qml:339
 msgid "Bluetooth device"
 msgstr "Dyfais Bluetooth"
 
-#: ../src/qml/dialer-app.qml:649
+#: ../src/qml/dialer-app.qml:668
 msgid "Call Barring"
 msgstr "Rhwystro Galwadau"
 
-#: ../src/qml/dialer-app.qml:660
+#: ../src/qml/dialer-app.qml:679
 msgid "Call Forwarding"
 msgstr "Blaenyrru Galwadau"
 
-#: ../src/qml/dialer-app.qml:671
+#: ../src/qml/dialer-app.qml:690
 msgid "Call Waiting"
 msgstr "Dal Galwadau"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:139
+#: ../src/qml/LiveCallPage/LiveCall.qml:150
 msgid "Call ended"
 msgstr "Galwad ar ben"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:284
+#: ../src/qml/LiveCallPage/LiveCall.qml:295
 msgid "Call failed"
 msgstr "Galwad wedi methu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:147
+#: ../src/qml/LiveCallPage/LiveCall.qml:158
 msgid "Call holding failure"
 msgstr "Methiant dal galwadau"
 
-#: ../src/qml/DialerPage/DialerPage.qml:542
+#: ../src/qml/DialerPage/DialerPage.qml:516
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
-#: ../src/qml/LiveCallPage/LiveCall.qml:441
+#: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Galw"
 
-#: ../src/qml/dialer-app.qml:682
+#: ../src/qml/dialer-app.qml:701
 msgid "Calling Line Presentation"
 msgstr "Cyflwyniad Llinell Alw"
 
-#: ../src/qml/dialer-app.qml:694
+#: ../src/qml/dialer-app.qml:713
 msgid "Calling Line Restriction"
 msgstr "Cyfyngiad Llinell Alw"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
-#: ../src/qml/ContactsPage/ContactsPage.qml:106
+#: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
 msgstr "Diddymu"
@@ -184,7 +185,7 @@ msgstr "Diddymu"
 msgid "Change all Call associations to %1?"
 msgstr "Newid cysylltiad pob galwad i %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:88
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Cau"
@@ -194,25 +195,25 @@ msgstr "Cau"
 msgid "Conference"
 msgstr "Cydalwad"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:118
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Conference call failure"
 msgstr "Methiant cydalwad"
 
-#: ../src/qml/dialer-app.qml:688
+#: ../src/qml/dialer-app.qml:707
 msgid "Connected Line Presentation"
 msgstr "Cyflwyniad Llinell Gysylltiedig"
 
-#: ../src/qml/dialer-app.qml:700
+#: ../src/qml/dialer-app.qml:719
 msgid "Connected Line Restriction"
 msgstr "Cyfyngiad Llinell Gysylltiedig"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:61
-#: ../src/qml/HistoryPage/HistoryPage.qml:343
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
+#: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
 msgstr "Manylion Cyswllt"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:53
-#: ../src/qml/DialerPage/DialerPage.qml:63
+#: ../src/qml/ContactsPage/ContactsPage.qml:77
+#: ../src/qml/DialerPage/DialerPage.qml:69
 msgid "Contacts"
 msgstr "Cysylltiadau"
 
@@ -220,13 +221,13 @@ msgstr "Cysylltiadau"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:81
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:245
-#: ../src/qml/HistoryPage/HistoryPage.qml:315
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:251
+#: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
 msgstr "Dileu"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:324
+#: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
 msgstr "Manylion"
 
@@ -234,12 +235,12 @@ msgstr "Manylion"
 msgid "Disable"
 msgstr "Analluogi"
 
-#: ../src/qml/dialer-app.qml:504
+#: ../src/qml/dialer-app.qml:514
 msgid "Disabling flight mode"
 msgstr "Analluogi modd hedfan"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:567
-#: ../src/qml/dialer-app.qml:581
+#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:577
+#: ../src/qml/dialer-app.qml:591
 msgid "Dismiss"
 msgstr "Gwrthod"
 
@@ -251,36 +252,36 @@ msgstr "Peidiwch â gofyn eto"
 msgid "Edit"
 msgstr "Golygu"
 
-#: ../src/qml/DialerPage/DialerPage.qml:112
-#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:139
+#: ../src/qml/DialerPage/DialerPage.qml:149
 msgid "Emergency Calls"
 msgstr "Galwadau Brys"
 
-#: ../src/qml/DialerPage/DialerPage.qml:341
+#: ../src/qml/DialerPage/DialerPage.qml:315
 msgid "Enter a number"
 msgstr "Cyflwynwch rif"
 
-#: ../src/qml/dialer-app.qml:564
+#: ../src/qml/dialer-app.qml:574
 msgid "Error"
 msgstr "Gwall"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:148
+#: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
 msgstr "Methwyd gweithredu'r alwad."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:119
+#: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "Failed to create a conference call."
 msgstr "Methwyd creu cydalwad."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:149
+#: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Failed to place the active call on hold."
 msgstr "Methwyd rhoi'r alwad weithredol i aros."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:92
+#: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
 msgstr "Ffefrynnau"
 
-#: ../src/qml/DialerPage/DialerPage.qml:117
+#: ../src/qml/DialerPage/DialerPage.qml:144
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Modd Hedfan"
@@ -301,13 +302,13 @@ msgstr "Iawn"
 msgid "IMEI"
 msgstr "IMEI"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:64
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:322
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:65
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Yn dod i mewn"
 
-#: ../src/qml/dialer-app.qml:565
+#: ../src/qml/dialer-app.qml:575
 msgid "Invalid USSD code"
 msgstr "Cod USSD annilys"
 
@@ -327,13 +328,13 @@ msgstr "Hwyrach"
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:548
+#: ../src/qml/LiveCallPage/LiveCall.qml:560
 msgid "Merge calls"
 msgstr "Cyfuno galwadau"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:62
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:320
-#: ../src/qml/HistoryPage/HistoryPage.qml:49
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:63
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:326
+#: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "Methwyd"
 
@@ -346,20 +347,20 @@ msgstr "Symudol"
 msgid "No"
 msgstr "Na"
 
-#: ../src/qml/dialer-app.qml:356
+#: ../src/qml/dialer-app.qml:362
 msgid "No SIM card selected"
 msgstr "Heb ddewis cerdyn SIM"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:109
+#: ../src/qml/LiveCallPage/LiveCall.qml:120
 msgid "No calls"
 msgstr "Dim galwadau"
 
-#: ../src/qml/DialerPage/DialerPage.qml:128 ../src/qml/dialer-app.qml:375
-#: ../src/qml/dialer-app.qml:380
+#: ../src/qml/DialerPage/DialerPage.qml:155 ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:386
 msgid "No network"
 msgstr "Dim rhwydwaith"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:219
+#: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
 msgstr "Dim galwadau diweddar"
 
@@ -371,8 +372,8 @@ msgstr "Iawn"
 msgid "On hold"
 msgstr "Yn aros"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:66
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:324
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:67
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 msgid "Outgoing"
 msgstr "Yn mynd allan"
 
@@ -380,7 +381,7 @@ msgstr "Yn mynd allan"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:126
+#: ../src/qml/DialerPage/DialerPage.qml:153
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Ffôn"
@@ -389,7 +390,7 @@ msgstr "Ffôn"
 msgid "Phone App"
 msgstr "Ap Ffôn"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:332
+#: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Phone Speaker"
 msgstr "Seinydd Ffôn"
 
@@ -412,7 +413,7 @@ msgstr ""
 "href=\"system_settings\">Gosodiadau System &gt; Diogelwch &amp; "
 "Preifatrwydd</a>."
 
-#: ../src/qml/dialer-app.qml:544
+#: ../src/qml/dialer-app.qml:554
 msgid "Please wait"
 msgstr "Arhoswch"
 
@@ -420,13 +421,13 @@ msgstr "Arhoswch"
 msgid "Private"
 msgstr "Preifat"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:167
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
 msgstr "Rhif preifat"
 
-#: ../src/qml/DialerPage/DialerPage.qml:163
-#: ../src/qml/HistoryPage/HistoryPage.qml:45
+#: ../src/qml/DialerPage/DialerPage.qml:529
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "Diweddar"
 
@@ -434,7 +435,7 @@ msgstr "Diweddar"
 msgid "SIM Card is locked"
 msgstr "Cerdyn SIM ar glo"
 
-#: ../src/qml/DialerPage/DialerPage.qml:120
+#: ../src/qml/DialerPage/DialerPage.qml:147
 msgid "SIM Locked"
 msgstr "SIM Ar Glo"
 
@@ -442,15 +443,15 @@ msgstr "SIM Ar Glo"
 msgid "Save"
 msgstr "Cadw"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:80
+#: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
 msgstr "Chwilio"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:68
+#: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
 msgstr "Chwilio..."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:45
+#: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
 msgstr "Dewis"
 
@@ -462,16 +463,16 @@ msgstr ""
 "Dewiswch SIM diofyn ar gyfer galwadau sy'n mynd allan. Gallwch newid hwn yn "
 "<a href=\"system_settings\">Gosodiadau System</a>."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:334
+#: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
 msgstr "Anfon neges"
 
-#: ../src/qml/DialerPage/DialerPage.qml:68
+#: ../src/qml/DialerPage/DialerPage.qml:74
 msgid "Settings"
 msgstr "Gosodiadau"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:73
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
 msgstr "Rhannu"
 
@@ -483,11 +484,11 @@ msgstr "Trawiwch i ddileu"
 msgid "Swipe to reveal actions"
 msgstr "Trawiwch i ddangos gweithredoedd"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:164
+#: ../src/qml/LiveCallPage/LiveCall.qml:175
 msgid "Switch audio source:"
 msgstr "Newid ffynhonnell sain:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:533
+#: ../src/qml/LiveCallPage/LiveCall.qml:545
 msgid "Switch calls"
 msgstr "Newid galwadau"
 
@@ -499,12 +500,12 @@ msgstr "Newid i SIM diofyn:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:387
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Does dim rhwydwaith ar %1 ar hyn o bryd"
 
-#: ../src/qml/dialer-app.qml:375 ../src/qml/dialer-app.qml:382
+#: ../src/qml/dialer-app.qml:381 ../src/qml/dialer-app.qml:388
 msgid "There is currently no network."
 msgstr "Does dim rhwydwaith ar hyn o bryd"
 
@@ -512,15 +513,15 @@ msgstr "Does dim rhwydwaith ar hyn o bryd"
 msgid "Today"
 msgstr "Heddiw"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:330
+#: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Ubuntu Phone"
 msgstr "Ffôn Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:334
+#: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Unknown device"
 msgstr "Dyfais anhysbys"
 
-#: ../src/qml/HistoryPage/HistoryDelegate.qml:169
+#: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
 msgstr "Rhif anhysbys"
@@ -546,7 +547,7 @@ msgstr "Ddoe"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Rhaid analluogi modd hedfan i wneud galwadau"
 
-#: ../src/qml/dialer-app.qml:356
+#: ../src/qml/dialer-app.qml:362
 msgid "You need to select a SIM card"
 msgstr "Mase angen dewis cerdyn SIM"
 
