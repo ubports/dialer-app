@@ -36,27 +36,6 @@ Page {
     property alias callAnimationRunning: callAnimation.running
     property bool greeterMode: false
     property var mmiPlugins: []
-    property var accountsModel: {
-        var model = []
-
-        // do not show any accounts in greeter mode
-        if (mainView.greeterMode) {
-            return []
-        }
-
-        // populate model with all active phone accounts
-        for (var i in telepathyHelper.activeAccounts) {
-            var account = telepathyHelper.activeAccounts[i]
-            if (account.type == AccountEntry.PhoneAccount) {
-                model.push(account)
-            }
-        }
-        // do not show dual sim switch if there is only one sim
-        if (model.length == 1 && model[0].type == AccountEntry.PhoneAccount) {
-            return []
-        }
-        return model
-    }
 
     header: PageHeader {
         id: pageHeader
@@ -114,14 +93,18 @@ Page {
 
         Sections {
             id: headerSections
-            model: {
-                var accountNames = []
-                for (var i in page.accountsModel) {
-                    accountNames.push(page.accountsModel[i].displayName)
+            model: accountsModel.activeAccountNames
+            selectedIndex: accountsModel.defaultCallAccountIndex
+            onSelectedIndexChanged: {
+                if (selectedIndex >= 0) {
+                    mainView.account = accountsModel.activeAccounts[selectedIndex]
+                } else {
+                    mainView.account = null
                 }
-                return accountNames
             }
-            selectedIndex: accountIndex(mainView.account)
+            onModelChanged: {
+                selectedIndex = accountsModel.defaultCallAccountIndex
+            }
         }
 
         extension: headerSections.model.length > 1 ? headerSections : null
@@ -182,17 +165,6 @@ Page {
         }
     ]
 
-    function accountIndex(account) {
-        var index = -1;
-        for (var i in page.accountsModel) {
-            if (page.accountsModel[i] == account) {
-                index = i;
-                break;
-            }
-        }
-        return index;
-    }
-
     function triggerCallAnimation() {
         callAnimation.start();
     }
@@ -241,10 +213,11 @@ Page {
         }
     }
 
-    Connections {
-        target: headerSections
-        onSelectedIndexChanged: {
-            mainView.account = page.accountsModel[headerSections.selectedIndex]
+    AccountsModel {
+        id: accountsModel
+
+        onDefaultCallAccountIndexChanged: {
+            headerSections.selectedIndex = defaultCallAccountIndex
         }
     }
 

@@ -32,17 +32,8 @@ MainView {
     property bool applicationActive: Qt.application.active
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
-    property bool multiplePhoneAccounts: {
-        var numAccounts = 0
-        for (var i in telepathyHelper.activeAccounts) {
-            if (telepathyHelper.activeAccounts[i].type == AccountEntry.PhoneAccount) {
-                numAccounts++
-            }
-        }
-        return numAccounts > 1
-    }
-
-    property QtObject account: defaultPhoneAccount()
+    property alias multiplePhoneAccounts: accountsModel.multipleAccounts
+    property QtObject account: accountsModel.defaultCallAccount
     property bool simLocked: account && account.simLocked
     property bool greeterMode: (state == "greeterMode")
     property bool lastHasCalls: callManager.hasCalls
@@ -50,22 +41,6 @@ MainView {
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
     property var bottomEdge: null
-
-    function defaultPhoneAccount() {
-        // we only use the default account property if we have more
-        // than one account, otherwise we use always the first one
-        if (multiplePhoneAccounts) {
-            return telepathyHelper.defaultCallAccount
-        } else {
-            for (var i in telepathyHelper.activeAccounts) {
-                var tmpAccount = telepathyHelper.activeAccounts[i]
-                if (tmpAccount.type == AccountEntry.PhoneAccount) {
-                    return tmpAccount
-                }
-            }
-        }
-        return null
-    }
 
     automaticOrientation: false
     implicitWidth: units.gu(40)
@@ -122,9 +97,15 @@ MainView {
                     return;
                 }
             }
-            account = Qt.binding(defaultPhoneAccount)
+            account = Qt.binding(function() { return accountsModel.defaultCallAccount })
         }
-        onDefaultCallAccountChanged: account = Qt.binding(defaultPhoneAccount)
+        onDefaultCallAccountChanged: {
+            account = Qt.binding(function() { return accountsModel.defaultCallAccount })
+        }
+    }
+
+    AccountsModel {
+        id: accountsModel
     }
 
     InputInfo {
