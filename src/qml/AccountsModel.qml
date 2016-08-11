@@ -51,10 +51,6 @@ Item {
                 model.push(account)
             }
         }
-        // do not show dual sim switch if there is only one sim
-        if (model.length == 1 && model[0].type == AccountEntry.PhoneAccount) {
-            return []
-        }
         return model
     }
 

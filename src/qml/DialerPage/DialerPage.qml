@@ -93,7 +93,7 @@ Page {
 
         Sections {
             id: headerSections
-            model: accountsModel.activeAccountNames
+            model: mainView.multiplePhoneAccounts ? accountsModel.activeAccountNames : []
             selectedIndex: accountsModel.defaultCallAccountIndex
             onSelectedIndexChanged: {
                 if (selectedIndex >= 0) {
