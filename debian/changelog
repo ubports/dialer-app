@@ -1,3 +1,11 @@
+dialer-app (0.1+16.10.20160817-0ubuntu1) yakkety; urgency=medium
+
+  [ Florian Boucault ]
+  * Improve startup time by avoid compiling HistoryPage until needed.
+    (LP: #1612307)
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Wed, 17 Aug 2016 17:54:43 +0000
+
 dialer-app (0.1+16.10.20160729-0ubuntu1) yakkety; urgency=medium
 
   * Replace the header and bottom edge by the new ones from SDK
