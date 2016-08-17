@@ -18,25 +18,36 @@
 
 import QtQuick 2.0
 import Ubuntu.Components 1.3
-import "../HistoryPage"
 
 BottomEdge {
     id: bottomEdge
 
     height: parent ? parent.height : 0
     hint.text: i18n.tr("+")
-    contentComponent: historyPageComponent
+    contentUrl: Qt.resolvedUrl("../HistoryPage/HistoryPage.qml")
     preloadContent: true
 
-    Component {
-        id: historyPageComponent
+    Binding {
+        target: bottomEdge.contentItem
+        property: "width"
+        value: bottomEdge.width
+    }
 
-        HistoryPage {
-            id: historyPage
-            bottomEdgeCommitted: bottomEdge.status === BottomEdge.Committed
-            bottomEdgeItem: bottomEdge
-            width: bottomEdge.width
-            height: bottomEdge.height
-        }
+    Binding {
+        target: bottomEdge.contentItem
+        property: "height"
+        value: bottomEdge.height
+    }
+
+    Binding {
+        target: bottomEdge.contentItem
+        property: "bottomEdgeCommitted"
+        value: bottomEdge.status === BottomEdge.Committed
+    }
+
+    Binding {
+        target: bottomEdge.contentItem
+        property: "bottomEdgeItem"
+        value: bottomEdge
     }
 }
