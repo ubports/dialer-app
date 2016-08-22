@@ -11,6 +11,10 @@ DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
 # Ref.: https://bugs.launchpad.net/ubuntu/+source/mesa/+bug/1585942
 testskip_architectures := arm64 powerpc s390x
 
+ifneq ($(DEB_BUILD_GNU_TYPE),$(DEB_HOST_GNU_TYPE))
+export DEB_BUILD_PROFILES := nocheck
+endif
+
 include /usr/share/dpkg/architecture.mk
 
 %:
@@ -21,7 +25,7 @@ override_dh_auto_configure:
 
 override_dh_auto_test:
 ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
-	CTEST_OUTPUT_ON_FAILURE=1 make -C obj-$(DEB_HOST_GNU_TYPE) test
+	CTEST_OUTPUT_ON_FAILURE=1 dh_auto_test
 endif
 
 override_dh_translations:
