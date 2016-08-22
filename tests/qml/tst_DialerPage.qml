@@ -35,6 +35,14 @@ Item {
     }
 
     Item {
+        id: view
+        property int minimumWidth: 0
+        property int maximumWidth: 0
+        property int minimumHeight: 0
+        property int maximumHeight: 0
+    }
+
+    Item {
         id: greeter
         property bool greeterActive: false
     }
