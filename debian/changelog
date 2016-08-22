@@ -1,3 +1,13 @@
+dialer-app (0.1+16.10.20160822-0ubuntu1) yakkety; urgency=medium
+
+  [ Florian Boucault ]
+  * Crossbuilding fixes
+
+  [ Gustavo Pichorim Boiko ]
+  * Fix selecting the default account.
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Mon, 22 Aug 2016 14:07:55 +0000
+
 dialer-app (0.1+16.10.20160817-0ubuntu1) yakkety; urgency=medium
 
   [ Florian Boucault ]
