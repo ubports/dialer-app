@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-22 05:42+0000\n"
+"X-Launchpad-Export-Date: 2016-08-23 06:06+0000\n"
 "X-Generator: Launchpad (build 18176)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -60,7 +60,7 @@ msgstr "(%1)"
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerBottomEdge.qml:27
+#: ../src/qml/DialerPage/DialerBottomEdge.qml:26
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
@@ -156,7 +156,7 @@ msgstr "Fehler beim Halten des Anrufs"
 #: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "Rufaufbau …"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:701
 msgid "Calling Line Presentation"
