@@ -50,6 +50,7 @@ AbstractButton {
         height: units.gu(3)
         name: "call-start"
         color: "white"
+        asynchronous: true
         z: 1
     }
 }
