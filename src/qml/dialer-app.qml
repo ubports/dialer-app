@@ -74,7 +74,7 @@ MainView {
     property bool hasCalls: callManager.hasCalls
 
     signal applicationReady
-    signal closeUSSDProgressIndicator
+    signal closeUSSDProgressDialog
 
     property string pendingNumberToDial: ""
     property bool accountReady: false
@@ -390,7 +390,7 @@ MainView {
         }
 
         if (checkUSSD(number)) {
-            PopupUtils.open(ussdProgressDialog)
+            PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdProgressDialog.qml"), mainView)
             account.ussdManager.initiate(number)
             return
         }
@@ -505,95 +505,6 @@ MainView {
         }
     }
 
-    Component {
-        id: flightModeProgressDialog
-        Dialog {
-            id: flightModeProgressIndicator
-            property bool emergencyMode: false
-            visible: false
-            title: i18n.tr("Disabling flight mode")
-            ActivityIndicator {
-                running: parent.visible
-            }
-            Connections {
-                target: telepathyHelper
-                onEmergencyCallsAvailableChanged: {
-                    if (!emergencyMode) {
-                        PopupUtils.close(flightModeProgressIndicator)
-                        return
-                    }
-                    flightModeTimer.start()
-                }
-            }
-            // FIXME: workaround to give modems some time to become available
-            Timer {
-                id: flightModeTimer
-                interval: 10000
-                repeat: false
-                onTriggered: {
-                    PopupUtils.close(flightModeProgressIndicator)
-                    if (telepathyHelper.emergencyCallsAvailable && pendingNumberToDial !== "") {
-                        if (!isEmergencyNumber(pendingNumberToDial)) {
-                            return;
-                        }
-
-                        callEmergency(pendingNumberToDial);
-                        pendingNumberToDial = "";
-                    }
-                }
-            }
-        }
-    }
-
-    Component {
-        id: ussdProgressDialog
-        Dialog {
-            id: ussdProgressIndicator
-            objectName: "ussdProgressIndicator"
-            visible: false
-            title: i18n.tr("Please wait")
-            ActivityIndicator {
-                running: parent.visible
-            }
-            Connections {
-                target: mainView
-                onCloseUSSDProgressIndicator: {
-                    PopupUtils.close(ussdProgressIndicator)
-                }
-
-            }
-        }
-    }
-
-    Component {
-        id: ussdErrorDialog
-        Dialog {
-            id: ussdError
-            objectName: "ussdErrorDialog"
-            visible: false
-            title: i18n.tr("Error")
-            text: i18n.tr("Invalid USSD code")
-            Button {
-                text: i18n.tr("Dismiss")
-                onClicked: PopupUtils.close(ussdError)
-            }
-        }
-    }
-
-    Component {
-        id: ussdResponseDialog
-        Dialog {
-            id: ussdResponse
-            visible: false
-            title: mainView.ussdResponseTitle
-            text: mainView.ussdResponseText
-            Button {
-                text: i18n.tr("Dismiss")
-                onClicked: PopupUtils.close(ussdResponse)
-            }
-        }
-    }
-
     // WORKAROUND: Due the missing feature on SDK, they can not detect if
     // there is a mouse attached to device or not. And this will cause the
     // bootom edge component to not work correct on desktop.
@@ -657,14 +568,14 @@ MainView {
             Connections {
                 target: modelData.ussdManager
                 onInitiateFailed: {
-                    mainView.closeUSSDProgressIndicator()
-                    PopupUtils.open(ussdErrorDialog)
+                    mainView.closeUSSDProgressDialog()
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdErrorDialog.qml"), mainView)
                 }
                 onInitiateUSSDComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                 }
                 onBarringComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Call Barring") + " - " + cbService + "\n" + ssOp)
                     mainView.ussdResponseText = ""
                     for (var prop in cbMap) {
@@ -672,10 +583,10 @@ MainView {
                             mainView.ussdResponseText += String(prop + ": " + cbMap[prop] + "\n")
                         }
                     }
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onForwardingComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Call Forwarding") + " - " + cfService + "\n" + ssOp)
                     mainView.ussdResponseText = ""
                     for (var prop in cfMap) {
@@ -683,10 +594,10 @@ MainView {
                             mainView.ussdResponseText += String(prop + ": " + cfMap[prop] + "\n")
                         }
                     }
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onWaitingComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Call Waiting") + " - " + ssOp)
                     mainView.ussdResponseText = ""
                     for (var prop in cwMap) {
@@ -694,31 +605,31 @@ MainView {
                             mainView.ussdResponseText += String(prop + ": " + cwMap[prop] + "\n")
                         }
                     }
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onCallingLinePresentationComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Calling Line Presentation") + " - " + ssOp)
                     mainView.ussdResponseText = status
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onConnectedLinePresentationComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Connected Line Presentation") + " - " + ssOp)
                     mainView.ussdResponseText = status
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onCallingLineRestrictionComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Calling Line Restriction") + " - " + ssOp)
                     mainView.ussdResponseText = status
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
                 onConnectedLineRestrictionComplete: {
-                    mainView.closeUSSDProgressIndicator()
+                    mainView.closeUSSDProgressDialog()
                     mainView.ussdResponseTitle = String(i18n.tr("Connected Line Restriction") + " - " + ssOp)
                     mainView.ussdResponseText = status
-                    PopupUtils.open(ussdResponseDialog)
+                    PopupUtils.open(Qt.resolvedUrl("Dialogs/UssdResponseDialog.qml"), mainView)
                 }
             }
         }

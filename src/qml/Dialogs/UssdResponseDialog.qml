@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -17,13 +17,17 @@
  */
 
 import QtQuick 2.0
+
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
-Item {
-    property string code: "*#06#"
-
-    function trigger() {
-        PopupUtils.open(Qt.resolvedUrl("IMEIDialog.qml"), mainView)
+Dialog {
+    id: ussdResponseDialog
+    visible: false
+    title: mainView.ussdResponseTitle
+    text: mainView.ussdResponseText
+    Button {
+        text: i18n.tr("Dismiss")
+        onClicked: PopupUtils.close(ussdResponseDialog)
     }
 }

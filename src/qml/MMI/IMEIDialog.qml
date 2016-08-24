@@ -17,13 +17,26 @@
  */
 
 import QtQuick 2.0
+import Ubuntu.Telephony 0.1
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
-Item {
-    property string code: "*#06#"
-
-    function trigger() {
-        PopupUtils.open(Qt.resolvedUrl("IMEIDialog.qml"), mainView)
+Dialog {
+    id: imeiDialog
+    visible: false
+    title: i18n.tr("IMEI")
+    text: {
+        var finalString = ""
+        for (var i in telepathyHelper.accounts) {
+            finalString += telepathyHelper.accounts[i].displayName
+            finalString += ":\n"
+            finalString += telepathyHelper.accounts[i].serial
+            finalString += "\n\n"
+        }
+        return finalString
+    }
+    Button {
+        text: i18n.tr("Dismiss")
+        onClicked: PopupUtils.close(imeiDialog)
     }
 }

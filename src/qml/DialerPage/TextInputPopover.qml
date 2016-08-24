@@ -101,4 +101,19 @@ Popover {
             }
         }
     }
+
+    InverseMouseArea {
+        anchors.fill: parent
+        onPressed: PopupUtils.close(popover)
+    }
+    // this is necessary otherwise the popover will close itself
+    // once the user tap "select all"
+    Connections {
+        target: popover.target
+        onSelectedTextChanged: {
+            if (input.selectedText != input.text) {
+                PopupUtils.close(popover)
+            }
+        }
+    }
 }

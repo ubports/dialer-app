@@ -56,5 +56,5 @@ class TestUSSD(DialerAppTestCase):
 
         self.assertThat(self.main_view.check_ussd_error_dialog_visible(),
                         Equals(False))
-        self.assertThat(self.main_view.check_ussd_progress_indicator_visible(),
+        self.assertThat(self.main_view.check_ussd_progress_dialog_visible(),
                         Equals(False))
