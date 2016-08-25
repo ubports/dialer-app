@@ -28,6 +28,7 @@ Button {
         id: buttonIcon
         anchors.centerIn: parent
         color: UbuntuColors.darkGrey
+        asynchronous: true
     }
     color: "transparent"
 }

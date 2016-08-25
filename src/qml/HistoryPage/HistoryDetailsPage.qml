@@ -212,6 +212,7 @@ Page {
                     width: units.gu(2)
                     height: units.gu(2)
                     anchors.centerIn: parent
+                    asynchronous: true
                 }
 
                 onClicked: mainView.sendMessage(phoneNumber)
@@ -231,6 +232,7 @@ Page {
                     width: units.gu(2)
                     height: units.gu(2)
                     anchors.centerIn: parent
+                    asynchronous: true
                 }
                 onClicked: {
                     mainView.populateDialpad(phoneNumber, mainView.account ? mainView.account.accountId : "");

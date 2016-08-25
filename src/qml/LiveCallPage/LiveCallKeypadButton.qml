@@ -43,6 +43,7 @@ AbstractButton {
         width: (iconWidth > 0) ? iconWidth : undefined
         height: (iconHeight > 0) ? iconHeight : undefined
         color: Theme.palette.normal.baseText
+        asynchronous: true
 
         Behavior on color {
             ColorAnimation {

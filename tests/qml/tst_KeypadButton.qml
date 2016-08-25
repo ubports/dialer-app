@@ -37,9 +37,9 @@ Item {
     }
 
     SignalSpy {
-        id: spyOnKeyPressed
+        id: spyOnPressed
         target: keypadButton
-        signalName: 'keyPressed'
+        signalName: 'onPressed'
     }
 
     UbuntuTestCase {
@@ -53,7 +53,7 @@ Item {
         }
 
         function cleanup() {
-            spyOnKeyPressed.clear()
+            spyOnPressed.clear()
         }
 
         function test_clickButtonMustScaleLabelsContainer() {
@@ -88,14 +88,14 @@ Item {
             tryCompare(ubuntuShape, 'opacity', 0)
         }
 
-        function test_clickButtonMustEmitKeyPressed() {
+        function test_clickButtonMustEmitPressed() {
             mouseClick(
                 keypadButton, keypadButton.width / 2, keypadButton.height / 2)
 
-            spyOnKeyPressed.wait()
+            spyOnPressed.wait()
             compare(
-                spyOnKeyPressed.count, 1,
-                'keyPressed signal was not emitted.')
+                spyOnPressed.count, 1,
+                'pressed signal was not emitted.')
         }
 
     }

@@ -35,30 +35,6 @@ FocusScope {
 
     onValueChanged: input.deselect()
 
-    // We can't trigger the TextInputPopover directly, so we need to 
-    // create a copy here and trigger when needed
-    Component {
-        id: popoverComponent
-        TextInputPopover {
-            id: popover
-            target: input
-            InverseMouseArea {
-                anchors.fill: parent
-                onPressed: PopupUtils.close(popover)
-            }
-            // this is necessary otherwise the popover will close itself
-            // once the user tap "select all"
-            Connections {
-                target: input
-                onSelectedTextChanged: {
-                    if (input.selectedText != input.text) {
-                        PopupUtils.close(popover)
-                    }
-                }
-            }
-        }
-    }
-
     PhoneNumberField {
         id: input
 
@@ -142,7 +118,7 @@ FocusScope {
         }
         onPressAndHold: {
             input.cursorPosition = input.positionAt(mouseX,TextInput.CursorOnCharacter)
-            PopupUtils.open(popoverComponent, input)
+            PopupUtils.open(Qt.resolvedUrl("TextInputPopover.qml"), input, {target: input})
         }
     }
 

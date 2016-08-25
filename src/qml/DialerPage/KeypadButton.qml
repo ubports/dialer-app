@@ -19,7 +19,7 @@
 import QtQuick 2.0
 import Ubuntu.Components 1.3
 
-AbstractButton {
+MouseArea {
     id: button
 
     width: units.gu(11.33)
@@ -32,9 +32,6 @@ AbstractButton {
     property int keycode
     property bool isCorner: false
     property int corner
-    property alias pressed: mouseArea.pressed
-
-    signal keyPressed()
 
     UbuntuShape {
         objectName: "keypadButtonUbuntuShape"
@@ -94,14 +91,7 @@ AbstractButton {
             opacity: 0.8
             width: units.gu(2)
             height: units.gu(2)
+            asynchronous: true
         }
-    }
-
-    // WORKAROUND: AbstractButton does not provide onPressed()
-    MouseArea {
-        id: mouseArea
-        anchors.fill: parent
-        onPressed: button.keyPressed()
-        onPressAndHold: button.pressAndHold()
     }
 }

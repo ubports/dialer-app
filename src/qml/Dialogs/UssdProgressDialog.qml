@@ -1,5 +1,5 @@
 /*
- * Copyright 2012-2013 Canonical Ltd.
+ * Copyright 2012-2016 Canonical Ltd.
  *
  * This file is part of dialer-app.
  *
@@ -17,13 +17,23 @@
  */
 
 import QtQuick 2.0
+
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 
-Item {
-    property string code: "*#06#"
+Dialog {
+    id: ussdProgressDialog
+    objectName: "ussdProgressDialog"
+    visible: false
+    title: i18n.tr("Please wait")
+    ActivityIndicator {
+        running: parent.visible
+    }
+    Connections {
+        target: mainView
+        onCloseUSSDProgressDialog: {
+            PopupUtils.close(ussdProgressDialog)
+        }
 
-    function trigger() {
-        PopupUtils.open(Qt.resolvedUrl("IMEIDialog.qml"), mainView)
     }
 }

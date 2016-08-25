@@ -42,5 +42,6 @@ ListItem.Empty {
         width: units.gu(2)
         height: width
         color: "white"
+        asynchronous: true
     }
 }

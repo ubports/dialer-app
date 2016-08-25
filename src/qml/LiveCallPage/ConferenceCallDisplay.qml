@@ -90,6 +90,7 @@ Column {
                 Icon {
                     name: "call-end"
                     color: "white"
+                    asynchronous: true
                     anchors {
                         top: parent.top
                         bottom: parent.bottom

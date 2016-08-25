@@ -45,6 +45,7 @@ AbstractButton {
         height: units.gu(3)
         name: "call-end"
         color: "white"
+        asynchronous: true
         z: 1
     }
 }
