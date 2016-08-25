@@ -1,3 +1,10 @@
+dialer-app (0.1+16.10.20160825.2-0ubuntu1) yakkety; urgency=medium
+
+  [ Florian Boucault ]
+  * Improve startup time (300ms for hot starts on krillin):
+
+ -- bill.filler@canonical.com <bill.filler@canonical.com>  Thu, 25 Aug 2016 20:19:35 +0000
+
 dialer-app (0.1+16.10.20160822-0ubuntu1) yakkety; urgency=medium
 
   [ Florian Boucault ]
