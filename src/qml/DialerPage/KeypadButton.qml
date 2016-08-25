@@ -33,8 +33,6 @@ MouseArea {
     property bool isCorner: false
     property int corner
 
-    signal keyPressed()
-
     UbuntuShape {
         objectName: "keypadButtonUbuntuShape"
         anchors.fill: parent

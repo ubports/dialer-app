@@ -39,7 +39,7 @@ Item {
     SignalSpy {
         id: spyOnPressed
         target: keypadButton
-        signalName: 'pressed'
+        signalName: 'onPressed'
     }
 
     UbuntuTestCase {
