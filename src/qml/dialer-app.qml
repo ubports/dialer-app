@@ -301,7 +301,7 @@ MainView {
         if (telepathyHelper.flightMode) {
             pendingNumberToDial = number;
             telepathyHelper.flightMode = false;
-            PopupUtils.open(flightModeProgressDialog, mainView, {"emergencyMode": true})
+            PopupUtils.open(Qt.resolvedUrl("Dialogs/FlightModeProgressDialog.qml"), mainView, {"emergencyMode": true})
             return;
         }
 

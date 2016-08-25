@@ -48,7 +48,7 @@ Component {
                     color: UbuntuColors.orange
                     onClicked: {
                         telepathyHelper.flightMode = false
-                        PopupUtils.open(flightModeProgressDialog, mainView, {})
+                        PopupUtils.open(Qt.resolvedUrl("FlightModeProgressDialog.qml"), mainView)
                         PopupUtils.close(dialogue)
                         Qt.inputMethod.hide()
                     }
