@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-08-06 05:44+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-26 05:53+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -60,7 +60,7 @@ msgstr ""
 msgid "*"
 msgstr "*"
 
-#: ../src/qml/DialerPage/DialerBottomEdge.qml:27
+#: ../src/qml/DialerPage/DialerBottomEdge.qml:26
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "+"
 msgstr "+"
