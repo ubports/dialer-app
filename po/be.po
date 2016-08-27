@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Launchpad-Export-Date: 2016-08-26 05:53+0000\n"
+"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -131,15 +131,15 @@ msgstr "Усе"
 msgid "Bluetooth device"
 msgstr "Прылада Bluetooth"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:560
 msgid "Call Barring"
 msgstr "Забарона выклікаў"
 
-#: ../src/qml/dialer-app.qml:679
+#: ../src/qml/dialer-app.qml:571
 msgid "Call Forwarding"
 msgstr "Пераадрасацыя выклікаў"
 
-#: ../src/qml/dialer-app.qml:690
+#: ../src/qml/dialer-app.qml:582
 msgid "Call Waiting"
 msgstr "Чаканне выклікаў"
 
@@ -155,18 +155,18 @@ msgstr "Не атрымалася звязацца"
 msgid "Call holding failure"
 msgstr "Не ўдалося ўтрымаць званок"
 
-#: ../src/qml/DialerPage/DialerPage.qml:516
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:489
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Тэлефануем"
 
-#: ../src/qml/dialer-app.qml:701
+#: ../src/qml/dialer-app.qml:593
 msgid "Calling Line Presentation"
 msgstr "Прадстаўленне лініі выклікаў"
 
-#: ../src/qml/dialer-app.qml:713
+#: ../src/qml/dialer-app.qml:605
 msgid "Calling Line Restriction"
 msgstr "Абмежаванне лініі выклікаў"
 
@@ -182,7 +182,7 @@ msgstr "Скасаваць"
 msgid "Change all Call associations to %1?"
 msgstr "Звязаць усе званкі з %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:88
+#: ../src/qml/DialerPage/DialerPage.qml:67
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Закрыць"
@@ -196,11 +196,11 @@ msgstr "Канферэнцыя"
 msgid "Conference call failure"
 msgstr "Не атрымалася арганізаваць канферэнцыю"
 
-#: ../src/qml/dialer-app.qml:707
+#: ../src/qml/dialer-app.qml:599
 msgid "Connected Line Presentation"
 msgstr "Прадстаўленне злучанай лініі"
 
-#: ../src/qml/dialer-app.qml:719
+#: ../src/qml/dialer-app.qml:611
 msgid "Connected Line Restriction"
 msgstr "Абмежаванні злучанай лініі"
 
@@ -210,7 +210,7 @@ msgid "Contact Details"
 msgstr "Падрабязнасці аб запісу кантакта"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
-#: ../src/qml/DialerPage/DialerPage.qml:69
+#: ../src/qml/DialerPage/DialerPage.qml:48
 msgid "Contacts"
 msgstr "Кантакты"
 
@@ -219,7 +219,7 @@ msgid "DEF"
 msgstr "ДЕЖЗ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:251
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
 msgstr "Выдаліць"
@@ -232,12 +232,13 @@ msgstr "Падрабязнасці"
 msgid "Disable"
 msgstr "Адключыць"
 
-#: ../src/qml/dialer-app.qml:514
+#: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
 msgstr "Выключаем рэжым палёту"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:577
-#: ../src/qml/dialer-app.qml:591
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:31
+#: ../src/qml/Dialogs/UssdResponseDialog.qml:30
+#: ../src/qml/MMI/IMEIDialog.qml:39
 msgid "Dismiss"
 msgstr "Адкінуць"
 
@@ -249,16 +250,16 @@ msgstr "Больш не пытацца"
 msgid "Edit"
 msgstr "Рэдагаваць"
 
-#: ../src/qml/DialerPage/DialerPage.qml:139
-#: ../src/qml/DialerPage/DialerPage.qml:149
+#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:132
 msgid "Emergency Calls"
 msgstr "Экстраныя выклікі"
 
-#: ../src/qml/DialerPage/DialerPage.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
 msgstr "Увядзіце нумар"
 
-#: ../src/qml/dialer-app.qml:574
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
 msgstr "Памылка"
 
@@ -278,7 +279,7 @@ msgstr "Не атрымалася паставіць бягучы званок �
 msgid "Favorites"
 msgstr "Улюбёнае"
 
-#: ../src/qml/DialerPage/DialerPage.qml:144
+#: ../src/qml/DialerPage/DialerPage.qml:127
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Рэжым палёту"
@@ -295,17 +296,17 @@ msgstr "ІЙКЛ"
 msgid "Got it"
 msgstr "Выканана"
 
-#: ../src/qml/MMI/IMEI.qml:36
+#: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Уваходныя"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
 msgstr "Некарэктны код USSD"
 
@@ -330,7 +331,7 @@ msgid "Merge calls"
 msgstr "Аб'яднаць выклікі"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:326
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "Прапушчаныя"
@@ -344,7 +345,7 @@ msgstr "Мабільны"
 msgid "No"
 msgstr "Не"
 
-#: ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:343
 msgid "No SIM card selected"
 msgstr "Не выбраная SIM-картка"
 
@@ -352,8 +353,8 @@ msgstr "Не выбраная SIM-картка"
 msgid "No calls"
 msgstr "Няма званкоў"
 
-#: ../src/qml/DialerPage/DialerPage.qml:155 ../src/qml/dialer-app.qml:381
-#: ../src/qml/dialer-app.qml:386
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:367
 msgid "No network"
 msgstr "Няма сеткі"
 
@@ -370,7 +371,7 @@ msgid "On hold"
 msgstr "Чаканне"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
 msgid "Outgoing"
 msgstr "Выходныя"
 
@@ -378,7 +379,7 @@ msgstr "Выходныя"
 msgid "PQRS"
 msgstr "ФХЦЧ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:153
+#: ../src/qml/DialerPage/DialerPage.qml:136
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Тэлефон"
@@ -412,11 +413,11 @@ msgstr ""
 "href=\"system_settings\">Сістэмныя параметры &gt; Бяспека &amp; "
 "Прыватнасць</a>."
 
-#: ../src/qml/dialer-app.qml:554
+#: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
 msgstr "Калі ласка, пачакайце"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
 msgstr "Прыватнае"
 
@@ -425,7 +426,7 @@ msgstr "Прыватнае"
 msgid "Private number"
 msgstr "Асабісты нумар"
 
-#: ../src/qml/DialerPage/DialerPage.qml:529
+#: ../src/qml/DialerPage/DialerPage.qml:502
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "Нядаўнія"
@@ -434,7 +435,7 @@ msgstr "Нядаўнія"
 msgid "SIM Card is locked"
 msgstr "SIM-картка заблакаваная"
 
-#: ../src/qml/DialerPage/DialerPage.qml:147
+#: ../src/qml/DialerPage/DialerPage.qml:130
 msgid "SIM Locked"
 msgstr "SIM-картка заблакаваная"
 
@@ -466,7 +467,7 @@ msgstr ""
 msgid "Send message"
 msgstr "Адправіць паведамленне"
 
-#: ../src/qml/DialerPage/DialerPage.qml:74
+#: ../src/qml/DialerPage/DialerPage.qml:53
 msgid "Settings"
 msgstr "Параметры"
 
@@ -499,12 +500,12 @@ msgstr "Пераключыцца на тыповую SIM-картку:"
 msgid "TUV"
 msgstr "ШЫ"
 
-#: ../src/qml/dialer-app.qml:387
+#: ../src/qml/dialer-app.qml:368
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Зараз на %1 няма доступу да сеткі"
 
-#: ../src/qml/dialer-app.qml:381 ../src/qml/dialer-app.qml:388
+#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
 msgid "There is currently no network."
 msgstr "Зараз няма доступу да сеткі."
 
@@ -547,7 +548,7 @@ msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 "Вам варта выключыць рэжым палёту, каб мець магчымасць ажыццяўляць званкі"
 
-#: ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:343
 msgid "You need to select a SIM card"
 msgstr "Вам варта абраць SIM-картку"
 

@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-26 05:53+0000\n"
+"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
 "X-Generator: Launchpad (build 18179)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -127,15 +127,15 @@ msgstr "Όλες"
 msgid "Bluetooth device"
 msgstr "Συσκευή Bluetooth"
 
-#: ../src/qml/dialer-app.qml:668
+#: ../src/qml/dialer-app.qml:560
 msgid "Call Barring"
 msgstr "Φραγή κλήσης"
 
-#: ../src/qml/dialer-app.qml:679
+#: ../src/qml/dialer-app.qml:571
 msgid "Call Forwarding"
 msgstr "Προώθηση κλήσεων"
 
-#: ../src/qml/dialer-app.qml:690
+#: ../src/qml/dialer-app.qml:582
 msgid "Call Waiting"
 msgstr "Αναμονή κλήσης"
 
@@ -151,18 +151,18 @@ msgstr "Η κλήση απέτυχε"
 msgid "Call holding failure"
 msgstr "Αποτυχία αναμονής κλήσης"
 
-#: ../src/qml/DialerPage/DialerPage.qml:516
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:112
+#: ../src/qml/DialerPage/DialerPage.qml:489
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Γίνεται κλήση"
 
-#: ../src/qml/dialer-app.qml:701
+#: ../src/qml/dialer-app.qml:593
 msgid "Calling Line Presentation"
 msgstr "Αναγνώριση κλήσης"
 
-#: ../src/qml/dialer-app.qml:713
+#: ../src/qml/dialer-app.qml:605
 msgid "Calling Line Restriction"
 msgstr "Απόκρυψη αριθμού"
 
@@ -178,7 +178,7 @@ msgstr "Ακύρωση"
 msgid "Change all Call associations to %1?"
 msgstr "Να γίνονται όλες οι κλήσεις από %1;"
 
-#: ../src/qml/DialerPage/DialerPage.qml:88
+#: ../src/qml/DialerPage/DialerPage.qml:67
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Κλείσιμο"
@@ -192,11 +192,11 @@ msgstr "Συνδιάσκεψη"
 msgid "Conference call failure"
 msgstr "Αποτυχία κλήσης συνδιάσκεψης"
 
-#: ../src/qml/dialer-app.qml:707
+#: ../src/qml/dialer-app.qml:599
 msgid "Connected Line Presentation"
 msgstr "Παρουσίαση συνδεθείσας γραμμής"
 
-#: ../src/qml/dialer-app.qml:719
+#: ../src/qml/dialer-app.qml:611
 msgid "Connected Line Restriction"
 msgstr "Απαγόρευση παρουσίασης συνδεθείσας γραμμής"
 
@@ -206,7 +206,7 @@ msgid "Contact Details"
 msgstr "Λεπτομέρειες επαφής"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
-#: ../src/qml/DialerPage/DialerPage.qml:69
+#: ../src/qml/DialerPage/DialerPage.qml:48
 msgid "Contacts"
 msgstr "Επαφές"
 
@@ -215,7 +215,7 @@ msgid "DEF"
 msgstr "ΔΕΖ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:251
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
 msgstr "Διαγραφή"
@@ -228,12 +228,13 @@ msgstr "Λεπτομέρειες"
 msgid "Disable"
 msgstr "Απενεργοποίηση"
 
-#: ../src/qml/dialer-app.qml:514
+#: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
 msgstr "Απενεργοποίηση λειτουργίας πτήσης"
 
-#: ../src/qml/MMI/IMEI.qml:48 ../src/qml/dialer-app.qml:577
-#: ../src/qml/dialer-app.qml:591
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:31
+#: ../src/qml/Dialogs/UssdResponseDialog.qml:30
+#: ../src/qml/MMI/IMEIDialog.qml:39
 msgid "Dismiss"
 msgstr "Απόρριψη"
 
@@ -245,16 +246,16 @@ msgstr "Να μην ερωτηθώ ξανά"
 msgid "Edit"
 msgstr "Επεξεργασία"
 
-#: ../src/qml/DialerPage/DialerPage.qml:139
-#: ../src/qml/DialerPage/DialerPage.qml:149
+#: ../src/qml/DialerPage/DialerPage.qml:122
+#: ../src/qml/DialerPage/DialerPage.qml:132
 msgid "Emergency Calls"
 msgstr "Κλήσεις έκτακτης ανάγκης"
 
-#: ../src/qml/DialerPage/DialerPage.qml:315
+#: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
 msgstr "Πληκτρολογήστε έναν αριθμό"
 
-#: ../src/qml/dialer-app.qml:574
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
 msgstr "Σφάλμα"
 
@@ -274,7 +275,7 @@ msgstr "Αποτυχία ενεργοποίησης κλήσης σε αναμο
 msgid "Favorites"
 msgstr "Αγαπημένα"
 
-#: ../src/qml/DialerPage/DialerPage.qml:144
+#: ../src/qml/DialerPage/DialerPage.qml:127
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Λειτουργία πτήσης"
@@ -291,17 +292,17 @@ msgstr "ΗΘΙ"
 msgid "Got it"
 msgstr "Ελήφθη"
 
-#: ../src/qml/MMI/IMEI.qml:36
+#: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Εισερχόμενη"
 
-#: ../src/qml/dialer-app.qml:575
+#: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
 msgstr "Μη έγκυρος κωδικός USSD"
 
@@ -326,7 +327,7 @@ msgid "Merge calls"
 msgstr "Συγχώνευση κλήσεων"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:326
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "Αναπάντητες"
@@ -340,7 +341,7 @@ msgstr "Κινητό"
 msgid "No"
 msgstr "Όχι"
 
-#: ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:343
 msgid "No SIM card selected"
 msgstr "Δεν επιλέχτηκε κάρτα SIM"
 
@@ -348,8 +349,8 @@ msgstr "Δεν επιλέχτηκε κάρτα SIM"
 msgid "No calls"
 msgstr "Καμία κλήση"
 
-#: ../src/qml/DialerPage/DialerPage.qml:155 ../src/qml/dialer-app.qml:381
-#: ../src/qml/dialer-app.qml:386
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:367
 msgid "No network"
 msgstr "Απουσία δικτύου"
 
@@ -366,7 +367,7 @@ msgid "On hold"
 msgstr "Σε αναμονή"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
 msgid "Outgoing"
 msgstr "Εξερχόμενη"
 
@@ -374,7 +375,7 @@ msgstr "Εξερχόμενη"
 msgid "PQRS"
 msgstr "ΠΡΣ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:153
+#: ../src/qml/DialerPage/DialerPage.qml:136
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Τηλέφωνο"
@@ -407,11 +408,11 @@ msgstr ""
 "href=\"system_settings\">Ρυθμίσεις συστήματος &gt; Ασφάλεια &amp; "
 "ιδιωτικότητα</a>."
 
-#: ../src/qml/dialer-app.qml:554
+#: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
 msgstr "Παρακαλώ περιμένετε"
 
-#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:140
+#: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
 msgstr "Προσωπικό"
 
@@ -420,7 +421,7 @@ msgstr "Προσωπικό"
 msgid "Private number"
 msgstr "Με απόκρυψη"
 
-#: ../src/qml/DialerPage/DialerPage.qml:529
+#: ../src/qml/DialerPage/DialerPage.qml:502
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "Πρόσφατες"
@@ -429,7 +430,7 @@ msgstr "Πρόσφατες"
 msgid "SIM Card is locked"
 msgstr "Η κάρτα SIM είναι κλειδωμένη"
 
-#: ../src/qml/DialerPage/DialerPage.qml:147
+#: ../src/qml/DialerPage/DialerPage.qml:130
 msgid "SIM Locked"
 msgstr "Κλειδωμένη SIM"
 
@@ -462,7 +463,7 @@ msgstr ""
 msgid "Send message"
 msgstr "Αποστολή μηνύματος"
 
-#: ../src/qml/DialerPage/DialerPage.qml:74
+#: ../src/qml/DialerPage/DialerPage.qml:53
 msgid "Settings"
 msgstr "Ρυθμίσεις"
 
@@ -495,12 +496,12 @@ msgstr "Αλλαγή στην προεπιλεγμένη SIM:"
 msgid "TUV"
 msgstr "ΤΥΦ"
 
-#: ../src/qml/dialer-app.qml:387
+#: ../src/qml/dialer-app.qml:368
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Προς το παρόν δεν υπάρχει δίκτυο σε %1"
 
-#: ../src/qml/dialer-app.qml:381 ../src/qml/dialer-app.qml:388
+#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
 msgid "There is currently no network."
 msgstr "Αυτήν την στιγμή δεν υπάρχει δίκτυο."
 
@@ -543,7 +544,7 @@ msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 "Πρέπει να απενεργοποιήσετε τη λειτουργία πτήσης για να κάνετε κλήσεις"
 
-#: ../src/qml/dialer-app.qml:362
+#: ../src/qml/dialer-app.qml:343
 msgid "You need to select a SIM card"
 msgstr "Πρέπει να επιλέξετε μια κάρτα SIM"
 
