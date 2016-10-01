@@ -43,7 +43,7 @@ Component {
                             anchors.fill: parent
                             onClicked: {
                                 PopupUtils.close(dialogue)
-                                telepathyHelper.setDefaultAccount(TelepathyHelper.Call, modelData)
+                                telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, modelData)
                             }
                         }
                     }

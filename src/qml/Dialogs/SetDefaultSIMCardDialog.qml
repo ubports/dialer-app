@@ -50,7 +50,7 @@ Component {
                     text: i18n.tr("Yes")
                     color: UbuntuColors.orange
                     onClicked: {
-                        telepathyHelper.setDefaultAccount(TelepathyHelper.Call, mainView.account)
+                        telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, mainView.account)
                         PopupUtils.close(dialogue)
                         mainView.call(phoneNumber, true)
                         Qt.inputMethod.hide()
