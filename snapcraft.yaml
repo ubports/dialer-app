@@ -1,0 +1,49 @@
+name: dialer-app
+version: 0.1
+summary: Dialer application for Ubuntu
+description: Dialer application for Ubuntu
+confinement: devmode  # use "strict" to enforce system access only via declared interfaces
+grade: devel
+
+apps:
+    dialer-app:
+        command: desktop-launch $SNAP/usr/bin/dialer-app --desktop_file_hint=unity8 "$@"
+        plugs: [unity7, opengl]
+
+parts:
+    dialer-app:
+        plugin: cmake
+        configflags: [-DCMAKE_INSTALL_PREFIX=/usr, -DCLICK_MODE=off]
+        source: .
+        build-packages:
+            - cmake
+            - intltool
+            - pkg-config
+            - qt5-default
+            - qtbase5-dev
+            - qtdeclarative5-dev
+            - qtdeclarative5-dev-tools
+
+        stage-packages:
+            - qml-module-qt-labs-settings
+            - qml-module-qtsysteminfo
+            - qml-module-ofono
+            - qml-module-ubuntu-components
+            - qtdeclarative5-gsettings1.0
+            - qtdeclarative5-ubuntu-addressbook0.1
+            - qtdeclarative5-ubuntu-content1
+            - qtdeclarative5-ubuntu-history0.1
+            - qtdeclarative5-ubuntu-telephony0.1
+            - qtdeclarative5-ubuntu-telephony-phonenumber0.1
+            - qtdeclarative5-ubuntu-keyboard-extensions0.1
+            - qtdeclarative5-qtcontacts-plugin
+            - qtubuntu-desktop
+            - suru-icon-theme
+            - mir-graphics-drivers-desktop
+
+        snap:
+            - -usr/lib/python3
+            - -usr/share/doc
+            - -usr/include         
+
+        after: [desktop-qt5]
