@@ -68,6 +68,13 @@ Item {
         property bool flightMode: false
         property var activeAccounts: [testAccount]
         property alias accounts: telepathyHelper.activeAccounts
+        property var displayedAccounts: {
+            var accounts = {}
+            accounts["all"] = [testAccount]
+            accounts["active"]= [testAccount];
+            return accounts
+        }
+        property alias phoneAccounts: telepathyHelper.displayedAccounts
     }
 
     Item {

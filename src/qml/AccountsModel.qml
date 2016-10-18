@@ -41,19 +41,7 @@ Item {
         return index;
     }
 
-    property var activeAccounts: {
-        var model = []
-
-        // populate model with all active phone accounts
-        for (var i in telepathyHelper.activeAccounts) {
-            var account = telepathyHelper.activeAccounts[i]
-            if (account.type == AccountEntry.PhoneAccount) {
-                model.push(account)
-            }
-        }
-        return model
-    }
-
+    property var activeAccounts: telepathyHelper.displayedAccounts.active
     property var activeAccountNames: {
         var accountNames = []
         for (var i in activeAccounts) {

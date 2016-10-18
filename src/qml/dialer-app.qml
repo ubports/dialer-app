@@ -81,19 +81,31 @@ MainView {
         target: telepathyHelper
         onSetupReady: {
             telepathyReady = true
+            accountReady = true;
+            mainView.applicationReady()
+
             if (multiplePhoneAccounts && !telepathyHelper.defaultCallAccount &&
                 dualSimSettings.mainViewDontAskCount < 3 && pageStackNormalMode.depth === 1 && !mainView.greeterMode) {
                 PopupUtils.open(Qt.createComponent("Dialogs/NoDefaultSIMCardDialog.qml").createObject(mainView))
             }
+
+            if (!telepathyHelper.ready) {
+                return;
+            }
+
+            if (pendingNumberToDial != "") {
+                callManager.startCall(pendingNumberToDial, mainView.account.accountId);
+            }
+            pendingNumberToDial = "";
         }
     }
 
     Connections {
-        target: telepathyHelper
+        target: accountsModel
         onActiveAccountsChanged: {
             // check if the selected account is not active anymore
-            for (var i in telepathyHelper.activeAccounts) {
-                if (telepathyHelper.activeAccounts[i] == account) {
+            for (var i in accountsModel.activeAccounts) {
+                if (accountsModel.activeAccounts[i] == account) {
                     return;
                 }
             }
@@ -177,8 +189,8 @@ MainView {
         // in the selected account?
 
         // check for specific account emergency numbers
-        for (var i in telepathyHelper.accounts) {
-            var account = telepathyHelper.accounts[i];
+        for (var i in telepathyHelper.accounts.all) {
+            var account = telepathyHelper.accounts.all[i];
             for (var j in account.emergencyNumbers) {
                 if (number == account.emergencyNumbers[j]) {
                     return true;
@@ -292,14 +304,14 @@ MainView {
         // check if the selected account is active and can make emergency calls
         if (mainView.account && mainView.account.active && mainView.account.emergencyCallsAvailable) {
             account = mainView.account
-        } else if (telepathyHelper.activeAccounts.length > 0) {
+        } else if (accountsModel.activeAccounts.length > 0) {
             // now try to use one of the connected accounts
-            account = telepathyHelper.activeAccounts[0];
+            account = accountsModel.activeAccounts[0];
         } else {
             // if no account is active, use any account that can make emergency calls
-            for (var i in telepathyHelper.accounts) {
-                if (telepathyHelper.accounts[i].emergencyCallsAvailable) {
-                    account = telepathyHelper.accounts[i];
+            for (var i in telepathyHelper.accounts.all) {
+                if (telepathyHelper.accounts.all[i].emergencyCallsAvailable) {
+                    account = telepathyHelper.accounts.all[i];
                     break;
                 }
             }
@@ -365,7 +377,7 @@ MainView {
 
         if (!mainView.account.connected) {
             showNotification(i18n.tr("No network"),
-                             telepathyHelper.accountIds.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
+                             telepathyHelper.displayedAccounts.active.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
                                                                     : i18n.tr("There is currently no network."))
             return
         }
@@ -496,23 +508,6 @@ MainView {
     }
 
     Connections {
-        target: telepathyHelper
-        onSetupReady: {
-            accountReady = true;
-            mainView.applicationReady()
-
-            if (!telepathyHelper.ready) {
-                return;
-            }
-
-            if (pendingNumberToDial != "") {
-                callManager.startCall(pendingNumberToDial, mainView.account.accountId);
-            }
-            pendingNumberToDial = "";
-        }
-    }
-
-    Connections {
         target: callManager
         onHasCallsChanged: {
             if (!callManager.hasCalls) {
@@ -544,7 +539,7 @@ MainView {
     }
 
     Repeater {
-        model: telepathyHelper.phoneAccounts
+        model: telepathyHelper.phoneAccounts.all
         Item {
             Connections {
                 target: modelData.ussdManager
