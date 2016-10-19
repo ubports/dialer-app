@@ -377,7 +377,7 @@ MainView {
 
         if (!mainView.account.connected) {
             showNotification(i18n.tr("No network"),
-                             telepathyHelper.displayedAccounts.active.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
+                             telepathyHelper.voiceAccounts.displayed.length >= 2 ? i18n.tr("There is currently no network on %1").arg(mainView.account.displayName)
                                                                     : i18n.tr("There is currently no network."))
             return
         }

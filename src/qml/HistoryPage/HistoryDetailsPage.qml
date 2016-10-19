@@ -304,7 +304,7 @@ Page {
                 fontSize: "x-small"
                 text: telepathyHelper.accountForId(modelData.accountId).displayName
                 verticalAlignment: Text.AlignVCenter
-                visible: telepathyHelper.displayedAccounts.active > 1
+                visible: telepathyHelper.voiceAccounts.displayed.length > 1
             }
 
             Label {

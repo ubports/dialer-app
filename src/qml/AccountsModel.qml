@@ -41,7 +41,7 @@ Item {
         return index;
     }
 
-    property var activeAccounts: telepathyHelper.displayedAccounts.active
+    property var activeAccounts: telepathyHelper.voiceAccounts.displayed
     property var activeAccountNames: {
         var accountNames = []
         for (var i in activeAccounts) {
