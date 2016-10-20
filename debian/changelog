@@ -1,3 +1,10 @@
+dialer-app (0.1+17.04.20161020-0ubuntu1) zesty; urgency=medium
+
+  [ Renato Araujo Oliveira Filho ]
+  * Snappy package.
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Thu, 20 Oct 2016 15:15:55 +0000
+
 dialer-app (0.1+16.10.20160825.2-0ubuntu1) yakkety; urgency=medium
 
   [ Florian Boucault ]
