@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-27 06:00+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2016-10-28 05:55+0000\n"
+"X-Generator: Launchpad (build 18246)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -226,7 +226,7 @@ msgstr "Detajet"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Çaktivizo"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
@@ -244,7 +244,7 @@ msgstr "Mos pyet përsëri"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "Ndrysho"
 
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
@@ -278,7 +278,7 @@ msgstr "Të Parapëlqyerat"
 #: ../src/qml/DialerPage/DialerPage.qml:127
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Mënyrë Fluturimi"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
@@ -290,7 +290,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Kuptova"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -334,7 +334,7 @@ msgstr "Humbur"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Telefon Celular"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -343,7 +343,7 @@ msgstr "Jo"
 
 #: ../src/qml/dialer-app.qml:343
 msgid "No SIM card selected"
-msgstr ""
+msgstr "Nuk është zgjedhur një kartë SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:120
 msgid "No calls"
@@ -537,7 +537,7 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:343
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "Duhet të zgjidhni një kartë SIM"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112

@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2016-10-28 05:56+0000\n"
+"X-Generator: Launchpad (build 18246)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -32,8 +32,8 @@ msgstr "%1 - en espèra"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ora"
-msgstr[1] "%1 oras"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
@@ -240,7 +240,7 @@ msgstr "Regetar"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Demandar pas tornarmai"
+msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
@@ -304,7 +304,7 @@ msgstr "Recepcion"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr "Còde USSD invalid"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
@@ -386,7 +386,7 @@ msgstr "Aplicacion de telefonia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Phone Speaker"
-msgstr "Naut-parlaire telefonic"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
@@ -485,7 +485,7 @@ msgstr "Permutar las sonadas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Bascuolar sus la carta SIM per defaut :"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
@@ -536,7 +536,7 @@ msgstr "Ièr"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Vos cal desactivar lo mòde avion per fin de poder passar d'apèls"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:343
 msgid "You need to select a SIM card"
