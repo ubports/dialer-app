@@ -435,8 +435,8 @@ Page {
                     if (telepathyHelper.flightMode) {
                         denyEmergencyCall = true
                     } else {
-                        for (var i in telepathyHelper.activeAccounts) {
-                            var account = telepathyHelper.activeAccounts[i]
+                        for (var i in accountsModel.activeAccounts) {
+                            var account = accountsModel.activeAccounts[i]
                             if (account.type == AccountEntry.PhoneAccount) {
                                 denyEmergencyCall = true;
                             }

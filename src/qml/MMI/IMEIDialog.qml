@@ -27,10 +27,11 @@ Dialog {
     title: i18n.tr("IMEI")
     text: {
         var finalString = ""
-        for (var i in telepathyHelper.accounts) {
-            finalString += telepathyHelper.accounts[i].displayName
+        for (var i in telepathyHelper.phoneAccounts.all) {
+            var account = telepathyHelper.phoneAccounts.all[i]
+            finalString += account.displayName
             finalString += ":\n"
-            finalString += telepathyHelper.accounts[i].serial
+            finalString += account.serial
             finalString += "\n\n"
         }
         return finalString

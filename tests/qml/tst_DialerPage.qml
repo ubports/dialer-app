@@ -66,8 +66,15 @@ Item {
         function unregisterChannelObserver() {}
         property bool emergencyCallsAvailable: true
         property bool flightMode: false
-        property var activeAccounts: [testAccount]
-        property alias accounts: telepathyHelper.activeAccounts
+        Item {
+            id: voiceAccountsItem
+            property var displayed: [testAccount]
+            property alias active: voiceAccountsItem.displayed
+            property alias all: voiceAccountsItem.displayed
+        }
+        property alias voiceAccounts: voiceAccountsItem
+        property alias phoneAccounts: telepathyHelper.voiceAccounts
+        property alias accounts: telepathyHelper.voiceAccounts
     }
 
     Item {

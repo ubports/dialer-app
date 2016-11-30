@@ -35,7 +35,7 @@ Component {
                 anchors.horizontalCenter: parent.horizontalCenter
                 height: paintedHeight + units.gu(3)
                 Repeater {
-                    model: telepathyHelper.activeAccounts
+                    model: telepathyHelper.voiceAccounts.displayed
                     delegate: Label {
                         text: modelData.displayName
                         color: UbuntuColors.orange
@@ -43,7 +43,7 @@ Component {
                             anchors.fill: parent
                             onClicked: {
                                 PopupUtils.close(dialogue)
-                                telepathyHelper.setDefaultAccount(TelepathyHelper.Call, modelData)
+                                telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, modelData)
                             }
                         }
                     }
