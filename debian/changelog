@@ -1,3 +1,13 @@
+dialer-app (0.1+17.04.20161130-0ubuntu1) zesty; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Make it work with the new telepathyHelper's account layout
+
+  [ Michael Terry ]
+  * Fix a typo in the dispatch-url registration. (LP: #1640288)
+
+ -- Tiago Salem Herrmann <tiago.herrmann@canonical.com>  Wed, 30 Nov 2016 15:14:37 +0000
+
 dialer-app (0.1+17.04.20161124-0ubuntu1) zesty; urgency=medium
 
   * Append "SNAP" path into the base application path, when that var is

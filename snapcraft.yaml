@@ -1,5 +1,5 @@
 name: dialer-app
-version: 0.1+17.04.20161124-0ubuntu1
+version: 0.1+17.04.20161130-0ubuntu1
 summary: Dialer application for Ubuntu
 description: Dialer application for Ubuntu
 confinement: devmode  # use "strict" to enforce system access only via declared interfaces
