@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Launchpad-Export-Date: 2016-12-02 05:26+0000\n"
+"X-Launchpad-Export-Date: 2016-12-03 05:16+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -124,15 +124,15 @@ msgstr "모두"
 msgid "Bluetooth device"
 msgstr "블루투스 장치"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
 msgstr "통화 제한"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
 msgstr "호출 전달"
 
-#: ../src/qml/dialer-app.qml:582
+#: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
 msgstr "통화 대기"
 
@@ -155,11 +155,11 @@ msgstr "통화 대기 실패"
 msgid "Calling"
 msgstr "통화 중"
 
-#: ../src/qml/dialer-app.qml:593
+#: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
 msgstr "발신 번호 표시"
 
-#: ../src/qml/dialer-app.qml:605
+#: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
 msgstr "발신 번호 제한"
 
@@ -189,11 +189,11 @@ msgstr "회의"
 msgid "Conference call failure"
 msgstr "전화 회의 실패"
 
-#: ../src/qml/dialer-app.qml:599
+#: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
 msgstr "발표 라인 연결"
 
-#: ../src/qml/dialer-app.qml:611
+#: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
 msgstr "발표 라인 제한"
 
@@ -231,7 +231,7 @@ msgstr "비행기 모드 사용 안 함"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
-#: ../src/qml/MMI/IMEIDialog.qml:39
+#: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
 msgstr "버리기"
 
@@ -338,7 +338,7 @@ msgstr "휴대 전화"
 msgid "No"
 msgstr "아니요"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "선택한 심 카드가 없습니다."
 
@@ -346,8 +346,8 @@ msgstr "선택한 심 카드가 없습니다."
 msgid "No calls"
 msgstr "통화 없음"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
-#: ../src/qml/dialer-app.qml:367
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:379
 msgid "No network"
 msgstr "네트워크 없음"
 
@@ -489,12 +489,12 @@ msgstr "기본 심 카드로 전환:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:368
+#: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "현재 %1에 네트워크가 없습니다."
 
-#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
+#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
 msgstr "현재 네트워크가 없습니다."
 
@@ -536,7 +536,7 @@ msgstr "어제"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "전화를 하려면 비행기 모드를 사용하지 않아야 합니다."
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "심 카드를 선택해야 합니다."
 

@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-12-02 05:26+0000\n"
+"X-Launchpad-Export-Date: 2016-12-03 05:16+0000\n"
 "X-Generator: Launchpad (build 18282)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -127,15 +127,15 @@ msgstr "ਸਾਰੇ"
 msgid "Bluetooth device"
 msgstr "ਬਲਿਊਟੁੱਥ ਜੰਤਰ"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
 msgstr "ਕਾਲ ਰੋਕ"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
 msgstr "ਕਾਲ ਅਗਾਂਹ ਭੇਜਣਾ"
 
-#: ../src/qml/dialer-app.qml:582
+#: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
 msgstr "ਕਾਲ ਉਡੀਕ ਵਿੱਚ"
 
@@ -158,11 +158,11 @@ msgstr "ਕਾਲ ਰੱਖਣ ਵਿੱਚ ਅਸਫ਼ਲਤਾ"
 msgid "Calling"
 msgstr "ਕਾਲ ਜਾਰੀ"
 
-#: ../src/qml/dialer-app.qml:593
+#: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
 msgstr "ਕਾਲਿੰਗ ਲਾਈਨ ਪੇਸ਼ਕਾਰੀ"
 
-#: ../src/qml/dialer-app.qml:605
+#: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
 msgstr "ਕਾਲ ਲਾਈਨ ਪਾਬੰਦੀ"
 
@@ -192,11 +192,11 @@ msgstr "ਕਨਫਰੰਸ"
 msgid "Conference call failure"
 msgstr "ਕਾਨਫ਼ਰੰਸ ਕਾਲ ਅਸਫ਼ਲਤਾ"
 
-#: ../src/qml/dialer-app.qml:599
+#: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
 msgstr "ਕੁਨੈਕਟ ਕੀਤੀ ਲਾਈਨ ਪਰਿਜੈਂਟਸ਼ਨ"
 
-#: ../src/qml/dialer-app.qml:611
+#: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
 msgstr "ਕੁਨੇਕਟਿਡ ਲਾਈਨ ਪਾਬੰਦੀ"
 
@@ -234,7 +234,7 @@ msgstr "ਫਲਾਈਟ ਮੋਡ ਅਸਮਰੱਥ ਕੀਤਾ ਜਾਂਦ�
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
-#: ../src/qml/MMI/IMEIDialog.qml:39
+#: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
 msgstr "ਅਣਡਿੱਠਾ"
 
@@ -341,7 +341,7 @@ msgstr "ਮੋਬਾਈਲ"
 msgid "No"
 msgstr "ਨਹੀਂ"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "ਕੋਈ ਸਿਮ ਕਾਰਡ ਨਹੀਂ ਚੁਣਿਆ"
 
@@ -349,8 +349,8 @@ msgstr "ਕੋਈ ਸਿਮ ਕਾਰਡ ਨਹੀਂ ਚੁਣਿਆ"
 msgid "No calls"
 msgstr "ਕੋਈ ਕਾਲ ਨਹੀਂ"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
-#: ../src/qml/dialer-app.qml:367
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:379
 msgid "No network"
 msgstr "ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
@@ -494,12 +494,12 @@ msgstr "ਡਿਫਾਲਟ ਸਿਮ ਲਈ ਬਦਲੋ:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:368
+#: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "ਇਸ ਸਮੇਂ %1 ਉੱਤੇ ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ"
 
-#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
+#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
 msgstr "ਇਸ ਸਮੇਂ ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ ਹੈ।"
 
@@ -541,7 +541,7 @@ msgstr "ਕੱਲ੍ਹ"
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "ਤੁਹਾਨੂੰ ਸਿਮ ਚੁਣਨ ਦੀ ਲੋੜ"
 
