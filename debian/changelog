@@ -1,3 +1,9 @@
+dialer-app (0.1+17.04.20161209-0ubuntu1) zesty; urgency=medium
+
+  * Make use of 'ubuntu-app-platform' snap interface.
+
+ -- Renato Araujo Oliveira Filho <renato.filho@canonical.com>  Fri, 09 Dec 2016 15:35:05 +0000
+
 dialer-app (0.1+17.04.20161130-0ubuntu1) zesty; urgency=medium
 
   [ Gustavo Pichorim Boiko ]
