@@ -130,8 +130,11 @@ Page {
             var oldTitle = i18n.tr("SIM Locked")
             // show Emergency Calls for sim locked too. There is going to be an icon indicating it is locked
             return i18n.tr("Emergency Calls")
-        } else if (mainView.account && mainView.account.networkName != "") {
+        } else if (mainView.account && mainView.account.networkName && mainView.account.networkName != "") {
             return mainView.account.networkName
+        } else if (mainView.account && mainView.account.type != AccountEntry.PhoneAccount) {
+            return mainView.account.protocolInfo.serviceDisplayName != "" ? mainView.account.protocolInfo.serviceDisplayName :
+                                                                            mainView.account.protocolInfo.name
         } else if (multiplePhoneAccounts && !mainView.account) {
             return i18n.tr("Phone")
         }
