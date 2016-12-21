@@ -3,9 +3,10 @@
   <description>Dialer</description>
   <desktop-entry>dialer-app.desktop</desktop-entry>
   <translations>dialer</translations>
-  <service-types>
-    <service-type id="IM">
-      <description>Integrate your telephony accounts</description>
-    </service-type>
-  </service-types>
+
+  <services>
+    <service id="dialer-app-im-sip">
+      <description>Allow SIP calls from dialer app</description>
+    </service>
+  </services>
 </application>

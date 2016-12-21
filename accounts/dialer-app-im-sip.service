@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<service id="dialer-app-im-sip">
+  <type>dialer-app-im</type>
+  <name>SIP</name>
+  <icon>sip</icon>
+  <provider>sip</provider>
+
+  <!-- default settings (account settings have precedence over these) -->
+  <template>
+    <group name="telepathy">
+      <setting name="manager">sofiasip</setting>
+      <setting name="protocol">sip</setting>
+    </group>
+    <group name="auth">
+      <setting name="method">password</setting>
+      <setting name="mechanism">password</setting>
+    </group>
+  </template>
+</service>
