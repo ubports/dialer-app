@@ -500,7 +500,9 @@ Page {
             anchors {
                 top: divider.bottom
                 topMargin: units.gu(2)
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
             }
             onKeyPressed: {
                 if (call) {
@@ -511,8 +513,6 @@ Page {
 
             visible: opacity > 0.0
             opacity: 0.0
-            keysWidth: units.gu(11)
-            keysHeight: units.gu(7)
         }
     }
 
