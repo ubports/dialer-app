@@ -12,4 +12,5 @@ usr/share/dialer-app/Dialogs
 usr/share/dialer-app/assets
 usr/share/dialer-app/MMI
 usr/share/accounts/applications/*
+usr/share/accounts/services/*
 usr/bin/*dialer-app*
