@@ -234,7 +234,10 @@ Page {
         id: keypadContainer
 
         anchors {
-            fill: parent
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: footer.top
             topMargin: pageHeader.height
         }
         focus: true
@@ -366,8 +369,10 @@ Page {
 
             anchors {
                 top: divider.bottom
-                topMargin: units.gu(2)
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+                margins: units.gu(2)
             }
 
             onKeyPressed: {

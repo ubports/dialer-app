@@ -488,9 +488,10 @@ MainView {
 
         // when running in windowed mode, do not allow resizing
         view.minimumWidth  = Qt.binding( function() { return implicitWidth * 0.9; } )
-        view.maximumWidth = Qt.binding( function() { return implicitWidth * 1.1; } )
         view.minimumHeight = Qt.binding( function() { return implicitHeight * 0.9; } )
-        view.maximumHeight = Qt.binding( function() { return implicitHeight * 1.1; } )
+
+        view.maximumWidth = Qt.binding( function() { return implicitWidth * 3.0; } )
+        view.maximumHeight = Qt.binding( function() { return implicitHeight * 3.0; } )
 
         // if there are calls, even if we don't have info about them yet, push the livecall view
         if (callManager.hasCalls) {

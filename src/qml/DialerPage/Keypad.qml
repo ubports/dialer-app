@@ -23,12 +23,9 @@ import Ubuntu.Components.ListItems 1.3 as ListItems
 Item {
     id: keypad
 
-    property int keysWidth: units.gu(11)
-    property int keysHeight: units.gu(8)
+    readonly property int keysWidth: Math.max(units.gu(11), (keypad.width  - (keys.columns * keys.columnSpacing)) / keys.columns)
+    readonly property int keysHeight: Math.max(units.gu(8), (keypad.height - (keys.rows * keys.rowSpacing)) / keys.rows)
     property bool showVoicemail: false
-
-    width: keys.width
-    height: keys.height
 
     signal keyPressed(int keycode, string keychar)
     signal keyPressAndHold(int keycode, string keychar)
