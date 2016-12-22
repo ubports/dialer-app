@@ -22,13 +22,11 @@ import Ubuntu.Components 1.3
 MouseArea {
     id: button
 
-    width: units.gu(11.33)
-    height: units.gu(7)
-
     property alias label: labelItem.text
     property alias sublabel: sublabelItem.text
     property alias sublabelSize: sublabelItem.fontSize
     property alias iconSource: subImage.name
+    property alias labelFont: labelItem.font
     property int keycode
     property bool isCorner: false
     property int corner
@@ -47,9 +45,7 @@ MouseArea {
 
     Item {
         objectName: "keypadButtonLabelsContainer"
-        height: childrenRect.height
-        width: parent.width
-        anchors.centerIn: parent
+        anchors.fill: parent
         scale: button.pressed ? 0.9 : 1
 
         Behavior on scale {
@@ -61,23 +57,25 @@ MouseArea {
         Label {
             id: labelItem
 
-            anchors.top: parent.top
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.verticalCenterOffset: -units.gu(0.5)
-            horizontalAlignment: Text.AlignHCenter
-            height: paintedHeight
+            anchors {
+                horizontalCenter: parent.horizontalCenter
+                verticalCenter: parent.verticalCenter
+                verticalCenterOffset: -units.gu(0.5)
+            }
+
             font.pixelSize: units.dp(30)
-            verticalAlignment: Text.AlignTop
             color: UbuntuColors.darkGrey
         }
 
         Label {
             id: sublabelItem
 
-            anchors.top: labelItem.bottom
-            anchors.topMargin: units.dp(1.5)
-            anchors.horizontalCenter: parent.horizontalCenter
-            horizontalAlignment: Text.AlignHCenter
+            anchors {
+                top: labelItem.bottom
+                topMargin: units.dp(1.5)
+                horizontalCenter: labelItem.horizontalCenter
+            }
+
             fontSize: "x-small"
             color: UbuntuColors.darkGrey
         }
@@ -85,9 +83,11 @@ MouseArea {
         Icon {
             id: subImage
             visible: name != ""
-            anchors.top: labelItem.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
-            anchors.topMargin: units.dp(1.5)
+            anchors {
+                top: labelItem.bottom
+                horizontalCenter: labelItem.horizontalCenter
+                topMargin: units.dp(1.5)
+            }
             opacity: 0.8
             width: units.gu(2)
             height: units.gu(2)
