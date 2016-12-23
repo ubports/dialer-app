@@ -30,12 +30,8 @@ Item {
     property bool showVoicemail: false
     property alias spacing: keys.columnSpacing
 
-    onKeysHeightChanged: console.debug("Keys height:" + keysHeight)
-
-
     signal keyPressed(int keycode, string keychar)
     signal keyPressAndHold(int keycode, string keychar)
-
 
     GridLayout {
         id: keys

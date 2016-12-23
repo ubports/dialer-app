@@ -290,11 +290,11 @@ Page {
                     left: addContact.right
                     right: backspace.left
                 }
-                height: page.compactView ? units.gu(2) : units.gu(4)
                 focus: true
                 placeHolder: i18n.tr("Enter a number")
                 Keys.forwardTo: [callButton]
                 value: mainView.pendingNumberToDial
+                height: page.compactView ? units.gu(2) : units.gu(4)
                 maximumFontSize: page.compactView ? units.dp(20) : units.dp(30)
             }
 
