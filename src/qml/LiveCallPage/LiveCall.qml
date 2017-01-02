@@ -466,8 +466,13 @@ Page {
             anchors {
                 top: durationLabel.bottom
                 topMargin: units.gu(1)
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                leftMargin: units.gu(2)
+                right: parent.right
+                rightMargin: units.gu(2)
             }
+            elide: Text.ElideRight
+            horizontalAlignment: Text.AlignHCenter
             text: caller
             fontSize: "large"
             color: UbuntuColors.darkGrey
