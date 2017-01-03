@@ -23,9 +23,12 @@ import Ubuntu.Components.ListItems 1.3 as ListItems
 Item {
     id: keypad
 
-    property int keysWidth: width / keys.columns
-    property int keysHeight: height / keys.rows
+    property int keysWidth: units.gu(11)
+    property int keysHeight: units.gu(8)
     property bool showVoicemail: false
+
+    width: keys.width
+    height: keys.height
 
     signal keyPressed(int keycode, string keychar)
     signal keyPressAndHold(int keycode, string keychar)
@@ -35,6 +38,8 @@ Item {
 
         rows: 4
         columns: 3
+        columnSpacing: units.gu(2.0)
+        rowSpacing: units.gu(0.5)
         anchors.centerIn: parent
 
         KeypadButton {

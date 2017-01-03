@@ -216,8 +216,6 @@ Page {
         }
     }
 
-    Keys.forwardTo: [keypadEntry]
-
     AccountsModel {
         id: accountsModel
 
@@ -236,11 +234,8 @@ Page {
         id: keypadContainer
 
         anchors {
-            top: parent.top
+            fill: parent
             topMargin: pageHeader.height
-            left: parent.left
-            right: parent.right
-            bottom: footer.top
         }
         focus: true
 
@@ -372,12 +367,7 @@ Page {
             anchors {
                 top: divider.bottom
                 topMargin: units.gu(2)
-                left: parent.left
-                leftMargin: units.gu(2)
-                right: parent.right
-                rightMargin: units.gu(2)
-                bottom: parent.bottom
-                bottomMargin: units.gu(2)
+                horizontalCenter: parent.horizontalCenter
             }
 
             onKeyPressed: {

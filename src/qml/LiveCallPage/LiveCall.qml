@@ -466,13 +466,8 @@ Page {
             anchors {
                 top: durationLabel.bottom
                 topMargin: units.gu(1)
-                left: parent.left
-                leftMargin: units.gu(2)
-                right: parent.right
-                rightMargin: units.gu(2)
+                horizontalCenter: parent.horizontalCenter
             }
-            elide: Text.ElideRight
-            horizontalAlignment: Text.AlignHCenter
             text: caller
             fontSize: "large"
             color: UbuntuColors.darkGrey
@@ -505,12 +500,7 @@ Page {
             anchors {
                 top: divider.bottom
                 topMargin: units.gu(2)
-                left: parent.left
-                leftMargin: units.gu(2)
-                right: parent.right
-                rightMargin: units.gu(2)
-                bottom: parent.bottom
-                bottomMargin: units.gu(2)
+                horizontalCenter: parent.horizontalCenter
             }
             onKeyPressed: {
                 if (call) {
@@ -521,6 +511,8 @@ Page {
 
             visible: opacity > 0.0
             opacity: 0.0
+            keysWidth: units.gu(11)
+            keysHeight: units.gu(7)
         }
     }
 
