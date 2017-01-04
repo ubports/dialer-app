@@ -56,8 +56,15 @@ Page {
 
         ]
         title: page.title
+        focus: false
         trailingActionBar {
             actions: mainView.greeterMode ? actionsGreeter : actionsNormal
+        }
+
+        onFocusChanged: {
+            if (focus) {
+                focus = false
+            }
         }
 
         leadingActionBar {
@@ -95,6 +102,7 @@ Page {
             id: headerSections
             model: mainView.multiplePhoneAccounts ? accountsModel.activeAccountNames : []
             selectedIndex: accountsModel.defaultCallAccountIndex
+            focus: false
             onSelectedIndexChanged: {
                 if (selectedIndex >= 0) {
                     mainView.account = accountsModel.activeAccounts[selectedIndex]
