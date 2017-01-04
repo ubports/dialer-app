@@ -168,6 +168,11 @@ Page {
         }
     ]
 
+    // Forward key presses
+    Keys.onPressed: {
+        keypad.keyPressed(event.key, event.text)
+    }
+
     function triggerCallAnimation() {
         callAnimation.start();
     }
@@ -371,6 +376,13 @@ Page {
             }
 
             onKeyPressed: {
+                // handle special keys (backspace, arrows, etc)
+                keypadEntry.handleKeyEvent(keycode, keychar)
+
+                if (keycode == Qt.Key_Space) {
+                    return
+                }
+
                 callManager.playTone(keychar);
                 input.insert(input.cursorPosition, keychar)
                 if(checkMMI(dialNumber)) {

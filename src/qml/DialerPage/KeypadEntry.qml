@@ -33,6 +33,27 @@ FocusScope {
     // this is used by tests. do not remove it
     property alias selectedText: input.selectedText
 
+    function handleKeyEvent(key, text) {
+        if (input.length == 0) {
+            return
+        }
+
+        switch (key) {
+        case Qt.Key_Backspace:
+            input.remove(input.cursorPosition-1, input.cursorPosition)
+            break
+        case Qt.Key_Delete:
+            input.remove(input.cursorPosition, input.cursorPosition+1)
+            break
+        case Qt.Key_Left:
+            input.cursorPosition--
+            break
+        case Qt.Key_Right:
+            input.cursorPosition++
+            break
+        }
+    }
+
     onValueChanged: input.deselect()
 
     PhoneNumberField {
