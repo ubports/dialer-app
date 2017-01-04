@@ -140,7 +140,7 @@ Page {
             callObject["active"] = true;
             callObject["voicemail"] = call.voicemail;
             callObject["account"] = call.account;
-            callObject["phoneNumber"] = call.phoneNumber;
+            callObject["phoneNumber"] = contactWatcher.identifier;
             callObject["held"] = call.held;
             callObject["muted"] = call.muted;
             callObject["activeAudioOutput"] = call.activeAudioOutput;
