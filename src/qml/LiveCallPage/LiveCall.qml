@@ -90,6 +90,10 @@ Page {
         extension: multiplePhoneAccounts ? headerSections : null
     }
 
+    Keys.onPressed: {
+        keypad.keyPressed(event.key, event.text)
+    }
+
     function reportStatus(callObject, text) {
         // if a previous status was already set, do not overwrite it
         if (statusLabel.text !== "" || callManager.hasCalls) {
