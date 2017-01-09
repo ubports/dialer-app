@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <service id="dialer-app-im-sip">
-  <type>dialer-app-im</type>
+  <type>IM</type>
   <name>SIP</name>
   <icon>sip</icon>
   <provider>sip</provider>
