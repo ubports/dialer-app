@@ -5,7 +5,7 @@
   <translations>dialer</translations>
 
   <services>
-    <service id="dialer-app-im-sip">
+    <service id="telephony-sip-im">
       <description>Allow SIP calls from dialer app</description>
     </service>
   </services>
