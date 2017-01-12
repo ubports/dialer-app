@@ -38,6 +38,16 @@ Page {
     property var mmiPlugins: []
     readonly property bool compactView: page.height <= units.gu(60)
 
+    function selectAccount(accountId) {
+        for (var i in accountsModel.activeAccounts) {
+            var account = accountsModel.activeAccounts[i]
+            if (account.accountId === accountId) {
+                headerSections.selectedIndex = i
+                return
+            }
+        }
+    }
+
     header: PageHeader {
         id: pageHeader
 
@@ -52,7 +62,7 @@ Page {
             Action {
                 iconName: "settings"
                 text: i18n.tr("Settings")
-                onTriggered: Qt.openUrlExternally("settings:///system/phone")
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../SettingsPage/SettingsPage.qml"))
             }
 
         ]
@@ -112,7 +122,6 @@ Page {
     }
 
     objectName: "dialerPage"
-
     title: {
         // avoid clearing the title when app is inactive
         // under some states

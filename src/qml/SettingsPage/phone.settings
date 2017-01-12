@@ -1,0 +1,24 @@
+{
+    "plugin": "phone-plugin",
+    "icon": "preferences-system-phone-symbolic",
+    "name": "Phone",
+    "translations": "ubuntu-system-settings",
+    "category": "system",
+    "priority": 2,
+    "form-factors": [
+        "phone"
+    ],
+    "keywords": [
+        "phone",
+        "services",
+        "forwarding",
+        "waiting",
+        "call",
+        "dialpad",
+        "shortcuts",
+        "numbers"
+    ],
+    "page-component": "PageComponent.qml",
+    "has-dynamic-keywords": false,
+    "has-dynamic-visibility": true
+}
