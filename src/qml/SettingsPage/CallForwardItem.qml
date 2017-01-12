@@ -215,7 +215,7 @@ Column {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         color: theme.palette.normal.negative
-        text: i18n.tr("Call forwarding can’t be changed right now.")
+        text: i18n.tr("Call forwarding can't be changed right now.")
     }
 
     ActivityIndicator {

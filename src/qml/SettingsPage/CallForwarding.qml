@@ -151,7 +151,7 @@ Page {
                 width: parent.width
                 wrapMode: Text.WordWrap
                 visible: false
-                text: i18n.tr("Call forwarding status can’t be checked " +
+                text: i18n.tr("Call forwarding status can't be checked " +
                               "now. Try again later.")
                 color: theme.palette.normal.negative
                 horizontalAlignment: Text.AlignHCenter
@@ -168,7 +168,7 @@ Page {
                 anchors { left: parent.left; right: parent.right }
                 callForwarding: callForwarding
                 rule: "voiceBusy"
-                text: i18n.tr("I’m on another call")
+                text: i18n.tr("I'm on another call")
                 onEnteredEditMode: {page.editing = fwdBusy; Utils.show(field)}
                 onLeftEditMode: page.editing = null
             }
@@ -179,7 +179,7 @@ Page {
                 anchors { left: parent.left; right: parent.right }
                 callForwarding: callForwarding
                 rule: "voiceNoReply"
-                text: i18n.tr("I don’t answer")
+                text: i18n.tr("I don't answer")
                 onEnteredEditMode: {page.editing = fwdLost; Utils.show(field)}
                 onLeftEditMode: page.editing = null
             }
@@ -220,7 +220,7 @@ Page {
             }
             activeFocusOnPress: false
             enabled: editing && !editing.busy
-            text: i18n.tr("Contacts…")
+            text: i18n.tr("Contacts...")
             onClicked: page.activeTransfer = contactPicker.request()
         }
 
