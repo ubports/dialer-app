@@ -104,16 +104,16 @@ Page {
 
             ListItem.Divider {}
 
-            /*ListItem.Standard {
+            ListItem.Standard {
                 control: Switch {
                     objectName: "dialpadSounds"
-                    property bool serverChecked: soundPlugin.dialpadSoundsEnabled
+                    property bool serverChecked: telepathyHelper.dialpadSoundsEnabled
                     onServerCheckedChanged: checked = serverChecked
                     Component.onCompleted: checked = serverChecked
-                    onTriggered: soundPlugin.dialpadSoundsEnabled = checked
+                    onTriggered: telepathyHelper.dialpadSoundsEnabled = checked
                 }
                 text: i18n.tr("Dialpad tones")
-            }*/
+            }
         }
     }
 }
