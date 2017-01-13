@@ -102,8 +102,6 @@ Page {
                 anchors { left: parent.left; right: parent.right }
             }
 
-            ListItem.Divider {}
-
             ListItem.Standard {
                 control: Switch {
                     objectName: "dialpadSounds"
@@ -114,6 +112,26 @@ Page {
                 }
                 text: i18n.tr("Dialpad tones")
             }
+
+            ListItem.Standard {
+                id: addAccount
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                }
+                text: i18n.tr("Add an online account")
+                progression: true
+                onClicked: onlineAccountHelper.item.run()
+                enabled: (onlineAccountHelper.status === Loader.Ready) && (onlineAccountHelper.item.count > 0)
+            }
         }
+    }
+
+    Loader {
+        id: onlineAccountHelper
+
+        anchors.fill: parent
+        asynchronous: true
+        source: Qt.resolvedUrl("OnlineAccountsHelper.qml")
     }
 }
