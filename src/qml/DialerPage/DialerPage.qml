@@ -67,8 +67,15 @@ Page {
 
         ]
         title: page.title
+        focus: false
         trailingActionBar {
             actions: mainView.greeterMode ? actionsGreeter : actionsNormal
+        }
+
+        onFocusChanged: {
+            if (focus) {
+                focus = false
+            }
         }
 
         leadingActionBar {
@@ -106,6 +113,7 @@ Page {
             id: headerSections
             model: mainView.multiplePhoneAccounts ? accountsModel.activeAccountNames : []
             selectedIndex: accountsModel.defaultCallAccountIndex
+            focus: false
             onSelectedIndexChanged: {
                 if (selectedIndex >= 0) {
                     mainView.account = accountsModel.activeAccounts[selectedIndex]
@@ -177,6 +185,15 @@ Page {
             }
         }
     ]
+
+    // Forward key presses
+    Keys.onPressed: {
+        if (!active) {
+            return
+        }
+
+        keypad.keyPressed(event.key, event.text)
+    }
 
     function triggerCallAnimation() {
         callAnimation.start();
@@ -305,6 +322,9 @@ Page {
                 value: mainView.pendingNumberToDial
                 height: page.compactView ? units.gu(2) : units.gu(4)
                 maximumFontSize: page.compactView ? units.dp(20) : units.dp(30)
+                onCommitRequested: {
+                    callButton.clicked()
+                }
             }
 
             CustomButton {
@@ -388,6 +408,13 @@ Page {
             labelPixelSize: page.compactView ? units.dp(20) : units.dp(30)
             spacing: page.compactView ? 0 : 5
             onKeyPressed: {
+                // handle special keys (backspace, arrows, etc)
+                keypadEntry.handleKeyEvent(keycode, keychar)
+
+                if (keycode == Qt.Key_Space) {
+                    return
+                }
+
                 callManager.playTone(keychar);
                 input.insert(input.cursorPosition, keychar)
                 if(checkMMI(dialNumber)) {
