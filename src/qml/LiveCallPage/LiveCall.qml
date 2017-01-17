@@ -92,6 +92,10 @@ Page {
         extension: multiplePhoneAccounts ? headerSections : null
     }
 
+    Keys.onPressed: {
+        keypad.keyPressed(event.key, event.text)
+    }
+
     function reportStatus(callObject, text) {
         // if a previous status was already set, do not overwrite it
         if (statusLabel.text !== "" || callManager.hasCalls) {
@@ -142,7 +146,7 @@ Page {
             callObject["active"] = true;
             callObject["voicemail"] = call.voicemail;
             callObject["account"] = call.account;
-            callObject["phoneNumber"] = call.phoneNumber;
+            callObject["phoneNumber"] = contactWatcher.identifier;
             callObject["held"] = call.held;
             callObject["muted"] = call.muted;
             callObject["activeAudioOutput"] = call.activeAudioOutput;
