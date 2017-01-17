@@ -178,6 +178,10 @@ Page {
 
     // Forward key presses
     Keys.onPressed: {
+        if (!active) {
+            return
+        }
+
         keypad.keyPressed(event.key, event.text)
     }
 
@@ -304,6 +308,9 @@ Page {
                 placeHolder: i18n.tr("Enter a number")
                 Keys.forwardTo: [callButton]
                 value: mainView.pendingNumberToDial
+                onCommitRequested: {
+                    callButton.clicked()
+                }
             }
 
             CustomButton {

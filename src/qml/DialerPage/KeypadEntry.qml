@@ -33,6 +33,8 @@ FocusScope {
     // this is used by tests. do not remove it
     property alias selectedText: input.selectedText
 
+    signal commitRequested()
+
     function handleKeyEvent(key, text) {
         if (input.length == 0) {
             return
@@ -50,6 +52,10 @@ FocusScope {
             break
         case Qt.Key_Right:
             input.cursorPosition++
+            break
+        case Qt.Key_Enter:
+        case Qt.Key_Return:
+            keypadEntry.commitRequested()
             break
         }
     }
