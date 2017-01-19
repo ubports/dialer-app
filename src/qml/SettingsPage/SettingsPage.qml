@@ -124,6 +124,27 @@ Page {
                 onClicked: onlineAccountHelper.item.run()
                 enabled: (onlineAccountHelper.status === Loader.Ready) && (onlineAccountHelper.item.count > 0)
             }
+
+            Repeater {
+                model: telepathyHelper.voiceAccounts.displayed
+
+                Loader {
+                    id: accountPropertiesLoader
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                        margins: units.gu(1)
+                    }
+                    height: childrenRect.height
+                    source: Qt.resolvedUrl("./AccountSettings/" + modelData.protocolInfo.name + ".qml")
+
+                    onStatusChanged: {
+                        if (status == Loader.Ready) {
+                            item.account = modelData
+                        }
+                    }
+                }
+            }
         }
     }
 
