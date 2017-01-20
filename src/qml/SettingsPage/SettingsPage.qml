@@ -26,7 +26,7 @@ import Ubuntu.Telephony 0.1
 Page {
     id: settingsPage
     objectName: "phonePage"
-    title: i18n.tr("Phone")
+    title: i18n.tr("Settings")
     flickable: flick
 
     property var modemAccounts: telepathyHelper.phoneAccounts.displayed
