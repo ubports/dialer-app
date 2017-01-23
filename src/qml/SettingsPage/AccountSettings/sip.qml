@@ -1,105 +1,30 @@
-import QtQuick 2.0
+/*
+ * This file is part of dialer-app
+ *
+ * Copyright (C) 2017 Canonical Ltd.
+ *
+ * Authors: Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>
+ *
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License version 3, as published
+ * by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranties of
+ * MERCHANTABILITY, SATISFACTORY QUALITY, or FITNESS FOR A PARTICULAR
+ * PURPOSE.  See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItems
-import Ubuntu.Components.Themes.Ambiance 0.1
 
-Column {
+ListItems.SingleValue {
     property var account: null
-
-    height: childrenRect.height
-    spacing: units.gu(1)
-    anchors {
-        left: parent.left
-        right: parent.right
-    }
-
-    onAccountChanged: {
-        if (!account) {
-            return
-        }
-
-        console.log("BLABLA account properties is " + account.accountProperties + " " + account.accountProperties.externalCallsNeedPrefix)
-        prefixSwitch.checked = account.accountProperties.externalCallsNeedPrefix
-        prefixInputField.text = account.accountProperties.externalCallsPrefix
-    }
-
-    function setAccountProperty(prop, value) {
-        var properties = account.accountProperties
-        properties[prop] = value
-        account.accountProperties = properties
-    }
-
-    Item {
-        id: spacing
-        height: units.gu(1)
-        width: 1
-    }
-
-    Label {
-        anchors {
-            left: parent.left
-            right: parent.right
-        }
-        text: account.displayName
-    }
-
-    ListItems.Standard {
-        control: Switch {
-            id: prefixSwitch
-            objectName: "prefixSwitch"
-            onCheckedChanged: {
-                setAccountProperty("externalCallsNeedPrefix", checked)
-            }
-        }
-        text: i18n.tr("External calls need prefix")
-        showDivider: !prefixInput.visible
-    }
-
-    ListItems.Standard {
-        id: prefixInput
-        visible: prefixSwitch.checked
-        height: visible ? units.gu(6) : 0
-        text: i18n.tr("Prefix")
-        control: TextField {
-            id: prefixInputField
-            objectName: "prefixInputField"
-            horizontalAlignment: TextInput.AlignRight
-            inputMethodHints: Qt.ImhDialableCharactersOnly
-            font {
-                pixelSize: units.dp(18)
-                weight: Font.Light
-                family: "Ubuntu"
-            }
-            color: "#AAAAAA"
-            maximumLength: 20
-            focus: true
-            placeholderText: i18n.tr("Enter a prefix")
-            style: TextFieldStyle {
-                overlaySpacing: units.gu(0.5)
-                frameSpacing: 0
-                background: Rectangle {
-                    property bool error: (prefixInputField.hasOwnProperty("errorHighlight") &&
-                                          prefixInputField.errorHighlight &&
-                                          !prefixInputField.acceptableInput)
-                    onErrorChanged: error ? theme.palette.normal.negative : color
-                    color: Theme.palette.normal.background
-                    anchors.fill: parent
-                    visible: prefixInputField.activeFocus
-                }
-            }
-
-            onTextChanged: {
-                setAccountProperty("externalCallsPrefix", text)
-            }
-
-            onVisibleChanged:
-                if (visible === true) forceActiveFocus()
-        }
-
-        Behavior on height {
-            NumberAnimation {
-                duration: UbuntuAnimation.SnapDuration
-            }
-        }
-    }
+    text: i18n.tr("%1 Number Rewrite").arg(account.displayName)
+    progression: true
+    value: account.accountProperties.numberRewrite ? i18n.tr("On") : i18n.tr("Off")
+    onClicked: pageStackNormalMode.push(Qt.resolvedUrl("SipNumberRewrite.qml"), { "account": account })
 }
