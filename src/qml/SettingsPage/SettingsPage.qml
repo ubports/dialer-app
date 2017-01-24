@@ -126,7 +126,7 @@ Page {
             }
 
             Repeater {
-                model: telepathyHelper.voiceAccounts.displayed
+                model: telepathyHelper.voiceAccounts.all
 
                 Loader {
                     id: accountPropertiesLoader
