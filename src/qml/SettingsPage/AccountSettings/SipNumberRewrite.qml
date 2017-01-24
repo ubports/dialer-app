@@ -34,19 +34,33 @@ Page {
     }
 
     property var account: null
+    property bool updating: false
     onAccountChanged: {
         if (!account) {
             return
         }
 
-        numberRewriteSwitch.checked = account.accountProperties.numberRewrite
-        countryCodeField.text = account.accountProperties.defaultCountryCode
-        areaCodeField.text = account.accountProperfies.defaultAreaCode
-        removeInputField.text = account.accountProperties.removeCharacters
-        prefixInputField.text = account.accountProperties.prefix
+
+        var props = account.accountProperties
+        for (var i in props) {
+            console.log(i + ": " + props[i])
+            console.log(props.defaultAreaCode)
+        }
+
+        updating = true
+        numberRewriteSwitch.checked = props.numberRewrite
+        countryCodeField.text = props.defaultCountryCode
+        areaCodeField.text = props.defaultAreaCode
+        removeInputField.text = props.removeCharacters
+        prefixInputField.text = props.prefix
+        updating = false
     }
 
     function setAccountProperty(prop, value) {
+        if (updating) {
+            return
+        }
+
         var properties = account.accountProperties
         properties[prop] = value
         account.accountProperties = properties
