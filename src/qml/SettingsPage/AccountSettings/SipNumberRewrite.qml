@@ -112,7 +112,9 @@ Page {
             ListItems.Standard {
                 id: areaCodeItem
                 height: visible ? units.gu(6) : 0
-                visible: numberRewriteSwitch.checked
+                // FIXME: re-enable the area code when we get libphonenumber detection fixed
+                //visible: numberRewriteSwitch.checked
+                visible: false
                 text: i18n.tr("Default area code")
                 control: SettingsTextField {
                     id: areaCodeField
