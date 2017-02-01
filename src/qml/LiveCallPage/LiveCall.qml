@@ -52,8 +52,8 @@ Page {
             return i18n.tr("Conference");
         } else if (contactWatcher.alias !== "") {
             return contactWatcher.alias;
-        } else if (contactWatcher.identifier !== "") {
-            return contactWatcher.identifier;
+        } else if (call && call.phoneNumber !== "") {
+            return call.phoneNumber;
         } else if (!call && initialNumber != "") {
             return initialNumber
         } else {
@@ -387,7 +387,15 @@ Page {
         ContactWatcher {
             id: contactWatcher
             // FIXME: handle conf calls
-            identifier: call ? call.phoneNumber : ""
+            identifier: {
+                if (initialNumber != "") {
+                    return initialNumber
+                } else if (call) {
+                    return call.phoneNumber
+                }
+                return ""
+            }
+
             onDetailPropertiesChanged: helper.updateSubTypeLabel()
             onIsUnknownChanged: helper.updateSubTypeLabel()
             // FIXME: if we implement VOIP, get the addressable fields from the account itself
