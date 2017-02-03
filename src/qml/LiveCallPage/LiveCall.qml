@@ -91,6 +91,10 @@ Page {
     }
 
     Keys.onPressed: {
+        if (!dtmfVisible) {
+            dtmfVisible = true
+        }
+
         keypad.keyPressed(event.key, event.text)
     }
 
@@ -286,6 +290,7 @@ Page {
 
     Component.onCompleted: {
         callManager.callIndicatorVisible = !active && callManager.hasCalls;
+        forceActiveFocus();
     }
 
     Timer {
