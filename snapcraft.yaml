@@ -7,8 +7,8 @@ grade: devel
 
 apps:
     dialer-app:
-        command: desktop-launch $SNAP/usr/bin/dialer-app --desktop_file_hint=unity8 "$@"
-        plugs: [opengl, platform, unity7, unity8]
+        command: desktop-launch $SNAP/usr/bin/dialer-app "$@"
+        plugs: [opengl, platform, unity7, unity8, mir]
 
 plugs:
     platform:
