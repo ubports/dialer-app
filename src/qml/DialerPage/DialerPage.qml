@@ -61,6 +61,7 @@ Page {
             actions: mainView.greeterMode ? actionsGreeter : actionsNormal
         }
 
+        // make sure the SIM selector never gets focus
         onFocusChanged: {
             if (focus) {
                 focus = false
