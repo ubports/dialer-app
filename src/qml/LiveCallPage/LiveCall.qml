@@ -626,6 +626,7 @@ Page {
                     }
                 }
             }
+            enabled: audioOutputs.length > 1
         }
 
         LiveCallKeypadButton {
