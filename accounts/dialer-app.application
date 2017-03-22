@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application id="dialer-app">
+  <description>Dialer</description>
+  <desktop-entry>dialer-app.desktop</desktop-entry>
+  <translations>dialer</translations>
+
+  <services>
+    <service id="telephony-sip-im">
+      <description>Allow SIP calls from dialer app</description>
+    </service>
+  </services>
+</application>

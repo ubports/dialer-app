@@ -11,4 +11,5 @@ usr/share/dialer-app/ContactEditorPage
 usr/share/dialer-app/Dialogs
 usr/share/dialer-app/assets
 usr/share/dialer-app/MMI
+usr/share/accounts/applications/*
 usr/bin/*dialer-app*
