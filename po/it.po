@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -127,15 +127,15 @@ msgstr "Tutti"
 msgid "Bluetooth device"
 msgstr "Dispositivo Bluetooth"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
 msgstr "Blocco chiamate"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
 msgstr "Inoltro chiamata"
 
-#: ../src/qml/dialer-app.qml:582
+#: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
 msgstr "Chiamata in attesa"
 
@@ -158,11 +158,11 @@ msgstr "Impossibile mettere in attesa la chiamata"
 msgid "Calling"
 msgstr "In chiamata"
 
-#: ../src/qml/dialer-app.qml:593
+#: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
 msgstr "Mostra ID chiamante"
 
-#: ../src/qml/dialer-app.qml:605
+#: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
 msgstr "Nascondi ID chiamante"
 
@@ -192,11 +192,11 @@ msgstr "Conferenza"
 msgid "Conference call failure"
 msgstr "Impossibile creare una chiamata in conferenza"
 
-#: ../src/qml/dialer-app.qml:599
+#: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
 msgstr "Mostra numero chiamato"
 
-#: ../src/qml/dialer-app.qml:611
+#: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
 msgstr "Nascondi numero chiamato"
 
@@ -234,7 +234,7 @@ msgstr "Disabilitazione modalità aereo"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
-#: ../src/qml/MMI/IMEIDialog.qml:39
+#: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
 msgstr "Scarta"
 
@@ -341,7 +341,7 @@ msgstr "Cellulare"
 msgid "No"
 msgstr "No"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Nessuna SIM selezionata"
 
@@ -349,8 +349,8 @@ msgstr "Nessuna SIM selezionata"
 msgid "No calls"
 msgstr "Nessuna chiamata"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
-#: ../src/qml/dialer-app.qml:367
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:379
 msgid "No network"
 msgstr "Nessuna rete"
 
@@ -495,12 +495,12 @@ msgstr "Passa alla SIM predefinita:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:368
+#: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Attualmente non è disponibile alcuna rete per %1"
 
-#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
+#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
 msgstr "Attualmente non è disponibile alcuna rete."
 
@@ -542,7 +542,7 @@ msgstr "Ieri"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Disabilitare la modalità aereo per poter effettuare le chiamate"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "È necessario selezionare una scheda SIM"
 

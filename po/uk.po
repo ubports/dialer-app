@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -131,15 +131,15 @@ msgstr "Усі"
 msgid "Bluetooth device"
 msgstr "Пристрій Bluetooth"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
 msgstr "Заборона викликів"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
 msgstr "Переадресація викликів"
 
-#: ../src/qml/dialer-app.qml:582
+#: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
 msgstr "Очікування викликів"
 
@@ -162,11 +162,11 @@ msgstr "Не вдалося утримати дзвінок"
 msgid "Calling"
 msgstr "Дзвонимо"
 
-#: ../src/qml/dialer-app.qml:593
+#: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
 msgstr "Представлення лінії викликів"
 
-#: ../src/qml/dialer-app.qml:605
+#: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
 msgstr "Обмеження лінії викликів"
 
@@ -196,11 +196,11 @@ msgstr "Конференція"
 msgid "Conference call failure"
 msgstr "Не вдалося організувати конференцію"
 
-#: ../src/qml/dialer-app.qml:599
+#: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
 msgstr "Представлення з’єднаної лінії"
 
-#: ../src/qml/dialer-app.qml:611
+#: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
 msgstr "Обмеження з’єднаної лінії"
 
@@ -238,7 +238,7 @@ msgstr "Вимикаємо режим польоту"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
-#: ../src/qml/MMI/IMEIDialog.qml:39
+#: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
 msgstr "Відкинути"
 
@@ -345,7 +345,7 @@ msgstr "Мобільний"
 msgid "No"
 msgstr "Ні"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Не вибрано SIM-картки"
 
@@ -353,8 +353,8 @@ msgstr "Не вибрано SIM-картки"
 msgid "No calls"
 msgstr "Немає дзвінків"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
-#: ../src/qml/dialer-app.qml:367
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:379
 msgid "No network"
 msgstr "Немає мережі"
 
@@ -501,12 +501,12 @@ msgstr "Перемкнутися на типову SIM-картку:"
 msgid "TUV"
 msgstr "ШЩ"
 
-#: ../src/qml/dialer-app.qml:368
+#: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Зараз на %1 немає доступу до мережі"
 
-#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
+#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
 msgstr "Зараз немає доступу до мережі."
 
@@ -548,7 +548,7 @@ msgstr "Вчора"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Вам слід вимкнути режим польоту, щоб мати змогу здійснювати дзвінки"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "Вам слід вибрати SIM-картку"
 

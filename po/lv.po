@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-08-27 06:01+0000\n"
-"X-Generator: Launchpad (build 18179)\n"
+"X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 "Language: lv\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
@@ -132,15 +132,15 @@ msgstr "Visi"
 msgid "Bluetooth device"
 msgstr "Bluetooth ierīce"
 
-#: ../src/qml/dialer-app.qml:560
+#: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
 msgstr "Zvanu ierobežojumi"
 
-#: ../src/qml/dialer-app.qml:571
+#: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
 msgstr "Zvanu pārsūtīšana"
 
-#: ../src/qml/dialer-app.qml:582
+#: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
 msgstr "Zvanu gaidīšana"
 
@@ -163,11 +163,11 @@ msgstr "Neizdevās aizturēt zvanu"
 msgid "Calling"
 msgstr "Zvana"
 
-#: ../src/qml/dialer-app.qml:593
+#: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
 msgstr "Zvana līnijas prezentācija"
 
-#: ../src/qml/dialer-app.qml:605
+#: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
 msgstr "Zvana līnijas ierobežojums"
 
@@ -197,11 +197,11 @@ msgstr "Konference"
 msgid "Conference call failure"
 msgstr "Neizdevās konferences zvans"
 
-#: ../src/qml/dialer-app.qml:599
+#: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
 msgstr "Savienotās līnijas prezentācija"
 
-#: ../src/qml/dialer-app.qml:611
+#: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
 msgstr "Savienotās līnijas ierobežojums"
 
@@ -239,7 +239,7 @@ msgstr "Izslēdz lidmašīnas režīmu"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
-#: ../src/qml/MMI/IMEIDialog.qml:39
+#: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
 msgstr "Atmest"
 
@@ -346,7 +346,7 @@ msgstr "Mobilais tālrunis"
 msgid "No"
 msgstr "Nē"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
 msgstr "Nav izvēlēta neviena SIM karte"
 
@@ -354,8 +354,8 @@ msgstr "Nav izvēlēta neviena SIM karte"
 msgid "No calls"
 msgstr "Nav zvanu"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:362
-#: ../src/qml/dialer-app.qml:367
+#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
+#: ../src/qml/dialer-app.qml:379
 msgid "No network"
 msgstr "Nav tīkla"
 
@@ -499,12 +499,12 @@ msgstr "Pārslēgties uz noklusējuma SIM:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:368
+#: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Šobrīd nav tīkla uz %1"
 
-#: ../src/qml/dialer-app.qml:362 ../src/qml/dialer-app.qml:369
+#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
 msgstr "Šobrīd nav tīkla."
 
@@ -546,7 +546,7 @@ msgstr "Vakar"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Jūs izslēdzāt lidmašīnas režīmu, lai piezvanītu"
 
-#: ../src/qml/dialer-app.qml:343
+#: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
 msgstr "Jums ir jāizvēlas SIM karte"
 

@@ -1,3 +1,33 @@
+dialer-app (0.1+17.04.20161209-0ubuntu1) zesty; urgency=medium
+
+  * Make use of 'ubuntu-app-platform' snap interface.
+
+ -- Renato Araujo Oliveira Filho <renato.filho@canonical.com>  Fri, 09 Dec 2016 15:35:05 +0000
+
+dialer-app (0.1+17.04.20161130-0ubuntu1) zesty; urgency=medium
+
+  [ Gustavo Pichorim Boiko ]
+  * Make it work with the new telepathyHelper's account layout
+
+  [ Michael Terry ]
+  * Fix a typo in the dispatch-url registration. (LP: #1640288)
+
+ -- Tiago Salem Herrmann <tiago.herrmann@canonical.com>  Wed, 30 Nov 2016 15:14:37 +0000
+
+dialer-app (0.1+17.04.20161124-0ubuntu1) zesty; urgency=medium
+
+  * Append "SNAP" path into the base application path, when that var is
+    set. (LP: #1629009)
+
+ -- Renato Araujo Oliveira Filho <renato.filho@canonical.com>  Thu, 24 Nov 2016 18:54:52 +0000
+
+dialer-app (0.1+17.04.20161020-0ubuntu1) zesty; urgency=medium
+
+  [ Renato Araujo Oliveira Filho ]
+  * Snappy package.
+
+ -- Gustavo Pichorim Boiko <gustavo.boiko@canonical.com>  Thu, 20 Oct 2016 15:15:55 +0000
+
 dialer-app (0.1+16.10.20160825.2-0ubuntu1) yakkety; urgency=medium
 
   [ Florian Boucault ]

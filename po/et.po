@@ -1,16 +1,16 @@
-# Azerbaijani translation for dialer-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
+# Estonian translation for dialer-app
+# Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-09-06 14:32+0000\n"
-"Last-Translator: Nicat Məmmədov <n1c4t97@gmail.com>\n"
-"Language-Team: Azerbaijani <az@li.org>\n"
+"PO-Revision-Date: 2016-12-23 07:58+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -26,28 +26,28 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:451
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - gözləyir"
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 saat"
-msgstr[1] "%1 saat"
+msgstr[0] "%1 tund"
+msgstr[1] "%1 tundi"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 dəq"
-msgstr[1] "%1 dəq"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sn"
-msgstr[1] "%1 sn"
+msgstr[0] ""
+msgstr[1] ""
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -75,43 +75,43 @@ msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:60
 msgid "2"
-msgstr "2"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:71
 msgid "3"
-msgstr "3"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:82
 msgid "4"
-msgstr "4"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "5"
-msgstr "5"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:104
 msgid "6"
-msgstr "6"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:115
 msgid "7"
-msgstr "7"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:126
 msgid "8"
-msgstr "8"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "9"
-msgstr "9"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:61
 msgid "ABC"
-msgstr "ABC"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Aktiv"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -125,27 +125,27 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:339
 msgid "Bluetooth device"
-msgstr "Bluetooth qurğusu"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:555
 msgid "Call Barring"
-msgstr "Zəng Əngəllənməsi"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:566
 msgid "Call Forwarding"
-msgstr "Zəng Yönləndirilməsi"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:577
 msgid "Call Waiting"
-msgstr "Zəng Gözlədilməsi"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:150
 msgid "Call ended"
-msgstr "Zəng sonlandı"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:295
 msgid "Call failed"
-msgstr "Zəng uğursuz alındı"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:158
 msgid "Call holding failure"
@@ -156,7 +156,7 @@ msgstr ""
 #: ../src/qml/LiveCallPage/LiveCall.qml:453
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "Zəng edilir"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
@@ -170,7 +170,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr "İmtina"
+msgstr ""
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -181,12 +181,12 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:67
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "Bağla"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr "Konfrans"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Conference call failure"
@@ -203,26 +203,26 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Kontakt Təfərrüatları"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:48
 msgid "Contacts"
-msgstr "Kontaktlar"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
-msgstr "DEF"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr "Sil"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "Təfərrüatlar"
+msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -240,7 +240,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Bir daha soruşma"
+msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
@@ -253,11 +253,11 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
-msgstr "Nömrə daxil edin"
+msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr "Xəta"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
@@ -273,7 +273,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr "Seçilmişlər"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:127
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -282,11 +282,11 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr "Uçuş rejimi"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
-msgstr "GHI"
+msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
@@ -294,43 +294,43 @@ msgstr ""
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
-msgstr "IMEI"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr "Gələn"
+msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr "Yanlış USSD kodu"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "JKL"
-msgstr "JKL"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
-msgstr "Rəqəmli Klaviatura"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr "Daha Sonra"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:105
 msgid "MNO"
-msgstr "MNO"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:560
 msgid "Merge calls"
-msgstr "Zəngləri birləşdir"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
-msgstr "Cavabsız"
+msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
@@ -339,20 +339,20 @@ msgstr ""
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "Yox"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "SIM kart seçilməyib"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:120
 msgid "No calls"
-msgstr "Zəng yoxdu"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
 #: ../src/qml/dialer-app.qml:379
 msgid "No network"
-msgstr "Şəbəkə yoxdu"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
@@ -364,25 +364,25 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr "Gözləyir"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
 msgid "Outgoing"
-msgstr "Edilən Zənglər"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:116
 msgid "PQRS"
-msgstr "PQRS"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:136
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "Telefon"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Telefon Tətbiqetməsi"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Phone Speaker"
@@ -390,7 +390,7 @@ msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Telefon tətbiqetməsi"
+msgstr ""
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
@@ -405,21 +405,21 @@ msgstr ""
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
-msgstr "Xahiş edirik gözləyin"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
-msgstr "Özəl"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
-msgstr "Özəl nömrə"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:502
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Ən son"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -435,37 +435,34 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr "Axtar"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Axtar..."
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "Seç"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Edilən zənglər üçün bir varsayılan SIM seçin. Seçiminizi <a "
-"href=\"system_settings\">Sistem Tənzimləmələri</a>ndən hər an dəyişə "
-"bilərsiniz."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
-msgstr "Mesaj göndər"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:53
 msgid "Settings"
-msgstr "Tənzimləmələr"
+msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Paylaş"
+msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -485,54 +482,54 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Varsayılan SIM-ə keç:"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
-msgstr "TUV"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "%1 operatorunda hal-hazırda şəbəkə yoxdu"
+msgstr ""
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "Hal-hazırda şəbəkə yoxdu."
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr "Bu gün"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Ubuntu Phone"
-msgstr "Ubuntu Telefon"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Unknown device"
-msgstr "Naməlum cihaz"
+msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
-msgstr "Bilinmәyәn nömrә"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr "Səsli mesaj"
+msgstr ""
 
 #: ../src/qml/DialerPage/Keypad.qml:138
 msgid "WXYZ"
-msgstr "WXYZ"
+msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "Hə"
+msgstr ""
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "Dünən"
+msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
@@ -540,26 +537,14 @@ msgstr ""
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "SIM kart seçmək lazımdı"
+msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "hh:mm:ss"
+msgstr ""
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr "mm:ss"
-
-#~ msgid "+ Create New"
-#~ msgstr "+ Yenisini Yarat"
-
-#~ msgid "All"
-#~ msgstr "Hamısı"
-
-#~ msgid "New Call"
-#~ msgstr "Yeni Zəng"
-
-#~ msgid "hh:mm ap"
-#~ msgstr "hh:mm ap"
+msgstr ""
