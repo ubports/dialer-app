@@ -90,6 +90,14 @@ Page {
         extension: multiplePhoneAccounts ? headerSections : null
     }
 
+    Keys.onPressed: {
+        if (!dtmfVisible) {
+            dtmfVisible = true
+        }
+
+        keypad.keyPressed(event.key, event.text)
+    }
+
     function reportStatus(callObject, text) {
         // if a previous status was already set, do not overwrite it
         if (statusLabel.text !== "" || callManager.hasCalls) {
@@ -140,7 +148,7 @@ Page {
             callObject["active"] = true;
             callObject["voicemail"] = call.voicemail;
             callObject["account"] = call.account;
-            callObject["phoneNumber"] = call.phoneNumber;
+            callObject["phoneNumber"] = contactWatcher.identifier;
             callObject["held"] = call.held;
             callObject["muted"] = call.muted;
             callObject["activeAudioOutput"] = call.activeAudioOutput;
@@ -282,6 +290,7 @@ Page {
 
     Component.onCompleted: {
         callManager.callIndicatorVisible = !active && callManager.hasCalls;
+        forceActiveFocus();
     }
 
     Timer {
@@ -617,6 +626,7 @@ Page {
                     }
                 }
             }
+            enabled: audioOutputs.length > 1
         }
 
         LiveCallKeypadButton {

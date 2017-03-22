@@ -56,8 +56,16 @@ Page {
 
         ]
         title: page.title
+        focus: false
         trailingActionBar {
             actions: mainView.greeterMode ? actionsGreeter : actionsNormal
+        }
+
+        // make sure the SIM selector never gets focus
+        onFocusChanged: {
+            if (focus) {
+                focus = false
+            }
         }
 
         leadingActionBar {
@@ -95,6 +103,7 @@ Page {
             id: headerSections
             model: mainView.multiplePhoneAccounts ? accountsModel.activeAccountNames : []
             selectedIndex: accountsModel.defaultCallAccountIndex
+            focus: false
             onSelectedIndexChanged: {
                 if (selectedIndex >= 0) {
                     mainView.account = accountsModel.activeAccounts[selectedIndex]
@@ -130,8 +139,11 @@ Page {
             var oldTitle = i18n.tr("SIM Locked")
             // show Emergency Calls for sim locked too. There is going to be an icon indicating it is locked
             return i18n.tr("Emergency Calls")
-        } else if (mainView.account && mainView.account.networkName != "") {
+        } else if (mainView.account && mainView.account.networkName && mainView.account.networkName != "") {
             return mainView.account.networkName
+        } else if (mainView.account && mainView.account.type != AccountEntry.PhoneAccount) {
+            return mainView.account.protocolInfo.serviceDisplayName != "" ? mainView.account.protocolInfo.serviceDisplayName :
+                                                                            mainView.account.protocolInfo.name
         } else if (multiplePhoneAccounts && !mainView.account) {
             return i18n.tr("Phone")
         }
@@ -164,6 +176,15 @@ Page {
             }
         }
     ]
+
+    // Forward key presses
+    Keys.onPressed: {
+        if (!active) {
+            return
+        }
+
+        keypad.keyPressed(event.key, event.text)
+    }
 
     function triggerCallAnimation() {
         callAnimation.start();
@@ -288,6 +309,9 @@ Page {
                 placeHolder: i18n.tr("Enter a number")
                 Keys.forwardTo: [callButton]
                 value: mainView.pendingNumberToDial
+                onCommitRequested: {
+                    callButton.clicked()
+                }
             }
 
             CustomButton {
@@ -368,6 +392,13 @@ Page {
             }
 
             onKeyPressed: {
+                // handle special keys (backspace, arrows, etc)
+                keypadEntry.handleKeyEvent(keycode, keychar)
+
+                if (keycode == Qt.Key_Space) {
+                    return
+                }
+
                 callManager.playTone(keychar);
                 input.insert(input.cursorPosition, keychar)
                 if(checkMMI(dialNumber)) {
