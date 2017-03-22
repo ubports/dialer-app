@@ -17,7 +17,7 @@
  */
 
 import QtContacts 5.0
-import QtQuick 2.0
+import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Telephony 0.1
@@ -38,6 +38,16 @@ Page {
     property var mmiPlugins: []
     readonly property bool compactView: page.height <= units.gu(60)
 
+    function selectAccount(accountId) {
+        for (var i in accountsModel.activeAccounts) {
+            var account = accountsModel.activeAccounts[i]
+            if (account.accountId === accountId) {
+                headerSections.selectedIndex = i
+                return
+            }
+        }
+    }
+
     header: PageHeader {
         id: pageHeader
 
@@ -52,7 +62,7 @@ Page {
             Action {
                 iconName: "settings"
                 text: i18n.tr("Settings")
-                onTriggered: Qt.openUrlExternally("settings:///system/phone")
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../SettingsPage/SettingsPage.qml"))
             }
 
         ]
@@ -121,7 +131,6 @@ Page {
     }
 
     objectName: "dialerPage"
-
     title: {
         // avoid clearing the title when app is inactive
         // under some states

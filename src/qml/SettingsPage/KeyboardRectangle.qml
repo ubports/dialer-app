@@ -1,13 +1,11 @@
 /*
- * Copyright 2012-2014 Canonical Ltd.
+ * Copyright (C) 2015-2017 Canonical, Ltd.
  *
- * This file is part of dialer-app.
- *
- * dialer-app is free software; you can redistribute it and/or modify
+ * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation; version 3.
  *
- * dialer-app is distributed in the hope that it will be useful,
+ * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
@@ -20,7 +18,6 @@ import QtQuick 2.4
 
 Item {
     id: keyboardRect
-
     anchors.left: parent.left
     anchors.right: parent.right
     anchors.bottom: parent.bottom

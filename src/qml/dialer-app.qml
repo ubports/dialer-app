@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-import QtQuick 2.0
+import QtQuick 2.4
 import Qt.labs.settings 1.0
 
 import Ubuntu.Components 1.3
@@ -410,11 +410,15 @@ MainView {
             pageStackNormalMode.pop();
         }
 
-        if (pageStackNormalMode.currentPage && typeof(pageStackNormalMode.currentPage.dialNumber) != 'undefined') {
-            pageStackNormalMode.currentPage.dialNumber = number;
+        var dialerPage = pageStackNormalMode.currentPage
+        if (dialerPage && typeof(dialerPage.dialNumber) != 'undefined') {
+            dialerPage.dialNumber = number;
+            if (accountId) {
+                dialerPage.selectAccount(accountId)
+            }
 
-            if (pageStackNormalMode.currentPage.bottomEdgeItem) {
-                pageStackNormalMode.currentPage.bottomEdgeItem.collapse()
+            if (dialerPage.bottomEdgeItem) {
+                dialerPage.bottomEdgeItem.collapse()
             }
         }
     }
@@ -479,6 +483,16 @@ MainView {
         var properties = {}
         properties["accountId"] = mainView.account.accountId
         PopupUtils.open(Qt.createComponent("Dialogs/SimLockedDialog.qml").createObject(mainView), mainView, properties)
+    }
+
+    function accountForModem(modemName) {
+        var modemAccounts = telepathyHelper.phoneAccounts.displayed
+        for (var i in modemAccounts) {
+            if (modemAccounts[i].modemName == modemName) {
+                return modemAccounts[i]
+            }
+        }
+        return null
     }
 
     Component.onCompleted: {
