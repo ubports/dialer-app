@@ -36,6 +36,7 @@ Page {
     property alias callAnimationRunning: callAnimation.running
     property bool greeterMode: false
     property var mmiPlugins: []
+    readonly property bool compactView: page.height <= units.gu(60)
 
     header: PageHeader {
         id: pageHeader
@@ -252,7 +253,10 @@ Page {
         id: keypadContainer
 
         anchors {
-            fill: parent
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: footer.top
             topMargin: pageHeader.height
         }
         focus: true
@@ -267,16 +271,16 @@ Page {
                 right: parent.right
                 rightMargin: units.gu(2)
             }
-            height: units.gu(10)
+            height: page.compactView ? units.gu(7) : units.gu(10)
 
             CustomButton {
                 id: addContact
 
                 anchors {
                     left: parent.left
-                    verticalCenter: parent.verticalCenter
+                    verticalCenter: keypadEntry.verticalCenter
                 }
-                width: opacity > 0 ? units.gu(4) : 0
+                width: opacity > 0 ? (page.compactView ? units.gu(4) : units.gu(3)) : 0
                 height: (keypadEntry.value !== "" && contactWatcher.isUnknown) ? parent.height : 0
                 icon: "contact-new"
                 iconWidth: units.gu(3)
@@ -304,11 +308,12 @@ Page {
                     left: addContact.right
                     right: backspace.left
                 }
-                height: units.gu(4)
                 focus: true
                 placeHolder: i18n.tr("Enter a number")
                 Keys.forwardTo: [callButton]
                 value: mainView.pendingNumberToDial
+                height: page.compactView ? units.gu(2) : units.gu(4)
+                maximumFontSize: page.compactView ? units.dp(20) : units.dp(30)
                 onCommitRequested: {
                     callButton.clicked()
                 }
@@ -319,9 +324,9 @@ Page {
                 objectName: "eraseButton"
                 anchors {
                     right: parent.right
-                    verticalCenter: parent.verticalCenter
+                    verticalCenter: keypadEntry.verticalCenter
                 }
-                width: opacity > 0 ? units.gu(4) : 0
+                width: opacity > 0 ? (page.compactView ? units.gu(4) : units.gu(3)) : 0
                 height: input.text !== "" ? parent.height : 0
                 icon: "erase"
                 iconWidth: units.gu(3)
@@ -387,10 +392,13 @@ Page {
 
             anchors {
                 top: divider.bottom
-                topMargin: units.gu(2)
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+                margins: units.gu(2)
             }
-
+            labelPixelSize: page.compactView ? units.dp(20) : units.dp(30)
+            spacing: page.compactView ? 0 : 5
             onKeyPressed: {
                 // handle special keys (backspace, arrows, etc)
                 keypadEntry.handleKeyEvent(keycode, keychar)

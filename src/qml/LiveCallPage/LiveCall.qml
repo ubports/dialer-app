@@ -30,6 +30,8 @@ Page {
     id: liveCall
     objectName: "pageLiveCall"
 
+    readonly property bool compactView: liveCall.height <= units.gu(60)
+
     property var call: callManager.foregroundCall
     property var calls: callManager.calls
     property string dtmfEntry: ""
@@ -453,20 +455,26 @@ Page {
             horizontalAlignment: Qt.AlignHCenter
             width: units.gu(11)
             text: {
+                var duration = ""
                 if (dtmfVisible && dtmfLabelHelper.text !== "") {
-                    return dtmfLabelHelper.text;
+                    duration = dtmfLabelHelper.text;
                 } else if (call && call.active) {
                     // TRANSLATORS: %1 is the call duration here.
-                    return call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
+                    duration = call.held ? i18n.tr("%1 - on hold").arg(stopWatch.elapsed) : stopWatch.elapsed;
                 } else if (call && !call.incoming) {
-                    return i18n.tr("Calling")
+                    duration = i18n.tr("Calling")
                 } else if (!call && initialStatus !== "") {
-                    return initialStatus
+                    duration = initialStatus
                 } else {
-                    return " "
+                    duration = " "
                 }
+
+                if (liveCall.compactView)
+                    return "%1 (%2)".arg(duration).arg(caller)
+                else
+                    return duration
             }
-            fontSize: "x-large"
+            fontSize: liveCall.compactView ? "large" : "x-large"
         }
 
         Label {
@@ -478,8 +486,11 @@ Page {
                 horizontalCenter: parent.horizontalCenter
             }
             text: caller
-            fontSize: "large"
             color: UbuntuColors.darkGrey
+
+            fontSize:"large"
+            visible: !liveCall.compactView
+            height: visible ? implicitHeight : 0
         }
 
         MultiCallDisplay {
@@ -499,7 +510,7 @@ Page {
                 left: parent.left
                 right: parent.right
                 top: callerLabel.bottom
-                topMargin: units.gu(2)
+                topMargin: liveCall.compactView ? units.gu(0.5) : units.gu(2)
             }
         }
 
@@ -509,7 +520,9 @@ Page {
             anchors {
                 top: divider.bottom
                 topMargin: units.gu(2)
-                horizontalCenter: parent.horizontalCenter
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
             }
             onKeyPressed: {
                 if (call) {
@@ -520,8 +533,8 @@ Page {
 
             visible: opacity > 0.0
             opacity: 0.0
-            keysWidth: units.gu(11)
-            keysHeight: units.gu(7)
+            labelPixelSize: liveCall.compactView ? units.dp(20) : units.dp(30)
+            spacing: liveCall.compactView ? 0 : 5
         }
     }
 
@@ -580,7 +593,7 @@ Page {
 
         anchors {
             horizontalCenter: parent.horizontalCenter
-            bottom: footer.top
+            bottom: hangupButton.top
             bottomMargin: units.gu(1)
         }
 
@@ -685,25 +698,15 @@ Page {
         }
     }
 
-    Item {
-        id: footer
-        height: units.gu(10)
+    HangupButton {
+        id: hangupButton
+        objectName: "hangupButton"
+
         anchors {
+            horizontalCenter: parent.horizontalCenter
             bottom: parent.bottom
-            left: parent.left
-            right: parent.right
+            bottomMargin: liveCall.compactView ? units.gu(1) : units.gu(5)
         }
-
-        HangupButton {
-            id: hangupButton
-            objectName: "hangupButton"
-
-            anchors {
-                horizontalCenter: parent.horizontalCenter
-                bottom: parent.bottom
-                bottomMargin: units.gu(5)
-            }
-            onClicked: endCall()
-        }
+        onClicked: endCall()
     }
 }

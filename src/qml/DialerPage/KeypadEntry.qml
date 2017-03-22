@@ -30,6 +30,8 @@ FocusScope {
     property alias input: input
     property alias placeHolder: hint.text
     property alias placeHolderPixelFontSize: hint.font.pixelSize
+    property double maximumFontSize: units.dp(30)
+
     // this is used by tests. do not remove it
     property alias selectedText: input.selectedText
 
@@ -61,14 +63,13 @@ FocusScope {
     }
 
     onValueChanged: input.deselect()
+    onMaximumFontSizeChanged: input.adjustTextSize()
 
     PhoneNumberField {
         id: input
 
         property bool __adjusting: false
-        readonly property double maximumFontSize: units.dp(30)
         readonly property double minimumFontSize: FontUtils.sizeToPixels("large")
-
 
         style: TextFieldStyle {
             background: null
@@ -85,7 +86,7 @@ FocusScope {
             __adjusting = true;
 
             // start by resetting the font size to discover the scale that should be used
-            font.pixelSize = maximumFontSize
+            font.pixelSize = keypadEntry.maximumFontSize
 
             // check if it really needs to be scaled
             if (contentWidth > width) {
@@ -103,7 +104,6 @@ FocusScope {
             verticalCenter: parent.verticalCenter
         }
         horizontalAlignment: (text.length < 19 ? TextInput.AlignHCenter : TextInput.AlignRight)
-        font.pixelSize: maximumFontSize
         font.family: "Ubuntu"
         color: UbuntuColors.darkGrey
         focus: false
@@ -135,6 +135,7 @@ FocusScope {
             target: units
             onGridUnitChanged: input.adjustTextSize()
         }
+        Component.onCompleted: input.adjustTextSize()
     }
 
     MouseArea {
@@ -159,7 +160,7 @@ FocusScope {
         }
 
         text: ""
-        font.pixelSize: input.maximumFontSize
+        font.pixelSize: input.font.pixelSize
         fontSizeMode: Text.HorizontalFit
         color: UbuntuColors.darkGrey
         opacity: 0.9
