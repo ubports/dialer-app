@@ -147,8 +147,16 @@ Page {
         }
     }
 
-    HistoryFilter {
+    HistoryUnionFilter {
         id: emptyFilter
+        HistoryFilter {
+            filterProperty: "missed"
+            filterValue: true
+        }
+        HistoryFilter {
+            filterProperty: "missed"
+            filterValue: false
+        }
     }
 
     HistoryFilter {
