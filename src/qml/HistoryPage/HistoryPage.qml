@@ -147,6 +147,7 @@ Page {
         }
     }
 
+    // FIXME: this is a workaround to force the model perform the query
     HistoryUnionFilter {
         id: emptyFilter
         HistoryFilter {
