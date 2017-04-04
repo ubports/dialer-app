@@ -48,11 +48,11 @@ Page {
         }
 
         updating = true
-        numberRewriteSwitch.checked = props.numberRewrite
-        countryCodeField.text = props.defaultCountryCode
-        areaCodeField.text = props.defaultAreaCode
-        removeInputField.text = props.removeCharacters
-        prefixInputField.text = props.prefix
+        numberRewriteSwitch.checked = props.numberRewrite ? props.numberRewrite : false
+        countryCodeField.text = props.defaultCountryCode ? props.defaultCountryCode : ""
+        areaCodeField.text = props.defaultAreaCode ? props.defaultAreaCode : ""
+        removeInputField.text = props.removeCharacters ? props.removeCharacters : ""
+        prefixInputField.text = props.prefix ? props.prefix : ""
         updating = false
     }
 
