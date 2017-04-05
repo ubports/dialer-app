@@ -193,6 +193,11 @@ Page {
             return
         }
 
+        // in case Enter is pressed, remove focus from the view to prevent multiple calls to get placed
+        if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+            page.focus = false;
+        }
+
         keypad.keyPressed(event.key, event.text)
     }
 
