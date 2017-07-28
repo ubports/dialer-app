@@ -102,7 +102,7 @@ Page {
                 }
             ]
             actions: {
-                if (mainView.simLocked) {
+                if (mainView.simLocked && !mainView.greeterMode) {
                     return simLockedActionList
                 } else {
                     return backActionList
