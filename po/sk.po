@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-09-29 15:45+0000\n"
+"PO-Revision-Date: 2017-09-29 22:07+0000\n"
 "Last-Translator: Peter Valachovič <peter.valachovic@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports/dialer-"
 "app/sk/>\n"
@@ -51,18 +51,18 @@ msgstr[2] "%1 hodiny"
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
-msgstr[2] "%1 min"
+msgstr[0] "minúta"
+msgstr[1] "%1 minúty"
+msgstr[2] "%1 minút"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 s"
-msgstr[1] "%1 s"
-msgstr[2] "%1 s"
+msgstr[0] "%1 sekunda"
+msgstr[1] "%1 sekundy"
+msgstr[2] "%1 sekúnd"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -228,7 +228,7 @@ msgstr "Zmeniť priradenie všetkých volaní na %1?"
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "Zatvoriť"
+msgstr "Zavrieť"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -277,11 +277,11 @@ msgstr "DEF"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr "Zmazať"
+msgstr "Vymazať"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "Podrobnosti"
+msgstr "Detaily"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -299,7 +299,7 @@ msgstr "Zatvoriť"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Túto otázku už nezobrazovať"
+msgstr "Nepýtať sa znova"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
@@ -438,11 +438,11 @@ msgstr "Môj telefón je nedostupný"
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "Žiadne"
+msgstr "Nie"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Nie je zvolená SIM karta"
+msgstr "Nie je vybraná žiadna SIM karta"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -451,7 +451,7 @@ msgstr "Žiadne hovory"
 #: ../src/qml/DialerPage/DialerPage.qml:151 ../src/qml/dialer-app.qml:374
 #: ../src/qml/dialer-app.qml:379
 msgid "No network"
-msgstr "Sieť nedostupná"
+msgstr "Žiadna sieť"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
@@ -518,10 +518,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Prosím, odomknite svoju SIM kartu, aby ste mohli volať alebo posielať SMS. "
-"Vašu SIM kartu môžete odomknúť v indikátore siete v hornej časti obrazovky "
-"alebo navštívením <a href=\"system_settings\">Nastavenia systému &gt; "
-"Bezpečnosť a súkromie</a>."
+"Pre volanie alebo posielanie správ, prosím, odomknite SIM kartu. SIM kartu "
+"môžete odomknúť z panelu Siete v hornej časti obrazovky, alebo navštívte <a "
+"href=\"system_settings\">Systémové nastavenia &gt; Zabezpečenie a "
+"súkromie</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -614,7 +614,7 @@ msgstr "Potiahnuť pre vymazanie"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Potiahnuť pre ukázanie akcie"
+msgstr "Potiahnutím odhaliť akcie"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
@@ -635,11 +635,11 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Momentálne nie je dostupná sieť na %1"
+msgstr "Momentálne žiadna sieť %1"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "Momentálne nie je dostupná sieť."
+msgstr "Momentálne žiadna sieť."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
@@ -687,7 +687,7 @@ msgstr "Aby ste mohli volať, musíte vypnúť režim Lietadlo"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "Musíte zvoliť SIM kartu"
+msgstr "Potrebujete zvoliť SIM kartu"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
