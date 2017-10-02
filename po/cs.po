@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-01 16:18+0000\n"
+"PO-Revision-Date: 2017-10-02 13:26+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/dialer-"
 "app/cs/>\n"
@@ -210,7 +210,7 @@ msgstr "Zobrazit volanou telefonní linku"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
-msgstr "Omezit volanou telefonní linku"
+msgstr "Skrýt volanou telefonní linku"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
@@ -223,7 +223,7 @@ msgstr "Zrušit"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Změnit všechna přidružená volání na %1?"
+msgstr "Změnit všechna sdružená volání na %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -245,7 +245,7 @@ msgstr "Zobrazení čísla připojené linky"
 
 #: ../src/qml/dialer-app.qml:621
 msgid "Connected Line Restriction"
-msgstr "Skrytí čísla připojené linky"
+msgstr "Skrýt číslo připojené linky"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
@@ -325,7 +325,7 @@ msgstr "Chyba"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
-msgstr "Vytvoření hovoru selhalo."
+msgstr "Spojení hovoru selhalo."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
@@ -578,7 +578,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Vyberte výchozí SIM kartu pro veškeré odchozí hovory. Vždy můžete své "
-"rozhodnutí změnit na <a href=\"system_settings\">System Settings</a>."
+"rozhodnutí změnit na <a href=\"system_settings\">Systémová nastavení</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
