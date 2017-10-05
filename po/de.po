@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-05 19:09+0000\n"
-"Last-Translator: Twinkybot <me@twinkybot.org>\n"
+"PO-Revision-Date: 2017-10-05 19:54+0000\n"
+"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/dialer-"
 "app/de/>\n"
 "Language: de\n"
@@ -597,7 +597,6 @@ msgstr "Einstellungen"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
-#, fuzzy
 msgid "Share"
 msgstr "Teilen"
 
