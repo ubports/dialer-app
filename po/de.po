@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-01 07:50+0000\n"
-"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
+"PO-Revision-Date: 2017-10-05 19:09+0000\n"
+"Last-Translator: Twinkybot <me@twinkybot.org>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/dialer-"
 "app/de/>\n"
 "Language: de\n"
@@ -58,8 +58,8 @@ msgstr[1] "%1 Minuten"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 s"
-msgstr[1] "%1 s"
+msgstr[0] "%1 Sekunde"
+msgstr[1] "%1 Sekunden"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -314,7 +314,7 @@ msgstr "Notruf"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Nummer eingeben"
+msgstr "Geben Sie eine Nummer ein"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -396,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr "Zuletzt angerufen %1"
+msgstr "Zuletzt %1 angerufen"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -503,7 +503,7 @@ msgstr "Telefonanwendung"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefon;Wähler;anrufen;wählen;Anruf;Tastatur"
+msgstr "Telefon;Wähler;Wählen;Anruf;Tastatur"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -515,10 +515,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Bitte Ihre SIM-Karte entsperren, um einen Anruf zu tätigen oder eine "
+"Bitte entsperren Sie Ihre SIM-Karte, um einen Anruf zu tätigen oder eine "
 "Nachricht zu senden. Sie können Ihre SIM-Karte von der Netzwerkanzeige am "
-"oberen Bildschirmrand oder durch Öffnen von <a href=\"system_settings"
-"\">Systemeinstellungen &gt; Sicherheit &amp; Datenschutz</a> entsperren."
+"oberen Bildschirmrand oder durch Öffnen von <a href=\"system_settings\">"
+"Systemeinstellungen &gt; Sicherheit &amp; Datenschutz</a> entsperren."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -564,7 +564,7 @@ msgstr "Suchen"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Suchen …"
+msgstr "Suchen..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -575,7 +575,7 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Die vorgegebene SIM für ausgehende Anrufe auswählen. Sie können jederzeit in "
+"Eine SIM als Vorgabe für ausgehende Anrufe wählen. Sie können jederzeit in "
 "den <a href=\"system_settings\">Systemeinstellungen</a> Ihre Auswahl ändern."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
