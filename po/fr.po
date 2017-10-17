@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-10 10:06+0000\n"
+"PO-Revision-Date: 2017-10-17 09:51+0000\n"
 "Last-Translator: RedXXIII <adered7@gmail.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/dialer-"
 "app/fr/>\n"
@@ -175,12 +175,10 @@ msgid "Call forwarding"
 msgstr "Transfert d'appel"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
-#, fuzzy
 msgid "Call forwarding can't be changed right now."
 msgstr "Le transfert d'appels ne peut être modifié pour le moment."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
-#, fuzzy
 msgid "Call forwarding status can't be checked "
 msgstr "Le statut du transfert d'appels ne peut être vérifié "
 
@@ -366,12 +364,10 @@ msgid "Got it"
 msgstr "Compris"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
-#, fuzzy
 msgid "I don't answer"
 msgstr "Je ne répond pas"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
-#, fuzzy
 msgid "I'm on another call"
 msgstr "Je suis en communication"
 
@@ -386,7 +382,6 @@ msgid "Incoming"
 msgstr "Entrant"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
-#, fuzzy
 msgid "Initializing..."
 msgstr "Initialisation..."
 
@@ -644,7 +639,6 @@ msgid "There is currently no network."
 msgstr "Il n'y a actuellement aucun réseau."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "This is not an emergency number."
 msgstr "Ceci n'est pas un numéro d'urgence."
 
