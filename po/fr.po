@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-05 08:46+0000\n"
+"PO-Revision-Date: 2017-10-17 09:51+0000\n"
 "Last-Translator: RedXXIII <adered7@gmail.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/dialer-"
 "app/fr/>\n"
@@ -176,11 +176,11 @@ msgstr "Transfert d'appel"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Le transfert d'appels ne peut être modifié pour le moment."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Le statut du transfert d'appels ne peut être vérifié "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -263,7 +263,6 @@ msgid "Contacts..."
 msgstr "Contacts..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
-#, fuzzy
 msgid "Could not forward to this contact"
 msgstr "Impossible de transférer vers ce contact"
 
@@ -353,7 +352,6 @@ msgstr "Transférer les appels entrants lorsque :"
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
-#, fuzzy
 msgid "Forward to"
 msgstr "Transférer vers"
 
@@ -367,11 +365,11 @@ msgstr "Compris"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Je ne répond pas"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Je suis en communication"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -385,7 +383,7 @@ msgstr "Entrant"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Initialisation..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -541,7 +539,6 @@ msgid "Recent"
 msgstr "Récent"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
-#, fuzzy
 msgid "Redirects all phone calls to another number."
 msgstr "Transférer tous les appels téléphoniques vers un autre numéro."
 
@@ -643,7 +640,7 @@ msgstr "Il n'y a actuellement aucun réseau."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Ceci n'est pas un numéro d'urgence."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
