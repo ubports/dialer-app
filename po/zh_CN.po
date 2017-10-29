@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-14 07:19+0000\n"
+"PO-Revision-Date: 2017-10-21 05:30+0000\n"
 "Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://translate.ubports.com/projects/ubports/dialer-app/zh_Hans/>\n"
@@ -671,7 +671,7 @@ msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "是"
+msgstr "同意"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 #: ../src/qml/SettingsPage/dateUtils.js:43
