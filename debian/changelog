@@ -1,4 +1,4 @@
-dialer-app (0.2+ubports1) vivid; urgency=medium
+dialer-app (0.2+ubports1) xenial; urgency=medium
 
   * Import to UBports
 
