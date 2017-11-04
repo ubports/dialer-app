@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-21 05:30+0000\n"
+"PO-Revision-Date: 2017-11-04 05:15+0000\n"
 "Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://translate.ubports.com/projects/ubports/dialer-app/zh_Hans/>\n"
@@ -280,7 +280,7 @@ msgstr "删除"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "详细信息"
+msgstr "详情"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
