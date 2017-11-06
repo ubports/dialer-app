@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-06 23:08+0000\n"
+"PO-Revision-Date: 2017-11-06 23:09+0000\n"
 "Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/ro/>\n"
@@ -619,7 +619,7 @@ msgstr "Glisați pentru a descoperi acțiuni"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
-msgstr "Comută sursa audio"
+msgstr "Comută sursa audio:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
