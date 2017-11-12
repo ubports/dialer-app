@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-04 22:55+0000\n"
+"PO-Revision-Date: 2017-11-06 23:09+0000\n"
 "Last-Translator: Brînzariu Cristian <info@ebeton.ro>\n"
 "Language-Team: Romanian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/ro/>\n"
@@ -36,7 +36,7 @@ msgstr "%1 - în așteptare"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "Servicii %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -175,17 +175,16 @@ msgstr "Eșec la apelare"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "Redirecționare apel"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Redirecționare apelurilor nu se poate modifica în acest moment."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Statusul redirecționărilor nu a putut fi verificat "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -196,7 +195,6 @@ msgstr "Apelul în așteptare a eșuat"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
 msgstr "Apel în așteptare"
 
@@ -265,9 +263,8 @@ msgid "Contacts"
 msgstr "Contacte"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Contacte"
+msgstr "Contacte..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -315,9 +312,8 @@ msgid "Emergency Calls"
 msgstr "Apeluri de urgență"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
-msgstr "Apeluri de urgență"
+msgstr "Apel de urgență"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -361,7 +357,7 @@ msgstr "Redirecționați apelurile de intrare când:"
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Redirecționează către"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -373,11 +369,11 @@ msgstr "Am înțeles"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Nu răspund"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Sunt în alt apel"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -391,7 +387,7 @@ msgstr "Primite"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Se inițializează..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -404,7 +400,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Ultima apelare %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -415,6 +411,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Permite să răspundeți sau să inițiați un apel nou în timp ce desfășurați o "
+"convorbire și să comutați între ele"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -470,7 +468,7 @@ msgstr "Ok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Oprit"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -550,7 +548,7 @@ msgstr "Redirecționează toate apeluri telefonice către un alt număr."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -592,12 +590,11 @@ msgstr "Trimite mesaj"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Servicii"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Selectare"
+msgstr "Setează"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -622,7 +619,7 @@ msgstr "Glisați pentru a descoperi acțiuni"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
-msgstr "Comută sursa audio"
+msgstr "Comută sursa audio:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
@@ -647,7 +644,7 @@ msgstr "Nu există rețea."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Acesta nu este un număr de urgență."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
