@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-25 19:32+0000\n"
-"Last-Translator: Taka Turgut <takaturgut@gmail.com>\n"
+"PO-Revision-Date: 2017-11-26 00:08+0000\n"
+"Last-Translator: Arda Canbolat <oardacn@gmail.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/ubports"
 "/dialer-app/tr/>\n"
 "Language: tr\n"
@@ -145,9 +145,8 @@ msgid "Bluetooth device"
 msgstr "Bluetooth aygıtı"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Aranıyor"
+msgstr "Ara"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -468,7 +467,7 @@ msgstr "Tamam"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Kapalı"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -530,7 +529,7 @@ msgstr "Lütfen bekleyin"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
-msgstr "Özel"
+msgstr "Kişiye Özel"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
@@ -564,7 +563,7 @@ msgstr "Kaydet"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr "Arama"
+msgstr "Ara"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
@@ -592,9 +591,8 @@ msgid "Services"
 msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Seç"
+msgstr "Ayarla"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -699,7 +697,7 @@ msgstr "saat:dakika:saniye"
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr "dakika:saniye"
+msgstr "mm:ss"
 
 #~ msgid "Flight mode"
 #~ msgstr "Uçak Modu"
