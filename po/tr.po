@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-26 00:08+0000\n"
+"PO-Revision-Date: 2017-11-26 14:15+0000\n"
 "Last-Translator: Arda Canbolat <oardacn@gmail.com>\n"
 "Language-Team: Turkish <https://translate.ubports.com/projects/ubports"
 "/dialer-app/tr/>\n"
@@ -35,7 +35,7 @@ msgstr "%1 - beklemede"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 Hizmetleri"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -136,9 +136,8 @@ msgid "All"
 msgstr "Tümü"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Çağrı yok"
+msgstr "Tüm çağrılar"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -162,27 +161,26 @@ msgstr "Çağrı Bekletme"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:152
 msgid "Call ended"
-msgstr "Çağrı sonlandırıldı."
+msgstr "Çağrı sonlandırıldı"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Call failed"
-msgstr "Çağrı başarısız."
+msgstr "Çağrı başarısız"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:44
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Çağrı Yönlendirme"
+msgstr "Çağrı yönlendirme"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Çağrı yönlendirme şu anda değiştirilemez."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Çağrı yönlendirme durumu kontrol edilemez "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -193,9 +191,8 @@ msgstr "Arama bekletme başarısız"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Çağrı Bekletme"
+msgstr "Çağrı bekletme"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -254,7 +251,7 @@ msgstr "Kişi Ayrıntıları"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Kişi herhangi bir telefon numarası ile ilişkili değil."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -262,13 +259,12 @@ msgid "Contacts"
 msgstr "Kişiler"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kişiler"
+msgstr "Kişiler…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Bu kişiye iletilemedi"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -312,9 +308,8 @@ msgid "Emergency Calls"
 msgstr "Acil Durum Aramaları"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
-msgstr "Acil Durum Aramaları"
+msgstr "Acil Durum Çagrısı"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -348,17 +343,17 @@ msgstr "Uçuş Modu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Gelen her çağrıyı yönlendir"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Gelen çağrıları şu durumlarda yönlendir:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Yönledirme"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -370,11 +365,11 @@ msgstr "Anlaşıldı"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Cevap veremiyorum"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Başka bir görüşme yapıyorum"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -388,7 +383,7 @@ msgstr "Gelen Aramalar"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Başlatılıyor..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -401,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Son aranan %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -412,6 +407,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Başka bir görüşme yaparken cevaplamanızı veya yeni bir çağrı başlatmanızı ve "
+"aralarında geçiş yapmanızı sağlar"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -433,7 +430,7 @@ msgstr "Cep Telefonu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Telefonuma erişilemiyor"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -459,7 +456,7 @@ msgstr "Yakın zamanda arama yok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Sayılar"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -510,7 +507,7 @@ msgstr "Telefon;Çevirici;Çevirme;Arama;Tuştakımı"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Lütfen bir telefon numarası seçin"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -543,11 +540,11 @@ msgstr "En son"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Tüm aramaları başka bir numaraya yönlendirir."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -588,7 +585,7 @@ msgstr "İleti gönder"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Hizmetler"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
@@ -604,9 +601,8 @@ msgid "Share"
 msgstr "Paylaş"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Çağrı yok"
+msgstr "Bazı çağrılar"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -643,7 +639,7 @@ msgstr "Şu an şebeke yok."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Bu bir acil durum numarası değildir."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -683,7 +679,7 @@ msgstr "Dün"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Arama yapabilmek için uçuş modunu devre dışı bırakmanız gerekir."
+msgstr "Arama yapabilmek için uçuş modunu devre dışı bırakmanız gerekir"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
