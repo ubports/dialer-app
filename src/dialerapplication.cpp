@@ -134,7 +134,6 @@ bool DialerApplication::setup()
     m_view->rootContext()->setContextProperty("application", this);
     m_view->rootContext()->setContextProperty("i18nDirectory", I18N_DIRECTORY);
     m_view->rootContext()->setContextProperty("view", m_view);
-    m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
 
     // check if there is a contacts backend override
     QString contactsBackend = qgetenv("QTCONTACTS_MANAGER_OVERRIDE");
@@ -152,7 +151,8 @@ bool DialerApplication::setup()
         m_view->engine()->addImportPath(pluginPath);
     }
 
-    m_view->setSource(QUrl::fromLocalFile("dialer-app.qml"));
+    m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
+    m_view->setSource(QUrl::fromLocalFile(QString("%1/dialer-app.qml").arg(dialerAppDirectory())));
     if (m_fullScreen) {
         m_view->showFullScreen();
     } else {
