@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-05 19:54+0000\n"
-"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
+"PO-Revision-Date: 2018-01-03 12:41+0000\n"
+"Last-Translator: Twinkybot <me@twinkybot.org>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/dialer-"
 "app/de/>\n"
 "Language: de\n"
@@ -203,7 +203,7 @@ msgstr "Rufaufbau"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
-msgstr "Rufnummernübermittlung des Anrufers"
+msgstr "Rufnummernübermittlung"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
