@@ -143,6 +143,10 @@ msgid "Bluetooth device"
 msgstr "Dispositivu Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
+<<<<<<< HEAD
+=======
+#, fuzzy
+>>>>>>> origin/vivid
 msgid "Call"
 msgstr "Muti"
 
@@ -436,7 +440,11 @@ msgstr "Mòbile"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
+<<<<<<< HEAD
 msgstr "Su telèfonu meu no est atzessìbile"
+=======
+msgstr ""
+>>>>>>> origin/vivid
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
