@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-02-23 04:30+0000\n"
+"PO-Revision-Date: 2018-03-02 08:40+0000\n"
 "Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
 "Language-Team: Chinese (Traditional) "
 "<https://translate.ubports.com/projects/ubports/dialer-app/zh_Hant/>\n"
@@ -607,11 +607,11 @@ msgstr "沒有通話"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "右滑刪除"
+msgstr "向此滑動來刪除"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "左滑顯示功能"
+msgstr "向此滑動來顯示功能"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
@@ -684,7 +684,7 @@ msgstr "要先停用飛航模式才能撥號"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "您需要選取 SIM 卡"
+msgstr "需要選取 SIM 卡"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
