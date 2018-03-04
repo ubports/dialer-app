@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-02-09 09:07+0000\n"
-"Last-Translator: Eran <etherpulse@gmail.com>\n"
+"PO-Revision-Date: 2018-03-02 09:21+0000\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/dialer-"
 "app/he/>\n"
 "Language: he\n"
@@ -456,19 +456,19 @@ msgstr "אין רשת"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
-msgstr ""
+msgstr "אין שיחות אחרונות"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "מספרים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "אישור"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "כבוי"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -511,7 +511,7 @@ msgstr "טלפון;חייגן;חוגה;התקשרות;להתקשר;שיחה;לח
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "נא לבחור מספר טלפון"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -556,7 +556,7 @@ msgstr "ה־SIM נעול"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "שמירה"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
