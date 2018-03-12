@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-03-12 03:01+0000\n"
+"PO-Revision-Date: 2018-03-12 08:27+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <https://translate.ubports.com/projects/ubports/dialer-"
 "app/eu/>\n"
@@ -50,7 +50,7 @@ msgstr[1] "%1 ordu"
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
+msgstr[0] "min %1"
 msgstr[1] "%1 min"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
@@ -58,7 +58,7 @@ msgstr[1] "%1 min"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 seg"
+msgstr[0] "seg %1"
 msgstr[1] "%1 seg"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
@@ -180,7 +180,7 @@ msgstr "Dei berbideratzea ezin da orain aldatu."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "Dei berbideratzearen egoera ezin da egiaztatu "
+msgstr "Dei berbideratzeen egoera ezin da egiaztatu "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -314,11 +314,11 @@ msgstr "Larrialdi-deiak"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Sartu zenbakia"
+msgstr "Sartu zenbaki bat"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr "Errorea"
+msgstr "Akatsa"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
@@ -477,7 +477,7 @@ msgstr "Zain"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
 msgid "Outgoing"
-msgstr "Irteerakoa"
+msgstr "Irteerakoak"
 
 #: ../src/qml/DialerPage/Keypad.qml:154
 msgid "PQRS"
@@ -576,7 +576,7 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Hautatu irteerako deientzako SIM lehenetsia. Edonoiz alda dezakezu zure "
-"aukera <a href=\"system_settings\">Sistemaren ezarpenetatik</a>"
+"aukera <a href=\"system_settings\">Sistemaren ezarpenetatik</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
@@ -679,7 +679,7 @@ msgstr "Atzo"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Hegaldi modua desgaitu beharra duzu deiak egin ahal izateko"
+msgstr "Hegaldi modua desgaitu behar duzu deiak egin ahal izateko"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
