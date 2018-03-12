@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-29 17:12+0000\n"
+"PO-Revision-Date: 2018-03-12 03:01+0000\n"
 "Last-Translator: Aitzol Berasategi <aitzol76@gmail.com>\n"
 "Language-Team: Basque <https://translate.ubports.com/projects/ubports/dialer-"
 "app/eu/>\n"
@@ -35,14 +35,14 @@ msgstr "%1 - zain"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 Zerbitzuak"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 ordu"
+msgstr[0] "Ordu %1"
 msgstr[1] "%1 ordu"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
@@ -136,9 +136,8 @@ msgid "All"
 msgstr "Denak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Ez dago deirik"
+msgstr "Dei guztiak"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -172,30 +171,28 @@ msgstr "Deiak huts egin du"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Dei-birbidaltzea"
+msgstr "Dei berbideratzea"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Dei berbideratzea ezin da orain aldatu."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Dei berbideratzearen egoera ezin da egiaztatu "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
-msgstr ""
+msgstr "Itxarote-deiak huts egin du"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Dei-itxarotea"
+msgstr "Itxarote deia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -237,7 +234,7 @@ msgstr "Konferentzia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Conference call failure"
-msgstr ""
+msgstr "Konferentzi deiak huts egin du"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
@@ -254,7 +251,7 @@ msgstr "Kontaktuaren xehetasunak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Inolako telefono zenbakirekin loturarik ez duen kontaktua."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -262,13 +259,12 @@ msgid "Contacts"
 msgstr "Kontaktuak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontaktuak"
+msgstr "Kontaktuak..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Ezin zaio kontaktu honi birbidali"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -312,7 +308,6 @@ msgid "Emergency Calls"
 msgstr "Larrialdi-deiak"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
 msgstr "Larrialdi-deiak"
 
@@ -331,11 +326,11 @@ msgstr "Huts egin du deia aktibatzeak."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Ezin izan da konferentzi dei bat sortu."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:162
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Ezin izan da uneko deia itxaroten jarri."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
@@ -348,17 +343,17 @@ msgstr "Hegaldi modua"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Birbidali sarrerako dei guztiak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Birbidali sarrerako deiak honakoetan:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Birbidali"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -370,11 +365,11 @@ msgstr "Ulertuta"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Ez dut erantzuten"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Beste dei batean nago"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -388,7 +383,7 @@ msgstr "Sarrerakoa"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Abiarazten..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -401,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Azken deia %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -412,6 +407,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Dei bat erantzun edo berri bat hastea ahalbidetzen dizu, eta beraien artean "
+"aldatzea"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -433,7 +430,7 @@ msgstr "Mugikorra"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Nere telefonoa ez dago irisgarri"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -459,15 +456,15 @@ msgstr "Ez dago oraintsuko deirik"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Zenbakiak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "ADOS"
+msgstr "Ados"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Itzalita"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -510,7 +507,7 @@ msgstr "Telefonoa;Markatzailea;Markatu;Deitu;Markatze-teklatua"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Mesedez hautatu telefono zenbaki bat"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -521,7 +518,7 @@ msgstr ""
 "Desblokeatu SIM txartela deitzeko edo mezu bat bidaltzeko. SIM txartela "
 "desblokeatzeko Sare-adierazlea erabil dezakezu, pantailaren goialdean, edo "
 "bestela <a href=\"system_settings\">Sistemaren ezarpenak &gt; Segurtasuna "
-"&amp; Pribatutasuna</a> bisitatu."
+"eta pribatutasuna</a> bisitatu."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -539,15 +536,15 @@ msgstr "Zenbaki pribatua"
 #: ../src/qml/DialerPage/DialerPage.qml:522
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Oraintsukoa"
+msgstr "Azkenak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Berbideratu telefono dei guztiak beste zenbaki batetara."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -588,12 +585,11 @@ msgstr "Bidali mezua"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Zerbitzuak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Hautatu"
+msgstr "Ezarri"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -605,9 +601,8 @@ msgid "Share"
 msgstr "Partekatu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Ez dago deirik"
+msgstr "Zenbait dei"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -644,7 +639,7 @@ msgstr "Une honetan ez dago sarerik."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Hau ez da larrialdi zenbaki bat."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
