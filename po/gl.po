@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: Galician (UBports)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-03-31 23:21+0000\n"
-"PO-Revision-Date: 2018-04-01 01:24+0200\n"
-"Last-Translator: marcos <marcoslansgarza@gmail.com>\n"
+"PO-Revision-Date: 2018-03-31 23:29+0000\n"
+"Last-Translator: marcos lans <marcoslansgarza@gmail.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports"
 "/dialer-app/gl/>\n"
 "Language: gl\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -273,7 +273,7 @@ msgstr "Eliminar"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "Detalles"
+msgstr "Información"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -434,7 +434,7 @@ msgstr "Non"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Non hai unha SIM seleccionada"
+msgstr "Non seleccionou a tarxeta SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -617,7 +617,7 @@ msgstr "Alternar chamadas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Cambiar á SIM predeterminada"
+msgstr "Cambiar á SIM predeterminada:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
