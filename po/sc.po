@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-04-27 21:28+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"PO-Revision-Date: 2018-04-27 21:29+0000\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -611,7 +611,7 @@ msgstr "Cumpartzi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
-msgstr ""
+msgstr "Carchi mutidas "
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 #, fuzzy
@@ -672,7 +672,7 @@ msgstr "Nùmeru disconnotu"
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr ""
+msgstr "Segreteria"
 
 #: ../src/qml/DialerPage/Keypad.qml:188
 msgid "WXYZ"
