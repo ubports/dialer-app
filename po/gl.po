@@ -1,15 +1,10 @@
-# Galician translation for dialer-app
-# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
-# This file is distributed under the same license as the dialer-app package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: dialer-app\n"
+"Project-Id-Version: Galician (UBports)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-01-20 01:25+0000\n"
-"Last-Translator: hensip <hensip@gmail.com>\n"
+"POT-Creation-Date: 2018-03-31 23:21+0000\n"
+"PO-Revision-Date: 2018-03-31 23:29+0000\n"
+"Last-Translator: marcos lans <marcoslansgarza@gmail.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports"
 "/dialer-app/gl/>\n"
 "Language: gl\n"
@@ -35,7 +30,7 @@ msgstr "%1 - en espera"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "Servizos %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -176,11 +171,11 @@ msgstr "Redireccionamento de chamadas"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "O redireccionamento non se pode cambiar neste intre."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Non é posíbel comprobar o estado do redireccionamento das chamadas "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -251,7 +246,7 @@ msgstr "Información do contacto"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Contacto non asociado a ningún número de teléfono."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -264,7 +259,7 @@ msgstr "Contactos..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Non foi posíbel redireccionala a este contacto"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -278,7 +273,7 @@ msgstr "Eliminar"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "Detalles"
+msgstr "Información"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
@@ -314,7 +309,7 @@ msgstr "Chamadas de emerxencia"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Introduza un número"
+msgstr "Introduza o número"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -343,17 +338,17 @@ msgstr "Modo avión"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Redireccionar chamadas entrantes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Redireccionar chamadas entrantes cando:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Redireccionar a"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -365,11 +360,11 @@ msgstr "Entendido"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Non contesto"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Estou con outra chamada"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -383,7 +378,7 @@ msgstr "Entrantes"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Iniciando..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -396,7 +391,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Última chamada %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -407,6 +402,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Permite contestar ou facer unha chamada cando está atendendo outra, tamén "
+"permite alternar entre elas."
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -428,7 +425,7 @@ msgstr "Móbil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "O meu teléfono está inaccesíbel"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -437,7 +434,7 @@ msgstr "Non"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Non hai unha SIM seleccionada"
+msgstr "Non seleccionou a tarxeta SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -454,7 +451,7 @@ msgstr "Non hai chamadas recentes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Números"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -462,7 +459,7 @@ msgstr "Aceptar"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Desactivado"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -505,7 +502,7 @@ msgstr "Teléfono;Marcador;Dial;Chamar;Teclado"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Seleccione un número de teléfono"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -538,11 +535,11 @@ msgstr "Recentes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Redirecciona todas as chamadas a outro número."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -583,7 +580,7 @@ msgstr "Enviar mensaxe"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Servizos"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
@@ -620,7 +617,7 @@ msgstr "Alternar chamadas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Cambiar á SIM predeterminada"
+msgstr "Cambiar á SIM predeterminada:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -637,7 +634,7 @@ msgstr "Actualmente non hai ningunha rede."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Ese non é un número de emerxencias."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41

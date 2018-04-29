@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-02-23 10:41+0000\n"
-"Last-Translator: Stefan <spleyte@gmail.com>\n"
+"PO-Revision-Date: 2018-04-07 22:27+0000\n"
+"Last-Translator: Joeke de Graaf <mappack@null.net>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/dialer-"
 "app/nl/>\n"
 "Language: nl\n"
@@ -136,9 +136,8 @@ msgid "All"
 msgstr "Alle"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Geen oproepen"
+msgstr "Alle oproepen"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -262,9 +261,8 @@ msgid "Contacts"
 msgstr "Contacten"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Contacten"
+msgstr "Contacten..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -312,7 +310,6 @@ msgid "Emergency Calls"
 msgstr "Noodoproep"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
 msgstr "Noodoproep"
 
@@ -606,9 +603,8 @@ msgid "Share"
 msgstr "Delen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Geen oproepen"
+msgstr "Enkele oproepen"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
