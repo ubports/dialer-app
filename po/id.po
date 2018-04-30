@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2014-08-31 05:08+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"PO-Revision-Date: 2018-04-30 13:55+0000\n"
+"Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.ubports.com/projects/ubports"
+"/dialer-app/id/>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.15\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -32,16 +33,16 @@ msgstr "%1 - ditahan"
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
-#, qt-format
+#, fuzzy, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "Servis %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 jam"
+msgstr[0] "Jam %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -141,9 +142,8 @@ msgid "Bluetooth device"
 msgstr "Perangkat Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Memanggil"
+msgstr "Panggil"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -175,11 +175,11 @@ msgstr "Penerusan Panggilan"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Penerusan panggilan tidak dapat diubah sekarang."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Status penerusan panggilan tidak bisa di cek "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -251,7 +251,7 @@ msgstr "Rincian Kontak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Kontak tidak terkait dengan semua nomor telepon."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -265,7 +265,7 @@ msgstr "Kontak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Tidak bisa meneruskan ke kontak ini"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -301,7 +301,7 @@ msgstr "Jangan tanya lagi"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Ubah"
+msgstr "Sunting"
 
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
@@ -316,7 +316,7 @@ msgstr "Panggilan Darurat"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Masukan nomor"
+msgstr "Masukkan nomor"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -345,17 +345,17 @@ msgstr "Mode Penerbangan"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Teruskan setiap panggilan masuk"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Teruskan panggilan masuk ketika:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Teruskan ke"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -367,11 +367,11 @@ msgstr "Mengerti"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Saya tidak menjawab"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Saya ada panggilan lainnya"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -385,7 +385,7 @@ msgstr "Masuk"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Menginisialisasi..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -398,7 +398,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Panggilan terakhir %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -409,6 +409,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Jawab atau mulai panggilan baru ketika sedang ada panggilan lainnya, dan "
+"berpindah antar panggilan"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -430,7 +432,7 @@ msgstr "Ponsel"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Ponsel saya tidak dapat dijangkau"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -456,15 +458,15 @@ msgstr "Tak ada panggilan baru-baru ini"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Nomor"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Matikan"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -507,7 +509,7 @@ msgstr "Telepon;Panggilan;Keypad"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Tolong pilih nomor ponsel"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -540,11 +542,11 @@ msgstr "Baru-baru Ini"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Mengalihkan semua panggilan ke nomor lainnya."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -585,7 +587,7 @@ msgstr "Kirim pesan"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Servis"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 #, fuzzy
@@ -599,7 +601,7 @@ msgstr "Pengaturan"
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Berbagi"
+msgstr "Bagikan"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 #, fuzzy
@@ -641,7 +643,7 @@ msgstr "Saat ini tak ada jaringan."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Ini bukan nomor gawat darurat."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
