@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
 "PO-Revision-Date: 2018-05-06 11:11+0000\n"
-"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -206,7 +206,7 @@ msgstr "Ammustra s'ID de chie mutit"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
-msgstr "Cua s'ID de chie mutit "
+msgstr "Cua s'ID de chie mutit"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
