@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
 "PO-Revision-Date: 2018-05-06 11:10+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -174,9 +174,8 @@ msgid "Call forwarding"
 msgstr "Deviatzione de mutidas"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
-#, fuzzy
 msgid "Call forwarding can't be changed right now."
-msgstr "Sa deviatzione de mutidas non podet èssere mudada como."
+msgstr "Sa deviatzione de mutidas non podet èssere mudada immoe."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
