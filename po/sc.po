@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-05-06 11:38+0000\n"
-"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"PO-Revision-Date: 2018-05-06 11:54+0000\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -679,9 +679,8 @@ msgid "Yesterday"
 msgstr "Eris"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
-#, fuzzy
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Deves disativare sa modalidade aèreu pro mutire"
+msgstr "Depes disativare sa modalidade aèreu pro mutire"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
