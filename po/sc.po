@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
 "PO-Revision-Date: 2018-05-06 11:12+0000\n"
-"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -237,7 +237,7 @@ msgstr "Mutida de cunferèntzia faddida"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
-msgstr "Ammustra su nùmeru mutidu "
+msgstr "Ammustra su nùmeru mutidu"
 
 #: ../src/qml/dialer-app.qml:621
 #, fuzzy
