@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-05-09 04:23+0000\n"
+"PO-Revision-Date: 2018-05-09 04:26+0000\n"
 "Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/id/>\n"
@@ -457,7 +457,7 @@ msgstr "Nomor"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "OK"
+msgstr "OKE"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
@@ -465,7 +465,7 @@ msgstr "Matikan"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oke"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
