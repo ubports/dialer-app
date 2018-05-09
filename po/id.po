@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-04-30 13:55+0000\n"
+"PO-Revision-Date: 2018-05-09 04:23+0000\n"
 "Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/id/>\n"
@@ -33,7 +33,7 @@ msgstr "%1 - ditahan"
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 Services"
 msgstr "Servis %1"
 
@@ -133,9 +133,8 @@ msgid "All"
 msgstr "Semua"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Tiada panggilan"
+msgstr "Semua panggilan"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -169,9 +168,8 @@ msgstr "Panggilan gagal"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Penerusan Panggilan"
+msgstr "Penerusan panggilan"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
@@ -190,9 +188,8 @@ msgstr "Kegagalan menahan panggilan"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Penungguan Panggilan"
+msgstr "Penungguan panggilan"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -259,9 +256,8 @@ msgid "Contacts"
 msgstr "Kontak"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontak"
+msgstr "Kontak..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -309,9 +305,8 @@ msgid "Emergency Calls"
 msgstr "Panggilan Darurat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
-msgstr "Panggilan Darurat"
+msgstr "Panggilan darurat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -590,9 +585,8 @@ msgid "Services"
 msgstr "Servis"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Pilih"
+msgstr "Atur"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -604,9 +598,8 @@ msgid "Share"
 msgstr "Bagikan"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Tiada panggilan"
+msgstr "Beberapa panggilan"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
