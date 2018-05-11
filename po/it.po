@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-05-11 21:14+0000\n"
+"PO-Revision-Date: 2018-05-11 22:28+0000\n"
 "Last-Translator: Simone <19simok89@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/it/>\n"
@@ -594,7 +594,7 @@ msgstr "Imposta"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
-msgstr "Impostazioni"
+msgstr "Settaggi"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
