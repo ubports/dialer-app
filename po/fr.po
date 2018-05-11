@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-12-30 20:55+0000\n"
+"PO-Revision-Date: 2018-05-11 20:00+0000\n"
 "Last-Translator: Anne Onyme <anneonyme017@openmailbox.org>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/dialer-"
 "app/fr/>\n"
@@ -123,7 +123,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Actif"
+msgstr "Active"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -214,7 +214,9 @@ msgstr "Restriction de la ligne d'appel"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr "Annuler"
+msgstr ""
+"La couleur du texte est déterminée en fonction de l'arrière-plan, donc "
+"définie à partir du HTML"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
