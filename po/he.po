@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-03-04 21:10+0000\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"PO-Revision-Date: 2018-05-11 20:27+0000\n"
+"Last-Translator: Eran <etherpulse@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/dialer-"
 "app/he/>\n"
 "Language: he\n"
@@ -458,7 +458,7 @@ msgstr "מספרים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "אישור"
+msgstr "בסדר"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
