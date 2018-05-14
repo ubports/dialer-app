@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-05-12 20:04+0000\n"
+"PO-Revision-Date: 2018-05-14 12:12+0000\n"
 "Last-Translator: Veli-Matti Rautiainen <velraut@gmail.com>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports"
 "/dialer-app/fi/>\n"
@@ -460,7 +460,6 @@ msgid "Numbers"
 msgstr "Numerot"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
-#, fuzzy
 msgid "OK"
 msgstr "Selvä"
 
