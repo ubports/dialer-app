@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-05-06 11:54+0000\n"
+"PO-Revision-Date: 2018-05-22 14:47+0000\n"
 "Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
@@ -135,6 +135,7 @@ msgid "All"
 msgstr "Totu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
+#, fuzzy
 msgid "All calls"
 msgstr "Totu is mutidas"
 
@@ -341,10 +342,12 @@ msgid "Flight Mode"
 msgstr "Modalidade aèreu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
+#, fuzzy
 msgid "Forward every incoming call"
 msgstr "Devia totu is mutidas"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
+#, fuzzy
 msgid "Forward incoming calls when:"
 msgstr "Devia is mutidas cando:"
 
@@ -428,6 +431,7 @@ msgid "Mobile"
 msgstr "Mòbile"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
+#, fuzzy
 msgid "My phone is unreachable"
 msgstr "Su telèfonu meu no est atzessìbile"
 
@@ -539,6 +543,7 @@ msgid "Recent"
 msgstr "Reghentes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
+#, fuzzy
 msgid "Redirects all phone calls to another number."
 msgstr "Devia totu is mutidas a un'àteru nùmeru."
 
