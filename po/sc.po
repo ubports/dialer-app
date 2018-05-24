@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
 "PO-Revision-Date: 2018-05-24 15:28+0000\n"
-"Last-Translator: Matteo Mandis <mandismatteo@gmail.com>\n"
+"Last-Translator: Flavia <flavia.efloris@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sc/>\n"
 "Language: sc\n"
@@ -202,7 +202,7 @@ msgstr "Cramende"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
-msgstr "Ammustra s'ID de chie mutit"
+msgstr "Ammustrare s'ID de chie tzerriat "
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
