@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-02-19 08:51+0000\n"
+"PO-Revision-Date: 2018-05-25 23:22+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://translate.ubports.com/projects/ubports/dialer-app/nb/>\n"
@@ -136,18 +136,16 @@ msgid "All"
 msgstr "Alle"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Ingen anrop"
+msgstr "Alle anrop"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
 msgstr "Blåtann-enhet"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Ringer"
+msgstr "Anrop"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -197,7 +195,7 @@ msgstr "Samtale venter-feil"
 #: ../src/qml/SettingsPage/SingleSim.qml:32
 #, fuzzy
 msgid "Call waiting"
-msgstr "Anropsventing"
+msgstr "Anrop venter"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -256,7 +254,7 @@ msgstr "Kontaktdetaljer"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Kontakten har ikke noe tilknyttet telefonnummer"
+msgstr "Kontakten er ikke tilknyttet noe telefonnummer."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -264,9 +262,8 @@ msgid "Contacts"
 msgstr "Kontakter"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontakter"
+msgstr "Kontakter…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -350,7 +347,7 @@ msgstr "Flymodus"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr "Videresend alle ankommende anrop"
+msgstr "Viderekoble alle innkommende anrop"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
@@ -474,7 +471,6 @@ msgid "Off"
 msgstr "Av"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
-#, fuzzy
 msgid "Ok"
 msgstr "OK"
 
@@ -548,7 +544,7 @@ msgstr "Nylig"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr "Videresend alle telefonsamtaler til et annet nummer."
+msgstr "Videresender alle telefonsamtaler til at annet nummer."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -596,9 +592,8 @@ msgid "Services"
 msgstr "Tjenester"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Velg"
+msgstr "Sett"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -610,9 +605,8 @@ msgid "Share"
 msgstr "Del"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Ingen anrop"
+msgstr "Noen anrop"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
