@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-12-27 14:48+0000\n"
+"PO-Revision-Date: 2018-05-13 20:51+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports"
 "/dialer-app/am/>\n"
@@ -594,7 +594,7 @@ msgstr "ማሰናጃ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
-msgstr "ማሰናጃዎች"
+msgstr "ማሰናጃ"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
