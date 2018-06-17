@@ -215,6 +215,8 @@ Page {
         if (QTCONTACTS_PRELOAD_VCARD !== "") {
             contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
         }
+        // focus the search field / show the keyboard on start
+        state = "searching";
     }
 
     onActiveChanged: {
