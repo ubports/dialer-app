@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-06-27 20:52+0000\n"
-"Last-Translator: robin <musicfree@wanadoo.fr>\n"
+"PO-Revision-Date: 2018-07-05 07:35+0000\n"
+"Last-Translator: konrad <kohofer@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://translate.ubports.com/projects/ubports/dialer-app/en_GB/>\n"
 "Language: en_GB\n"
@@ -136,18 +136,16 @@ msgid "All"
 msgstr "All"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "No calls"
+msgstr "All calls"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
 msgstr "Bluetooth device"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Calling"
+msgstr "Call"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -173,9 +171,8 @@ msgstr "Call failed"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Call Forwarding"
+msgstr "Call forwarding"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
@@ -194,9 +191,8 @@ msgstr "Call holding failure"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Call Waiting"
+msgstr "Call waiting"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -263,9 +259,8 @@ msgid "Contacts"
 msgstr "Contacts"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Contacts"
+msgstr "Contacts..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -313,9 +308,8 @@ msgid "Emergency Calls"
 msgstr "Emergency Calls"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
-msgstr "Emergency Calls"
+msgstr "Emergency call"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -349,17 +343,17 @@ msgstr "Flight Mode"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Forward every incoming call"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Forward incoming calls when:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Forward to"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -371,11 +365,11 @@ msgstr "Got it"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "I don't answer"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "I'm on another call"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -389,7 +383,7 @@ msgstr "Incoming"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Initializing..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -402,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Last called %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -413,6 +407,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Lets you answer or start a new call while on another call, and switch "
+"between them"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -434,7 +430,7 @@ msgstr "Mobile"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "My phone is unreachable"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -460,7 +456,7 @@ msgstr "No recent calls"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Numbers"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -468,7 +464,7 @@ msgstr "OK"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Off"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -511,7 +507,7 @@ msgstr "Phone;Dialer;Dial;Call;Keypad"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Please select a phone number"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -543,11 +539,11 @@ msgstr "Recent"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Redirects all phone calls to another number."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -559,7 +555,7 @@ msgstr "SIM Locked"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr "Spara"
+msgstr "Save"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
@@ -588,12 +584,11 @@ msgstr "Send message"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Services"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Select"
+msgstr "Set"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -605,9 +600,8 @@ msgid "Share"
 msgstr "Share"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "No calls"
+msgstr "Some calls"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -644,12 +638,12 @@ msgstr "There is currently no network."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "This is not an emergency number."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
 msgid "Today"
-msgstr "Idag"
+msgstr "Today"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Ubuntu Phone"
