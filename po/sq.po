@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-09-29 07:40+0000\n"
+"PO-Revision-Date: 2018-06-02 20:57+0000\n"
 "Last-Translator: Jeff <jeffi27@live.at>\n"
 "Language-Team: Albanian <https://translate.ubports.com/projects/ubports"
 "/dialer-app/sq/>\n"
@@ -35,14 +35,14 @@ msgstr "%1 - në pritje"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 shërbime"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 or"
+msgstr[0] "%1 orë"
 msgstr[1] "%2 orë"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
@@ -50,16 +50,16 @@ msgstr[1] "%2 orë"
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[0] "%1 Minut"
+msgstr[1] "%1 Minuta"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sek"
-msgstr[1] "%1 sek"
+msgstr[0] "%1 Sekond"
+msgstr[1] "%1 Sekonda"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -136,9 +136,8 @@ msgid "All"
 msgstr "Të Gjitha"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Asnjë thirrje"
+msgstr "Të gjitha thirrjet"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -162,55 +161,53 @@ msgstr "Thirrje Në Pritje"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:152
 msgid "Call ended"
-msgstr ""
+msgstr "Thirrja përfundoi"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Call failed"
-msgstr ""
+msgstr "Thirrja dështoi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:44
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Transferimi i Thirrjes"
+msgstr "Përcjellja e thirrjes"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Përcjellja e thirrjeve nuk mund të ndryshohet tani."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Statusi i përcjelljes së thirrjes nuk mund të kontrollohet "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
-msgstr ""
+msgstr "Gabim gjatë mbajtjes së telefonatës"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Thirrje Në Pritje"
+msgstr "Thirrje në pritje"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:456
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr ""
+msgstr "Duke e thirrur"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "Identifikimit të linjës thirrëse"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "Mshefja e numrit nga telefonuesi"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
@@ -223,7 +220,7 @@ msgstr "Anulo"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr ""
+msgstr "Ndryshoni të gjitha caktimet e thirrjeve në %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -237,24 +234,24 @@ msgstr "Konferencë"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Conference call failure"
-msgstr ""
+msgstr "Dështimi i thirrjes në konferencë"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
-msgstr ""
+msgstr "Shfaqje e numrit e të  thirrurit"
 
 #: ../src/qml/dialer-app.qml:621
 msgid "Connected Line Restriction"
-msgstr ""
+msgstr "Mshefja e numrit e të  thirrurit"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Detajet e Kontaktuesit"
+msgstr "Detajet e kontaktit"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Kontakti nuk lidhet me ndonjë numër telefoni."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -262,13 +259,12 @@ msgid "Contacts"
 msgstr "Kontaktet"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontaktet"
+msgstr "Kontakte…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Nuk mund ta përcillte këtë kontakt"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -278,7 +274,7 @@ msgstr "DEF"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr "Fshije"
+msgstr "Fshijë"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
@@ -286,11 +282,11 @@ msgstr "Detajet"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr "Çaktivizo"
+msgstr "Deaktivizo"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Fikni mënyrën e aeroplanit"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
@@ -309,12 +305,11 @@ msgstr "Ndrysho"
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
 msgid "Emergency Calls"
-msgstr ""
+msgstr "Thirrjet emergjente"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
-msgstr "Bashkoji thirrjet"
+msgstr "Thirrje emergjente"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -327,38 +322,38 @@ msgstr "Gabim"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "Dështoi në aktivizimin e telefonatës."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "Krijimi i një thirrjeje konferencë dështoi."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:162
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "Mbajtja e thirrjes dështoi."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr "Të Parapëlqyerat"
+msgstr "Favoritet"
 
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "Mënyrë Fluturimi"
+msgstr "Modaliteti aeroplan"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Kalo gjdo thirrje hyrse"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Ridrejto thirrjet hyrse nese:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Përpara"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -370,11 +365,11 @@ msgstr "Kuptova"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Unë nuk përgjigjem"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Unë jam në një bisedë tjetër"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -388,11 +383,11 @@ msgstr "Në ardhje"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Inicializoj…"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Kodi i pavlefshëm USSD"
 
 #: ../src/qml/DialerPage/Keypad.qml:120
 msgid "JKL"
@@ -401,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Thirrja e fundit %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -412,6 +407,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Ju lejon të përgjigjeni ose të nisni një telefonatë të re gjatë një "
+"telefonate tjetër dhe të kaloni mes tyre"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -433,7 +430,7 @@ msgstr "Mobil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Telefoni im nuk është i arritshëm"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -442,7 +439,7 @@ msgstr "Jo"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Nuk është zgjedhur një kartë SIM"
+msgstr "Nuk u përzgjodh asnjë kartë SIM"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -455,23 +452,23 @@ msgstr "Nuk ka rrjet"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
-msgstr ""
+msgstr "Asnjë telefonatë e fundit"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Numrat"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Fikur"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -494,23 +491,23 @@ msgstr "Telefoni"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Program Telefoni"
+msgstr "App i telefonit"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Phone Speaker"
-msgstr ""
+msgstr "Altoparlanti"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Program telefoni"
+msgstr "App i telefonit"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr ""
+msgstr "Telefon;Përzgjedhës;Zgjidhni;Thirrje;Tastierë"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Ju lutemi zgjidhni një numër telefoni"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -518,6 +515,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"Luteni të hapni kartën tuaj SIM për të bërë një telefonatë ose për të "
+"dërguar një mesazh. Ju mund ta hiqni kartën tuaj SIM nga paneli i rrjetit në "
+"pjesën e sipërme të ekranit ose duke hapur <a href=\"system_settings\">"
+"Cilësimet e Sistemit  &gt;Siguria &amp;Privatsin</a> Hape."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -535,23 +536,23 @@ msgstr "Numër privat"
 #: ../src/qml/DialerPage/DialerPage.qml:522
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Të Tanishmet"
+msgstr "Kohët e fundit"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Dërgon të gjitha telefonatat në një numër tjetër telefonik."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr "Skeda SIM është e bllokuar"
+msgstr "SIM Kartela është e bllokuar"
 
 #: ../src/qml/DialerPage/DialerPage.qml:140
 msgid "SIM Locked"
-msgstr "Karta e Bllokuar"
+msgstr "SIM e bllokuar"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -567,13 +568,16 @@ msgstr "Kërkon…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "Përzgjidhni"
+msgstr "Zgjidh"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"Zgjidhni SIM si parazgjedhje për thirrjet në dalje. Ju gjithmonë mund të "
+"ndryshoni përzgjedhjen tuaj në <a href=\"system_settings\">Preferencat e "
+"Sistemit</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
@@ -582,34 +586,32 @@ msgstr "Dërgo mesazhin"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Shërbimet"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Përzgjidhni"
+msgstr "Vendos"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
-msgstr "Konfigurimi"
+msgstr "Cilsimet"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Shpërndaje"
+msgstr "Shpërndajë"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Asnjë thirrje"
+msgstr "Disa thirrje"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Rrëshqitni për të fshirë"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Rrëshqitni për të shfaqur veprime"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
@@ -617,11 +619,11 @@ msgstr "Ndërro burimin e audios:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
-msgstr ""
+msgstr "Ndërroni telefonata"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "Kalo te SIM e standart:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -638,7 +640,7 @@ msgstr "Për momentin nuk ka rrjet."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Ky nuk është një numër emergjence."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -678,7 +680,7 @@ msgstr "Dje"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Duhet të çaktivizoni mënyrën e fluturimit për të bërë thirrje"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
