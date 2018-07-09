@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-06-12 20:01+0000\n"
+"PO-Revision-Date: 2018-07-08 10:54+0000\n"
 "Last-Translator: Ari Börde Kröyer <ari.kroyer@online.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://translate.ubports.com/projects/ubports/dialer-app/nb/>\n"
@@ -175,9 +175,8 @@ msgid "Call forwarding"
 msgstr "Viderekobling av anrop"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
-#, fuzzy
 msgid "Call forwarding can't be changed right now."
-msgstr "Viderekobling kan ikke endres akkurat nå."
+msgstr "Viderekoblingsinnstilling kan ikke endres akkurat nå."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
@@ -309,7 +308,6 @@ msgid "Emergency Calls"
 msgstr "Nødanrop"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
 msgstr "Nødanrop"
 
@@ -396,7 +394,7 @@ msgid "JKL"
 msgstr "JKL"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
-#, fuzzy, qt-format
+#, qt-format
 msgid "Last called %1"
 msgstr "Sist ringt %1"
 

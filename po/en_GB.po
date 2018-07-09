@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-07-05 20:27+0000\n"
+"PO-Revision-Date: 2018-07-06 12:41+0000\n"
 "Last-Translator: konrad <kohofer@gmail.com>\n"
 "Language-Team: English (United Kingdom) "
 "<https://translate.ubports.com/projects/ubports/dialer-app/en_GB/>\n"
@@ -314,7 +314,7 @@ msgstr "Emergency call"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Entrer un nombre"
+msgstr "Enter a number"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
