@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-07-29 16:27+0000\n"
-"Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
+"PO-Revision-Date: 2018-07-29 16:30+0000\n"
+"Last-Translator: Henrik Holm <hbir@post10.tele.dk>\n"
 "Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/da/>\n"
 "Language: da\n"
@@ -146,7 +146,7 @@ msgstr "Bluetooth-enhed"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Ring op"
+msgstr "Ringer"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
