@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-08-05 11:37+0000\n"
+"PO-Revision-Date: 2018-08-05 15:01+0000\n"
 "Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
 "Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/da/>\n"
@@ -444,7 +444,7 @@ msgstr "Nej"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Der er ikke valgt sim-kort"
+msgstr "Intet SIM kort valgt"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
