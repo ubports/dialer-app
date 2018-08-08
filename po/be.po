@@ -8,17 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-07-21 11:36+0000\n"
+"PO-Revision-Date: 2018-08-08 15:41+0000\n"
 "Last-Translator: ierihon <idekovets@mail.ru>\n"
-"Language-Team: Belarusian <https://translate.ubports.com/projects/ubports"
-"/dialer-app/be/>\n"
+"Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/be/>\n"
 "Language: be\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.17\n"
+"X-Generator: Weblate 2.20\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -44,8 +44,8 @@ msgstr ""
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 гадзіна"
-msgstr[1] "%1 гадзіны"
-msgstr[2] "%1 гадзінаў"
+msgstr[1] "%1 гадзін"
+msgstr[2] "%1 гадзіны"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -182,11 +182,11 @@ msgstr "Пераадрасацыя выклікаў"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Пераадрасацыя выкліку зараз не можа быць зменена."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Статус пераадрасацыі выклікаў не можа быць правераны "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -258,7 +258,7 @@ msgstr "Падрабязнасці аб запісу кантакта"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Кантакт не звязаны з якім-небудзь нумарам тэлефона."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -352,17 +352,17 @@ msgstr "Рэжым палёту"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Пераадрасоўваць ўсе ўваходныя выклікі"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Пераадрасацыя ўваходных выклікаў, калі:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Пераадрасаваць"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -374,7 +374,7 @@ msgstr "Выканана"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Я не адказваю"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
@@ -475,7 +475,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Добра"
+msgstr "ОК"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
