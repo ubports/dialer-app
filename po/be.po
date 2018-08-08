@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-08-08 15:41+0000\n"
+"PO-Revision-Date: 2018-08-12 01:00+0000\n"
 "Last-Translator: ierihon <idekovets@mail.ru>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/be/>\n"
@@ -374,11 +374,11 @@ msgstr "Выканана"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr "Я не адказваю"
+msgstr "Не магу зараз адказаць"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Я на іншай лініі"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -392,7 +392,7 @@ msgstr "Уваходныя"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Ініцыялізацыя…"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -405,7 +405,7 @@ msgstr "МНОП"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Апошні выклік %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -416,6 +416,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Дазваляе адказаць або пачаць новы выклік падчас іншага выкліку, і "
+"перамыкацца паміж імі"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -437,7 +439,7 @@ msgstr "Мабільны"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Мой тэлефон недаступны"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -463,15 +465,15 @@ msgstr "Няма нядаўніх званкоў"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Нумары"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "ОК"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Выключыць"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -514,7 +516,7 @@ msgstr "Phone;Dialer;Dial;Call;Keypad;тэлефон;набор,нумар;зв�
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Калі ласка, выберыце нумар тэлефона"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -547,11 +549,12 @@ msgstr "Нядаўнія"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Перанакіраванне ўсіх тэлефонных званкоў на іншы нумар."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
+#, fuzzy
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -648,7 +651,7 @@ msgstr "Зараз няма доступу да сеткі."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Гэта не нумар экстранай дапамогі."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
