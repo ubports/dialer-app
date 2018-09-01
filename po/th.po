@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2014-10-02 10:59+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Thai <th@li.org>\n"
+"PO-Revision-Date: 2018-08-05 15:01+0000\n"
+"Last-Translator: thanakit srisearmpok <thanakit.ssp@gmail.com>\n"
+"Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
+"dialer-app/th/>\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 2.20\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -213,7 +214,7 @@ msgstr ""
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -224,7 +225,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -255,7 +256,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
 msgid "Contacts"
-msgstr ""
+msgstr "ผู้ติดต่อ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
@@ -273,7 +274,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr ""
+msgstr "ลบ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
@@ -299,7 +300,7 @@ msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "แก้ไข"
 
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
@@ -313,11 +314,11 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr ""
+msgstr "ใส่หมายเลข"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr ""
+msgstr "ผิดพลาด"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
@@ -333,7 +334,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr ""
+msgstr "รายการโปรด"
 
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
