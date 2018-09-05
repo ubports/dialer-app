@@ -1,3 +1,9 @@
+dialer-app (0.2+ubports2) xenial; urgency=medium
+
+  * No-change rebuild for QtPIM
+
+ -- Dalton Durst <dalton@ubports.com>  Wed, 5 Sep 2018 09:45:00 -0500
+
 dialer-app (0.2+ubports1) xenial; urgency=medium
 
   * Import to UBports
