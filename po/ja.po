@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2014-09-18 12:19+0000\n"
-"Last-Translator: Kentaro Kazuhama <Unknown>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2018-10-14 18:56+0000\n"
+"Last-Translator: ArashiHino <hinoaras.hi82@gmail.com>\n"
+"Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.0\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -426,7 +427,7 @@ msgstr "不在着信"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "携帯"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
@@ -468,7 +469,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "OK"
+msgstr "完了"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
