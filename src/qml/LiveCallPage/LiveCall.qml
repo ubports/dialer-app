@@ -47,6 +47,7 @@ Page {
     property int defaultTimeout: 10000
     property string initialStatus: ""
     property string initialNumber: ""
+    property string delayedDialNumber: ""
     property string caller: {
         if (call && call.isConference) {
             return i18n.tr("Conference");
@@ -132,6 +133,13 @@ Page {
                 closeTimer.running = false;
                 statusLabel.text = "";
                 liveCall.call = Qt.binding(function() { return callManager.foregroundCall; });
+
+                console.log("delayedDialNumber = " + delayedDialNumber);
+                if (delayedDialNumber != "") {
+                    console.log("Arm delayed dial timer for text=" + delayedDialNumber);
+                    delayedDial.interval = 1;
+                    delayedDial.running = true;
+                }
             }
         }
 
@@ -145,6 +153,9 @@ Page {
         id: callConnection
         target: call
         onCallEnded: {
+            delayedDialNumber = "";
+            delayedDial.running = false;
+
             var callObject = {};
             callObject["elapsedTime"] = call.elapsedTime;
             callObject["active"] = true;
@@ -336,6 +347,36 @@ Page {
                     greeterAnimationTimer.running = true
                 }
             }
+        }
+    }
+
+    Timer {
+        id: delayedDial
+        interval: 1000
+        repeat: false
+        running: false
+
+        onTriggered: {
+            if (delayedDialNumber.length == 0) {
+                // not re-arming the timer
+                return;
+            }
+
+            if (delayedDialNumber[0] == ";") {
+                interval = 1000;
+                console.log("wait for 1 second");
+            } else if (delayedDialNumber[0] == ",") {
+                interval = 2000;
+                console.log("wait for 2 second");
+            } else {
+                interval = 250;
+                console.log("dial " + delayedDialNumber[0]);
+                dtmfEntry += delayedDialNumber[0];
+                call.sendDTMF(delayedDialNumber[0]);
+            }
+
+            delayedDialNumber = delayedDialNumber.substring(1);
+            running = delayedDialNumber.length > 0;
         }
     }
 

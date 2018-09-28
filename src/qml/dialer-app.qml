@@ -52,6 +52,7 @@ MainView {
     signal closeUSSDProgressDialog
 
     property string pendingNumberToDial: ""
+    property string delayedDialNumber: ""
     property bool accountReady: false
 
     onApplicationActiveChanged: {
@@ -289,6 +290,7 @@ MainView {
     }
 
     function callEmergency(number) {
+        delayedDialNumber = "";
         // if we are in flight mode, we first need to disable it and wait for
         // the modems to update
         if (telepathyHelper.flightMode) {
@@ -334,6 +336,7 @@ MainView {
     function call(number, skipDefaultSimDialog) {
         // clear the values here so that the changed signals are fired when the new value is set
         pendingNumberToDial = "";
+        delayedDialNumber = "";
 
         if (number === "") {
             return
@@ -388,6 +391,16 @@ MainView {
             return
         }
 
+        // If the number contains ';' or ',', we want to dial
+        // the leading number first, and key in everything later
+        // with delays
+        var semiIdx = number.indexOf(";"); semiIdx = (semiIdx == -1) ? number.length : semiIdx;
+        var commaIdx = number.indexOf(","); commaIdx = (commaIdx == -1) ? number.length : commaIdx;
+        var minDelayIdx = Math.min(semiIdx, commaIdx);
+        delayedDialNumber = number.substring(minDelayIdx);
+        var dialPrefix = number.substring(0, minDelayIdx);
+        console.log("dial prefix=" + dialPrefix + " delayed dial=" + delayedDialNumber);
+
         animateLiveCall();
 
         if (!accountReady) {
@@ -397,7 +410,7 @@ MainView {
 
         if (account && account.connected) {
             generalSettings.lastCalledPhoneNumber = number
-            callManager.startCall(number, account.accountId);
+            callManager.startCall(dialPrefix, account.accountId);
         }
     }
 
@@ -464,6 +477,8 @@ MainView {
         var properties = {}
         properties["initialStatus"] = initialStatus
         properties["initialNumber"] = initialNumber
+        properties["delayedDialNumber"] = delayedDialNumber
+        console.log("switchToLiveCall: delayed dial=" + delayedDialNumber)
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }
