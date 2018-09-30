@@ -95,7 +95,8 @@ MainView {
             }
 
             if (pendingNumberToDial != "") {
-                callManager.startCall(pendingNumberToDial, mainView.account.accountId);
+                var dialPrefix = setDelayedDialNumberAndReturnPrefix(pendingNumberToDial);
+                callManager.startCall(dialPrefix, mainView.account.accountId);
             }
             pendingNumberToDial = "";
         }
@@ -333,6 +334,17 @@ MainView {
         callManager.startCall(number, account.accountId);
     }
 
+    function setDelayedDialNumberAndReturnPrefix(number) {
+        // If the number contains ';' or ',', we want to dial
+        // the leading number first, and key in everything later
+        // with delays
+        var semiIdx = number.indexOf(";"); semiIdx = (semiIdx == -1) ? number.length : semiIdx;
+        var commaIdx = number.indexOf(","); commaIdx = (commaIdx == -1) ? number.length : commaIdx;
+        var minDelayIdx = Math.min(semiIdx, commaIdx);
+        delayedDialNumber = number.substring(minDelayIdx);
+        return number.substring(0, minDelayIdx);
+    }
+
     function call(number, skipDefaultSimDialog) {
         // clear the values here so that the changed signals are fired when the new value is set
         pendingNumberToDial = "";
@@ -391,15 +403,7 @@ MainView {
             return
         }
 
-        // If the number contains ';' or ',', we want to dial
-        // the leading number first, and key in everything later
-        // with delays
-        var semiIdx = number.indexOf(";"); semiIdx = (semiIdx == -1) ? number.length : semiIdx;
-        var commaIdx = number.indexOf(","); commaIdx = (commaIdx == -1) ? number.length : commaIdx;
-        var minDelayIdx = Math.min(semiIdx, commaIdx);
-        delayedDialNumber = number.substring(minDelayIdx);
-        var dialPrefix = number.substring(0, minDelayIdx);
-        console.log("dial prefix=" + dialPrefix + " delayed dial=" + delayedDialNumber);
+        var dialPrefix = setDelayedDialNumberAndReturnPrefix(number);
 
         animateLiveCall();
 
@@ -477,8 +481,6 @@ MainView {
         var properties = {}
         properties["initialStatus"] = initialStatus
         properties["initialNumber"] = initialNumber
-        properties["delayedDialNumber"] = delayedDialNumber
-        console.log("switchToLiveCall: delayed dial=" + delayedDialNumber)
         if (isEmergencyNumber(pendingNumberToDial)) {
             properties["defaultTimeout"] = 30000
         }
