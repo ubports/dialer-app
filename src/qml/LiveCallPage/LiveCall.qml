@@ -132,6 +132,12 @@ Page {
                 closeTimer.running = false;
                 statusLabel.text = "";
                 liveCall.call = Qt.binding(function() { return callManager.foregroundCall; });
+
+                if (mainView.delayedDialNumber != "") {
+                    console.log("Arm delayed dial timer for text=" + mainView.delayedDialNumber);
+                    delayedDial.interval = 1;
+                    delayedDial.running = true;
+                }
             }
         }
 
@@ -145,6 +151,9 @@ Page {
         id: callConnection
         target: call
         onCallEnded: {
+            mainView.delayedDialNumber = "";
+            delayedDial.running = false;
+
             var callObject = {};
             callObject["elapsedTime"] = call.elapsedTime;
             callObject["active"] = true;
@@ -336,6 +345,36 @@ Page {
                     greeterAnimationTimer.running = true
                 }
             }
+        }
+    }
+
+    Timer {
+        id: delayedDial
+        interval: 1000
+        repeat: false
+        running: false
+
+        onTriggered: {
+            if (mainView.delayedDialNumber.length == 0) {
+                // not re-arming the timer
+                return;
+            }
+
+            if (mainView.delayedDialNumber[0] == ";") {
+                interval = 1000;
+                console.log("wait for 1 second");
+            } else if (mainView.delayedDialNumber[0] == ",") {
+                interval = 2000;
+                console.log("wait for 2 second");
+            } else {
+                interval = 250;
+                console.log("dial " + mainView.delayedDialNumber[0]);
+                dtmfEntry += mainView.delayedDialNumber[0];
+                call.sendDTMF(mainView.delayedDialNumber[0]);
+            }
+
+            mainView.delayedDialNumber = mainView.delayedDialNumber.substring(1);
+            running = mainView.delayedDialNumber.length > 0;
         }
     }
 

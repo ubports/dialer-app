@@ -443,6 +443,14 @@ Page {
                     // replace 0 by +
                     input.remove(input.cursorPosition - 1, input.cursorPosition)
                     input.insert(input.cursorPosition, "+")
+                } else if (dialNumber.length > 1 && keycode == Qt.Key_ssharp) {
+                    // replace '#' by ';'. don't do this if this itself is the first character
+                    input.remove(input.cursorPosition - 1, input.cursorPosition)
+                    input.insert(input.cursorPosition, ";")
+                } else if (dialNumber.length > 1 && keycode == Qt.Key_Asterisk) {
+                    // replace '*' by ','. don't do this if this itself is the first character
+                    input.remove(input.cursorPosition - 1, input.cursorPosition)
+                    input.insert(input.cursorPosition, ",")
                 }
             }
         }
