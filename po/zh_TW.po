@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-03-02 08:40+0000\n"
-"Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
-"Language-Team: Chinese (Traditional) "
-"<https://translate.ubports.com/projects/ubports/dialer-app/zh_Hant/>\n"
+"PO-Revision-Date: 2018-10-28 00:00+0000\n"
+"Last-Translator: Louies <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
+"ubports/dialer-app/zh_Hant/>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -35,7 +35,7 @@ msgstr "%1 - 等候"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 服務"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -120,7 +120,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "通話中"
+msgstr "活躍"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -135,16 +135,15 @@ msgstr "全部"
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 #, fuzzy
 msgid "All calls"
-msgstr "沒有通話"
+msgstr "通話"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
 msgstr "藍牙裝置"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "正在撥接"
+msgstr "通話"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -175,12 +174,14 @@ msgid "Call forwarding"
 msgstr "來電轉接"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
+#, fuzzy
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "呼叫轉移目前無法更改。"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
+#, fuzzy
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "無法檢查呼叫轉移狀態。 "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -191,9 +192,8 @@ msgstr "通話等候失敗"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "來電等待"
+msgstr "來電待接"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -251,8 +251,9 @@ msgid "Contact Details"
 msgstr "聯絡人詳情"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
+#, fuzzy
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "聯繫人與任何號碼無關。"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
@@ -265,8 +266,9 @@ msgid "Contacts..."
 msgstr "聯絡人"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
+#, fuzzy
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "無法轉發此聯繫人"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -317,7 +319,7 @@ msgstr "緊急求救電話"
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "請輸入號碼"
+msgstr "輸入號碼"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -337,26 +339,28 @@ msgstr "無法將通話中電話轉為保留。"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr "最愛"
+msgstr "常用"
 
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "飛航模式"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
+#, fuzzy
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "轉發所有來電"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
+#, fuzzy
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "撥出電話時使用："
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "轉接至"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -368,11 +372,11 @@ msgstr "我瞭解了"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "我目前無法回應"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "我正在接聽另一個電話"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -385,8 +389,9 @@ msgid "Incoming"
 msgstr "撥入"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
+#, fuzzy
 msgid "Initializing..."
-msgstr ""
+msgstr "初始化..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -399,7 +404,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "最後來電 %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -409,7 +414,7 @@ msgstr "稍後"
 msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
-msgstr ""
+msgstr "讓您在接聽電話時接聽另一個電話、或開始另一個電話，又或在兩者之間切換"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -430,8 +435,9 @@ msgid "Mobile"
 msgstr "手機"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
+#, fuzzy
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "我的手機無法訪問"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -456,8 +462,9 @@ msgid "No recent calls"
 msgstr "最近沒有通話"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
+#, fuzzy
 msgid "Numbers"
-msgstr ""
+msgstr "號碼"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -465,7 +472,7 @@ msgstr "確定"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "關"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -488,7 +495,7 @@ msgstr "PQRS"
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "電話"
+msgstr "手機"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
@@ -503,12 +510,14 @@ msgid "Phone application"
 msgstr "電話應用程式"
 
 #: ../src/dialer-app.desktop.in.in.h:4
+#, fuzzy
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Phone;Dialer;Dial;Call;Keypad;手機;通話;撥打;"
+msgstr "手機;撥號程序;撥號;通話;鍵盤"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
+#, fuzzy
 msgid "Please select a phone number"
-msgstr ""
+msgstr "電話號碼"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -538,12 +547,13 @@ msgid "Recent"
 msgstr "最近"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
+#, fuzzy
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "將所有電話轉接到另一個號碼。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM 卡"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -551,7 +561,7 @@ msgstr "SIM 卡已鎖定"
 
 #: ../src/qml/DialerPage/DialerPage.qml:140
 msgid "SIM Locked"
-msgstr "SIM 鎖定"
+msgstr "SIM 卡已鎖定"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -584,12 +594,11 @@ msgstr "傳送訊息"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "服務"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "選取"
+msgstr "設定"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -603,7 +612,7 @@ msgstr "分享"
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 #, fuzzy
 msgid "Some calls"
-msgstr "沒有通話"
+msgstr "來電："
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -636,11 +645,12 @@ msgstr "%1 目前沒有網路"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "目前沒有網路"
+msgstr "目前沒有網路。"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
+#, fuzzy
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "這不是緊急號碼。"
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -693,6 +703,7 @@ msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
+#, fuzzy
 msgid "mm:ss"
 msgstr "mm:ss"
 
