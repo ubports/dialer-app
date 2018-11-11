@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2018-11-11 07:55+0000\n"
+"PO-Revision-Date: 2018-11-11 09:52+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -311,7 +311,7 @@ msgstr "JKL"
 
 #: ../src/qml/DialerPage/DialerPage.qml:85
 msgid "Keypad"
-msgstr "數字盤"
+msgstr "數字鍵盤"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -393,7 +393,7 @@ msgstr "電話應用程式"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Phone;Dialer;Dial;Call;Keypad;手機;通話;撥打;"
+msgstr "手機;撥號程序;撥號;通話;鍵盤"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -428,7 +428,7 @@ msgstr "SIM 卡已鎖定"
 
 #: ../src/qml/DialerPage/DialerPage.qml:130
 msgid "SIM Locked"
-msgstr "SIM 鎖定"
+msgstr "SIM 卡已鎖定"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -467,11 +467,11 @@ msgstr "分享"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "右滑刪除"
+msgstr "向此滑動來刪除"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "左滑顯示功能"
+msgstr "向此滑動來顯示功能"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:175
 msgid "Switch audio source:"
@@ -496,7 +496,7 @@ msgstr "%1 目前沒有網路"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "目前沒有網路"
+msgstr "目前沒有網路。"
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
@@ -504,7 +504,7 @@ msgstr "今日"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Ubuntu Phone"
-msgstr "Ubuntu Phone"
+msgstr "Ubuntu 電話"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Unknown device"
