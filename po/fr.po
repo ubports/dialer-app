@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-10-17 09:51+0000\n"
-"Last-Translator: RedXXIII <adered7@gmail.com>\n"
-"Language-Team: French <https://translate.ubports.com/projects/ubports/dialer-"
-"app/fr/>\n"
+"PO-Revision-Date: 2018-11-18 16:08+0000\n"
+"Last-Translator: Anne Onyme <anneonyme017@tutanota.com>\n"
+"Language-Team: French <https://translate.ubports.com/projects/ubports/"
+"dialer-app/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -292,7 +292,7 @@ msgstr "Désactivation du mode avion"
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
 #: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
-msgstr "Rejeter"
+msgstr "Ignorer"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
@@ -552,7 +552,7 @@ msgstr "Carte SIM verrouillée"
 
 #: ../src/qml/DialerPage/DialerPage.qml:140
 msgid "SIM Locked"
-msgstr "SIM verrouillée"
+msgstr "SIM verr."
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
