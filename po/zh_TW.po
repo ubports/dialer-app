@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2018-11-11 09:52+0000\n"
+"PO-Revision-Date: 2018-11-18 16:08+0000\n"
 "Last-Translator: Louies <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -381,7 +381,7 @@ msgstr "電話"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "電話程式"
+msgstr "電話應用程式"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Phone Speaker"
@@ -500,7 +500,7 @@ msgstr "目前沒有網路。"
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
-msgstr "今日"
+msgstr "今天"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Ubuntu Phone"
@@ -530,7 +530,7 @@ msgstr "是"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "昨日"
+msgstr "昨天"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
