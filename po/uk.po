@@ -8,16 +8,18 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-06-08 11:06+0000\n"
-"Last-Translator: Yuri Chornoivan <yurchor@gmail.com>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"PO-Revision-Date: 2018-12-02 00:01+0000\n"
+"Last-Translator: Dmytro Gladkyi <gladimdim@gmail.com>\n"
+"Language-Team: Ukrainian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/uk/>\n"
+"Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -34,7 +36,7 @@ msgstr "%1 — очікування"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 година"
-msgstr[1] "%1 години"
+msgstr[1] "%1 годин"
 msgstr[2] "%1 годин"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
@@ -248,7 +250,7 @@ msgstr "Більше не питати"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Змінити"
+msgstr "Редагувати"
 
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
@@ -470,7 +472,7 @@ msgstr "Надіслати повідомлення"
 
 #: ../src/qml/DialerPage/DialerPage.qml:53
 msgid "Settings"
-msgstr "Параметри"
+msgstr "Налаштування"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
