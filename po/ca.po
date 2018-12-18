@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-09-30 19:11+0000\n"
-"Last-Translator: Stefano Melchior <stefano.melchior@me.com>\n"
-"Language-Team: Catalan <https://translate.ubports.com/projects/ubports"
-"/dialer-app/ca/>\n"
+"PO-Revision-Date: 2018-12-23 00:00+0000\n"
+"Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
+"Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -214,7 +214,7 @@ msgstr "Restricció de la línia de trucada"
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr "Canceŀla"
+msgstr "Cancel·la"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
