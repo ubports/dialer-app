@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-08-31 05:08+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Indonesian <id@li.org>\n"
+"PO-Revision-Date: 2018-12-26 10:50+0000\n"
+"Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
+"Language-Team: Indonesian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -241,7 +243,7 @@ msgstr "Jangan tanya lagi"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Ubah"
+msgstr "Sunting"
 
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
@@ -250,7 +252,7 @@ msgstr "Panggilan Darurat"
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
-msgstr "Masukan nomor"
+msgstr "Masukkan nomor"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -357,7 +359,7 @@ msgstr "Tak ada panggilan baru-baru ini"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oke"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -465,7 +467,7 @@ msgstr "Pengaturan"
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Berbagi"
+msgstr "Bagikan"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
