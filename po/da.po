@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-15 20:08+0000\n"
-"Last-Translator: Henrik Holm <hbir@post10.tele.dk>\n"
-"Language-Team: Danish <https://translate.ubports.com/projects/ubports/dialer-"
-"app/da/>\n"
+"PO-Revision-Date: 2019-01-06 00:00+0000\n"
+"Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
+"Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
+"dialer-app/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -145,9 +145,8 @@ msgid "Bluetooth device"
 msgstr "Bluetooth-enhed"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Ringer op"
+msgstr "Opkald"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -155,15 +154,15 @@ msgstr "Opkaldsblokering"
 
 #: ../src/qml/dialer-app.qml:581
 msgid "Call Forwarding"
-msgstr "Omstilling"
+msgstr "Viderestilling"
 
 #: ../src/qml/dialer-app.qml:592
 msgid "Call Waiting"
-msgstr "Opkaldsventetid"
+msgstr "Opkald venter"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:152
 msgid "Call ended"
-msgstr "Opkald blev afsluttet"
+msgstr "Opkald afsluttet"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Call failed"
@@ -173,9 +172,8 @@ msgstr "Opkald mislykkedes"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Omstilling"
+msgstr "Viderestilling"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
@@ -183,7 +181,7 @@ msgstr "Viderestilling kan ikke ændres lige nu."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "Viderestilling status kan ikke kontrolleres. "
+msgstr "Viderestillings status kan ikke kontrolleres. "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
@@ -230,7 +228,7 @@ msgstr "Udskift alle opkaldstilknytninger til %1?"
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "Luk"
+msgstr "Afslut"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -239,7 +237,7 @@ msgstr "Konference"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Conference call failure"
-msgstr "Konferenceopkald fejlede"
+msgstr "Konferenceopkalds fejl"
 
 # ??
 #: ../src/qml/dialer-app.qml:609
@@ -254,7 +252,7 @@ msgstr "Restriktion af forbundne linje"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Detaljer om kontakt"
+msgstr "Kontakt detaljer"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
@@ -315,7 +313,6 @@ msgid "Emergency Calls"
 msgstr "Nødopkald"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
-#, fuzzy
 msgid "Emergency call"
 msgstr "Nødopkald"
 
@@ -330,7 +327,7 @@ msgstr "Fejl"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
-msgstr "Mislykkedes med at aktivere opkaldet."
+msgstr "Opkaldsaktivering fejlede."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
@@ -447,7 +444,7 @@ msgstr "Nej"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Der er ikke valgt sim-kort"
+msgstr "Intet sim-kort valgt"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -499,7 +496,7 @@ msgstr "Telefon"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Telefonprogram"
+msgstr "Telefon App"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Phone Speaker"
@@ -511,11 +508,11 @@ msgstr "Telefonprogram"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefon;Opringning;Dialer;Kald;Opkald;Tastatur"
+msgstr "Telefon;Dialer;Indtast;Opkald;Tastatur"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Vælg telefonnummer"
+msgstr "Vælg venligst et telefonnummer"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -524,7 +521,7 @@ msgid ""
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
 "Lås dit SIM-kort op for at foretage opkald eller sende en besked. Du kan "
-"låse dit SIM-kort op fra netværksindikatoren, i toppen af skærmen, eller ved "
+"låse dit SIM-kort op fra netværksindikatoren i toppen af skærmen, eller ved "
 "at gå til <a href=\"system_settings\">Systemindstillinger &gt; Sikkerhed "
 "&amp; Privatliv</a>."
 
@@ -593,10 +590,9 @@ msgstr "Send besked"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr "Services"
+msgstr "Tjenester"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
 msgstr "Vælg"
 
@@ -610,9 +606,8 @@ msgid "Share"
 msgstr "Del"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Ingen opkald"
+msgstr "Nogle opkald"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -693,12 +688,12 @@ msgstr "Du skal slå flytilstand fra for at foretage opkald"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "Du skal foretage et valg af simkort"
+msgstr "Du er nødt til at vælge et simkort"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "hh:mm:ss"
+msgstr "tt:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
