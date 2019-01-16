@@ -1,25 +1,23 @@
-# Danish translation for dialer-app
-# Copyright (c) 2014 Rosetta Contributors and Canonical Ltd 2014
-# This file is distributed under the same license as the dialer-app package.
-#
-# Ask Hjorth Larsen <asklarsen@gmail.com>, 2014.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: dialer-app\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-01-06 00:00+0000\n"
-"Last-Translator: Tom Rausner <tomrausner@gmail.com>\n"
-"Language-Team: Danish <https://translate.ubports.com/projects/ubports/"
-"dialer-app/da/>\n"
-"Language: da\n"
+"PO-Revision-Date: 2019-01-12 11:57+0000\n"
+"Last-Translator: Adrià <adriamartinmor@gmail.com>\n"
+"Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/sc/>\n"
+"Language: sc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.1.1\n"
-"X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -29,38 +27,38 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:454
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - på hold"
+msgstr "%1 - in ispera"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr "%1 tjenester"
+msgstr "Servìtzios de %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1 time"
-msgstr[1] "%1 timer"
+msgstr[0] "%1 ora"
+msgstr[1] "%1 oras"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 minut"
-msgstr[1] "%1 minutter"
+msgstr[0] "%1 minutu"
+msgstr[1] "%1 minutos"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 sekund"
-msgstr[1] "%1 sekunder"
+msgstr[0] "%1 segundu"
+msgstr[1] "%1 segundos"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -124,68 +122,68 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Aktiv"
+msgstr "Ativa"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr "Alle"
+msgstr "Totu"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgctxt "All Contacts"
 msgid "All"
-msgstr "Alle"
+msgstr "Totu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 msgid "All calls"
-msgstr "Alle opkald"
+msgstr "Totus is mutidas"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
-msgstr "Bluetooth-enhed"
+msgstr "Dispositivu Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Opkald"
+msgstr "Muti"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
-msgstr "Opkaldsblokering"
+msgstr "Blocu de mutidas"
 
 #: ../src/qml/dialer-app.qml:581
 msgid "Call Forwarding"
-msgstr "Viderestilling"
+msgstr "Deviatzione de mutidas"
 
 #: ../src/qml/dialer-app.qml:592
 msgid "Call Waiting"
-msgstr "Opkald venter"
+msgstr "Mutida in ispera"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:152
 msgid "Call ended"
-msgstr "Opkald afsluttet"
+msgstr "Mutida acabada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Call failed"
-msgstr "Opkald mislykkedes"
+msgstr "Faddina in sa mutida"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:44
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
 msgid "Call forwarding"
-msgstr "Viderestilling"
+msgstr "Deviatzione de mutidas"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr "Viderestilling kan ikke ændres lige nu."
+msgstr "Non podes modificare sa deviatzione de mutidas in custu momentu."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "Viderestillings status kan ikke kontrolleres. "
+msgstr "S'istadu de sa deviatzione de mutidas non podet èssere verificadu "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
-msgstr "Forsøg på at sætte kald på hold fejlede"
+msgstr "Faddina in sa mutida in ispera"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
@@ -193,83 +191,79 @@ msgstr "Forsøg på at sætte kald på hold fejlede"
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
 msgid "Call waiting"
-msgstr "Opkald venter"
+msgstr "Mutida in ispera"
 
 #: ../src/qml/DialerPage/DialerPage.qml:509
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:456
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "Ringer op"
+msgstr "Mutende"
 
-# ??
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
-msgstr "Præsentation af opkaldslinje"
+msgstr "Ammustra ID de sa mutida"
 
-# ??
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
-msgstr "Restriktion af opkaldslinje"
+msgstr "Cua s'ID de sa mutida"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr "Annullér"
+msgstr "Annulla"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Udskift alle opkaldstilknytninger til %1?"
+msgstr "Boles mudare totu is assotzios de mutida a %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "Afslut"
+msgstr "Serra"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr "Konference"
+msgstr "Cunferèntzia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Conference call failure"
-msgstr "Konferenceopkalds fejl"
+msgstr "Faddina in sa cunferèntzia"
 
-# ??
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
-msgstr "Præsentation af forbundne linje"
+msgstr "Ammustra su nùmeru mutidu"
 
-# ??
 #: ../src/qml/dialer-app.qml:621
 msgid "Connected Line Restriction"
-msgstr "Restriktion af forbundne linje"
+msgstr "Cua su nùmeru mutidu"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Kontakt detaljer"
+msgstr "Detàllios de su cuntatu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Kontakt er ikke tilknyttet noget nummer."
+msgstr "Perunu nùmeru de telèfonu pro custu cuntatu."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
 msgid "Contacts"
-msgstr "Kontakter"
+msgstr "Cuntatos"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
-msgstr "Kontakter..."
+msgstr "Cuntatos..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr "Kunne ikke viderestille til denne kontakt"
+msgstr "Non s'est pòdidu deviare a custu cuntatu"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -279,86 +273,86 @@ msgstr "DEF"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr "Slet"
+msgstr "Cantzella"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr "Detaljer"
+msgstr "Detàllios"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr "Slå fra"
+msgstr "Disativa"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr "Slår flytilstand fra"
+msgstr "Disativende sa modalidade aèreu"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
 #: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
-msgstr "Afvis"
+msgstr "Iscarta"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Spørg ikke igen"
+msgstr "Non ddu torres a domandare"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Redigér"
+msgstr "Modìfica"
 
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
 msgid "Emergency Calls"
-msgstr "Nødopkald"
+msgstr "Mutidas de emergèntzia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "Emergency call"
-msgstr "Nødopkald"
+msgstr "Mutida de emergèntzia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Indtast nummer"
+msgstr "Inserta·nche unu nùmeru"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr "Fejl"
+msgstr "Faddina"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
-msgstr "Opkaldsaktivering fejlede."
+msgstr "No s'est pòdidu ativare sa mutida."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
-msgstr "Mislykkedes med at oprette konferenceopkald."
+msgstr "Faddina in sa creatzione de una cunferèntzia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:162
 msgid "Failed to place the active call on hold."
-msgstr "Mislykkedes med at sætte det aktive opkald på hold."
+msgstr "No s'est pòdidu pònnere sa mutida in ispera."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr "Favoritter"
+msgstr "Preferidos"
 
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "Flytilstand"
+msgstr "Modalidade aèreu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr "Viderestil alle opkald"
+msgstr "Dèvia totus is mutidas"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr "Viderestil opkald når:"
+msgstr "Dèvia is mutidas cando:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr "Viderestil til"
+msgstr "Devia a"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -366,15 +360,15 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr "Forstået"
+msgstr "Andat bene"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr "Jeg svarer ikke"
+msgstr "No respondo"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr "Jeg har et andet opkald"
+msgstr "So in un'àtera mutida"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -384,15 +378,15 @@ msgstr "IMEI"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
-msgstr "Indgående"
+msgstr "In intrada"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr "Initialiserer..."
+msgstr "Aviende..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr "Ugyldig USSD-kode"
+msgstr "Su còdighe USSD no est vàlidu"
 
 #: ../src/qml/DialerPage/Keypad.qml:120
 msgid "JKL"
@@ -401,19 +395,19 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr "Sidst ringet til %1"
+msgstr "Ùrtima mutida %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr "Senere"
+msgstr "A pustis"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:101
 msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
-"Lader dig svare på eller starte et nyt opkald, mens du allerede er i et "
-"opkald, og så skifte mellem dem"
+"Permitit de rispòndere o de incumentzare una mutida noa, in su mentras chi "
+"nde ses faghende un'àtera, e de passare de s'una a s'àtera"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -421,68 +415,68 @@ msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:573
 msgid "Merge calls"
-msgstr "Sammenflet opkald"
+msgstr "Uni mutidas"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
-msgstr "Mistede"
+msgstr "Pèrdidas"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr "Mobil"
+msgstr "Mòbile"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr "Min telefon er ikke tilgængelig"
+msgstr "Su telèfonu meu no est atzessìbile"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr "Nej"
+msgstr "Nono"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Intet sim-kort valgt"
+msgstr "Peruna carta SIM seletzionada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
-msgstr "Ingen opkald"
+msgstr "Peruna mutida"
 
 #: ../src/qml/DialerPage/DialerPage.qml:151 ../src/qml/dialer-app.qml:374
 #: ../src/qml/dialer-app.qml:379
 msgid "No network"
-msgstr "Intet netværk"
+msgstr "Peruna rete"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
-msgstr "Ingen nylige opkald"
+msgstr "Peruna mutida reghente"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr "Numre"
+msgstr "Nùmeros"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "OK"
+msgstr "AB"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr "Sluk"
+msgstr "Inativu"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "OK"
+msgstr "AB"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr "I venteposition"
+msgstr "In ispera"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
 msgid "Outgoing"
-msgstr "Udgående"
+msgstr "In essida"
 
 #: ../src/qml/DialerPage/Keypad.qml:154
 msgid "PQRS"
@@ -492,27 +486,27 @@ msgstr "PQRS"
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr "Telefon"
+msgstr "Telèfonu"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Telefon App"
+msgstr "Mutidas"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Phone Speaker"
-msgstr "Telefonhøjttaler"
+msgstr "Altoparlante telèfonu"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Telefonprogram"
+msgstr "Aplicatzione telèfonu"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Telefon;Dialer;Indtast;Opkald;Tastatur"
+msgstr "Telèfonu;marcadore;Mutidas;Tecladu;Mòbile"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Vælg venligst et telefonnummer"
+msgstr "Seletziona unu nùmeru de telèfonu"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -520,32 +514,32 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Lås dit SIM-kort op for at foretage opkald eller sende en besked. Du kan "
-"låse dit SIM-kort op fra netværksindikatoren i toppen af skærmen, eller ved "
-"at gå til <a href=\"system_settings\">Systemindstillinger &gt; Sikkerhed "
-"&amp; Privatliv</a>."
+"Isbloca s'ischeda SIM pro fàghere mutidas o imbiare messàgios. Podes "
+"isblocare sa SIM tua tràmite s'indicadore de rete situadu in s'ala superiora "
+"de s'ischermu o bisitende <a href=\"system_settings\">Cunfiguratziones de "
+"sistema &gt; Seguresa e riservadesa</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
-msgstr "Vent venligst"
+msgstr "Iseta"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
-msgstr "Privat"
+msgstr "Privada"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
 msgid "Private number"
-msgstr "Privat nummer"
+msgstr "Nùmeru privadu"
 
 #: ../src/qml/DialerPage/DialerPage.qml:522
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Nylige"
+msgstr "Reghentes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr "Omstil alle opkald til andet nummer."
+msgstr "Dèvia totus is mutidas a un'àteru nùmeru."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -553,81 +547,82 @@ msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr "SIM-kortet er låst"
+msgstr "Sa carta SIM est blocada"
 
 #: ../src/qml/DialerPage/DialerPage.qml:140
 msgid "SIM Locked"
-msgstr "SIM er låst"
+msgstr "SIM blocada"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr "Gem"
+msgstr "Sarva"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr "Søg"
+msgstr "Chirca"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Søger..."
+msgstr "Chirca..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "Vælg"
+msgstr "Seletziona"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Vælg et standard-simkort til udgående opkald. Du kan altid ændre dit valg i "
-"<a href=\"system_settings\">Systemindstillinger</a>."
+"Seletziona una SIM predefinida pro is mutidas in essida. Dda podes "
+"modificare dae is <a href=\"system_settings\">Cunfiguratziones de "
+"sistema</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
-msgstr "Send besked"
+msgstr "Imbia su messàgiu"
 
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr "Tjenester"
+msgstr "Servìtzios"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
-msgstr "Vælg"
+msgstr "Cunfigura"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
-msgstr "Indstillinger"
+msgstr "Cunfiguratzione"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Del"
+msgstr "Cumpartzi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
-msgstr "Nogle opkald"
+msgstr "Unas mutidas"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "Stryg for at slette"
+msgstr "Iscurre pro cantzellare"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Stryg for at vise handlinger"
+msgstr "Iscurre pro ammustrare atziones"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
-msgstr "Skift lydkilde:"
+msgstr "Cola sa fonte de àudio:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
-msgstr "Byt opkald"
+msgstr "Cola mutidas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Skift til standard-simkort:"
+msgstr "Cola a sa SIM predefinida:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -636,38 +631,38 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Der er i øjeblikket intet netværk på %1"
+msgstr "Peruna rete in %1"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "Der er i øjeblikket intet netværk."
+msgstr "Peruna rete."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
-msgstr "Dette er ikke et nødnummer."
+msgstr "No est unu nùmeru de emergèntzia."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
 msgid "Today"
-msgstr "I dag"
+msgstr "Oe"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Ubuntu Phone"
-msgstr "Ubuntu-telefon"
+msgstr "Telèfonu Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:347
 msgid "Unknown device"
-msgstr "Ukendt enhed"
+msgstr "Dispositivu disconnotu"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
-msgstr "Ukendt nummer"
+msgstr "Nùmeru disconnotu"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr "Telefonsvarer"
+msgstr "Segreteria"
 
 #: ../src/qml/DialerPage/Keypad.qml:188
 msgid "WXYZ"
@@ -675,45 +670,27 @@ msgstr "WXYZ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr "Ja"
+msgstr "Eja"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 #: ../src/qml/SettingsPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "I går"
+msgstr "Eris"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Du skal slå flytilstand fra for at foretage opkald"
+msgstr "Depes disativare sa modalidade aèreu pro fàghere mutidas"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "Du er nødt til at vælge et simkort"
+msgstr "Deves seletzionare una carta SIM"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "tt:mm:ss"
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
-
-#~ msgid "Flight mode"
-#~ msgstr "Flytilstand"
-
-#~ msgid "Keypad"
-#~ msgstr "Numerisk tastatur"
-
-#~ msgid "All"
-#~ msgstr "Alle"
-
-#~ msgid "+ Create New"
-#~ msgstr "+ Opret ny"
-
-#~ msgid "New Call"
-#~ msgstr "Nyt opkald"
-
-#~ msgid "hh:mm ap"
-#~ msgstr "hh:mm"
