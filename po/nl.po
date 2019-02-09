@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2018-11-10 20:52+0000\n"
-"Last-Translator: Sander <sander.k1007@kpnmail.nl>\n"
+"PO-Revision-Date: 2019-02-11 20:33+0000\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "dialer-app/nl/>\n"
 "Language: nl\n"
@@ -35,7 +35,7 @@ msgstr "%1 - in de wacht"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr "%1 Diensten"
+msgstr "%1 diensten"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -43,7 +43,7 @@ msgstr "%1 Diensten"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 uur"
-msgstr[1] "%1 uren"
+msgstr[1] "%1 uur"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -165,7 +165,7 @@ msgstr "Gesprek beëindigd"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:297
 msgid "Call failed"
-msgstr "Gesprek mislukt"
+msgstr "Oproep mislukt"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:44
 #: ../src/qml/SettingsPage/MultiSim.qml:51
@@ -176,15 +176,15 @@ msgstr "Gesprek doorschakelen"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr "Gesprek doorschakelen kan nu niet worden gewijzigd."
+msgstr "De optie 'Gesprek doorschakelen' kan nu niet worden aangepast."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "De status van gesprek doorschakelen kan niet gecontroleerd worden. "
+msgstr "De status van 'gesprek doorschakelen' kan niet worden gecontroleerd "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Call holding failure"
-msgstr "Gesprek in de wacht zetten mislukt"
+msgstr "Kan gesprek niet in de wacht zetten"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
@@ -203,24 +203,24 @@ msgstr "Oproep"
 
 #: ../src/qml/dialer-app.qml:603
 msgid "Calling Line Presentation"
-msgstr "Identificatie uitgaand gesprek inschakelen"
+msgstr "Nummerherkenning inschakelen"
 
 #: ../src/qml/dialer-app.qml:615
 msgid "Calling Line Restriction"
-msgstr "Identificatie uitgaand gesprek uitschakelen"
+msgstr "Nummerherkenning uitschakelen"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr "Annuleren"
+msgstr "Afbreken"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Alle belassociaties overzetten naar %1?"
+msgstr "Alle oproeptoewijzingen overzetten naar %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -238,33 +238,33 @@ msgstr "Groepsgesprek mislukt"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Connected Line Presentation"
-msgstr "Identificatie inkomend gesprek inschakelen"
+msgstr "Nummerherkenning inschakelen"
 
 #: ../src/qml/dialer-app.qml:621
 msgid "Connected Line Restriction"
-msgstr "Identificatie inkomend gesprek uitschakelen"
+msgstr "Nummerherkenning uitschakelen"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Contactdetails"
+msgstr "Contactgegevens"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Contact niet geassocieerd met een telefoonnummer."
+msgstr "De contactpersoon is niet gekoppeld aan een telefoonnummer."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
 msgid "Contacts"
-msgstr "Contacten"
+msgstr "Contactpersonen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
-msgstr "Contacten..."
+msgstr "Contactpersonen..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr "Kon niet doorschakelen naar dit contact"
+msgstr "Kan niet doorschakelen naar deze contactpersoon"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -292,7 +292,7 @@ msgstr "Vliegtuigstand uitschakelen"
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
 #: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
-msgstr "Negeren"
+msgstr "Verwerpen"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
@@ -305,7 +305,7 @@ msgstr "Bewerken"
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
 msgid "Emergency Calls"
-msgstr "Noodoproep"
+msgstr "Noodoproepen"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "Emergency call"
@@ -322,15 +322,15 @@ msgstr "Fout"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
-msgstr "Kon het gesprek niet activeren."
+msgstr "Kan het gesprek niet activeren."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:132
 msgid "Failed to create a conference call."
-msgstr "Kon geen groepsgesprek aanmaken."
+msgstr "Kan geen groepsgesprek creëren."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:162
 msgid "Failed to place the active call on hold."
-msgstr "Kon het actieve gesprek niet in de wacht zetten."
+msgstr "Kan het actieve gesprek niet in de wacht zetten."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
@@ -339,15 +339,15 @@ msgstr "Favorieten"
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "Vliegtuigmodus"
+msgstr "Vliegtuigstand"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr "Schakel elke inkomende oproep door"
+msgstr "Elke inkomende oproep doorschakelen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr "Inkomende oproep doorschakelen wanneer:"
+msgstr "Inkomende oproep doorschakelen als:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
@@ -361,7 +361,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr "Begrepen"
+msgstr "Ik begrijp het"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
@@ -383,7 +383,7 @@ msgstr "Inkomend"
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr "Initialiseren..."
+msgstr "Bezig met initialiseren..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -407,8 +407,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
-"Hiermee kunt u een nieuwe oproep beantwoorden of een nieuwe oproep starten "
-"terwijl u in een andere oproep zit en tussen deze gesprekken wisselen"
+"Hiermee kun je een nieuwe oproep beantwoorden of starten terwijl je in "
+"gesprek bent en ertussen schakelen"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -430,7 +430,7 @@ msgstr "Mobiel"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr "Mijn telefoon is onbereikbaar"
+msgstr "Ik kan niet bij mijn telefoon"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -448,7 +448,7 @@ msgstr "Geen oproepen"
 #: ../src/qml/DialerPage/DialerPage.qml:151 ../src/qml/dialer-app.qml:374
 #: ../src/qml/dialer-app.qml:379
 msgid "No network"
-msgstr "Geen netwerk"
+msgstr "Geen netwerkverbinding"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
@@ -503,7 +503,7 @@ msgstr "Telefoonapplicatie"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Phone;Dialer;Dial;Call;Keypad;Telefoon;Kiezen;Bellen;Toetsenblok"
+msgstr "Telefoon;Kiezen;Bellen;Toetsenblok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -515,14 +515,14 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"U dient uw simkaart te deblokkeren om te kunnen bellen of een bericht te "
-"sturen. U kunt uw simkaart deblokkeren via het netwerkmenu bovenin in het "
+"Je moet je simkaart deblokkeren om te kunnen bellen of een bericht te "
+"versturen. Je kunt je simkaart deblokkeren via het netwerkmenu bovenin het "
 "scherm of door naar <a href=\"system_settings\">Systeeminstellingen &gt; "
-"Beveiliging &amp; Privacy</a> te gaan."
+"Beveiliging en Privacy</a> te gaan."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
-msgstr "Even geduld a.u.b."
+msgstr "Even geduld..."
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -540,7 +540,7 @@ msgstr "Recent"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr "Verwijst alle oproepen naar een ander nummer."
+msgstr "Schakelt alle oproepen door naar een ander nummer."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -575,9 +575,9 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Selecteer de gewenste standaard simkaart voor alle uitgaande gesprekken. U "
-"kunt deze keuze altijd wijzigen in de <a href=\"system_settings"
-"\">Systeeminstellingen</a>."
+"Selecteer de standaard simkaart voor alle uitgaande gesprekken. Je kunt deze "
+"keuze altijd aanpassen in de <a href=\"system_settings\""
+">Systeeminstellingen</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
@@ -611,7 +611,7 @@ msgstr "Veeg om te verwijderen"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Veeg om acties te laten zien"
+msgstr "Veeg om acties te tonen"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
@@ -619,11 +619,11 @@ msgstr "Geluidsbron wijzigen:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
-msgstr "Gesprek wisselen"
+msgstr "Tussen gesprekken schakelen"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Wissel naar de standaard simkaart:"
+msgstr "Overschakelen naar standaard simkaart:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -632,11 +632,11 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Er is momenteel geen netwerk op %1"
+msgstr "Je hebt momenteel geen bereik op %1"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "Er is momenteel geen netwerk."
+msgstr "Je hebt momenteel geen bereik."
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."
@@ -649,7 +649,7 @@ msgstr "Vandaag"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Ubuntu Phone"
-msgstr "Ubuntutelefoon"
+msgstr "Ubuntu Phone"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:347
 msgid "Unknown device"
@@ -680,16 +680,16 @@ msgstr "Gisteren"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "U moet de vliegtuigmodus uitschakelen om te kunnen bellen"
+msgstr "Als je wilt bellen, moet je de vliegtuigstand uitschakelen"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr "U moet een simkaart selecteren"
+msgstr "Kies een simkaart"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr "uu:mm:ss"
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
