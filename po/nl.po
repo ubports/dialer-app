@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-02-11 20:33+0000\n"
+"PO-Revision-Date: 2019-03-07 21:53+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "dialer-app/nl/>\n"
@@ -35,7 +35,7 @@ msgstr "%1 - in de wacht"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr "%1 diensten"
+msgstr "%1-diensten"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -347,7 +347,7 @@ msgstr "Elke inkomende oproep doorschakelen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr "Inkomende oproep doorschakelen als:"
+msgstr "Inkomende oproepen doorschakelen als ik:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
@@ -430,7 +430,7 @@ msgstr "Mobiel"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr "Ik kan niet bij mijn telefoon"
+msgstr "ik niet bij mijn telefoon kan"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
@@ -507,7 +507,7 @@ msgstr "Telefoon;Kiezen;Bellen;Toetsenblok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Selecteer een telefoonnummer"
+msgstr "Kies een telefoonnummer"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -544,7 +544,7 @@ msgstr "Schakelt alle oproepen door naar een ander nummer."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr "SIM"
+msgstr "Simkaart"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -603,7 +603,7 @@ msgstr "Delen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
-msgstr "Sommige oproepen"
+msgstr "Bepaalde oproepen"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
