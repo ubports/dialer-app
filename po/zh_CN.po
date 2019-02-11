@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-06 07:48+0000\n"
-"Last-Translator: Mutse Young <yyhoo2.young@gmail.com>\n"
-"Language-Team: Chinese (Simplified) "
-"<https://translate.ubports.com/projects/ubports/dialer-app/zh_Hans/>\n"
+"PO-Revision-Date: 2019-01-27 00:00+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
+"Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
+"ubports/dialer-app/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -35,7 +35,7 @@ msgstr "%1 - 通话保持"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 服务"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -141,9 +141,8 @@ msgid "Bluetooth device"
 msgstr "蓝牙设备"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "正在呼叫"
+msgstr "通话"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -169,9 +168,8 @@ msgstr "通话失败"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "呼叫转移"
+msgstr "通话转移"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
@@ -355,7 +353,7 @@ msgstr "转发来电时："
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "转发至"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -398,7 +396,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "最后通话 %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -408,7 +406,7 @@ msgstr "稍后"
 msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
-msgstr ""
+msgstr "让您在通话期间应答来电或进行拨号，并在其间切换"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -460,7 +458,7 @@ msgstr "号码"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "确定"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
@@ -542,7 +540,7 @@ msgstr "将所有的电话呼叫重定向到另一个号码。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM 卡"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -583,12 +581,11 @@ msgstr "发送信息"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "服务"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "选择"
+msgstr "设定"
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
@@ -635,7 +632,7 @@ msgstr "%1 目前无网络"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "目前无网络。"
+msgstr "当前无网络。"
 
 #: ../src/qml/DialerPage/DialerPage.qml:467
 msgid "This is not an emergency number."

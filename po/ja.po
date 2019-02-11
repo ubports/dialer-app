@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-09-18 12:19+0000\n"
-"Last-Translator: Kentaro Kazuhama <Unknown>\n"
-"Language-Team: Japanese <ja@li.org>\n"
+"PO-Revision-Date: 2019-01-27 00:00+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
+"Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ja/>\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.1.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -246,7 +248,7 @@ msgstr "編集"
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
 msgid "Emergency Calls"
-msgstr ""
+msgstr "緊急電話"
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
@@ -258,7 +260,7 @@ msgstr "エラー"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "通話のアクティベートに失敗しました"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "Failed to create a conference call."
@@ -357,7 +359,7 @@ msgstr "最近の通話はありません"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "OK"
+msgstr "完了"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
