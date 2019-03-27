@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-01-27 00:00+0000\n"
-"Last-Translator: Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>\n"
+"PO-Revision-Date: 2019-03-31 00:00+0000\n"
+"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "dialer-app/de/>\n"
 "Language: de\n"
@@ -225,7 +225,7 @@ msgstr "Alle Rufzuordnungen zu %1 ändern?"
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "Fertig"
+msgstr "Schließen"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
