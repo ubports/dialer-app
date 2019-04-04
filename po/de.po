@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-03-31 00:00+0000\n"
-"Last-Translator: Ettore Atalan <atalanttore@googlemail.com>\n"
+"PO-Revision-Date: 2019-04-14 00:00+0000\n"
+"Last-Translator: Jan Sprinz <jan@ubports.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "dialer-app/de/>\n"
 "Language: de\n"
@@ -468,7 +468,7 @@ msgstr "Aus"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "OK"
+msgstr "Ok"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
