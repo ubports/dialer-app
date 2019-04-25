@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-08-05 04:41+0000\n"
-"Last-Translator: Felipe França <felipe.fantasy93@gmail.com>\n"
-"Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
+"PO-Revision-Date: 2019-04-25 19:14+0000\n"
+"Last-Translator: Vinícius F <magnetuz@protonmail.com>\n"
+"Language-Team: Portuguese (Brazil) <https://translate.ubports.com/projects/"
+"ubports/dialer-app/pt_BR/>\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.2.2\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
-"Language: pt_BR\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -112,7 +113,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Ativa"
+msgstr "Ativo"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -254,7 +255,7 @@ msgstr "Chamadas de emergência"
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
-msgstr "Informe um número"
+msgstr "Insira um número"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -425,7 +426,7 @@ msgstr "Número privado"
 #: ../src/qml/DialerPage/DialerPage.qml:502
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Recentes"
+msgstr "Recente"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -445,7 +446,7 @@ msgstr "Pesquisar"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Pesquisar..."
+msgstr "Procurar..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
