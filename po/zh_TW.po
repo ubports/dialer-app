@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2019-01-27 00:00+0000\n"
+"PO-Revision-Date: 2019-03-31 00:00+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -401,7 +401,7 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"請解鎖您的 SIM 卡以撥打電話或傳送簡訊。您可以從螢幕頂端的「網路指示器」，或是前往 <a href=\"system_settings\">系統設定 "
+"請解鎖您的 SIM 卡以撥打電話或傳送訊息。您可以從螢幕頂端的「網路指示器」，或是前往 <a href=\"system_settings\">系統設定 "
 "&gt; 安全與隱私</a> 解鎖 SIM 卡。"
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
@@ -467,11 +467,11 @@ msgstr "分享"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "向此滑動來刪除"
+msgstr "滑動來刪除"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "向此滑動來顯示功能"
+msgstr "滑動來顯示功能"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:175
 msgid "Switch audio source:"
