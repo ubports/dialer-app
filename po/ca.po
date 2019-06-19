@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-05-03 21:02+0000\n"
+"PO-Revision-Date: 2019-06-20 02:04+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ca/>\n"
@@ -460,7 +460,7 @@ msgstr "Números"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "Acceptar"
+msgstr "D'acord"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
