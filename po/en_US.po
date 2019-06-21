@@ -8,14 +8,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-06-22 18:04+0000\n"
+"Last-Translator: lxdb <dinia200719@gmail.com>\n"
+"Language-Team: English (United States) <https://translate.ubports.com/"
+"projects/ubports/dialer-app/en_US/>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -211,7 +213,7 @@ msgstr ""
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -271,7 +273,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
