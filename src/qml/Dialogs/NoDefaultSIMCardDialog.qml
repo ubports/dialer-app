@@ -68,7 +68,7 @@ Component {
                 Button {
                     objectName: "noNoSimCardDefaultDialog"
                     text: i18n.tr("No")
-                    color: UbuntuColors.orange
+                    color: UbuntuColors.blue
                     onClicked: {
                         dualSimSettings.mainViewDontAskCount = 3
                         PopupUtils.close(dialogue)
@@ -78,7 +78,6 @@ Component {
                 Button {
                     objectName: "laterNoSimCardDefaultDialog"
                     text: i18n.tr("Later")
-                    color: UbuntuColors.orange
                     onClicked: {
                         PopupUtils.close(dialogue)
                         dualSimSettings.mainViewDontAskCount++

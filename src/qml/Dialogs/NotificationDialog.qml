@@ -27,7 +27,6 @@ Dialog {
     Button {
         objectName: "closeDialog"
         text: i18n.tr("Close")
-        color: UbuntuColors.orange
         onClicked: {
             PopupUtils.close(dialogue)
             Qt.inputMethod.hide()
