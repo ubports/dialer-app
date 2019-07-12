@@ -28,49 +28,47 @@ Component {
         property string accountId: ""
         // TRANSLATORS: this refers to which SIM card will be used as default for calls
         text: i18n.tr("Change all Call associations to %1?").arg(mainView.account.displayName)
-        Column {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            spacing: units.gu(2)
-            Row {
-                anchors.horizontalCenter: parent.horizontalCenter
-                spacing: units.gu(4)
-                Button {
-                    objectName: "setDefaultSimCardDialogNo"
-                    text: i18n.tr("No")
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        mainView.call(phoneNumber, true)
-                        Qt.inputMethod.hide()
-                    }
-                }
-                Button {
-                    objectName: "setDefaultSimCardDialogYes"
-                    text: i18n.tr("Yes")
-                    color: UbuntuColors.blue
-                    onClicked: {
-                        telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, mainView.account)
-                        PopupUtils.close(dialogue)
-                        mainView.call(phoneNumber, true)
-                        Qt.inputMethod.hide()
-                    }
-                }
+
+        Button {
+            objectName: "setDefaultSimCardDialogYes"
+            text: i18n.tr("Change")
+            color: UbuntuColors.blue
+            onClicked: {
+                telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, mainView.account)
+                PopupUtils.close(dialogue)
+                mainView.call(phoneNumber, true)
+                Qt.inputMethod.hide()
             }
-            Row {
-                CheckBox {
-                    id: dontAskAgainCheckbox
-                    checked: false
-                    onCheckedChanged: settings.dialPadDontAsk = checked
-                }
-                Label {
-                    text: i18n.tr("Don't ask again")
-                    anchors.verticalCenter: dontAskAgainCheckbox.verticalCenter
-                    MouseArea {
-                        anchors.fill: parent
-                        onClicked: dontAskAgainCheckbox.checked = !dontAskAgainCheckbox.checked
-                    }
+        }
+
+        Button {
+            objectName: "setDefaultSimCardDialogNo"
+            text: i18n.tr("Cancel")
+            onClicked: {
+                PopupUtils.close(dialogue)
+                mainView.call(phoneNumber, true)
+                Qt.inputMethod.hide()
+            }
+        }
+
+        Row {
+            spacing: units.gu(1)
+
+            CheckBox {
+                id: dontAskAgainCheckbox
+                checked: false
+                onCheckedChanged: settings.dialPadDontAsk = checked
+            }
+
+            Label {
+                text: i18n.tr("Don't ask again")
+                anchors.verticalCenter: dontAskAgainCheckbox.verticalCenter
+                MouseArea {
+                    anchors.fill: parent
+                    onClicked: dontAskAgainCheckbox.checked = !dontAskAgainCheckbox.checked
                 }
             }
         }
+
     }
 }
