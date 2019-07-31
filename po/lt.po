@@ -8,9 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2019-08-02 15:49+0000\n"
+"Last-Translator: Moo <moose@mail.ru>\n"
+"Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/lt/>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,10 +19,11 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n % 10 == 1 && (n % 100 < 11 || n % 100 > "
 "19)) ? 0 : ((n % 10 >= 2 && n % 10 <= 9 && (n % 100 < 11 || n % 100 > 19)) ? "
 "1 : 2);\n"
+"X-Generator: Weblate 3.6.1\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
-msgstr ""
+msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
 #: ../src/qml/LiveCallPage/LiveCall.qml:454
@@ -41,83 +43,83 @@ msgstr ""
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 valanda"
+msgstr[1] "%1 valandos"
+msgstr[2] "%1 valandų"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 minutė"
+msgstr[1] "%1 minutės"
+msgstr[2] "%1 minučių"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 sekundė"
+msgstr[1] "%1 sekundės"
+msgstr[2] "%1 sekundžių"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:206
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: ../src/qml/DialerPage/DialerBottomEdge.qml:26
 #: ../src/qml/DialerPage/Keypad.qml:223
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: ../src/qml/DialerPage/Keypad.qml:222
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:51
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:68
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../src/qml/DialerPage/Keypad.qml:85
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../src/qml/DialerPage/Keypad.qml:102
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../src/qml/DialerPage/Keypad.qml:119
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../src/qml/DialerPage/Keypad.qml:136
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../src/qml/DialerPage/Keypad.qml:153
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:170
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../src/qml/DialerPage/Keypad.qml:187
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:69
 msgid "ABC"
@@ -125,17 +127,17 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "Aktyvus"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "Visi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 msgid "All calls"
@@ -143,7 +145,7 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
-msgstr ""
+msgstr "Bluetooth įrenginys"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
@@ -216,7 +218,7 @@ msgstr ""
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -227,12 +229,12 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:78
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "Užverti"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr ""
+msgstr "Konferencija"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:131
 msgid "Conference call failure"
@@ -249,7 +251,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr ""
+msgstr "Adresato informacija"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
@@ -258,11 +260,11 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:59
 msgid "Contacts"
-msgstr ""
+msgstr "Adresatai"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
-msgstr ""
+msgstr "Adresatai..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -276,19 +278,19 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr ""
+msgstr "Ištrinti"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
-msgstr ""
+msgstr "Išsamiau"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
 msgid "Disable"
-msgstr ""
+msgstr "Išjungti"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr ""
+msgstr "Išjungiama skrydžio veiksena"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
@@ -298,11 +300,11 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr ""
+msgstr "Daugiau nebeklausti"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "Taisyti"
 
 #: ../src/qml/DialerPage/DialerPage.qml:132
 #: ../src/qml/DialerPage/DialerPage.qml:142
@@ -316,11 +318,11 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:303
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr ""
+msgstr "Įveskite numerį"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr ""
+msgstr "Klaida"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:161
 msgid "Failed to activate the call."
@@ -336,12 +338,12 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr ""
+msgstr "Mėgstami"
 
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "Skrydžio veiksena"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
@@ -363,7 +365,7 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "Supratau"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
@@ -375,7 +377,7 @@ msgstr ""
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
@@ -385,11 +387,11 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:129
 msgid "Initializing..."
-msgstr ""
+msgstr "Inicijuojama..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr ""
+msgstr "Neteisingas USSD kodas"
 
 #: ../src/qml/DialerPage/Keypad.qml:120
 msgid "JKL"
@@ -402,7 +404,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
-msgstr ""
+msgstr "Vėliau"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:101
 msgid ""
@@ -426,20 +428,20 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "Mobilusis"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Mano telefonas yra nepasiekiamas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr ""
+msgstr "Nepasirinkta jokia SIM kortelė"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:122
 msgid "No calls"
@@ -456,11 +458,11 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Numeriai"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "Gerai"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
@@ -468,7 +470,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr ""
+msgstr "Gerai"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -487,11 +489,11 @@ msgstr ""
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "Telefonas"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr ""
+msgstr "Telefono programėlė"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:345
 msgid "Phone Speaker"
@@ -507,7 +509,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Pasirinkite telefono numerį"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -518,7 +520,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
-msgstr ""
+msgstr "Palaukite"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -532,7 +534,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:522
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr ""
+msgstr "Paskiausi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
@@ -540,27 +542,27 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "SIM kortelė yra užrakinta"
 
 #: ../src/qml/DialerPage/DialerPage.qml:140
 msgid "SIM Locked"
-msgstr ""
+msgstr "SIM kortelė užrakinta"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "Įrašyti"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr ""
+msgstr "Ieškoti"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr ""
+msgstr "Ieškoti..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -574,7 +576,7 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
-msgstr ""
+msgstr "Siųsti žinutę"
 
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
@@ -587,12 +589,12 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:64
 msgid "Settings"
-msgstr ""
+msgstr "Nustatymai"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr ""
+msgstr "Bendrinti"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
@@ -600,15 +602,15 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "Perbraukite norėdami ištrinti"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "Perbraukite norėdami atskleisti veiksmus"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Switch audio source:"
-msgstr ""
+msgstr "Perjungti garso šaltinį:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:558
 msgid "Switch calls"
@@ -616,7 +618,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr ""
+msgstr "Perjungti į numatytąją SIM:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -638,25 +640,25 @@ msgstr ""
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
 msgid "Today"
-msgstr ""
+msgstr "Šiandien"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Ubuntu Phone"
-msgstr ""
+msgstr "Ubuntu telefonas"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:347
 msgid "Unknown device"
-msgstr ""
+msgstr "Nežinomas įrenginys"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
 msgid "Unknown number"
-msgstr ""
+msgstr "Nežinomas numeris"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr ""
+msgstr "Balso paštas"
 
 #: ../src/qml/DialerPage/Keypad.qml:188
 msgid "WXYZ"
@@ -664,27 +666,27 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "Taip"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 #: ../src/qml/SettingsPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr ""
+msgstr "Vakar"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "Norėdami skambinti, turite išjungti skrydžio veikseną"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
-msgstr ""
+msgstr "Turite pasirinkti SIM kortelę"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
 msgid "hh:mm:ss"
-msgstr ""
+msgstr "hh:mm:ss"
 
 #. TRANSLATORS: this is the duration time format when the call lasted less than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
-msgstr ""
+msgstr "mm:ss"
