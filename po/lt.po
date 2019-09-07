@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-08-11 18:49+0000\n"
+"PO-Revision-Date: 2019-09-08 20:50+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/lt/>\n"
@@ -148,8 +148,9 @@ msgid "Bluetooth device"
 msgstr "Bluetooth įrenginys"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
+#, fuzzy
 msgid "Call"
-msgstr ""
+msgstr "Skambinti"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
