@@ -26,33 +26,27 @@ Component {
         id: dialogue
         title: i18n.tr("Flight Mode")
         text: i18n.tr("You have to disable flight mode in order to make calls")
-        Column {
-            anchors.left: parent.left
-            anchors.right: parent.right
-            spacing: units.gu(2)
-            Row {
-                anchors.horizontalCenter: parent.horizontalCenter
-                spacing: units.gu(4)
-                Button {
-                    objectName: "disableFlightModeDialogCancelButton"
-                    text: i18n.tr("Cancel")
-                    color: UbuntuColors.orange
-                    onClicked: {
-                        PopupUtils.close(dialogue)
-                        Qt.inputMethod.hide()
-                    }
-                }
-                Button {
-                    objectName: "disableFlightModeDialogDisableButton"
-                    text: i18n.tr("Disable")
-                    color: UbuntuColors.orange
-                    onClicked: {
-                        telepathyHelper.flightMode = false
-                        PopupUtils.open(Qt.resolvedUrl("FlightModeProgressDialog.qml"), mainView)
-                        PopupUtils.close(dialogue)
-                        Qt.inputMethod.hide()
-                    }
-                }
+
+        Button {
+            objectName: "disableFlightModeDialogDisableButton"
+            text: i18n.tr("Disable")
+            color: UbuntuColors.blue
+
+            onClicked: {
+                telepathyHelper.flightMode = false
+                PopupUtils.open(Qt.resolvedUrl("FlightModeProgressDialog.qml"), mainView)
+                PopupUtils.close(dialogue)
+                Qt.inputMethod.hide()
+            }
+        }
+
+        Button {
+            objectName: "disableFlightModeDialogCancelButton"
+            text: i18n.tr("Cancel")
+
+            onClicked: {
+                PopupUtils.close(dialogue)
+                Qt.inputMethod.hide()
             }
         }
     }

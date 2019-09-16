@@ -48,7 +48,7 @@ Component {
                 Button {
                     objectName: "okSimLockedDialog"
                     text: i18n.tr("Ok")
-                    color: UbuntuColors.orange
+                    color: UbuntuColors.blue
                     onClicked: {
                         PopupUtils.close(dialogue)
                     }
