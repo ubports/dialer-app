@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2015-10-06 12:27+0000\n"
-"Last-Translator: Xuacu Saturio <xuacusk8@gmail.com>\n"
-"Language-Team: Asturian <ast@li.org>\n"
+"PO-Revision-Date: 2019-10-28 16:36+0000\n"
+"Last-Translator: enolp <enolp@softastur.org>\n"
+"Language-Team: Asturian <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ast/>\n"
+"Language: ast\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -244,7 +246,7 @@ msgstr "Nun entrugar más"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Editar"
+msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
@@ -253,7 +255,7 @@ msgstr "Llamaes d'emerxencia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
-msgstr "Escribi un númberu"
+msgstr "Introducir un númberu"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -439,11 +441,11 @@ msgstr "Guardar"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr "Guetar"
+msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Guetar..."
+msgstr "Guetar…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -468,7 +470,7 @@ msgstr "Axustes"
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr "Compartir"
+msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -535,7 +537,7 @@ msgstr "Sí"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr "Ayeri"
+msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
