@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-09-25 19:51+0000\n"
+"PO-Revision-Date: 2019-11-03 20:36+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/lt/>\n"
@@ -141,7 +141,7 @@ msgstr "Visi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 msgid "All calls"
-msgstr ""
+msgstr "Visi skambučiai"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
