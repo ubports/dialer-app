@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-11-03 20:36+0000\n"
+"PO-Revision-Date: 2019-11-11 22:36+0000\n"
 "Last-Translator: Moo <moose@mail.ru>\n"
 "Language-Team: Lithuanian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/lt/>\n"
@@ -467,7 +467,7 @@ msgstr "Gerai"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Išjungta"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
