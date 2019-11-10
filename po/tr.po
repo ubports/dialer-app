@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2017-11-26 14:15+0000\n"
-"Last-Translator: Arda Canbolat <oardacn@gmail.com>\n"
-"Language-Team: Turkish <https://translate.ubports.com/projects/ubports"
-"/dialer-app/tr/>\n"
+"PO-Revision-Date: 2019-11-03 20:36+0000\n"
+"Last-Translator: Ege Öz <ege.oz@tutanota.com>\n"
+"Language-Team: Turkish <https://translate.ubports.com/projects/ubports/"
+"dialer-app/tr/>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.15\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -123,7 +123,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Etkin"
+msgstr "Aktif"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -339,7 +339,7 @@ msgstr "Sık Kullanılanlar"
 #: ../src/qml/DialerPage/DialerPage.qml:137
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "Uçuş Modu"
+msgstr "Uçak Modu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
@@ -526,7 +526,7 @@ msgstr "Lütfen bekleyin"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
-msgstr "Kişiye Özel"
+msgstr "Özel"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
