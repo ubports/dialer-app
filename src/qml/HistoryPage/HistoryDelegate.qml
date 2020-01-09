@@ -178,7 +178,7 @@ ListItemWithActions {
             return phoneNumber
         }
         elide: Text.ElideRight
-        color: UbuntuColors.darkGrey
+        color: theme.palette.normal.backgroundSecondaryText
     }
 
     // this item has the width of the text above. It is used to be able to align

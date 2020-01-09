@@ -105,7 +105,7 @@ FocusScope {
         }
         horizontalAlignment: (text.length < 19 ? TextInput.AlignHCenter : TextInput.AlignRight)
         font.family: "Ubuntu"
-        color: UbuntuColors.darkGrey
+        color: theme.palette.normal.backgroundSecondaryText
         focus: false
         cursorVisible: true
         clip: true
@@ -162,7 +162,7 @@ FocusScope {
         text: ""
         font.pixelSize: input.font.pixelSize
         fontSizeMode: Text.HorizontalFit
-        color: UbuntuColors.darkGrey
+        color: theme.palette.normal.backgroundSecondaryText
         opacity: 0.9
         horizontalAlignment: Text.AlignHCenter
     }

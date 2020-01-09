@@ -121,7 +121,7 @@ Column {
                     rightMargin: units.gu(2)
                     verticalCenter: durationLabel.verticalCenter
                 }
-                color: callEntry.held ? UbuntuColors.red : UbuntuColors.green
+                color: callEntry.held ? theme.palette.normal.negative : theme.palette.normal.positive
                 text: {
                     if (callEntry.dialing) {
                         return ""

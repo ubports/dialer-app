@@ -228,7 +228,7 @@ Page {
             }
             PropertyChanges {
                 target: dtmfButton
-                iconColor: UbuntuColors.green
+                iconColor: theme.palette.normal.positive
             }
         },
 
@@ -324,7 +324,7 @@ Page {
         running: false
         onTriggered: mainView.switchToKeypadView()
     }
- 
+
     Timer {
         id: closeTimer
         interval: mainView.greeterMode ? 2000 : 3000
@@ -533,7 +533,7 @@ Page {
                 horizontalCenter: parent.horizontalCenter
             }
             text: caller
-            color: UbuntuColors.darkGrey
+            color: theme.palette.normal.backgroundSecondaryText
 
             fontSize:"large"
             visible: !liveCall.compactView
@@ -613,7 +613,7 @@ Page {
 
             text: i18n.tr("Switch calls")
             color: mainView.backgroundColor
-            strokeColor: UbuntuColors.green
+            strokeColor: theme.palette.normal.positive
             onClicked: {
                 changeCallHoldingStatus(callManager.foregroundCall, true)
             }
@@ -628,7 +628,7 @@ Page {
 
             text: i18n.tr("Merge calls")
             color: mainView.backgroundColor
-            strokeColor: UbuntuColors.green
+            strokeColor: theme.palette.normal.positive
             onClicked: {
                 callManager.mergeCalls(callManager.calls[0], callManager.calls[1])
             }

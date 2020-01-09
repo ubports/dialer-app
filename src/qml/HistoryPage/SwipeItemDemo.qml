@@ -123,7 +123,7 @@ Loader {
                     fontSize: "medium"
                     text: "(541) 754-3010"
                     elide: Text.ElideRight
-                    color: UbuntuColors.darkGrey
+                    color: theme.palette.normal.backgroundSecondaryText
                 }
 
                 // this item has the width of the text above. It is used to be able to align
@@ -251,7 +251,7 @@ Loader {
                     bottomMargin: units.gu(9)
                 }
                 width: units.gu(17)
-                strokeColor: UbuntuColors.green
+                strokeColor: theme.palette.normal.positive
                 text: i18n.tr("Got it")
                 enabled: !dismissAnimation.running
                 onClicked: dismissAnimation.start()
