@@ -22,7 +22,7 @@ import Ubuntu.Components 1.3
 AbstractButton {
     id: button
 
-    readonly property string defaultColor: "#0F8B21"
+    readonly property string defaultColor: theme.palette.normal.positive
     property alias iconRotation: icon.rotation
     property alias color: shape.color
 
@@ -49,7 +49,7 @@ AbstractButton {
         width: units.gu(3)
         height: units.gu(3)
         name: "call-start"
-        color: "white"
+        color: theme.palette.normal.positiveText
         asynchronous: true
         z: 1
     }

@@ -158,7 +158,7 @@ Page {
                 fontSize: "medium"
                 text: getContactAliasOrPhoneNumber(phoneNumber)
                 elide: Text.ElideRight
-                color: UbuntuColors.darkGrey
+                color: theme.palette.normal.backgroundSecondaryText
                 height: units.gu(2)
             }
 
@@ -289,7 +289,7 @@ Page {
                     leftMargin: units.gu(1)
                     verticalCenter: parent.verticalCenter
                 }
-                color: UbuntuColors.darkGrey
+                color: theme.palette.normal.backgroundSecondaryText
                 verticalAlignment: Qt.AlignVCenter
                 MouseArea {
                     anchors.fill:parent

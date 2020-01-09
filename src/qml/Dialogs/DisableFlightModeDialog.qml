@@ -30,7 +30,7 @@ Component {
         Button {
             objectName: "disableFlightModeDialogDisableButton"
             text: i18n.tr("Disable")
-            color: UbuntuColors.blue
+            color: theme.palette.selected.focus
 
             onClicked: {
                 telepathyHelper.flightMode = false

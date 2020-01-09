@@ -392,7 +392,7 @@ Page {
                 bottomMargin: units.gu(1)
             }
             text: contactWatcher.isUnknown ? "" : contactWatcher.alias
-            color: UbuntuColors.darkGrey
+            color: theme.palette.normal.backgroundSecondaryText
             opacity: text != "" ? 1 : 0
             fontSize: "small"
             Behavior on opacity {
@@ -485,7 +485,7 @@ Page {
                 }
 
                 if (mainView.greeterMode && !mainView.isEmergencyNumber(dialNumber)) {
-                    // we only allow users to call any number in greeter mode if there are 
+                    // we only allow users to call any number in greeter mode if there are
                     // no sim cards present. The operator will block the number if it thinks
                     // it's necessary.
                     // for phone accounts, active means the the status is not offline:
@@ -528,7 +528,7 @@ Page {
         PropertyAction {
             target: callButton
             property: "color"
-            value: "red"
+            value: theme.palette.normal.negative
         }
 
         ParallelAnimation {

@@ -48,7 +48,7 @@ Component {
                 Button {
                     objectName: "okSimLockedDialog"
                     text: i18n.tr("Ok")
-                    color: UbuntuColors.blue
+                    color: theme.palette.selected.focus
                     onClicked: {
                         PopupUtils.close(dialogue)
                     }
@@ -57,7 +57,6 @@ Component {
                 /*Button {
                     objectName: "unlockSimLockedDialog"
                     text: i18n.tr("Unlock")
-                    color: UbuntuColors.orange
                     onClicked: {
                         PopupUtils.close(dialogue)
                         telepathyHelper.unlockSimCards()

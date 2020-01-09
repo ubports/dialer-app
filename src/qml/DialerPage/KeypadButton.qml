@@ -64,7 +64,7 @@ MouseArea {
             }
 
             font.pixelSize: units.dp(30)
-            color: UbuntuColors.darkGrey
+            color: theme.palette.normal.backgroundSecondaryText
         }
 
         Label {
@@ -77,7 +77,7 @@ MouseArea {
             }
 
             fontSize: "x-small"
-            color: UbuntuColors.darkGrey
+            color: theme.palette.normal.backgroundSecondaryText
         }
 
         Icon {

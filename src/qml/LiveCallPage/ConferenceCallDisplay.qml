@@ -84,12 +84,12 @@ Column {
                 id: body
                 anchors.fill: parent
 
-                color: "red"
+                color: theme.palette.normal.negative
                 clip: true
 
                 Icon {
                     name: "call-end"
-                    color: "white"
+                    color: theme.palette.normal.negativeText
                     asynchronous: true
                     anchors {
                         top: parent.top
@@ -137,7 +137,7 @@ Column {
                     anchors {
                         centerIn: parent
                     }
-                    color: UbuntuColors.darkGrey
+                    color: theme.palette.normal.backgroundSecondaryText
                     text: i18n.tr("Private")
                     font.weight: Font.DemiBold
                     verticalAlignment: Text.AlignVCenter
