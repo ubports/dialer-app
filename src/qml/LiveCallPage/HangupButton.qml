@@ -34,7 +34,6 @@ AbstractButton {
     UbuntuShape {
         anchors.fill: parent
         color: button.pressed ? theme.palette.highlighted.negative : theme.palette.normal.negative
-        gradientColor: Qt.rgba(UbuntuColors.lightRed.r, UbuntuColors.lightRed.g, UbuntuColors.lightRed.b, 0.6)
         radius: "medium"
     }
 
