@@ -92,14 +92,15 @@ Page {
                 leftMargin: units.gu(2)
                 bottom: parent ? parent.bottom : undefined
             }
-            model:  [i18n.ctr("All Contacts", "All"), i18n.tr("Favorites")]
+
+            model:  [i18n.tr("Favorites"),i18n.ctr("All Contacts","All")]
             onSelectedIndexChanged: {
                 switch (selectedIndex) {
                 case 0:
-                    contactList.showAllContacts()
+                    contactList.showFavoritesContacts()
                     break;
                 case 1:
-                    contactList.showFavoritesContacts()
+                    contactList.showAllContacts()
                     break;
                 default:
                     break;
@@ -147,13 +148,14 @@ Page {
                         contactList.forceActiveFocus()
                         contactsPage.state = "default"
                         contactsPage.head.sections.selectedIndex = 0
+                        showNotification("Title","message6")
                     }
                 }
             ]
 
             PropertyChanges {
                 target: pageHeader
-                leadingActions: searchingState.leadingActions
+                trailingActions: searchingState.trailingActions
                 contents: searchField
                 extension: null
             }
@@ -216,7 +218,8 @@ Page {
             contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
         }
 	// focus the search field / show the keyboard on start
-        state = "searching";
+        //state = "searching";
+        contactList.showFavoritesContacts()
     }
 
     onActiveChanged: {
