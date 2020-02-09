@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2020-01-19 19:39+0000\n"
-"Last-Translator: Sami Törmänen <tormanen.sami@gmail.com>\n"
+"PO-Revision-Date: 2020-02-11 14:21+0000\n"
+"Last-Translator: Oi Suomi On! <oisuomion@protonmail.com>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/fi/>\n"
 "Language: fi\n"
@@ -50,16 +50,16 @@ msgstr[1] "%1 tuntia"
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[0] "%1 minuutti"
+msgstr[1] "%1 minuuttia"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 s"
-msgstr[1] "%1 s"
+msgstr[0] "%1 sekunti"
+msgstr[1] "%1 sekuntia"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -144,9 +144,8 @@ msgid "Bluetooth device"
 msgstr "Bluetooth-laite"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Soittaa"
+msgstr "Soita"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -461,7 +460,7 @@ msgstr "Numerot"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "OK"
+msgstr "Selvä"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
@@ -604,9 +603,8 @@ msgid "Share"
 msgstr "Jaa"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Ei puheluja"
+msgstr "Joitakin puheluja"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -652,7 +650,7 @@ msgstr "Tänään"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:343
 msgid "Ubuntu Phone"
-msgstr "Ubuntu Phone"
+msgstr "Ubuntu-puhelin"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:347
 msgid "Unknown device"
