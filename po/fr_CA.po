@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-07-14 23:34+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: French (Canada) <fr_CA@li.org>\n"
+"PO-Revision-Date: 2020-02-21 19:21+0000\n"
+"Last-Translator: Ryan Argente <rargente@lonerider.one>\n"
+"Language-Team: French (Canada) <https://translate.ubports.com/projects/"
+"ubports/dialer-app/fr_CA/>\n"
+"Language: fr_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -360,7 +362,7 @@ msgstr "Aucun appel récent"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Ok"
+msgstr "OK"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -404,9 +406,8 @@ msgid ""
 msgstr ""
 "Veuillez déverrouiller votre carte SIM pour téléphoner ou envoyer un "
 "message. Vous pouvez déverrouiller votre carte SIM à partir de l'indicateur "
-"de réseau en haut de l'écran ou en vous rendant aux <a "
-"href=\"system_settings\">Paramètres système &gt; Sécurité et "
-"confidentialité</a>"
+"de réseau en haut de l'écran ou en vous rendant aux <a href=\""
+"system_settings\">Paramètres système &gt; Sécurité et confidentialité</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -444,7 +445,7 @@ msgstr "Rechercher"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr "Recherche..."
+msgstr "Rechercher..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
