@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2020-02-17 07:21+0000\n"
+"PO-Revision-Date: 2020-02-25 16:21+0000\n"
 "Last-Translator: dano6 <dano.kutka@gmail.com>\n"
 "Language-Team: Slovak <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sk/>\n"
@@ -126,7 +126,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr "Aktívne"
+msgstr "Aktívna"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -148,7 +148,7 @@ msgstr "Zariadenie Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Volanie"
+msgstr "Volať"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
@@ -267,7 +267,7 @@ msgstr "Kontakty..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr "Do tohto kontaktu sa nedá preposlať"
+msgstr "Nemožno preposlať tomuto kontaktu"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -350,13 +350,13 @@ msgstr "Presmerovať všetky prichádzajúce hovory"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr "Presmerovať prichádzajúce hovory keď:"
+msgstr "Presmerovať prichádzajúce hovory pokiaľ:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr "Presmerovať do"
+msgstr "Presmerovať na"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -606,7 +606,7 @@ msgstr "Zdieľať"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
-msgstr "Nejaké hovory"
+msgstr "Niekoľko hovorov"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
