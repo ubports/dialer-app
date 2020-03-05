@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2020-03-05 08:29+0000\n"
+"PO-Revision-Date: 2020-03-07 10:22+0000\n"
 "Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "dialer-app/gl/>\n"
@@ -162,7 +162,7 @@ msgstr "Chamando a"
 
 #: ../src/qml/dialer-app.qml:588
 msgid "Calling Line Presentation"
-msgstr "Identificación das chamadas"
+msgstr "Identificación de chamadas"
 
 #: ../src/qml/dialer-app.qml:600
 msgid "Calling Line Restriction"
@@ -178,7 +178,7 @@ msgstr "Cancelar"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Desexa cambiar todas as asociacións de chamadas a %1?"
+msgstr "Cambiar todas as asociacións de chamadas a %1?"
 
 #: ../src/qml/DialerPage/DialerPage.qml:67
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -192,20 +192,20 @@ msgstr "Conferencia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Conference call failure"
-msgstr "A multiconferencia fallou"
+msgstr "Fallou a conferencia"
 
 #: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
-msgstr "Identificación do receptor"
+msgstr "Identificación da conexión"
 
 #: ../src/qml/dialer-app.qml:606
 msgid "Connected Line Restriction"
-msgstr "Restrición de información ao emisor"
+msgstr "Restrición da conexión"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Información do contacto"
+msgstr "Detalles do contacto"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:48
@@ -232,17 +232,17 @@ msgstr "Desactivar"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr "Desbloqueo do modo avión"
+msgstr "Deshabilitando o modo avión"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
 #: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
-msgstr "Rexeitar"
+msgstr "Descartar"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
 msgid "Don't ask again"
-msgstr "Non volver preguntar"
+msgstr "Non preguntar outra vez"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
@@ -263,15 +263,15 @@ msgstr "Erro"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
-msgstr "A activación da chamada fallou."
+msgstr "Fallou a activación da chamada."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "Failed to create a conference call."
-msgstr "Produciuse un fallo ao crear a multiconferencia."
+msgstr "Fallou a creación da conferencia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Failed to place the active call on hold."
-msgstr "Produciuse un fallo ao manter en espera a chamada activa."
+msgstr "Fallou a posta en espera da chamada activa."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
@@ -284,7 +284,7 @@ msgstr "Modo avión"
 
 #: ../src/qml/DialerPage/DialerPage.qml:77
 msgid "Flight mode"
-msgstr "Modo Voo"
+msgstr "Modo avión"
 
 #: ../src/qml/DialerPage/Keypad.qml:83
 msgid "GHI"
@@ -345,7 +345,7 @@ msgstr "Non"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
-msgstr "Non hai unha SIM seleccionada"
+msgstr "Non hai tarxeta SIM seleccionada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:120
 msgid "No calls"
@@ -354,7 +354,7 @@ msgstr "Non hai chamadas"
 #: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
 #: ../src/qml/dialer-app.qml:379
 msgid "No network"
-msgstr "Sen rede"
+msgstr "Non hai rede"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:245
 msgid "No recent calls"
@@ -404,7 +404,7 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Desbloquee a tarxeta SIM para chamar ou enviar unha mensaxe. Pode "
+"Desbloquee a tarxeta SIM pra chamar ou enviar unha mensaxe. Pode "
 "desbloqueala desde o indicador de rede na parte superior da pantalla ou indo "
 "a <a href=\"system_settings\">Axustes do sistema &gt; Seguranza &amp; "
 "Privacidade</a>."
@@ -433,7 +433,7 @@ msgstr "A tarxeta SIM está bloqueada"
 
 #: ../src/qml/DialerPage/DialerPage.qml:130
 msgid "SIM Locked"
-msgstr "SIM bloqueada"
+msgstr "Tarxeta SIM bloqueada"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
@@ -456,8 +456,8 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Seleccione unha tarxeta SIM para as chamadas saíntes. Pode cambiar a "
-"elección nos <a href=\"system_settings\">Axustes do sistema</a>."
+"Seleccione unha tarxeta SIM pra as chamadas saíntes. Pode cambiar a elección "
+"nos <a href=\"system_settings\">Axustes do sistema</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
@@ -474,11 +474,11 @@ msgstr "Compartir"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "Esvare o dedo para eliminar"
+msgstr "Esvare o dedo pra eliminar"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Esvare o dedo para ver accións"
+msgstr "Esvare o dedo pra ver accións"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:175
 msgid "Switch audio source:"
@@ -490,7 +490,7 @@ msgstr "Alternar chamadas"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Cambiar á SIM predeterminada"
+msgstr "Cambiar á SIM predeterminada:"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "TUV"
@@ -499,11 +499,11 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:380
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Actualmente non hai ningunha rede en %1"
+msgstr "Actualmente non hai rede en %1"
 
 #: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
 msgid "There is currently no network."
-msgstr "Actualmente non hai ningunha rede."
+msgstr "Actualmente non hai rede."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 msgid "Today"
@@ -541,7 +541,7 @@ msgstr "Onte"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Debe desactivar o modo avión para facer chamadas"
+msgstr "Debe desactivar o modo avión pra facer chamadas"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
