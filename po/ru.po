@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2020-01-19 19:39+0000\n"
-"Last-Translator: Dmitriy Pushkov <ezze@ezze.org>\n"
+"PO-Revision-Date: 2020-03-14 18:22+0000\n"
+"Last-Translator: Eugene Markoff <uralhistory@gmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ru/>\n"
 "Language: ru\n"
@@ -148,8 +148,9 @@ msgid "Bluetooth device"
 msgstr "Bluetooth-устройство"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
+#, fuzzy
 msgid "Call"
-msgstr "Позвонить"
+msgstr "Вызов"
 
 #: ../src/qml/dialer-app.qml:570
 msgid "Call Barring"
