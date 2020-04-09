@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2020-04-08 10:23+0000\n"
+"PO-Revision-Date: 2020-04-10 09:23+0000\n"
 "Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "dialer-app/gl/>\n"
@@ -232,7 +232,7 @@ msgstr "Inhabilitar"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr "Deshabilitando o modo avión"
+msgstr "Inhabilitando o modo avión"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
@@ -263,15 +263,15 @@ msgstr "Erro"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
-msgstr "Fallou a activación da chamada."
+msgstr "Non se puido activar a chamada."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "Failed to create a conference call."
-msgstr "Fallou a creación da conferencia."
+msgstr "Non se puido crear unha conferencia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:160
 msgid "Failed to place the active call on hold."
-msgstr "Fallou a posta en espera da chamada activa."
+msgstr "Non se puido poñer en espera a chamada activa."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
@@ -456,8 +456,8 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Seleccione unha tarxeta SIM para as chamadas saíntes. Pode cambiar a "
-"elección nos <a href=\"system_settings\">Axustes do sistema</a>."
+"Seleccione unha tarxeta SIM predeterminada para as chamadas saíntes. Pode "
+"cambiar a elección nos <a href=\"system_settings\">Axustes do sistema</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:360
 msgid "Send message"
@@ -541,7 +541,7 @@ msgstr "Onte"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Debe desactivar o modo avión para facer chamadas"
+msgstr "Debe inhabilitar o modo avión para facer chamadas"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "You need to select a SIM card"
