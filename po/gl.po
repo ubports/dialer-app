@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2020-04-10 09:23+0000\n"
+"PO-Revision-Date: 2020-04-11 14:23+0000\n"
 "Last-Translator: Neutrum N <neutro@tutanota.com>\n"
 "Language-Team: Galician <https://translate.ubports.com/projects/ubports/"
 "dialer-app/gl/>\n"
@@ -147,7 +147,7 @@ msgstr "Chamada rematada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:295
 msgid "Call failed"
-msgstr "Chamada fallida"
+msgstr "A chamada fallou"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:158
 msgid "Call holding failure"
@@ -192,7 +192,7 @@ msgstr "Conferencia"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "Conference call failure"
-msgstr "Fallou a conferencia"
+msgstr "A conferencia fallou"
 
 #: ../src/qml/dialer-app.qml:594
 msgid "Connected Line Presentation"
