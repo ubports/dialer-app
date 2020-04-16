@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2020-03-07 10:22+0000\n"
+"PO-Revision-Date: 2020-04-17 06:23+0000\n"
 "Last-Translator: Josué <j2g2rp@gmail.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/es/>\n"
@@ -144,7 +144,6 @@ msgid "Bluetooth device"
 msgstr "Dispositivo Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
 msgstr "Llamada"
 
