@@ -710,7 +710,7 @@ Page {
             iconWidth: units.gu(3)
             iconHeight: units.gu(3)
             enabled: !mainView.greeterMode
-            onClicked: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+            onClicked: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"), { "initialTab":"0", "initialState":"searching"})
         }
 
         LiveCallKeypadButton {

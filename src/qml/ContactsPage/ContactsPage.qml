@@ -29,6 +29,8 @@ Page {
 
     property string phoneToAdd: ""
     property QtObject contactIndex: null
+    property alias initialState: contactsPage.state
+    property alias initialTab: pageHeaderSections.selectedIndex
 
     function moveListToContact(contact)
     {
@@ -96,7 +98,7 @@ Page {
             onSelectedIndexChanged: {
                 switch (selectedIndex) {
                 case 0:
-                    contactList.showAllContacts()
+                    contactList.showAllContacts();
                     break;
                 case 1:
                     contactList.showFavoritesContacts()
@@ -146,7 +148,7 @@ Page {
                     onTriggered: {
                         contactList.forceActiveFocus()
                         contactsPage.state = "default"
-                        contactsPage.head.sections.selectedIndex = 0
+                        pageHeaderSections.selectedIndex = 0
                     }
                 }
             ]
@@ -216,7 +218,8 @@ Page {
             contactList.listModel.importContacts("file://" + QTCONTACTS_PRELOAD_VCARD)
         }
 	// focus the search field / show the keyboard on start
-        state = "searching";
+        //state = "searching";
+        //state = initialState;
     }
 
     onActiveChanged: {

@@ -54,10 +54,16 @@ Page {
         property list<Action> actionsGreeter
         property list<Action> actionsNormal: [
             Action {
+                objectName: "favorite-selected"
+                iconName: "favorite-selected"
+                text: i18n.tr("Favorite Contacts")
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"), {"initialTab":"1", "initialState":"default"})
+            },
+            Action {
                 objectName: "contacts"
                 iconName: "contact"
                 text: i18n.tr("Contacts")
-                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"))
+                onTriggered: pageStackNormalMode.push(Qt.resolvedUrl("../ContactsPage/ContactsPage.qml"), { "initialTab":"0", "initialState":"searching"})
             },
             Action {
                 iconName: "settings"
