@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=DialerApp
+GenericName=Dialer App
+Comment=Dialer application
+Keywords=Dialer;Call
+Exec=bin/dialer-app %u
+Icon=share/dialer-app/assets/dialer-app.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
