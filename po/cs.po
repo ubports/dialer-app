@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2020-03-02 22:13+0000\n"
+"PO-Revision-Date: 2020-05-20 20:24+0000\n"
 "Last-Translator: Pavel Borecki <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "dialer-app/cs/>\n"
@@ -28,7 +28,7 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:454
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - pozastavené"
+msgstr "%1 - podržené"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
@@ -43,8 +43,8 @@ msgstr "Služby %1"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 hodina"
-msgstr[1] "%1 hodin"
-msgstr[2] "%1 hodiny"
+msgstr[1] "%1 hodiny"
+msgstr[2] "%1 hodin"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -140,7 +140,7 @@ msgstr "Všechny [ Všechny kontakty]"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 msgid "All calls"
-msgstr "Všechny hovory"
+msgstr "Všechna volání"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:341
 msgid "Bluetooth device"
@@ -250,7 +250,7 @@ msgstr "Skrýt číslo připojené linky"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Contact Details"
-msgstr "Detaily kontaktu"
+msgstr "Podrobnosti kontaktu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
@@ -364,7 +364,7 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr "Hotovo"
+msgstr "Pochopil(a) jsem"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
@@ -604,7 +604,7 @@ msgstr "Sdílet"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
-msgstr "Několik hovorů"
+msgstr "Některá volání"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
