@@ -8,15 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-07-15 10:53-0300\n"
-"PO-Revision-Date: 2014-10-02 10:59+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Thai <th@li.org>\n"
+"PO-Revision-Date: 2020-05-25 06:24+0000\n"
+"Last-Translator: Somnuk Limsiroratana <mailsomnuk@yahoo.com>\n"
+"Language-Team: Thai <https://translate.ubports.com/projects/ubports/"
+"dialer-app/th/>\n"
+"Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.8\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:174
 msgid "#"
@@ -170,7 +172,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:145
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
 msgid "Cancel"
-msgstr ""
+msgstr "ยกเลิก"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -181,7 +183,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:67
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "ปิด"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:50
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -208,7 +210,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:77
 #: ../src/qml/DialerPage/DialerPage.qml:48
 msgid "Contacts"
-msgstr ""
+msgstr "ผู้ติดต่อ"
 
 #: ../src/qml/DialerPage/Keypad.qml:72
 msgid "DEF"
@@ -218,7 +220,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
 #: ../src/qml/HistoryPage/HistoryPage.qml:341
 msgid "Delete"
-msgstr ""
+msgstr "ลบ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Details"
@@ -244,7 +246,7 @@ msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "แก้ไข"
 
 #: ../src/qml/DialerPage/DialerPage.qml:122
 #: ../src/qml/DialerPage/DialerPage.qml:132
@@ -253,11 +255,11 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:288
 msgid "Enter a number"
-msgstr ""
+msgstr "ใส่หมายเลข"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr ""
+msgstr "ผิดพลาด"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:159
 msgid "Failed to activate the call."
@@ -273,7 +275,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:95
 msgid "Favorites"
-msgstr ""
+msgstr "รายการโปรด"
 
 #: ../src/qml/DialerPage/DialerPage.qml:127
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -334,12 +336,12 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "มือถือ"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
-msgstr ""
+msgstr "ไม่"
 
 #: ../src/qml/dialer-app.qml:355
 msgid "No SIM card selected"
@@ -378,7 +380,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:136
 #: ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "โทรศัพท์"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
@@ -431,15 +433,15 @@ msgstr ""
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "บันทึก"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:119
 msgid "Search"
-msgstr ""
+msgstr "ค้นหา"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:67
 msgid "Search..."
-msgstr ""
+msgstr "ค้นหา..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -457,12 +459,12 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:53
 msgid "Settings"
-msgstr ""
+msgstr "ตั้งค่า"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
 msgid "Share"
-msgstr ""
+msgstr "แชร์"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -525,11 +527,11 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
 msgid "Yes"
-msgstr ""
+msgstr "ใช่"
 
 #: ../src/qml/HistoryPage/dateUtils.js:47
 msgid "Yesterday"
-msgstr ""
+msgstr "เมื่อวาน"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
