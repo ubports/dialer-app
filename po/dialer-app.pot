@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 12:40+0200\n"
+"POT-Creation-Date: 2020-07-15 14:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,15 +156,15 @@ msgstr ""
 msgid "Call"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:587
+#: ../src/qml/dialer-app.qml:602
 msgid "Call Barring"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:598
+#: ../src/qml/dialer-app.qml:613
 msgid "Call Forwarding"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:624
 msgid "Call Waiting"
 msgstr ""
 
@@ -210,11 +210,11 @@ msgstr ""
 msgid "Calling"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:620
+#: ../src/qml/dialer-app.qml:635
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:632
+#: ../src/qml/dialer-app.qml:647
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -255,11 +255,11 @@ msgstr ""
 msgid "Conference call failure"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/dialer-app.qml:641
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:638
+#: ../src/qml/dialer-app.qml:653
 msgid "Connected Line Restriction"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:370
+#: ../src/qml/dialer-app.qml:376
 msgid "No SIM card selected"
 msgstr ""
 
@@ -493,8 +493,8 @@ msgstr ""
 msgid "No calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
-#: ../src/qml/dialer-app.qml:394
+#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:395
+#: ../src/qml/dialer-app.qml:400
 msgid "No network"
 msgstr ""
 
@@ -506,6 +506,7 @@ msgstr ""
 msgid "Number rewrite"
 msgstr ""
 
+#: ../src/qml/ContactsPage/ContactsPage.qml:247
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
 msgstr ""
@@ -564,6 +565,7 @@ msgstr ""
 msgid "Pick an account to create."
 msgstr ""
 
+#: ../src/qml/ContactsPage/ContactsPage.qml:234
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
 msgstr ""
@@ -686,12 +688,12 @@ msgstr ""
 msgid "TUV"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:395
+#: ../src/qml/dialer-app.qml:401
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
+#: ../src/qml/dialer-app.qml:395 ../src/qml/dialer-app.qml:402
 msgid "There is currently no network."
 msgstr ""
 
@@ -735,7 +737,7 @@ msgstr ""
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:370
+#: ../src/qml/dialer-app.qml:376
 msgid "You need to select a SIM card"
 msgstr ""
 
