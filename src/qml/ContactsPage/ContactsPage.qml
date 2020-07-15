@@ -200,64 +200,15 @@ Page {
                            })
         }
         onContactClicked: {
-
             if (contactsPage.phoneToAdd != "") {
                 mainView.addPhoneToContact(contact,
                                            contactsPage.phoneToAdd,
                                            contactsPage,
                                            contactList.listModel)
             } else {
-
-                if (contact.phoneNumbers.length > 1) {
-                    var dialog = PopupUtils.open(chooseNumberDialog, contactsPage, {
-                        'contact': contact
-                    });
-                    dialog.selectedPhoneNumber.connect(
-                                function(number) {
-                                    mainView.startCall(number)
-                                    PopupUtils.close(dialog);
-                                })
-                }else{
-                    mainView.startCall(contact.phoneNumber.number)
-                }
-
-            }
-
-        }
-    }
-
-    Component {
-        id: chooseNumberDialog
-        Dialog {
-            id: dialog
-            property var contact
-            title: i18n.tr("Please select a phone number")
-            modal:true
-
-            signal selectedPhoneNumber(string number)
-
-            ListItem.ItemSelector {
-                id: phoneNumberList
-                anchors {
-                    left: parent.left
-                    right: parent.right
-                }
-                activeFocusOnPress: false
-                expanded: true
-                text: i18n.tr("Numbers") + ":"
-                model: contact.phoneNumbers
-                selectedIndex: -1
-                delegate: OptionSelectorDelegate {
-                    highlightWhenPressed: true
-                    text: modelData.number
-                    activeFocusOnPress: false
-                }
-                onDelegateClicked: selectedPhoneNumber(contact.phoneNumbers[index].number)
-            }
-
-            Connections {
-                target: __eventGrabber
-                onPressed: PopupUtils.close(dialog)
+                mainView.viewContact(contact,
+                                     contactsPage,
+                                     contactList.listModel)
             }
         }
     }
