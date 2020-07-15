@@ -93,7 +93,7 @@ ContactViewPage {
             if (callManager.hasCalls) {
                 mainView.call(detail.number, mainView.account.accountId);
             } else {
-                mainView.populateDialpad(detail.number)
+                mainView.startCall(detail.number)
             }
         } else {
             Qt.openUrlExternally(("%1:%2").arg(action).arg(detail.value(0)))
