@@ -6,7 +6,8 @@
     "hooks": {
         "dialer-app": {
             "apparmor": "dialer-app.apparmor",
-            "desktop":  "dialer-app.desktop"
+            "desktop":  "dialer-app.desktop",
+            "urls": "dialer-app.url-dispatcher"
         }
     },
     "version": "0.0.0+testing-click-build",
