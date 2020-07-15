@@ -55,6 +55,12 @@ MainView {
     property string delayedDialNumber: ""
     property bool accountReady: false
 
+    onAccountReadyChanged: {
+        if (accountReady && delayedDialNumber.length > 0) {
+            call(delayedDialNumber, false)
+        }
+    }
+
     onApplicationActiveChanged: {
         if (applicationActive) {
             telepathyHelper.registerChannelObserver()
@@ -418,10 +424,18 @@ MainView {
         }
     }
 
+    function startCall(number) {
+        if (accountReady) {
+            call(number)
+        } else {
+           //postpone the call when account will be ready
+           delayedDialNumber = number
+        }
+    }
+
     function populateDialpad(number, accountId) {
         // populate the dialpad with the given number but don't start the call
         // FIXME: check what to do when not in the dialpad view
-
         // if not on the livecall view, go back to the dialpad
         while (pageStackNormalMode.depth > 1) {
             pageStackNormalMode.pop();
@@ -438,6 +452,7 @@ MainView {
                 dialerPage.bottomEdgeItem.collapse()
             }
         }
+
     }
 
     function removeLiveCallView() {
