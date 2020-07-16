@@ -235,7 +235,7 @@ void DialerApplication::parseArgument(const QString &arg)
                 QMetaObject::invokeMethod(mainView, "startCall", Q_ARG(QVariant, value));
             } else {
                 // do not call the number directly, instead only populate the dialpad view
-                QMetaObject::invokeMethod(mainView, "populateDialpad", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()), Q_ARG(QVariant, startcall));
+                QMetaObject::invokeMethod(mainView, "populateDialpad", Q_ARG(QVariant, value), Q_ARG(QVariant, QString()));
             }
 
         }
