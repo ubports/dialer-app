@@ -43,10 +43,8 @@ Page {
     }
 
     function triggerAction(contactIndex, action) {
-        console.log("triggerAction", contactIndex, action)
 
         var currentContact = contactList.listModel.contacts[contactIndex]
-        console.log("triggerAction", contactIndex, action, JSON.stringify(currentContact))
         if (currentContact.phoneNumbers.length > 1) {
             var dialog = PopupUtils.open(chooseNumberDialog, contactsPage, {
                 'contact': currentContact
