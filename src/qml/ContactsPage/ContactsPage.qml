@@ -42,6 +42,27 @@ Page {
         }
     }
 
+    function triggerAction(contactIndex, action) {
+        console.log("triggerAction", contactIndex, action)
+
+        var currentContact = contactList.listModel.contacts[contactIndex]
+        console.log("triggerAction", contactIndex, action, JSON.stringify(currentContact))
+        if (currentContact.phoneNumbers.length > 1) {
+            var dialog = PopupUtils.open(chooseNumberDialog, contactsPage, {
+                'contact': currentContact
+            });
+            dialog.selectedPhoneNumber.connect(
+                        function(number) {
+                            mainView.startCall(number)
+                            PopupUtils.close(dialog);
+                        })
+        } else {
+            mainView.startCall(currentContact.phoneNumber.number)
+        }
+    }
+
+
+
     Connections {
         target: contactList.listModel
         onContactsChanged: {
@@ -184,6 +205,17 @@ Page {
             bottom: keyboardRect.top
         }
 
+        fetchHint: FetchHint {
+            detailTypesHint: [
+                ContactDetail.DisplayLabel,
+                ContactDetail.PhoneNumber,
+                ContactDetail.Email,
+                ContactDetail.Name,
+                ContactDetail.Avatar,
+                ContactDetail.Tag
+            ]
+        }
+
         showAddNewButton: true
         showImportOptions: (contactList.count === 0) &&
                            (filterTerm === "") &&
@@ -211,7 +243,54 @@ Page {
                                      contactList.listModel)
             }
         }
-    }
+        rightSideActions: [
+               Action {
+                   iconName: "call-start"
+                   text: i18n.tr("Call")
+                   onTriggered: {
+                       triggerAction(value.contactIndex, "tel")
+                   }
+               }
+
+           ]
+       }
+
+
+   Component {
+       id: chooseNumberDialog
+       Dialog {
+           id: dialog
+           property var contact
+           title: i18n.tr("Please select a phone number")
+           modal:true
+
+           signal selectedPhoneNumber(string number)
+
+           ListItem.ItemSelector {
+               id: phoneNumberList
+               anchors {
+                   left: parent.left
+                   right: parent.right
+               }
+               activeFocusOnPress: false
+               expanded: true
+               text: i18n.tr("Numbers") + ":"
+               model: contact.phoneNumbers
+               selectedIndex: -1
+               delegate: OptionSelectorDelegate {
+                   highlightWhenPressed: true
+                   text: modelData.number
+                   activeFocusOnPress: false
+               }
+               onDelegateClicked: selectedPhoneNumber(contact.phoneNumbers[index].number)
+           }
+
+           Connections {
+               target: __eventGrabber
+               onPressed: PopupUtils.close(dialog)
+           }
+       }
+   }
 
     Component.onCompleted: {
         if (QTCONTACTS_PRELOAD_VCARD !== "") {
