@@ -7,11 +7,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-07-15 10:53-0300\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-04-20 12:40+0200\n"
 "PO-Revision-Date: 2015-09-03 13:22+0000\n"
 "Last-Translator: GunChleoc <Unknown>\n"
 "Language-Team: Fòram na Gàidhlig\n"
+"Language: gd\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,19 +20,33 @@ msgstr ""
 "(n > 2 && n < 20) ? 2 : 3;\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-"Language: gd\n"
 
-#: ../src/qml/DialerPage/Keypad.qml:174
+#: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:451
+#: ../src/qml/LiveCallPage/LiveCall.qml:510
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - 'ga chumail"
 
+#. TRANSLATORS: %1 is the displayname of the account
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
+#, qt-format
+msgid "%1 Number Rewrite"
+msgstr ""
+
+#. TRANSLATORS: %1 is the name of the (network) carrier
+#: ../src/qml/SettingsPage/Services.qml:34
+#: ../src/qml/SettingsPage/SingleSim.qml:51
+#, qt-format
+msgid "%1 Services"
+msgstr ""
+
 #: ../src/qml/HistoryPage/dateUtils.js:92
+#: ../src/qml/SettingsPage/dateUtils.js:61
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -41,6 +56,7 @@ msgstr[2] "%1 uairean a thìde"
 msgstr[3] "%1 uair a thìde"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
+#: ../src/qml/SettingsPage/dateUtils.js:63
 #, qt-format
 msgid "%1 min"
 msgid_plural "%1 mins"
@@ -50,6 +66,7 @@ msgstr[2] "%1 mionaidean"
 msgstr[3] "%1 mionaid"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
+#: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
@@ -65,56 +82,56 @@ msgstr[3] "%1 diog"
 msgid "(%1)"
 msgstr "(%1)"
 
-#: ../src/qml/DialerPage/Keypad.qml:150
+#: ../src/qml/DialerPage/Keypad.qml:206
 msgid "*"
 msgstr "*"
 
 #: ../src/qml/DialerPage/DialerBottomEdge.qml:26
-#: ../src/qml/DialerPage/Keypad.qml:161
+#: ../src/qml/DialerPage/Keypad.qml:223
 msgid "+"
 msgstr "+"
 
-#: ../src/qml/DialerPage/Keypad.qml:160
+#: ../src/qml/DialerPage/Keypad.qml:222
 msgid "0"
 msgstr "0"
 
-#: ../src/qml/DialerPage/Keypad.qml:49
+#: ../src/qml/DialerPage/Keypad.qml:51
 msgid "1"
 msgstr "1"
 
-#: ../src/qml/DialerPage/Keypad.qml:60
+#: ../src/qml/DialerPage/Keypad.qml:68
 msgid "2"
 msgstr "2"
 
-#: ../src/qml/DialerPage/Keypad.qml:71
+#: ../src/qml/DialerPage/Keypad.qml:85
 msgid "3"
 msgstr "3"
 
-#: ../src/qml/DialerPage/Keypad.qml:82
+#: ../src/qml/DialerPage/Keypad.qml:102
 msgid "4"
 msgstr "4"
 
-#: ../src/qml/DialerPage/Keypad.qml:93
+#: ../src/qml/DialerPage/Keypad.qml:119
 msgid "5"
 msgstr "5"
 
-#: ../src/qml/DialerPage/Keypad.qml:104
+#: ../src/qml/DialerPage/Keypad.qml:136
 msgid "6"
 msgstr "6"
 
-#: ../src/qml/DialerPage/Keypad.qml:115
+#: ../src/qml/DialerPage/Keypad.qml:153
 msgid "7"
 msgstr "7"
 
-#: ../src/qml/DialerPage/Keypad.qml:126
+#: ../src/qml/DialerPage/Keypad.qml:170
 msgid "8"
 msgstr "8"
 
-#: ../src/qml/DialerPage/Keypad.qml:137
+#: ../src/qml/DialerPage/Keypad.qml:187
 msgid "9"
 msgstr "9"
 
-#: ../src/qml/DialerPage/Keypad.qml:61
+#: ../src/qml/DialerPage/Keypad.qml:69
 msgid "ABC"
 msgstr "ABC"
 
@@ -122,64 +139,110 @@ msgstr "ABC"
 msgid "Active"
 msgstr "Gnìomhach"
 
+#: ../src/qml/SettingsPage/SettingsPage.qml:122
+msgid "Add an online account"
+msgstr ""
+
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
 msgstr "Na h-uile"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:95
+#: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Na h-uile"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:339
+#: ../src/qml/SettingsPage/CallForwarding.qml:378
+#, fuzzy
+msgid "All calls"
+msgstr "Chan eil gairm ann"
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "Uidheam bluetooth"
 
-#: ../src/qml/dialer-app.qml:555
+#: ../src/qml/SettingsPage/ServiceInfo.qml:125
+#, fuzzy
+msgid "Call"
+msgstr "'Ga ghairm"
+
+#: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
 msgstr "Bacadh ghairmean"
 
-#: ../src/qml/dialer-app.qml:566
+#: ../src/qml/dialer-app.qml:598
 msgid "Call Forwarding"
 msgstr "Sìneadh air adhart ghairmean"
 
-#: ../src/qml/dialer-app.qml:577
+#: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
 msgstr "Tha gairm a' feitheamh"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:150
+#: ../src/qml/LiveCallPage/LiveCall.qml:169
 msgid "Call ended"
 msgstr "Crìoch a' ghairm"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:295
+#: ../src/qml/LiveCallPage/LiveCall.qml:315
 msgid "Call failed"
 msgstr "Dh'fhàillig leis a' ghairm"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:158
+#: ../src/qml/SettingsPage/CallForwarding.qml:44
+#: ../src/qml/SettingsPage/MultiSim.qml:51
+#: ../src/qml/SettingsPage/NoSims.qml:28
+#: ../src/qml/SettingsPage/SingleSim.qml:39
+#, fuzzy
+msgid "Call forwarding"
+msgstr "Sìneadh air adhart ghairmean"
+
+#: ../src/qml/SettingsPage/CallForwardItem.qml:218
+msgid "Call forwarding can't be changed right now."
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:154
+msgid "Call forwarding status can't be checked "
+msgstr ""
+
+#: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
 msgstr "Dh'fhàillig cumail na gairm"
 
-#: ../src/qml/DialerPage/DialerPage.qml:489
+#: ../src/qml/SettingsPage/CallWaiting.qml:31
+#: ../src/qml/SettingsPage/CallWaiting.qml:86
+#: ../src/qml/SettingsPage/MultiSim.qml:41
+#: ../src/qml/SettingsPage/NoSims.qml:34
+#: ../src/qml/SettingsPage/SingleSim.qml:32
+#, fuzzy
+msgid "Call waiting"
+msgstr "Tha gairm a' feitheamh"
+
+#: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
-#: ../src/qml/LiveCallPage/LiveCall.qml:453
+#: ../src/qml/LiveCallPage/LiveCall.qml:512
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "'Ga ghairm"
 
-#: ../src/qml/dialer-app.qml:588
+#: ../src/qml/dialer-app.qml:620
 msgid "Calling Line Presentation"
 msgstr "Taisbeanadh de ghairmean a thig a-steach"
 
-#: ../src/qml/dialer-app.qml:600
+#: ../src/qml/dialer-app.qml:632
 msgid "Calling Line Restriction"
 msgstr "Bacadh de ghairmean a thig a-steach"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
-#: ../src/qml/ContactsPage/ContactsPage.qml:145
-#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
+#: ../src/qml/ContactsPage/ContactsPage.qml:147
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:45
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:46
+#: ../src/qml/SettingsPage/CallForwarding.qml:236
+#: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
 msgstr "Sguir dheth"
+
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
+msgid "Change"
+msgstr ""
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -187,53 +250,82 @@ msgstr "Sguir dheth"
 msgid "Change all Call associations to %1?"
 msgstr "A bheil thu airson gach co-cheangal gairme atharrachadh gu %1?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:67
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
+msgid "Characters to remove"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Dùin"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:50
+#: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "Gairm co-labhairt"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:129
+#: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Conference call failure"
 msgstr "Dh'fhàillig a' ghairm co-labhairt"
 
-#: ../src/qml/dialer-app.qml:594
+#: ../src/qml/dialer-app.qml:626
 msgid "Connected Line Presentation"
 msgstr "Taisbeanadh de ghairmean ceangailte"
 
-#: ../src/qml/dialer-app.qml:606
+#: ../src/qml/dialer-app.qml:638
 msgid "Connected Line Restriction"
 msgstr "Bacadh de ghairmean ceangailte"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
-#: ../src/qml/HistoryPage/HistoryPage.qml:369
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
+#: ../src/qml/HistoryPage/HistoryPage.qml:378
 msgid "Contact Details"
 msgstr "Fiosrachadh conaltraidh"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:77
-#: ../src/qml/DialerPage/DialerPage.qml:48
+#: ../src/qml/SettingsPage/CallForwarding.qml:299
+msgid "Contact not associated with any phone number."
+msgstr ""
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "Contacts"
 msgstr "Luchd-aithne"
 
-#: ../src/qml/DialerPage/Keypad.qml:72
+#: ../src/qml/SettingsPage/CallForwarding.qml:223
+#, fuzzy
+msgid "Contacts..."
+msgstr "Luchd-aithne"
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:298
+msgid "Could not forward to this contact"
+msgstr ""
+
+#: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
-#: ../src/qml/HistoryPage/HistoryPage.qml:341
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
+msgid "Default area code"
+msgstr ""
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
+msgid "Default country code"
+msgstr ""
+
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
+#: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Delete"
 msgstr "Sguab às"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:350
+#: ../src/qml/HistoryPage/HistoryPage.qml:359
 msgid "Details"
 msgstr "Mion-fhiosrachadh"
 
-#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
+#: ../src/qml/SettingsPage/SettingsPage.qml:113
+msgid "Dialpad tones"
+msgstr ""
+
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
 msgstr "Cuir à comas"
 
@@ -247,7 +339,7 @@ msgstr "A' cur à comas am modh itealain"
 msgid "Dismiss"
 msgstr "Cuir air falbh"
 
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:64
 msgid "Don't ask again"
 msgstr "Na faighnich dhìom a-rithist"
 
@@ -255,45 +347,83 @@ msgstr "Na faighnich dhìom a-rithist"
 msgid "Edit"
 msgstr "Deasaich"
 
-#: ../src/qml/DialerPage/DialerPage.qml:122
-#: ../src/qml/DialerPage/DialerPage.qml:132
+#: ../src/qml/DialerPage/DialerPage.qml:147
+#: ../src/qml/DialerPage/DialerPage.qml:157
 msgid "Emergency Calls"
 msgstr "Gairmean-èiginn"
 
-#: ../src/qml/DialerPage/DialerPage.qml:288
+#: ../src/qml/DialerPage/DialerPage.qml:514
+#, fuzzy
+msgid "Emergency call"
+msgstr "Gairmean-èiginn"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
+msgid "Enter a country code"
+msgstr ""
+
+#: ../src/qml/DialerPage/DialerPage.qml:332
+#: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
 msgstr "Cuir a-steach àireamh"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
+#, fuzzy
+msgid "Enter a prefix"
+msgstr "Cuir a-steach àireamh"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
+msgid "Enter an area code"
+msgstr ""
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
+msgid "Enter the characters to remove"
+msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
 msgstr "Mearachd"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:159
+#: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
 msgstr "Dh'fhàillig gnìomhachadh na gairm."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:130
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Failed to create a conference call."
 msgstr "Dh'fhàillig cruthachadh na gairm co-labhairt."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
 msgstr "Cha b' urrainn dhuinn a' ghairm ghnìomhach a chumail."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:95
+#: ../src/qml/DialerPage/DialerPage.qml:59
+#, fuzzy
+msgid "Favorite Contacts"
+msgstr "Annsachdan"
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
 msgstr "Annsachdan"
 
-#: ../src/qml/DialerPage/DialerPage.qml:127
+#: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Am modh itealain"
 
-#: ../src/qml/DialerPage/DialerPage.qml:77
-msgid "Flight mode"
-msgstr "Modh iteil"
+#: ../src/qml/SettingsPage/CallForwarding.qml:127
+msgid "Forward every incoming call"
+msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:83
+#: ../src/qml/SettingsPage/CallForwarding.qml:162
+msgid "Forward incoming calls when:"
+msgstr ""
+
+#. TRANSLATORS: This string will be truncated on smaller displays.
+#: ../src/qml/SettingsPage/CallForwardItem.qml:157
+#: ../src/qml/SettingsPage/CallForwardItem.qml:202
+msgid "Forward to"
+msgstr ""
+
+#: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
 msgstr "GHI"
 
@@ -301,42 +431,61 @@ msgstr "GHI"
 msgid "Got it"
 msgstr "Tha mi agaibh"
 
+#: ../src/qml/SettingsPage/CallForwarding.qml:182
+msgid "I don't answer"
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:171
+msgid "I'm on another call"
+msgstr ""
+
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:335
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "A-steach"
+
+#: ../src/qml/DialerPage/DialerPage.qml:144
+msgid "Initializing..."
+msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
 msgstr "Còd USSD mì-dhligheach"
 
-#: ../src/qml/DialerPage/Keypad.qml:94
+#: ../src/qml/DialerPage/Keypad.qml:120
 msgid "JKL"
 msgstr "JKL"
 
-#: ../src/qml/DialerPage/DialerPage.qml:85
-msgid "Keypad"
-msgstr "Pada-iuchraichean"
+#: ../src/qml/SettingsPage/ServiceInfo.qml:115
+#, qt-format
+msgid "Last called %1"
+msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
 msgstr "Às a dhèidh seo"
 
-#: ../src/qml/DialerPage/Keypad.qml:105
+#: ../src/qml/SettingsPage/CallWaiting.qml:101
+msgid ""
+"Lets you answer or start a new call while on another call, and switch "
+"between them"
+msgstr ""
+
+#: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:560
+#: ../src/qml/LiveCallPage/LiveCall.qml:629
 msgid "Merge calls"
 msgstr "Co-aonaich na gairmean"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:333
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "Air a call"
@@ -345,47 +494,70 @@ msgstr "Air a call"
 msgid "Mobile"
 msgstr "Inneal-làimhe"
 
+#: ../src/qml/SettingsPage/CallForwarding.qml:193
+msgid "My phone is unreachable"
+msgstr ""
+
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr "Chan eil"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
 msgstr "Cha deach cairt SIM a thaghadh"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:120
+#: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "No calls"
 msgstr "Chan eil gairm ann"
 
-#: ../src/qml/DialerPage/DialerPage.qml:138 ../src/qml/dialer-app.qml:374
-#: ../src/qml/dialer-app.qml:379
+#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
+#: ../src/qml/dialer-app.qml:394
 msgid "No network"
 msgstr "Chan eil lìonra ann"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:245
+#: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
 msgstr "Cha robh gairm ann o chionn goirid"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
+msgid "Number rewrite"
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:279
+msgid "Numbers"
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:301
+msgid "OK"
+msgstr ""
+
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
+#: ../src/qml/SettingsPage/CallForwarding.qml:382
+msgid "Off"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
 msgstr "Ceart ma-thà"
+
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
+msgid "On"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
 msgstr "'Ga chumail"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:337
 msgid "Outgoing"
 msgstr "A-mach"
 
-#: ../src/qml/DialerPage/Keypad.qml:116
+#: ../src/qml/DialerPage/Keypad.qml:154
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:136
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:164 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Fòn"
 
@@ -393,7 +565,7 @@ msgstr "Fòn"
 msgid "Phone App"
 msgstr "Aplacaid an fhòn"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:343
+#: ../src/qml/LiveCallPage/LiveCall.qml:393
 msgid "Phone Speaker"
 msgstr "Glaodhaire an fhòn"
 
@@ -405,6 +577,14 @@ msgstr "Aplacaid an fhòn"
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Phone;Dialer;Dial;Call;Keypad;Fòn;Daitheal;Gairm;Iuchraichean"
 
+#: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
+msgid "Pick an account to create."
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:270
+msgid "Please select a phone number"
+msgstr ""
+
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
 "Please unlock your SIM card to call or send a message. You can unlock your "
@@ -413,12 +593,16 @@ msgid ""
 msgstr ""
 "Thoir a' ghlas far na cairt SIM agad airson fòn no teachdaireachd a chur. 'S "
 "urrainn dhut a' ghlas a thoirt far na cairte SIM o thaisbeanair an lìonraidh "
-"aig barr na sgrìn no le bhith a' tadhal air <a "
-"href=\"system_settings\">Roghainnean an t-siostaim ⁊ prìobhaideachd</a>."
+"aig barr na sgrìn no le bhith a' tadhal air <a href=\"system_settings"
+"\">Roghainnean an t-siostaim ⁊ prìobhaideachd</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
 msgstr "Fuirich ort"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
+msgid "Prefix"
+msgstr ""
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -429,16 +613,24 @@ msgstr "Prìobhaideach"
 msgid "Private number"
 msgstr "Àireamh phrìobhaideach"
 
-#: ../src/qml/DialerPage/DialerPage.qml:502
+#: ../src/qml/DialerPage/DialerPage.qml:569
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "O chionn goirid"
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:142
+msgid "Redirects all phone calls to another number."
+msgstr ""
+
+#: ../src/qml/SettingsPage/SingleSim.qml:28
+msgid "SIM"
+msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
 msgstr "Tha a' chairt SIM glaiste"
 
-#: ../src/qml/DialerPage/DialerPage.qml:130
+#: ../src/qml/DialerPage/DialerPage.qml:155
 msgid "SIM Locked"
 msgstr "SIM glaiste"
 
@@ -446,11 +638,11 @@ msgstr "SIM glaiste"
 msgid "Save"
 msgstr "Sàbhail"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:119
+#: ../src/qml/ContactsPage/ContactsPage.qml:121
 msgid "Search"
 msgstr "Lorg"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:67
+#: ../src/qml/ContactsPage/ContactsPage.qml:69
 msgid "Search..."
 msgstr "Lorg..."
 
@@ -464,21 +656,37 @@ msgid ""
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
 "Tagh SIM tùsail airson gach gairm a-mach. 'S urrainn dhut an roghainn agad "
-"atharrachadh ann an <a href=\"system_settings\">Roghainnean an t-"
-"Siostaim</a> uair sam bith."
+"atharrachadh ann an <a href=\"system_settings\">Roghainnean an t-Siostaim</"
+"a> uair sam bith."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:360
+#: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Send message"
 msgstr "Cuir teachdaireachd"
 
-#: ../src/qml/DialerPage/DialerPage.qml:53
+#: ../src/qml/SettingsPage/MultiSim.qml:62
+#: ../src/qml/SettingsPage/NoSims.qml:42
+msgid "Services"
+msgstr ""
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:249
+#, fuzzy
+msgid "Set"
+msgstr "Tagh"
+
+#: ../src/qml/DialerPage/DialerPage.qml:70
+#: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
 msgstr "Roghainnean"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
 msgstr "Co-roinn"
+
+#: ../src/qml/SettingsPage/CallForwarding.qml:380
+#, fuzzy
+msgid "Some calls"
+msgstr "Chan eil gairm ann"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -488,11 +696,11 @@ msgstr "Grad-shlaighd airson a sguabadh às"
 msgid "Swipe to reveal actions"
 msgstr "Grad-shlaighd gus na gnìomhan a shealltainn"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:175
+#: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
 msgstr "Cleachd tùs fuaime eile:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:545
+#: ../src/qml/LiveCallPage/LiveCall.qml:614
 msgid "Switch calls"
 msgstr "Gearr leum eadar gairmean"
 
@@ -500,28 +708,33 @@ msgstr "Gearr leum eadar gairmean"
 msgid "Switch to default SIM:"
 msgstr "Gearr leum gun SIM tùsail:"
 
-#: ../src/qml/DialerPage/Keypad.qml:127
+#: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:380
+#: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Chan eil lìonra air %1 an-dràsta"
 
-#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
 msgstr "Chan eil lìonra ann an-dràsta."
 
+#: ../src/qml/DialerPage/DialerPage.qml:514
+msgid "This is not an emergency number."
+msgstr ""
+
 #: ../src/qml/HistoryPage/dateUtils.js:45
+#: ../src/qml/SettingsPage/dateUtils.js:41
 msgid "Today"
 msgstr "An-diugh"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:341
+#: ../src/qml/LiveCallPage/LiveCall.qml:391
 msgid "Ubuntu Phone"
 msgstr "Fòn Ubuntu"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:345
+#: ../src/qml/LiveCallPage/LiveCall.qml:395
 msgid "Unknown device"
 msgstr "Uidheam nach aithne dhuinn"
 
@@ -535,24 +748,20 @@ msgstr "Àireamh nach aithne dhuinn"
 msgid "Voicemail"
 msgstr "Post-gutha"
 
-#: ../src/qml/DialerPage/Keypad.qml:138
+#: ../src/qml/DialerPage/Keypad.qml:188
 msgid "WXYZ"
 msgstr "WXYZ"
 
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
-msgid "Yes"
-msgstr "Tha"
-
 #: ../src/qml/HistoryPage/dateUtils.js:47
+#: ../src/qml/SettingsPage/dateUtils.js:43
 msgid "Yesterday"
 msgstr "An-dè"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
-"Feumaidh tu am modh itealain a chur dheth mus urrainn dhut fòn a chur"
+msgstr "Feumaidh tu am modh itealain a chur dheth mus urrainn dhut fòn a chur"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:370
 msgid "You need to select a SIM card"
 msgstr "Feumaidh tu cairt SIM a thaghadh"
 
@@ -565,6 +774,15 @@ msgstr "hh:mm:ss"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
+
+#~ msgid "Flight mode"
+#~ msgstr "Modh iteil"
+
+#~ msgid "Keypad"
+#~ msgstr "Pada-iuchraichean"
+
+#~ msgid "Yes"
+#~ msgstr "Tha"
 
 #~ msgid "All"
 #~ msgstr "Na h-uile"

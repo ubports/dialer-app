@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-01-12 16:58-0200\n"
-"PO-Revision-Date: 2019-08-27 17:49+0000\n"
-"Last-Translator: Daniel Frost <one@frostinfo.de>\n"
+"POT-Creation-Date: 2020-04-20 12:40+0200\n"
+"PO-Revision-Date: 2020-07-20 19:08+0000\n"
+"Last-Translator: Florian Leeber <flori@bin.org.in>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "dialer-app/de/>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -25,10 +25,17 @@ msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:454
+#: ../src/qml/LiveCallPage/LiveCall.qml:510
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - Wartend"
+
+#. TRANSLATORS: %1 is the displayname of the account
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
+#, qt-format
+msgid "%1 Number Rewrite"
+msgstr "%1 Nummer wiederholen"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
@@ -125,12 +132,16 @@ msgstr "ABC"
 msgid "Active"
 msgstr "Aktiv"
 
+#: ../src/qml/SettingsPage/SettingsPage.qml:122
+msgid "Add an online account"
+msgstr "Einen Online-Account hinzufügen"
+
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
 msgstr "Alle"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:95
+#: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
 msgid "All"
 msgstr "Alle"
@@ -139,7 +150,7 @@ msgstr "Alle"
 msgid "All calls"
 msgstr "Alle Anrufe"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:341
+#: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "Bluetooth-Gerät"
 
@@ -147,23 +158,23 @@ msgstr "Bluetooth-Gerät"
 msgid "Call"
 msgstr "Anruf"
 
-#: ../src/qml/dialer-app.qml:570
+#: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
 msgstr "Anrufsperre"
 
-#: ../src/qml/dialer-app.qml:581
+#: ../src/qml/dialer-app.qml:598
 msgid "Call Forwarding"
 msgstr "Anrufweiterleitung"
 
-#: ../src/qml/dialer-app.qml:592
+#: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
 msgstr "Anklopfen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:152
+#: ../src/qml/LiveCallPage/LiveCall.qml:169
 msgid "Call ended"
 msgstr "Anruf beendet"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:297
+#: ../src/qml/LiveCallPage/LiveCall.qml:315
 msgid "Call failed"
 msgstr "Anruf fehlgeschlagen"
 
@@ -180,9 +191,9 @@ msgstr "Rufweiterleitung kann gerade nicht geändert werden."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "Rufweiterleitungs-Status kann nicht gepürft werden "
+msgstr "Rufweiterleitungs-Status kann nicht geprüft werden "
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:160
+#: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
 msgstr "Fehler beim Halten des Anrufs"
 
@@ -194,27 +205,33 @@ msgstr "Fehler beim Halten des Anrufs"
 msgid "Call waiting"
 msgstr "Anklopfen"
 
-#: ../src/qml/DialerPage/DialerPage.qml:509
+#: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
-#: ../src/qml/LiveCallPage/LiveCall.qml:456
+#: ../src/qml/LiveCallPage/LiveCall.qml:512
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "Rufaufbau"
 
-#: ../src/qml/dialer-app.qml:603
+#: ../src/qml/dialer-app.qml:620
 msgid "Calling Line Presentation"
 msgstr "Rufnummernübermittlung des Anrufers"
 
-#: ../src/qml/dialer-app.qml:615
+#: ../src/qml/dialer-app.qml:632
 msgid "Calling Line Restriction"
 msgstr "Rufnummernunterdrückung des Anrufers"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
-#: ../src/qml/ContactsPage/ContactsPage.qml:145
-#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:38
+#: ../src/qml/ContactsPage/ContactsPage.qml:147
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:45
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:46
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
+#: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
 msgstr "Abbrechen"
+
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
+msgid "Change"
+msgstr "Ändern"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -222,7 +239,11 @@ msgstr "Abbrechen"
 msgid "Change all Call associations to %1?"
 msgstr "Alle Rufzuordnungen zu %1 ändern?"
 
-#: ../src/qml/DialerPage/DialerPage.qml:78
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
+msgid "Characters to remove"
+msgstr "Zeichen zum Entfernen"
+
+#: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "Schließen"
@@ -232,20 +253,20 @@ msgstr "Schließen"
 msgid "Conference"
 msgstr "Konferenz"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:131
+#: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Conference call failure"
 msgstr "Konferenzanruf fehlgeschlagen"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:626
 msgid "Connected Line Presentation"
 msgstr "Rufnummernanzeige des Angerufenen"
 
-#: ../src/qml/dialer-app.qml:621
+#: ../src/qml/dialer-app.qml:638
 msgid "Connected Line Restriction"
 msgstr "Rufnummernunterdrückung des Angerufenen"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:66
-#: ../src/qml/HistoryPage/HistoryPage.qml:369
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
+#: ../src/qml/HistoryPage/HistoryPage.qml:378
 msgid "Contact Details"
 msgstr "Kontaktdetails"
 
@@ -253,8 +274,8 @@ msgstr "Kontaktdetails"
 msgid "Contact not associated with any phone number."
 msgstr "Kontakt ist mit keiner Telefonnummer verknüpft."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:77
-#: ../src/qml/DialerPage/DialerPage.qml:59
+#: ../src/qml/ContactsPage/ContactsPage.qml:79
+#: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "Contacts"
 msgstr "Kontakte"
 
@@ -270,17 +291,29 @@ msgstr "Konnte zu diesem Kontakt nicht weiterleiten"
 msgid "DEF"
 msgstr "DEF"
 
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:86
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:253
-#: ../src/qml/HistoryPage/HistoryPage.qml:341
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
+msgid "Default area code"
+msgstr "Standard-Ortsvorwahl"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
+msgid "Default country code"
+msgstr "Standard-Ländervorwahl"
+
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
+#: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Delete"
 msgstr "Löschen"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:350
+#: ../src/qml/HistoryPage/HistoryPage.qml:359
 msgid "Details"
 msgstr "Details"
 
-#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:47
+#: ../src/qml/SettingsPage/SettingsPage.qml:113
+msgid "Dialpad tones"
+msgstr "Tastentöne"
+
+#: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
 msgstr "Deaktivieren"
 
@@ -294,7 +327,7 @@ msgstr "Flugzeugmodus ausschalten"
 msgid "Dismiss"
 msgstr "Ablehnen"
 
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:67
+#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:64
 msgid "Don't ask again"
 msgstr "Nicht erneut fragen"
 
@@ -302,41 +335,61 @@ msgstr "Nicht erneut fragen"
 msgid "Edit"
 msgstr "Bearbeiten"
 
-#: ../src/qml/DialerPage/DialerPage.qml:132
-#: ../src/qml/DialerPage/DialerPage.qml:142
+#: ../src/qml/DialerPage/DialerPage.qml:147
+#: ../src/qml/DialerPage/DialerPage.qml:157
 msgid "Emergency Calls"
 msgstr "Notrufe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:467
+#: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "Emergency call"
 msgstr "Notruf"
 
-#: ../src/qml/DialerPage/DialerPage.qml:303
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
+msgid "Enter a country code"
+msgstr "Einen Ländercode eingeben"
+
+#: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
 msgstr "Geben Sie eine Nummer ein"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
+msgid "Enter a prefix"
+msgstr "Eine Vorwahl eingeben"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
+msgid "Enter an area code"
+msgstr "Eine Ortsvorwahl eingeben"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
+msgid "Enter the characters to remove"
+msgstr "Zeichen zum Entfernen eingeben"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
 msgstr "Fehler"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:161
+#: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
 msgstr "Aktivierung des Anrufs fehlgeschlagen."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:132
+#: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Failed to create a conference call."
 msgstr "Erstellen einer Telefonkonferenz fehlgeschlagen."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:162
+#: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
 msgstr "Halten des Anrufs fehlgeschlagen."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:95
+#: ../src/qml/DialerPage/DialerPage.qml:59
+msgid "Favorite Contacts"
+msgstr "Kontakt-Favoriten"
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: ../src/qml/DialerPage/DialerPage.qml:137
+#: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr "Flugzeugmodus"
@@ -376,12 +429,12 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:330
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:335
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "Eingehend"
 
-#: ../src/qml/DialerPage/DialerPage.qml:129
+#: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
 msgstr "Initialisieren..."
 
@@ -414,12 +467,12 @@ msgstr ""
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:573
+#: ../src/qml/LiveCallPage/LiveCall.qml:629
 msgid "Merge calls"
 msgstr "Anrufe zusammenführen"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:328
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:333
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
 msgstr "Entgangen"
@@ -433,26 +486,29 @@ msgid "My phone is unreachable"
 msgstr "Mein Telefon ist nicht erreichbar"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:40
 msgid "No"
 msgstr "Nein"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
 msgstr "Keine SIM-Karte ausgewählt"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:122
+#: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "No calls"
 msgstr "Keine Anrufe"
 
-#: ../src/qml/DialerPage/DialerPage.qml:151 ../src/qml/dialer-app.qml:374
-#: ../src/qml/dialer-app.qml:379
+#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
+#: ../src/qml/dialer-app.qml:394
 msgid "No network"
 msgstr "Kein Netz"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:245
+#: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
 msgstr "Keine kürzlichen Anrufe"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
+msgid "Number rewrite"
+msgstr "Nummer wiederholen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
@@ -462,6 +518,7 @@ msgstr "Nummern"
 msgid "OK"
 msgstr "OK"
 
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
 msgstr "Aus"
@@ -470,12 +527,16 @@ msgstr "Aus"
 msgid "Ok"
 msgstr "Ok"
 
+#: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
+msgid "On"
+msgstr "Ein"
+
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
 msgstr "Wartend"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:332
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:337
 msgid "Outgoing"
 msgstr "Ausgehend"
 
@@ -483,9 +544,7 @@ msgstr "Ausgehend"
 msgid "PQRS"
 msgstr "PQRS"
 
-#: ../src/qml/DialerPage/DialerPage.qml:149
-#: ../src/qml/SettingsPage/SettingsPage.qml:29
-#: ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:164 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr "Telefon"
 
@@ -493,7 +552,7 @@ msgstr "Telefon"
 msgid "Phone App"
 msgstr "Telefonanwendung"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:345
+#: ../src/qml/LiveCallPage/LiveCall.qml:393
 msgid "Phone Speaker"
 msgstr "Lautsprecher"
 
@@ -504,6 +563,10 @@ msgstr "Telefonanwendung"
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr "Telefon;Wähler;Wählen;Anruf;Tastatur"
+
+#: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
+msgid "Pick an account to create."
+msgstr "Zum anlegen wähle ein Konto aus."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -517,12 +580,16 @@ msgid ""
 msgstr ""
 "Bitte entsperren Sie Ihre SIM-Karte, um einen Anruf zu tätigen oder eine "
 "Nachricht zu senden. Sie können Ihre SIM-Karte von der Netzwerkanzeige am "
-"oberen Bildschirmrand oder durch Öffnen von <a href=\"system_settings\">"
-"Systemeinstellungen &gt; Sicherheit &amp; Datenschutz</a> entsperren."
+"oberen Bildschirmrand oder durch Öffnen von <a href=\"system_settings"
+"\">Systemeinstellungen &gt; Sicherheit &amp; Datenschutz</a> entsperren."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
 msgstr "Bitte warten"
+
+#: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
+msgid "Prefix"
+msgstr "Prefix"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -533,7 +600,7 @@ msgstr "Privat"
 msgid "Private number"
 msgstr "Private Nummer"
 
-#: ../src/qml/DialerPage/DialerPage.qml:522
+#: ../src/qml/DialerPage/DialerPage.qml:569
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "Kürzlich"
@@ -550,7 +617,7 @@ msgstr "SIM"
 msgid "SIM Card is locked"
 msgstr "SIM-Karte ist gesperrt"
 
-#: ../src/qml/DialerPage/DialerPage.qml:140
+#: ../src/qml/DialerPage/DialerPage.qml:155
 msgid "SIM Locked"
 msgstr "SIM gesperrt"
 
@@ -558,11 +625,11 @@ msgstr "SIM gesperrt"
 msgid "Save"
 msgstr "Speichern"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:119
+#: ../src/qml/ContactsPage/ContactsPage.qml:121
 msgid "Search"
 msgstr "Suche"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:67
+#: ../src/qml/ContactsPage/ContactsPage.qml:69
 msgid "Search..."
 msgstr "Suchen..."
 
@@ -578,7 +645,7 @@ msgstr ""
 "Eine SIM als Vorgabe für ausgehende Anrufe wählen. Sie können jederzeit in "
 "den <a href=\"system_settings\">Systemeinstellungen</a> Ihre Auswahl ändern."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:360
+#: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Send message"
 msgstr "Nachricht senden"
 
@@ -591,12 +658,13 @@ msgstr "Dienste"
 msgid "Set"
 msgstr "Einstellen"
 
-#: ../src/qml/DialerPage/DialerPage.qml:64
+#: ../src/qml/DialerPage/DialerPage.qml:70
+#: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
 msgstr "Einstellungen"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:78
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
 msgstr "Teilen"
 
@@ -612,11 +680,11 @@ msgstr "Wischen zum Löschen"
 msgid "Swipe to reveal actions"
 msgstr "Wischen um Aktionen zu zeigen"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:177
+#: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
 msgstr "Tonquelle wechseln:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:558
+#: ../src/qml/LiveCallPage/LiveCall.qml:614
 msgid "Switch calls"
 msgstr "Anrufe wechseln"
 
@@ -628,16 +696,16 @@ msgstr "Zur Standard-SIM wechseln:"
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:380
+#: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "Es ist zurzeit kein Netz auf %1 verfügbar"
 
-#: ../src/qml/dialer-app.qml:374 ../src/qml/dialer-app.qml:381
+#: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
 msgstr "Es ist zurzeit kein Netz verfügbar."
 
-#: ../src/qml/DialerPage/DialerPage.qml:467
+#: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
 msgstr "Das ist keine Notrufnummer."
 
@@ -646,11 +714,11 @@ msgstr "Das ist keine Notrufnummer."
 msgid "Today"
 msgstr "Heute"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:343
+#: ../src/qml/LiveCallPage/LiveCall.qml:391
 msgid "Ubuntu Phone"
 msgstr "Ubuntu-Telefon"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:347
+#: ../src/qml/LiveCallPage/LiveCall.qml:395
 msgid "Unknown device"
 msgstr "Unbekanntes Gerät"
 
@@ -668,10 +736,6 @@ msgstr "Sprachnachricht"
 msgid "WXYZ"
 msgstr "WXYZ"
 
-#: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:50
-msgid "Yes"
-msgstr "Ja"
-
 #: ../src/qml/HistoryPage/dateUtils.js:47
 #: ../src/qml/SettingsPage/dateUtils.js:43
 msgid "Yesterday"
@@ -681,7 +745,7 @@ msgstr "Gestern"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "Sie müssen den Flugmodus deaktivieren, um Anrufe zu tätigen"
 
-#: ../src/qml/dialer-app.qml:355
+#: ../src/qml/dialer-app.qml:370
 msgid "You need to select a SIM card"
 msgstr "Sie müssen eine SIM-Karte auswählen"
 
@@ -694,6 +758,9 @@ msgstr "hh:mm:ss"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "mm:ss"
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
 
 #~ msgid "Flight mode"
 #~ msgstr "Flugmodus"
