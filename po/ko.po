@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2014-07-16 05:18+0000\n"
-"Last-Translator: Bundo <bundo@bundo.biz>\n"
-"Language-Team: Korean <ko@li.org>\n"
+"PO-Revision-Date: 2020-07-31 22:11+0000\n"
+"Last-Translator: Young Kim <rsyh93@gmail.com>\n"
+"Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ko/>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -48,7 +49,7 @@ msgstr ""
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "%1시간"
+msgstr[0] "%1 시간"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -152,9 +153,8 @@ msgid "Bluetooth device"
 msgstr "블루투스 장치"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "통화 중"
+msgstr "전화"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -231,7 +231,7 @@ msgstr "취소"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "바꾸기"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -488,7 +488,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
-msgstr "아니요"
+msgstr "아니오"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
@@ -517,7 +517,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "확인"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -647,7 +647,7 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Send message"
-msgstr "메시지 보내기"
+msgstr "메시지 전송"
 
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
