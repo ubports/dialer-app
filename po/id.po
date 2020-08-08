@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2018-12-26 10:50+0000\n"
-"Last-Translator: Dito Kurnia P <ditokpl@gmail.com>\n"
+"PO-Revision-Date: 2020-08-08 18:44+0000\n"
+"Last-Translator: satriocode <satrioismail52@gmail.com>\n"
 "Language-Team: Indonesian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/id/>\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.1.1\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -335,7 +335,7 @@ msgstr "Jangan tanya lagi"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Sunting"
+msgstr "Ubah"
 
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
@@ -490,7 +490,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
-msgstr "Tidak"
+msgstr "Batal"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
@@ -528,7 +528,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Oke"
+msgstr "Baik"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
@@ -670,7 +670,7 @@ msgstr "Pengaturan"
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
-msgstr "Bagikan"
+msgstr "Berbagi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 #, fuzzy
