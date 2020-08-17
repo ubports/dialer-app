@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-07 12:16+0000\n"
-"Last-Translator: Mike <miguel2000@livecom.it>\n"
+"PO-Revision-Date: 2020-08-17 23:13+0000\n"
+"Last-Translator: Irio Bartolomei <irio92@gmail.com>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/it/>\n"
 "Language: it\n"
@@ -134,7 +134,7 @@ msgstr "Attiva"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "Aggiungi un account online"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -241,7 +241,7 @@ msgstr "Cambiare tutte le associazioni di chiamata a %1?"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "Caratteri da rimuovere"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -293,7 +293,7 @@ msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "Prefisso predefinito"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
@@ -311,7 +311,7 @@ msgstr "Dettagli"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "Toni tastiera"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -364,7 +364,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Inserire i caratteri da rimuovere"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -383,7 +383,6 @@ msgid "Failed to place the active call on hold."
 msgstr "Impossibile mettere in attesa la chiamata attiva."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
 msgstr "Preferiti"
 
