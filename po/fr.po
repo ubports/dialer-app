@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-17 15:28+0000\n"
+"PO-Revision-Date: 2020-08-31 10:00+0000\n"
 "Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/"
 "dialer-app/fr/>\n"
@@ -156,7 +156,7 @@ msgstr "Périphérique Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Appel"
+msgstr "Appeler"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
