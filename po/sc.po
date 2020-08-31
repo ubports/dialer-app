@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-17 13:48+0000\n"
+"PO-Revision-Date: 2020-08-31 10:00+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sc/>\n"
@@ -569,7 +569,7 @@ msgstr "Sèbera unu contu de creare."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Seletziona unu nùmeru de telèfonu"
+msgstr "Sèbera unu nùmeru de telèfonu"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
