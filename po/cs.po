@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-06-30 21:40+0000\n"
+"PO-Revision-Date: 2020-08-31 13:14+0000\n"
 "Last-Translator: Milan Korecký <milan.korecky@gmail.com>\n"
 "Language-Team: Czech <https://translate.ubports.com/projects/ubports/"
 "dialer-app/cs/>\n"
@@ -519,7 +519,7 @@ msgstr "Čísla"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "OK"
+msgstr "Přijmout"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -528,7 +528,7 @@ msgstr "Vypnuto"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "OK"
+msgstr "Přijmout"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
@@ -573,7 +573,7 @@ msgstr "Vyberte účet, který chcete vytvořit."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Vyberte telefonní číslo"
+msgstr "Zvolte telefonní číslo"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
