@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-04 19:26+0000\n"
+"PO-Revision-Date: 2020-09-04 21:20+0000\n"
 "Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "dialer-app/he/>\n"
@@ -276,7 +276,7 @@ msgstr "פרטי איש קשר"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "איש קשר לא משויך למספר טלפון כלשהו."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -290,7 +290,7 @@ msgstr "אנשי קשר"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "לא ניתן היה להעביר לאיש קשר זה"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -357,7 +357,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "נא להזין מספר"
+msgstr "הזן מספר"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
 #, fuzzy
@@ -400,15 +400,15 @@ msgstr "מועדפים"
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "מצב טיסה"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "העבר כל שיחה נכנסת"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "העבר שיחות נכנסות כאשר:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
@@ -576,7 +576,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "אנא בחר מספר טלפון"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -609,7 +609,7 @@ msgstr "אחרונים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "מפנה את כל שיחות הטלפון למספר אחר."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -625,7 +625,7 @@ msgstr "ה־SIM נעול"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "שמור"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:121
 msgid "Search"
@@ -670,9 +670,8 @@ msgid "Share"
 msgstr "שיתוף"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "אין שיחות"
+msgstr "שיחות מסויימיות"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
