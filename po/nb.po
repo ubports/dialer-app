@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-08-09 07:30+0000\n"
+"PO-Revision-Date: 2020-09-05 14:38+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
 "ubports/dialer-app/nb/>\n"
@@ -232,7 +232,6 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
-#, fuzzy
 msgid "Change"
 msgstr "Endre"
 
@@ -516,6 +515,7 @@ msgid "Number rewrite"
 msgstr "Nummeromskriving"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
+#, fuzzy
 msgid "Numbers"
 msgstr "Nummer"
 
