@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-05 20:02+0000\n"
+"PO-Revision-Date: 2020-09-05 20:55+0000\n"
 "Last-Translator: Rüdiger Kupper <ruediger.kupper+launchpad@gmail.com>\n"
 "Language-Team: German <https://translate.ubports.com/projects/ubports/"
 "dialer-app/de/>\n"
@@ -678,7 +678,7 @@ msgstr "Wischen zum Löschen"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Wischen um Aktionen zu zeigen"
+msgstr "Wischen, um Aktionen zu zeigen"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
@@ -703,7 +703,7 @@ msgstr "Es ist zurzeit kein Netz auf %1 verfügbar"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "Es ist zurzeit kein Netz verfügbar."
+msgstr "Zurzeit gibt es kein Netz."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
