@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-08-31 10:00+0000\n"
+"PO-Revision-Date: 2020-09-18 15:59+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sc/>\n"
@@ -284,7 +284,7 @@ msgstr "Cuntatos..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr "Non s'est pòdidu deviare a custu cuntatu"
+msgstr "Impossìbile deviare a custu cuntatu"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -370,7 +370,7 @@ msgstr "Faddina"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
-msgstr "No s'est pòdidu ativare sa mutida."
+msgstr "Faddina in s'ativatzione de sa mutida."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Failed to create a conference call."
@@ -378,7 +378,7 @@ msgstr "Faddina in sa creatzione de una cunferèntzia."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
-msgstr "No s'est pòdidu pònnere sa mutida in ispera."
+msgstr "Impossìbile pònnere sa mutida in ispera."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
 msgid "Favorite Contacts"
