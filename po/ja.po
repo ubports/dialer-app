@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-08-08 15:57+0000\n"
+"PO-Revision-Date: 2020-09-26 12:50+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ja/>\n"
@@ -35,14 +35,14 @@ msgstr "%1 - 保留中"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 番号変更"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "キャリア %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -131,7 +131,7 @@ msgstr "アクティブ"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "オンラインアカウントを追加"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -144,18 +144,16 @@ msgid "All"
 msgstr "すべて"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "通話なし"
+msgstr "すべての通話"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "Bluetooth デバイス"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "呼出中"
+msgstr "発信"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -181,13 +179,12 @@ msgstr "通話失敗"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "着信転送"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "着信転送は現在変更できません。"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
@@ -202,9 +199,8 @@ msgstr "通話の保留に失敗しました"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "通話中着信"
+msgstr "キャッチホン"
 
 #: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -232,7 +228,7 @@ msgstr "キャンセル"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "変更"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
