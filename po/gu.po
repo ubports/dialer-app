@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-02 10:05+0000\n"
+"PO-Revision-Date: 2020-10-02 10:11+0000\n"
 "Last-Translator: Aashrut <Aashrut99@gmail.com>\n"
 "Language-Team: Gujarati <https://translate.ubports.com/projects/ubports/"
 "dialer-app/gu/>\n"
@@ -64,90 +64,90 @@ msgstr[1] "%1 મિનિટ"
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 સેકંડ"
+msgstr[1] "%1 સેકંડ"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:150
 #, qt-format
 msgid "(%1)"
-msgstr ""
+msgstr "(%1)"
 
 #: ../src/qml/DialerPage/Keypad.qml:206
 msgid "*"
-msgstr ""
+msgstr "*"
 
 #: ../src/qml/DialerPage/DialerBottomEdge.qml:26
 #: ../src/qml/DialerPage/Keypad.qml:223
 msgid "+"
-msgstr ""
+msgstr "+"
 
 #: ../src/qml/DialerPage/Keypad.qml:222
 msgid "0"
-msgstr ""
+msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:51
 msgid "1"
-msgstr ""
+msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:68
 msgid "2"
-msgstr ""
+msgstr "2"
 
 #: ../src/qml/DialerPage/Keypad.qml:85
 msgid "3"
-msgstr ""
+msgstr "3"
 
 #: ../src/qml/DialerPage/Keypad.qml:102
 msgid "4"
-msgstr ""
+msgstr "4"
 
 #: ../src/qml/DialerPage/Keypad.qml:119
 msgid "5"
-msgstr ""
+msgstr "5"
 
 #: ../src/qml/DialerPage/Keypad.qml:136
 msgid "6"
-msgstr ""
+msgstr "6"
 
 #: ../src/qml/DialerPage/Keypad.qml:153
 msgid "7"
-msgstr ""
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:170
 msgid "8"
-msgstr ""
+msgstr "8"
 
 #: ../src/qml/DialerPage/Keypad.qml:187
 msgid "9"
-msgstr ""
+msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:69
 msgid "ABC"
-msgstr ""
+msgstr "અબક"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "સક્રિય"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "ઓનલાઇન એકાઉન્ટ ઉમેરો"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "બધું"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "બધા"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
 msgid "All calls"
-msgstr ""
+msgstr "બધા સંપર્કો"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
