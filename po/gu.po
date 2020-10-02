@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-02 10:11+0000\n"
+"PO-Revision-Date: 2020-10-02 11:10+0000\n"
 "Last-Translator: Aashrut <Aashrut99@gmail.com>\n"
 "Language-Team: Gujarati <https://translate.ubports.com/projects/ubports/"
 "dialer-app/gu/>\n"
@@ -151,11 +151,11 @@ msgstr "બધા સંપર્કો"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
-msgstr ""
+msgstr "બ્લૂટૂથ ડિવાઇસ"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr ""
+msgstr "કોલ કરો"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
