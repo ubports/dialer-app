@@ -112,7 +112,7 @@ Page {
                 }
                 text: i18n.tr("Dialpad tones")
             }
-
+/*   commented for now as not fully implemented
             ListItem.Standard {
                 id: addAccount
                 anchors {
@@ -124,7 +124,7 @@ Page {
                 onClicked: onlineAccountHelper.item.run()
                 enabled: (onlineAccountHelper.status === Loader.Ready) && (onlineAccountHelper.item.count > 0)
             }
-
+*/
             Repeater {
                 model: telepathyHelper.voiceAccounts.all
 
