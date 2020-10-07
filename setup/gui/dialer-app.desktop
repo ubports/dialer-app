@@ -236,6 +236,7 @@ Terminal=false
 Icon=${SNAP}/usr/share/dialer-app/assets/dialer-app.png
 MimeType=x-scheme-handler/contact;x-scheme-handler/call
 X-Ubuntu-Touch=true
+X-Ubuntu-Supported-Orientations=portrait
 X-Ubuntu-StageHint=SideStage
 X-Ubuntu-Single-Instance=true
 X-Ubuntu-Default-Department-ID=accessories
