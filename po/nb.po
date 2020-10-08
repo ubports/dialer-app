@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-05 14:38+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-10-08 20:16+0000\n"
+"Last-Translator: Ari Börde Kröyer <ari.kroyer@online.no>\n"
 "Language-Team: Norwegian Bokmål <https://translate.ubports.com/projects/"
 "ubports/dialer-app/nb/>\n"
 "Language: nb\n"
@@ -164,11 +164,11 @@ msgstr "Anropsbegrensning"
 
 #: ../src/qml/dialer-app.qml:598
 msgid "Call Forwarding"
-msgstr "Videresending av anrop"
+msgstr "Viderekobling av anrop"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
-msgstr "Anropsventing"
+msgstr "Anrop venter"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:169
 msgid "Call ended"
@@ -182,9 +182,8 @@ msgstr "Anrop mislyktes"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Videresending av anrop"
+msgstr "Viderekobling av anrop"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
@@ -203,9 +202,8 @@ msgstr "Samtale venter-feil"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Anropsventing"
+msgstr "Anrop venter"
 
 #: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
@@ -274,7 +272,7 @@ msgstr "Kontaktdetaljer"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Kontakt mangler tilknyttet telefonnummer"
+msgstr "Kontakt mangler telefonnummer."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -282,9 +280,8 @@ msgid "Contacts"
 msgstr "Kontakter"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontakter"
+msgstr "Kontakter..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -344,7 +341,6 @@ msgid "Emergency Calls"
 msgstr "Nødanrop"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
 msgstr "Nødanrop"
 
@@ -487,7 +483,7 @@ msgstr "Mobil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr "Telefonen min ikke kan nås"
+msgstr "Min telefon kan ikke nås"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -515,7 +511,6 @@ msgid "Number rewrite"
 msgstr "Nummeromskriving"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
-#, fuzzy
 msgid "Numbers"
 msgstr "Nummer"
 
@@ -660,7 +655,6 @@ msgid "Services"
 msgstr "Tjenester"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
 msgstr "Velg"
 
