@@ -112,9 +112,10 @@ Page {
                 }
                 text: i18n.tr("Dialpad tones")
             }
-/*   commented for now as not fully implemented
+
             ListItem.Standard {
                 id: addAccount
+                visible: false // TODO: Finish enablement of SIP Online Account first
                 anchors {
                     left: parent.left
                     right: parent.right
@@ -124,7 +125,7 @@ Page {
                 onClicked: onlineAccountHelper.item.run()
                 enabled: (onlineAccountHelper.status === Loader.Ready) && (onlineAccountHelper.item.count > 0)
             }
-*/
+
             Repeater {
                 model: telepathyHelper.voiceAccounts.all
 
