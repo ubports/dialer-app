@@ -29,7 +29,7 @@ MainView {
 
     objectName: "mainView"
 
-    property bool applicationActive: Qt.application.active
+    property bool applicationActive: Qt.application.state === Qt.ApplicationActive
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     property alias multiplePhoneAccounts: accountsModel.multipleAccounts
