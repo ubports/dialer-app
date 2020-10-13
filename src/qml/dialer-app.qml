@@ -41,6 +41,7 @@ MainView {
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
     property var bottomEdge: null
+    property var incomingCall: null
 
     automaticOrientation: false
     implicitWidth: units.gu(40)
@@ -99,6 +100,14 @@ MainView {
                 callManager.startCall(dialPrefix, mainView.account.accountId);
             }
             pendingNumberToDial = "";
+
+        }
+
+        onChannelObserverCreated: {
+            if (incomingCall) {
+                switchToLiveCall(incomingCall.initialStatus, incomingCall.initialNumber)
+                incomingCall = null
+            }
         }
     }
 
@@ -473,6 +482,12 @@ MainView {
     }
 
     function switchToLiveCall(initialStatus, initialNumber) {
+        //postpone this function call until application is ready
+        if (!applicationActive) {
+            incomingCall = {initialStatus: initialStatus, initialNumber: initialNumber }
+            return
+        }
+
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             pageStackNormalMode.pop();
