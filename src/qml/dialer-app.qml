@@ -29,7 +29,7 @@ MainView {
 
     objectName: "mainView"
 
-    property bool applicationActive: Qt.application.active
+    property bool applicationActive: Qt.application.state === Qt.ApplicationActive
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     property alias multiplePhoneAccounts: accountsModel.multipleAccounts
@@ -41,6 +41,7 @@ MainView {
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
     property var bottomEdge: null
+    property var incomingCall: null
 
     automaticOrientation: false
     implicitWidth: units.gu(40)
@@ -63,9 +64,11 @@ MainView {
 
     onApplicationActiveChanged: {
         if (applicationActive) {
+            console.log("ok there registerChannelObserver")
             telepathyHelper.registerChannelObserver()
 
             if (!callManager.hasCalls) {
+                console.log("!callManager.hasCalls")
                 // if on contacts page in a live call and no calls are found, pop it out
                 if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
                     pageStackNormalMode.pop();
@@ -80,13 +83,16 @@ MainView {
                 }
             }
         } else {
+            console.log("ok there unregisterChannelObserver")
             telepathyHelper.unregisterChannelObserver()
         }
     }
 
+
     Connections {
         target: telepathyHelper
         onSetupReady: {
+            console.log("ok there onSetupReady")
             telepathyReady = true
             accountReady = true;
             mainView.applicationReady()
@@ -105,6 +111,14 @@ MainView {
                 callManager.startCall(dialPrefix, mainView.account.accountId);
             }
             pendingNumberToDial = "";
+
+        }
+
+        onChannelObserverCreated: {
+            if (incomingCall) {
+                switchToLiveCall(incomingCall.initialStatus, incomingCall.initialNumber)
+                incomingCall = null
+            }
         }
     }
 
@@ -420,11 +434,13 @@ MainView {
 
         if (account && account.connected) {
             generalSettings.lastCalledPhoneNumber = number
+            console.log("callManager.startCall:", dialPrefix, account.accountId)
             callManager.startCall(dialPrefix, account.accountId);
         }
     }
 
     function startCall(number) {
+        console.log("startCall, accountReady:", accountReady)
         if (accountReady) {
             call(number)
         } else {
@@ -488,6 +504,15 @@ MainView {
     }
 
     function switchToLiveCall(initialStatus, initialNumber) {
+        console.trace()
+        console.log("switchToLiveCall:", initialStatus, initialNumber)
+        //postpone this function call until application is ready
+        if (!applicationActive) {
+            console.log("application not ready, postpone switch to live call")
+            incomingCall = {initialStatus: initialStatus, initialNumber: initialNumber }
+            return
+        }
+
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             pageStackNormalMode.pop();
