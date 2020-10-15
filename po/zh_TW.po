@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-15 04:07+0000\n"
+"PO-Revision-Date: 2020-10-15 10:02+0000\n"
 "Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -152,9 +152,8 @@ msgid "Bluetooth device"
 msgstr "藍牙裝置"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "正在通話"
+msgstr "撥號"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -180,17 +179,16 @@ msgstr "無法通話"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "通話轉接"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "目前無法變更通話轉接設定。"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "無法檢查通話轉接狀態 "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -241,7 +239,7 @@ msgstr "是否要將所有通話轉用 %1？"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "要移除的字元"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -272,7 +270,7 @@ msgstr "聯絡人詳情"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "聯絡人沒有與任何電話號碼有關聯。"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -280,13 +278,12 @@ msgid "Contacts"
 msgstr "聯絡人"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "聯絡人"
+msgstr "聯絡人..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "無法轉接到此聯絡人"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -294,11 +291,11 @@ msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "預設區碼"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "預設國碼"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -312,7 +309,7 @@ msgstr "詳情"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "撥號聲"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -342,13 +339,12 @@ msgid "Emergency Calls"
 msgstr "緊急求救電話"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
 msgstr "緊急求救電話"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "輸入國碼"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -362,11 +358,11 @@ msgstr "輸入號碼"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "輸入區碼"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "輸入要移除的字元"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -385,9 +381,8 @@ msgid "Failed to place the active call on hold."
 msgstr "無法將通話中的電話轉為保留。"
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "常用"
+msgstr "常用聯絡人"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
@@ -400,17 +395,17 @@ msgstr "飛航模式"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "轉接所有來電"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "轉接來電，當："
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "轉接至"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -422,7 +417,7 @@ msgstr "我瞭解了"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "我不接電話"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
@@ -502,7 +497,7 @@ msgstr "沒有通話"
 #: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
 #: ../src/qml/dialer-app.qml:394
 msgid "No network"
-msgstr "沒有網路"
+msgstr "沒有行動網路"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
@@ -701,11 +696,11 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "%1 目前沒有網路"
+msgstr "%1 目前沒有行動網路"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "目前沒有網路。"
+msgstr "目前沒有行動網路。"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
