@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-09 18:20+0000\n"
-"Last-Translator: Anne Onyme <anneonyme017@netcourrier.com>\n"
+"PO-Revision-Date: 2020-10-15 13:12+0000\n"
+"Last-Translator: Lionel Duboeuf <lduboeuf@ouvaton.org>\n"
 "Language-Team: French <https://translate.ubports.com/projects/ubports/"
 "dialer-app/fr/>\n"
 "Language: fr\n"
@@ -289,7 +289,7 @@ msgstr "Impossible de transférer vers ce contact"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
-msgstr "IRD"
+msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
