@@ -41,7 +41,7 @@ MainView {
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
     property var bottomEdge: null
-    property var incomingCall: null
+    property var pendingLiveCall: null
 
     automaticOrientation: false
     implicitWidth: units.gu(40)
@@ -107,14 +107,12 @@ MainView {
             }
             pendingNumberToDial = "";
 
-        }
-
-        onChannelObserverCreated: {
-            if (incomingCall) {
-                switchToLiveCall(incomingCall.initialStatus, incomingCall.initialNumber)
-                incomingCall = null
+            if (pendingLiveCall) {
+                switchToLiveCall(pendingLiveCall.initialStatus, pendingLiveCall.initialNumber)
+                pendingLiveCall = null
             }
         }
+
     }
 
     Connections {
@@ -498,8 +496,8 @@ MainView {
 
     function switchToLiveCall(initialStatus, initialNumber) {
         //postpone this function call until application is ready
-        if (!applicationActive) {
-            incomingCall = {initialStatus: initialStatus, initialNumber: initialNumber }
+        if (!telepathyReady) {
+            pendingLiveCall = {initialStatus: initialStatus, initialNumber: initialNumber }
             return
         }
 
