@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-15 10:56+0000\n"
+"PO-Revision-Date: 2020-10-16 09:10+0000\n"
 "Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -509,7 +509,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "號碼"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -563,7 +563,7 @@ msgstr "手機;撥號程序;撥號;通話;鍵盤"
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "選擇要建立的帳戶。"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -584,7 +584,7 @@ msgstr "請稍候"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "前綴碼"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
