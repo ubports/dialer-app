@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-31 22:11+0000\n"
+"PO-Revision-Date: 2020-08-04 23:58+0000\n"
 "Last-Translator: Young Kim <rsyh93@gmail.com>\n"
 "Language-Team: Korean <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ko/>\n"
@@ -353,7 +353,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr ""
+msgstr "번호를 입력하세요"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
 msgid "Enter a prefix"

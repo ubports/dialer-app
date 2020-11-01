@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-11 21:01+0000\n"
+"PO-Revision-Date: 2020-10-27 14:16+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports/"
 "dialer-app/pt/>\n"
@@ -156,7 +156,7 @@ msgstr "Dispositivo bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Chamada"
+msgstr "Chamar"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -231,7 +231,7 @@ msgstr "Cancelar"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr "Alterar"
+msgstr "Modificar"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -570,7 +570,7 @@ msgstr "Escolha uma conta para criar."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Por favor escolha um número de telefone"
+msgstr "Por favor, selecione um número de telefone"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""

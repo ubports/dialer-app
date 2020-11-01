@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-08-01 17:36+0000\n"
+"PO-Revision-Date: 2020-09-20 01:00+0000\n"
 "Last-Translator: Samson <sambelet@yahoo.com>\n"
 "Language-Team: Amharic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/am/>\n"
@@ -294,11 +294,11 @@ msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "ነባር የ አካባቢ ኮድ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "ነባር የ አገር ኮድ"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -348,7 +348,7 @@ msgstr "የ ድንገተኛ ጥሪዎች"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "የ አገር ኮድ ማስገቢያ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171

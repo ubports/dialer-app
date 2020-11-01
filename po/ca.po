@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-07-03 03:23+0000\n"
+"PO-Revision-Date: 2020-10-26 23:24+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ca/>\n"
@@ -516,7 +516,7 @@ msgstr "Números"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "D'acord"
+msgstr "d'acord"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -570,7 +570,7 @@ msgstr "Trieu un compte per crear."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Si us plau trieu un número de telèfon"
+msgstr "Seleccioneu un número de telèfon"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""

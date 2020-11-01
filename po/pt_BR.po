@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-08-01 01:22+0000\n"
+"PO-Revision-Date: 2020-08-02 19:22+0000\n"
 "Last-Translator: ffsi <fabioihle@hotmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/pt_BR/>\n"
@@ -35,7 +35,7 @@ msgstr "%1 - em espera"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 Editar número"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
@@ -134,7 +134,7 @@ msgstr "Ativo"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "Adicionar uma conta online"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -341,9 +341,8 @@ msgid "Emergency Calls"
 msgstr "Chamadas de emergência"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
-msgstr "Chamadas de emergência"
+msgstr "Chamada de emergência"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
@@ -364,7 +363,7 @@ msgstr "Insira um código de área"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Insira os caracteres para remoção"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -397,7 +396,7 @@ msgstr "Modo avião"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr " Encaminhar todas as chamadas recebidas"
+msgstr "Encaminhar todas as chamadas recebidas"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
@@ -419,7 +418,7 @@ msgstr "Entendi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Eu não respondo"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"

@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2019-10-07 12:53+0000\n"
-"Last-Translator: Eran <etherpulse@gmail.com>\n"
-"Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/dialer-"
-"app/he/>\n"
+"PO-Revision-Date: 2020-09-06 17:16+0000\n"
+"Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
+"Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
+"dialer-app/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.8\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
@@ -35,14 +35,14 @@ msgstr "%1 - בהמתנה"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "שכתוב מספר %1"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 שירותים"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -134,31 +134,29 @@ msgstr "פעיל"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "הוסף חשבון מקוון"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "את כל"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "הכול"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "אין שיחות"
+msgstr "כל השיחות"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "התקן Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "מתקשר"
+msgstr "להתקשר"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -184,28 +182,26 @@ msgstr "השיחה נכשלה"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "העברת שיחות"
+msgstr "הפניית שיחות"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "לא ניתן לשנות העברת שיחות כרגע."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "לא ניתן לבדוק סטטוס העברת שיחות "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
-msgstr ""
+msgstr "כשל בהמתנה של שיחה"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
 msgstr "שיחה ממתינה"
 
@@ -231,11 +227,11 @@ msgstr "הגבלות קו השיחה"
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr "ביטול"
+msgstr "בטול"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "שינוי"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -245,12 +241,12 @@ msgstr "האם לשנות את כל שיוכי השיחות אל %1?"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "תווים להסרה"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "סגירה"
+msgstr "סגור"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -259,7 +255,7 @@ msgstr "ועידה"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Conference call failure"
-msgstr ""
+msgstr "כישלון בשיחת ועידה"
 
 #: ../src/qml/dialer-app.qml:626
 msgid "Connected Line Presentation"
@@ -276,7 +272,7 @@ msgstr "פרטי איש קשר"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "איש קשר לא משויך למספר טלפון כלשהו."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -284,13 +280,12 @@ msgid "Contacts"
 msgstr "אנשי קשר"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "אנשי קשר"
+msgstr "אנשי קשר..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "לא ניתן היה להעביר לאיש קשר זה"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -298,11 +293,11 @@ msgstr "אבג"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "קידומת אזור ברירת מחדל"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "קוד מדינה ברירת מחדל"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -316,11 +311,11 @@ msgstr "פרטים"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "צלילי לוח המקשים"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
-msgstr ""
+msgstr "השבת"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
@@ -346,31 +341,29 @@ msgid "Emergency Calls"
 msgstr "שיחות חירום"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
-msgstr "שיחות חירום"
+msgstr "שיחת חירום"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "הזן קוד מדינה"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "נא להזין מספר"
+msgstr "הזן מספר"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "נא להזין מספר"
+msgstr "הזן קידומת"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "הזן אזור חיוג"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "הזן את התווים להסרה"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -378,20 +371,19 @@ msgstr "שגיאה"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
-msgstr ""
+msgstr "הפעלת השיחה נכשלה."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Failed to create a conference call."
-msgstr ""
+msgstr "יצירת שיחת ועידה נכשלה."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
-msgstr ""
+msgstr "ההמתנה של השיחה הפעילה נכשלה."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "מועדפים"
+msgstr "אנשי קשר מועדפים"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
@@ -400,21 +392,21 @@ msgstr "מועדפים"
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr ""
+msgstr "מצב טיסה"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "העבר כל שיחה נכנסת"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "העבר שיחות נכנסות כאשר:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "העברה אל"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -426,11 +418,11 @@ msgstr "הבנתי"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "אני לא עונה"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "אני בשיחה אחרת"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -444,7 +436,7 @@ msgstr "נכנסת"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "מאתחל ..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -457,7 +449,7 @@ msgstr "יכךל"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "שיחה אחרונה %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -467,7 +459,7 @@ msgstr "מאוחר יותר"
 msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
-msgstr ""
+msgstr "מאפשר לך לענות או להתחיל שיחה חדשה בזמן שיחה אחרת, ולעבור ביניהם"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -485,11 +477,11 @@ msgstr "לא נענו"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "נייד"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "הטלפון שלי אינו נגיש"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -510,24 +502,24 @@ msgstr "אין רשת"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
-msgstr ""
+msgstr "אין שיחות אחרונות"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "שכתב מספרים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "מספרים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "אישור"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "כבוי"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -535,7 +527,7 @@ msgstr "אישור"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "מופעל"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -572,11 +564,11 @@ msgstr "טלפון;חייגן;חוגה;התקשרות;להתקשר;שיחה;לח
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "בחר חשבון ליצירה."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "אנא בחר מספר טלפון"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -584,6 +576,9 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"אנא בטל את נעילת כרטיס ה- SIM שלך כדי להתקשר או לשלוח הודעה. אתה יכול לבטל "
+"את נעילת כרטיס ה- SIM ממחוון הרשת בחלקו העליון של המסך או על ידי ביקור <a "
+"href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -591,7 +586,7 @@ msgstr "נא להמתין"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "קידומת"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -605,19 +600,19 @@ msgstr "מספר פרטי"
 #: ../src/qml/DialerPage/DialerPage.qml:569
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "אחרונים"
+msgstr "לאחרונה"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "מפנה את כל שיחות הטלפון למספר אחר."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr "כרטיס ה־SIM נעול"
+msgstr "כרטיס ה- SIM נעול"
 
 #: ../src/qml/DialerPage/DialerPage.qml:155
 msgid "SIM Locked"
@@ -625,7 +620,7 @@ msgstr "ה־SIM נעול"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "שמור"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:121
 msgid "Search"
@@ -637,27 +632,28 @@ msgstr "חיפוש…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "בחירה"
+msgstr "בחר"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
+"בחר SIM ברירת מחדל לכל השיחות היוצאות. תמיד תוכל לשנות את בחירתך ב <a href=\""
+"system_settings\">הגדרות מערכת</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Send message"
-msgstr "שליחת הודעה"
+msgstr "שלח הודעה"
 
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "שירותים"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "בחירה"
+msgstr "הגדר"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -670,17 +666,16 @@ msgid "Share"
 msgstr "שיתוף"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "אין שיחות"
+msgstr "שיחות מסויימיות"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "יש להחליק כדי למחוק"
+msgstr "החלק למחיקה"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "יש להחליק כדי לחשוף את הפעולות"
+msgstr "החלק כדי לחשוף פעולות"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
@@ -701,15 +696,15 @@ msgstr "צץק"
 #: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "נכון לעכשיו, אין רשת עם %1"
+msgstr "כרגע אין רשת ב-%1"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "אין רשת נכון לעכשיו."
+msgstr "כרגע אין רשת."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "זה לא מספר חירום."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -745,11 +740,11 @@ msgstr "אתמול"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "עליך להשבית את מצב הטיסה על מנת לבצע שיחות"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "You need to select a SIM card"
-msgstr "עליך לבחור בכרטיס SIM"
+msgstr "עליך לבחור כרטיס SIM"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
