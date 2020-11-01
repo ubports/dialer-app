@@ -115,6 +115,7 @@ Page {
 
             ListItem.Standard {
                 id: addAccount
+                visible: false // TODO: Finish enablement of SIP Online Account first
                 anchors {
                     left: parent.left
                     right: parent.right
