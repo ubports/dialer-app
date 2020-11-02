@@ -60,7 +60,7 @@ MouseArea {
             anchors {
                 horizontalCenter: parent.horizontalCenter
                 verticalCenter: parent.verticalCenter
-                verticalCenterOffset: -units.gu(0.5)
+                verticalCenterOffset: parent.height > units.gu(3.5) ? -units.gu(0.5) : 0
             }
 
             font.pixelSize: units.dp(30)
@@ -78,11 +78,26 @@ MouseArea {
 
             fontSize: "x-small"
             color: theme.palette.normal.backgroundSecondaryText
+            visible: parent.height > units.gu(5)
+        }
+
+        Label {
+            id: verticalSublabelItem
+
+            anchors {
+                right: parent.right
+                verticalCenter: labelItem.verticalCenter
+            }
+
+            text: sublabelItem.text.split("").join("\n")
+            fontSize: parent.height > units.gu(3.5) ? "x-small" : "xx-small"
+            color: theme.palette.normal.backgroundSecondaryText
+            visible: !sublabelItem.visible && parent.height > units.gu(2.5)
         }
 
         Icon {
             id: subImage
-            visible: name != ""
+            visible: name != "" && parent.height > units.gu(5)
             anchors {
                 top: labelItem.bottom
                 horizontalCenter: labelItem.horizontalCenter
