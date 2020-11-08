@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-05 00:01+0000\n"
-"Last-Translator: tamer dab <dabsantamer@yahoo.com>\n"
+"PO-Revision-Date: 2020-11-06 11:55+0000\n"
+"Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
 "Language: ar\n"
@@ -36,14 +36,14 @@ msgstr "%1 - مُعلّقة"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "إعادة كتابة رقم %1"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "خدمات %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -139,7 +139,7 @@ msgstr "٩"
 
 #: ../src/qml/DialerPage/Keypad.qml:69
 msgid "ABC"
-msgstr "ABC"
+msgstr "أبج"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
@@ -147,31 +147,29 @@ msgstr "نشط"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "أضف حسابات الإنترنت"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr ""
+msgstr "الكل"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
 msgid "All"
-msgstr ""
+msgstr "الكل"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "لا مكالمات"
+msgstr "كل المكالمات"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "جهاز بلوتوث"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "اتصال"
+msgstr "اتصل"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -179,7 +177,7 @@ msgstr "حظر المكالمات"
 
 #: ../src/qml/dialer-app.qml:598
 msgid "Call Forwarding"
-msgstr "تحويل المكالمات"
+msgstr "تحويل المكالمة"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
@@ -197,17 +195,16 @@ msgstr "فشلت المكالمة"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "تحويل المكالمات"
+msgstr "تحويل المكالمة"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "تعذر تحويل المكالمة الآن."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "تعذر التحقق من حالة تحويل المكالمة "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -227,7 +224,7 @@ msgstr "انتظار المكالمات"
 #: ../src/qml/LiveCallPage/LiveCall.qml:512
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "اتصال"
+msgstr "يتصل"
 
 #: ../src/qml/dialer-app.qml:620
 msgid "Calling Line Presentation"
@@ -244,11 +241,11 @@ msgstr ""
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr "إلغاء"
+msgstr "ألغ"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "غيِّر"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -321,7 +318,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Delete"
-msgstr "حذف"
+msgstr "احذف"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:359
 msgid "Details"
@@ -333,7 +330,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
-msgstr ""
+msgstr "عطّل"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
@@ -351,7 +348,7 @@ msgstr "لا تسأل مرة أخرى"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "تحرير"
+msgstr "حرر"
 
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
@@ -535,7 +532,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "موافق"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -754,7 +751,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/dateUtils.js:47
 #: ../src/qml/SettingsPage/dateUtils.js:43
 msgid "Yesterday"
-msgstr "في الامس"
+msgstr "أمس"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
