@@ -242,4 +242,3 @@ X-Ubuntu-Single-Instance=true
 X-Ubuntu-Default-Department-ID=accessories
 X-Ubuntu-Splash-Show-Header=true
 X-Screenshot=/snap/dialer-app/current/usr/share/dialer-app/assets/dialer-app-screenshot.png
-X-Ubuntu-Supported-Orientations=portrait
