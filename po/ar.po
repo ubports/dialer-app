@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-08 19:24+0000\n"
+"PO-Revision-Date: 2020-11-09 07:46+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -99,7 +99,7 @@ msgstr "+"
 
 #: ../src/qml/DialerPage/Keypad.qml:222
 msgid "0"
-msgstr "٠"
+msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:51
 msgid "1"
