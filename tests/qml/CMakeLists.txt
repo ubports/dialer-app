@@ -21,6 +21,7 @@ if(QMLTESTRUNNER_BIN AND XVFB_RUN_BIN)
     declare_qml_test("stopwatch" tst_StopWatch.qml)
     declare_qml_test("historydelegate" tst_HistoryDelegate.qml)
     declare_qml_test("dialer_page" tst_DialerPage.qml)
+    declare_qml_test("dialpad_search" tst_DialPadSearch.qml)
 else()
     if (NOT QMLTESTRUNNER_BIN)
         message(WARNING "Qml tests disabled: qmltestrunner not found")
@@ -35,5 +36,6 @@ set(QML_TST_FILES
     tst_MainView.qml
     tst_HistoryDelegate.qml
     tst_DialerPage.qml
+    tst_DialPadSearch.qml
 )
 add_custom_target(tst_QmlFiles ALL SOURCES ${QML_TST_FILES})

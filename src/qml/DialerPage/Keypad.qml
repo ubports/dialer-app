@@ -30,7 +30,7 @@ Item {
     property bool showVoicemail: false
     property alias spacing: keys.columnSpacing
 
-    signal keyPressed(int keycode, string keychar)
+    signal keyPressed(int keycode, string keychar, string keyText)
     signal keyPressAndHold(int keycode, string keychar)
 
     GridLayout {
@@ -47,7 +47,7 @@ Item {
             implicitHeight: keysHeight
             label: i18n.tr("1")
             keycode: Qt.Key_1
-            onPressed: keypad.keyPressed(keycode, "1")
+            onPressed: keypad.keyPressed(keycode, "1", "1")
             onPressAndHold: keypad.keyPressAndHold(keycode, "1")
             iconSource: showVoicemail ? "voicemail" : ""
             labelFont.pixelSize: keypad.labelPixelSize
@@ -65,7 +65,7 @@ Item {
             label: i18n.tr("2")
             sublabel: i18n.tr("ABC")
             keycode: Qt.Key_2
-            onPressed: keypad.keyPressed(keycode, "2")
+            onPressed: keypad.keyPressed(keycode, "2", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "2")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -82,7 +82,7 @@ Item {
             label: i18n.tr("3")
             sublabel: i18n.tr("DEF")
             keycode: Qt.Key_3
-            onPressed: keypad.keyPressed(keycode, "3")
+            onPressed: keypad.keyPressed(keycode, "3", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "3")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -99,7 +99,7 @@ Item {
             label: i18n.tr("4")
             sublabel: i18n.tr("GHI")
             keycode: Qt.Key_4
-            onPressed: keypad.keyPressed(keycode, "4")
+            onPressed: keypad.keyPressed(keycode, "4", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "4")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -116,7 +116,7 @@ Item {
             label: i18n.tr("5")
             sublabel: i18n.tr("JKL")
             keycode: Qt.Key_5
-            onPressed: keypad.keyPressed(keycode, "5")
+            onPressed: keypad.keyPressed(keycode, "5", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "5")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -133,7 +133,7 @@ Item {
             label: i18n.tr("6")
             sublabel: i18n.tr("MNO")
             keycode: Qt.Key_6
-            onPressed: keypad.keyPressed(keycode, "6")
+            onPressed: keypad.keyPressed(keycode, "6", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "6")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -150,7 +150,7 @@ Item {
             label: i18n.tr("7")
             sublabel: i18n.tr("PQRS")
             keycode: Qt.Key_7
-            onPressed: keypad.keyPressed(keycode, "7")
+            onPressed: keypad.keyPressed(keycode, "7", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "7")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -167,7 +167,7 @@ Item {
             label: i18n.tr("8")
             sublabel: i18n.tr("TUV")
             keycode: Qt.Key_8
-            onPressed: keypad.keyPressed(keycode, "8")
+            onPressed: keypad.keyPressed(keycode, "8", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "8")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -184,7 +184,7 @@ Item {
             label: i18n.tr("9")
             sublabel: i18n.tr("WXYZ")
             keycode: Qt.Key_9
-            onPressed: keypad.keyPressed(keycode, "9")
+            onPressed: keypad.keyPressed(keycode, "9", sublabel)
             onPressAndHold: keypad.keyPressAndHold(keycode, "9")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -202,7 +202,7 @@ Item {
             corner: Qt.BottomLeftCorner
             label: i18n.tr("*")
             keycode: Qt.Key_Asterisk
-            onPressed: keypad.keyPressed(keycode, "*")
+            onPressed: keypad.keyPressed(keycode, "*","*")
             onPressAndHold: keypad.keyPressAndHold(keycode, "*")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -220,7 +220,7 @@ Item {
             sublabel: i18n.tr("+")
             sublabelSize: "medium"
             keycode: Qt.Key_0
-            onPressed: keypad.keyPressed(keycode, "0")
+            onPressed: keypad.keyPressed(keycode, "0", "0")
             onPressAndHold: keypad.keyPressAndHold(keycode, "0")
             labelFont.pixelSize: keypad.labelPixelSize
 
@@ -238,7 +238,7 @@ Item {
             corner: Qt.BottomRightCorner
             label: i18n.tr("#")
             keycode: Qt.Key_ssharp
-            onPressed: keypad.keyPressed(keycode, "#")
+            onPressed: keypad.keyPressed(keycode, "#", "#")
             onPressAndHold: keypad.keyPressAndHold(keycode, "#")
             labelFont.pixelSize: keypad.labelPixelSize
 
