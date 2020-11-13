@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-13 10:18+0000\n"
+"PO-Revision-Date: 2020-11-13 19:53+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -564,7 +564,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:164 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "الهاتف"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
