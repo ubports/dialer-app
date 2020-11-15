@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-13 19:53+0000\n"
+"PO-Revision-Date: 2020-11-15 19:43+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -260,7 +260,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr "إغلاق"
+msgstr "أغلق"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -291,7 +291,7 @@ msgstr "المتراسل غير مربوط بأي رقم."
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "Contacts"
-msgstr "الأشخاص"
+msgstr "المتراسلون"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 #, fuzzy
