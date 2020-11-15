@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-15 19:43+0000\n"
+"PO-Revision-Date: 2020-11-15 22:03+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -50,9 +50,9 @@ msgstr "خدمات %1"
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] "أقل من ساعة (%1)"
-msgstr[1] "ساعة واحدة (%1)"
-msgstr[2] "ساعتان (%1)"
+msgstr[0] "%1 ساعة"
+msgstr[1] "ساعة واحدة"
+msgstr[2] "ساعتان"
 msgstr[3] "%1 ساعات"
 msgstr[4] "%1 ساعة"
 msgstr[5] "%1 ساعة"
@@ -497,7 +497,7 @@ msgstr "لم يرد عليها"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "الجوّال"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
@@ -645,7 +645,7 @@ msgstr "ابحث"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:69
 msgid "Search..."
-msgstr ""
+msgstr "ابحث..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -674,12 +674,12 @@ msgstr "تحديد"
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
-msgstr ""
+msgstr "الإعدادات"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
-msgstr "مشاركة"
+msgstr "شارك"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
