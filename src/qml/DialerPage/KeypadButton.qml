@@ -30,7 +30,7 @@ MouseArea {
     property int keycode
     property bool isCorner: false
     property int corner
-    property bool isVertical: parent.height > parent.width
+    property bool isVertical: parent.height > (parent.width * .75)
 
     UbuntuShape {
         objectName: "keypadButtonUbuntuShape"
