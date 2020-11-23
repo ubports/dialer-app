@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-26 23:24+0000\n"
+"PO-Revision-Date: 2020-11-23 18:30+0000\n"
 "Last-Translator: Joan CiberSheep <cibersheep@gmail.com>\n"
 "Language-Team: Catalan <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ca/>\n"
@@ -731,7 +731,7 @@ msgstr "Número desconegut"
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:73
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:91
 msgid "Voicemail"
-msgstr "Missatge de veu"
+msgstr "Bústia de veu"
 
 #: ../src/qml/DialerPage/Keypad.qml:188
 msgid "WXYZ"
