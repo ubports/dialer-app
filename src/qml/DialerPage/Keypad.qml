@@ -26,7 +26,7 @@ Item {
 
     readonly property int keysWidth: Math.min(units.gu(11), (keypad.width  / (keys.columns + 1)))
     readonly property int keysHeight: Math.min(units.gu(8), (keypad.height / (keys.rows + 1)))
-    property double labelPixelSize: units.dp(30)
+    property double labelPixelSize: keypad.height > units.dp(160) ? units.dp(30) : units.dp(20)
     property bool showVoicemail: false
     property alias spacing: keys.columnSpacing
 
@@ -40,9 +40,6 @@ Item {
         columns: 3
         rowSpacing: columnSpacing
         anchors.fill: parent
-        //horizontalItemAlignment: Grid.AlignHCenter
-        //verticalItemAlignment: Grid.AlignVCenter
-
 
         KeypadButton {
             objectName: "buttonOne"
