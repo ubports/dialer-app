@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-26 11:33+0000\n"
+"PO-Revision-Date: 2020-11-26 15:47+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/be/>\n"
@@ -52,7 +52,7 @@ msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 гадзіна"
 msgstr[1] "%1 гадзіны"
-msgstr[2] "%1 гадзінаў"
+msgstr[2] "%1 гадзін"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -575,7 +575,7 @@ msgstr "Phone;Dialer;Dial;Call;Keypad;тэлефон;набор,нумар;зв�
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "Абярыце акаўнт, каб стварыць."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
