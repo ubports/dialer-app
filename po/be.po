@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-27 16:30+0000\n"
+"PO-Revision-Date: 2020-11-27 16:55+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/be/>\n"
@@ -566,11 +566,11 @@ msgstr "Праграма для тэлефанавання"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "Phone;Dialer;Dial;Call;Keypad;тэлефон;набор,нумар;званок,выклік;кнопкі"
+msgstr "тэлефон;набор;нумар;выклік;кнопкі набору"
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr "Абярыце акаўнт, каб стварыць."
+msgstr "Каб стварыць, абярыце акаўнт."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -584,8 +584,8 @@ msgid ""
 msgstr ""
 "Калі ласка, разблакуйце вашую SIM-картку, каб мець магчымасць тэлефанаваць "
 "ці адпраўляць паведамленні. Разблакаваць картку можна з дапамогай індыкатара "
-"сеткі ў верхняй частцы экрана або з дапамогай старонкі <a href="
-"\"system_settings\">Сістэмныя параметры &gt; Бяспека &amp; Прыватнасць</a>."
+"сеткі ў верхняй частцы экрана або з дапамогай старонкі <a href=\""
+"system_settings\">Налады сістэмы &gt; Бяспека &amp; Прыватнасць</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -593,7 +593,7 @@ msgstr "Калі ласка, пачакайце"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "Прэфікс"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -611,11 +611,11 @@ msgstr "Нядаўнія"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Перанакіроўвае ўсе выклікі на іншы нумар."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM-картка"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -646,8 +646,8 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Выберыце тыповую SIM-картку для ўсіх выходных выклікаў. Змяніць ваш выбар у "
-"любы час з дапамогай <a href=\"system_settings\">Сістэмных параметраў</a>."
+"Абярыце прадвызначаную SIM-картку для ўсіх выходных выклікаў. Гэта заўсёды "
+"можна змяніць у <a href=\"system_settings\">Налады сістэмы</a>."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:369
 msgid "Send message"
@@ -656,12 +656,11 @@ msgstr "Адправіць паведамленне"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Паслугі"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Выбраць"
+msgstr "Абраць"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -674,17 +673,16 @@ msgid "Share"
 msgstr "Падзяліцца"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Няма званкоў"
+msgstr "Некаторыя выклікі"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "Правядзіце для выдалення"
+msgstr "Правядзіце, каб выдаліць"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Правядзіце, каб убачыць пункты дзеянняў"
+msgstr "Правядзіце, каб убачыць дзеянні"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
@@ -692,11 +690,11 @@ msgstr "Пераключыць крыніцу гуку:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:614
 msgid "Switch calls"
-msgstr "Пераключыць званкі"
+msgstr "Пераключыць выклік"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Пераключыцца на тыповую SIM-картку:"
+msgstr "Пераключыцца на прадвызначаную SIM-картку:"
 
 #: ../src/qml/DialerPage/Keypad.qml:171
 msgid "TUV"
@@ -705,15 +703,15 @@ msgstr "ШЫ"
 #: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Зараз на %1 няма доступу да сеткі"
+msgstr "Няма доступу да сеткі %1"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "Зараз няма доступу да сеткі."
+msgstr "Зараз сетка недаступная."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Гэта не нумар для экстранных выклікаў."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -749,12 +747,11 @@ msgstr "Учора"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
-"Вам варта выключыць рэжым палёту, каб мець магчымасць ажыццяўляць званкі"
+msgstr "Каб здзяйсняць выклікі, вам патрэбна адключыць рэжым палёту"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "You need to select a SIM card"
-msgstr "Вам варта абраць SIM-картку"
+msgstr "Неабходна абраць SIM-картку"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
