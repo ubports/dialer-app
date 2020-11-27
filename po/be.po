@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-27 11:32+0000\n"
+"PO-Revision-Date: 2020-11-27 16:30+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/be/>\n"
@@ -164,15 +164,15 @@ msgstr "Выклік"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
-msgstr "Забарона выклікаў"
+msgstr "Забарона выкліку"
 
 #: ../src/qml/dialer-app.qml:598
 msgid "Call Forwarding"
-msgstr "Перанакіраванне выклікаў"
+msgstr "Перанакіраванне выкліку"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
-msgstr "Чаканне выклікаў"
+msgstr "Чаканне выкліку"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:169
 msgid "Call ended"
@@ -180,7 +180,7 @@ msgstr "Выклік завершаны"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:315
 msgid "Call failed"
-msgstr "Не атрымалася звязацца"
+msgstr "Збой выкліку"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:44
 #: ../src/qml/SettingsPage/MultiSim.qml:51
@@ -199,31 +199,30 @@ msgstr "На дадзены момант немагчыма праверыць �
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
-msgstr "Не ўдалося ўтрымаць званок"
+msgstr "Не ўдалося прыпыніць выклік"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Чаканне выклікаў"
+msgstr "Прыпыненне выкліку"
 
 #: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:512
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "Тэлефануем"
+msgstr "Тэлефанаванне"
 
 #: ../src/qml/dialer-app.qml:620
 msgid "Calling Line Presentation"
-msgstr "Прадстаўленне лініі выклікаў"
+msgstr "Індыкацыя лініі выкліку"
 
 #: ../src/qml/dialer-app.qml:632
 msgid "Calling Line Restriction"
-msgstr "Абмежаванне лініі выклікаў"
+msgstr "Абмежаванне лініі выкліку"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:147
@@ -242,11 +241,11 @@ msgstr "Змяніць"
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Звязаць усе званкі з %1?"
+msgstr "Выкарыстоўваць для выклікаў %1?"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "Знакі на выдаленне"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -260,24 +259,24 @@ msgstr "Канферэнцыя"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Conference call failure"
-msgstr "Не атрымалася арганізаваць канферэнцыю"
+msgstr "Не атрымалася стварыць канферэнцыю"
 
 #: ../src/qml/dialer-app.qml:626
 msgid "Connected Line Presentation"
-msgstr "Прадстаўленне злучанай лініі"
+msgstr "Індыкацыя падлучанай лініі"
 
 #: ../src/qml/dialer-app.qml:638
 msgid "Connected Line Restriction"
-msgstr "Абмежаванні злучанай лініі"
+msgstr "Абмежаванне падлучанай лініі"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
 #: ../src/qml/HistoryPage/HistoryPage.qml:378
 msgid "Contact Details"
-msgstr "Падрабязнасці аб запісу кантакта"
+msgstr "Звесткі пра кантакт"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "У кантакту няма тэлефонных нумароў."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -285,13 +284,12 @@ msgid "Contacts"
 msgstr "Кантакты"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Кантакты"
+msgstr "Кантакты…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Не атрымалася перанакіраваць выклік гэтаму кантакту"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -299,11 +297,11 @@ msgstr "ДЕЖЗ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "Прадвызначаны код горада"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "Прадвызначаны код краіны"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -317,7 +315,7 @@ msgstr "Падрабязнасці"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "Гук клавіш"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -325,7 +323,7 @@ msgstr "Адключыць"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr "Выключаем рэжым палёту"
+msgstr "Адключэнне рэжыму палёту"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
@@ -344,16 +342,15 @@ msgstr "Рэдагаваць"
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
 msgid "Emergency Calls"
-msgstr "Экстраныя выклікі"
+msgstr "Экстранныя выклікі"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
-msgstr "Экстраныя выклікі"
+msgstr "Экстранны выклік"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "Увядзіце код краіны"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -361,17 +358,16 @@ msgid "Enter a number"
 msgstr "Увядзіце нумар"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "Увядзіце нумар тэлефона"
+msgstr "Увядзіце прэфікс"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "Увядзіце код горада"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Абярыце знакі на выдаленне"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -379,24 +375,23 @@ msgstr "Памылка"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
-msgstr "Не атрымалася актываваць званок."
+msgstr "Не атрымалася актываваць выклік."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:146
 msgid "Failed to create a conference call."
-msgstr "Не атрымалася стварыць званок-канферэнцыю."
+msgstr "Не атрымалася стварыць канферэнцыю."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
-msgstr "Не атрымалася паставіць бягучы званок на паўзу."
+msgstr "Не атрымалася прыпыніць бягучы выклік."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "Абраныя"
+msgstr "Улюбёныя кантакты"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
-msgstr "Улюбёныя"
+msgstr "Улюбёныя кантакты"
 
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -405,17 +400,17 @@ msgstr "Рэжым палёту"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Перанакіроўваць усе ўваходныя выклікі"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Перанакіроўваць уваходныя выклікі, калі:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Перанакіраваць"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -423,15 +418,15 @@ msgstr "ІЙКЛ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr "Выканана"
+msgstr "Завершана"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Я не адказваю"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Я ўжо з кімсьці гутару"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -445,11 +440,11 @@ msgstr "Уваходныя"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "Ініцыялізацыя…"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr "Некарэктны код USSD"
+msgstr "Хібны USSD-код"
 
 #: ../src/qml/DialerPage/Keypad.qml:120
 msgid "JKL"
@@ -458,7 +453,7 @@ msgstr "МНОП"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Апошні выклік %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -469,6 +464,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Дае магчымасць падчас размовы адказаць на ўваходны выклік, і пераключацца "
+"паміж двума размовамі"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -482,7 +479,7 @@ msgstr "Аб'яднаць выклікі"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:333
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgid "Missed"
-msgstr "Прапушчаныя"
+msgstr "Неадказаныя"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
@@ -490,7 +487,7 @@ msgstr "Мабільны"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Мой тэлефон недасяжны"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -498,11 +495,11 @@ msgstr "Не"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
-msgstr "Не выбраная SIM-картка"
+msgstr "SIM-картка не абраная"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "No calls"
-msgstr "Няма званкоў"
+msgstr "Няма выклікаў"
 
 #: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
 #: ../src/qml/dialer-app.qml:394
@@ -511,11 +508,11 @@ msgstr "Няма сеткі"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
-msgstr "Няма нядаўніх званкоў"
+msgstr "Няма нядаўніх выклікаў"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "Нумар перазапісаны"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
@@ -540,7 +537,7 @@ msgstr "Укл"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
-msgstr "Чаканне"
+msgstr "Прыпынена"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:337
@@ -557,15 +554,15 @@ msgstr "Тэлефон"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Праграма-тэлефон"
+msgstr "Праграма для тэлефанавання"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:393
 msgid "Phone Speaker"
-msgstr "Гучнамоўца тэлефона"
+msgstr "Гучная сувязь"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Праграма-тэлефон"
+msgstr "Праграма для тэлефанавання"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
