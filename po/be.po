@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-27 16:55+0000\n"
+"PO-Revision-Date: 2020-11-30 09:55+0000\n"
 "Last-Translator: Zmicer <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/be/>\n"
@@ -418,7 +418,7 @@ msgstr "ІЙКЛ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr "Завершана"
+msgstr "Зразумела"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
