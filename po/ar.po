@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-11-21 06:29+0000\n"
+"PO-Revision-Date: 2020-12-01 07:45+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -63,8 +63,8 @@ msgstr[5] "%1 ساعة"
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "أقل من دقيقة (%1)"
-msgstr[1] "دقيقة واحدة (%1)"
-msgstr[2] "دقيقتان (%1)"
+msgstr[1] "دقيقة واحدة"
+msgstr[2] "دقيقتان"
 msgstr[3] "%1 دقائق"
 msgstr[4] "%1 دقيقة"
 msgstr[5] "%1 دقيقة"
@@ -75,8 +75,8 @@ msgstr[5] "%1 دقيقة"
 msgid "%1 sec"
 msgid_plural "%1 secs"
 msgstr[0] "أقل من ثانية (%1)"
-msgstr[1] "ثانية واحدة (%1)"
-msgstr[2] "ثانيتان (%1)"
+msgstr[1] "ثانية واحدة"
+msgstr[2] "ثانيتان"
 msgstr[3] "%1 ثوان"
 msgstr[4] "%1 ثانية"
 msgstr[5] "%1 ثانية"
@@ -103,39 +103,39 @@ msgstr "0"
 
 #: ../src/qml/DialerPage/Keypad.qml:51
 msgid "1"
-msgstr "١"
+msgstr "1"
 
 #: ../src/qml/DialerPage/Keypad.qml:68
 msgid "2"
-msgstr "٢"
+msgstr "2"
 
 #: ../src/qml/DialerPage/Keypad.qml:85
 msgid "3"
-msgstr "٣"
+msgstr "3"
 
 #: ../src/qml/DialerPage/Keypad.qml:102
 msgid "4"
-msgstr "٤"
+msgstr "4"
 
 #: ../src/qml/DialerPage/Keypad.qml:119
 msgid "5"
-msgstr "٥"
+msgstr "5"
 
 #: ../src/qml/DialerPage/Keypad.qml:136
 msgid "6"
-msgstr "٦"
+msgstr "6"
 
 #: ../src/qml/DialerPage/Keypad.qml:153
 msgid "7"
-msgstr "٧"
+msgstr "7"
 
 #: ../src/qml/DialerPage/Keypad.qml:170
 msgid "8"
-msgstr "٨"
+msgstr "8"
 
 #: ../src/qml/DialerPage/Keypad.qml:187
 msgid "9"
-msgstr "٩"
+msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:69
 msgid "ABC"
@@ -181,7 +181,7 @@ msgstr "تحويل المكالمة"
 
 #: ../src/qml/dialer-app.qml:609
 msgid "Call Waiting"
-msgstr "انتظار المكالمات"
+msgstr "انتظار المكالمة"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:169
 msgid "Call ended"
@@ -199,6 +199,7 @@ msgid "Call forwarding"
 msgstr "تحويل المكالمة"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
+#, fuzzy
 msgid "Call forwarding can't be changed right now."
 msgstr "تعذر تحويل المكالمة الآن."
 
@@ -215,9 +216,8 @@ msgstr "فشل تعليق المكالمة"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "انتظار المكالمات"
+msgstr "انتظار المكالمة"
 
 #: ../src/qml/DialerPage/DialerPage.qml:556
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
