@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-12-08 16:45+0000\n"
+"PO-Revision-Date: 2020-12-08 21:03+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -509,7 +509,7 @@ msgstr "لا"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
-msgstr "ما من بطاقة SIM مختارة"
+msgstr "لم تختر شريحة هاتف"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "No calls"
@@ -596,6 +596,9 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
+"رجاء فك قفل شريحة الهاتف لتتمكن من الاتصال وإرسال الرسائل النصية. يمكنك فك "
+"قفل شريحة الهاتف من خلال مؤشر الشبكة في أعلى الشاشة أو من خلال زيارة <a href="
+"\"system_settings\">إعدادات النظام &lt; الأمن والخصوصية</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -629,7 +632,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr ""
+msgstr "شريحة الهاتف مقفلة"
 
 #: ../src/qml/DialerPage/DialerPage.qml:155
 msgid "SIM Locked"
