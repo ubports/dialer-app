@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-12-12 11:22+0000\n"
+"PO-Revision-Date: 2020-12-12 16:17+0000\n"
 "Last-Translator: abidin <abidin24@tutanota.com>\n"
 "Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ar/>\n"
@@ -228,11 +228,11 @@ msgstr "يتصل"
 
 #: ../src/qml/dialer-app.qml:620
 msgid "Calling Line Presentation"
-msgstr ""
+msgstr "تقديم خط الاتصال"
 
 #: ../src/qml/dialer-app.qml:632
 msgid "Calling Line Restriction"
-msgstr ""
+msgstr "تقييد خط الاتصال"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
 #: ../src/qml/ContactsPage/ContactsPage.qml:147
