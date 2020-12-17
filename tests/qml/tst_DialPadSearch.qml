@@ -1,5 +1,5 @@
 /*
- * Copyright 2014 Canonical Ltd.
+ * Copyright 2020 Ubports Foundation.
  *
  * This file is part of dialer-app.
  *
