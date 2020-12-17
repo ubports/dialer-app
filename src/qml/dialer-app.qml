@@ -202,6 +202,7 @@ MainView {
     function isEmergencyNumber(number) {
         // TODO should we only check for emergency numbers
         // in the selected account?
+        if (number.length === 0) return false;
 
         // check for specific account emergency numbers
         for (var i in telepathyHelper.accounts.all) {
