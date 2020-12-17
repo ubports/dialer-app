@@ -82,7 +82,7 @@ Page {
         }
         Sections {
             id: headerSections
-            model: [call.account.displayName]
+            model: call ? [call.account.displayName]: []
             selectedIndex: 0
             anchors.left: parent.left
             anchors.bottom: parent.bottom
@@ -664,7 +664,7 @@ Page {
                     }
                 }
             }
-            enabled: audioOutputs.length > 1
+            enabled: audioOutputs && audioOutputs.length > 1
         }
 
         LiveCallKeypadButton {
