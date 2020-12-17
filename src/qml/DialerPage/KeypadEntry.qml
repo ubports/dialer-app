@@ -111,8 +111,6 @@ FocusScope {
         clip: true
         defaultRegion: PhoneUtils.defaultRegion
         updateOnlyWhenFocused: false
-        // FIXME: this should probably be done in the component itself
-        autoFormat: input.text.length > 0 && input.text.charAt(0) !== "*" && input.text.charAt(0) !== "#"
 
         // Use a custom cursor that does not blink to avoid extra CPU usage.
         // https://bugs.launchpad.net/dialer-app/+bug/1188669
