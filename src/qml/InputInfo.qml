@@ -38,8 +38,5 @@ Item {
         id: keyboardsModel
         filter: InputInfo.Keyboard
     }
-
-    Component.onCompleted: console.log("Has mouse: " + hasMouse)
-    onHasMouseChanged: console.log("Has mouse: " + hasMouse)
 }
 
