@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-12-31 16:31+0000\n"
+"PO-Revision-Date: 2021-01-01 15:18+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
 "Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ta/>\n"
@@ -49,8 +49,8 @@ msgstr ""
 #, qt-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 மணி நேரம்"
+msgstr[1] "%1 மணி நேரங்கள்"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -130,7 +130,7 @@ msgstr "ABC"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
-msgstr ""
+msgstr "செயலில்"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
@@ -369,7 +369,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr ""
+msgstr "பிழை"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
@@ -567,7 +567,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "உருவாக்க, கணக்கை தேர்வுசெய்க."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
