@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-01-02 18:40+0000\n"
+"PO-Revision-Date: 2021-01-03 12:32+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
 "Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ta/>\n"
@@ -334,7 +334,7 @@ msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "திருத்து"
+msgstr "திருத்துக"
 
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
@@ -522,7 +522,7 @@ msgstr "சரி"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "இயக்கத்தில் இல்லை"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -530,7 +530,7 @@ msgstr "சரி"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "இயக்கத்தில்"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -661,7 +661,7 @@ msgstr "அமைவுகள்"
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
-msgstr "பகிர்"
+msgstr "பகிர்க"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
