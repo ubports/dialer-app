@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-01-03 12:32+0000\n"
+"PO-Revision-Date: 2021-01-04 01:01+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
 "Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ta/>\n"
@@ -628,7 +628,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:69
 msgid "Search..."
-msgstr ""
+msgstr "தேடு…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
