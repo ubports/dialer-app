@@ -2,67 +2,66 @@ Source: dialer-app
 Section: x11
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: cmake,
-               debhelper (>= 9),
-               dh-translations,
-               pkg-config,
-               python3-all:any,
-               dh-python,
-               qml-module-qttest,
-               qml-module-qt-labs-settings,
-               qml-module-qtsysteminfo (>= 5.0~),
-               qt5-default,
-               qtbase5-dev (>= 5.0),
-               qtdeclarative5-dev (>= 5.0),
-               qtdeclarative5-dev-tools,
-               qtdeclarative5-ubuntu-telephony0.1 <!nocheck> | qtdeclarative5-ubuntu-telephony-plugin <!nocheck>,
-               qtdeclarative5-ubuntu-addressbook0.1,
-               qtdeclarative5-qtcontacts-plugin,
-               qtdeclarative5-ubuntu-telephony-phonenumber0.1,
-               qtdeclarative5-ubuntu-history0.1,
-               qtdeclarative5-ubuntu-ui-toolkit-plugin,
-               xvfb,
+Build-Depends:
+ cmake,
+ debhelper (>= 9),
+ dh-python,
+ intltool,
+ pkg-config,
+ python3-all:any,
+ qml-module-qt-labs-settings,
+ qml-module-qtsysteminfo (>= 5.0~),
+ qml-module-qtcontacts,
+ qml-module-qttest,
+ qml-module-ubuntu-components,
+ qtbase5-dev (>= 5.0),
+ qtdeclarative5-dev (>= 5.0),
+ qtdeclarative5-dev-tools,
+ qtdeclarative5-ubuntu-addressbook0.1,
+ qtdeclarative5-ubuntu-history0.1,
+ qtdeclarative5-ubuntu-telephony-phonenumber0.1,
+ qtdeclarative5-ubuntu-telephony0.1 <!nocheck> | qtdeclarative5-ubuntu-telephony-plugin <!nocheck>,
+ xvfb,
 Standards-Version: 3.9.4
-Homepage: https://launchpad.net/dialer-app
-# If you aren't a member of ~phablet-team but need to upload packaging changes,
-# just go ahead.  ~phablet-team will notice and sync up the code again.
-Vcs-Bzr: https://code.launchpad.net/~phablet-team/dialer-app/trunk
-Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/dialer-app/trunk/files
-X-Ubuntu-Use-Langpack: yes
+Homepage: https://github.com/ubports/dialer-app
+Vcs-Git: https://github.com/ubports/dialer-app
 
 Package: dialer-app
 Architecture: any
-Depends: ${misc:Depends},
-         ${shlibs:Depends},
-         qml-module-qt-labs-settings,
-         qml-module-qtsysteminfo (>= 5.0~),
-         qtdeclarative5-ubuntu-history0.1 | qtdeclarative5-ubuntu-history-plugin,
-         qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
-         qtdeclarative5-ubuntu-telephony-phonenumber0.1,
-         qtdeclarative5-ubuntu-ui-toolkit-plugin | qt-components-ubuntu,
-         qtdeclarative5-ubuntu-addressbook0.1,
-         qtdeclarative5-qtcontacts-plugin,
-Recommends: unity8 (>= 7.81.0~),
+Depends:
+ qml-module-qt-labs-settings,
+ qml-module-qtcontacts,
+ qml-module-qtsysteminfo (>= 5.0~),
+ qml-module-ubuntu-components,
+ qtdeclarative5-ubuntu-addressbook0.1,
+ qtdeclarative5-ubuntu-history0.1 | qtdeclarative5-ubuntu-history-plugin,
+ qtdeclarative5-ubuntu-telephony-phonenumber0.1,
+ qtdeclarative5-ubuntu-telephony0.1 | qtdeclarative5-ubuntu-telephony-plugin,
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ unity8 (>= 7.81.0~),
 Description: Dialer application for Ubuntu
  An application to make phone calls
 
 Package: dialer-app-autopilot
 Architecture: all
 Section: debug
-Depends: ${misc:Depends},
-         ${python3:Depends},
-         address-book-app-autopilot,
-         autopilot-qt5,
-         dbus,
-         libqt5test5,
-         libqt5widgets5,
-         dialer-app (>= ${binary:Version}),
-         ofono-scripts,
-         ofono-phonesim-autostart,
-         python3-autopilot,
-         python3-dbusmock,
-         ubuntu-ui-toolkit-autopilot,
-         url-dispatcher-testability,
+Depends:
+ address-book-app-autopilot,
+ autopilot-qt5,
+ dbus,
+ dialer-app (>= ${binary:Version}),
+ libqt5test5,
+ libqt5widgets5,
+ ofono-phonesim-autostart,
+ ofono-scripts,
+ python3-autopilot,
+ python3-dbusmock,
+ ubuntu-ui-toolkit-autopilot,
+ url-dispatcher-testability,
+ ${misc:Depends},
+ ${python3:Depends},
 Description: autopilot tests for dialer-app
  This package contains the autopilot tests for dialer-app.
  .
