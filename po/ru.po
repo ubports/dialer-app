@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-01-15 03:35+0000\n"
+"PO-Revision-Date: 2021-01-15 03:42+0000\n"
 "Last-Translator: Dmitriy Krivtsov <dmitrek@mail.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ru/>\n"
@@ -364,7 +364,7 @@ msgstr "Введите префикс"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "Введите код города"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
@@ -387,7 +387,6 @@ msgid "Failed to place the active call on hold."
 msgstr "Не удалось поставить вызов на удержание."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
 msgstr "Избранное"
 
@@ -595,7 +594,7 @@ msgstr "Подождите"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "Префикс"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
