@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-01-15 03:42+0000\n"
+"PO-Revision-Date: 2021-01-15 07:25+0000\n"
 "Last-Translator: ierihon <idekovets@mail.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ru/>\n"
@@ -249,7 +249,6 @@ msgstr "Выбрать для удаления"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
-#, fuzzy
 msgid "Close"
 msgstr "Закрыть"
 
