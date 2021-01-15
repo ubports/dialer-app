@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
 "PO-Revision-Date: 2021-01-15 03:35+0000\n"
-"Last-Translator: ierihon <idekovets@mail.ru>\n"
+"Last-Translator: Dmitriy Krivtsov <dmitrek@mail.ru>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ru/>\n"
 "Language: ru\n"
@@ -359,9 +359,8 @@ msgid "Enter a number"
 msgstr "Введите номер"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "Введите номер"
+msgstr "Введите префикс"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
