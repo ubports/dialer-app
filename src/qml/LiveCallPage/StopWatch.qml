@@ -23,7 +23,8 @@ Item {
 
     property int time: 0
     property string elapsed: {
-        var d = new Date(0, 0, 0, 0, 0, time);
+        var d = new Date();
+        d.setHours( 0, 0, time);
 
         return d.getHours() == 0 ? Qt.formatTime(d, "mm:ss") :
             Qt.formatTime(d, "h:mm:ss");
