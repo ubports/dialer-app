@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2017-03-21 21:55+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Bengali <bn@li.org>\n"
+"PO-Revision-Date: 2021-01-30 16:27+0000\n"
+"Last-Translator: imrufbd <imrufbd@gmail.com>\n"
+"Language-Team: Bengali <https://translate.ubports.com/projects/ubports/"
+"dialer-app/bn/>\n"
 "Language: bn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-03-22 06:58+0000\n"
-"X-Generator: Launchpad (build 18334)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:242
 msgid "#"
@@ -155,7 +156,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr ""
+msgstr "ফোনকরুন"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -226,7 +227,7 @@ msgstr ""
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr ""
+msgstr "বাতিল"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
@@ -245,7 +246,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
-msgstr ""
+msgstr "বন্ধ করুন"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:52
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
@@ -276,7 +277,7 @@ msgstr ""
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "Contacts"
-msgstr ""
+msgstr "যোগাযোগসমূহ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
@@ -302,7 +303,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
 #: ../src/qml/HistoryPage/HistoryPage.qml:350
 msgid "Delete"
-msgstr ""
+msgstr "মুছুন"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:359
 msgid "Details"
@@ -332,7 +333,7 @@ msgstr ""
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr ""
+msgstr "সম্পাদন"
 
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
@@ -350,7 +351,7 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr ""
+msgstr "ফোননম্বর"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
 msgid "Enter a prefix"
@@ -366,7 +367,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
-msgstr ""
+msgstr "ত্রুটিযুক্ত"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
@@ -386,7 +387,7 @@ msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
-msgstr ""
+msgstr "পছন্দসমূহ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -476,7 +477,7 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:164
 msgid "Mobile"
-msgstr ""
+msgstr "মুঠোফোন"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
@@ -509,11 +510,11 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "ফোননম্বর"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "ঠিক আছে"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -522,7 +523,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr ""
+msgstr "ঠিক আছে"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
@@ -543,7 +544,7 @@ msgstr ""
 
 #: ../src/qml/DialerPage/DialerPage.qml:164 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
-msgstr ""
+msgstr "ফোন"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
@@ -567,7 +568,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "অনুগ্রহ করে ফোননম্বর নির্বাচন করুন"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -616,15 +617,15 @@ msgstr ""
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 msgid "Save"
-msgstr ""
+msgstr "সংরক্ষণ"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:121
 msgid "Search"
-msgstr ""
+msgstr "অনুসন্ধান"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:69
 msgid "Search..."
-msgstr ""
+msgstr "অনুসন্ধান ..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -652,12 +653,12 @@ msgstr ""
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
-msgstr ""
+msgstr "সেটিংস"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
 msgid "Share"
-msgstr ""
+msgstr "বিনিময়"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
 msgid "Some calls"
@@ -703,7 +704,7 @@ msgstr ""
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
 msgid "Today"
-msgstr ""
+msgstr "আজ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:391
 msgid "Ubuntu Phone"
