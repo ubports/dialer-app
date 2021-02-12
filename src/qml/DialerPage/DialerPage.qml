@@ -203,8 +203,7 @@ Page {
         if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
             page.focus = false;
         }
-
-        keypad.keyPressed(event.key, event.text)
+        keypad.keyPressed(event.key, event.text, event.text)
     }
 
     function triggerCallAnimation() {
@@ -393,17 +392,58 @@ Page {
         Label {
             id: contactLabel
             anchors {
+                top: divider.bottom
                 horizontalCenter: divider.horizontalCenter
-                bottom: entryWithButtons.bottom
-                bottomMargin: units.gu(1)
+                topMargin: units.gu(1)
             }
             text: contactWatcher.isUnknown ? "" : contactWatcher.alias
             color: theme.palette.normal.backgroundSecondaryText
             opacity: text != "" ? 1 : 0
-            fontSize: "small"
+            fontSize: "medium"
             Behavior on opacity {
                 UbuntuNumberAnimation { }
             }
+        }
+
+        ContactDialPadSearch {
+            id: contactSearch
+            height: units.gu(4)
+            anchors {
+                top: divider.bottom
+                left: parent.left
+                right: parent.right
+                topMargin: units.gu(1)
+                leftMargin: units.gu(4)
+                rightMargin: units.gu(4)
+            }
+
+            phoneNumberField: input.text
+
+            onContactSelected: {
+                input.text = contact.phoneNumber.number
+            }
+
+            Behavior on opacity {
+                UbuntuNumberAnimation { }
+            }
+
+            Connections {
+                target: keypad
+                onKeyPressed : {
+                    if (keycode == Qt.Key_Backspace) {
+                        contactSearch.pop()
+                    } else {
+                        contactSearch.push(keyText)
+                    }
+                }
+                onKeyPressAndHold : contactSearch.clearAll()
+            }
+            Connections {
+                target: backspace
+                onClicked : contactSearch.pop()
+                onPressAndHold : contactSearch.clearAll()
+            }
+
         }
 
         Keypad {
@@ -411,11 +451,13 @@ Page {
             showVoicemail: true
 
             anchors {
-                top: divider.bottom
+                top: contactSearch.bottom
                 left: parent.left
                 right: parent.right
                 bottom: parent.bottom
-                margins: units.gu(2)
+                leftMargin: units.gu(2)
+                rightMargin: units.gu(2)
+                bottomMargin: units.gu(3)
             }
             labelPixelSize: page.compactView ? units.dp(20) : units.dp(30)
             spacing: page.compactView ? 0 : 5

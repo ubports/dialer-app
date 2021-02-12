@@ -97,7 +97,7 @@ Page {
             dtmfVisible = true
         }
 
-        keypad.keyPressed(event.key, event.text)
+        keypad.keyPressed(event.key, event.text, "")
     }
 
     function reportStatus(callObject, text) {
