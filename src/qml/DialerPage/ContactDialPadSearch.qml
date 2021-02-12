@@ -34,7 +34,6 @@ Item {
 
     signal contactSelected(QtObject contact)
 
-
     function _cartesianProduct(a) { // a = array of array
         var i, j, l, m, a1, o = [];
         if (!a || a.length == 0) return a;
@@ -49,7 +48,6 @@ Item {
         }
         return o;
     }
-
 
     function clearAll() {
         searchHistory = []
@@ -127,7 +125,6 @@ Item {
     }
 
     onContactSelected: clearAll()
-
 
     Component {
         id: firstNameFilter
@@ -226,7 +223,6 @@ Item {
                 anchors.fill: parent
                 onClicked: {
                     if (contact.phoneNumbers.length > 1) {
-
                         // try to determine the right number if user search with numbers
                         for (var i=0; i < contact.phoneNumbers.length; i++) {
                             if (contact.phoneNumbers[i].number.startsWith(phoneNumberField.replace(/ /g,''))) {
@@ -250,7 +246,6 @@ Item {
                         contactSelected(contact)
                     }
                 }
-
             }
         }
     }
@@ -264,7 +259,6 @@ Item {
 
     }
 
-
     Component {
         id: chooseNumberDialog
 
@@ -272,7 +266,6 @@ Item {
             id: popover
 
             property var contact
-
             signal selectedPhoneNumber(string number)
 
             ListView {
@@ -281,7 +274,6 @@ Item {
 
                 model: contact.phoneNumbers
                 highlightMoveDuration : 0
-
 
                 height: units.gu(6) * contact.phoneNumbers.length
                 width: parent.width
@@ -297,8 +289,6 @@ Item {
                     }
                 }
             }
-
         }
     }
-
 }

@@ -405,7 +405,6 @@ Page {
             }
         }
 
-
         ContactDialPadSearch {
             id: contactSearch
             height: units.gu(4)
@@ -446,7 +445,6 @@ Page {
             }
 
         }
-
 
         Keypad {
             id: keypad

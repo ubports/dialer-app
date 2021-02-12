@@ -20,8 +20,6 @@ import QtQuick 2.2
 import QtTest 1.0
 import QtContacts 5.0
 import Ubuntu.Test 0.1
-
-
 import '../../src/qml/DialerPage'
 
 Item {
@@ -30,11 +28,9 @@ Item {
     width: units.gu(40)
     height: units.gu(60)
 
-
     function emptyContacts(model) {
         if (!model.autoUpdate)
             model.update();
-
         var count = model.contacts.length;
         if (count == 0)
             return;
@@ -51,7 +47,6 @@ Item {
     Filter {
         id:noFilter
     }
-
 
     Contact {
         id: contact1;
@@ -70,17 +65,14 @@ Item {
     Contact {
         id: contact2
 
-
         DisplayLabel {
             label: "contactB"
         }
-
 
         Name {
             firstName: "contactB"
             lastName:"zorro"
         }
-
 
         PhoneNumber {
             number: "3333333333"
@@ -91,9 +83,7 @@ Item {
             number: "4444444444"
             subTypes:[PhoneNumber.Fax]
         }
-
     }
-
 
     function appendPattern(p) {
         dialPadSearch.phoneNumberField = dialPadSearch.phoneNumberField + p
@@ -203,15 +193,11 @@ Item {
 
     }
 
-
     TestCase {
         id: contactsTestCase
         when: windowShown
 
-
         function initTestCase() {
-
-
             var contactModel = findChild(dialPadSearch, 'contactModel')
             spyOnFilterChanged.target = contactModel
             spyOnContactsChanged.target = contactModel
@@ -238,12 +224,10 @@ Item {
             var listView = findChild(dialPadSearch, 'listView')
             spyOnCountChanged.target = listView
             spyOnCurrentIndexChanged.target = listView
-
         }
 
 
         function cleanup() {
-
             var contactModel = findChild(dialPadSearch, 'contactModel')
             dialPadSearch.phoneNumberField = ""
             dialPadSearch.clearAll()
@@ -269,7 +253,6 @@ Item {
             spyOnContactSelected.wait()
             compare(spyOnContactSelected.count, 1)
         }
-
 
         // contact number is guessed according to phoneNumberField number
         function test_multiPhoneNumberSelectionGuessed() {
@@ -312,10 +295,5 @@ Item {
             spyOnContactSelected.wait()
             compare(spyOnContactSelected.count, 1)
         }
-
-
-
-
     }
-
 }
