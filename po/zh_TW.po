@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-02-14 19:08+0000\n"
+"PO-Revision-Date: 2021-02-14 20:35+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -456,7 +456,7 @@ msgstr "稍後"
 msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
-msgstr ""
+msgstr "讓您在接聽其他電話時，同時接聽或開始一個新的通話，並可以在它們之間做切換"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -503,7 +503,7 @@ msgstr "最近沒有通話"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "號碼修改"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
@@ -600,7 +600,7 @@ msgstr "最近"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "將所有手機通話重新導向到另一個號碼。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
