@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-02-14 22:55+0000\n"
+"PO-Revision-Date: 2021-02-15 16:37+0000\n"
 "Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
@@ -265,7 +265,7 @@ msgstr "連線號碼不顯示"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
 #: ../src/qml/HistoryPage/HistoryPage.qml:378
 msgid "Contact Details"
-msgstr "聯絡人詳情"
+msgstr "聯絡人詳細內容"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
@@ -304,7 +304,7 @@ msgstr "刪除"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:359
 msgid "Details"
-msgstr "詳情"
+msgstr "詳細內容"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
