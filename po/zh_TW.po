@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-16 09:10+0000\n"
-"Last-Translator: P.-H. Lin <cypressyew@gmail.com>\n"
+"PO-Revision-Date: 2021-02-14 19:08+0000\n"
+"Last-Translator: louies0623 <louies0623@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -35,7 +35,7 @@ msgstr "%1 - 等候"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 號碼修改"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
@@ -199,7 +199,6 @@ msgstr "等候通話時失敗"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
 msgstr "等候通話"
 
@@ -352,9 +351,8 @@ msgid "Enter a number"
 msgstr "輸入號碼"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "輸入號碼"
+msgstr "輸入首碼"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
@@ -480,7 +478,7 @@ msgstr "手機"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "我的電話無法接通"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -526,7 +524,7 @@ msgstr "確定"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "開"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
