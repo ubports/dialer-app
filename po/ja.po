@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-26 12:50+0000\n"
+"PO-Revision-Date: 2021-03-01 08:41+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ja/>\n"
@@ -313,7 +313,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
-msgstr "無効"
+msgstr "無効化"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
@@ -397,7 +397,7 @@ msgstr "機内モード"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "全ての着信を転送する"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
@@ -606,7 +606,7 @@ msgstr "最近"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "全ての着信を他の番号に転送します。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
