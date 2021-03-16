@@ -173,6 +173,7 @@ Page {
     Connections {
         id: callHoldingConnection
         // the target will be set on the actions
+        target: null
         onCallHoldingFailed: {
             mainView.showNotification(i18n.tr("Call holding failure"),
                                       target.held ? i18n.tr("Failed to activate the call.")

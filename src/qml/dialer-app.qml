@@ -29,7 +29,7 @@ MainView {
 
     objectName: "mainView"
 
-    property bool applicationActive: Qt.application.active
+    property bool applicationActive: Qt.application.state === Qt.ApplicationActive
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     property alias multiplePhoneAccounts: accountsModel.multipleAccounts
@@ -41,6 +41,7 @@ MainView {
     property var currentStack: mainView.greeterMode ? pageStackGreeterMode : pageStackNormalMode
     property alias inputInfo: inputInfoObject
     property var bottomEdge: null
+    property var pendingLiveCall: null
 
     automaticOrientation: false
     implicitWidth: units.gu(40)
@@ -105,7 +106,13 @@ MainView {
                 callManager.startCall(dialPrefix, mainView.account.accountId);
             }
             pendingNumberToDial = "";
+
+            if (pendingLiveCall) {
+                switchToLiveCall(pendingLiveCall.initialStatus, pendingLiveCall.initialNumber)
+                pendingLiveCall = null
+            }
         }
+
     }
 
     Connections {
@@ -425,6 +432,7 @@ MainView {
     }
 
     function startCall(number) {
+        console.log("startCall, accountReady:", accountReady)
         if (accountReady) {
             call(number)
         } else {
@@ -452,7 +460,6 @@ MainView {
                 dialerPage.bottomEdgeItem.collapse()
             }
         }
-
     }
 
     function removeLiveCallView() {
@@ -488,6 +495,12 @@ MainView {
     }
 
     function switchToLiveCall(initialStatus, initialNumber) {
+        //postpone this function call until application is ready
+        if (!telepathyReady) {
+            pendingLiveCall = {initialStatus: initialStatus, initialNumber: initialNumber }
+            return
+        }
+
         if (pageStackNormalMode.depth > 2 && pageStackNormalMode.currentPage.objectName == "contactsPage") {
             // pop contacts Page
             pageStackNormalMode.pop();

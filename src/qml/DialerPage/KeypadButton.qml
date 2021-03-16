@@ -30,6 +30,7 @@ MouseArea {
     property int keycode
     property bool isCorner: false
     property int corner
+    property bool isVertical: parent.height > (parent.width * .75)
 
     UbuntuShape {
         objectName: "keypadButtonUbuntuShape"
@@ -42,6 +43,47 @@ MouseArea {
             }
         }
     }
+
+    states: [
+        State {
+            name: "VERTICAL"
+            when: isVertical
+            AnchorChanges {
+                target: labelItem
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            AnchorChanges {
+                target: sublabelItem
+                anchors.horizontalCenter: labelItem.horizontalCenter
+                anchors.top: labelItem.bottom
+            }
+            AnchorChanges {
+                target: subImage
+                anchors.horizontalCenter: labelItem.horizontalCenter
+                anchors.top: labelItem.bottom
+            }
+        },
+
+        State {
+            name: "HORIZONTAL"
+            when: !isVertical
+            AnchorChanges {
+                target: labelItem
+                anchors.horizontalCenter: undefined
+                anchors.left: parent.left
+            }
+            AnchorChanges {
+                target: sublabelItem
+                anchors.left: labelItem.right
+                anchors.verticalCenter: parent.verticalCenter
+            }
+            AnchorChanges {
+                target: subImage
+                anchors.left: labelItem.right
+                anchors.verticalCenter: parent.verticalCenter
+            }
+        }
+    ]
 
     Item {
         objectName: "keypadButtonLabelsContainer"
@@ -58,9 +100,9 @@ MouseArea {
             id: labelItem
 
             anchors {
-                horizontalCenter: parent.horizontalCenter
                 verticalCenter: parent.verticalCenter
-                verticalCenterOffset: -units.gu(0.5)
+                verticalCenterOffset: button.state == "VERTICAL" ? -units.gu(0.5) : 0
+                leftMargin: button.state == "VERTICAL" ? undefined : units.gu(0.5)
             }
 
             font.pixelSize: units.dp(30)
@@ -71,9 +113,8 @@ MouseArea {
             id: sublabelItem
 
             anchors {
-                top: labelItem.bottom
-                topMargin: units.dp(1.5)
-                horizontalCenter: labelItem.horizontalCenter
+                topMargin: button.state == "VERTICAL" ? units.dp(1.5) : undefined
+                leftMargin: button.state == "VERTICAL" ? undefined : units.gu(0.5)
             }
 
             fontSize: "x-small"
@@ -83,11 +124,12 @@ MouseArea {
         Icon {
             id: subImage
             visible: name != ""
+
             anchors {
-                top: labelItem.bottom
-                horizontalCenter: labelItem.horizontalCenter
-                topMargin: units.dp(1.5)
+                topMargin: button.state == "VERTICAL" ? units.dp(1.5) : undefined
+                leftMargin: button.state == "VERTICAL" ? undefined : units.gu(0.5)
             }
+
             opacity: 0.8
             width: units.gu(2)
             height: units.gu(2)
