@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-10-27 17:01+0000\n"
+"PO-Revision-Date: 2021-03-04 20:28+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "dialer-app/nl/>\n"
@@ -333,7 +333,7 @@ msgstr "Niet meer vragen"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
-msgstr "Aanpassen"
+msgstr "Bewerken"
 
 #: ../src/qml/DialerPage/DialerPage.qml:147
 #: ../src/qml/DialerPage/DialerPage.qml:157
@@ -516,7 +516,7 @@ msgstr "Nummers"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "Oké"
+msgstr "Uitzetten"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -635,7 +635,7 @@ msgstr "Zoeken…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "Kiezen"
+msgstr "Selecteren"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
