@@ -33,6 +33,17 @@ Item {
     signal keyPressed(int keycode, string keychar, string keyText)
     signal keyPressAndHold(int keycode, string keychar)
 
+    function keyTextfromKeyCode(keyCode) {
+        for (var i = 0; i < keys.children.length; i++)
+        {
+            var item = keys.children[i]
+            if (item.keycode === keyCode) {
+                return item.sublabel
+            }
+        }
+        return ""
+    }
+
     GridLayout {
         id: keys
 

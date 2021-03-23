@@ -31,6 +31,9 @@ Item {
     property  string phoneNumberField: ""
     property int nameSearchLastIndex: 0
     property bool emptySearch: phoneNumberField.length === 0
+    //this is a work around for contact not being fetched while user is addind more patterns
+    // it becomes true when either there is a search result, or after a period of time ( see Timer )
+    property bool fetchComplete: false
 
     signal contactSelected(QtObject contact)
 
@@ -53,6 +56,7 @@ Item {
         searchHistory = []
         nameSearchLastIndex = 0
         state = "NO_FILTER"
+        fetchComplete = false
         generateFilters()
     }
 
@@ -79,16 +83,31 @@ Item {
                 //first time
                 state = "NAME_SEARCH"
             } else {
-
-                if (state === "NAME_SEARCH" && contactModel.contacts.length === 0) {
+                if (state === "NAME_SEARCH" && fetchComplete && contactModel.contacts.length === 0) {
                     //start to search for phone numbers if no contact found
                     state = "NUMBER_SEARCH"
                     // store here the last time we did a textSearch
                     nameSearchLastIndex = searchHistory.length
                 }
             }
+            fetchComplete = false
+            searchTimer.start()
+        }
+    }
 
+    Timer {
+        id:searchTimer
+        interval: 300; running: false; repeat: false
+        onTriggered: {
             generateFilters()
+        }
+    }
+
+    Timer {
+        id:checkTimer
+        interval: 300; running: false; repeat: false
+        onTriggered: {
+            fetchComplete = true
         }
     }
 
@@ -122,6 +141,7 @@ Item {
             tmpFilters = [invalidFilter]
         }
         contactModel.filters = tmpFilters
+        checkTimer.start()
     }
 
     onContactSelected: clearAll()
@@ -216,9 +236,22 @@ Item {
         anchors.fill: parent
         model: contactModel
         spacing: units.gu(2)
-        delegate: Label {
-            fontSize: "medium"
-            text:  contact.displayLabel.label
+        delegate: Rectangle {
+
+            width: lbl.width + units.gu(2)
+            height: root.height
+            color: theme.palette.normal.foreground
+            border.color: UbuntuColors.silk
+            radius: 10
+
+            Label {
+                id:lbl
+                fontSize: "medium"
+                text:  contact.displayLabel.label
+                anchors.verticalCenter: parent.verticalCenter
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+
             MouseArea {
                 anchors.fill: parent
                 onClicked: {

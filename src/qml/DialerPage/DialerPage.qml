@@ -203,7 +203,7 @@ Page {
         if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
             page.focus = false;
         }
-        keypad.keyPressed(event.key, event.text, event.text)
+        keypad.keyPressed(event.key, event.text, keypad.keyTextfromKeyCode(event.key))
     }
 
     function triggerCallAnimation() {
