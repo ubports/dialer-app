@@ -126,7 +126,9 @@ Item {
         for(i = 0; i < searchPatterns.length; i++) {
             f = lastNameFilter.createObject(parent, { value: searchPatterns[i]});
             newFilters.push(f)
-            f = firstNameFilter.createObject(parent, { value: searchPatterns[i]});
+//            f = firstNameFilter.createObject(parent, { value: searchPatterns[i]});
+//            newFilters.push(f)
+            f = nameFilter.createObject(parent, { value: searchPatterns[i]});
             newFilters.push(f)
         }
         return newFilters
@@ -162,6 +164,15 @@ Item {
         DetailFilter {
             detail: ContactDetail.Name
             field: Name.LastName
+            matchFlags: DetailFilter.MatchStartsWith
+        }
+    }
+
+    Component {
+        id: nameFilter
+        DetailFilter {
+            detail: (contactModel.manager === "galera" ? ContactDetail.ExtendedDetail : ContactDetail.DisplayLabel)
+            field: (contactModel.manager === "galera" ? ExtendedDetail.Data : DisplayLabel.Label)
             matchFlags: DetailFilter.MatchStartsWith
         }
     }
