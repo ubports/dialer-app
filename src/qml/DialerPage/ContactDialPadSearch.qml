@@ -79,9 +79,11 @@ Item {
     function push(pattern) {
         if (pattern && pattern.length > 0) {
             searchHistory.push(pattern)
+
             if (state === "NO_FILTER" && phoneNumberField.length === 1 && searchHistory.length === 1) {
                 //first time
                 state = "NAME_SEARCH"
+
             } else {
                 if (state === "NAME_SEARCH" && fetchComplete && contactModel.contacts.length === 0) {
                     //start to search for phone numbers if no contact found
