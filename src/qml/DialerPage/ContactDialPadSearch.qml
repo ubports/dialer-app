@@ -26,7 +26,6 @@ Item {
     id:root
     objectName: "root"
     state: "NO_FILTER"
-    onStateChanged: console.log(state)
 
     property var searchHistory : []
     property  string phoneNumberField: ""
@@ -78,7 +77,6 @@ Item {
     }
 
     function push(pattern) {
-        console.log('pattern:', pattern)
         if (pattern && pattern.length > 0) {
             searchHistory.push(pattern)
 
@@ -110,7 +108,6 @@ Item {
         id:searchTimer
         interval: 300; running: false; repeat: false
         onTriggered: {
-            console.log('generateFilter')
             generateFilters()
         }
     }
@@ -125,7 +122,6 @@ Item {
 
     function generateTextFilters() {
         var i, f, newFilters = []
-        console.log(searchHistory)
         //generate patterns
         var tmp = []
         for (var i = 0; i < searchHistory.length; i++) {
@@ -147,13 +143,11 @@ Item {
         if (state === 'NAME_SEARCH') {
             tmpFilters = generateTextFilters()
             if (!Contacts.containsLetters(searchHistory)) {
-                console.log('has numbers')
                 phoneNumberFilter.value = phoneNumberField.replace(/ /g,'')
                 tmpFilters.push(phoneNumberFilter)
             }
 
         } else if (state === 'NUMBER_SEARCH') {
-            console.log('search for:', phoneNumberField.replace(/ /g,''))
             phoneNumberFilter.value = phoneNumberField.replace(/ /g,'')
             tmpFilters = [fakeFilter, phoneNumberFilter]
         } else {

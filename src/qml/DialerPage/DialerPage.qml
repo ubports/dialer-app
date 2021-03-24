@@ -407,7 +407,7 @@ Page {
 
         ContactDialPadSearch {
             id: contactSearch
-            height: units.gu(4)
+            height: page.compactView ? units.gu(3): units.gu(4)
             anchors {
                 top: divider.bottom
                 left: parent.left
