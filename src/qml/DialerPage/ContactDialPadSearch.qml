@@ -26,6 +26,7 @@ Item {
     id:root
     objectName: "root"
     state: "NO_FILTER"
+    onStateChanged: console.log(state)
 
     property var searchHistory : []
     property  string phoneNumberField: ""
@@ -77,12 +78,20 @@ Item {
     }
 
     function push(pattern) {
+        console.log('pattern:', pattern)
         if (pattern && pattern.length > 0) {
             searchHistory.push(pattern)
 
-            if (state === "NO_FILTER" && phoneNumberField.length === 1 && searchHistory.length === 1) {
-                //first time
-                state = "NAME_SEARCH"
+            if (state === "NO_FILTER" && phoneNumberField.length === 1 ) {
+
+                if (pattern === "0" || pattern === "1") {
+                    state = "NUMBER_SEARCH"
+                    return
+
+                } else if (searchHistory.length === 1) {
+                    //first time
+                    state = "NAME_SEARCH"
+                }
 
             } else {
                 if (state === "NAME_SEARCH" && fetchComplete && contactModel.contacts.length === 0) {
@@ -101,6 +110,7 @@ Item {
         id:searchTimer
         interval: 300; running: false; repeat: false
         onTriggered: {
+            console.log('generateFilter')
             generateFilters()
         }
     }
@@ -115,7 +125,7 @@ Item {
 
     function generateTextFilters() {
         var i, f, newFilters = []
-
+        console.log(searchHistory)
         //generate patterns
         var tmp = []
         for (var i = 0; i < searchHistory.length; i++) {
@@ -126,9 +136,7 @@ Item {
         for(i = 0; i < searchPatterns.length; i++) {
             f = lastNameFilter.createObject(parent, { value: searchPatterns[i]});
             newFilters.push(f)
-//            f = firstNameFilter.createObject(parent, { value: searchPatterns[i]});
-//            newFilters.push(f)
-            f = nameFilter.createObject(parent, { value: searchPatterns[i]});
+            f = labelFilter.createObject(parent, { value: searchPatterns[i]});
             newFilters.push(f)
         }
         return newFilters
@@ -138,7 +146,14 @@ Item {
         var tmpFilters
         if (state === 'NAME_SEARCH') {
             tmpFilters = generateTextFilters()
+            if (!Contacts.containsLetters(searchHistory)) {
+                console.log('has numbers')
+                phoneNumberFilter.value = phoneNumberField.replace(/ /g,'')
+                tmpFilters.push(phoneNumberFilter)
+            }
+
         } else if (state === 'NUMBER_SEARCH') {
+            console.log('search for:', phoneNumberField.replace(/ /g,''))
             phoneNumberFilter.value = phoneNumberField.replace(/ /g,'')
             tmpFilters = [fakeFilter, phoneNumberFilter]
         } else {
@@ -169,7 +184,7 @@ Item {
     }
 
     Component {
-        id: nameFilter
+        id: labelFilter
         DetailFilter {
             detail: (contactModel.manager === "galera" ? ContactDetail.ExtendedDetail : ContactDetail.DisplayLabel)
             field: (contactModel.manager === "galera" ? ExtendedDetail.Data : DisplayLabel.Label)
@@ -259,6 +274,7 @@ Item {
 
             Label {
                 id:lbl
+                objectName: "contactItem"
                 fontSize: "medium"
                 text:  contact.displayLabel.label
                 anchors.verticalCenter: parent.verticalCenter

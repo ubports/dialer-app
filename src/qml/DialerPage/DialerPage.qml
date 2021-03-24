@@ -436,7 +436,12 @@ Page {
                         contactSearch.push(keyText)
                     }
                 }
-                onKeyPressAndHold : contactSearch.clearAll()
+                onKeyPressAndHold : {
+                    if (keycode == Qt.Key_1) {
+                        contactSearch.clearAll()
+
+                    }
+                }
             }
             Connections {
                 target: backspace

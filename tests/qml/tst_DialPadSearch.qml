@@ -247,7 +247,8 @@ Item {
             spyOnCountChanged.wait()
             compare(listView.count, 1)
             tryVerify(function(){ return listView.currentItem })
-            compare(listView.currentItem.text, "contactA")
+            var contactItem = findChild(listView.currentItem, 'contactItem')
+            compare(contactItem.text, "contactA")
 
             mouseClick(listView.currentItem)
             spyOnContactSelected.wait()
@@ -264,7 +265,8 @@ Item {
             tryCompare(listView, "count", 1)
 
             tryVerify(function(){ return listView.currentItem })
-            compare(listView.currentItem.text, "contactB")
+            var contactItem = findChild(listView.currentItem, 'contactItem')
+            compare(contactItem.text, "contactB")
             mouseClick(listView.currentItem)
             spyOnContactSelected.wait()
             compare(spyOnContactSelected.count, 1)
@@ -276,11 +278,13 @@ Item {
         // test user interaction to select the correct number
         function test_multiPhoneNumberSelectionPopup() {
             appendPattern('z')
+            appendPattern('o')
             spyOnCountChanged.wait()
 
             var listView = findChild(dialPadSearch, 'listView')
             tryVerify(function(){ return listView.currentItem })
-            compare(listView.currentItem.text, "contactB")
+            var contactItem = findChild(listView.currentItem, 'contactItem')
+            compare(contactItem.text, "contactB")
 
             mouseClick(listView.currentItem)
             wait(200) //wait popup to display
