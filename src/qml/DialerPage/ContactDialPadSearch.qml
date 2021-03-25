@@ -34,6 +34,7 @@ Item {
     //this is a work around for contact not being fetched while user is addind more patterns
     // it becomes true when either there is a search result, or after a period of time ( see Timer )
     property bool fetchComplete: false
+    property bool typeForward: true
 
     signal contactSelected(QtObject contact)
 
@@ -62,6 +63,7 @@ Item {
 
     function pop() {
         searchHistory.pop()
+        root.typeForward = false
         if (state === "NO_FILTER" && !emptySearch) {
             // user have selected a contact and hit back space
             state = "NUMBER_SEARCH"
@@ -77,6 +79,7 @@ Item {
     }
 
     function push(pattern) {
+        root.typeForward = true
         if (pattern && pattern.length > 0) {
             searchHistory.push(pattern)
 
@@ -210,6 +213,8 @@ Item {
         id: contactModel
         objectName: "contactModel"
         manager: "galera"
+        property int contactPreviousCount: 0
+
         property alias filters: _filters.filters
         sortOrders: [
             SortOrder {
@@ -241,7 +246,17 @@ Item {
                 //store here the last time we did a successfull textSearch
                 nameSearchLastIndex = searchHistory.length -1
                 generateFilters()
+            } else {
+                // When backend takes time to retrieve the contacts, any change in filter doesn't have any effect so we have to force filter again
+                // backend retieve contacts in several batch
+                if (root.typeForward && contacts.length > contactPreviousCount &&  contactPreviousCount > 0) {
+                    console.log("ok redo the filters")
+                    searchTimer.start()
+                }
             }
+
+            listView.positionViewAtBeginning()
+            contactPreviousCount = contacts.length
         }
 
         onErrorChanged: {
@@ -312,7 +327,6 @@ Item {
         objectName: "fakeItemPositionner"
         x: parent.width /2
         y: units.gu(12)
-
     }
 
     Component {
