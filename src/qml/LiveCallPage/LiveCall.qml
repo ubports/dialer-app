@@ -43,7 +43,6 @@ Page {
     property bool isVoicemail: (call ? call.voicemail : false) && callManager.calls.length === 1
     property string activeAudioOutput: call ? call.activeAudioOutput : ""
     property variant audioOutputs: call ? call.audioOutputs : null
-    property string phoneNumberSubTypeLabel: ""
     property int defaultTimeout: 10000
     property string initialStatus: ""
     property string initialNumber: ""
@@ -83,7 +82,7 @@ Page {
         }
         Sections {
             id: headerSections
-            model: [call.account.displayName]
+            model: call ? [call.account.displayName]: []
             selectedIndex: 0
             anchors.left: parent.left
             anchors.bottom: parent.bottom
@@ -422,42 +421,20 @@ Page {
         }
     }
 
-    Item {
-        id: helper
-        function updateSubTypeLabel() {
-            phoneNumberSubTypeLabel = contactWatcher.isUnknown ? "": phoneTypeModel.get(phoneTypeModel.getTypeIndex(phoneDetail)).label
-        }
-        Component.onCompleted: updateSubTypeLabel()
-
-        ContactWatcher {
-            id: contactWatcher
-            // FIXME: handle conf calls
-            identifier: {
-                if (initialNumber != "") {
-                    return initialNumber
-                } else if (call) {
-                    return call.phoneNumber
-                }
-                return ""
+    ContactWatcher {
+        id: contactWatcher
+        // FIXME: handle conf calls
+        identifier: {
+            if (initialNumber != "") {
+                return initialNumber
+            } else if (call) {
+                return call.phoneNumber
             }
-
-            onDetailPropertiesChanged: helper.updateSubTypeLabel()
-            onIsUnknownChanged: helper.updateSubTypeLabel()
-            // FIXME: if we implement VOIP, get the addressable fields from the account itself
-            addressableFields: ["tel"]
+            return ""
         }
 
-
-        PhoneNumber {
-            id: phoneDetail
-            contexts: contactWatcher.detailProperties.phoneNumberContexts
-            subTypes: contactWatcher.detailProperties.phoneNumberSubTypes
-        }
-
-        ContactDetailPhoneNumberTypeModel {
-            id: phoneTypeModel
-            Component.onCompleted: helper.updateSubTypeLabel()
-        }
+        // FIXME: if we implement VOIP, get the addressable fields from the account itself
+        addressableFields: ["tel"]
     }
 
     StopWatch {
@@ -687,7 +664,7 @@ Page {
                     }
                 }
             }
-            enabled: audioOutputs.length > 1
+            enabled: audioOutputs && audioOutputs.length > 1
         }
 
         LiveCallKeypadButton {

@@ -51,7 +51,6 @@ static void printUsage(const QStringList& arguments)
 //On desktop use: export DIALER_APP_ICON_THEME=ubuntu-mobile
 static void installIconPath()
 {
-    qDebug() << __PRETTY_FUNCTION__;
     QByteArray iconTheme = qgetenv("DIALER_APP_ICON_THEME");
     if (!iconTheme.isEmpty()) {
         QIcon::setThemeName(iconTheme);

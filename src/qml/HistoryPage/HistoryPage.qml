@@ -31,7 +31,6 @@ Page {
     property bool bottomEdgeCommitted: false
     property QtObject bottomEdgeItem: null
     property string searchTerm
-    property int delegateHeight: delegate.height
     // NOTE: in case we need to re-enable progressive bottom edge gesture,
     // set fullView to currentIndex == -1
     property bool fullView: true
@@ -123,16 +122,6 @@ Page {
         }
         if (historyList.count > 0) {
             swipeItemDemo.enable()
-        }
-    }
-
-    // Use this delegate just to calculate the height
-    HistoryDelegate {
-        id: delegate
-        visible: false
-        property variant model: Item {
-            property string senderId: "dummy"
-            property variant participants: [ {identifier:"dummy"} ]
         }
     }
 
