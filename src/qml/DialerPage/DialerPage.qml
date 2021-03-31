@@ -17,7 +17,7 @@
  */
 
 import QtContacts 5.0
-import QtQuick 2.4
+import QtQuick 2.9
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Telephony 0.1
@@ -429,6 +429,7 @@ Page {
 
             Connections {
                 target: keypad
+                enabled: mainView.settings.contactSearchWithDialPad
                 onKeyPressed : {
                     if (keycode == Qt.Key_Backspace) {
                         contactSearch.pop()
@@ -445,6 +446,7 @@ Page {
             }
             Connections {
                 target: backspace
+                enabled: mainView.settings.contactSearchWithDialPad
                 onClicked : contactSearch.pop()
                 onPressAndHold : contactSearch.clearAll()
             }
