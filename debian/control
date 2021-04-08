@@ -15,6 +15,7 @@ Build-Depends:
  qml-module-qttest,
  qml-module-ubuntu-components,
  qtbase5-dev (>= 5.0),
+ qtpim5-dev,
  qtdeclarative5-dev (>= 5.0),
  qtdeclarative5-dev-tools,
  qtdeclarative5-ubuntu-addressbook0.1,

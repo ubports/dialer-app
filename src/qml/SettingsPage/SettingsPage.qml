@@ -126,6 +126,16 @@ Page {
                 enabled: (onlineAccountHelper.status === Loader.Ready) && (onlineAccountHelper.item.count > 0)
             }
 
+            ListItem.Standard {
+                control: Switch {
+                    property bool enabled: mainView.settings.contactSearchWithDialPad
+                    onEnabledChanged: checked = enabled
+                    Component.onCompleted: checked = enabled
+                    onTriggered: mainView.settings.contactSearchWithDialPad = checked
+                }
+                text: i18n.tr("Contact search with dial pad (Experimental)")
+            }
+
             Repeater {
                 model: telepathyHelper.voiceAccounts.all
 

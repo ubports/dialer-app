@@ -2,17 +2,21 @@ set(DIALER_APP dialer-app)
 
 set(dialer_app_HDRS
     dialerapplication.h
+    dialpadsearch.h
+    contactutils.h
     )
 
 set(dialer_app_SRCS
     dialerapplication.cpp
+    dialpadsearch.cpp
+    contactutils.cpp
     main.cpp
     )
 
 add_executable(${DIALER_APP}
     ${dialer_app_SRCS}
     )
-qt5_use_modules(${DIALER_APP} Core DBus Gui Qml Quick)
+qt5_use_modules(${DIALER_APP} Core DBus Gui Qml Quick Contacts)
 
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
