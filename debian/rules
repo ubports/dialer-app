@@ -26,9 +26,9 @@ override_dh_auto_configure:
 
 override_dh_auto_test:
 ifneq ($(DEB_HOST_ARCH),$(findstring $(DEB_HOST_ARCH), $(testskip_architectures)))
-	-dh_auto_test
-else
 	dh_auto_test
+else
+	-dh_auto_test
 endif
 
 override_dh_python3:
