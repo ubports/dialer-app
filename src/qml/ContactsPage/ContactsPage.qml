@@ -42,24 +42,28 @@ Page {
         }
     }
 
-    function triggerAction(contactIndex, action) {
-
-        var currentContact = contactList.listModel.contacts[contactIndex]
-        if (currentContact.phoneNumbers.length > 1) {
-            var dialog = PopupUtils.open(chooseNumberDialog, contactsPage, {
-                'contact': currentContact
-            });
-            dialog.selectedPhoneNumber.connect(
-                        function(number) {
-                            mainView.startCall(number)
-                            PopupUtils.close(dialog);
-                        })
+    function contactSelected(selectedContact) {
+        // no phone number case:
+        if (selectedContact.phoneNumbers.length === 0) {
+            mainView.viewContact(selectedContact,
+                                 contactsPage,
+                                 contactList.listModel)
         } else {
-            mainView.startCall(currentContact.phoneNumber.number)
+            // we have several phone numbers, open a popup to select to desired one
+            if (selectedContact.phoneNumbers.length > 1) {
+                var dialog = PopupUtils.open(chooseNumberDialog, contactsPage, {
+                    'contact': selectedContact
+                });
+                dialog.selectedPhoneNumber.connect(
+                            function(number) {
+                                mainView.populateDialpad(number)
+                                PopupUtils.close(dialog);
+                            })
+            } else {
+                mainView.populateDialpad(selectedContact.phoneNumber.number)
+            }
         }
     }
-
-
 
     Connections {
         target: contactList.listModel
@@ -236,17 +240,18 @@ Page {
                                            contactsPage,
                                            contactList.listModel)
             } else {
-                mainView.viewContact(contact,
-                                     contactsPage,
-                                     contactList.listModel)
+                contactSelected(contact)
             }
         }
         rightSideActions: [
                Action {
-                   iconName: "call-start"
-                   text: i18n.tr("Call")
+                   iconName: "contact"
+                   text: i18n.tr("view contact")
                    onTriggered: {
-                       triggerAction(value.contactIndex, "tel")
+                       var contact = contactList.listModel.contacts[value.contactIndex]
+                       mainView.viewContact(contact,
+                                            contactsPage,
+                                            contactList.listModel)
                    }
                }
 
