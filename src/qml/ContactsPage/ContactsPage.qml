@@ -283,6 +283,7 @@ Page {
                delegate: OptionSelectorDelegate {
                    highlightWhenPressed: true
                    text: modelData.number
+                   subText: phoneTypeModel.get(phoneTypeModel.getTypeIndex(modelData)).label
                    activeFocusOnPress: false
                }
                onDelegateClicked: selectedPhoneNumber(contact.phoneNumbers[index].number)
@@ -293,6 +294,10 @@ Page {
                onPressed: PopupUtils.close(dialog)
            }
        }
+   }
+
+   ContactDetailPhoneNumberTypeModel {
+       id: phoneTypeModel
    }
 
     Component.onCompleted: {
