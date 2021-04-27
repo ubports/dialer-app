@@ -243,6 +243,7 @@ Page {
                 contactSelected(contact)
             }
         }
+
         rightSideActions: [
                Action {
                    iconName: "contact"
@@ -258,15 +259,11 @@ Page {
            ]
        }
 
-
    Component {
        id: chooseNumberDialog
        Dialog {
            id: dialog
            property var contact
-           title: i18n.tr("Please select a phone number")
-           modal:true
-
            signal selectedPhoneNumber(string number)
 
            ListItem.ItemSelector {
@@ -277,7 +274,7 @@ Page {
                }
                activeFocusOnPress: false
                expanded: true
-               text: i18n.tr("Numbers") + ":"
+               text: contact.displayLabel.label
                model: contact.phoneNumbers
                selectedIndex: -1
                delegate: OptionSelectorDelegate {
