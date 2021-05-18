@@ -48,7 +48,7 @@ Component {
                 Button {
                     objectName: "okSimLockedDialog"
                     text: i18n.tr("Ok")
-                    color: theme.palette.selected.focus
+                    color: theme.palette.normal.focus
                     onClicked: {
                         PopupUtils.close(dialogue)
                     }

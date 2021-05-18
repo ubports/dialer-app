@@ -32,7 +32,7 @@ Component {
         Button {
             objectName: "setDefaultSimCardDialogYes"
             text: i18n.tr("Change")
-            color: theme.palette.selected.focus
+            color: theme.palette.normal.focus
             onClicked: {
                 telepathyHelper.setDefaultAccount(TelepathyHelper.Voice, mainView.account)
                 PopupUtils.close(dialogue)
