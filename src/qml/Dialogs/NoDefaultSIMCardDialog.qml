@@ -38,7 +38,7 @@ Component {
                     model: telepathyHelper.voiceAccounts.displayed
                     delegate: Label {
                         text: modelData.displayName
-                        color: theme.palette.selected.focus
+                        color: theme.palette.normal.focus
                         MouseArea {
                             anchors.fill: parent
                             onClicked: {
@@ -68,7 +68,6 @@ Component {
                 Button {
                     objectName: "noNoSimCardDefaultDialog"
                     text: i18n.tr("No")
-                    color: theme.palette.selected.focus
                     onClicked: {
                         dualSimSettings.mainViewDontAskCount = 3
                         PopupUtils.close(dialogue)
@@ -78,6 +77,7 @@ Component {
                 Button {
                     objectName: "laterNoSimCardDefaultDialog"
                     text: i18n.tr("Later")
+                    color: theme.palette.normal.focus
                     onClicked: {
                         PopupUtils.close(dialogue)
                         dualSimSettings.mainViewDontAskCount++
