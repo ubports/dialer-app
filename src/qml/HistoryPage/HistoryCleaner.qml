@@ -29,15 +29,24 @@ Dialog {
     title:  i18n.tr("Call history")
 
     state: "NONE"
+    property var error: undefined
+    property int eventsCount: 0
+    property int deletedEventsCount: 0
 
     signal accepted()
     signal dismissed()
+
+    function callback( _eventsCount, _deletedEventsCount, _error) {
+        error = _error
+        eventsCount = _eventsCount
+        deletedEventsCount = _deletedEventsCount
+    }
 
     function runDeleteOperation(afterMonth) {
         dialog.state = "INIT"
         var d = new Date()
         d.setMonth(d.getMonth() - afterMonth)
-        deleteEventModel.removeAll(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"));
+        deleteEventModel.removeEvents(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"), callback);
     }
 
     states: [
@@ -51,29 +60,27 @@ Dialog {
             PropertyChanges { target: dialog; text: i18n.tr("Checking...") }
         },
         State {
-            name: "NO_LOGS"
+            name: "NO_RECORDS"
+            when: error === HistoryManager.NO_ERROR && eventsCount === 0
             PropertyChanges { target: dialog; text: i18n.tr("No records to clean") }
             PropertyChanges { target: confirmPanel; visible: true }
         },
         State {
             name: "PENDING_DELETE"
-            PropertyChanges { target: dialog; text: i18n.tr("Deleting %1 records... (This can take several minutes)").arg(deleteEventModel.count) }
+            when: error === HistoryManager.NO_ERROR && eventsCount > 0 && deletedEventsCount < eventsCount
+            PropertyChanges { target: dialog; text: i18n.tr("Deleting %1 out of %2 records... (This can take several minutes)").arg(deletedEventsCount).arg(eventsCount) }
             PropertyChanges { target: deleteIndicator; running: true }
         },
         State {
             name: "FINISHED"
-            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records").arg(deleteEventModel.deletedCount) }
+            when: error === HistoryManager.NO_ERROR && eventsCount > 0 && deletedEventsCount === eventsCount
+            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records").arg(deletedEventsCount) }
             PropertyChanges { target: dismissBtn; visible: true }
         },
         State {
             name: "ERROR"
-            when: deleteEventModel.error !== HistoryManager.NO_ERROR
-            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records, sorry, something went wrong.").arg(deleteEventModel.deletedCount) }
-            PropertyChanges { target: dismissBtn; visible: true }
-        },
-        State {
-            name: "TIMEOUT"
-            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records, operation reached timeout. Please retry later").arg(deleteEventModel.deletedCount) }
+            when: error !== undefined && error !== HistoryManager.NO_ERROR
+            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records, sorry, something went wrong.").arg(deletedEventsCount) }
             PropertyChanges { target: dismissBtn; visible: true }
         }
     ]
@@ -83,34 +90,11 @@ Dialog {
         running: false
     }
 
-    HistoryFilter {
-        id: removeFilter
-        filterProperty: "timestamp"
-        matchFlags: HistoryFilter.MatchLess
-    }
-
     HistoryManager {
         id: deleteEventModel
-
-        onOperationStarted: {
-            dialog.state = "PENDING_DELETE"
-        }
-
-        onOperationEnded: {
-            if (error === HistoryManager.NO_ERROR) {
-                if (count === 0) {
-                    dialog.state = "NO_LOGS"
-                } else {
-                    dialog.state = "FINISHED"
-                }
-            } else {
-                dialog.state = "ERROR"
-            }
-        }
-        onOperationTimeOutReached: {
-            dialog.state = "TIMEOUT"
-        }
     }
+
+
 
     Column {
         id: confirmPanel
