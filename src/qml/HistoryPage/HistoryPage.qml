@@ -163,7 +163,7 @@ Page {
             sortField: "timestamp"
             sortOrder: HistorySort.DescendingOrder
         }
-        filter: emptyFilter
+        filter: bottomEdgeCommitted ? emptyFilter : null
         matchContacts: true
     }
 
