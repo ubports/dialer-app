@@ -2,5 +2,6 @@ execute_process(COMMAND python3 -c "from distutils.sysconfig import get_python_l
     OUTPUT_VARIABLE PYTHON_PACKAGE_DIR OUTPUT_STRIP_TRAILING_WHITESPACE)
 
 add_subdirectory(qml)
+add_subdirectory(private)
 add_subdirectory(data)
 add_subdirectory(autopilot)

@@ -1,5 +1,4 @@
 {
   "builder": "cmake",
   "build_args": "-DCLICK_MODE=ON -DENABLE_TESTS=OFF"
-
 }
