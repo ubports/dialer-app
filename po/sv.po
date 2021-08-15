@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-06-01 23:45+0000\n"
-"Last-Translator: Marcus Fredlund <marcus.karlson@gmail.com>\n"
+"PO-Revision-Date: 2021-07-26 20:32+0000\n"
+"Last-Translator: Rondy Andersson <rondarius@vivaldi.net>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sv/>\n"
 "Language: sv\n"
@@ -35,14 +35,14 @@ msgstr "%1 - väntande"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 Antal omskrivningar"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 Tjänster"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -134,7 +134,7 @@ msgstr "Aktiv"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "Lägg till ett internet konto"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -147,18 +147,16 @@ msgid "All"
 msgstr "Alla"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Inga samtal"
+msgstr "Alla samtal"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "Bluetoooth-enhet"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Ringer upp"
+msgstr "Ring upp"
 
 #: ../src/qml/dialer-app.qml:587
 msgid "Call Barring"
@@ -184,17 +182,16 @@ msgstr "Samtal misslyckades"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "Samtal vidarekopplas"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Vidarekopplat samtal kan inte ändras just nu."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Status för vidarekopplat samtal kan inte kontrolleras "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -205,7 +202,6 @@ msgstr "Samtal väntar misslyckades"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
 msgstr "Samtal väntar"
 
@@ -245,7 +241,7 @@ msgstr "Ändra alla uppringningassociationer till %1?"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "Tecken som behöver tas bort"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -276,7 +272,7 @@ msgstr "Kontaktuppgifter"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Kontakt är inte associerad med något telefonnummer."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -284,13 +280,12 @@ msgid "Contacts"
 msgstr "Kontakter"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Kontakter"
+msgstr "Kontakter..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Kunde inte vidarekoppla till denna kontakt"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
@@ -298,11 +293,11 @@ msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "Standard regions kod"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "Standard lands kod"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -316,7 +311,7 @@ msgstr "Detaljer"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "Knappsats tonval"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -346,31 +341,29 @@ msgid "Emergency Calls"
 msgstr "Nödsamtal"
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
-#, fuzzy
 msgid "Emergency call"
 msgstr "Nödsamtal"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "Ange en landskod"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Ange nummer"
+msgstr "Ange ett nummer"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "Ange nummer"
+msgstr "Ange en prefix"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "Ange en regionskod"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Ange de tecken som ska tas bort"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -389,9 +382,8 @@ msgid "Failed to place the active call on hold."
 msgstr "Misslyckades med att placera det aktiva samtalet i kö."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "Favoriter"
+msgstr "Favorit kontakter"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgid "Favorites"
@@ -404,17 +396,17 @@ msgstr "Flygläge"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Vidarekoppla samtliga inkommande samtal"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Vidarekoppla inkommande samtal när:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Vidarekoppla till"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -426,11 +418,11 @@ msgstr "Uppfattat"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Jag svarar inte"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Jag är i ett annat samtal"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -444,7 +436,7 @@ msgstr "Inkommande"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "Initialiserar..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -457,7 +449,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Sist uppringda %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -468,6 +460,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Låter dig svara eller starta ett nytt samtal under ett pågående samtal och "
+"byta mellan dem"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -489,7 +483,7 @@ msgstr "Mobil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Min telefon går inte att nå"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -514,11 +508,11 @@ msgstr "Inga tidigare samtal"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "Antal omskrivningar"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Nummer"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
@@ -527,7 +521,7 @@ msgstr "OK"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Av"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -535,7 +529,7 @@ msgstr "Ok"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "På"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -576,7 +570,7 @@ msgstr "Välj konto att skapa."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Vänligen ange ett telefonnummer"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -595,7 +589,7 @@ msgstr "Var god vänta"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "Prefix"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -613,11 +607,11 @@ msgstr "Senast"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Omdirigerar alla samtal till ett annat nummer."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -658,12 +652,11 @@ msgstr "Skicka meddelande"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Tjänster"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Välj"
+msgstr "Sätt"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -676,9 +669,8 @@ msgid "Share"
 msgstr "Dela"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Inga samtal"
+msgstr "Vissa samtal"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -715,7 +707,7 @@ msgstr "Just nu finns inget nätverk."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Detta är inte ett akutnummer."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41

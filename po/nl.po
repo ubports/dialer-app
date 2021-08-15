@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-05-29 18:40+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
+"PO-Revision-Date: 2021-07-22 10:09+0000\n"
+"Last-Translator: Jeroen Baten <jbaten@i2rs.nl>\n"
 "Language-Team: Dutch <https://translate.ubports.com/projects/ubports/"
 "dialer-app/nl/>\n"
 "Language: nl\n"
@@ -50,7 +50,7 @@ msgstr "%1-diensten"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 uur"
-msgstr[1] "%1 uur"
+msgstr[1] "%1 uren"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -187,11 +187,11 @@ msgstr "Gespreksdoorschakeling"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr "De optie 'Gesprek doorschakelen' kan nu niet worden aangepast."
+msgstr "De optie ‘Gesprek doorschakelen’ kan momenteel niet worden aangepast."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr "De status van 'gesprek doorschakelen' kan niet worden gecontroleerd "
+msgstr "De status van ‘Gesprek doorschakelen’ kan niet worden gecontroleerd "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -281,7 +281,7 @@ msgstr "Contactpersonen"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
 msgid "Contacts..."
-msgstr "Contactpersonen..."
+msgstr "Contactpersonen…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
@@ -436,7 +436,7 @@ msgstr "Inkomend"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr "Bezig met initialiseren..."
+msgstr "Bezig met initialiseren…"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
