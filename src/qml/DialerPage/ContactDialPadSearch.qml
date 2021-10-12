@@ -26,9 +26,8 @@ import dialerapp.private 0.1
 Item {
     id:root
     objectName: "root"
-    state: dialPadSearch.state
 
-    property  string phoneNumberField: ""
+    property string phoneNumberField: ""
     signal contactSelected(string phoneNumber)
 
 
@@ -37,7 +36,7 @@ Item {
     }
 
     function push(pattern) {
-        dialPadSearch.push(pattern);
+        dialPadSearch.push(pattern, phoneNumberField);
     }
 
     function clearAll() {
@@ -48,7 +47,7 @@ Item {
         if (contact.phoneNumbers.length > 1) {
             // try to determine the right number if user search with numbers
             for (var i=0; i < contact.phoneNumbers.length; i++) {
-                if (contact.phoneNumbers[i].startsWith(phoneNumberField.replace(/ /g,''))) {
+                if (contact.phoneNumbers[i].replace(/ /g,'').startsWith(phoneNumberField.replace(/ /g,''))) {
                     contactSelected(contact.phoneNumbers[i])
                     return
                 }
@@ -73,6 +72,7 @@ Item {
     DialPadSearch {
         id: dialPadSearch
         objectName: "dialPadSearchModel"
+        //manager: "org.nemomobile.contacts.sqlite"
         manager: "galera"
         countryCode:  PhoneUtils.getCountryCodePrefix(PhoneUtils.defaultRegion)
 
@@ -139,7 +139,6 @@ Item {
 
                 height: units.gu(6) * phoneNumbers.length
                 width: parent.width
-                Component.onCompleted: console.log(phoneNumbers)
                 delegate: ListItem {
                     divider.visible: true
                     height: layout.height + (divider.visible ? divider.height : 0)

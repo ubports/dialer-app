@@ -24,12 +24,10 @@
 #include <QContactUnionFilter>
 #include <QContactDetailFilter>
 #include <QContactName>
-#include <QContactExtendedDetail>
 #include <QContactFetchHint>
 #include <QContactDisplayLabel>
 #include <QContactSortOrder>
 #include <QContactFavorite>
-
 #include <QContactPhoneNumber>
 #include <QContactTimestamp>
 #include <QContactAbstractRequest>
@@ -50,16 +48,28 @@ QStringList Contact::phoneNumbers() const
     return mPhoneNumbers;
 }
 
-DialPadSearch::DialPadSearch(QObject *parent): QAbstractListModel(parent),
-    mRequest(0),  mSearchHistory(), mState("NO_FILTER"), mCountryCode(-1), mNameSearchLastIndex(-1), mRequestCompleted(false)
+QStringList Contact::normalizedValues() const
 {
+    return mNormalizedValues;
+}
+
+void Contact::setNormalizedValues(const QStringList values)
+{
+    mNormalizedValues = values;
+}
+
+DialPadSearch::DialPadSearch(QObject *parent): QAbstractListModel(parent),
+    mPendingRequest(nullptr),  mState(SearchState::NO_FILTER), mCountryCode(-1), mLastSuccessfullSearchIdx(-1), mCurrentSearchIdx(-1), mFetchAgainNeeded(false)
+{
+    connect(this, SIGNAL(queryChanged()),this, SLOT(onQueryChanged()));
+    connect(this, SIGNAL(rowCountChanged()),this, SLOT(onQueryEnded()));
 }
 
 DialPadSearch::~DialPadSearch()
 {
-    if (mRequest) {
-        mRequest->cancel();
-        delete mRequest;
+    if (mPendingRequest) {
+        mPendingRequest->cancel();
+        mPendingRequest->deleteLater();
     }
 }
 
@@ -74,8 +84,8 @@ void DialPadSearch::setPhoneNumber(const QString &phoneNumber)
     if (mPhoneNumber.length() > 0) {
         int len = qMin(tmpNumber.length(), mPhoneNumber.length());
         if (!tmpNumber.startsWith(mPhoneNumber.left(len))) {
-                // in case user set a different number from the contact page or outside of the app
-                clearAll();
+            // in case user set a different number from the contact page or outside of the app
+            clearAll();
         }
     }
     mPhoneNumber = tmpNumber;
@@ -91,16 +101,15 @@ void DialPadSearch::setCountryCode(int countryCode)
     mCountryCode = countryCode;
 }
 
-QString DialPadSearch::state() const
+DialPadSearch::SearchState DialPadSearch::state() const
 {
     return mState;
 }
 
-void DialPadSearch::setState(const QString &state)
+void DialPadSearch::setState(const SearchState &state)
 {
-    if (!state.isEmpty() && state != mState) {
+    if (state != mState) {
         mState = state;
-        Q_EMIT stateChanged();
     }
 }
 
@@ -118,34 +127,41 @@ QString DialPadSearch::manager() const
     return mManager;
 }
 
+bool DialPadSearch::valid()
+{
+    bool valid = false;
+    if (mState == SearchState::NUMBER_SEARCH) {
+        // no need to retrieve too many contacts if we are searching for numbers
+        // for non international number, start to search when we have 3 digits
+        // for international number, start to search 2 digits after the prefix
+        int minNumbers = mPhoneNumber.startsWith("+") ? QString::number(mCountryCode).count() + 3 : 3;
+        valid = mPhoneNumber.count() >= minNumbers;
+    } else  {
+        valid = mSearchHistory.count() >= 2;
+    }
+    return valid;
+}
+
 void DialPadSearch::push(const QString &pattern)
 {
     if (pattern.isEmpty()) return;
 
     mSearchHistory << pattern;
 
-    QString currentState;
-    if (state() == "NO_FILTER") {
+    SearchState nextState = mState;
+    if (mState == SearchState::NO_FILTER) {
         if (pattern == "0" || pattern == "1") {
-            currentState = "NUMBER_SEARCH";
-        // start searching for name first, but don't start before at least to digits entered
-        } else if (mSearchHistory.count() == 2) {
-            currentState = "NAME_SEARCH";
-        }
-    }
-    setState(currentState);
-
-    if (state() == "NUMBER_SEARCH") {
-        // no need to retrieve too many contacts if we are searching for numbers
-        // for non international number, start to search when we have 3 digits
-        // for international number, start to search 2 digits after the prefix
-        if (mPhoneNumber.count() < 3 || (mPhoneNumber.startsWith("+") && mPhoneNumber.count() < QString::number(mCountryCode).count() + 3)) {
-            return;
+            nextState = SearchState::NUMBER_SEARCH;
+        } else {
+            // start searching for name first
+            nextState = SearchState::NAME_SEARCH;
         }
     }
 
-    generateFilters();
-
+    setState(nextState);
+    if (valid()) {
+        Q_EMIT queryChanged();
+    }
 }
 
 void DialPadSearch::pop()
@@ -154,40 +170,90 @@ void DialPadSearch::pop()
         mSearchHistory.pop_back();
     }
 
-    QString currentState;
-    if (mState == "NO_FILTER" && !mPhoneNumber.isEmpty()) {
+    SearchState nextState = mState;;
+    if (mState == SearchState::NO_FILTER && !mPhoneNumber.isEmpty()) {
         // user have selected a contact and hit back space
-        currentState = "NUMBER_SEARCH";
-    } else if (!mSearchHistory.isEmpty() && mSearchHistory.count() == mNameSearchLastIndex){
+        nextState = SearchState::NUMBER_SEARCH;
+    } else if (!mSearchHistory.isEmpty() && mSearchHistory.count() == mLastSuccessfullSearchIdx){
         // return to name search
-        currentState = "NAME_SEARCH";
-    } else if (mPhoneNumber.isEmpty() || mPhoneNumber.count() == 1) {
-        clearAll();
-
+        nextState = SearchState::NAME_SEARCH;
     }
-    setState(currentState);
 
-    // no need to retrieve too many contacts if we are searching for numbers
-    if (mState == "NUMBER_SEARCH") {
-        if (mPhoneNumber.count() < 3 || (mPhoneNumber.startsWith("+") && mPhoneNumber.count() < QString::number(mCountryCode).count() + 3)) {
-            clearModel();
+    setState(nextState);
+
+    if (valid()) {
+        Q_EMIT queryChanged();
+    } else {
+        setState(SearchState::NO_FILTER);
+        clearModel();
+    }
+}
+
+void DialPadSearch::onQueryStateChanged(QContactAbstractRequest::State state)
+{
+    if (state != QContactAbstractRequest::FinishedState)
+        return;
+
+    QContactFetchRequest* req = qobject_cast<QContactFetchRequest*>(QObject::sender());
+    if (!req) {
+        qWarning() << "onRequestStateChanged " << req->error();
+        return;
+    }
+
+    beginResetModel();
+    populateContacts(req->contacts());
+    endResetModel();
+    Q_EMIT rowCountChanged();
+}
+
+void DialPadSearch::onQueryChanged()
+{
+    mFetchAgainNeeded = mPendingRequest && mPendingRequest->isActive();
+    if (mFetchAgainNeeded) {
+        return;
+    }
+
+    if (mState == SearchState::NAME_SEARCH) {
+        // try local search
+        if (!mPatterns.isEmpty() && mContacts.count() > 0 && mSearchHistory.count() -1 >= mCurrentSearchIdx) {
+            performInMemorySearch();
             return;
         }
     }
-
-    generateFilters();
+    search();
 }
 
-void DialPadSearch::startSearching(const QContactFilter &filter)
+void DialPadSearch::onQueryEnded()
 {
-    // cancel current request if necessary
-    if (mRequest) {
-        mRequest->cancel();
-        mRequest->deleteLater();
+    if (mState == SearchState::NAME_SEARCH) {
+        if (mContacts.count() == 0) {
+            // if we got no results and we were in Name search, switch to number search
+            setState(SearchState::NUMBER_SEARCH);
+            Q_EMIT queryChanged();
+            return;
+        } else {
+            //store here the last time we did a successfull textSearch
+            mLastSuccessfullSearchIdx = mSearchHistory.count();
+        }
+    }
+
+    if (mFetchAgainNeeded) {
+        mFetchAgainNeeded = false;
+        Q_EMIT queryChanged();
+    }
+}
+
+void DialPadSearch::search()
+{
+    mCurrentSearchIdx = mSearchHistory.count() - 1;
+    // cancel previous request if any
+    if (mPendingRequest) {
+        mPendingRequest->cancel();
+        mPendingRequest->deleteLater();
     }
 
     QContactFetchHint fetchHint;
-    fetchHint.setDetailTypesHint({QContactDetail::TypeDisplayLabel, QContactDetail::TypePhoneNumber, QContactDetail::TypeFavorite});
+    fetchHint.setDetailTypesHint({QContactDetail::TypeName, QContactDetail::TypeDisplayLabel, QContactDetail::TypePhoneNumber, QContactDetail::TypeFavorite});
 
     QContactSortOrder sortOrder;
     sortOrder.setDetailType(QContactDetail::TypeDisplayLabel, QContactDisplayLabel::FieldLabel);
@@ -195,103 +261,38 @@ void DialPadSearch::startSearching(const QContactFilter &filter)
     sortOrder.setBlankPolicy(QContactSortOrder::BlanksLast);
     sortOrder.setCaseSensitivity(Qt::CaseSensitive);
 
-    mRequest = new QContactFetchRequest(this);
-    mRequest->setManager(ContactUtils::sharedManager(mManager));
-    mRequest->setFilter(filter);
-    mRequest->setFetchHint(fetchHint);
-    mRequest->setSorting({sortOrder});
+    mPendingRequest = new QContactFetchRequest(this);
+    mPendingRequest->setManager(ContactUtils::sharedManager(mManager));
+    connect(mPendingRequest, SIGNAL(stateChanged(QContactAbstractRequest::State)),
+            SLOT(onQueryStateChanged(QContactAbstractRequest::State)));
+    mPendingRequest->setFilter(generateFilters());
+    mPendingRequest->setFetchHint(fetchHint);
+    mPendingRequest->setSorting({sortOrder});
 
-    connect(mRequest, SIGNAL(resultsAvailable()), SLOT(onResultsAvailable()));
-    connect(mRequest, SIGNAL(stateChanged(QContactAbstractRequest::State)),
-                          SLOT(onRequestStateChanged(QContactAbstractRequest::State)));
-
-    mRequestCompleted = false;
-    mRequest->start();
-}
-
-void DialPadSearch::onRequestStateChanged(QContactAbstractRequest::State state)
-{
-    QContactFetchRequest *request = mRequest;
-    if (request && state == QContactAbstractRequest::FinishedState) {
-        mRequestCompleted = true;
-        mRequest = 0;
-        request->deleteLater();
-
-        // if we got no results and we were in Name search, switch to number search
-        if (request->contacts().isEmpty() && mState == "NAME_SEARCH") {
-            //start to search for phone numbers if no contact found
-            setState("NUMBER_SEARCH");
-            //store here the last time we did a successfull textSearch
-            mNameSearchLastIndex = mSearchHistory.count() -1;
-            clearModel();
-            generateFilters();
-        }
-    }
-}
-
-void DialPadSearch::onResultsAvailable()
-{
-    QContactFetchRequest *request = qobject_cast<QContactFetchRequest*>(sender());
-
-    int favoritePos = 0;
-    beginResetModel();
     mContacts.clear();
-    if(request && request->contacts().size() > 0) {
-        for (const auto& resultContact: request->contacts()) {
-            QStringList phoneNumbers;
-            for(const QContactPhoneNumber phoneNumber: resultContact.details(QContactDetail::TypePhoneNumber)) {
-                phoneNumbers << phoneNumber.number();
-            }
-
-            if (!phoneNumbers.isEmpty()) {
-                QString displayLabel = resultContact.detail(QContactDetail::TypeDisplayLabel).value(QContactDisplayLabel::FieldLabel).toString();
-
-                bool isFavorite = resultContact.detail(QContactDetail::TypeFavorite).value(QContactFavorite::FieldFavorite).toBool();
-
-                Contact contact = Contact(displayLabel, phoneNumbers);
-                // show favorite first
-                if (isFavorite) {
-                    mContacts.insert(favoritePos, contact);
-                    favoritePos++;
-                } else {
-                    mContacts << contact;
-                }
-            }
-        }
-    }
-    endResetModel();
-    Q_EMIT rowCountChanged();
-
+    mPendingRequest->start();
 }
 
-void DialPadSearch::generateFilters()
+
+QContactFilter DialPadSearch::generateFilters()
 {
-    QContactFilter filter;
+    QContactUnionFilter unionFilter;
 
-    if (mState == "NAME_SEARCH") {
+    if (mState == SearchState::NAME_SEARCH) {
 
-        QContactUnionFilter unionFilter;
         unionFilter.setFilters(generateTextFilters());
-        filter = unionFilter;
 
-    } else if (mState == "NUMBER_SEARCH") {
-
-        QContactUnionFilter unionFilter;
-        QList<QContactFilter> filters;
-
-        //a fake filter is needed with the phonumberFilter, otherwise no result will be found
-        QContactDetailFilter mFakeFilter;
-        mFakeFilter.setDetailType(QContactDetail::TypeTimestamp, QContactTimestamp::FieldCreationTimestamp);
-        mFakeFilter.setMatchFlags(QContactFilter::MatchExactly);
-        mFakeFilter.setValue(-1);
-        filters << mFakeFilter;
+    } else if (mState == SearchState::NUMBER_SEARCH) {
 
         QContactDetailFilter mPhoneNumberFilter;
         mPhoneNumberFilter.setDetailType(QContactDetail::TypePhoneNumber, QContactPhoneNumber::FieldNumber);
         mPhoneNumberFilter.setMatchFlags(QContactFilter::MatchPhoneNumber | QContactFilter::MatchStartsWith);
         mPhoneNumberFilter.setValue(mPhoneNumber);
+
+        QList<QContactFilter> filters;
         filters << mPhoneNumberFilter;
 
+        // special case for local numbers
         if (mPhoneNumber.startsWith("0") && mCountryCode > -1) {
             // when number start with 0, try to search also by adding the international region prefix, e.g +33
             QString number = QStringLiteral("+%1%2").arg(mCountryCode).arg(mPhoneNumber.right(mPhoneNumber.count() - 1));
@@ -313,14 +314,54 @@ void DialPadSearch::generateFilters()
         }
 
         unionFilter.setFilters(filters);
-        filter = unionFilter;
-    } else {
-        //start with an invalid filter, otherwise backend return all contacts
-        QContactInvalidFilter mInvalidFilter;
-        filter = mInvalidFilter;
     }
 
-    startSearching(filter);
+    return QContactFilter(unionFilter);
+}
+
+void DialPadSearch::performInMemorySearch()
+{
+    // retain only patterns that matched contacts
+    for (const QString& currentPattern: mPatterns ) {
+        bool found = false;
+        for (const Contact &ct: mContacts) {
+            found = ct.normalizedValues().indexOf(QRegExp("^" + currentPattern + ".*")) > -1;
+            if (found) {
+                break;
+            }
+        }
+        if (!found) {
+            mPatterns.removeOne(currentPattern);
+        }
+    }
+    // new patterns
+    QStringList currentPatterns(mPatterns);
+    mPatterns = generatePatterns(mSearchHistory.mid(mCurrentSearchIdx +1), currentPatterns);
+
+    // now try to search with in memory contacts
+    int oldCount = mContacts.count();
+    for (int i = mContacts.count()-1; i >= 0; --i) {
+        Contact contact = mContacts[i];
+        bool found = false;
+
+        for (const QString& currentPattern: mPatterns ) {
+            found = contact.normalizedValues().indexOf(QRegExp("^" + currentPattern + ".*")) > -1;
+            if (found) {
+                break;
+            }
+        }
+
+        if (!found) {
+            beginRemoveRows(QModelIndex(), i, i);
+            mContacts.removeAt(i);
+            endRemoveRows();
+        }
+    }
+
+    if (oldCount >= mContacts.count()) {
+        mCurrentSearchIdx = mSearchHistory.count()-1;
+        Q_EMIT rowCountChanged();
+    }
 }
 
 void DialPadSearch::clearModel()
@@ -333,10 +374,110 @@ void DialPadSearch::clearModel()
 
 void DialPadSearch::clearAll()
 {
+    if (mPendingRequest) {
+        mPendingRequest->cancel();
+    }
     mSearchHistory.clear();
-    mNameSearchLastIndex = -1;
-    setState("NO_FILTER");
+    mLastSuccessfullSearchIdx = -1;
+    mPatterns.clear();
+    setState(SearchState::NO_FILTER);
     clearModel();
+}
+
+QString DialPadSearch::normalize(const QString &value) const
+{
+    QString s2 = value.normalized(QString::NormalizationForm_D);
+    QString out;
+
+    for (int i=0, j=s2.length(); i<j; i++)
+    {
+        // strip diacritic marks
+        if (s2.at(i).category() != QChar::Mark_NonSpacing &&
+                s2.at(i).category() != QChar::Mark_SpacingCombining) {
+            out.append(s2.at(i));
+        }
+    }
+    return out.toUpper();
+}
+
+void DialPadSearch::populateContacts(const QList<QContact> &qcontacts)
+{
+    int favoritePos = 0;
+    for (const QContact &resultContact: qcontacts) {
+
+        QStringList phoneNumbers;
+        for(const QContactPhoneNumber phoneNumber: resultContact.details(QContactDetail::TypePhoneNumber)) {
+            phoneNumbers << phoneNumber.number();
+        }
+
+        if (!phoneNumbers.isEmpty()) {
+            QString displayLabel = resultContact.detail(QContactDetail::TypeDisplayLabel).value(QContactDisplayLabel::FieldLabel).toString();
+            bool isFavorite = resultContact.detail(QContactDetail::TypeFavorite).value(QContactFavorite::FieldFavorite).toBool();
+
+            Contact contact = Contact(displayLabel, phoneNumbers);
+            //store normalized field for later local search
+            if (mState == SearchState::NAME_SEARCH) {
+                QString nameLabel = resultContact.detail(QContactDetail::TypeName).value(QContactName::FieldLastName).toString();
+                QString firstNameLabel = resultContact.detail(QContactDetail::TypeName).value(QContactName::FieldFirstName).toString();
+                QStringList normalizedValues;
+                normalizedValues << normalize(nameLabel) << normalize(firstNameLabel);
+                contact.setNormalizedValues(normalizedValues);
+            }
+
+            // show favorite first
+            if (isFavorite) {
+                mContacts.insert(favoritePos, contact);
+                favoritePos++;
+            } else {
+                mContacts << contact;
+            }
+        }
+    }
+}
+
+QList<QContactFilter> DialPadSearch::generateTextFilters()
+{
+    QStringList initialPatterns;
+    mPatterns = generatePatterns(mSearchHistory, initialPatterns);
+
+    QList<QContactFilter> filters;
+
+    for (const auto& pattern : mPatterns) {
+        QContactDetailFilter nameFilter;
+        nameFilter.setDetailType(QContactDetail::TypeName, QContactName::FieldLastName);
+        nameFilter.setMatchFlags(QContactFilter::MatchStartsWith);
+        nameFilter.setValue(pattern);
+
+        QContactDetailFilter firstnameFilter;
+        firstnameFilter.setDetailType(QContactDetail::TypeName,QContactName::FieldFirstName);
+        firstnameFilter.setMatchFlags(QContactFilter::MatchStartsWith);
+        firstnameFilter.setValue(pattern);
+
+        filters << nameFilter;
+        filters << firstnameFilter;
+    }
+    return filters;
+}
+
+QStringList DialPadSearch::generatePatterns(const QStringList &source, QStringList &currentPatterns) {
+
+    // transform a pattern list into a queryable text. e.g: {"ABC","DEF"} -> {"AD","AE","AF","BD","BE","BF","CD","CE","CF"}
+    for (const QString& pattern: source) {
+        const QStringList ps = pattern.split("", QString::SkipEmptyParts);
+
+        if (currentPatterns.isEmpty()) {
+            currentPatterns << ps;
+        } else {
+            QStringList tmpPatterns;
+            for (const QString& currentPattern: currentPatterns ) {
+                for (const QString& p: ps ) {
+                    tmpPatterns << currentPattern + p;
+                }
+            }
+            currentPatterns = tmpPatterns;
+        }
+    }
+    return currentPatterns;
 }
 
 QVariantMap DialPadSearch::get(int i) const
@@ -353,56 +494,6 @@ QVariantMap DialPadSearch::get(int i) const
     }
     return item;
 }
-
-QList<QContactFilter> DialPadSearch::generateTextFilters()
-{
-    QList<QList<QString>> tempPatterns;
-    for (const auto& pattern: mSearchHistory ) {
-        tempPatterns << pattern.split("", QString::SkipEmptyParts);
-    }
-    QList<QString> patterns =  cartesianProduct(tempPatterns);
-    QList<QContactFilter> filters;
-
-    for (const auto& pattern : patterns) {
-        QContactDetailFilter nameFilter;
-        nameFilter.setDetailType(QContactDetail::TypeName, QContactName::FieldLastName);
-        nameFilter.setMatchFlags(QContactFilter::MatchStartsWith);
-        nameFilter.setValue(pattern);
-
-        filters << nameFilter;
-
-        QContactDetailFilter displayLabelFilter;
-        displayLabelFilter.setDetailType(QContactDetail::TypeExtendedDetail,QContactExtendedDetail::FieldData );
-        displayLabelFilter.setMatchFlags(QContactFilter::MatchStartsWith);
-        displayLabelFilter.setValue(pattern);
-
-        filters << displayLabelFilter;
-    }
-
-    return filters;
-}
-
-QList<QString> DialPadSearch::cartesianProduct(const QList<QList<QString>>& v)
-{
-    QList<QList<QString>> s = {{}};
-
-    for (const auto& u : v) {
-        QList<QList<QString>> r;
-        for (const auto& x : s) {
-            for (const auto y : u) {
-                r.push_back(x);
-                r.back().push_back(y);
-            }
-        }
-        s = std::move(r);
-    }
-    QList<QString> result;
-    for (const auto& patterns : s) {
-        result << patterns.join("");
-    }
-    return result;
-}
-
 
 QHash<int, QByteArray> DialPadSearch::roleNames() const
 {

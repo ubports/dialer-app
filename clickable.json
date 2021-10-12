@@ -1,4 +1,4 @@
 {
   "builder": "cmake",
-  "build_args": "-DCLICK_MODE=ON -DENABLE_TESTS=OFF"
+  "build_args": "-DCLICK_MODE=ON -DENABLE_TESTS=OFF -DCMAKE_BUILD_TYPE=Debug"
 }

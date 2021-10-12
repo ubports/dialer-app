@@ -100,13 +100,15 @@ void DialPadSearchTest::cleanup()
 void DialPadSearchTest::testShouldSwitchToNameSearch()
 {
     QSignalSpy spyRowCount(dialPadSearch, SIGNAL(rowCountChanged()));
+    QSignalSpy spyQueryChanged(dialPadSearch, SIGNAL(queryChanged()));
 
     dialPadSearch->setPhoneNumber("26");
     dialPadSearch->push("ABC");
     dialPadSearch->push("MNO");
 
     QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QTRY_COMPARE(spyQueryChanged.count(), 1);
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 2);
 
 }
@@ -114,12 +116,14 @@ void DialPadSearchTest::testShouldSwitchToNameSearch()
 void DialPadSearchTest::testShouldSwitchToNumberSearch()
 {
     QSignalSpy spyRowCount(dialPadSearch, SIGNAL(rowCountChanged()));
+    QSignalSpy spyQueryChanged(dialPadSearch, SIGNAL(queryChanged()));
 
     dialPadSearch->setPhoneNumber("0");
     dialPadSearch->push("0");
 
     QTRY_COMPARE(spyRowCount.count(), 0);
-    QCOMPARE(dialPadSearch->state(), "NUMBER_SEARCH");
+    QTRY_COMPARE(spyQueryChanged.count(), 0);
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NUMBER_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 0);
 
 }
@@ -132,7 +136,7 @@ void DialPadSearchTest::testShouldReturnToNoFilter()
     dialPadSearch->setPhoneNumber("");
     dialPadSearch->pop();
 
-    QCOMPARE(dialPadSearch->state(), "NO_FILTER");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NO_FILTER);
     QCOMPARE(dialPadSearch->rowCount(), 0);
 
 }
@@ -146,17 +150,17 @@ void DialPadSearchTest::testShouldReturnToNameFilter()
     dialPadSearch->push("ABC");
     dialPadSearch->push("MNO");
     QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 2);
 
     dialPadSearch->setPhoneNumber("269");
     dialPadSearch->push("WXYZ");
-    QCOMPARE(dialPadSearch->state(), "NUMBER_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NUMBER_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 0);
 
     dialPadSearch->pop();
 
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 2);
 
 }
@@ -170,7 +174,7 @@ void DialPadSearchTest::testShouldReturnAllContacts()
     dialPadSearch->push("MNO");
 
     QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 2);
 
 }
@@ -184,8 +188,8 @@ void DialPadSearchTest::testShouldSwitchToNumberSearchAfterNameSearch()
     dialPadSearch->push("MNO");
     dialPadSearch->push("MNO");
 
-    QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NUMBER_SEARCH");
+    QTRY_COMPARE(spyRowCount.count(), 3);
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NUMBER_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 0);
 
 }
@@ -200,7 +204,7 @@ void DialPadSearchTest::testShouldFindByNumber()
     dialPadSearch->push("DEF");
 
     QTRY_COMPARE(spyRowCount.count(), 3);
-    QCOMPARE(dialPadSearch->state(), "NUMBER_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NUMBER_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 1);
 
 }
@@ -220,7 +224,7 @@ void DialPadSearchTest::testShouldFindWithInternationalPrefix()
     dialPadSearch->push("MNO");
     dialPadSearch->push("ABC");
 
-    QCOMPARE(dialPadSearch->state(), "NUMBER_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NUMBER_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 1);
 }
 
@@ -259,7 +263,7 @@ void DialPadSearchTest::testShouldReturnFavoritesFirst()
     dialPadSearch->push("MNO");
 
     QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 3);
     QCOMPARE(dialPadSearch->get(0)["displayLabel"], "favorite contact");
 
@@ -275,11 +279,11 @@ void DialPadSearchTest::testShouldClearAllWhenPhoneNumberIsOverwritten() {
     dialPadSearch->push("MNO");
 
     QTRY_COMPARE(spyRowCount.count(), 1);
-    QCOMPARE(dialPadSearch->state(), "NAME_SEARCH");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NAME_SEARCH);
     QCOMPARE(dialPadSearch->rowCount(), 2);
     //simulate a change from outside
     dialPadSearch->setPhoneNumber("185");
-    QCOMPARE(dialPadSearch->state(), "NO_FILTER");
+    QCOMPARE(dialPadSearch->state(), DialPadSearch::NO_FILTER);
     QCOMPARE(dialPadSearch->rowCount(), 0);
 }
 

@@ -26,7 +26,7 @@
 #include <QContactFetchRequest>
 #include <QtContacts/QContactUnionFilter>
 #include <QtContacts/QContactDetailFilter>
-#include <QContactInvalidFilter>
+#include <QContactFilter>
 #include <QAbstractListModel>
 
 QTCONTACTS_USE_NAMESPACE
@@ -38,11 +38,13 @@ public:
 
     QString displayLabel() const;
     QStringList phoneNumbers() const;
+    QStringList normalizedValues() const;
+    void setNormalizedValues(const QStringList values);
 
 private:
     QString mDisplayLabel;
     QStringList mPhoneNumbers;
-
+    QStringList mNormalizedValues;
 };
 
 class DialPadSearch : public QAbstractListModel
@@ -53,7 +55,6 @@ class DialPadSearch : public QAbstractListModel
     Q_PROPERTY(QString phoneNumber READ phoneNumber WRITE setPhoneNumber)
     Q_PROPERTY(int countryCode READ countryCode WRITE setCountryCode)
     Q_PROPERTY(QString manager READ manager WRITE setManager NOTIFY managerChanged)
-    Q_PROPERTY(QString state READ state WRITE setState NOTIFY stateChanged)
 
 public:
     DialPadSearch(QObject *parent = 0);
@@ -63,6 +64,13 @@ public:
         ContactDisplayLabelRole = Qt::UserRole + 1,
         ContactPhoneNumbersRole,
     };
+
+    enum SearchState {
+        NO_FILTER,
+        NAME_SEARCH,
+        NUMBER_SEARCH
+    };
+
     // reimplemented from QAbstractListModel
     QHash<int, QByteArray> roleNames() const;
     int rowCount(const QModelIndex& parent=QModelIndex()) const;
@@ -72,8 +80,7 @@ public:
     void setPhoneNumber(const QString &phoneNumber);
     int countryCode() const;
     void setCountryCode(int countryCode);
-    QString state() const;
-    void setState(const QString &state);
+    SearchState state() const;
     void setManager(const QString &mContactManager);
     QString manager() const;
 
@@ -84,30 +91,38 @@ public:
 
 
 protected Q_SLOTS:
-    void onResultsAvailable();
-    void onRequestStateChanged(QContactAbstractRequest::State state);
+    void onQueryStateChanged(QContactAbstractRequest::State state);
+    void onQueryChanged();
+    void onQueryEnded();
 
 Q_SIGNALS:
-    void stateChanged();
     void rowCountChanged();
     void managerChanged();
+    void queryChanged();
 
 private:
-    QContactFetchRequest *mRequest;
+    QContactFetchRequest* mPendingRequest;
     QList<Contact> mContacts;
-    QList<QString> mSearchHistory;
-    QString mState;
+    QStringList mSearchHistory;
+    QStringList mPatterns;
+    SearchState mState;
     QString mPhoneNumber;
     QString mManager;
     int mCountryCode;
-    int mNameSearchLastIndex;
-    bool mRequestCompleted;
+    int mLastSuccessfullSearchIdx;
+    int mCurrentSearchIdx;
+    bool mFetchAgainNeeded;
 
-    void startSearching(const QContactFilter &filter);
-    void generateFilters();
+    bool valid();
     void clearModel();
+    void search();
+    void performInMemorySearch();
+    void setState(const SearchState &state);
+    QContactFilter generateFilters();
     QList<QContactFilter> generateTextFilters();
-    QList<QString> cartesianProduct(const QList<QList<QString>>& lists);
+    QStringList generatePatterns(const QStringList &source, QStringList &currentPatterns);
+    QString normalize(const QString &value) const;
+    void populateContacts(const QList<QContact> &qcontacts);
 };
 
 #endif // DIALPADSEARCH_H

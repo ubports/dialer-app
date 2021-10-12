@@ -416,6 +416,7 @@ Page {
                 leftMargin: units.gu(4)
                 rightMargin: units.gu(4)
             }
+            visible: contactWatcher.isUnknown
 
             phoneNumberField: input.text
 
@@ -450,7 +451,6 @@ Page {
                 onClicked : contactSearch.pop()
                 onPressAndHold : contactSearch.clearAll()
             }
-
         }
 
         Keypad {
