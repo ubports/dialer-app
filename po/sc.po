@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-09-18 15:59+0000\n"
+"PO-Revision-Date: 2021-11-21 15:09+0000\n"
 "Last-Translator: Adria <adriamartinmor@gmail.com>\n"
 "Language-Team: Sardinian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sc/>\n"
@@ -271,7 +271,7 @@ msgstr "Detàllios de su cuntatu"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Perunu nùmeru de telèfonu pro custu cuntatu."
+msgstr "Nissunu nùmeru de telèfonu pro custu cuntatu."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -328,7 +328,7 @@ msgstr "Iscarta"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:64
 msgid "Don't ask again"
-msgstr "No ddu torres a domandare"
+msgstr "No mi ddu torres a preguntare"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:70
 msgid "Edit"
@@ -490,20 +490,20 @@ msgstr "Nono"
 
 #: ../src/qml/dialer-app.qml:370
 msgid "No SIM card selected"
-msgstr "Peruna carta SIM seletzionada"
+msgstr "Nissuna carta SIM seletzionada"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:130
 msgid "No calls"
-msgstr "Peruna mutida"
+msgstr "Nissuna mutida"
 
 #: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
 #: ../src/qml/dialer-app.qml:394
 msgid "No network"
-msgstr "Peruna rete"
+msgstr "Nissuna rete"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:254
 msgid "No recent calls"
-msgstr "Peruna mutida reghente"
+msgstr "Nissuna mutida reghente"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
@@ -699,11 +699,11 @@ msgstr "TUV"
 #: ../src/qml/dialer-app.qml:395
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Peruna rete in %1"
+msgstr "Nissuna rete in %1"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "Peruna rete."
+msgstr "Nissuna rete."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."

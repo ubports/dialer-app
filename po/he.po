@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2020-12-24 08:57+0000\n"
+"PO-Revision-Date: 2021-10-04 00:37+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://translate.ubports.com/projects/ubports/"
 "dialer-app/he/>\n"
@@ -50,7 +50,7 @@ msgstr "%1 שירותים"
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "שעה"
-msgstr[1] "%1 שעות"
+msgstr[1] "שעתיים"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
 #: ../src/qml/SettingsPage/dateUtils.js:63
@@ -139,7 +139,7 @@ msgstr "הוסף חשבון מקוון"
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
 msgid "All"
-msgstr "את כל"
+msgstr "הכול"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:97
 msgctxt "All Contacts"
