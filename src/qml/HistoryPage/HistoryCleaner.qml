@@ -25,7 +25,7 @@ import Ubuntu.Components.Popups 1.3
 import Ubuntu.History 0.1
 
 Dialog {
-    id: dialog
+    id: root
     title:  i18n.tr("Call history")
 
     state: "NONE"
@@ -42,45 +42,45 @@ Dialog {
         deletedEventsCount = _deletedEventsCount
     }
 
-    function runDeleteOperation(afterMonth) {
-        dialog.state = "INIT"
+    function runDeleteOperation() {
+        root.state = "INIT"
         var d = new Date()
-        d.setMonth(d.getMonth() - afterMonth)
-        deleteEventModel.removeEvents(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"), callback);
+        d.setMonth(d.getMonth() - fromDateSelector.getSelectedValue())
+        historyManager.removeEvents(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"), callback);
     }
 
     states: [
         State {
             name: "NONE"
             PropertyChanges { target: confirmPanel; visible: true }
-            PropertyChanges { target: dialog; text: i18n.tr("Remove all after:") }
+            PropertyChanges { target: root; text: i18n.tr("Remove all after:") }
         },
         State {
             name: "INIT"
-            PropertyChanges { target: dialog; text: i18n.tr("Checking...") }
+            PropertyChanges { target: root; text: i18n.tr("Checking...") }
         },
         State {
             name: "NO_RECORDS"
             when: error === HistoryManager.NO_ERROR && eventsCount === 0
-            PropertyChanges { target: dialog; text: i18n.tr("No records to clean") }
+            PropertyChanges { target: root; text: i18n.tr("No records to clean") }
             PropertyChanges { target: confirmPanel; visible: true }
         },
         State {
             name: "PENDING_DELETE"
             when: error === HistoryManager.NO_ERROR && eventsCount > 0 && deletedEventsCount < eventsCount
-            PropertyChanges { target: dialog; text: i18n.tr("Deleting %1 out of %2 records... (This can take several minutes)").arg(deletedEventsCount).arg(eventsCount) }
+            PropertyChanges { target: root; text: i18n.tr("Deleting %1 records... (This can take several minutes)").arg(eventsCount) }
             PropertyChanges { target: deleteIndicator; running: true }
         },
         State {
             name: "FINISHED"
             when: error === HistoryManager.NO_ERROR && eventsCount > 0 && deletedEventsCount === eventsCount
-            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records").arg(deletedEventsCount) }
+            PropertyChanges { target: root; text: i18n.tr("Removed %1 records").arg(deletedEventsCount) }
             PropertyChanges { target: dismissBtn; visible: true }
         },
         State {
             name: "ERROR"
             when: error !== undefined && error !== HistoryManager.NO_ERROR
-            PropertyChanges { target: dialog; text: i18n.tr("Removed %1 records, sorry, something went wrong.").arg(deletedEventsCount) }
+            PropertyChanges { target: root; text: i18n.tr("Removed %1 records, sorry, something went wrong.").arg(deletedEventsCount) }
             PropertyChanges { target: dismissBtn; visible: true }
         }
     ]
@@ -91,10 +91,8 @@ Dialog {
     }
 
     HistoryManager {
-        id: deleteEventModel
+        id: historyManager
     }
-
-
 
     Column {
         id: confirmPanel
@@ -105,14 +103,16 @@ Dialog {
             objectName: "fromDateSelector"
             expanded: true
             model: [
-                { value:1, label:i18n.tr("%1 month", "%1 months", 1).arg(1)},
+                { value:1, label:i18n.tr("%1 month").arg(1)},
                 { value:3, label:i18n.tr("%1 month", "%1 months", 3).arg(3)},
                 { value:6, label:i18n.tr("%1 month", "%1 months", 6).arg(6)},
                 { value:12, label:i18n.tr("1 year")},
                 { value:0, label:i18n.tr("Delete all")}
             ]
             delegate: OptionSelectorDelegate { text: modelData.label }
-            onDelegateClicked: dialog.state = "NONE"
+
+            onDelegateClicked: root.state = "NONE"
+
             function getSelectedValue() {
                 return  model[selectedIndex].value
             }
@@ -126,7 +126,7 @@ Dialog {
                 objectName: "cancelBtn"
                 width: parent.width/2 - row.spacing/2
                 text: i18n.tr("Cancel")
-                onClicked: dialog.dismissed()
+                onClicked: root.dismissed()
             }
             Button {
                 id: confirmBtn
@@ -134,7 +134,7 @@ Dialog {
                 width: parent.width/2 - row.spacing/2
                 text: i18n.tr("Confirm")
                 color: theme.palette.normal.positiveText
-                onClicked: dialog.runDeleteOperation(fromDateSelector.getSelectedValue())
+                onClicked: root.runDeleteOperation()
             }
         }
     }
@@ -144,6 +144,6 @@ Dialog {
         visible: false
         text: i18n.tr("OK")
         color: theme.palette.normal.positiveText
-        onClicked: dialog.dismissed()
+        onClicked: root.dismissed()
     }
 }

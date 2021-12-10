@@ -88,7 +88,7 @@ Page {
 
                     iconName: "delete"
                     onTriggered: {
-                        var dialog = PopupUtils.open(Qt.resolvedUrl("HistoryCleaner.qml"))
+                        var dialog = PopupUtils.open(Qt.resolvedUrl("HistoryCleaner.qml"), mainView)
                         dialog.dismissed.connect(function() {
                             PopupUtils.close(dialog)
                         })
