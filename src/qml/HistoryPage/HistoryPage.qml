@@ -91,6 +91,12 @@ Page {
                         var dialog = PopupUtils.open(Qt.resolvedUrl("HistoryCleaner.qml"), mainView)
                         dialog.dismissed.connect(function() {
                             PopupUtils.close(dialog)
+                            // force reload history
+                            if (headerSections.selectedIndex == 0) {
+                                historyEventModel.filter = emptyFilter;
+                            } else {
+                                historyEventModel.filter = missedFilter;
+                            }
                         })
                     }
 

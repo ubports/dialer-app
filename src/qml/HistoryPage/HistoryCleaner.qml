@@ -33,31 +33,36 @@ Dialog {
     property int eventsCount: 0
     property int deletedEventsCount: 0
 
-    signal accepted()
     signal dismissed()
 
-    function callback( _eventsCount, _deletedEventsCount, _error) {
+    function callback( _deletedEventsCount, _error) {
         error = _error
-        eventsCount = _eventsCount
         deletedEventsCount = _deletedEventsCount
     }
 
     function runDeleteOperation() {
-        root.state = "INIT"
+        root.state = "PENDING_DELETE"
         var d = new Date()
         d.setMonth(d.getMonth() - fromDateSelector.getSelectedValue())
         historyManager.removeEvents(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"), callback);
+    }
+
+    function getEventsCount() {
+        var d = new Date()
+        d.setMonth(d.getMonth() - fromDateSelector.getSelectedValue())
+        eventsCount = historyManager.getEventsCount(HistoryEventModel.EventTypeVoice, Qt.formatDateTime(d, "yyyy-MM-ddTHH:mm:ss.zzz"));
     }
 
     states: [
         State {
             name: "NONE"
             PropertyChanges { target: confirmPanel; visible: true }
-            PropertyChanges { target: root; text: i18n.tr("Remove all after:") }
+            PropertyChanges { target: root; text: i18n.tr("Remove all history older than:") }
         },
         State {
             name: "INIT"
-            PropertyChanges { target: root; text: i18n.tr("Checking...") }
+            PropertyChanges { target: confirmPanel; visible: true }
+            PropertyChanges { target: root; text: i18n.tr("%1 records to clean").arg(eventsCount) }
         },
         State {
             name: "NO_RECORDS"
@@ -67,8 +72,7 @@ Dialog {
         },
         State {
             name: "PENDING_DELETE"
-            when: error === HistoryManager.NO_ERROR && eventsCount > 0 && deletedEventsCount < eventsCount
-            PropertyChanges { target: root; text: i18n.tr("Deleting %1 records... (This can take several minutes)").arg(eventsCount) }
+            PropertyChanges { target: root; text: i18n.tr("Deleting %1 records...").arg(eventsCount) }
             PropertyChanges { target: deleteIndicator; running: true }
         },
         State {
@@ -102,6 +106,7 @@ Dialog {
             id: fromDateSelector
             objectName: "fromDateSelector"
             expanded: true
+            selectedIndex: -1
             model: [
                 { value:1, label:i18n.tr("%1 month").arg(1)},
                 { value:3, label:i18n.tr("%1 month", "%1 months", 3).arg(3)},
@@ -111,7 +116,12 @@ Dialog {
             ]
             delegate: OptionSelectorDelegate { text: modelData.label }
 
-            onDelegateClicked: root.state = "NONE"
+            onSelectedIndexChanged: {
+                if (selectedIndex > -1) {
+                    root.state = "INIT"
+                    getEventsCount();
+                }
+            }
 
             function getSelectedValue() {
                 return  model[selectedIndex].value
@@ -131,6 +141,7 @@ Dialog {
             Button {
                 id: confirmBtn
                 objectName: "confirmBtn"
+                enabled: fromDateSelector.selectedIndex > -1 && root.eventsCount > 0
                 width: parent.width/2 - row.spacing/2
                 text: i18n.tr("Confirm")
                 color: theme.palette.normal.positiveText
