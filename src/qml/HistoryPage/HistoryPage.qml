@@ -19,6 +19,7 @@
 import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItem
+import Ubuntu.Components.Popups 1.3
 import Ubuntu.History 0.1
 import Ubuntu.Telephony 0.1
 import Ubuntu.Contacts 0.1
@@ -60,6 +61,7 @@ Page {
 
         trailingActionBar {
             id: trailingBar
+            numberOfSlots:selectionMode ? 5 : 0
         }
 
         extension: Sections {
@@ -71,10 +73,42 @@ Page {
 
     Rectangle {
         anchors.fill: parent
-        color: Theme.palette.normal.background
+        color: theme.palette.normal.background
     }
 
     states: [
+        State {
+            id: defaultState
+            name: "default"
+            when: !selectionMode
+            property list<QtObject> trailingActions: [
+                Action {
+                    objectName: "deleteHistoryAction"
+                    text: i18n.tr("Clear history")
+
+                    iconName: "delete"
+                    onTriggered: {
+                        var dialog = PopupUtils.open(Qt.resolvedUrl("HistoryCleaner.qml"), mainView)
+                        dialog.dismissed.connect(function() {
+                            PopupUtils.close(dialog)
+                            // force reload history
+                            if (headerSections.selectedIndex == 0) {
+                                historyEventModel.filter = emptyFilter;
+                            } else {
+                                historyEventModel.filter = missedFilter;
+                            }
+                        })
+                    }
+
+                }
+            ]
+
+            PropertyChanges {
+                target: pageHeader
+                trailingActions: defaultState.trailingActions
+            }
+        },
+
         State {
             id: selectState
             name: "select"
