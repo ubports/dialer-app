@@ -1,5 +1,6 @@
 project(dialer-app)
 cmake_minimum_required(VERSION 2.8)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -Wall -Werror -Wextra")
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules)
 set(DESKTOP_FILE dialer-app.desktop)
 
@@ -41,7 +42,7 @@ set(CMAKE_AUTOMOC ON)
 configure_file(config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h @ONLY)
 
 find_package(Qt5Core)
-#find_package(Qt5Contacts)
+find_package(Qt5Contacts)
 find_package(Qt5DBus)
 #find_package(Qt5Gui)
 #find_package(Qt5Multimedia)

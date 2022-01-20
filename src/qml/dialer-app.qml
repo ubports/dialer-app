@@ -33,6 +33,7 @@ MainView {
     property string ussdResponseTitle: ""
     property string ussdResponseText: ""
     property alias multiplePhoneAccounts: accountsModel.multipleAccounts
+    property alias settings: generalSettings
     property QtObject account: accountsModel.defaultCallAccount
     property bool simLocked: account && account.simLocked
     property bool greeterMode: (state == "greeterMode")
@@ -149,6 +150,7 @@ MainView {
     Settings {
         id: generalSettings
         property string lastCalledPhoneNumber: ""
+        property bool contactSearchWithDialPad: true
     }
 
     PhoneUtils {

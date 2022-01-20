@@ -17,7 +17,7 @@
  */
 
 #include "dialerapplication.h"
-
+#include "dialpadsearch.h"
 #include <QDir>
 #include <QUrl>
 #include <QUrlQuery>
@@ -149,7 +149,8 @@ bool DialerApplication::setup()
     if (!pluginPath.isNull()) {
         m_view->engine()->addImportPath(pluginPath);
     }
-
+    const char* uri = "dialerapp.private";
+    qmlRegisterType<DialPadSearch>(uri, 0, 1, "DialPadSearch");
     m_view->engine()->setBaseUrl(QUrl::fromLocalFile(dialerAppDirectory()));
     m_view->setSource(QUrl::fromLocalFile(QString("%1/dialer-app.qml").arg(dialerAppDirectory())));
     if (m_fullScreen) {

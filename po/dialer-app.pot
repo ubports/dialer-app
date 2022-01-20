@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-16 13:22+0000\n"
+"POT-Creation-Date: 2022-01-17 12:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../src/qml/DialerPage/Keypad.qml:239
+#: ../src/qml/DialerPage/Keypad.qml:250
 msgid "#"
 msgstr ""
 
@@ -87,20 +87,20 @@ msgstr[1] ""
 msgid "(%1)"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:203
+#: ../src/qml/DialerPage/Keypad.qml:214
 msgid "*"
 msgstr ""
 
 #: ../src/qml/DialerPage/DialerBottomEdge.qml:26
-#: ../src/qml/DialerPage/Keypad.qml:220
+#: ../src/qml/DialerPage/Keypad.qml:231
 msgid "+"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:219
+#: ../src/qml/DialerPage/Keypad.qml:230
 msgid "0"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:48
+#: ../src/qml/DialerPage/Keypad.qml:59
 msgid "1"
 msgstr ""
 
@@ -108,39 +108,39 @@ msgstr ""
 msgid "1 year"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:65
+#: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:82
+#: ../src/qml/DialerPage/Keypad.qml:93
 msgid "3"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:99
+#: ../src/qml/DialerPage/Keypad.qml:110
 msgid "4"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:116
+#: ../src/qml/DialerPage/Keypad.qml:127
 msgid "5"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:133
+#: ../src/qml/DialerPage/Keypad.qml:144
 msgid "6"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:150
+#: ../src/qml/DialerPage/Keypad.qml:161
 msgid "7"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:167
+#: ../src/qml/DialerPage/Keypad.qml:178
 msgid "8"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:184
+#: ../src/qml/DialerPage/Keypad.qml:195
 msgid "9"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:66
+#: ../src/qml/DialerPage/Keypad.qml:77
 msgid "ABC"
 msgstr ""
 
@@ -174,15 +174,15 @@ msgstr ""
 msgid "Call"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:616
+#: ../src/qml/dialer-app.qml:618
 msgid "Call Barring"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:627
+#: ../src/qml/dialer-app.qml:629
 msgid "Call Forwarding"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:638
+#: ../src/qml/dialer-app.qml:640
 msgid "Call Waiting"
 msgstr ""
 
@@ -225,18 +225,18 @@ msgstr ""
 msgid "Call waiting"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:556
+#: ../src/qml/DialerPage/DialerPage.qml:605
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:649
+#: ../src/qml/dialer-app.qml:651
 msgid "Calling Line Presentation"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:661
+#: ../src/qml/dialer-app.qml:663
 msgid "Calling Line Restriction"
 msgstr ""
 
@@ -287,11 +287,11 @@ msgstr ""
 msgid "Confirm"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:655
+#: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:667
+#: ../src/qml/dialer-app.qml:669
 msgid "Connected Line Restriction"
 msgstr ""
 
@@ -302,6 +302,10 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
+msgstr ""
+
+#: ../src/qml/SettingsPage/SettingsPage.qml:136
+msgid "Contact search with dial pad (Experimental)"
 msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
@@ -317,7 +321,7 @@ msgstr ""
 msgid "Could not forward to this contact"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:83
+#: ../src/qml/DialerPage/Keypad.qml:94
 msgid "DEF"
 msgstr ""
 
@@ -379,7 +383,7 @@ msgstr ""
 msgid "Emergency Calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:514
+#: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "Emergency call"
 msgstr ""
 
@@ -387,7 +391,7 @@ msgstr ""
 msgid "Enter a country code"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:332
+#: ../src/qml/DialerPage/DialerPage.qml:331
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
 msgstr ""
@@ -447,7 +451,7 @@ msgstr ""
 msgid "Forward to"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:100
+#: ../src/qml/DialerPage/Keypad.qml:111
 msgid "GHI"
 msgstr ""
 
@@ -481,7 +485,7 @@ msgstr ""
 msgid "Invalid USSD code"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:117
+#: ../src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
 msgstr ""
 
@@ -500,7 +504,7 @@ msgid ""
 "between them"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:134
+#: ../src/qml/DialerPage/Keypad.qml:145
 msgid "MNO"
 msgstr ""
 
@@ -526,7 +530,7 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:384
+#: ../src/qml/dialer-app.qml:386
 msgid "No SIM card selected"
 msgstr ""
 
@@ -534,8 +538,8 @@ msgstr ""
 msgid "No calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:403
-#: ../src/qml/dialer-app.qml:408
+#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:405
+#: ../src/qml/dialer-app.qml:410
 msgid "No network"
 msgstr ""
 
@@ -582,7 +586,7 @@ msgstr ""
 msgid "Outgoing"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:151
+#: ../src/qml/DialerPage/Keypad.qml:162
 msgid "PQRS"
 msgstr ""
 
@@ -638,7 +642,7 @@ msgstr ""
 msgid "Private number"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:569
+#: ../src/qml/DialerPage/DialerPage.qml:618
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr ""
@@ -743,20 +747,20 @@ msgstr ""
 msgid "Switch to default SIM:"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:168
+#: ../src/qml/DialerPage/Keypad.qml:179
 msgid "TUV"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:409
+#: ../src/qml/dialer-app.qml:411
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:403 ../src/qml/dialer-app.qml:410
+#: ../src/qml/dialer-app.qml:405 ../src/qml/dialer-app.qml:412
 msgid "There is currently no network."
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:514
+#: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "This is not an emergency number."
 msgstr ""
 
@@ -783,7 +787,7 @@ msgstr ""
 msgid "Voicemail"
 msgstr ""
 
-#: ../src/qml/DialerPage/Keypad.qml:185
+#: ../src/qml/DialerPage/Keypad.qml:196
 msgid "WXYZ"
 msgstr ""
 
@@ -796,7 +800,7 @@ msgstr ""
 msgid "You have to disable flight mode in order to make calls"
 msgstr ""
 
-#: ../src/qml/dialer-app.qml:384
+#: ../src/qml/dialer-app.qml:386
 msgid "You need to select a SIM card"
 msgstr ""
 
