@@ -115,8 +115,7 @@ ContactViewPage {
         ContactModel {
             id: contactModelHelper
 
-            manager: (typeof(QTCONTACTS_MANAGER_OVERRIDE) !== "undefined") &&
-                      (QTCONTACTS_MANAGER_OVERRIDE != "") ? QTCONTACTS_MANAGER_OVERRIDE : "galera"
+            manager: ContactManager.manager()
             autoUpdate: false
         }
     }

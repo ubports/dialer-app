@@ -19,6 +19,7 @@
 import QtQuick 2.0
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components 1.3
+import Ubuntu.Contacts 0.1
 import Ubuntu.Telephony.PhoneNumber 0.1
 
 import dialerapp.private 0.1
@@ -72,8 +73,7 @@ Item {
     DialPadSearch {
         id: dialPadSearch
         objectName: "dialPadSearchModel"
-        //manager: "org.nemomobile.contacts.sqlite"
-        manager: "galera"
+        manager: ContactManager.defaultManager
         countryCode:  PhoneUtils.getCountryCodePrefix(PhoneUtils.defaultRegion)
 
         phoneNumber: root.phoneNumberField

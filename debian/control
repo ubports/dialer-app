@@ -18,7 +18,7 @@ Build-Depends:
  qtpim5-dev,
  qtdeclarative5-dev (>= 5.0),
  qtdeclarative5-dev-tools,
- qtdeclarative5-ubuntu-addressbook0.1,
+ qtdeclarative5-ubuntu-addressbook0.1 (>= 0.5),
  qtdeclarative5-ubuntu-history0.1,
  qtdeclarative5-ubuntu-telephony-phonenumber0.1,
  qtdeclarative5-ubuntu-telephony0.1 <!nocheck> | qtdeclarative5-ubuntu-telephony-plugin <!nocheck>,
