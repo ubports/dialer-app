@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-20 12:40+0200\n"
-"PO-Revision-Date: 2021-01-28 03:24+0000\n"
-"Last-Translator: Adam <padamyno@gmail.com>\n"
+"PO-Revision-Date: 2022-02-05 22:02+0000\n"
+"Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/hu/>\n"
 "Language: hu\n"
@@ -33,16 +33,16 @@ msgstr "%1 - hívás várakoztatva"
 #. TRANSLATORS: %1 is the displayname of the account
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
-#, qt-format
+#, fuzzy, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 szám újraírása"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "%1 szolgáltatások"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -134,7 +134,7 @@ msgstr "Aktív"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:122
 msgid "Add an online account"
-msgstr ""
+msgstr "Online fiók hozzáadása"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:68
 msgctxt "All Calls"
@@ -147,9 +147,8 @@ msgid "All"
 msgstr "Összes"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Nincs hívás"
+msgstr "Minden hívás"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
@@ -183,17 +182,16 @@ msgstr "A hívás sikertelen"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "Hívástovábbítás"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "A hívásátirányítás jelenleg nem megváltoztatható."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Hívásátirányítás állapota nem ellenőrizhető "
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -204,7 +202,6 @@ msgstr "Hívástartási hiba"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
 msgstr "Hívásvárakoztatás"
 
@@ -230,11 +227,11 @@ msgstr "Hívószám korlátozása"
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr "Mégsem"
+msgstr "Mégse"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "Módosítás"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -244,7 +241,7 @@ msgstr "Minden hívás hozzárendelése a következőhöz: %1"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "Kitörölendő karakterek"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -275,7 +272,7 @@ msgstr "Névjegy részletei"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Névjegy nem rendelkezik telefonszámmal."
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:79
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -283,25 +280,26 @@ msgid "Contacts"
 msgstr "Névjegyek"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Névjegyek"
+msgstr "Névjegyek..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Névjegy továbbítása sikertelen"
 
 #: ../src/qml/DialerPage/Keypad.qml:86
 msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
+#, fuzzy
 msgid "Default area code"
-msgstr ""
+msgstr "Alapértelmezett körzetkód"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
+#, fuzzy
 msgid "Default country code"
-msgstr ""
+msgstr "Alapértelmezett országkód"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
@@ -315,11 +313,11 @@ msgstr "Részletek"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "Tárcsázó hangok"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
-msgstr "Letiltás"
+msgstr "Kikapcsol"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
@@ -350,8 +348,9 @@ msgid "Emergency call"
 msgstr "Segélyhívások"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
+#, fuzzy
 msgid "Enter a country code"
-msgstr ""
+msgstr "Írjon be egy országkódot"
 
 #: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -364,12 +363,14 @@ msgid "Enter a prefix"
 msgstr "Szám megadása"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
+#, fuzzy
 msgid "Enter an area code"
-msgstr ""
+msgstr "Írjon be egy körzetkódot"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
+#, fuzzy
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Írja be az eltávolítandó karaktereket"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -403,17 +404,17 @@ msgstr "Repülőgépes mód"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Összes bejövő hívás továbbítása"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Bejövő hívás továbbítása ekkor:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Továbbítás"
 
 #: ../src/qml/DialerPage/Keypad.qml:103
 msgid "GHI"
@@ -425,11 +426,12 @@ msgstr "Értem"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Nem válaszolok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
+#, fuzzy
 msgid "I'm on another call"
-msgstr ""
+msgstr "Más híváson vagyok"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -443,7 +445,7 @@ msgstr "Bejövő"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "Inicializálás..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -456,7 +458,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Utolsó hívás: %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
 msgid "Later"
@@ -467,6 +469,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Lehetővé teszi, hogy új hívást indítson vagy fogadjon hívásközben, és akár "
+"váltson is azok között"
 
 #: ../src/qml/DialerPage/Keypad.qml:137
 msgid "MNO"
@@ -488,7 +492,7 @@ msgstr "Mobil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "A telefonom nem elérhető"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -512,8 +516,9 @@ msgid "No recent calls"
 msgstr "Nincsenek korábbi hívások"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
+#, fuzzy
 msgid "Number rewrite"
-msgstr ""
+msgstr "Szám újraírása"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
@@ -526,7 +531,7 @@ msgstr "OK"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Ki"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -534,7 +539,7 @@ msgstr "OK"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "Be"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -593,8 +598,9 @@ msgid "Please wait"
 msgstr "Kérem várjon"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
+#, fuzzy
 msgid "Prefix"
-msgstr ""
+msgstr "Prefixum"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -608,15 +614,15 @@ msgstr "Rejtett szám"
 #: ../src/qml/DialerPage/DialerPage.qml:569
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "Előzmények"
+msgstr "Legutóbbi"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Minden hívást átirányít egy másik számra."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -658,12 +664,11 @@ msgstr "Üzenet küldése"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Szolgáltatások"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Kijelölés"
+msgstr "Beállítás"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -676,9 +681,8 @@ msgid "Share"
 msgstr "Megosztás"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Nincs hívás"
+msgstr "Néhány hívás"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
@@ -711,11 +715,11 @@ msgstr "Jelenleg nincs hálózat ezen: %1"
 
 #: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
 msgid "There is currently no network."
-msgstr "Jelenleg nincs hálózat"
+msgstr "Jelenleg nincs hálózat."
 
 #: ../src/qml/DialerPage/DialerPage.qml:514
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Ez nem egy segélyhívó szám."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
