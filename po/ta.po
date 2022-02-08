@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-20 12:40+0200\n"
+"POT-Creation-Date: 2022-01-17 12:45+0000\n"
 "PO-Revision-Date: 2021-01-05 01:43+0000\n"
 "Last-Translator: GK <miscgk@pm.me>\n"
-"Language-Team: Tamil <https://translate.ubports.com/projects/ubports/"
-"dialer-app/ta/>\n"
+"Language-Team: Tamil <https://translate.ubports.com/projects/ubports/dialer-"
+"app/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,12 +20,12 @@ msgstr ""
 "X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
-#: ../src/qml/DialerPage/Keypad.qml:242
+#: ../src/qml/DialerPage/Keypad.qml:250
 msgid "#"
 msgstr "#"
 
 #. TRANSLATORS: %1 is the call duration here.
-#: ../src/qml/LiveCallPage/LiveCall.qml:510
+#: ../src/qml/LiveCallPage/LiveCall.qml:488
 #, qt-format
 msgid "%1 - on hold"
 msgstr "%1 - பிடிப்பில்"
@@ -60,6 +60,20 @@ msgid_plural "%1 mins"
 msgstr[0] "%1 நிமிடம்"
 msgstr[1] "%1 நிமிடங்கள்"
 
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:111
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:112
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:113
+#, fuzzy, qt-format
+msgid "%1 month"
+msgid_plural "%1 months"
+msgstr[0] "%1 நிமிடம்"
+msgstr[1] "%1 நிமிடங்கள்"
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:65
+#, qt-format
+msgid "%1 records to clean"
+msgstr ""
+
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
@@ -75,56 +89,60 @@ msgstr[1] "%1 விநாடிகள்"
 msgid "(%1)"
 msgstr "(%1)"
 
-#: ../src/qml/DialerPage/Keypad.qml:206
+#: ../src/qml/DialerPage/Keypad.qml:214
 msgid "*"
 msgstr "*"
 
 #: ../src/qml/DialerPage/DialerBottomEdge.qml:26
-#: ../src/qml/DialerPage/Keypad.qml:223
+#: ../src/qml/DialerPage/Keypad.qml:231
 msgid "+"
 msgstr "+"
 
-#: ../src/qml/DialerPage/Keypad.qml:222
+#: ../src/qml/DialerPage/Keypad.qml:230
 msgid "0"
 msgstr "0"
 
-#: ../src/qml/DialerPage/Keypad.qml:51
+#: ../src/qml/DialerPage/Keypad.qml:59
 msgid "1"
 msgstr "1"
 
-#: ../src/qml/DialerPage/Keypad.qml:68
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:114
+msgid "1 year"
+msgstr ""
+
+#: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
 msgstr "2"
 
-#: ../src/qml/DialerPage/Keypad.qml:85
+#: ../src/qml/DialerPage/Keypad.qml:93
 msgid "3"
 msgstr "3"
 
-#: ../src/qml/DialerPage/Keypad.qml:102
+#: ../src/qml/DialerPage/Keypad.qml:110
 msgid "4"
 msgstr "4"
 
-#: ../src/qml/DialerPage/Keypad.qml:119
+#: ../src/qml/DialerPage/Keypad.qml:127
 msgid "5"
 msgstr "5"
 
-#: ../src/qml/DialerPage/Keypad.qml:136
+#: ../src/qml/DialerPage/Keypad.qml:144
 msgid "6"
 msgstr "6"
 
-#: ../src/qml/DialerPage/Keypad.qml:153
+#: ../src/qml/DialerPage/Keypad.qml:161
 msgid "7"
 msgstr "7"
 
-#: ../src/qml/DialerPage/Keypad.qml:170
+#: ../src/qml/DialerPage/Keypad.qml:178
 msgid "8"
 msgstr "8"
 
-#: ../src/qml/DialerPage/Keypad.qml:187
+#: ../src/qml/DialerPage/Keypad.qml:195
 msgid "9"
 msgstr "9"
 
-#: ../src/qml/DialerPage/Keypad.qml:69
+#: ../src/qml/DialerPage/Keypad.qml:77
 msgid "ABC"
 msgstr "ABC"
 
@@ -132,16 +150,16 @@ msgstr "ABC"
 msgid "Active"
 msgstr "செயலில்"
 
-#: ../src/qml/SettingsPage/SettingsPage.qml:122
+#: ../src/qml/SettingsPage/SettingsPage.qml:123
 msgid "Add an online account"
 msgstr "நிகழ்நிலைக் கணக்கைச் சேர்க்க"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:68
+#: ../src/qml/HistoryPage/HistoryPage.qml:69
 msgctxt "All Calls"
 msgid "All"
 msgstr "எல்லாம்"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:97
+#: ../src/qml/ContactsPage/ContactsPage.qml:120
 msgctxt "All Contacts"
 msgid "All"
 msgstr "எல்லாம்"
@@ -158,19 +176,19 @@ msgstr "புளூடூத் சாதனம்"
 msgid "Call"
 msgstr "அழை"
 
-#: ../src/qml/dialer-app.qml:587
+#: ../src/qml/dialer-app.qml:618
 msgid "Call Barring"
 msgstr "அழைப்புத் தடை"
 
-#: ../src/qml/dialer-app.qml:598
+#: ../src/qml/dialer-app.qml:629
 msgid "Call Forwarding"
 msgstr "அழைப்பு முன்னனுப்பு"
 
-#: ../src/qml/dialer-app.qml:609
+#: ../src/qml/dialer-app.qml:640
 msgid "Call Waiting"
 msgstr "அழைப்புக் காத்திருப்பு"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:169
+#: ../src/qml/LiveCallPage/LiveCall.qml:168
 msgid "Call ended"
 msgstr "அழைப்பு முடிந்தது"
 
@@ -193,6 +211,10 @@ msgstr "இந்த நேரத்தில் அழைப்பு முன
 msgid "Call forwarding status can't be checked "
 msgstr "அழைப்பு முன்னனுப்புவதின் நிலையைச் சரிபார்க்க இயலவில்லை "
 
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:29
+msgid "Call history"
+msgstr ""
+
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
 msgstr "அழைப்புப் பிடிப்புத் தோல்வியுற்றது"
@@ -205,25 +227,27 @@ msgstr "அழைப்புப் பிடிப்புத் தோல�
 msgid "Call waiting"
 msgstr "அழைப்பு காத்திருக்கிறது"
 
-#: ../src/qml/DialerPage/DialerPage.qml:556
+#: ../src/qml/DialerPage/DialerPage.qml:605
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
-#: ../src/qml/LiveCallPage/LiveCall.qml:512
+#: ../src/qml/LiveCallPage/LiveCall.qml:490
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
 msgstr "அழைக்கிறது"
 
-#: ../src/qml/dialer-app.qml:620
+#: ../src/qml/dialer-app.qml:651
 msgid "Calling Line Presentation"
 msgstr "அழைக்கும் எண் முன்வைப்பு"
 
-#: ../src/qml/dialer-app.qml:632
+#: ../src/qml/dialer-app.qml:663
 msgid "Calling Line Restriction"
 msgstr "அழைக்கும் எண் முன்வைப்புக் கட்டுப்பாடு"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:35
-#: ../src/qml/ContactsPage/ContactsPage.qml:147
+#: ../src/qml/ContactEditorPage/DialerCreateContactEditorPage.qml:50
+#: ../src/qml/ContactsPage/ContactsPage.qml:170
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:45
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:46
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:138
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
@@ -243,30 +267,38 @@ msgstr "அனைத்து அழைப்பு தொடர்புக�
 msgid "Characters to remove"
 msgstr "நீக்கவேண்டிய எழுத்துக்கள்"
 
+#: ../src/qml/HistoryPage/HistoryPage.qml:87
+msgid "Clear history"
+msgstr ""
+
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr "மூடுக"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:52
+#: ../src/qml/LiveCallPage/LiveCall.qml:51
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
 msgstr "கூட்டழைப்பு"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:145
+#: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Conference call failure"
 msgstr "கூட்டழைப்பு தோல்வியுற்றது"
 
-#: ../src/qml/dialer-app.qml:626
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:146
+msgid "Confirm"
+msgstr ""
+
+#: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
 msgstr "இணைந்த எண் முன்வைப்பு"
 
-#: ../src/qml/dialer-app.qml:638
+#: ../src/qml/dialer-app.qml:669
 msgid "Connected Line Restriction"
 msgstr "இணைந்த எண் முன்வைப்புக் கட்டுப்பாடு"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
-#: ../src/qml/HistoryPage/HistoryPage.qml:378
+#: ../src/qml/HistoryPage/HistoryPage.qml:401
 msgid "Contact Details"
 msgstr "தொடர்பு விவரம்"
 
@@ -274,7 +306,11 @@ msgstr "தொடர்பு விவரம்"
 msgid "Contact not associated with any phone number."
 msgstr "இந்தத் தொடர்புடன் சேர்ந்த தொலைபேசி எண் எதுவுமில்லை."
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:79
+#: ../src/qml/SettingsPage/SettingsPage.qml:136
+msgid "Contact search with dial pad (Experimental)"
+msgstr ""
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
 msgid "Contacts"
 msgstr "தொடர்புகள்"
@@ -287,7 +323,7 @@ msgstr "தொடர்புகள்…"
 msgid "Could not forward to this contact"
 msgstr "இந்தத் தொடர்பை முன்னனுப்ப முடியவில்லை"
 
-#: ../src/qml/DialerPage/Keypad.qml:86
+#: ../src/qml/DialerPage/Keypad.qml:94
 msgid "DEF"
 msgstr "DEF"
 
@@ -300,12 +336,22 @@ msgid "Default country code"
 msgstr "முன்னிருக்கும் நாட்டின் குறியீடு"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:258
-#: ../src/qml/HistoryPage/HistoryPage.qml:350
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
+#: ../src/qml/HistoryPage/HistoryPage.qml:373
 msgid "Delete"
 msgstr "நீக்குக"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:359
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:115
+#, fuzzy
+msgid "Delete all"
+msgstr "நீக்குக"
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:75
+#, qt-format
+msgid "Deleting %1 records..."
+msgstr ""
+
+#: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
 msgstr "விவரங்கள்"
 
@@ -340,7 +386,7 @@ msgstr "திருத்துக"
 msgid "Emergency Calls"
 msgstr "அவசர அழைப்புகள்"
 
-#: ../src/qml/DialerPage/DialerPage.qml:514
+#: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "Emergency call"
 msgstr "அவசர அழைப்பு"
 
@@ -348,7 +394,7 @@ msgstr "அவசர அழைப்பு"
 msgid "Enter a country code"
 msgstr "நாட்டின் குறியீடை உள்ளிடுக"
 
-#: ../src/qml/DialerPage/DialerPage.qml:332
+#: ../src/qml/DialerPage/DialerPage.qml:331
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
 msgstr "எண்ணை உள்ளிடுக"
@@ -373,7 +419,7 @@ msgstr "பிழை"
 msgid "Failed to activate the call."
 msgstr "அழைப்பை செயல்படுத்துவது தோல்வியுற்றது."
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:146
+#: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to create a conference call."
 msgstr "கூட்டழைப்பை உருவாக்குவது தோல்வியுற்றது."
 
@@ -385,7 +431,7 @@ msgstr "செயலிலிருக்கும் அழைப்பைப�
 msgid "Favorite Contacts"
 msgstr "பிடித்தத் தொடர்புகள்"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:97
+#: ../src/qml/ContactsPage/ContactsPage.qml:120
 msgid "Favorites"
 msgstr "பிடித்தவைகள்"
 
@@ -408,7 +454,7 @@ msgstr "உள்வரும் அழைப்பை எப்பொழு�
 msgid "Forward to"
 msgstr "முன்னனுப்பு எண்"
 
-#: ../src/qml/DialerPage/Keypad.qml:103
+#: ../src/qml/DialerPage/Keypad.qml:111
 msgid "GHI"
 msgstr "GHI"
 
@@ -429,7 +475,7 @@ msgid "IMEI"
 msgstr "IMEI"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:65
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:335
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:340
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:189
 msgid "Incoming"
 msgstr "உள்வரும் அழைப்பு"
@@ -442,7 +488,7 @@ msgstr "தொடங்குகிறது…"
 msgid "Invalid USSD code"
 msgstr "தவறான USSD குறியீடு"
 
-#: ../src/qml/DialerPage/Keypad.qml:120
+#: ../src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
 msgstr "JKL"
 
@@ -451,7 +497,7 @@ msgstr "JKL"
 msgid "Last called %1"
 msgstr "கடைசி அழைப்பு %1"
 
-#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:80
+#: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:79
 msgid "Later"
 msgstr "பின்னர்"
 
@@ -460,20 +506,20 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
-"உங்களை பதிலளிக்க அல்லது மற்றொரு அழைப்பிலிருக்கும்பொழுது புதிய அழைப்பை "
-"உருவாக்கி, அவ்விரண்டிற்குமிடையில் மாற்றவைக்கும்"
+"உங்களை பதிலளிக்க அல்லது மற்றொரு அழைப்பிலிருக்கும்பொழுது புதிய அழைப்பை உருவாக்கி, "
+"அவ்விரண்டிற்குமிடையில் மாற்றவைக்கும்"
 
-#: ../src/qml/DialerPage/Keypad.qml:137
+#: ../src/qml/DialerPage/Keypad.qml:145
 msgid "MNO"
 msgstr "MNO"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:629
+#: ../src/qml/LiveCallPage/LiveCall.qml:607
 msgid "Merge calls"
 msgstr "அழைப்புகளைச் சேர்க்க"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:333
-#: ../src/qml/HistoryPage/HistoryPage.qml:68
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:338
+#: ../src/qml/HistoryPage/HistoryPage.qml:69
 msgid "Missed"
 msgstr "தவறவிட்டது"
 
@@ -489,22 +535,26 @@ msgstr "எனது தொலைபேசி தொடர்பிலி�
 msgid "No"
 msgstr "இல்லை"
 
-#: ../src/qml/dialer-app.qml:370
+#: ../src/qml/dialer-app.qml:386
 msgid "No SIM card selected"
 msgstr "செறிவட்டை எதுவும் தேர்வுசெய்யப்படவில்லை"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:130
+#: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "No calls"
 msgstr "அழைப்புகள் எதுவுமில்லை"
 
-#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:389
-#: ../src/qml/dialer-app.qml:394
+#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:405
+#: ../src/qml/dialer-app.qml:410
 msgid "No network"
 msgstr "இணைப்பு இல்லை"
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:254
+#: ../src/qml/HistoryPage/HistoryPage.qml:277
 msgid "No recent calls"
 msgstr "அண்மை அழைப்புகள் எதுவுமில்லை"
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:70
+msgid "No records to clean"
+msgstr ""
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
@@ -514,6 +564,7 @@ msgstr "எண்களை மீட்டெழுதுக"
 msgid "Numbers"
 msgstr "எண்கள்"
 
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:156
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
 msgstr "சரி"
@@ -536,11 +587,11 @@ msgid "On hold"
 msgstr "பிடிப்பில்"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
-#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:337
+#: ../src/qml/HistoryPage/HistoryDetailsPage.qml:342
 msgid "Outgoing"
 msgstr "வெளிச்செல்லும்"
 
-#: ../src/qml/DialerPage/Keypad.qml:154
+#: ../src/qml/DialerPage/Keypad.qml:162
 msgid "PQRS"
 msgstr "PQRS"
 
@@ -578,10 +629,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"அழைப்பை மேற்கொள்ளவோ அல்லது குருஞ்செய்தியை அனுப்பவோ உங்கள் செறிவட்டை பூட்டை"
-" நீக்கவும். திரையில் மேலிருக்கும் இணையக் குறியீடிலிருந்தோ அல்லது <a href=\""
-"system_settings\"> சாதன அமைவுகள் &gt; பாதுகாப்பு &amp; தனியுரிமை</a> "
-"பயன்படுத்தியோ உங்கள் செறிவட்டையின் பூட்டை நீக்கலாம்."
+"அழைப்பை மேற்கொள்ளவோ அல்லது குருஞ்செய்தியை அனுப்பவோ உங்கள் செறிவட்டை பூட்டை நீக்கவும். "
+"திரையில் மேலிருக்கும் இணையக் குறியீடிலிருந்தோ அல்லது <a href=\"system_settings\"> "
+"சாதன அமைவுகள் &gt; பாதுகாப்பு &amp; தனியுரிமை</a> பயன்படுத்தியோ உங்கள் "
+"செறிவட்டையின் பூட்டை நீக்கலாம்."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -600,7 +651,7 @@ msgstr "தினிப்பயன்"
 msgid "Private number"
 msgstr "தனியார் எண்"
 
-#: ../src/qml/DialerPage/DialerPage.qml:569
+#: ../src/qml/DialerPage/DialerPage.qml:618
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr "அண்மை"
@@ -608,6 +659,20 @@ msgstr "அண்மை"
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
 msgstr "எல்லா அழைப்புகளையும் மற்றொரு எண்ணிற்கு வழிமாற்றுக."
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:60
+msgid "Remove all history older than:"
+msgstr ""
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:81
+#, qt-format
+msgid "Removed %1 records"
+msgstr ""
+
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:87
+#, qt-format
+msgid "Removed %1 records, sorry, something went wrong."
+msgstr ""
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -622,14 +687,15 @@ msgid "SIM Locked"
 msgstr "செறிவட்டை பூட்டப்பட்டுள்ளது"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
+#: ../src/qml/ContactEditorPage/DialerCreateContactEditorPage.qml:62
 msgid "Save"
 msgstr "சேமி"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:121
+#: ../src/qml/ContactsPage/ContactsPage.qml:144
 msgid "Search"
 msgstr "தெடுக"
 
-#: ../src/qml/ContactsPage/ContactsPage.qml:69
+#: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Search..."
 msgstr "தேடுக…"
 
@@ -642,11 +708,10 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"எல்லா வெளிச்செல்லும் அழைப்புகளுக்குமான செறிவட்டையைத் தேர்வுசெய்க. நீங்கள் இதை"
-" எப்பொழுது வேண்டுமானாலும் <a href=\"system_settings\"></a>-ல் "
-"மாற்றிக்கொள்ளலாம்."
+"எல்லா வெளிச்செல்லும் அழைப்புகளுக்குமான செறிவட்டையைத் தேர்வுசெய்க. நீங்கள் இதை எப்பொழுது "
+"வேண்டுமானாலும் <a href=\"system_settings\"></a>-ல் மாற்றிக்கொள்ளலாம்."
 
-#: ../src/qml/HistoryPage/HistoryPage.qml:369
+#: ../src/qml/HistoryPage/HistoryPage.qml:392
 msgid "Send message"
 msgstr "குருஞ்செய்தி அனுப்புக"
 
@@ -685,7 +750,7 @@ msgstr "செயல்களை வெளிப்படுத்த தேய�
 msgid "Switch audio source:"
 msgstr "கேட்பொலியின் மூலத்தை மாற்றுக:"
 
-#: ../src/qml/LiveCallPage/LiveCall.qml:614
+#: ../src/qml/LiveCallPage/LiveCall.qml:592
 msgid "Switch calls"
 msgstr "ஆழைப்புகளை மாற்றுக"
 
@@ -693,20 +758,20 @@ msgstr "ஆழைப்புகளை மாற்றுக"
 msgid "Switch to default SIM:"
 msgstr "முன்னிருக்கும் செறிவட்டைக்கு மாற்றவும்:"
 
-#: ../src/qml/DialerPage/Keypad.qml:171
+#: ../src/qml/DialerPage/Keypad.qml:179
 msgid "TUV"
 msgstr "TUV"
 
-#: ../src/qml/dialer-app.qml:395
+#: ../src/qml/dialer-app.qml:411
 #, qt-format
 msgid "There is currently no network on %1"
 msgstr "இந்த %1 இணைப்புகள் எதுவுமில்லை"
 
-#: ../src/qml/dialer-app.qml:389 ../src/qml/dialer-app.qml:396
+#: ../src/qml/dialer-app.qml:405 ../src/qml/dialer-app.qml:412
 msgid "There is currently no network."
 msgstr "இணைப்பு எதுவுமில்லை."
 
-#: ../src/qml/DialerPage/DialerPage.qml:514
+#: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "This is not an emergency number."
 msgstr "இது அவசர அழைப்பி எண்ணல்ல."
 
@@ -733,7 +798,7 @@ msgstr "தெறியாத எண்"
 msgid "Voicemail"
 msgstr "குரல் மடல்"
 
-#: ../src/qml/DialerPage/Keypad.qml:188
+#: ../src/qml/DialerPage/Keypad.qml:196
 msgid "WXYZ"
 msgstr "WXYZ"
 
@@ -746,7 +811,7 @@ msgstr "நேற்று"
 msgid "You have to disable flight mode in order to make calls"
 msgstr "அழைப்புகளை மேற்கொள்ள விமான முறையை நீக்கவும்"
 
-#: ../src/qml/dialer-app.qml:370
+#: ../src/qml/dialer-app.qml:386
 msgid "You need to select a SIM card"
 msgstr "நீங்கள் செறிவட்டையை தேர்வு செய்ய வேண்டும்"
 
@@ -759,6 +824,11 @@ msgstr "மம:நிநி:விவி"
 #: ../src/qml/HistoryPage/dateUtils.js:115
 msgid "mm:ss"
 msgstr "நிநி:விவி"
+
+#: ../src/qml/ContactsPage/ContactsPage.qml:250
+#, fuzzy
+msgid "view contact"
+msgstr "பிடித்தத் தொடர்புகள்"
 
 #~ msgid "Keypad"
 #~ msgstr "விசைத்தட்டு"
