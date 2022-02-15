@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-01-31 18:24+0000\n"
+"PO-Revision-Date: 2022-02-14 23:28+0000\n"
 "Last-Translator: Daniel Frost <one@frostinfo.de>\n"
-"Language-Team: German <https://translate.ubports.com/projects/ubports/dialer-"
-"app/de/>\n"
+"Language-Team: German <https://translate.ubports.com/projects/ubports/"
+"dialer-app/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -63,16 +63,16 @@ msgstr[1] "%1 Minuten"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 Minute"
-msgstr[1] "%1 Minuten"
+msgstr[0] "%1 Monat"
+msgstr[1] "%1 Monate"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 zu löschende Datensätze"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -108,7 +108,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 Jahr"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -213,7 +213,7 @@ msgstr "Rufweiterleitungs-Status kann nicht geprüft werden "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Anrufliste"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -269,7 +269,7 @@ msgstr "Zeichen zum Entfernen"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Anrufliste löschen"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -287,7 +287,7 @@ msgstr "Konferenzanruf fehlgeschlagen"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -308,7 +308,7 @@ msgstr "Kontakt ist mit keiner Telefonnummer verknüpft."
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "Kontaktsuche mit Tastenwahl (experimentell)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -342,14 +342,13 @@ msgid "Delete"
 msgstr "Löschen"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Löschen"
+msgstr "Alles Löschen"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "Lösche %1 Datensätze..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
@@ -554,7 +553,7 @@ msgstr "Keine kürzlichen Anrufe"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "Keine Datensätze zu löschen"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
@@ -662,17 +661,17 @@ msgstr "Leitet alle Anrufe an eine andere Rufnummer weiter."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Entferne alle Einträge älter als:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "%1 Datensätze gelöscht"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "%1 Datensätze gelöscht, entschuldige, irgendetwas ist schief gegangen."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -722,7 +721,7 @@ msgstr "Dienste"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
-msgstr "Einstellen"
+msgstr "Setzen"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -826,9 +825,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Kontakt-Favoriten"
+msgstr "Kontakt öffnen"
 
 #~ msgid "Yes"
 #~ msgstr "Ja"
