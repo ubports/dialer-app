@@ -8,8 +8,9 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-02-10 00:28+0000\n"
-"Last-Translator: Герман Семенов <GermanAizek@yandex.ru>\n"
+"PO-Revision-Date: 2022-02-12 06:45+0000\n"
+"Last-Translator: Герман Семенов (Разработчик) "
+"<wipetmp+german_semenov@gmail.com>\n"
 "Language-Team: Russian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ru/>\n"
 "Language: ru\n"
@@ -357,7 +358,7 @@ msgstr "Удаление %1 записей..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
-msgstr "Сведения"
+msgstr "Подробности"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
@@ -726,7 +727,7 @@ msgstr "Службы"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
-msgstr "Выбрать"
+msgstr "Установить"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
