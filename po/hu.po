@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-02-05 22:02+0000\n"
+"PO-Revision-Date: 2022-02-20 18:06+0000\n"
 "Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/hu/>\n"
@@ -33,9 +33,9 @@ msgstr "%1 - hívás várakoztatva"
 #. TRANSLATORS: %1 is the displayname of the account
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 Number Rewrite"
-msgstr "%1 szám újraírása"
+msgstr "%1 Szám Újraírása"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
@@ -63,16 +63,16 @@ msgstr[1] "%1 perc"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 perc"
-msgstr[1] "%1 perc"
+msgstr[0] "%1 hónap"
+msgstr[1] "%1 hónap"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 hangfelvétel törlése"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -108,7 +108,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 év"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -213,7 +213,7 @@ msgstr "Hívásátirányítás állapota nem ellenőrizhető "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Hívásnapló"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -269,7 +269,7 @@ msgstr "Kitörölendő karakterek"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Előzmények törlése"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -287,7 +287,7 @@ msgstr "Konferenciahívási hiba"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Jóváhagyás"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -308,7 +308,7 @@ msgstr "Névjegy nem rendelkezik telefonszámmal."
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "Névjegy keresése tárcsázóval (Kísérleti)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -351,7 +351,7 @@ msgstr "Törlés"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "%1 hangfelvétel törlése..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
@@ -563,7 +563,7 @@ msgstr "Nincsenek korábbi hívások"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "Nincs törölhető hangfelvétel"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 #, fuzzy
@@ -673,17 +673,17 @@ msgstr "Minden hívást átirányít egy másik számra."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Előzmények törlése ezen időpont előtt:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "%1 hangfelvétel törölve"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "%1 hangfelvétel törölve, elnézést, valamilyen hibába ütköztünk."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
