@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-02-20 18:06+0000\n"
+"PO-Revision-Date: 2022-02-20 23:29+0000\n"
 "Last-Translator: Lundrin <berenyi.vilmos@tutanota.com>\n"
 "Language-Team: Hungarian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/hu/>\n"
@@ -328,14 +328,12 @@ msgid "DEF"
 msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
-#, fuzzy
 msgid "Default area code"
-msgstr "Alapértelmezett körzetkód"
+msgstr "Alapértelmezett körzetszám"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
-#, fuzzy
 msgid "Default country code"
-msgstr "Alapértelmezett országkód"
+msgstr "Alapértelmezett országhívószám"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
@@ -344,9 +342,8 @@ msgid "Delete"
 msgstr "Törlés"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Törlés"
+msgstr "Összes törlése"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
@@ -389,14 +386,12 @@ msgid "Emergency Calls"
 msgstr "Segélyhívások"
 
 #: ../src/qml/DialerPage/DialerPage.qml:563
-#, fuzzy
 msgid "Emergency call"
-msgstr "Segélyhívások"
+msgstr "Segélyhívás"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
-#, fuzzy
 msgid "Enter a country code"
-msgstr "Írjon be egy országkódot"
+msgstr "Írjon be egy országhívószámot"
 
 #: ../src/qml/DialerPage/DialerPage.qml:331
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -404,19 +399,16 @@ msgid "Enter a number"
 msgstr "Szám megadása"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "Szám megadása"
+msgstr "Előhívószám megadása"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
-#, fuzzy
 msgid "Enter an area code"
-msgstr "Írjon be egy körzetkódot"
+msgstr "Írjon be egy körzetszámot"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
-#, fuzzy
 msgid "Enter the characters to remove"
-msgstr "Írja be az eltávolítandó karaktereket"
+msgstr "Adja meg az eltávolítandó karaktereket"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -435,7 +427,6 @@ msgid "Failed to place the active call on hold."
 msgstr "Nem sikerült várakoztatni az aktív hívást."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
 msgstr "Kedvencek"
 
@@ -475,7 +466,6 @@ msgid "I don't answer"
 msgstr "Nem válaszolok"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
-#, fuzzy
 msgid "I'm on another call"
 msgstr "Más híváson vagyok"
 
@@ -566,7 +556,6 @@ msgid "No records to clean"
 msgstr "Nincs törölhető hangfelvétel"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
-#, fuzzy
 msgid "Number rewrite"
 msgstr "Szám újraírása"
 
@@ -649,7 +638,6 @@ msgid "Please wait"
 msgstr "Kérem várjon"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
-#, fuzzy
 msgid "Prefix"
 msgstr "Prefixum"
 
@@ -838,9 +826,8 @@ msgid "mm:ss"
 msgstr "mm.ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Kedvencek"
+msgstr "Névjegy megtekintése"
 
 #~ msgid "Flight mode"
 #~ msgstr "Repülőgépes mód"
