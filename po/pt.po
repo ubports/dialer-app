@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-02-21 19:36+0000\n"
+"PO-Revision-Date: 2022-02-28 15:16+0000\n"
 "Last-Translator: Ivo Xavier <ivofernandes12@gmail.com>\n"
 "Language-Team: Portuguese <https://translate.ubports.com/projects/ubports/"
 "dialer-app/pt/>\n"
@@ -63,11 +63,11 @@ msgstr[1] "%1 mins"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 min"
-msgstr[1] "%1 mins"
+msgstr[0] "%1 mês"
+msgstr[1] "%1 meses"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
@@ -342,9 +342,8 @@ msgid "Delete"
 msgstr "Eliminar"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Eliminar"
+msgstr "Eliminar todos"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
@@ -700,7 +699,7 @@ msgstr "Procurar..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "Selecionar"
+msgstr "Escolher"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
@@ -825,9 +824,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Contactos favoritos"
+msgstr "ver contacto"
 
 #~ msgid "Yes"
 #~ msgstr "Sim"
