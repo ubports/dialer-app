@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-03-15 16:41+0000\n"
+"PO-Revision-Date: 2022-03-16 13:41+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "dialer-app/km/>\n"
@@ -701,7 +701,7 @@ msgstr "ស្វែងរក..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "​ជ្រើស"
+msgstr "ជ្រើស"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""
