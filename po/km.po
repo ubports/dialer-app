@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-03-16 13:41+0000\n"
+"PO-Revision-Date: 2022-03-17 09:37+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "dialer-app/km/>\n"
@@ -96,47 +96,47 @@ msgstr "+"
 
 #: ../src/qml/DialerPage/Keypad.qml:230
 msgid "0"
-msgstr "0"
+msgstr "០"
 
 #: ../src/qml/DialerPage/Keypad.qml:59
 msgid "1"
-msgstr "1"
+msgstr "១"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "១ ឆ្នាំ"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
-msgstr "2"
+msgstr "២"
 
 #: ../src/qml/DialerPage/Keypad.qml:93
 msgid "3"
-msgstr "3"
+msgstr "៣"
 
 #: ../src/qml/DialerPage/Keypad.qml:110
 msgid "4"
-msgstr "4"
+msgstr "៤"
 
 #: ../src/qml/DialerPage/Keypad.qml:127
 msgid "5"
-msgstr "5"
+msgstr "៥"
 
 #: ../src/qml/DialerPage/Keypad.qml:144
 msgid "6"
-msgstr "6"
+msgstr "៦"
 
 #: ../src/qml/DialerPage/Keypad.qml:161
 msgid "7"
-msgstr "7"
+msgstr "៧"
 
 #: ../src/qml/DialerPage/Keypad.qml:178
 msgid "8"
-msgstr "8"
+msgstr "៨"
 
 #: ../src/qml/DialerPage/Keypad.qml:195
 msgid "9"
-msgstr "9"
+msgstr "៩"
 
 #: ../src/qml/DialerPage/Keypad.qml:77
 msgid "ABC"
@@ -148,7 +148,7 @@ msgstr "សកម្ម"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:123
 msgid "Add an online account"
-msgstr ""
+msgstr "បន្ថែមគណនីអនឡាញ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:69
 msgctxt "All Calls"
@@ -161,9 +161,8 @@ msgid "All"
 msgstr "ទាំងអស់"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "គ្មានការហៅ"
+msgstr "ការហៅទាំងអស់"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
@@ -183,7 +182,7 @@ msgstr "បញ្ជូន​ការ​ហៅបន្ត"
 
 #: ../src/qml/dialer-app.qml:640
 msgid "Call Waiting"
-msgstr "រង់ចាំ​ការ​ហៅ"
+msgstr "ការ​ហៅកំពុងរង់ចាំ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:168
 msgid "Call ended"
@@ -197,21 +196,20 @@ msgstr "ការហៅបានបរាជ័យ"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
 msgstr "បញ្ជូន​ការ​ហៅបន្ត"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "បញ្ជូនការហៅបន្ត មិនអាចផ្លាស់ប្ដូរឥឡូវនេះទេ។"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "ស្ថានភាពការហៅបន្ត មិនអាចពិនិត្យបានទេ "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "ប្រវត្តិការហៅ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -222,16 +220,15 @@ msgstr "ភាពបរាជ័យក្នុងការហៅកាន់"
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "រង់ចាំ​ការ​ហៅ"
+msgstr "ការ​ហៅកំពុងរង់ចាំ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:605
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "កំពុុងហៅ"
+msgstr "កំពុងហៅ"
 
 #: ../src/qml/dialer-app.qml:651
 msgid "Calling Line Presentation"
@@ -254,7 +251,7 @@ msgstr "បោះបង់"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "ផ្លាស់ប្ដូរ"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
@@ -286,7 +283,7 @@ msgstr "ភាពបរាជ័យក្នុងការហៅសន្និ
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "យល់ព្រម"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
