@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2021-10-03 05:18+0000\n"
+"PO-Revision-Date: 2022-03-24 05:37+0000\n"
 "Last-Translator: HEROBRINE7GAMER <tapermeerkat77@gmail.com>\n"
-"Language-Team: Arabic <https://translate.ubports.com/projects/ubports/dialer-"
-"app/ar/>\n"
+"Language-Team: Arabic <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ar/>\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -268,7 +268,7 @@ msgstr "تقييد خط الاتصال"
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr "ألغ"
+msgstr "إلغاء"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
@@ -589,7 +589,7 @@ msgstr "موافق"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr "مغلق"
+msgstr "أطفئ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
