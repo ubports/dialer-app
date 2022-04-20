@@ -37,6 +37,7 @@ Page {
     property bool greeterMode: false
     property var mmiPlugins: []
     readonly property bool compactView: page.height <= units.gu(60)
+    property bool isInEmergencyMode: (greeter.greeterActive && mainView.applicationActive) | (mainView.account && mainView.account.simLocked)
 
     function selectAccount(accountId) {
         for (var i in accountsModel.activeAccounts) {
@@ -430,7 +431,7 @@ Page {
 
             Connections {
                 target: keypad
-                enabled: mainView.settings.contactSearchWithDialPad
+                enabled: mainView.settings.contactSearchWithDialPad && !isInEmergencyMode
                 onKeyPressed : {
                     if (keycode == Qt.Key_Backspace) {
                         contactSearch.pop()
@@ -447,7 +448,7 @@ Page {
             }
             Connections {
                 target: backspace
-                enabled: mainView.settings.contactSearchWithDialPad
+                enabled: mainView.settings.contactSearchWithDialPad && !isInEmergencyMode
                 onClicked : contactSearch.pop()
                 onPressAndHold : contactSearch.clearAll()
             }
