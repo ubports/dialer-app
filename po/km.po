@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-03-17 09:37+0000\n"
+"PO-Revision-Date: 2022-04-01 06:36+0000\n"
 "Last-Translator: ប៉ុកណូ រ៉ូយ៉ាល់ <poknoroyal@outlook.com>\n"
 "Language-Team: Central Khmer <https://translate.ubports.com/projects/ubports/"
 "dialer-app/km/>\n"
@@ -28,21 +28,21 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:488
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 - រង់ចាំ"
+msgstr "%1 - នៅរង់ចាំ"
 
 #. TRANSLATORS: %1 is the displayname of the account
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "%1 លេខសរសេរឡើងវិញ"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "សេវាកម្ម %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -61,15 +61,15 @@ msgstr[0] "%1 នាទី"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 នាទី"
+msgstr[0] "%1 ខែ"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 កំណត់ត្រាដែលសម្អាត"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -213,7 +213,7 @@ msgstr "ប្រវត្តិការហៅ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
-msgstr "ភាពបរាជ័យក្នុងការហៅកាន់"
+msgstr "ការដាក់រង់ចាំហៅបរាជ័យ"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
@@ -261,11 +261,11 @@ msgstr "ផ្លាស់ប្តូរសមាគមការហៅទាំ
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "តួអក្សរដែលត្រូវដកចេញ"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "ជម្រះប្រវត្តិ"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -275,36 +275,36 @@ msgstr "បិទ"
 #: ../src/qml/LiveCallPage/LiveCall.qml:51
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:89
 msgid "Conference"
-msgstr "សន្និសីទ"
+msgstr "ការប្រជុំ"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Conference call failure"
-msgstr "ភាពបរាជ័យក្នុងការហៅសន្និសិទ"
+msgstr "ការហៅប្រជុំបរាជ័យ"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr "យល់ព្រម"
+msgstr "អះអាង"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
-msgstr "បង្ហាញ​ខ្សែ​បាន​ភ្ជាប់"
+msgstr "ខ្សែនៃបទបង្ហាញ​បានតភ្ជាប់"
 
 #: ../src/qml/dialer-app.qml:669
 msgid "Connected Line Restriction"
-msgstr "ដាក់​កម្រិត​ខ្សែ​បាន​ភ្ជាប់"
+msgstr "ការកម្រិតខ្សែដែលបានតភ្ជាប់"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
 #: ../src/qml/HistoryPage/HistoryPage.qml:401
 msgid "Contact Details"
-msgstr "ព័ត៌មាន​លម្អិត​ទំនាក់ទំនង"
+msgstr "សេចក្តីលម្អិត​ទំនាក់ទំនង"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "ទំនាក់ទំនងមិនដែលភ្ជាប់ជាមួយលេខទូរស័ព្ទណាឡើយ។"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "ស្វែងរកទំនាក់ទំនងជាមួយផ្ទាំងដាល (ការដាក់សាកល្បង)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -312,13 +312,12 @@ msgid "Contacts"
 msgstr "ទំនាក់ទំនង"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "ទំនាក់ទំនង"
+msgstr "ទំនាក់ទំនង…"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "ពុំអាចភ្ជាប់បន្តទៅទំនាក់ទំនងនេះបានទេ"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "DEF"
@@ -326,11 +325,11 @@ msgstr "DEF"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "បុរេជម្រើសកូដតំបន់"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "បុរេជម្រើសកូដប្រទេស"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
@@ -339,36 +338,35 @@ msgid "Delete"
 msgstr "លុប"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "លុប"
+msgstr "លុបទាំងអស់"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "កំពុងលុប %1 កំណត់ត្រា…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
-msgstr "ព័ត៌មាន​លម្អិត"
+msgstr "សេចក្តីលម្អិត"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "សូរផ្ទាំងដាល"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
-msgstr "បិទ"
+msgstr "វិកលកម្ម"
 
 #: ../src/qml/Dialogs/FlightModeProgressDialog.qml:29
 msgid "Disabling flight mode"
-msgstr "បិទរបៀបការហោះហើរ"
+msgstr "កំពុងវិកលកម្មរបៀបហោះហើរ"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:31
 #: ../src/qml/Dialogs/UssdResponseDialog.qml:30
 #: ../src/qml/MMI/IMEIDialog.qml:40
 msgid "Dismiss"
-msgstr "បណ្ដេញ"
+msgstr "ច្រានចោល"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:64
 msgid "Don't ask again"
@@ -384,13 +382,12 @@ msgid "Emergency Calls"
 msgstr "ការហៅបន្ទាន់"
 
 #: ../src/qml/DialerPage/DialerPage.qml:563
-#, fuzzy
 msgid "Emergency call"
-msgstr "ការហៅបន្ទាន់"
+msgstr "ការហៅសង្គ្រោះបន្ទាន់"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "បញ្ចូលកូដប្រទេស"
 
 #: ../src/qml/DialerPage/DialerPage.qml:331
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
@@ -398,17 +395,16 @@ msgid "Enter a number"
 msgstr "បញ្ចូល​លេខ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "បញ្ចូល​លេខ"
+msgstr "បញ្ចូលបុព្វបទ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "បញ្ចូលកូដតំបន់"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "បញ្ចូលតួអក្សរដែលដកចេញ"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -416,20 +412,19 @@ msgstr "កំហុស"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
-msgstr "បរាជ័យក្នុងការធ្វើការហៅឱ្យសកម្ម ។"
+msgstr "បានបរាជ័យឱ្យការហៅសកម្ម។"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to create a conference call."
-msgstr "បរាជ័យក្នុងការបង្កើតការហៅសន្និសិទ ។"
+msgstr "បានបរាជ័យក្នុងការបង្កើតការហៅប្រជុំ ។"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
-msgstr "បរាជ័យក្នុងការកន្លែងរង់ចាំការហៅសកម្ម ។"
+msgstr "បានបរាជ័យដាក់ការហៅឱ្យសកម្មក្នុងការការរង់ចាំ។"
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "និយម"
+msgstr "ទំនាក់ទំនងនិយម"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:120
 msgid "Favorites"
@@ -438,21 +433,21 @@ msgstr "និយម"
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
-msgstr "ម៉ូដ​យន្តហោះ"
+msgstr "ម៉ូដ​ហោះហើរ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "បញ្ជូនបន្តរាល់ការហៅពីក្រៅ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "បញ្ជូនបន្តរាល់ការហៅពីក្រៅ នៅពេល៖"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "បញ្ជូនបន្តទៅ"
 
 #: ../src/qml/DialerPage/Keypad.qml:111
 msgid "GHI"
@@ -460,15 +455,15 @@ msgstr "GHI"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
-msgstr ""
+msgstr "យល់ហើយ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "ខ្ញុំមិនឆ្លើយ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "ខ្ញុំជាប់ការហៅផ្សេងទៀត"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -482,7 +477,7 @@ msgstr "ចូល"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "កំពុងរៀបចំ…"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
@@ -495,7 +490,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "បានហៅចុងក្រោយ %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:79
 msgid "Later"
@@ -506,6 +501,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"អនុញ្ញាតឱ្យអ្នកឆ្លើយតប ឬ ចាប់ផ្ដើមការហៅថ្មី ខណៈពេលការហៅផ្សេងទៀត "
+"ហើយបន្លាស់រវាងពួកគេ"
 
 #: ../src/qml/DialerPage/Keypad.qml:145
 msgid "MNO"
@@ -513,7 +510,7 @@ msgstr "MNO"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:607
 msgid "Merge calls"
-msgstr "បញ្ចូល​ការ​ហៅ​ចូល​គ្នា"
+msgstr "បញ្ចូល​ការ​ហៅរួម​​គ្នា"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:63
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:338
@@ -527,7 +524,7 @@ msgstr "ទូរស័ព្ទចល័ត"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "ទូរស័ព្ទរបស់ខ្ញុំ គឺមិនអាចទាក់ទង"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -544,19 +541,19 @@ msgstr "គ្មានការហៅ"
 #: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:405
 #: ../src/qml/dialer-app.qml:410
 msgid "No network"
-msgstr "មិន​មាន​សេវា"
+msgstr "គ្មាន​សេវា"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:277
 msgid "No recent calls"
-msgstr "មិនមានការហៅថ្មី"
+msgstr "គ្មានការហៅថ្មីទេ"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "គ្មានកំណត់ត្រាដែលសម្អាតទេ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "សរសេរលេខឡើងវិញ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
@@ -570,7 +567,7 @@ msgstr "យល់ព្រម"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "បិទ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -578,7 +575,7 @@ msgstr "យល់ព្រម"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "បើក"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -587,7 +584,7 @@ msgstr "រង់ចាំ"
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:67
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:342
 msgid "Outgoing"
-msgstr "ចេញ"
+msgstr "ចេញក្រៅ"
 
 #: ../src/qml/DialerPage/Keypad.qml:162
 msgid "PQRS"
@@ -611,11 +608,11 @@ msgstr "កម្មវិធី​ទូរស័ព្ទ"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
-msgstr "ទូរស័ព្ទ;បន្ទះលេខ;ចុច;ហៅ;បន្ទះ"
+msgstr "ទូរស័ព្ទ;ដាលករ;ដាល;ការហៅ;បន្ទះចុច"
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "រើសគណនី ដើម្បីបង្កើត។"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
@@ -627,9 +624,9 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"សូមដោះសោស៊ីមកាតរបស់អ្នក ដើម្បីហៅឬផ្ញើសារ ។ អ្នកអាចដោះសោរស៊ីមកាតរបស់អ្នក ពី បណ្តាញសូចនាករ "
-"នៅកំពូលនៃអេក្រង់ឬដោយទស្សនា <a href=\"system_settings\">ការកំណត់ប្រព័ន្ធ &gt; សន្តិសុខ "
-"&amp; ភាពឯកជន ។"
+"សូមដោះសោស៊ីមកាតរបស់អ្នក ដើម្បីហៅឬផ្ញើសារ ។ អ្នកអាចដោះសោរស៊ីមកាតរបស់អ្នក "
+"មកពីទ្រនិចបង្ហាញសេវានៅកំពូលនៃអេក្រង់ ឬដោយចូលទៅ <a href=\"system_settings\""
+">ការកំណត់ប្រព័ន្ធ &gt; សន្តិសុខ &amp; ឯកជនភាព</a>។"
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -637,7 +634,7 @@ msgstr "សូមរង់​ចាំ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "បុព្វបទ"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
@@ -651,29 +648,29 @@ msgstr "លេខ​ឯកជន"
 #: ../src/qml/DialerPage/DialerPage.qml:618
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
-msgstr "បច្ចុប្បន្ន"
+msgstr "ថ្មីៗ"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "ប្ដូរទិសការហៅទូរសព្ទទាំងអស់ទៅលេខផ្សេង។"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "លុបប្រវត្តិទាំងអស់ដែលចាស់ជាង៖"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "បាន​យក​កំណត់​ត្រា %1 ចេញ"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "បានយកកំណត់ត្រា %1 ចេញ។ សុំទោស, មានអ្វីមួយដូចជាខុសប្រក្រតី។"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "ស៊ីម"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
@@ -705,8 +702,9 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"ជ្រើស​ស៊ីម​លំនាំដើម​សម្រាប់​ការ​ហៅ​ចេញ​ទាំងអស់។ អ្នក​អាច​ប្ដូរ​ជម្រើស​បាន​នៅ​ក្នុង <a href="
-"\"system_settings\">ការ​កំណត់​ប្រព័ន្ធ</a> ។"
+"ជ្រើស​ស៊ីមបុរេជម្រើស សម្រាប់​ការ​ហៅ​ចេញ​ទាំងអស់។ "
+"អ្នក​នៅនៅតែអាចកែប្រែជម្រើស​បាន​នៅ​ក្នុង <a href=\"system_settings\""
+">ការ​កំណត់​ប្រព័ន្ធ</a> ។"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:392
 msgid "Send message"
@@ -715,12 +713,11 @@ msgstr "ផ្ញើសារ"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "សេវាកម្ម"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "​ជ្រើស"
+msgstr "កំណត់"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -733,29 +730,28 @@ msgid "Share"
 msgstr "ចែករំលែក"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "គ្មានការហៅ"
+msgstr "ការហៅខ្លះ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr ""
+msgstr "អូស ដើម្បីលុប"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr ""
+msgstr "អូស ដើម្បីបង្ហាញសកម្មភាព"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
-msgstr "ផ្លាស់ប្តូរប្រភពអូឌីយ៉ូ ៖"
+msgstr "បន្លាស់ប្រភពអូឌីយ៉ូ៖"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:592
 msgid "Switch calls"
-msgstr "ប្តូរការហៅ"
+msgstr "បន្លាស់ការហៅ"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "ប្ដូរ​ទៅ​ស៊ីម​លំនាំដើម៖"
+msgstr "បន្លាស់​ទៅ​ស៊ីមបុរេជម្រើស៖"
 
 #: ../src/qml/DialerPage/Keypad.qml:179
 msgid "TUV"
@@ -768,11 +764,11 @@ msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា
 
 #: ../src/qml/dialer-app.qml:405 ../src/qml/dialer-app.qml:412
 msgid "There is currently no network."
-msgstr "បច្ចុប្បន្ន​មិន​មាន​សេវា។"
+msgstr "បច្ចុប្បន្ន​គឺគ្មាន​សេវាឡើយ។"
 
 #: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "នេះមិនមែនជាលេខសង្គ្រោះបន្ទាន់ឡើយ។"
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -785,7 +781,7 @@ msgstr "ទូរស័ព្ទ Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:395
 msgid "Unknown device"
-msgstr "មិន​ស្គាល់​ឧបករណ៍"
+msgstr "​ឧបករណ៍មិន​ស្គាល់"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:170
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:45
@@ -808,7 +804,7 @@ msgstr "ម្សិលមិញ"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr ""
+msgstr "អ្នកបានវិកលកម្មម៉ូដហោះហើរក្នុងការដែលអាចហៅចេញ"
 
 #: ../src/qml/dialer-app.qml:386
 msgid "You need to select a SIM card"
@@ -825,9 +821,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "និយម"
+msgstr "មើលទំនាក់ទំនង"
 
 #~ msgid "Flight mode"
 #~ msgstr "របៀប​ជិះ​យន្តហោះ"
