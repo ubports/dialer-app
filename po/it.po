@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2020-11-23 18:30+0000\n"
+"PO-Revision-Date: 2022-04-23 09:39+0000\n"
 "Last-Translator: Mike <miguel2000@livecom.it>\n"
 "Language-Team: Italian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/it/>\n"
@@ -63,11 +63,11 @@ msgstr[1] "%1 minuti"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 minuto"
-msgstr[1] "%1 minuti"
+msgstr[0] "%1 mese"
+msgstr[1] "%1 mesi"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
@@ -108,7 +108,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 anno"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -213,7 +213,7 @@ msgstr "Non è possibile controllare lo stato dell'inoltro di chiamata "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Cronologia chiamate"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -269,7 +269,7 @@ msgstr "Caratteri da rimuovere"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Cancella cronologia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -287,7 +287,7 @@ msgstr "Impossibile creare una chiamata in conferenza"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Conferma"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -308,7 +308,7 @@ msgstr "Contatto non associato ad un numero di telefono."
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "Ricerca contatti con tastierino numerico (Sperimentale)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -342,9 +342,8 @@ msgid "Delete"
 msgstr "Elimina"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Elimina"
+msgstr "Elimina tutti"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
@@ -662,7 +661,7 @@ msgstr "Inoltra tutte le chiamate ad un altro numero."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Rimuovi tutta la cronologia più vecchia di:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
@@ -827,9 +826,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Preferiti"
+msgstr "vedi contatto"
 
 #~ msgid "Yes"
 #~ msgstr "Sì"

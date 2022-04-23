@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2021-05-03 03:41+0000\n"
-"Last-Translator: Enceka <enceka@yeah.net>\n"
+"PO-Revision-Date: 2022-04-19 11:09+0000\n"
+"Last-Translator: Animoe <w42023@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -714,7 +714,7 @@ msgstr "服务"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
-msgstr "设定"
+msgstr "设置"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
