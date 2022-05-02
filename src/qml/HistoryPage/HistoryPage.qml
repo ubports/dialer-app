@@ -409,6 +409,13 @@ Page {
                         enabled: knownNumber
                     }
                 ]
+
+                Component.onCompleted: {
+                    // consider this missed call as read
+                    if (newEvent) {
+                        model.events.forEach(event => historyEventModel.markEventAsRead(event));
+                    }
+                }
             }
         }
 
