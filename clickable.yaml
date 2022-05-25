@@ -1,0 +1,4 @@
+clickable_minimum_required: 7.2
+builder: cmake
+build_args: "-DCLICK_MODE=ON -DENABLE_TESTS=OFF -DCMAKE_BUILD_TYPE=Debug"
+skip_review: true
