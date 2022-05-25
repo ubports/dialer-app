@@ -20,7 +20,7 @@ Install [clickable](http://clickable.bhdouglass.com/en/latest/), then run:
 clickable
 ```
 
-For faster build speeds, building app tests is disabled in ```clickable.json``` 
+For faster build speeds, building app tests is disabled in ```clickable.yaml``` 
 
 
 Tests
