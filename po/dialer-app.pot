@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-17 12:45+0000\n"
+"POT-Creation-Date: 2022-05-31 13:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -225,7 +225,7 @@ msgstr ""
 msgid "Call waiting"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:605
+#: ../src/qml/DialerPage/DialerPage.qml:606
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
@@ -269,7 +269,7 @@ msgstr ""
 msgid "Clear history"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:92
+#: ../src/qml/DialerPage/DialerPage.qml:93
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
 msgid "Close"
 msgstr ""
@@ -281,10 +281,6 @@ msgstr ""
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Conference call failure"
-msgstr ""
-
-#: ../src/qml/HistoryPage/HistoryCleaner.qml:146
-msgid "Confirm"
 msgstr ""
 
 #: ../src/qml/dialer-app.qml:657
@@ -309,7 +305,7 @@ msgid "Contact search with dial pad (Experimental)"
 msgstr ""
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
-#: ../src/qml/DialerPage/DialerPage.qml:65
+#: ../src/qml/DialerPage/DialerPage.qml:66
 msgid "Contacts"
 msgstr ""
 
@@ -333,6 +329,7 @@ msgstr ""
 msgid "Default country code"
 msgstr ""
 
+#: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
 #: ../src/qml/HistoryPage/HistoryPage.qml:373
@@ -378,12 +375,12 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:147
-#: ../src/qml/DialerPage/DialerPage.qml:157
+#: ../src/qml/DialerPage/DialerPage.qml:148
+#: ../src/qml/DialerPage/DialerPage.qml:158
 msgid "Emergency Calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:563
+#: ../src/qml/DialerPage/DialerPage.qml:564
 msgid "Emergency call"
 msgstr ""
 
@@ -391,7 +388,7 @@ msgstr ""
 msgid "Enter a country code"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:331
+#: ../src/qml/DialerPage/DialerPage.qml:332
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
 msgstr ""
@@ -424,7 +421,7 @@ msgstr ""
 msgid "Failed to place the active call on hold."
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:59
+#: ../src/qml/DialerPage/DialerPage.qml:60
 msgid "Favorite Contacts"
 msgstr ""
 
@@ -432,7 +429,7 @@ msgstr ""
 msgid "Favorites"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:152
+#: ../src/qml/DialerPage/DialerPage.qml:153
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
 msgid "Flight Mode"
 msgstr ""
@@ -477,7 +474,7 @@ msgstr ""
 msgid "Incoming"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:144
+#: ../src/qml/DialerPage/DialerPage.qml:145
 msgid "Initializing..."
 msgstr ""
 
@@ -538,7 +535,7 @@ msgstr ""
 msgid "No calls"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:405
+#: ../src/qml/DialerPage/DialerPage.qml:167 ../src/qml/dialer-app.qml:405
 #: ../src/qml/dialer-app.qml:410
 msgid "No network"
 msgstr ""
@@ -590,7 +587,7 @@ msgstr ""
 msgid "PQRS"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:164 ../src/dialer-app.desktop.in.in.h:1
+#: ../src/qml/DialerPage/DialerPage.qml:165 ../src/dialer-app.desktop.in.in.h:1
 msgid "Phone"
 msgstr ""
 
@@ -642,7 +639,7 @@ msgstr ""
 msgid "Private number"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:618
+#: ../src/qml/DialerPage/DialerPage.qml:619
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Recent"
 msgstr ""
@@ -673,7 +670,7 @@ msgstr ""
 msgid "SIM Card is locked"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:155
+#: ../src/qml/DialerPage/DialerPage.qml:156
 msgid "SIM Locked"
 msgstr ""
 
@@ -713,7 +710,7 @@ msgstr ""
 msgid "Set"
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:70
+#: ../src/qml/DialerPage/DialerPage.qml:71
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
 msgstr ""
@@ -760,7 +757,7 @@ msgstr ""
 msgid "There is currently no network."
 msgstr ""
 
-#: ../src/qml/DialerPage/DialerPage.qml:563
+#: ../src/qml/DialerPage/DialerPage.qml:564
 msgid "This is not an emergency number."
 msgstr ""
 
