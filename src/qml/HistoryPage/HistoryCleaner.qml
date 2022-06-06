@@ -143,8 +143,8 @@ Dialog {
                 objectName: "confirmBtn"
                 enabled: fromDateSelector.selectedIndex > -1 && root.eventsCount > 0
                 width: parent.width/2 - row.spacing/2
-                text: i18n.tr("Confirm")
-                color: theme.palette.normal.positiveText
+                text: i18n.tr("Delete")
+                color: theme.palette.normal.negative
                 onClicked: root.runDeleteOperation()
             }
         }

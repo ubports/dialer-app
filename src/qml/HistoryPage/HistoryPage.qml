@@ -61,7 +61,6 @@ Page {
 
         trailingActionBar {
             id: trailingBar
-            numberOfSlots:selectionMode ? 5 : 0
         }
 
         extension: Sections {
