@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-03-09 20:46+0000\n"
-"Last-Translator: Marcos Sánchez Provencio <raptopassion@gmail.com>\n"
+"PO-Revision-Date: 2022-06-01 16:59+0000\n"
+"Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/es/>\n"
 "Language: es\n"
@@ -571,7 +571,7 @@ msgstr "Aceptar"
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr "Apagado"
+msgstr "Desactivado"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
@@ -727,7 +727,7 @@ msgstr "Definir"
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
 msgid "Settings"
-msgstr "Ajustes"
+msgstr "Configuración"
 
 #: ../src/qml/ContactViewPage/DialerContactViewPage.qml:61
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:83
