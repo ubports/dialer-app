@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-04-19 11:09+0000\n"
-"Last-Translator: Animoe <w42023@outlook.com>\n"
+"PO-Revision-Date: 2022-08-26 23:44+0000\n"
+"Last-Translator: Caten <catenhu@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -61,15 +61,15 @@ msgstr[0] "%1 分钟"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 分钟"
+msgstr[0] "%1 月"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 条记录需要清理"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -104,7 +104,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1年"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -209,7 +209,7 @@ msgstr "无法检查来电转接状态 "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "通话历史"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -265,7 +265,7 @@ msgstr "删除字符"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "清除历史"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -283,7 +283,7 @@ msgstr "多方通话失败"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -304,7 +304,7 @@ msgstr "联系人无法关联任何电话号码。"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "通过拨号盘搜索通讯录（实验性）"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -338,14 +338,13 @@ msgid "Delete"
 msgstr "删除"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "删除"
+msgstr "删除所有"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "正在删除 %1 记录..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
@@ -548,7 +547,7 @@ msgstr "无近期通话"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "没有记录需要清理"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
@@ -654,17 +653,17 @@ msgstr "将所有的电话呼叫重定向到另一个号码。"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "移除在此之前的记录："
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "已移除 %1 条记录"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "已移除 %1 条记录。对不起，出了点问题。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -818,9 +817,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "常用联系人"
+msgstr "查看联系人"
 
 #~ msgid "Yes"
 #~ msgstr "同意"
