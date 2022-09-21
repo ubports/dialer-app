@@ -72,7 +72,7 @@ ContactViewPage {
             onTriggered: {
                 pageStack.push(contactEditorPageURL,
                                { model: root.model,
-                                 contact: root.contact,
+                                 contact: root.contactMainConstituent,
                                  contactListPage: root.contactListPage })
             }
         }
