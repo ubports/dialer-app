@@ -54,6 +54,7 @@ declare_qml_test(MainView tst_MainView.qml)
 declare_qml_test(StopWatch tst_StopWatch.qml)
 declare_qml_test(HistoryDelegate tst_HistoryDelegate.qml)
 declare_qml_test(DialerPage tst_DialerPage.qml)
+set_tests_properties(DialerPage PROPERTIES ENVIRONMENT "HOME=/tmp/tests")
 declare_qml_test(DialPadSearch tst_DialPadSearch.qml)
 
 # make qml files visible in QtCreator
