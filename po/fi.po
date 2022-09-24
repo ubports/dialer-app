@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2020-11-23 18:30+0000\n"
+"PO-Revision-Date: 2022-09-24 13:09+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/fi/>\n"
@@ -63,11 +63,11 @@ msgstr[1] "%1 minuuttia"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 minuutti"
-msgstr[1] "%1 minuuttia"
+msgstr[0] "%1 kuukausi"
+msgstr[1] "%1 kuukautta"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
@@ -108,7 +108,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 vuosi"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -174,7 +174,7 @@ msgstr "Bluetooth-laite"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
 msgid "Call"
-msgstr "Soita"
+msgstr "Puhelu"
 
 #: ../src/qml/dialer-app.qml:618
 msgid "Call Barring"
@@ -213,7 +213,7 @@ msgstr "Soitonsiirron tilaa ei voi tarkistaa "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Puheluhistoria"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -269,7 +269,7 @@ msgstr ""
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Tyhjennä historia"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -287,7 +287,7 @@ msgstr "Ryhmäpuheluvirhe"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Vahvista"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -333,7 +333,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "Oletusarvoinen maakoodi"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
@@ -342,9 +342,8 @@ msgid "Delete"
 msgstr "Poista"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Poista"
+msgstr "Poista kaikki"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
@@ -406,7 +405,7 @@ msgstr "Anna numero"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "Anna aluekoodi"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
@@ -665,7 +664,7 @@ msgstr "Välittää kaikki puhelut toiseen numeroon."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Poista vanhempi historia kuin:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
