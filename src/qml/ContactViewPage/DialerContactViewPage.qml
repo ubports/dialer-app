@@ -72,7 +72,7 @@ ContactViewPage {
             onTriggered: {
                 pageStack.push(contactEditorPageURL,
                                { model: root.model,
-                                 contact: root.contactMainConstituent,
+                                 contact: root.contact,
                                  contactListPage: root.contactListPage })
             }
         }
@@ -104,7 +104,7 @@ ContactViewPage {
     onContactFetched: {
         root.contact = contact
         if (root.active && root.addPhoneToContact != "") {
-            root.addPhoneToContactImpl(root.contactMainConstituent, root.addPhoneToContact)
+            root.addPhoneToContactImpl(contact, root.addPhoneToContact)
             root.addPhoneToContact = ""
         }
     }
@@ -112,7 +112,7 @@ ContactViewPage {
     Component {
         id: contactModelComponent
 
-        ContactListModel {
+        ContactModel {
             id: contactModelHelper
 
             manager: ContactManager.manager()
@@ -121,8 +121,8 @@ ContactViewPage {
     }
 
     onActiveChanged: {
-        if (active && root.contactMainConstituent && root.addPhoneToContact != "") {
-            root.addPhoneToContactImpl(root.contactMainConstituent, root.addPhoneToContact)
+        if (active && root.contact && root.addPhoneToContact != "") {
+            root.addPhoneToContactImpl(contact, root.addPhoneToContact)
             root.addPhoneToContact = ""
         }
     }
