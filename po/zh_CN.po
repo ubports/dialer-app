@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-07-04 10:41+0000\n"
+"PO-Revision-Date: 2022-08-26 23:44+0000\n"
 "Last-Translator: Caten <catenhu@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.ubports.com/projects/"
 "ubports/dialer-app/zh_Hans/>\n"
@@ -658,12 +658,12 @@ msgstr "移除在此之前的记录："
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr "已移除 %1 记录"
+msgstr "已移除 %1 条记录"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "已移除 %1 条记录。对不起，出了点问题。"
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -817,9 +817,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "常用联系人"
+msgstr "查看联系人"
 
 #~ msgid "Yes"
 #~ msgstr "同意"

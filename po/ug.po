@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2015-10-17 06:39+0000\n"
-"Last-Translator: Eltikin <eltikinuyghur@hotmail.com>\n"
-"Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
-"Language: \n"
+"PO-Revision-Date: 2022-09-05 19:21+0000\n"
+"Last-Translator: flame4 <alimjoo00@163.com>\n"
+"Language-Team: Uyghur <https://translate.ubports.com/projects/ubports/"
+"dialer-app/ug/>\n"
+"Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/qml/DialerPage/Keypad.qml:250
 msgid "#"
@@ -169,9 +170,8 @@ msgid "Bluetooth device"
 msgstr "كۆكچىش ئۈسكۈنىسى"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "چاقىرىۋاتىدۇ"
+msgstr "تىلىفۇن ئۇرۇش"
 
 #: ../src/qml/dialer-app.qml:618
 msgid "Call Barring"
@@ -250,7 +250,7 @@ msgstr "چاقىرغۇچىنىڭ تېلېفون نومۇرىنى كۆرسىتى�
 #: ../src/qml/SettingsPage/CallForwarding.qml:236
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:78
 msgid "Cancel"
-msgstr "ئەمەلدىن قالدۇر"
+msgstr "ئەمەلدىن قالدۇرش"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
@@ -286,7 +286,7 @@ msgstr "يىغىن سۆزلىشىشى مەغلۇپ بولدى"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "جەزملەش"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -563,12 +563,12 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "نومۇر"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:156
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr ""
+msgstr "تامام"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
@@ -577,7 +577,7 @@ msgstr ""
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "تامام"
+msgstr "جەزىملەش"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
@@ -622,7 +622,7 @@ msgstr ""
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "‪تېلېفون نومۇرىنى تاللاڭ"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -702,7 +702,7 @@ msgstr "ئىزدە…"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
-msgstr "تاللا"
+msgstr "تاللاش"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:58
 msgid ""

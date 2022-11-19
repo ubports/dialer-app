@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2021-08-15 22:41+0000\n"
+"PO-Revision-Date: 2022-09-26 13:10+0000\n"
 "Last-Translator: M.Sugahara <equaaqua@hotmail.com>\n"
 "Language-Team: Japanese <https://translate.ubports.com/projects/ubports/"
 "dialer-app/ja/>\n"
@@ -61,15 +61,15 @@ msgstr[0] "%1 分"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 分"
+msgstr[0] "%1 ヶ月"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 件を削除"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -104,7 +104,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 年"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -209,7 +209,7 @@ msgstr "着信転送の状態を確認できません "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "通話履歴"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"

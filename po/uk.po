@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2020-07-03 11:27+0000\n"
-"Last-Translator: Stoian Minaiev <stoyan.minaev@gmail.com>\n"
+"PO-Revision-Date: 2022-08-14 13:18+0000\n"
+"Last-Translator: Serhii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://translate.ubports.com/projects/ubports/"
 "dialer-app/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.11.3\n"
 "X-Launchpad-Export-Date: 2017-02-17 05:52+0000\n"
 
@@ -29,21 +29,21 @@ msgstr "#"
 #: ../src/qml/LiveCallPage/LiveCall.qml:488
 #, qt-format
 msgid "%1 - on hold"
-msgstr "%1 — очікування"
+msgstr "%1 - очікує"
 
 #. TRANSLATORS: %1 is the displayname of the account
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:30
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:26
 #, qt-format
 msgid "%1 Number Rewrite"
-msgstr ""
+msgstr "Перезаписати номер %1"
 
 #. TRANSLATORS: %1 is the name of the (network) carrier
 #: ../src/qml/SettingsPage/Services.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr ""
+msgstr "Послуги %1"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -51,7 +51,7 @@ msgstr ""
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 година"
-msgstr[1] "%1 годин"
+msgstr[1] "%1 години"
 msgstr[2] "%1 годин"
 
 #: ../src/qml/HistoryPage/dateUtils.js:94
@@ -66,26 +66,26 @@ msgstr[2] "%1 хв"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 хв"
-msgstr[1] "%1 хв"
-msgstr[2] "%1 хв"
+msgstr[0] "%1 місяць"
+msgstr[1] "%1 місяці"
+msgstr[2] "%1 місяців"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 записів на видалення"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
 #, qt-format
 msgid "%1 sec"
 msgid_plural "%1 secs"
-msgstr[0] "%1 секунда"
-msgstr[1] "%1 секунди"
-msgstr[2] "%1 секунд"
+msgstr[0] "%1 сек"
+msgstr[1] "%1 сек"
+msgstr[2] "%1 сек"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -113,7 +113,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 рік"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -149,7 +149,7 @@ msgstr "9"
 
 #: ../src/qml/DialerPage/Keypad.qml:77
 msgid "ABC"
-msgstr "АБВГ"
+msgstr "АБВГҐ"
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:131
 msgid "Active"
@@ -157,7 +157,7 @@ msgstr "Активний"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:123
 msgid "Add an online account"
-msgstr ""
+msgstr "Додати онлайн-аккаунт"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:69
 msgctxt "All Calls"
@@ -170,18 +170,16 @@ msgid "All"
 msgstr "Усі"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:378
-#, fuzzy
 msgid "All calls"
-msgstr "Немає дзвінків"
+msgstr "Усі виклики"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:389
 msgid "Bluetooth device"
 msgstr "Пристрій Bluetooth"
 
 #: ../src/qml/SettingsPage/ServiceInfo.qml:125
-#, fuzzy
 msgid "Call"
-msgstr "Дзвонимо"
+msgstr "Виклик"
 
 #: ../src/qml/dialer-app.qml:618
 msgid "Call Barring"
@@ -197,7 +195,7 @@ msgstr "Очікування викликів"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:168
 msgid "Call ended"
-msgstr "Дзвінок завершено"
+msgstr "Виклик завершений"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:315
 msgid "Call failed"
@@ -207,45 +205,43 @@ msgstr "Не вдалося зв’язатися"
 #: ../src/qml/SettingsPage/MultiSim.qml:51
 #: ../src/qml/SettingsPage/NoSims.qml:28
 #: ../src/qml/SettingsPage/SingleSim.qml:39
-#, fuzzy
 msgid "Call forwarding"
-msgstr "Переадресація викликів"
+msgstr "Переадресація"
 
 #: ../src/qml/SettingsPage/CallForwardItem.qml:218
 msgid "Call forwarding can't be changed right now."
-msgstr ""
+msgstr "Переналаштувати переадресацію викликів зараз неможливо."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:154
 msgid "Call forwarding status can't be checked "
-msgstr ""
+msgstr "Перевірка стану переадресації зараз неможлива "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Історія викликів"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
-msgstr "Не вдалося утримати дзвінок"
+msgstr "Не вдалося утримати виклик"
 
 #: ../src/qml/SettingsPage/CallWaiting.qml:31
 #: ../src/qml/SettingsPage/CallWaiting.qml:86
 #: ../src/qml/SettingsPage/MultiSim.qml:41
 #: ../src/qml/SettingsPage/NoSims.qml:34
 #: ../src/qml/SettingsPage/SingleSim.qml:32
-#, fuzzy
 msgid "Call waiting"
-msgstr "Очікування викликів"
+msgstr "Очікування виклику"
 
 #: ../src/qml/DialerPage/DialerPage.qml:605
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:113
 #: ../src/qml/LiveCallPage/LiveCall.qml:490
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:108
 msgid "Calling"
-msgstr "Дзвонимо"
+msgstr "Телефонуємо"
 
 #: ../src/qml/dialer-app.qml:651
 msgid "Calling Line Presentation"
-msgstr "Представлення лінії викликів"
+msgstr "Відображення лінії викликів"
 
 #: ../src/qml/dialer-app.qml:663
 msgid "Calling Line Restriction"
@@ -264,21 +260,21 @@ msgstr "Скасувати"
 
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:34
 msgid "Change"
-msgstr ""
+msgstr "Змінити"
 
 #. TRANSLATORS: this refers to which SIM card will be used as default for calls
 #: ../src/qml/Dialogs/SetDefaultSIMCardDialog.qml:30
 #, qt-format
 msgid "Change all Call associations to %1?"
-msgstr "Пов’язати усі дзвінки з %1?"
+msgstr "Прив'язати усі дзвінки до %1?"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:138
 msgid "Characters to remove"
-msgstr ""
+msgstr "Символи для вилучення"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Очистити історію"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -292,15 +288,15 @@ msgstr "Конференція"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:144
 msgid "Conference call failure"
-msgstr "Не вдалося організувати конференцію"
+msgstr "Не вдалося створити конференцію"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Підтвердити"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
-msgstr "Представлення з’єднаної лінії"
+msgstr "Відображення з’єднаної лінії"
 
 #: ../src/qml/dialer-app.qml:669
 msgid "Connected Line Restriction"
@@ -309,15 +305,15 @@ msgstr "Обмеження з’єднаної лінії"
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:71
 #: ../src/qml/HistoryPage/HistoryPage.qml:401
 msgid "Contact Details"
-msgstr "Подробиці щодо запису контакту"
+msgstr "Докладніше про контакт"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr ""
+msgstr "Контакт не має жодного номеру телефону."
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "Пошук контакту на цифровій панелі (експериментально)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -325,13 +321,12 @@ msgid "Contacts"
 msgstr "Контакти"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:223
-#, fuzzy
 msgid "Contacts..."
-msgstr "Контакти"
+msgstr "Контакти..."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:298
 msgid "Could not forward to this contact"
-msgstr ""
+msgstr "Виконати переадресацію на цього абонента не вийшло"
 
 #: ../src/qml/DialerPage/Keypad.qml:94
 msgid "DEF"
@@ -339,27 +334,26 @@ msgstr "ДЕЄЖЗ"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:118
 msgid "Default area code"
-msgstr ""
+msgstr "Типовий код місцевості"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:96
 msgid "Default country code"
-msgstr ""
+msgstr "Типовий код країни"
 
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:91
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:263
 #: ../src/qml/HistoryPage/HistoryPage.qml:373
 msgid "Delete"
-msgstr "Вилучити"
+msgstr "Видалити"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Вилучити"
+msgstr "Видалити все"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "Видалення %1 записів..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
@@ -367,7 +361,7 @@ msgstr "Подробиці"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr ""
+msgstr "Звуки клавіш"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -397,31 +391,29 @@ msgid "Emergency Calls"
 msgstr "Екстрені виклики"
 
 #: ../src/qml/DialerPage/DialerPage.qml:563
-#, fuzzy
 msgid "Emergency call"
-msgstr "Екстрені виклики"
+msgstr "Екстрений виклик"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:100
 msgid "Enter a country code"
-msgstr ""
+msgstr "Напишіть код країни"
 
 #: ../src/qml/DialerPage/DialerPage.qml:331
 #: ../src/qml/SettingsPage/CallForwardItem.qml:171
 msgid "Enter a number"
-msgstr "Введіть номер"
+msgstr "Напишіть номер"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:163
-#, fuzzy
 msgid "Enter a prefix"
-msgstr "Введіть номер"
+msgstr "Напишіть префікс"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:122
 msgid "Enter an area code"
-msgstr ""
+msgstr "Напишіть код місцевості"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:142
 msgid "Enter the characters to remove"
-msgstr ""
+msgstr "Напишіть символи для вилучення"
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:28
 msgid "Error"
@@ -429,24 +421,23 @@ msgstr "Помилка"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:178
 msgid "Failed to activate the call."
-msgstr "Не вдалося активувати дзвінок."
+msgstr "Не вдалося активувати виклик."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:145
 msgid "Failed to create a conference call."
-msgstr "Не вдалося створити дзвінок-конференцію."
+msgstr "Не вдалося створити виклик-конференцію."
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:179
 msgid "Failed to place the active call on hold."
-msgstr "Не вдалося поставити поточний дзвінок на паузу."
+msgstr "Не вдалося утримати на паузі поточний виклик."
 
 #: ../src/qml/DialerPage/DialerPage.qml:59
-#, fuzzy
 msgid "Favorite Contacts"
-msgstr "Улюблені"
+msgstr "Вибрані контакти"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:120
 msgid "Favorites"
-msgstr "Улюблені"
+msgstr "Вибране"
 
 #: ../src/qml/DialerPage/DialerPage.qml:152
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:27
@@ -455,21 +446,21 @@ msgstr "Режим польоту"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr ""
+msgstr "Переадресовувати усі вхідні виклики"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
-msgstr ""
+msgstr "Переадресовувати вхідні виклики якщо:"
 
 #. TRANSLATORS: This string will be truncated on smaller displays.
 #: ../src/qml/SettingsPage/CallForwardItem.qml:157
 #: ../src/qml/SettingsPage/CallForwardItem.qml:202
 msgid "Forward to"
-msgstr ""
+msgstr "Переадресувати"
 
 #: ../src/qml/DialerPage/Keypad.qml:111
 msgid "GHI"
-msgstr "ІЇИЙКЛ"
+msgstr "ИІЇЙКЛ"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:255
 msgid "Got it"
@@ -477,11 +468,11 @@ msgstr "Виконано"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:182
 msgid "I don't answer"
-msgstr ""
+msgstr "Не відповідаю"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:171
 msgid "I'm on another call"
-msgstr ""
+msgstr "Я зараз розмовляю"
 
 #: ../src/qml/MMI/IMEIDialog.qml:27
 msgid "IMEI"
@@ -495,11 +486,11 @@ msgstr "Вхідні"
 
 #: ../src/qml/DialerPage/DialerPage.qml:144
 msgid "Initializing..."
-msgstr ""
+msgstr "Ініціалізація..."
 
 #: ../src/qml/Dialogs/UssdErrorDialog.qml:29
 msgid "Invalid USSD code"
-msgstr "Некоректний код USSD"
+msgstr "Неправильний код USSD"
 
 #: ../src/qml/DialerPage/Keypad.qml:128
 msgid "JKL"
@@ -508,7 +499,7 @@ msgstr "МНОП"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr ""
+msgstr "Останній виклик %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:79
 msgid "Later"
@@ -519,6 +510,8 @@ msgid ""
 "Lets you answer or start a new call while on another call, and switch "
 "between them"
 msgstr ""
+"Дозволяє Вам відповісти на вхідний виклик, розпочатий новий під час розмови "
+"та перемикатися між ними"
 
 #: ../src/qml/DialerPage/Keypad.qml:145
 msgid "MNO"
@@ -540,7 +533,7 @@ msgstr "Мобільний"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr ""
+msgstr "Мій телефон без зв'язку"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -548,11 +541,11 @@ msgstr "Ні"
 
 #: ../src/qml/dialer-app.qml:386
 msgid "No SIM card selected"
-msgstr "Не вибрано SIM-картки"
+msgstr "SIM-картка не обрана"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:129
 msgid "No calls"
-msgstr "Немає дзвінків"
+msgstr "Виклики відсутні"
 
 #: ../src/qml/DialerPage/DialerPage.qml:166 ../src/qml/dialer-app.qml:405
 #: ../src/qml/dialer-app.qml:410
@@ -561,37 +554,37 @@ msgstr "Немає мережі"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:277
 msgid "No recent calls"
-msgstr "Немає нещодавніх дзвінків"
+msgstr "Свіжі виклики відсутні"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "Немає записів для видалення"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
-msgstr ""
+msgstr "Перезапис номера"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:279
 msgid "Numbers"
-msgstr ""
+msgstr "Номери"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:156
 #: ../src/qml/SettingsPage/CallForwarding.qml:301
 msgid "OK"
-msgstr "Добре"
+msgstr "ОК"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 #: ../src/qml/SettingsPage/CallForwarding.qml:382
 msgid "Off"
-msgstr ""
+msgstr "Вимкн."
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:50
 msgid "Ok"
-msgstr "Добре"
+msgstr "ОК"
 
 #: ../src/qml/SettingsPage/AccountSettings/sip.qml:28
 msgid "On"
-msgstr ""
+msgstr "Увімкн."
 
 #: ../src/qml/LiveCallPage/MultiCallDisplay.qml:129
 msgid "On hold"
@@ -612,28 +605,29 @@ msgstr "Телефон"
 
 #: ../src/dialer-app.desktop.in.in.h:2
 msgid "Phone App"
-msgstr "Програма-телефон"
+msgstr "Телефон"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:393
 msgid "Phone Speaker"
-msgstr "Гучномовець телефону"
+msgstr "Гучномовець"
 
 #: ../src/dialer-app.desktop.in.in.h:3
 msgid "Phone application"
-msgstr "Програма-телефон"
+msgstr "Телефонний додаток"
 
 #: ../src/dialer-app.desktop.in.in.h:4
 msgid "Phone;Dialer;Dial;Call;Keypad"
 msgstr ""
-"Phone;Dialer;Dial;Call;Keypad;телефон;набирання;номер;дзвінок;виклик;кнопки"
+"Phone;Dialer;Dial;Call;Keypad;телефон;набирання;номер;дзвінок;виклик;кнопки;н"
+"абір"
 
 #: ../src/qml/SettingsPage/OnlineAccountsHelper.qml:46
 msgid "Pick an account to create."
-msgstr ""
+msgstr "Оберіть обліковий запис для створення."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr ""
+msgstr "Оберіть, будь ласка, номер телефону"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -641,11 +635,10 @@ msgid ""
 "SIM card from the Network Indicator at the top of the screen or by visiting "
 "<a href=\"system_settings\">System Settings &gt; Security &amp; Privacy</a>."
 msgstr ""
-"Будь ласка, розблокуйте вашу SIM-картку, щоб мати змогу дзвонити або "
+"Будь ласка, розблокуйте свою SIM-картку, щоб мати змогу телефонувати або "
 "надсилати повідомлення. Розблокувати картку можна за допомогою індикатора "
-"мережі у верхній частині екрана або за допомогою сторінки <a href="
-"\"system_settings\">Системні параметра &gt; Безпека &amp; Конфіденційність</"
-"a>."
+"мережі у верхній частині екрану або за допомогою сторінки <a href=\""
+"system_settings\">Системні параметри &gt; Безпека та Конфіденційність</a>."
 
 #: ../src/qml/Dialogs/UssdProgressDialog.qml:28
 msgid "Please wait"
@@ -653,11 +646,11 @@ msgstr "Будь ласка, зачекайте"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:159
 msgid "Prefix"
-msgstr ""
+msgstr "Префікс"
 
 #: ../src/qml/LiveCallPage/ConferenceCallDisplay.qml:141
 msgid "Private"
-msgstr "Конфіденційне"
+msgstr "Особисте"
 
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:168
 #: ../src/qml/HistoryPage/HistoryDetailsPage.qml:43
@@ -671,33 +664,33 @@ msgstr "Нещодавні"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr ""
+msgstr "Перенаправляє усі виклики на інший номер."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Вилучити усю історію, старішу за:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "Вилучено %1 записів"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "Вилучено %1 записів. Нажаль, щось пішло не так."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
-msgstr ""
+msgstr "SIM-картка"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:27
 msgid "SIM Card is locked"
-msgstr "SIM-картку заблоковано"
+msgstr "SIM-картка заблокована"
 
 #: ../src/qml/DialerPage/DialerPage.qml:155
 msgid "SIM Locked"
-msgstr "SIM-картку заблоковано"
+msgstr "SIM заблокована"
 
 #: ../src/qml/ContactEditorPage/DialerContactEditorPage.qml:47
 #: ../src/qml/ContactEditorPage/DialerCreateContactEditorPage.qml:62
@@ -706,11 +699,11 @@ msgstr "Зберегти"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:144
 msgid "Search"
-msgstr "Шукати"
+msgstr "Пошук"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:92
 msgid "Search..."
-msgstr "Шукати…"
+msgstr "Пошук..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:47
 msgid "Select"
@@ -721,7 +714,7 @@ msgid ""
 "Select a default SIM for all outgoing calls. You can always alter your "
 "choice in <a href=\"system_settings\">System Settings</a>."
 msgstr ""
-"Виберіть типову SIM-картку для усіх вихідних дзвінків. Змінити ваш вибір "
+"Оберіть типову SIM-картку для усіх вихідних дзвінків. Змінити свій вибір "
 "можна будь-коли за допомогою <a href=\"system_settings\">Системних "
 "параметрів</a>."
 
@@ -732,12 +725,11 @@ msgstr "Надіслати повідомлення"
 #: ../src/qml/SettingsPage/MultiSim.qml:62
 #: ../src/qml/SettingsPage/NoSims.qml:42
 msgid "Services"
-msgstr ""
+msgstr "Служби"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
-#, fuzzy
 msgid "Set"
-msgstr "Вибрати"
+msgstr "Встановити"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
@@ -750,17 +742,16 @@ msgid "Share"
 msgstr "Поділитися"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:380
-#, fuzzy
 msgid "Some calls"
-msgstr "Немає дзвінків"
+msgstr "Деякі виклики"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:326
 msgid "Swipe to delete"
-msgstr "Проведіть для вилучення"
+msgstr "Змахніть для видалення"
 
 #: ../src/qml/HistoryPage/SwipeItemDemo.qml:276
 msgid "Swipe to reveal actions"
-msgstr "Проведіть, щоб побачити пункти дій"
+msgstr "Змахніть для вибору дій"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:194
 msgid "Switch audio source:"
@@ -768,11 +759,11 @@ msgstr "Перемкнути джерело звуку:"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:592
 msgid "Switch calls"
-msgstr "Перемкнути дзвінки"
+msgstr "Перемкнути виклики"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:27
 msgid "Switch to default SIM:"
-msgstr "Перемкнутися на типову SIM-картку:"
+msgstr "Перемкнутися на типову SIM:"
 
 #: ../src/qml/DialerPage/Keypad.qml:179
 msgid "TUV"
@@ -781,15 +772,15 @@ msgstr "ШЩ"
 #: ../src/qml/dialer-app.qml:411
 #, qt-format
 msgid "There is currently no network on %1"
-msgstr "Зараз на %1 немає доступу до мережі"
+msgstr "Зараз %1 без зв'язку"
 
 #: ../src/qml/dialer-app.qml:405 ../src/qml/dialer-app.qml:412
 msgid "There is currently no network."
-msgstr "Зараз немає доступу до мережі."
+msgstr "Зараз немає мережі."
 
 #: ../src/qml/DialerPage/DialerPage.qml:563
 msgid "This is not an emergency number."
-msgstr ""
+msgstr "Це не екстрений номер."
 
 #: ../src/qml/HistoryPage/dateUtils.js:45
 #: ../src/qml/SettingsPage/dateUtils.js:41
@@ -798,7 +789,7 @@ msgstr "Сьогодні"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:391
 msgid "Ubuntu Phone"
-msgstr "Ubuntu Phone"
+msgstr "Телефон Ubuntu"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:395
 msgid "Unknown device"
@@ -825,11 +816,11 @@ msgstr "Вчора"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:28
 msgid "You have to disable flight mode in order to make calls"
-msgstr "Вам слід вимкнути режим польоту, щоб мати змогу здійснювати дзвінки"
+msgstr "Для здійснення викликів потрібно вимкнути режим польоту"
 
 #: ../src/qml/dialer-app.qml:386
 msgid "You need to select a SIM card"
-msgstr "Вам слід вибрати SIM-картку"
+msgstr "Вам потрібно обрати SIM-картку"
 
 #. TRANSLATORS: this is the duration time format when the call lasted more than an hour
 #: ../src/qml/HistoryPage/dateUtils.js:112
@@ -842,9 +833,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Улюблені"
+msgstr "перегляд контакту"
 
 #~ msgid "Flight mode"
 #~ msgstr "Автономний режим"

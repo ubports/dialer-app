@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2021-07-26 20:32+0000\n"
-"Last-Translator: Rondy Andersson <rondarius@vivaldi.net>\n"
+"PO-Revision-Date: 2022-09-05 19:21+0000\n"
+"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sv/>\n"
 "Language: sv\n"
@@ -42,7 +42,7 @@ msgstr "%1 Antal omskrivningar"
 #: ../src/qml/SettingsPage/SingleSim.qml:51
 #, qt-format
 msgid "%1 Services"
-msgstr "%1 Tjänster"
+msgstr "%1-tjänster"
 
 #: ../src/qml/HistoryPage/dateUtils.js:92
 #: ../src/qml/SettingsPage/dateUtils.js:61
@@ -72,7 +72,7 @@ msgstr[1] "%1 min"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
 msgid "%1 records to clean"
-msgstr ""
+msgstr "%1 poster att rensa"
 
 #: ../src/qml/HistoryPage/dateUtils.js:96
 #: ../src/qml/SettingsPage/dateUtils.js:65
@@ -108,7 +108,7 @@ msgstr "1"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:114
 msgid "1 year"
-msgstr ""
+msgstr "1 år"
 
 #: ../src/qml/DialerPage/Keypad.qml:76
 msgid "2"
@@ -213,7 +213,7 @@ msgstr "Status för vidarekopplat samtal kan inte kontrolleras "
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:29
 msgid "Call history"
-msgstr ""
+msgstr "Samtalshistorik"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:177
 msgid "Call holding failure"
@@ -269,7 +269,7 @@ msgstr "Tecken som behöver tas bort"
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:87
 msgid "Clear history"
-msgstr ""
+msgstr "Rensa historik"
 
 #: ../src/qml/DialerPage/DialerPage.qml:92
 #: ../src/qml/Dialogs/NotificationDialog.qml:29
@@ -287,7 +287,7 @@ msgstr "Telefonkonferenssamtalet misslyckades"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:146
 msgid "Confirm"
-msgstr ""
+msgstr "Bekräfta"
 
 #: ../src/qml/dialer-app.qml:657
 msgid "Connected Line Presentation"
@@ -304,11 +304,11 @@ msgstr "Kontaktuppgifter"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:299
 msgid "Contact not associated with any phone number."
-msgstr "Kontakt är inte associerad med något telefonnummer."
+msgstr "Kontakten är inte associerad med något telefonnummer."
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:136
 msgid "Contact search with dial pad (Experimental)"
-msgstr ""
+msgstr "Kontaktsökning med knappsats (experimentell)"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:102
 #: ../src/qml/DialerPage/DialerPage.qml:65
@@ -349,7 +349,7 @@ msgstr "Radera"
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
 msgid "Deleting %1 records..."
-msgstr ""
+msgstr "Tar bort %1 poster..."
 
 #: ../src/qml/HistoryPage/HistoryPage.qml:382
 msgid "Details"
@@ -357,7 +357,7 @@ msgstr "Detaljer"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr "Knappsats tonval"
+msgstr "Knappsatsljud"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -442,7 +442,7 @@ msgstr "Flygläge"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr "Vidarekoppla samtliga inkommande samtal"
+msgstr "Vidarekoppla alla inkommande samtal"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
@@ -554,7 +554,7 @@ msgstr "Inga tidigare samtal"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:70
 msgid "No records to clean"
-msgstr ""
+msgstr "Inga poster att ta bort"
 
 #: ../src/qml/SettingsPage/AccountSettings/SipNumberRewrite.qml:88
 msgid "Number rewrite"
@@ -621,7 +621,7 @@ msgstr "Välj konto att skapa."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Vänligen ange ett telefonnummer"
+msgstr "Ange ett telefonnummer"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -662,17 +662,17 @@ msgstr "Omdirigerar alla samtal till ett annat nummer."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
-msgstr ""
+msgstr "Ta bort all historik äldre än:"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:81
 #, qt-format
 msgid "Removed %1 records"
-msgstr ""
+msgstr "Tog bort %1 poster"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:87
 #, qt-format
 msgid "Removed %1 records, sorry, something went wrong."
-msgstr ""
+msgstr "Tog bort %1 poster, något gick fel."
 
 #: ../src/qml/SettingsPage/SingleSim.qml:28
 msgid "SIM"
@@ -722,7 +722,7 @@ msgstr "Tjänster"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:249
 msgid "Set"
-msgstr "Sätt"
+msgstr "Ställ in"
 
 #: ../src/qml/DialerPage/DialerPage.qml:70
 #: ../src/qml/SettingsPage/SettingsPage.qml:29
