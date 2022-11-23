@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: dialer-app\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-17 12:45+0000\n"
-"PO-Revision-Date: 2022-09-05 19:21+0000\n"
-"Last-Translator: Åke Engelbrektson <eson@svenskasprakfiler.se>\n"
+"PO-Revision-Date: 2022-11-22 20:26+0000\n"
+"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://translate.ubports.com/projects/ubports/"
 "dialer-app/sv/>\n"
 "Language: sv\n"
@@ -58,16 +58,16 @@ msgstr[1] "%1 timmar"
 msgid "%1 min"
 msgid_plural "%1 mins"
 msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[1] "%1 minuter"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:111
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:112
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:113
-#, fuzzy, qt-format
+#, qt-format
 msgid "%1 month"
 msgid_plural "%1 months"
-msgstr[0] "%1 min"
-msgstr[1] "%1 min"
+msgstr[0] "%1 månad"
+msgstr[1] "%1 månader"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:65
 #, qt-format
@@ -80,7 +80,7 @@ msgstr "%1 poster att rensa"
 msgid "%1 sec"
 msgid_plural "%1 secs"
 msgstr[0] "%1 sek"
-msgstr[1] "%1 sek"
+msgstr[1] "%1 sekunder"
 
 #. TRANSLATORS: this is the count of events grouped into this single item
 #: ../src/qml/HistoryPage/HistoryDelegate.qml:206
@@ -342,9 +342,8 @@ msgid "Delete"
 msgstr "Radera"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:115
-#, fuzzy
 msgid "Delete all"
-msgstr "Radera"
+msgstr "Ta bort allt"
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:75
 #, qt-format
@@ -357,7 +356,7 @@ msgstr "Detaljer"
 
 #: ../src/qml/SettingsPage/SettingsPage.qml:113
 msgid "Dialpad tones"
-msgstr "Knappsatsljud"
+msgstr "Ljud för knappsats"
 
 #: ../src/qml/Dialogs/DisableFlightModeDialog.qml:32
 msgid "Disable"
@@ -442,7 +441,7 @@ msgstr "Flygläge"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:127
 msgid "Forward every incoming call"
-msgstr "Vidarekoppla alla inkommande samtal"
+msgstr "Vidarekoppla varje inkommande samtal"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:162
 msgid "Forward incoming calls when:"
@@ -495,7 +494,7 @@ msgstr "JKL"
 #: ../src/qml/SettingsPage/ServiceInfo.qml:115
 #, qt-format
 msgid "Last called %1"
-msgstr "Sist uppringda %1"
+msgstr "Senaste uppringda %1"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:79
 msgid "Later"
@@ -529,7 +528,7 @@ msgstr "Mobil"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:193
 msgid "My phone is unreachable"
-msgstr "Min telefon går inte att nå"
+msgstr "Min telefon kan inte nås"
 
 #: ../src/qml/Dialogs/NoDefaultSIMCardDialog.qml:70
 msgid "No"
@@ -621,7 +620,7 @@ msgstr "Välj konto att skapa."
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:270
 msgid "Please select a phone number"
-msgstr "Ange ett telefonnummer"
+msgstr "Vänligen välj ett telefonnummer"
 
 #: ../src/qml/Dialogs/SimLockedDialog.qml:38
 msgid ""
@@ -658,7 +657,7 @@ msgstr "Senast"
 
 #: ../src/qml/SettingsPage/CallForwarding.qml:142
 msgid "Redirects all phone calls to another number."
-msgstr "Omdirigerar alla samtal till ett annat nummer."
+msgstr "Omdirigerar alla telefonsamtal till ett annat nummer."
 
 #: ../src/qml/HistoryPage/HistoryCleaner.qml:60
 msgid "Remove all history older than:"
@@ -782,7 +781,7 @@ msgstr "Idag"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:391
 msgid "Ubuntu Phone"
-msgstr "Ubuntu Phone"
+msgstr "Ubuntu-telefon"
 
 #: ../src/qml/LiveCallPage/LiveCall.qml:395
 msgid "Unknown device"
@@ -826,9 +825,8 @@ msgid "mm:ss"
 msgstr "mm:ss"
 
 #: ../src/qml/ContactsPage/ContactsPage.qml:250
-#, fuzzy
 msgid "view contact"
-msgstr "Favorit kontakter"
+msgstr "visa kontakt"
 
 #~ msgid "Flight mode"
 #~ msgstr "Flygplansläge"
